@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>anthropic-watch</title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="anthropic-watch RSS"
+      href="feeds/all.xml"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #1a1a1a;
+        --muted: #666666;
+        --border: #e5e5e5;
+        --surface: #f9fafb;
+        --link: #2563eb;
+        --green: #22c55e;
+        --red: #ef4444;
+        --amber: #f59e0b;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111111;
+          --fg: #e5e5e5;
+          --muted: #999999;
+          --border: #333333;
+          --surface: #1a1a1a;
+          --link: #60a5fa;
+        }
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.6;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Header */
+      .header {
+        margin-bottom: 2rem;
+      }
+      .header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+      }
+      .header .subtitle {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .meta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 0.75rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.15rem 0.5rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #fff;
+      }
+      .badge-green {
+        background: var(--green);
+      }
+      .badge-red {
+        background: var(--red);
+      }
+
+      /* Feed buttons */
+      .feeds {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+      .feeds a {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        font-size: 0.85rem;
+        color: var(--fg);
+      }
+      .feeds a:hover {
+        background: var(--surface);
+        text-decoration: none;
+      }
+
+      /* Sections */
+      h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+
+      /* Latest changes */
+      .item {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .item:last-child {
+        border-bottom: none;
+      }
+      .item-title {
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .item-meta {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-top: 0.15rem;
+      }
+      .item-meta .source-badge {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 0.1rem 0.4rem;
+        border-radius: 3px;
+        font-size: 0.7rem;
+      }
+      .item-snippet {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin-top: 0.25rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      /* Source table */
+      .table-wrap {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 0.5rem 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+      th {
+        font-weight: 600;
+        color: var(--muted);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      .dot-green {
+        background: var(--green);
+      }
+      .dot-red {
+        background: var(--red);
+      }
+      .dot-amber {
+        background: var(--amber);
+      }
+      .cat-header td {
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: var(--muted);
+        padding-top: 1rem;
+        border-bottom: none;
+      }
+
+      footer {
+        margin-top: 3rem;
+        color: var(--muted);
+        font-size: 0.8rem;
+        text-align: center;
+      }
+      .loading {
+        color: var(--muted);
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>anthropic-watch</h1>
+      <p class="subtitle">Monitoring Anthropic sources for changes.</p>
+      <div class="meta">
+        <span id="last-run">Loading...</span>
+        <span id="health-badge"></span>
+      </div>
+    </div>
+
+    <div class="feeds">
+      <a href="feeds/all.xml">RSS Feed</a>
+      <a href="feeds/all.json">JSON Feed</a>
+      <a href="feeds/sources.opml">OPML</a>
+    </div>
+
+    <section>
+      <h2>Latest Changes</h2>
+      <div id="latest" class="loading">Loading...</div>
+    </section>
+
+    <section>
+      <h2>Source Status</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Status</th>
+              <th>Items</th>
+              <th>Last Checked</th>
+            </tr>
+          </thead>
+          <tbody id="sources">
+            <tr>
+              <td colspan="4" class="loading">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <a href="https://github.com/sefaertunc/anthropic-watch">GitHub</a>
+      &middot; Updated daily via GitHub Actions
+    </footer>
+
+    <script>
+      function timeAgo(iso) {
+        if (!iso) return "never";
+        const diff = Date.now() - new Date(iso).getTime();
+        const mins = Math.floor(diff / 60000);
+        if (mins < 1) return "just now";
+        if (mins < 60) return mins + "m ago";
+        const hrs = Math.floor(mins / 60);
+        if (hrs < 24) return hrs + "h ago";
+        const days = Math.floor(hrs / 24);
+        return days + "d ago";
+      }
+
+      function escapeHtml(str) {
+        const d = document.createElement("div");
+        d.textContent = str;
+        return d.innerHTML;
+      }
+
+      async function load() {
+        let feed, report;
+        try {
+          [feed, report] = await Promise.all([
+            fetch("feeds/all.json").then((r) => (r.ok ? r.json() : null)),
+            fetch("feeds/run-report.json").then((r) =>
+              r.ok ? r.json() : null,
+            ),
+          ]);
+        } catch {
+          document.getElementById("latest").textContent =
+            "Failed to load data.";
+          return;
+        }
+
+        // Header meta
+        if (report) {
+          const dur = (report.duration_ms / 1000).toFixed(1);
+          document.getElementById("last-run").textContent =
+            `Last run: ${timeAgo(report.timestamp)} (${dur}s)`;
+          const healthy = report.summary.healthySources;
+          const total = report.summary.sourcesChecked;
+          const badge = document.getElementById("health-badge");
+          const cls = healthy === total ? "badge-green" : "badge-red";
+          badge.innerHTML = `<span class="badge ${cls}">${healthy}/${total} healthy</span>`;
+        }
+
+        // Latest items
+        const el = document.getElementById("latest");
+        if (feed && feed.items && feed.items.length > 0) {
+          const items = feed.items.slice(0, 20);
+          el.innerHTML = items
+            .map(
+              (item) =>
+                `<div class="item">
+              <div class="item-title"><a href="${escapeHtml(item.url)}">${escapeHtml(item.title)}</a></div>
+              <div class="item-meta">
+                <span class="source-badge">${escapeHtml(item.source)}</span>
+                ${timeAgo(item.date)}
+              </div>
+              ${item.snippet ? `<div class="item-snippet">${escapeHtml(item.snippet)}</div>` : ""}
+            </div>`,
+            )
+            .join("");
+        } else {
+          el.textContent = "No items yet.";
+        }
+
+        // Source table
+        const tbody = document.getElementById("sources");
+        if (report && report.sources) {
+          const core = report.sources.filter((s) => s.category === "core");
+          const extended = report.sources.filter(
+            (s) => s.category === "extended",
+          );
+          let html = "";
+
+          function renderGroup(label, list) {
+            html += `<tr class="cat-header"><td colspan="4">${label}</td></tr>`;
+            for (const src of list) {
+              let dotClass = "dot-green";
+              if (src.status === "error") dotClass = "dot-red";
+              else if (src.error) dotClass = "dot-amber";
+              const items = src.status === "ok" ? src.newItemCount : "\u2014";
+              html += `<tr>
+                <td>${escapeHtml(src.name || src.key)}</td>
+                <td><span class="dot ${dotClass}"></span></td>
+                <td>${items}</td>
+                <td>${timeAgo(report.timestamp)}</td>
+              </tr>`;
+            }
+          }
+
+          renderGroup("Core", core);
+          renderGroup("Extended", extended);
+          tbody.innerHTML = html;
+        }
+      }
+
+      load();
+    </script>
+  </body>
+</html>
