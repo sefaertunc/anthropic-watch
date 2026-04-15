@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile, appendFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { sources } from "./sources.js";
+import { sources as defaultSources } from "./sources.js";
 import {
   loadState,
   saveState,
@@ -23,7 +23,6 @@ import { generateOpml } from "./feed/opml.js";
 import * as log from "./log.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const FEEDS_DIR = join(__dirname, "..", "public", "feeds");
 
 const scraperMap = {
   "github-releases": scrapeGithubReleases,
@@ -63,9 +62,18 @@ async function readJsonSafe(path) {
   }
 }
 
-async function main() {
+export async function runPipeline(options = {}) {
+  const {
+    stateDir = join(__dirname, "..", "state"),
+    feedsDir = join(__dirname, "..", "public", "feeds"),
+    sourcesOverride,
+  } = options;
+
+  const sources = sourcesOverride || defaultSources;
+  const statePath = join(stateDir, "last-seen.json");
+
   const runStart = Date.now();
-  const state = await loadState();
+  const state = await loadState(statePath);
 
   log.info("Starting anthropic-watch");
 
@@ -106,6 +114,27 @@ async function main() {
   for (const result of settled) {
     if (result.status === "fulfilled") {
       const { source, items, durationMs } = result.value;
+
+      // Scrapers catch errors internally and return [].
+      // Detect failure: 0 items when we previously had items (not first run).
+      const hasKnownIds = state[source.key]?.knownIds?.length > 0;
+      if (items.length === 0 && hasKnownIds) {
+        recordFailure(state, source.key);
+        totalErrors++;
+        log.fail(source.key, durationMs, "returned 0 items (possible error)");
+        sourceResults.push({
+          key: source.key,
+          name: source.name,
+          category: source.category,
+          status: "error",
+          newItemCount: 0,
+          items: [],
+          durationMs,
+          error: "returned 0 items (possible error)",
+        });
+        continue;
+      }
+
       recordSuccess(state, source.key);
       const newItems = items.filter((item) =>
         isNew(state, source.key, item.id),
@@ -168,29 +197,29 @@ async function main() {
   }
 
   // Generate feeds with accumulation
-  await mkdir(FEEDS_DIR, { recursive: true });
+  await mkdir(feedsDir, { recursive: true });
 
   // Read existing feeds for accumulation
-  const existingAll = await readJsonSafe(join(FEEDS_DIR, "all.json"));
+  const existingAll = await readJsonSafe(join(feedsDir, "all.json"));
   const existingAllItems = existingAll?.items || [];
 
   await writeFile(
-    join(FEEDS_DIR, "all.json"),
+    join(feedsDir, "all.json"),
     generateJsonFeed(
       allNewItems,
       {
-        title: "anthropic-watch \u2014 all sources",
+        title: "anthropic-watch — all sources",
         maxItems: 100,
       },
       existingAllItems,
     ),
   );
   await writeFile(
-    join(FEEDS_DIR, "all.xml"),
+    join(feedsDir, "all.xml"),
     generateRssFeed(
       allNewItems,
       {
-        title: "anthropic-watch \u2014 all sources",
+        title: "anthropic-watch — all sources",
         maxItems: 100,
       },
       existingAllItems,
@@ -207,25 +236,25 @@ async function main() {
   for (const source of sources) {
     const newItems = sourceGroups[source.key] || [];
     const existingSource = await readJsonSafe(
-      join(FEEDS_DIR, `${source.key}.json`),
+      join(feedsDir, `${source.key}.json`),
     );
     const existingSourceItems = existingSource?.items || [];
     const meta = {
-      title: `anthropic-watch \u2014 ${source.name}`,
+      title: `anthropic-watch — ${source.name}`,
       maxItems: 50,
     };
     await writeFile(
-      join(FEEDS_DIR, `${source.key}.json`),
+      join(feedsDir, `${source.key}.json`),
       generateJsonFeed(newItems, meta, existingSourceItems),
     );
     await writeFile(
-      join(FEEDS_DIR, `${source.key}.xml`),
+      join(feedsDir, `${source.key}.xml`),
       generateRssFeed(newItems, meta, existingSourceItems),
     );
   }
 
   // OPML
-  await writeFile(join(FEEDS_DIR, "sources.opml"), generateOpml());
+  await writeFile(join(feedsDir, "sources.opml"), generateOpml());
 
   // Run report
   const runDuration = Date.now() - runStart;
@@ -243,12 +272,12 @@ async function main() {
     sources: sourceResults.map(({ items, ...rest }) => rest),
   };
   await writeFile(
-    join(FEEDS_DIR, "run-report.json"),
+    join(feedsDir, "run-report.json"),
     JSON.stringify(runReport, null, 2),
   );
 
   // Run history
-  const historyPath = join(FEEDS_DIR, "run-history.json");
+  const historyPath = join(feedsDir, "run-history.json");
   const existingHistory = (await readJsonSafe(historyPath)) || [];
   const historyEntry = {
     timestamp: runReport.timestamp,
@@ -267,7 +296,7 @@ async function main() {
   );
 
   // Save state
-  await saveState(state);
+  await saveState(state, statePath);
 
   // Set GitHub Actions output
   if (process.env.GITHUB_OUTPUT) {
@@ -278,9 +307,6 @@ async function main() {
   }
 
   log.info(`Done in ${(runDuration / 1000).toFixed(1)}s`);
-}
 
-main().catch((err) => {
-  console.error("Fatal error:", err);
-  process.exit(1);
-});
+  return { allNewItems, sourceResults, runReport };
+}

@@ -12,7 +12,12 @@ export function generateJsonFeed(items, meta = {}, existingItems = []) {
   }
 
   const sorted = merged
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .sort((a, b) => {
+      if (!a.date && !b.date) return 0;
+      if (!a.date) return 1;
+      if (!b.date) return -1;
+      return new Date(b.date) - new Date(a.date);
+    })
     .slice(0, maxItems);
 
   return JSON.stringify(

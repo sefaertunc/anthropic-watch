@@ -1,12 +1,7 @@
 import * as cheerio from "cheerio";
 import { createHash } from "node:crypto";
-import { fetchWithRetry } from "../fetch-with-retry.js";
-
-function parseFlexibleDate(str) {
-  if (!str) return new Date().toISOString();
-  const d = new Date(str);
-  return isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
-}
+import { fetchSource } from "../fetch-source.js";
+import { parseFlexibleDate } from "../parse-date.js";
 
 function parseIntercomArticle(html, source) {
   const $ = cheerio.load(html);
@@ -62,6 +57,8 @@ function parseIntercomArticle(html, source) {
       url: itemUrl,
       snippet,
       source: source.key,
+      sourceCategory: source.category,
+      sourceName: source.name,
     });
   });
 
@@ -92,25 +89,31 @@ function parseDocsHash(html, source) {
       url: source.url,
       snippet,
       source: source.key,
+      sourceCategory: source.category,
+      sourceName: source.name,
     },
   ];
 }
 
 export async function scrapeDocsPage(source) {
-  const res = await fetchWithRetry(source.url);
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
-  const html = await res.text();
+  try {
+    const res = await fetchSource(source.url, {}, source.fixtureFile);
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
+    const html = await res.text();
 
-  let items;
-  switch (source.parseMode) {
-    case "intercom-article":
-      items = parseIntercomArticle(html, source);
-      break;
-    case "docs-hash":
-      items = parseDocsHash(html, source);
-      break;
-    default:
-      throw new Error(`unknown parseMode "${source.parseMode}"`);
+    let items;
+    switch (source.parseMode) {
+      case "intercom-article":
+        items = parseIntercomArticle(html, source);
+        break;
+      case "docs-hash":
+        items = parseDocsHash(html, source);
+        break;
+      default:
+        throw new Error(`unknown parseMode "${source.parseMode}"`);
+    }
+    return items;
+  } catch {
+    return [];
   }
-  return items;
 }

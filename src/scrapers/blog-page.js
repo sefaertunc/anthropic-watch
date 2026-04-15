@@ -1,11 +1,6 @@
 import * as cheerio from "cheerio";
-import { fetchWithRetry } from "../fetch-with-retry.js";
-
-function parseFlexibleDate(str) {
-  if (!str) return new Date().toISOString();
-  const d = new Date(str);
-  return isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
-}
+import { fetchSource } from "../fetch-source.js";
+import { parseFlexibleDate } from "../parse-date.js";
 
 /**
  * Recursively walk a JSON value, collecting objects that have both `slug` and `title` fields.
@@ -92,6 +87,8 @@ function parseNextjsRscJson(html, source) {
       url: postUrl,
       snippet: summary,
       source: source.key,
+      sourceCategory: source.category,
+      sourceName: source.name,
     };
   });
 }
@@ -125,6 +122,8 @@ function parseNextjsRscHtml(html, source) {
       url: postUrl,
       snippet,
       source: source.key,
+      sourceCategory: source.category,
+      sourceName: source.name,
     });
   });
 
@@ -181,6 +180,8 @@ function parseWebflow(html, source) {
       url: postUrl,
       snippet,
       source: source.key,
+      sourceCategory: source.category,
+      sourceName: source.name,
     });
   });
 
@@ -225,6 +226,8 @@ function parseDistill(html, source) {
       url: postUrl,
       snippet,
       source: source.key,
+      sourceCategory: source.category,
+      sourceName: source.name,
     });
   });
 
@@ -232,23 +235,27 @@ function parseDistill(html, source) {
 }
 
 export async function scrapeBlogPage(source) {
-  const res = await fetchWithRetry(source.url);
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
-  const html = await res.text();
+  try {
+    const res = await fetchSource(source.url, {}, source.fixtureFile);
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
+    const html = await res.text();
 
-  let items;
-  switch (source.parseMode) {
-    case "nextjs-rsc":
-      items = parseNextjsRsc(html, source);
-      break;
-    case "webflow":
-      items = parseWebflow(html, source);
-      break;
-    case "distill":
-      items = parseDistill(html, source);
-      break;
-    default:
-      throw new Error(`unknown parseMode "${source.parseMode}"`);
+    let items;
+    switch (source.parseMode) {
+      case "nextjs-rsc":
+        items = parseNextjsRsc(html, source);
+        break;
+      case "webflow":
+        items = parseWebflow(html, source);
+        break;
+      case "distill":
+        items = parseDistill(html, source);
+        break;
+      default:
+        throw new Error(`unknown parseMode "${source.parseMode}"`);
+    }
+    return items.slice(0, 20);
+  } catch {
+    return [];
   }
-  return items.slice(0, 20);
 }

@@ -5,9 +5,9 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const STATE_PATH = join(__dirname, "..", "state", "last-seen.json");
 
-export async function loadState() {
+export async function loadState(statePath = STATE_PATH) {
   try {
-    const raw = await readFile(STATE_PATH, "utf-8");
+    const raw = await readFile(statePath, "utf-8");
     return JSON.parse(raw);
   } catch (err) {
     if (err.code === "ENOENT") return {};
@@ -15,9 +15,9 @@ export async function loadState() {
   }
 }
 
-export async function saveState(state) {
-  await mkdir(dirname(STATE_PATH), { recursive: true });
-  await writeFile(STATE_PATH, JSON.stringify(state, null, 2) + "\n");
+export async function saveState(state, statePath = STATE_PATH) {
+  await mkdir(dirname(statePath), { recursive: true });
+  await writeFile(statePath, JSON.stringify(state, null, 2) + "\n");
 }
 
 export function isNew(state, sourceKey, itemId) {

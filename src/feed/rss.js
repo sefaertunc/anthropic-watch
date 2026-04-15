@@ -14,7 +14,12 @@ export function generateRssFeed(items, meta = {}, existingItems = []) {
   }
 
   const sorted = merged
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .sort((a, b) => {
+      if (!a.date && !b.date) return 0;
+      if (!a.date) return 1;
+      if (!b.date) return -1;
+      return new Date(b.date) - new Date(a.date);
+    })
     .slice(0, maxItems);
 
   const title = meta.title || "anthropic-watch";
@@ -26,7 +31,7 @@ export function generateRssFeed(items, meta = {}, existingItems = []) {
     title: item.title,
     link: item.url,
     guid: { "#text": item.id, "@_isPermaLink": "false" },
-    pubDate: new Date(item.date).toUTCString(),
+    pubDate: item.date ? new Date(item.date).toUTCString() : "",
     category: item.source,
     description: item.snippet || "",
   }));
