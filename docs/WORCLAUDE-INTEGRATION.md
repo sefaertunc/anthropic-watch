@@ -6,15 +6,7 @@
 
 ## Architecture
 
-```
-┌──────────────────┐         ┌──────────────────┐
-│  anthropic-watch │         │    Worclaude      │
-│                  │         │                   │
-│  scrape → feeds ─┼────────▶│  consume feeds    │
-│                  │  HTTP   │  display/notify   │
-│  GitHub Pages    │         │                   │
-└──────────────────┘         └──────────────────┘
-```
+![Worclaude integration](images/worclaude-integration.png)
 
 anthropic-watch publishes static JSON/RSS files to GitHub Pages. Worclaude fetches these files over HTTP. There is no API, webhook, or direct integration — the feed files are the interface.
 

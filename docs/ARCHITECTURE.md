@@ -4,21 +4,7 @@
 
 anthropic-watch is a Node.js pipeline that scrapes 16 Anthropic-related sources, detects new content, and publishes RSS/JSON feeds to GitHub Pages.
 
-```
-┌─────────────┐     ┌──────────────┐     ┌───────────────┐     ┌──────────────┐
-│  sources.js  │────▶│  scraperMap   │────▶│  state check   │────▶│ feed gen     │
-│  (16 configs)│     │  (6 types)   │     │  (isNew/mark)  │     │ (json/rss)   │
-└─────────────┘     └──────────────┘     └───────────────┘     └──────────────┘
-                         │                                            │
-                    fetch + cheerio                               write to
-                    or JSON API                                  public/feeds/
-                         │                                            │
-                    ┌────▼────┐                                ┌──────▼──────┐
-                    │ retry   │                                │ run-report  │
-                    │ (2x,    │                                │ run-history │
-                    │  15s)   │                                │ OPML        │
-                    └─────────┘                                └─────────────┘
-```
+![Pipeline architecture](images/architecture.png)
 
 All scraping uses `fetch` + `cheerio` for HTML parsing or direct JSON API calls. There is no browser automation (no Playwright, Puppeteer, or headless Chrome).
 
