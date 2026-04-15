@@ -23,6 +23,7 @@ export const sources = [
     url: "https://docs.anthropic.com/en/docs/about-claude/models",
     category: "core",
     scraperType: "docs-page",
+    parseMode: "docs-hash",
   },
   {
     key: "claude-code-changelog",
@@ -37,9 +38,10 @@ export const sources = [
   {
     key: "support-release-notes",
     name: "Anthropic Support Release Notes",
-    url: "https://support.anthropic.com/en/collections/11962-release-notes",
+    url: "https://support.claude.com/en/articles/12138966-release-notes",
     category: "core",
     scraperType: "docs-page",
+    parseMode: "intercom-article",
   },
   {
     key: "claude-code-releases",

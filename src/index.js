@@ -9,6 +9,8 @@ import { scrapeGithubReleases } from "./scrapers/github-releases.js";
 import { scrapeGithubChangelog } from "./scrapers/github-changelog.js";
 import { scrapeNpmRegistry } from "./scrapers/npm-registry.js";
 import { scrapeBlogPage } from "./scrapers/blog-page.js";
+import { scrapeDocsPage } from "./scrapers/docs-page.js";
+import { scrapeStatusPage } from "./scrapers/status-page.js";
 import { generateJsonFeed } from "./feed/json.js";
 import { generateRssFeed } from "./feed/rss.js";
 
@@ -20,6 +22,8 @@ const scraperMap = {
   "github-changelog": scrapeGithubChangelog,
   "npm-registry": scrapeNpmRegistry,
   "blog-page": scrapeBlogPage,
+  "docs-page": scrapeDocsPage,
+  "status-page": scrapeStatusPage,
 };
 
 async function main() {
