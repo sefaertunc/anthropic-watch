@@ -1,17 +1,6 @@
 import * as cheerio from "cheerio";
 import { createHash } from "node:crypto";
-
-async function fetchHtml(url) {
-  const res = await fetch(url, {
-    signal: AbortSignal.timeout(15_000),
-    headers: {
-      "User-Agent":
-        "anthropic-watch/0.1 (https://github.com/anthropics/anthropic-watch)",
-    },
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.text();
-}
+import { fetchWithRetry } from "../fetch-with-retry.js";
 
 function parseFlexibleDate(str) {
   if (!str) return new Date().toISOString();
@@ -38,7 +27,6 @@ function parseIntercomArticle(html, source) {
     const dateText = $h3.text().trim();
     if (!dateText) return;
 
-    // Collect sibling elements until next h2 or h3
     const siblings = [];
     let next = $h3.next();
     while (next.length > 0 && !next.is("h2") && !next.is("h3")) {
@@ -46,7 +34,6 @@ function parseIntercomArticle(html, source) {
       next = next.next();
     }
 
-    // First bold text = title, fallback to date text
     let title = "";
     for (const $sib of siblings) {
       const bold = $sib.find("b, strong").first().text().trim();
@@ -57,7 +44,6 @@ function parseIntercomArticle(html, source) {
     }
     if (!title) title = dateText;
 
-    // Remaining p text = snippet
     const snippetParts = [];
     for (const $sib of siblings) {
       if ($sib.is("p")) {
@@ -85,7 +71,6 @@ function parseIntercomArticle(html, source) {
 function parseDocsHash(html, source) {
   const $ = cheerio.load(html);
 
-  // Remove non-content elements
   $("nav, footer, script, style, header").remove();
 
   const bodyText = $("body").text().replace(/\s+/g, " ").trim();
@@ -93,7 +78,6 @@ function parseDocsHash(html, source) {
 
   const title = $("h1").first().text().trim() || "Docs Page Update";
 
-  // Extract snippet from first table or first paragraph
   const tableText = $("table").first().text().trim();
   const snippet = (tableText || $("p").first().text().trim() || "").slice(
     0,
@@ -113,27 +97,20 @@ function parseDocsHash(html, source) {
 }
 
 export async function scrapeDocsPage(source) {
-  try {
-    const html = await fetchHtml(source.url);
-    let items;
-    switch (source.parseMode) {
-      case "intercom-article":
-        items = parseIntercomArticle(html, source);
-        break;
-      case "docs-hash":
-        items = parseDocsHash(html, source);
-        break;
-      default:
-        console.warn(
-          `[docs-page] ${source.key}: unknown parseMode "${source.parseMode}"`,
-        );
-        return [];
-    }
-    if (items.length === 0)
-      console.warn(`[docs-page] ${source.key}: no items found`);
-    return items;
-  } catch (err) {
-    console.error(`[docs-page] ${source.key}: ${err.message}`);
-    return [];
+  const res = await fetchWithRetry(source.url);
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
+  const html = await res.text();
+
+  let items;
+  switch (source.parseMode) {
+    case "intercom-article":
+      items = parseIntercomArticle(html, source);
+      break;
+    case "docs-hash":
+      items = parseDocsHash(html, source);
+      break;
+    default:
+      throw new Error(`unknown parseMode "${source.parseMode}"`);
   }
+  return items;
 }

@@ -1,16 +1,5 @@
 import * as cheerio from "cheerio";
-
-async function fetchHtml(url) {
-  const res = await fetch(url, {
-    signal: AbortSignal.timeout(15_000),
-    headers: {
-      "User-Agent":
-        "anthropic-watch/0.1 (https://github.com/anthropics/anthropic-watch)",
-    },
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.text();
-}
+import { fetchWithRetry } from "../fetch-with-retry.js";
 
 function parseFlexibleDate(str) {
   if (!str) return new Date().toISOString();
@@ -23,8 +12,6 @@ function parseFlexibleDate(str) {
  */
 function collectPosts(obj, results) {
   if (!obj || typeof obj !== "object") return;
-  // Match objects that look like blog posts: have slug + title + publishedOn
-  // but skip page-level objects (_type === "page") which also have slug + title
   if (
     obj.slug &&
     obj.title &&
@@ -34,7 +21,7 @@ function collectPosts(obj, results) {
     (typeof obj.slug === "string" || typeof obj.slug?.current === "string")
   ) {
     results.push(obj);
-    return; // don't recurse into children of a matched post
+    return;
   }
   if (Array.isArray(obj)) {
     for (const item of obj) collectPosts(item, results);
@@ -44,7 +31,6 @@ function collectPosts(obj, results) {
 }
 
 function parseNextjsRscJson(html, source) {
-  // Extract all self.__next_f.push([1, "..."]) payload strings
   const payloadRegex =
     /self\.__next_f\.push\(\[1,\s*"((?:[^"\\]|\\.)*)"\s*\]\)/g;
   const chunks = [];
@@ -77,7 +63,6 @@ function parseNextjsRscJson(html, source) {
     }
   }
 
-  // Deduplicate by slug
   const seen = new Set();
   const unique = [];
   for (const post of allPosts) {
@@ -111,10 +96,6 @@ function parseNextjsRscJson(html, source) {
   });
 }
 
-/**
- * HTML fallback for anthropic.com pages where RSC JSON doesn't contain article data.
- * Parses rendered HTML links to /{basePath}/* with title/date/snippet children.
- */
 function parseNextjsRscHtml(html, source) {
   const $ = cheerio.load(html);
   const items = [];
@@ -126,7 +107,6 @@ function parseNextjsRscHtml(html, source) {
     const href = $a.attr("href");
     if (!href || seen.has(href)) return;
 
-    // Title from h2/h3/h4 or [class*='title'] inside the link
     const title = (
       $a.find("h2, h3, h4").first().text() ||
       $a.find("[class*='title']").first().text()
@@ -135,11 +115,7 @@ function parseNextjsRscHtml(html, source) {
 
     seen.add(href);
     const postUrl = `${origin}${href}`;
-
-    // Date from time element
     const dateText = ($a.find("time").first().text() || "").trim();
-
-    // Snippet from p element
     const snippet = ($a.find("p").first().text() || "").trim().slice(0, 300);
 
     items.push({
@@ -156,11 +132,8 @@ function parseNextjsRscHtml(html, source) {
 }
 
 function parseNextjsRsc(html, source) {
-  // Try RSC JSON extraction first
   const items = parseNextjsRscJson(html, source);
   if (items.length > 0) return items;
-
-  // Fallback to HTML parsing (e.g. /news page renders articles as HTML)
   return parseNextjsRscHtml(html, source);
 }
 
@@ -169,26 +142,22 @@ function parseWebflow(html, source) {
   const items = [];
   const origin = new URL(source.url).origin;
 
-  // Try Webflow CMS item selectors
   const postEls = $(".blog_cms_item, .w-dyn-item");
 
   postEls.each((_i, el) => {
     const $el = $(el);
 
-    // Title
     const title = (
       $el.find(".card_blog_title").first().text() ||
       $el.find("h2, h3").first().text()
     ).trim();
     if (!title) return;
 
-    // Link
     const linkEl = $el.find("a[href]").first();
     const href = linkEl.attr("href");
     if (!href) return;
     const postUrl = href.startsWith("http") ? href : new URL(href, origin).href;
 
-    // Date
     const dateText = (
       $el.find("[class*='date']").first().text() ||
       $el.find("time").first().text() ||
@@ -197,7 +166,6 @@ function parseWebflow(html, source) {
     ).trim();
     const date = parseFlexibleDate(dateText);
 
-    // Snippet
     const snippet = (
       $el.find("p").first().text() ||
       $el.find("[class*='description'], [class*='excerpt']").first().text() ||
@@ -224,8 +192,6 @@ function parseDistill(html, source) {
   const items = [];
   const baseUrl = source.url.replace(/\/$/, "");
 
-  // Structure: div.toc contains div.date month headers and a.note post links
-  // Posts may be direct children or nested in wrapper divs (e.g. embargoed posts)
   let lastDate = "";
   $(".toc .date, .toc a.note").each((_i, el) => {
     const $el = $(el);
@@ -235,7 +201,6 @@ function parseDistill(html, source) {
       return;
     }
 
-    // It's an a.note
     const h3 = $el.find("h3");
     if (h3.length === 0) return;
 
@@ -267,30 +232,23 @@ function parseDistill(html, source) {
 }
 
 export async function scrapeBlogPage(source) {
-  try {
-    const html = await fetchHtml(source.url);
-    let items;
-    switch (source.parseMode) {
-      case "nextjs-rsc":
-        items = parseNextjsRsc(html, source);
-        break;
-      case "webflow":
-        items = parseWebflow(html, source);
-        break;
-      case "distill":
-        items = parseDistill(html, source);
-        break;
-      default:
-        console.warn(
-          `[blog-page] ${source.key}: unknown parseMode "${source.parseMode}"`,
-        );
-        return [];
-    }
-    if (items.length === 0)
-      console.warn(`[blog-page] ${source.key}: no items found`);
-    return items.slice(0, 20);
-  } catch (err) {
-    console.error(`[blog-page] ${source.key}: ${err.message}`);
-    return [];
+  const res = await fetchWithRetry(source.url);
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
+  const html = await res.text();
+
+  let items;
+  switch (source.parseMode) {
+    case "nextjs-rsc":
+      items = parseNextjsRsc(html, source);
+      break;
+    case "webflow":
+      items = parseWebflow(html, source);
+      break;
+    case "distill":
+      items = parseDistill(html, source);
+      break;
+    default:
+      throw new Error(`unknown parseMode "${source.parseMode}"`);
   }
+  return items.slice(0, 20);
 }

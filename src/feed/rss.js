@@ -1,10 +1,24 @@
 import { XMLBuilder } from "fast-xml-parser";
 
-export function generateRssFeed(items, meta = {}) {
-  const sorted = [...items].sort((a, b) => new Date(b.date) - new Date(a.date));
+export function generateRssFeed(items, meta = {}, existingItems = []) {
+  const maxItems = meta.maxItems || 100;
+
+  // Merge new items with existing, dedupe by id+source
+  const seen = new Set();
+  const merged = [];
+  for (const item of [...items, ...existingItems]) {
+    const key = `${item.id}|${item.source}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    merged.push(item);
+  }
+
+  const sorted = merged
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, maxItems);
 
   const title = meta.title || "anthropic-watch";
-  const link = meta.link || "https://your-username.github.io/anthropic-watch/";
+  const link = meta.link || "https://sefaertunc.github.io/anthropic-watch/";
   const description =
     meta.description || "Monitoring Anthropic sources for changes";
 
@@ -25,6 +39,8 @@ export function generateRssFeed(items, meta = {}) {
         title,
         link,
         description,
+        generator: "anthropic-watch",
+        ttl: 1440,
         lastBuildDate: new Date().toUTCString(),
         item: rssItems.length === 1 ? [rssItems[0]] : rssItems,
       },

@@ -37,3 +37,19 @@ export function markSeen(state, sourceKey, items) {
   }
   state[sourceKey].lastChecked = new Date().toISOString();
 }
+
+export function recordSuccess(state, sourceKey) {
+  if (!state[sourceKey]) {
+    state[sourceKey] = { knownIds: [], lastChecked: null };
+  }
+  state[sourceKey].consecutiveFailures = 0;
+  state[sourceKey].lastSuccess = new Date().toISOString();
+}
+
+export function recordFailure(state, sourceKey) {
+  if (!state[sourceKey]) {
+    state[sourceKey] = { knownIds: [], lastChecked: null };
+  }
+  state[sourceKey].consecutiveFailures =
+    (state[sourceKey].consecutiveFailures || 0) + 1;
+}

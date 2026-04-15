@@ -29,6 +29,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node src/index.js
 
+      - name: Write job summary
+        if: always()
+        run: node src/summary.js >> $GITHUB_STEP_SUMMARY
+
       - name: Commit state changes
         run: |
           git config user.name "anthropic-watch[bot]"
