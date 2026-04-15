@@ -5,6 +5,8 @@ export const sources = [
     url: "https://www.anthropic.com/engineering",
     category: "core",
     scraperType: "blog-page",
+    parseMode: "nextjs-rsc",
+    basePath: "/engineering",
   },
   {
     key: "blog-news",
@@ -12,6 +14,8 @@ export const sources = [
     url: "https://www.anthropic.com/news",
     category: "core",
     scraperType: "blog-page",
+    parseMode: "nextjs-rsc",
+    basePath: "/news",
   },
   {
     key: "docs-release-notes",
@@ -95,16 +99,18 @@ export const sources = [
   {
     key: "blog-alignment",
     name: "Anthropic Alignment Blog",
-    url: "https://www.anthropic.com/alignment",
+    url: "https://alignment.anthropic.com",
     category: "extended",
     scraperType: "blog-page",
+    parseMode: "distill",
   },
   {
     key: "blog-red-team",
     name: "Anthropic Red Team Blog",
-    url: "https://www.anthropic.com/red-teaming",
+    url: "https://red.anthropic.com",
     category: "extended",
     scraperType: "blog-page",
+    parseMode: "distill",
   },
   {
     key: "blog-research",
@@ -112,13 +118,16 @@ export const sources = [
     url: "https://www.anthropic.com/research",
     category: "extended",
     scraperType: "blog-page",
+    parseMode: "nextjs-rsc",
+    basePath: "/research",
   },
   {
     key: "blog-claude",
     name: "Anthropic Claude Blog",
-    url: "https://www.anthropic.com/claude",
+    url: "https://claude.com/blog",
     category: "extended",
     scraperType: "blog-page",
+    parseMode: "webflow",
   },
   {
     key: "status-page",

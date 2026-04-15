@@ -8,6 +8,7 @@ import { loadState, saveState, isNew, markSeen } from "./state.js";
 import { scrapeGithubReleases } from "./scrapers/github-releases.js";
 import { scrapeGithubChangelog } from "./scrapers/github-changelog.js";
 import { scrapeNpmRegistry } from "./scrapers/npm-registry.js";
+import { scrapeBlogPage } from "./scrapers/blog-page.js";
 import { generateJsonFeed } from "./feed/json.js";
 import { generateRssFeed } from "./feed/rss.js";
 
@@ -18,6 +19,7 @@ const scraperMap = {
   "github-releases": scrapeGithubReleases,
   "github-changelog": scrapeGithubChangelog,
   "npm-registry": scrapeNpmRegistry,
+  "blog-page": scrapeBlogPage,
 };
 
 async function main() {
