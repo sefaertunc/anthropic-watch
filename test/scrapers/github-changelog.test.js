@@ -39,7 +39,7 @@ describe("scrapeGithubChangelog", () => {
     });
   }
 
-  it("parses changelog and returns item with hash id", async () => {
+  it("parses changelog and uses first ## heading as id", async () => {
     const md =
       "# Changelog\n\n## 1.0.0\n\n### Features\n- New feature\n\n## 0.9.0\n\n- Old stuff\n";
     const fixturePath = join(tmpDir, "changelog.json");
@@ -48,7 +48,7 @@ describe("scrapeGithubChangelog", () => {
     const items = await scrapeGithubChangelog(makeSource(fixturePath));
 
     expect(items.length).toBe(1);
-    expect(items[0].id).toMatch(/^[0-9a-f]{12}$/);
+    expect(items[0].id).toBe("1.0.0");
     expect(items[0].title).toBe("1.0.0");
     expect(items[0].source).toBe("claude-code-changelog");
     expect(items[0].sourceCategory).toBe("core");
@@ -76,24 +76,16 @@ describe("scrapeGithubChangelog", () => {
     }
   });
 
-  it("returns [] for content with no ## headings", async () => {
-    const md = "# Just a title\n\nNo version headings here.\n";
-    const fixturePath = join(tmpDir, "no-headings.json");
-    await writeFile(fixturePath, makeFixture(md));
-
-    const items = await scrapeGithubChangelog(makeSource(fixturePath));
-    expect(items).toEqual([]);
-  });
-
-  it("returns [] for malformed JSON", async () => {
+  it("throws for malformed JSON", async () => {
     const fixturePath = join(tmpDir, "bad.json");
     await writeFile(fixturePath, "not json");
 
-    const items = await scrapeGithubChangelog(makeSource(fixturePath));
-    expect(items).toEqual([]);
+    await expect(
+      scrapeGithubChangelog(makeSource(fixturePath)),
+    ).rejects.toThrow();
   });
 
-  it("different content produces different hash", async () => {
+  it("same heading with different content produces the same id", async () => {
     const md1 = "## 1.0.0\n\nContent A\n\n## 0.9.0\n\nOld\n";
     const md2 = "## 1.0.0\n\nContent B different\n\n## 0.9.0\n\nOld\n";
 
@@ -105,6 +97,37 @@ describe("scrapeGithubChangelog", () => {
     const items1 = await scrapeGithubChangelog(makeSource(path1));
     const items2 = await scrapeGithubChangelog(makeSource(path2));
 
+    expect(items1[0].id).toBe("1.0.0");
+    expect(items2[0].id).toBe("1.0.0");
+    expect(items1[0].id).toBe(items2[0].id);
+  });
+
+  it("different headings produce different ids", async () => {
+    const md1 = "## 1.0.0\n\nContent\n";
+    const md2 = "## 1.0.1\n\nContent\n";
+
+    const path1 = join(tmpDir, "cl1.json");
+    const path2 = join(tmpDir, "cl2.json");
+    await writeFile(path1, makeFixture(md1));
+    await writeFile(path2, makeFixture(md2));
+
+    const items1 = await scrapeGithubChangelog(makeSource(path1));
+    const items2 = await scrapeGithubChangelog(makeSource(path2));
+
+    expect(items1[0].id).toBe("1.0.0");
+    expect(items2[0].id).toBe("1.0.1");
     expect(items1[0].id).not.toBe(items2[0].id);
+  });
+
+  it("content with no ## heading falls back to 12-char hash id", async () => {
+    const md = "# Just a title\n\nNo version headings here.\n";
+    const fixturePath = join(tmpDir, "no-headings.json");
+    await writeFile(fixturePath, makeFixture(md));
+
+    const items = await scrapeGithubChangelog(makeSource(fixturePath));
+
+    expect(items.length).toBe(1);
+    expect(items[0].id).toMatch(/^[0-9a-f]{12}$/);
+    expect(items[0].title).toMatch(/^\(no heading — /);
   });
 });

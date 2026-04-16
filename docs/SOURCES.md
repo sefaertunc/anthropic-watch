@@ -37,12 +37,12 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 
 - **Key**: `docs-release-notes`
 - **URL**: https://docs.anthropic.com/en/docs/about-claude/models
-- **Scraper type**: `docs-page` (`parseMode: "docs-hash"`)
-- **What it tracks**: Changes to the models documentation page — model additions, parameter changes, deprecations.
-- **Detection method**: Strips nav/footer/script/style elements, extracts body text, computes SHA-256 hash (first 12 hex chars). Any content change produces a new hash. ID = hash.
-- **Update frequency**: When models are added or updated
+- **Scraper type**: `docs-page` (`parseMode: "model-table"`)
+- **What it tracks**: The current Claude model lineup — one item per model (Opus, Sonnet, Haiku, etc.), keyed by Claude API ID.
+- **Detection method**: Parses the first `<table>` on the models reference page. Header row cells become model display names (e.g., `"Claude Opus 4.6"`); the row labelled `"Claude API ID"` supplies the stable per-model id (e.g., `claude-opus-4-6`); the `"Description"` row supplies the snippet. One item is emitted per model column. Throws if the table or the `"Claude API ID"` row is missing.
+- **Update frequency**: When models are added, renamed, or deprecated
 - **Feed**: [`docs-release-notes.json`](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.xml)
-- **Notes**: Always emits exactly 1 item. ID changes on every content edit, so item churn is expected. Date is set to scrape time.
+- **Notes**: No churn on unrelated page edits — ids derive from the Claude API ID row, not the full body. Date is `null` (no per-model release date on the page).
 
 ### 4. Claude Code Changelog
 
@@ -50,10 +50,10 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **URL**: https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md
 - **Scraper type**: `github-changelog` (`owner: "anthropics"`, `repo: "claude-code"`, `file: "CHANGELOG.md"`)
 - **What it tracks**: Latest changelog entry from the CHANGELOG.md file in the Claude Code repo.
-- **Detection method**: Fetches file via GitHub Contents API (`/repos/anthropics/claude-code/contents/CHANGELOG.md`), base64-decodes content, SHA-256 hashes the full file, extracts the topmost `## ` section. ID = hash (first 12 chars).
+- **Detection method**: Fetches file via GitHub Contents API (`/repos/anthropics/claude-code/contents/CHANGELOG.md`), base64-decodes content, extracts the topmost `## ` section. ID = first `## ` heading text (e.g., `"2.1.109"`, `"[Unreleased]"`); falls back to a 12-char SHA-256 hash of the full file if no heading is found.
 - **Update frequency**: Multiple times per week
 - **Feed**: [`claude-code-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.xml)
-- **Notes**: Only the most recent `## ` entry is extracted. Date is set to scrape time, not the date in the heading. Requires `GITHUB_TOKEN` for rate limits.
+- **Notes**: Only the most recent `## ` entry is extracted. Date is set to scrape time, not the date in the heading. `[Unreleased]` sections accumulate edits under one ID until a version heading replaces them. Requires `GITHUB_TOKEN` for rate limits.
 
 ### 5. Anthropic Support Release Notes
 
@@ -94,7 +94,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **URL**: https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md
 - **Scraper type**: `github-changelog` (`owner: "anthropics"`, `repo: "claude-agent-sdk-typescript"`, `file: "CHANGELOG.md"`)
 - **What it tracks**: Latest changelog entry for the TypeScript Agent SDK.
-- **Detection method**: Same as claude-code-changelog — GitHub Contents API, base64 decode, SHA-256 hash, topmost `## ` section extraction.
+- **Detection method**: Same as claude-code-changelog — GitHub Contents API, base64 decode, topmost `## ` heading as ID (hash fallback if no heading).
 - **Update frequency**: Weekly to monthly
 - **Feed**: [`agent-sdk-ts-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.xml)
 - **Notes**: Same single-entry extraction as other changelog scrapers.
@@ -105,7 +105,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **URL**: https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md
 - **Scraper type**: `github-changelog` (`owner: "anthropics"`, `repo: "claude-agent-sdk-python"`, `file: "CHANGELOG.md"`)
 - **What it tracks**: Latest changelog entry for the Python Agent SDK.
-- **Detection method**: Same as claude-code-changelog.
+- **Detection method**: Same as claude-code-changelog — topmost `## ` heading as ID (hash fallback if no heading).
 - **Update frequency**: Weekly to monthly
 - **Feed**: [`agent-sdk-py-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.xml)
 - **Notes**: Same single-entry extraction as other changelog scrapers.
@@ -192,14 +192,14 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 
 ## Scraper Type Reference
 
-| Scraper Type       | Method                      | Parse Modes                        | Sources                                                                                |
-| ------------------ | --------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------- |
-| `github-releases`  | GitHub REST API + fetch     | —                                  | claude-code-releases, api-sdk-ts-releases, claude-code-action                          |
-| `github-changelog` | GitHub Contents API + fetch | —                                  | claude-code-changelog, agent-sdk-ts-changelog, agent-sdk-py-changelog                  |
-| `npm-registry`     | npm registry API + fetch    | —                                  | npm-claude-code                                                                        |
-| `blog-page`        | fetch + cheerio             | `nextjs-rsc`, `webflow`, `distill` | blog-engineering, blog-news, blog-research, blog-alignment, blog-red-team, blog-claude |
-| `docs-page`        | fetch + cheerio             | `intercom-article`, `docs-hash`    | docs-release-notes, support-release-notes                                              |
-| `status-page`      | Statuspage.io API + fetch   | —                                  | status-page                                                                            |
+| Scraper Type       | Method                      | Parse Modes                                    | Sources                                                                                |
+| ------------------ | --------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `github-releases`  | GitHub REST API + fetch     | —                                              | claude-code-releases, api-sdk-ts-releases, claude-code-action                          |
+| `github-changelog` | GitHub Contents API + fetch | —                                              | claude-code-changelog, agent-sdk-ts-changelog, agent-sdk-py-changelog                  |
+| `npm-registry`     | npm registry API + fetch    | —                                              | npm-claude-code                                                                        |
+| `blog-page`        | fetch + cheerio             | `nextjs-rsc`, `webflow`, `distill`             | blog-engineering, blog-news, blog-research, blog-alignment, blog-red-team, blog-claude |
+| `docs-page`        | fetch + cheerio             | `intercom-article`, `docs-hash`, `model-table` | docs-release-notes, support-release-notes                                              |
+| `status-page`      | Statuspage.io API + fetch   | —                                              | status-page                                                                            |
 
 All scrapers use `fetch` (with retry) for HTTP requests. HTML scrapers use `cheerio` for DOM parsing. There is no browser automation.
 

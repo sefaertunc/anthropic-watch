@@ -23,7 +23,7 @@ export const sources = [
     url: "https://docs.anthropic.com/en/docs/about-claude/models",
     category: "core",
     scraperType: "docs-page",
-    parseMode: "docs-hash",
+    parseMode: "model-table",
   },
   {
     key: "claude-code-changelog",

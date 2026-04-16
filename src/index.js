@@ -115,26 +115,6 @@ export async function runPipeline(options = {}) {
     if (result.status === "fulfilled") {
       const { source, items, durationMs } = result.value;
 
-      // Scrapers catch errors internally and return [].
-      // Detect failure: 0 items when we previously had items (not first run).
-      const hasKnownIds = state[source.key]?.knownIds?.length > 0;
-      if (items.length === 0 && hasKnownIds) {
-        recordFailure(state, source.key);
-        totalErrors++;
-        log.fail(source.key, durationMs, "returned 0 items (possible error)");
-        sourceResults.push({
-          key: source.key,
-          name: source.name,
-          category: source.category,
-          status: "error",
-          newItemCount: 0,
-          items: [],
-          durationMs,
-          error: "returned 0 items (possible error)",
-        });
-        continue;
-      }
-
       recordSuccess(state, source.key);
       const newItems = items.filter((item) =>
         isNew(state, source.key, item.id),

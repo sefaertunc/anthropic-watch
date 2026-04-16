@@ -78,11 +78,10 @@ describe("scrapeNpmRegistry", () => {
     expect(items[0].snippet.length).toBeLessThanOrEqual(300);
   });
 
-  it("returns [] for malformed input", async () => {
+  it("throws for malformed input", async () => {
     const latestPath = join(tmpDir, "bad.json");
     await writeFile(latestPath, "not json");
 
-    const items = await scrapeNpmRegistry(makeSource(latestPath));
-    expect(items).toEqual([]);
+    await expect(scrapeNpmRegistry(makeSource(latestPath))).rejects.toThrow();
   });
 });

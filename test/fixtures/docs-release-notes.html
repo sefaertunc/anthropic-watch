@@ -1,0 +1,414 @@
+<!DOCTYPE html><html class="h-screen antialiased bg-bg-100 __variable_8d1da5 __variable_2d8cf6 __variable_5581e8" lang="en-US" data-theme="claude" data-mode="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"><link rel="stylesheet" href="/_next/static/css/34a2dc08cd4f8108.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/05674d3eb9977543.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/28ca58211539440e.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/a65ff0220d5f63ad.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/4c1c1b178f5f2484.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/7330c74f27c4968a.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/bf71b0902a17bea2.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/415f17af5be15bde.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/e3aaf70fa4198b12.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/8359068e4bd1e0f6.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/77755cd2a6b2a03a.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/b9147ca7e14b6b03.css" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" data-precedence="next"><link rel="preload" as="script" fetchpriority="low" nonce="sXPh1qPeM/qqwGDEhY9Oyw==" href="/_next/static/chunks/webpack-3ea797c0d20908a0.js"><meta name="next-size-adjust" content=""><title>Models overview - Claude API Docs</title><meta name="description" content="Claude is a family of state-of-the-art large language models developed by Anthropic. This guide introduces the available models and compares their performance."><link rel="canonical" href="https://platform.claude.com/docs/en/about-claude/models/overview"><meta name="mobile-web-app-capable" content="yes"><link href="/apple-touch-icon.png" rel="apple-touch-startup-image"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:title" content="Models overview"><meta property="og:description" content="Claude is a family of state-of-the-art large language models developed by Anthropic. This guide introduces the available models and compares their performance."><meta property="og:url" content="https://platform.claude.com/docs/en/about-claude/models/overview"><meta property="og:site_name" content="Claude API Docs"><meta property="og:locale" content="en"><meta property="og:image" content="https://platform.claude.com/docs/og?locale=en&amp;path=about-claude/models/overview"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Models overview"><meta property="og:image:type" content="image/png"><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Models overview"><meta name="twitter:description" content="Claude is a family of state-of-the-art large language models developed by Anthropic. This guide introduces the available models and compares their performance."><meta name="twitter:image" content="https://platform.claude.com/docs/og?locale=en&amp;path=about-claude/models/overview"><link rel="icon" href="/favicon.ico"><link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png"><link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"></head><body class="bg-bg-100 text-text-100 min-h-screen font-ui"><div hidden=""><!--$--><!--/$--></div><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none"><ol tabindex="-1" class="fixed top-0 z-toast flex flex-col gap-3 p-4 draggable-none" style="right:var(--launch-drawer-width, 0px)"></ol></div><div><div class="fixed right-2 bottom-2 z-toast max-h-[calc(100vh-1rem)] max-w-[calc(100vw-1rem)] sm:max-w-md rounded-3xl font-ui bg-bg-500 p-4 sm:p-8 overflow-auto" data-theme="claude" data-mode="dark" data-testid="consent-banner"><h3 class="text-xl col-span-2 mb-2 sm:mb-4 text-text-000">Cookie settings</h3><p class="text-sm text-text-300 mb-4">We use cookies to deliver and improve our services, analyze site usage, and if you agree, to customize or personalize your experience and market our services to you. You can read our Cookie Policy <a class="underline" href="https://www.anthropic.com/legal/cookies">here</a>.</p><div class="flex grid-cols-3 grid-rows-1 justify-between gap-2 pb-1 sm:grid sm:grid-cols-2 sm:grid-rows-2 sm:pb-0"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none font-base-bold
+          border-0.5
+          overflow-hidden
+          transition
+          duration-100
+          backface-hidden h-9 px-4 py-2 rounded-lg min-w-[5rem] whitespace-nowrap col-span-1 grow sm:col-span-2 Button_fill__JiIcX Button_secondary__Teecd" type="button" data-testid="consent-customize"><span class="text-center"><span class="sm:hidden">Customize</span><span class="hidden sm:inline">Customize Cookie Settings</span></span></button><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none font-base-bold
+          border-0.5
+          overflow-hidden
+          transition
+          duration-100
+          backface-hidden h-9 px-4 py-2 rounded-lg min-w-[5rem] whitespace-nowrap col-span-1 grow sm:col-span-1 Button_fill__JiIcX Button_secondary__Teecd" type="button" data-testid="consent-reject"><span class="sm:hidden">Reject</span><span class="hidden sm:inline">Reject All Cookies</span></button><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none font-base-bold
+        overflow-hidden
+        transition-transform
+        will-change-transform
+        ease-[cubic-bezier(0.165,0.85,0.45,1)]
+        duration-150
+        hover:scale-y-[1.015]
+        hover:scale-x-[1.005]
+        backface-hidden
+        after:absolute
+        after:inset-0
+        after:bg-[radial-gradient(at_bottom,hsla(var(--bg-000)/20%),hsla(var(--bg-000)/0%))]
+        after:opacity-0
+        after:transition
+        after:duration-200
+        after:translate-y-2
+        hover:after:opacity-100
+        hover:after:translate-y-0 h-9 px-4 py-2 rounded-lg min-w-[5rem] whitespace-nowrap col-span-1 grow sm:col-span-1 Button_fill__JiIcX Button_primary__0oSjX" type="button" data-testid="consent-accept"><span class="sm:hidden">Accept</span><span class="hidden sm:inline">Accept All Cookies</span></button></div></div></div><!--$--><!--/$--><!--$?--><template id="B:0"></template><div class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"><div class="h-20 w-20 border-8 border-border-200 text-secondary inline-block animate-spin rounded-full border-solid border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] hidden" role="status"><span class="sr-only">Loading...</span></div></div><!--/$--><div hidden="" id="S:0"><div class="__variable_8d1da5 __variable_2d8cf6 __variable_5581e8"><div class="max-w-screen flex flex-col"><header class="fixed top-0 left-0 gap-1 right-0 z-30 h-14 flex-none border-b-0.5 border-border-300 bg-bg-100 flex items-center justify-between px-2 md:px-4"><div class="flex items-center"><a aria-label="Claude API Docs Home" href="/docs/en/home"></a><div class="hidden lg:flex items-center ml-2"><button class="rounded py-1 px-2 max-w-full whitespace-nowrap text-ellipsis overflow-hidden flex items-center gap-1.5 px-2 py-1 text-sm font-medium text-text-100 rounded-md hover:bg-bg-300 transition-colors" aria-label="Switch product surface" type="button" id="radix-_R_9cntiuuljb_" aria-haspopup="menu" aria-expanded="false" data-state="closed">Messages<div class="text-text-400" style="width:16px;height:16px;display:flex;align-items:center;justify-content:center"></div></button></div></div><nav class="hidden lg:block h-full"><ul class="h-full flex text-sm gap-x-2 items-center"><li><a class="group relative flex items-center justify-center gap-1 text-center px-2 py-1 lg:px-3 lg:py-1.5 rounded-full transition-colors duration-200 text-text-500 hover:bg-bg-300" href="/docs/en/intro">Build</a></li><li><a class="group relative flex items-center justify-center gap-1 text-center px-2 py-1 lg:px-3 lg:py-1.5 rounded-full transition-colors duration-200 text-text-500 hover:bg-bg-300" href="/docs/en/build-with-claude/administration-api">Admin</a></li><li><a class="group relative flex items-center justify-center gap-1 text-center px-2 py-1 lg:px-3 lg:py-1.5 rounded-full transition-colors duration-200 text-text-100 bg-bg-500" href="/docs/en/about-claude/models/overview">Models &amp; pricing</a></li><li><a class="group relative flex items-center justify-center gap-1 text-center px-2 py-1 lg:px-3 lg:py-1.5 rounded-full transition-colors duration-200 text-text-500 hover:bg-bg-300" href="/docs/en/api/client-sdks">Client SDKs</a></li><li><a class="group relative flex items-center justify-center gap-1 text-center px-2 py-1 lg:px-3 lg:py-1.5 rounded-full transition-colors duration-200 text-text-500 hover:bg-bg-300" href="/docs/en/api/overview">API Reference</a></li></ul></nav><div class=""><div class="lg:flex hidden items-center gap-2 "><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md Button_fill__JiIcX Button_ghost__BUAoh" disabled="" type="button"><div class="w-4 h-4"></div></button><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs pl-2.5 pr-2 gap-1 rounded py-1 px-2 max-w-full whitespace-nowrap text-ellipsis overflow-hidden flex gap-2 text-text-400 hover:text-text-200 Button_fill__JiIcX Button_ghost__BUAoh" type="button" id="radix-_R_17cntiuuljb_" aria-haspopup="menu" aria-expanded="false" data-state="closed">English<div style="width:14px;height:14px;display:flex;align-items:center;justify-content:center"></div></button><a href="/login?returnTo=%2Fdocs%2Fen%2Fabout-claude%2Fmodels%2Foverview"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none font-base-bold
+        overflow-hidden
+        transition-transform
+        will-change-transform
+        ease-[cubic-bezier(0.165,0.85,0.45,1)]
+        duration-150
+        hover:scale-y-[1.015]
+        hover:scale-x-[1.005]
+        backface-hidden
+        after:absolute
+        after:inset-0
+        after:bg-[radial-gradient(at_bottom,hsla(var(--bg-000)/20%),hsla(var(--bg-000)/0%))]
+        after:opacity-0
+        after:transition
+        after:duration-200
+        after:translate-y-2
+        hover:after:opacity-100
+        hover:after:translate-y-0 h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs Button_fill__JiIcX Button_primary__0oSjX" type="button">Log in</button></a></div><div class="lg:hidden flex items-center gap-1 "><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md Button_fill__JiIcX Button_ghost__BUAoh" type="button" aria-label="Search documentation"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md Button_fill__JiIcX Button_ghost__BUAoh" type="button" id="radix-_R_1bcntiuuljb_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button></div></div></header><div data-docs-layout="true" class="flex-1"><div class="flex min-h-screen pt-14"><aside class="hidden lg:flex lg:flex-col bg-bg-200 w-64 flex-none border-r-0.5 border-border-300 fixed top-14 z-header" style="bottom:var(--devbar-h, 0)"><div class="px-2 pt-4 mb-2"><div role="button" tabindex="0" class="relative w-full group cursor-pointer" aria-label="Search documentation"><div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"><div class="text-text-400" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></div><div class="w-full pl-10 pr-12 py-2 text-sm text-left bg-bg-000 border border-border-300 rounded-lg placeholder-text-400 transition-all hover:border-border-200 hover:bg-bg-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary select-none"><span class="text-text-400">Search...</span></div><div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"><span class="text-xs text-text-500">⌘K</span></div></div></div><div class="flex-1 overflow-y-auto pt-3 pb-4 transition-[border-color] border-t-0.5 border-transparent"><div class="flex flex-col gap-1 px-2"><div class="space-y-4"><div><div class="text-sm text-text-100 font-semibold h-8 flex items-center px-2 mb-1">Models</div><div class="flex flex-col gap-1"><a class="h-8 px-2 flex items-center text-sm rounded-lg transition-colors duration-200 text-text-100 bg-bg-500" data-selected="true" href="/docs/en/about-claude/models/overview"><span class="h-full flex items-center min-w-0"><span class="truncate py-1">Models overview</span></span></a><a class="h-8 px-2 flex items-center text-sm rounded-lg transition-colors duration-200 text-text-300 hover:text-text-100 hover:bg-bg-400" href="/docs/en/about-claude/models/choosing-a-model"><span class="h-full flex items-center min-w-0"><span class="truncate py-1">Choosing a model</span></span></a><a class="h-8 px-2 flex items-center text-sm rounded-lg transition-colors duration-200 text-text-300 hover:text-text-100 hover:bg-bg-400" href="/docs/en/about-claude/models/whats-new-claude-4-6"><span class="h-full flex items-center min-w-0"><span class="truncate py-1">What's new in Claude 4.6</span></span></a><a class="h-8 px-2 flex items-center text-sm rounded-lg transition-colors duration-200 text-text-300 hover:text-text-100 hover:bg-bg-400" href="/docs/en/about-claude/models/migration-guide"><span class="h-full flex items-center min-w-0"><span class="truncate py-1">Migration guide</span></span></a><a class="h-8 px-2 flex items-center text-sm rounded-lg transition-colors duration-200 text-text-300 hover:text-text-100 hover:bg-bg-400" href="/docs/en/about-claude/model-deprecations"><span class="h-full flex items-center min-w-0"><span class="truncate py-1">Model deprecations</span></span></a><a class="h-8 px-2 flex items-center text-sm rounded-lg transition-colors duration-200 text-text-300 hover:text-text-100 hover:bg-bg-400" href="/docs/en/resources/overview"><span class="h-full flex items-center min-w-0"><span class="truncate py-1">Model cards</span></span></a><a class="h-8 px-2 flex items-center text-sm rounded-lg transition-colors duration-200 text-text-300 hover:text-text-100 hover:bg-bg-400" href="/docs/en/release-notes/system-prompts"><span class="h-full flex items-center min-w-0"><span class="truncate py-1">System prompts</span></span></a></div></div><div><div class="text-sm text-text-100 font-semibold h-8 flex items-center px-2 mb-1">Pricing</div><div class="flex flex-col gap-1"><a class="h-8 px-2 flex items-center text-sm rounded-lg transition-colors duration-200 text-text-300 hover:text-text-100 hover:bg-bg-400" href="/docs/en/about-claude/pricing"><span class="h-full flex items-center min-w-0"><span class="truncate py-1">Pricing</span></span></a></div></div></div></div></div><div class="flex-none border-t-0.5 border-border-300"><div class="px-3 pt-1 pb-3 space-y-1 relative"><a class="hover:bg-bg-400 group flex h-9 items-center gap-3 rounded-lg px-2 font-ui text-text-300" data-testid="docs-nav-console-full" href="/"><div class="shrink-0" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div><div class="min-w-0 truncate text-sm">Console</div></a><div class="lg:hidden"><a class="hover:bg-bg-400 group flex h-9 items-center gap-3 rounded-lg px-2 font-ui text-text-300" data-testid="docs-nav-login-full" href="/login"><div class="shrink-0" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div><div class="min-w-0 truncate text-sm">Log in</div></a></div></div></div></aside><div class="flex flex-col w-full min-w-0 lg:pl-64"><button class="fixed top-14 left-0 right-0 z-sidebar flex lg:hidden items-center h-10 gap-2 text-sm text-text-300 border-b-0.5 border-border-200 px-4 py-2 bg-bg-100 hover:bg-bg-200 active:bg-bg-200 transition-colors"><div class="flex-shrink-0 text-text-400" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div><span class="text-text-400 truncate">Models</span><div class="flex-shrink-0 text-text-400" style="width:16px;height:16px;display:flex;align-items:center;justify-content:center"></div><span class="text-text-200 font-medium truncate">Models overview</span></button><main id="docs-scroll-container" class="flex-1 bg-bg-100 pt-10 lg:pt-0"><div class="max-w-screen-2xl w-full mx-auto min-h-[calc(100vh-3.5rem)]"><!--$?--><template id="B:1"></template><div class="w-full relative max-w-screen-2xl flex justify-center lg:justify-between mx-auto shrink"><div class="hidden [@media(min-width:1470px)]:block"></div><article class="prose mx-auto max-w-5xl lg:max-w-4xl w-full min-w-0 overflow-x-hidden px-6 py-8 lg:p-8"><header class="mb-6"><div class="mb-2"><div class="hidden h-5 items-center lg:flex"><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:14px;width:180px;max-width:100%"><span class="sr-only">Loading...</span></div></div></div><div class="flex justify-between items-center pb-2"><div class="flex h-9 items-center"><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:28px;width:205px;max-width:100%"><span class="sr-only">Loading...</span></div></div><div class="hidden lg:block flex-shrink-0"><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:32px;width:120px;max-width:100%"><span class="sr-only">Loading...</span></div></div></div><div class="flex h-7 items-center"><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:18px;width:357px;max-width:100%"><span class="sr-only">Loading...</span></div></div></header><div class="block lg:hidden mb-4"><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:32px;width:120px;max-width:100%"><span class="sr-only">Loading...</span></div></div><div class="space-y-6"><div class="space-y-2"><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:100%;max-width:100%"><span class="sr-only">Loading...</span></div><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:100%;max-width:100%"><span class="sr-only">Loading...</span></div><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:78px;max-width:100%"><span class="sr-only">Loading...</span></div></div><div class="space-y-2"><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:100%;max-width:100%"><span class="sr-only">Loading...</span></div><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:100%;max-width:100%"><span class="sr-only">Loading...</span></div><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:100%;max-width:100%"><span class="sr-only">Loading...</span></div><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:46px;max-width:100%"><span class="sr-only">Loading...</span></div></div><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:28px;width:225px;max-width:100%"><span class="sr-only">Loading...</span></div><div class="space-y-2"><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:100%;max-width:100%"><span class="sr-only">Loading...</span></div><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:100%;max-width:100%"><span class="sr-only">Loading...</span></div><div class="relative bg-bg-400 overflow-hidden after:absolute after:inset-0 after:translate-x-[-100%] after:bg-gradient-to-r after:from-bg-000/0 after:from-0% after:via-bg-000/20 after:via-50% after:to-100% after:to-bg-000/0 after:animate-[shimmer_1.5s_infinite] dark:!bg-bg-300 rounded-md" style="height:16px;width:79px;max-width:100%"><span class="sr-only">Loading...</span></div></div></div></article><div class="hidden [@media(min-width:1470px)]:block w-72 mr-4 shrink-0"></div></div><!--/$--></div><footer class="border-t-0.5 border-border-300" style="padding-top:clamp(4rem, calc(4rem + (6 - 4) * ((100vw - 20rem) / (90 - 20))), 6rem);padding-bottom:clamp(4rem, calc(4rem + (6 - 4) * ((100vw - 20rem) / (90 - 20))), 6rem)"><div class="flex flex-col md:flex-row gap-8 justify-between max-w-[90rem] mx-auto" style="width:calc(100% - 2 * clamp(2rem, calc(1.43rem + 2.86vw), 4rem))"><div class="flex flex-col"><div class="mb-6"><a aria-label="Claude API Docs home page" href="/docs"></a></div><div class="flex space-x-6 pl-1"><a class="text-text-500 hover:text-text-100" target="_blank" rel="noreferrer" aria-label="X (Twitter)" href="https://x.com/claudeai"></a><a class="text-text-500 hover:text-text-100" target="_blank" rel="noreferrer" aria-label="LinkedIn" href="https://www.linkedin.com/showcase/claude"></a><a class="text-text-500 hover:text-text-100" target="_blank" rel="noreferrer" aria-label="Instagram" href="https://instagram.com/claudeai"></a></div></div><div class="grid grid-cols-2 md:grid-cols-3 min-[1320px]:grid-cols-4 gap-8"><div class="flex flex-col space-y-8"><div><h3 class="text-xs text-text-400 mb-2">Solutions</h3><ul class="space-y-1"><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/solutions/agents">AI agents</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/solutions/code-modernization">Code modernization</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/solutions/coding">Coding</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/solutions/customer-support">Customer support</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/solutions/education">Education</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/solutions/financial-services">Financial services</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/solutions/government">Government</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/solutions/life-sciences">Life sciences</a></li></ul></div><div><h3 class="text-xs text-text-400 mb-2">Partners</h3><ul class="space-y-1"><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/partners/amazon-bedrock">Amazon Bedrock</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/partners/google-cloud-vertex-ai">Google Cloud's Vertex AI</a></li></ul></div></div><div class="flex flex-col space-y-8 min-[1320px]:space-y-0"><div class="min-[1320px]:hidden"><h3 class="text-xs text-text-400 mb-2">Learn</h3><ul class="space-y-1"><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/blog">Blog</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/learn">Courses</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/resources/use-cases">Use cases</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/partners/mcp">Connectors</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/customers">Customer stories</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/engineering">Engineering at Anthropic</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/events">Events</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/partners/powered-by-claude">Powered by Claude</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/partners/services">Service partners</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/programs/startups">Startups program</a></li></ul></div><div><h3 class="text-xs text-text-400 mb-2">Company</h3><ul class="space-y-1"><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/company">Anthropic</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/careers">Careers</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/economic-futures">Economic Futures</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/research">Research</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/news">News</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy">Responsible Scaling Policy</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://trust.anthropic.com">Security and compliance</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/transparency">Transparency</a></li></ul></div></div><div class="hidden min-[1320px]:flex flex-col"><h3 class="text-xs text-text-400 mb-2">Learn</h3><ul class="space-y-1"><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/blog">Blog</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/learn">Courses</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/resources/use-cases">Use cases</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/partners/mcp">Connectors</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/customers">Customer stories</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/engineering">Engineering at Anthropic</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/events">Events</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/partners/powered-by-claude">Powered by Claude</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/partners/services">Service partners</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://claude.com/programs/startups">Startups program</a></li></ul></div><div class="flex flex-col space-y-8"><div><h3 class="text-xs text-text-400 mb-2">Help and security</h3><ul class="space-y-1"><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/supported-countries">Availability</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://status.claude.com/">Status</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://support.claude.com/">Support</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/discord">Discord</a></li></ul></div><div><h3 class="text-xs text-text-400 mb-2">Terms and policies</h3><ul class="space-y-1"><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/legal/privacy">Privacy policy</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/responsible-disclosure-policy">Responsible disclosure policy</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/legal/commercial-terms">Terms of service: Commercial</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/legal/consumer-terms">Terms of service: Consumer</a></li><li><a class="text-xs text-text-100 hover:text-text-000 transition-colors duration-200" target="_blank" rel="noreferrer" href="https://www.anthropic.com/legal/aup">Usage policy</a></li></ul></div></div></div></div></footer></main></div></div></div></div></div><div id="inkeep-shadowradix-_R_6iuuljb_" style="display:contents"></div><span></span></div><div hidden="" id="S:1"><div class="w-full relative max-w-screen-2xl flex justify-center lg:justify-between mx-auto shrink"><div class="hidden [@media(min-width:1470px)]:block"></div><article id="content-container" class="text-text-300 prose mx-auto max-w-5xl lg:max-w-4xl w-full min-w-0 overflow-x-hidden px-6 py-8 lg:p-8 prose-slate dark:prose-invert break-words [&amp;>*]:max-w-full [&amp;>*]:box-border prose-a:inline-flex prose-a:items-center prose-a:min-h-[44px] prose-a:py-0.5 prose-p:leading-[1.6] prose-li:leading-[1.6] prose-blockquote:leading-[1.6]"><header class="mb-6"><div class="mb-2"><span class="hidden lg:block gap-2 text-sm font-normal text-text-300">Models</span></div><div class="flex justify-between items-center pb-2"><h1 class="font-title leading-[1.125] text-text-100">Models overview</h1><div class="hidden lg:block flex-shrink-0"><div class="flex h-8 whitespace-nowrap"><button class="font-base-bold !text-xs rounded-l-lg bg-bg-000 h-full flex items-center justify-center px-2 border-y-0.5 border-l-0.5 border-border-200 hover:bg-bg-200 disabled:opacity-50 disabled:hover:bg-bg-000"><div class="flex items-center gap-2"><div class="relative w-4 h-4"></div><span>Copy page</span></div></button><button class="bg-bg-000 flex items-center justify-center px-1 hover:bg-bg-200 rounded-r-lg border-0.5 border-border-200" type="button" id="radix-_R_kclfiuqkntiuuljb_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><div style="width:16px;height:16px;display:flex;align-items:center;justify-content:center"></div></button></div></div></div><div class="text-lg text-text-400">Claude is a family of state-of-the-art large language models developed by Anthropic. This guide introduces the available models and compares their performance.</div></header><div class="block lg:hidden mb-4"><div class="flex h-8 whitespace-nowrap"><button class="font-base-bold !text-xs rounded-l-lg bg-bg-000 h-full flex items-center justify-center px-2 border-y-0.5 border-l-0.5 border-border-200 hover:bg-bg-200 disabled:opacity-50 disabled:hover:bg-bg-000"><div class="flex items-center gap-2"><div class="relative w-4 h-4"></div><span>Copy page</span></div></button><button class="bg-bg-000 flex items-center justify-center px-1 hover:bg-bg-200 rounded-r-lg border-0.5 border-border-200" type="button" id="radix-_R_klfiuqkntiuuljb_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><div style="width:16px;height:16px;display:flex;align-items:center;justify-content:center"></div></button></div></div><h2 class="font-heading leading-[1.25] text-text-100"><div class="group relative pt-6 pb-2" id="choosing-a-model"><div class="absolute hidden lg:flex lg:items-center lg:-ml-8 top-[calc(1.5rem+0.175em)]"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-6 w-6 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-text-500 hover:text-text-100 Button_fill__JiIcX Button_ghost__BUAoh" type="button" aria-label="Copy link to clipboard" title="Copy link to clipboard" data-state="closed"><div class="inline" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button></div><div>Choosing a model</div><div class="absolute top-0 -right-6 hidden lg:flex"></div></div></h2>
+<p class="mb-2 last:mb-0">If you're unsure which model to use, consider starting with <strong class="font-semibold">Claude Opus 4.6</strong> for the most complex tasks. It is the most intelligent broadly available model with exceptional performance in coding and reasoning.</p>
+<p class="mb-2 last:mb-0">All current Claude models support text and image input, text output, multilingual capabilities, and vision. Models are available via the Claude API, AWS Bedrock, and Google Vertex AI.</p>
+<p class="mb-2 last:mb-0">Once you've picked a model, <a class="inline-link" href="/docs/en/get-started">learn how to make your first API call</a>.</p>
+<h3 class="text-xl font-medium leading-[1.25] text-text-100"><div class="group relative pt-6 pb-2" id="latest-models-comparison"><div class="absolute hidden lg:flex lg:items-center lg:-ml-8 top-[calc(1.5rem+0.08em)]"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-6 w-6 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-text-500 hover:text-text-100 Button_fill__JiIcX Button_ghost__BUAoh" type="button" aria-label="Copy link to clipboard" title="Copy link to clipboard" data-state="closed"><div class="inline" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button></div><div>Latest models comparison</div><div class="absolute top-0 -right-6 hidden lg:flex"></div></div></h3>
+<div class="overflow-x-auto my-6 text-sm"><table class="w-full border-collapse"><thead class=""><tr class="border-b-0.5 border-border-400 last:border-b-0"><th class="p-2 pt-0 first:pl-0 last:pr-0 text-left font-semibold text-text-100 border-b-0.5 border-border-400">Feature</th><th class="p-2 pt-0 first:pl-0 last:pr-0 text-left font-semibold text-text-100 border-b-0.5 border-border-400">Claude Opus 4.6</th><th class="p-2 pt-0 first:pl-0 last:pr-0 text-left font-semibold text-text-100 border-b-0.5 border-border-400">Claude Sonnet 4.6</th><th class="p-2 pt-0 first:pl-0 last:pr-0 text-left font-semibold text-text-100 border-b-0.5 border-border-400">Claude Haiku 4.5</th></tr></thead><tbody class=""><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Description</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">The most intelligent broadly available model for agents and coding</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">The best combination of speed and intelligence</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">The fastest model with near-frontier intelligence</td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Claude API ID</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-opus-4-6</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-sonnet-4-6</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-haiku-4-5-20251001</span></td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Claude API alias</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-opus-4-6</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-sonnet-4-6</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-haiku-4-5</span></td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">AWS Bedrock ID</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">anthropic.claude-opus-4-6-v1</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">anthropic.claude-sonnet-4-6</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">anthropic.claude-haiku-4-5-20251001-v1:0</span></td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">GCP Vertex AI ID</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-opus-4-6</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-sonnet-4-6</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="
+          inline-block cursor-pointer select-none
+          px-1 py-0.5 font-mono
+          transition-colors duration-200
+          text-text-400 hover:text-text-000
+          text-sm rounded
+          bg-bg-200 border border-transparent
+          hover:bg-bg-300 hover:border-border-200
+          max-w-full break-words
+          " style="word-break:break-word;overflow-wrap:anywhere" data-state="closed">claude-haiku-4-5@20251001</span></td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Pricing</strong><sup>1</sup></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">$5 / input MTok<br>$25 / output MTok</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">$3 / input MTok<br>$15 / output MTok</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">$1 / input MTok<br>$5 / output MTok</td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold"><a class="inline-link" href="/docs/en/build-with-claude/extended-thinking">Extended thinking</a></strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Yes</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Yes</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Yes</td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold"><a class="inline-link" href="/docs/en/build-with-claude/adaptive-thinking">Adaptive thinking</a></strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Yes</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Yes</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">No</td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold"><a class="inline-link" href="/docs/en/api/service-tiers">Priority Tier</a></strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Yes</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Yes</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Yes</td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Comparative latency</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Moderate</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Fast</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Fastest</td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Context window</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="underline decoration-dotted underline-offset-2 cursor-help" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_R_lomslfiuqkntiuuljb_" data-state="closed">1M tokens</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="underline decoration-dotted underline-offset-2 cursor-help" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_R_tomslfiuqkntiuuljb_" data-state="closed">1M tokens</span></td><td class="p-2 first:pl-0 last:pr-0 text-text-200"><span class="underline decoration-dotted underline-offset-2 cursor-help" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_R_15omslfiuqkntiuuljb_" data-state="closed">200k tokens</span></td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Max output</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">128k tokens</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">64k tokens</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">64k tokens</td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Reliable knowledge cutoff</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">May 2025<sup>2</sup></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Aug 2025<sup>2</sup></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Feb 2025</td></tr><tr class="border-b-0.5 border-border-400 last:border-b-0"><td class="p-2 first:pl-0 last:pr-0 text-text-200"><strong class="font-semibold">Training data cutoff</strong></td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Aug 2025</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Jan 2026</td><td class="p-2 first:pl-0 last:pr-0 text-text-200">Jul 2025</td></tr></tbody></table></div>
+<p class="mb-2 last:mb-0"><em><sup>1 - See the <a class="inline-link" href="/docs/en/about-claude/pricing">pricing page</a> for complete pricing information including batch API discounts, prompt caching rates, extended thinking costs, and vision processing fees.</sup></em></p>
+<p class="mb-2 last:mb-0"><em><sup>2 - <strong class="font-semibold">Reliable knowledge cutoff</strong> indicates the date through which a model's knowledge is most extensive and reliable. <strong class="font-semibold">Training data cutoff</strong> is the broader date range of training data used. For more information, see <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://www.anthropic.com/transparency">Anthropic's Transparency Hub</a>.</sup></em></p>
+<div class="flex w-full rounded-lg px-4 py-3 gap-1 items-start text-sm border-0.5 my-6 border-accent-100 bg-accent-100/10 callout"><div class="flex mr-2 shrink-0 pt-[1.375px] text-accent-100"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></div><div class="grow min-w-0 leading-relaxed [&amp;>*:last-child]:mb-0 text-accent-000 [&amp;_li]:before:text-accent-000/60 [&amp;_blockquote]:border-l-accent-000/60 [&amp;_code]:text-accent-000 [&amp;_code]:bg-accent-000/10"><p class="mb-2 last:mb-0"><a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://anthropic.com/glasswing">Claude Mythos Preview</a> is offered separately as a research preview model for defensive cybersecurity workflows as part of <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://anthropic.com/glasswing">Project Glasswing</a>. Access is invitation-only and there is no self-serve sign-up.</p></div></div>
+<div class="flex w-full rounded-lg px-4 py-3 gap-1 items-start text-sm border-0.5 my-6 border-accent-100 bg-accent-100/10 callout"><div class="flex mr-2 shrink-0 pt-[1.375px] text-accent-100"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></div><div class="grow min-w-0 leading-relaxed [&amp;>*:last-child]:mb-0 text-accent-000 [&amp;_li]:before:text-accent-000/60 [&amp;_blockquote]:border-l-accent-000/60 [&amp;_code]:text-accent-000 [&amp;_code]:bg-accent-000/10">Models with the same snapshot date (e.g., 20240620) are identical across all platforms and do not change. The snapshot date in the model name ensures consistency and allows developers to rely on stable performance across different environments.</div></div>
+<div class="flex w-full rounded-lg px-4 py-3 gap-1 items-start text-sm border-0.5 my-6 border-accent-100 bg-accent-100/10 callout"><div class="flex mr-2 shrink-0 pt-[1.375px] text-accent-100"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></div><div class="grow min-w-0 leading-relaxed [&amp;>*:last-child]:mb-0 text-accent-000 [&amp;_li]:before:text-accent-000/60 [&amp;_blockquote]:border-l-accent-000/60 [&amp;_code]:text-accent-000 [&amp;_code]:bg-accent-000/10">Starting with <strong class="font-semibold">Claude Sonnet 4.5 and all subsequent models</strong> (including Claude Sonnet 4.6), AWS Bedrock offers two endpoint types: <strong class="font-semibold">global endpoints</strong> (dynamic routing for maximum availability) and <strong class="font-semibold">regional endpoints</strong> (guaranteed data routing through specific geographic regions). Google Vertex AI offers three endpoint types: global endpoints, <strong class="font-semibold">multi-region endpoints</strong> (dynamic routing within a geographic area), and regional endpoints. For more information, see the <a class="inline-link" href="/docs/en/about-claude/pricing#third-party-platform-pricing">third-party platform pricing section</a>.</div></div>
+<div class="flex w-full rounded-lg px-4 py-3 gap-1 items-start text-sm border-0.5 my-6 border-border-200 bg-bg-200 callout"><div class="flex mr-2 shrink-0 pt-[1.375px] text-text-000"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></div><div class="grow min-w-0 leading-relaxed [&amp;>*:last-child]:mb-0 text-text-000 [&amp;_li]:before:text-text-000/60 [&amp;_blockquote]:border-l-text-000/60 [&amp;_code]:text-text-000 [&amp;_code]:bg-text-000/10"><p class="mb-2 last:mb-0">You can query model capabilities and token limits programmatically with the <a class="inline-link" href="/docs/en/api/models/list">Models API</a>. The response includes <code class="relative inline bg-bg-300 px-2 py-0.5 rounded text-sm font-mono break-words box-decoration-clone">max_input_tokens</code>, <code class="relative inline bg-bg-300 px-2 py-0.5 rounded text-sm font-mono break-words box-decoration-clone">max_tokens</code>, and a <code class="relative inline bg-bg-300 px-2 py-0.5 rounded text-sm font-mono break-words box-decoration-clone">capabilities</code> object for every available model.</p></div></div>
+<div class="flex w-full rounded-lg px-4 py-3 gap-1 items-start text-sm border-0.5 my-6 border-accent-100 bg-accent-100/10 callout"><div class="flex mr-2 shrink-0 pt-[1.375px] text-accent-100"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></div><div class="grow min-w-0 leading-relaxed [&amp;>*:last-child]:mb-0 text-accent-000 [&amp;_li]:before:text-accent-000/60 [&amp;_blockquote]:border-l-accent-000/60 [&amp;_code]:text-accent-000 [&amp;_code]:bg-accent-000/10"><p class="mb-2 last:mb-0">The Max output values above apply to the synchronous Messages API. On the <a class="inline-link" href="/docs/en/build-with-claude/batch-processing#extended-output-beta">Message Batches API</a>, Opus 4.6 and Sonnet 4.6 support up to 300k output tokens by using the <code class="relative inline bg-bg-300 px-2 py-0.5 rounded text-sm font-mono break-words box-decoration-clone">output-300k-2026-03-24</code> beta header.</p></div></div>
+<div class="rounded-lg overflow-hidden border border-border-300 my-6" data-orientation="vertical"><div data-state="closed" data-orientation="vertical" class="overflow-hidden [&amp;:not(:first-child)]:border-t border-border-300"><h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-_R_5mslfiuqkntiuuljb_" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-_R_1mslfiuqkntiuuljb_" class="group w-full flex items-center gap-2 p-4 text-left transparent hover:bg-bg-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-100 disabled:cursor-not-allowed disabled:opacity-50" data-radix-collection-item=""><span class="font-semibold text-text-100 flex-1 font-ui">Legacy models</span></button></h3><div data-state="closed" id="radix-_R_5mslfiuqkntiuuljb_" hidden="" role="region" aria-labelledby="accordion-legacy-models" data-orientation="vertical" class="overflow-hidden" style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)"></div></div></div>
+<h2 class="font-heading leading-[1.25] text-text-100"><div class="group relative pt-6 pb-2" id="prompt-and-output-performance"><div class="absolute hidden lg:flex lg:items-center lg:-ml-8 top-[calc(1.5rem+0.175em)]"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-6 w-6 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-text-500 hover:text-text-100 Button_fill__JiIcX Button_ghost__BUAoh" type="button" aria-label="Copy link to clipboard" title="Copy link to clipboard" data-state="closed"><div class="inline" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button></div><div>Prompt and output performance</div><div class="absolute top-0 -right-6 hidden lg:flex"></div></div></h2>
+<p class="mb-2 last:mb-0">Claude 4 models excel in:</p>
+<ul class="list-none pl-8 [&amp;_ul]:pl-8 [&amp;_ol]:pl-8 mb-4">
+<li class="mb-2 last:mb-0 relative before:absolute before:left-[-2rem] before:w-6 before:text-center [ul>&amp;]:before:content-['•'] [ol>&amp;]:before:content-[counter(item)'.'] [ol>&amp;]:[counter-increment:item]">
+<p class="mb-2 last:mb-0"><strong class="font-semibold">Performance</strong>: Top-tier results in reasoning, coding, multilingual tasks, long-context handling, honesty, and image processing. See the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="http://www.anthropic.com/news/claude-4">Claude 4 blog post</a> for more information.</p>
+</li>
+<li class="mb-2 last:mb-0 relative before:absolute before:left-[-2rem] before:w-6 before:text-center [ul>&amp;]:before:content-['•'] [ol>&amp;]:before:content-[counter(item)'.'] [ol>&amp;]:[counter-increment:item]">
+<p class="mb-2 last:mb-0"><strong class="font-semibold">Engaging responses</strong>: Claude models are ideal for applications that require rich, human-like interactions.</p>
+<ul class="list-none pl-8 [&amp;_ul]:pl-8 [&amp;_ol]:pl-8 mb-4">
+<li class="mb-2 last:mb-0 relative before:absolute before:left-[-2rem] before:w-6 before:text-center [ul>&amp;]:before:content-['•'] [ol>&amp;]:before:content-[counter(item)'.'] [ol>&amp;]:[counter-increment:item]">If you prefer more concise responses, you can adjust your prompts to guide the model toward the desired output length. Refer to the <a class="inline-link" href="/docs/en/build-with-claude/prompt-engineering">prompt engineering guides</a> for details.</li>
+<li class="mb-2 last:mb-0 relative before:absolute before:left-[-2rem] before:w-6 before:text-center [ul>&amp;]:before:content-['•'] [ol>&amp;]:before:content-[counter(item)'.'] [ol>&amp;]:[counter-increment:item]">For prompting best practices, see the <a class="inline-link" href="/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices">prompting best practices guide</a>.</li>
+</ul>
+</li>
+<li class="mb-2 last:mb-0 relative before:absolute before:left-[-2rem] before:w-6 before:text-center [ul>&amp;]:before:content-['•'] [ol>&amp;]:before:content-[counter(item)'.'] [ol>&amp;]:[counter-increment:item]">
+<p class="mb-2 last:mb-0"><strong class="font-semibold">Output quality</strong>: When migrating from previous model generations to Claude 4, you may notice larger improvements in overall performance.</p>
+</li>
+</ul>
+<h2 class="font-heading leading-[1.25] text-text-100"><div class="group relative pt-6 pb-2" id="migrating-to-claude-4-6"><div class="absolute hidden lg:flex lg:items-center lg:-ml-8 top-[calc(1.5rem+0.175em)]"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-6 w-6 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-text-500 hover:text-text-100 Button_fill__JiIcX Button_ghost__BUAoh" type="button" aria-label="Copy link to clipboard" title="Copy link to clipboard" data-state="closed"><div class="inline" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button></div><div>Migrating to Claude 4.6</div><div class="absolute top-0 -right-6 hidden lg:flex"></div></div></h2>
+<p class="mb-2 last:mb-0">If you're currently using older Claude models, consider migrating to Claude Opus 4.6 to take advantage of improved intelligence and enhanced capabilities. For detailed migration instructions, see <a class="inline-link" href="/docs/en/about-claude/models/migration-guide">Migrating to Claude 4.6</a>.</p>
+<h2 class="font-heading leading-[1.25] text-text-100"><div class="group relative pt-6 pb-2" id="get-started-with-claude"><div class="absolute hidden lg:flex lg:items-center lg:-ml-8 top-[calc(1.5rem+0.175em)]"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-6 w-6 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-text-500 hover:text-text-100 Button_fill__JiIcX Button_ghost__BUAoh" type="button" aria-label="Copy link to clipboard" title="Copy link to clipboard" data-state="closed"><div class="inline" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button></div><div>Get started with Claude</div><div class="absolute top-0 -right-6 hidden lg:flex"></div></div></h2>
+<p class="mb-2 last:mb-0">If you're ready to start exploring what Claude can do for you, dive in! Whether you're a developer looking to integrate Claude into your applications or a user wanting to experience the power of AI firsthand, the following resources can help.</p>
+<div class="flex w-full rounded-lg px-4 py-3 gap-1 items-start text-sm border-0.5 my-6 border-accent-100 bg-accent-100/10 callout"><div class="flex mr-2 shrink-0 pt-[1.375px] text-accent-100"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></div><div class="grow min-w-0 leading-relaxed [&amp;>*:last-child]:mb-0 text-accent-000 [&amp;_li]:before:text-accent-000/60 [&amp;_blockquote]:border-l-accent-000/60 [&amp;_code]:text-accent-000 [&amp;_code]:bg-accent-000/10">Looking to chat with Claude? Visit <a class="inline-link" target="_blank" rel="noopener noreferrer" href="http://www.claude.ai">claude.ai</a>!</div></div>
+<div class="grid gap-4 my-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"><a class="flex items-start not-prose relative border border-border-300 rounded-xl bg-transparent overflow-hidden w-full min-h-[120px] hover:bg-bg-200 transition-colors cursor-pointer no-underline text-sm" href="/docs/en/intro"><div class="flex flex-col gap-3 px-5 py-5 w-full items-start"><div><div class="text-text-300" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center"></div></div><div class="w-full"><div class="flex items-center gap-2"><div class="font-medium text-base text-text-100 font-ui">Intro to Claude</div></div><div class="mt-1 block text-sm text-text-300 line-clamp-2 overflow-hidden break-words"><p class="mb-2 last:mb-0">Explore Claude's capabilities and development flow.</p></div></div></div></a><a class="flex items-start not-prose relative border border-border-300 rounded-xl bg-transparent overflow-hidden w-full min-h-[120px] hover:bg-bg-200 transition-colors cursor-pointer no-underline text-sm" href="/docs/en/get-started"><div class="flex flex-col gap-3 px-5 py-5 w-full items-start"><div><div class="text-text-300" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center"></div></div><div class="w-full"><div class="flex items-center gap-2"><div class="font-medium text-base text-text-100 font-ui">Quickstart</div></div><div class="mt-1 block text-sm text-text-300 line-clamp-2 overflow-hidden break-words"><p class="mb-2 last:mb-0">Learn how to make your first API call in minutes.</p></div></div></div></a><a class="flex items-start not-prose relative border border-border-300 rounded-xl bg-transparent overflow-hidden w-full min-h-[120px] hover:bg-bg-200 transition-colors cursor-pointer no-underline text-sm" href="/"><div class="flex flex-col gap-3 px-5 py-5 w-full items-start"><div><div class="text-text-300" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center"></div></div><template id="P:2"></template></div></a></div>
+<p class="mb-2 last:mb-0">If you have any questions or need assistance, don't hesitate to reach out to the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://support.claude.com/">support team</a> or consult the <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://www.anthropic.com/discord">Discord community</a>.</p><div class="not-prose mt-8 border-t border-border-300 pt-6"><p class="text-text-200 text-sm font-medium">Was this page helpful?</p><div class="mt-3 flex items-center gap-2"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md Button_fill__JiIcX Button_ghost__BUAoh" type="button" aria-label="Thumbs up" aria-pressed="false"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md Button_fill__JiIcX Button_ghost__BUAoh" type="button" aria-label="Thumbs down" aria-pressed="false"><div style="width:20px;height:20px;display:flex;align-items:center;justify-content:center"></div></button></div></div></article><nav class="hidden [@media(min-width:1470px)]:block sticky top-14 w-72 mr-4 self-start pt-8 pb-8" aria-label="Table of contents"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md mb-1 ml-1 p-0 Button_fill__JiIcX Button_ghost__BUAoh" type="button"></button><div class="relative"><div class="pointer-events-none absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-bg-100 to-transparent z-10 transition-opacity duration-200 opacity-0"></div><div class="pointer-events-none absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-bg-100 to-transparent z-10 transition-opacity duration-200 opacity-0"></div><div class="overflow-y-auto" style="max-height:calc(100vh - 172px)"><ul class="relative space-y-1 text-sm overflow-hidden"><li class=""><a href="#choosing-a-model" class="block py-1 pl-3 transition-colors duration-200 hover:text-text-000 text-text-400">Choosing a model</a></li><li class="ml-3"><a href="#latest-models-comparison" class="block py-1 pl-3 transition-colors duration-200 hover:text-text-000 text-text-400">Latest models comparison</a></li><li class=""><a href="#prompt-and-output-performance" class="block py-1 pl-3 transition-colors duration-200 hover:text-text-000 text-text-400">Prompt and output performance</a></li><li class=""><a href="#migrating-to-claude-4-6" class="block py-1 pl-3 transition-colors duration-200 hover:text-text-000 text-text-400">Migrating to Claude 4.6</a></li><li class=""><a href="#get-started-with-claude" class="block py-1 pl-3 transition-colors duration-200 hover:text-text-000 text-text-400">Get started with Claude</a></li></ul></div></div></nav></div><!--$--><!--/$--></div><div hidden="" id="S:2"><div class="w-full"><div class="flex items-center gap-2"><div class="font-medium text-base text-text-100 font-ui">Claude Console</div></div><div class="mt-1 block text-sm text-text-300 line-clamp-2 overflow-hidden break-words"><p class="mb-2 last:mb-0">Craft and test powerful prompts directly in your browser.</p></div></div></div></body></html>

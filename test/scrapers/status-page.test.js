@@ -105,11 +105,10 @@ describe("scrapeStatusPage", () => {
     expect(items).toEqual([]);
   });
 
-  it("returns [] for malformed input", async () => {
+  it("throws for malformed input", async () => {
     const fixturePath = join(tmpDir, "bad.json");
     await writeFile(fixturePath, "not json");
 
-    const items = await scrapeStatusPage(makeSource(fixturePath));
-    expect(items).toEqual([]);
+    await expect(scrapeStatusPage(makeSource(fixturePath))).rejects.toThrow();
   });
 });

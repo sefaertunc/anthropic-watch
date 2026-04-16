@@ -41,9 +41,9 @@ src/cli.js
 Every scraper function has the same signature:
 
 - **Input:** a source config object from `sources.js`
-- **Output:** `Array<Item>` on success, `[]` on error (errors caught internally)
+- **Output:** `Array<Item>` on success, throws on failure
 
-There is no shared error class. Each scraper wraps its logic in try/catch and returns an empty array on failure. The orchestrator in `index.js` detects implicit failures (0 items when previously had items).
+There is no shared error class. Scrapers let fetch/parse errors propagate; the orchestrator in `index.js` captures rejected promises via `Promise.allSettled` and records `error` + increments `consecutiveFailures` in `run-report.sources[]`.
 
 ### Item Shape
 
@@ -85,6 +85,7 @@ Every item returned by a scraper must have these 8 fields:
 
 - **`intercom-article`** — Targets Intercom help center articles. Finds container via `.article_body`, `.intercom-article-body`, or `<article>`. Parses `<h3>` elements as date headings with sibling `<p>` content.
 - **`docs-hash`** — Strips nav/footer/script/style, hashes body text with SHA-256, and emits a single item. Any content change produces a new hash ID.
+- **`model-table`** — Parses the Claude models comparison table on the models reference page. Header row cells become model display names; the `"Claude API ID"` row supplies stable per-model ids (`claude-opus-4-6`, `claude-sonnet-4-6`, …); the `"Description"` row supplies the snippet. Emits one item per model column. Throws if the table or the `"Claude API ID"` row is missing.
 
 ---
 
@@ -140,7 +141,7 @@ State is stored in `state/last-seen.json` and managed by `src/state.js`.
 
 ### Failure Detection
 
-The orchestrator detects implicit scraper failures: if a scraper returns 0 items but the source has existing `knownIds` in state, it is treated as an error. First-run sources with 0 items are not flagged. Sources with `consecutiveFailures >= 3` trigger a warning in logs.
+A rejected scraper promise is caught by `Promise.allSettled` in the orchestrator. The rejected-promise path records the failure unconditionally — regardless of first-run state — by calling `recordFailure()`, storing the thrown `err.message` in `sourceResults[].error`, and setting `status: "error"`. Fulfilled scrapers (including ones that legitimately return `[]`) are treated as successful. Sources with `consecutiveFailures >= 3` trigger a warning in logs.
 
 ### State Corruption Recovery
 
@@ -194,8 +195,8 @@ Items are **not** included in `run-report.json` — they are stripped via destru
 
 There is no centralized error class (no `ScraperError` or `src/errors.js`). Error handling works at two levels:
 
-1. **Scraper level:** Each scraper wraps its logic in try/catch and returns `[]` on failure.
-2. **Orchestrator level:** `index.js` processes `Promise.allSettled` results. Rejected promises have the source and duration attached via `Object.assign(err, { _source, _durationMs })`. Zero-item results with existing state are also recorded as errors.
+1. **Scraper level:** Scrapers let errors propagate (no outer try/catch). Empty array returns mean "source legitimately has no items right now."
+2. **Orchestrator level:** `index.js` processes `Promise.allSettled` results. Rejected promises have the source and duration attached via `Object.assign(err, { _source, _durationMs })`; the rejected path writes `err.message` into `sourceResults[].error` and increments `consecutiveFailures`.
 
 ---
 

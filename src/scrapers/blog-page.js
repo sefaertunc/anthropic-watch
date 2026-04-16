@@ -235,27 +235,23 @@ function parseDistill(html, source) {
 }
 
 export async function scrapeBlogPage(source) {
-  try {
-    const res = await fetchSource(source.url, {}, source.fixtureFile);
-    if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
-    const html = await res.text();
+  const res = await fetchSource(source.url, {}, source.fixtureFile);
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
+  const html = await res.text();
 
-    let items;
-    switch (source.parseMode) {
-      case "nextjs-rsc":
-        items = parseNextjsRsc(html, source);
-        break;
-      case "webflow":
-        items = parseWebflow(html, source);
-        break;
-      case "distill":
-        items = parseDistill(html, source);
-        break;
-      default:
-        throw new Error(`unknown parseMode "${source.parseMode}"`);
-    }
-    return items.slice(0, 20);
-  } catch {
-    return [];
+  let items;
+  switch (source.parseMode) {
+    case "nextjs-rsc":
+      items = parseNextjsRsc(html, source);
+      break;
+    case "webflow":
+      items = parseWebflow(html, source);
+      break;
+    case "distill":
+      items = parseDistill(html, source);
+      break;
+    default:
+      throw new Error(`unknown parseMode "${source.parseMode}"`);
   }
+  return items.slice(0, 20);
 }

@@ -15,15 +15,17 @@ The `consecutiveFailures` counter in `state/last-seen.json` tracks how many time
 
 ## Common Issues
 
-### Source returns 0 items
+### Source shows as errored
 
-**Symptoms:** Source shows `status: "error"` with message `"returned 0 items (possible error)"`.
+**Symptoms:** Source shows `status: "error"` in `run-report.json` with an `error` field containing the thrown exception message (e.g., `"HTTP 503 for https://..."`, `"fetch failed"`, `SyntaxError: Unexpected token ...`).
 
-**Cause:** The pipeline flags 0 items as an error only when the source previously had known IDs in state. This usually means:
+**Cause:** Scrapers throw on network failures, HTTP 4xx/5xx responses, JSON parse errors, and other exceptions. The orchestrator captures the thrown error via `Promise.allSettled` and stores `err.message` in `sourceResults[].error`. Common root causes:
 
-- **CSS selectors changed:** The site's HTML structure was redesigned and no longer matches the expected parse mode selectors.
-- **API response format changed:** For JSON API sources, the response shape may have changed.
-- **Site is temporarily down or returning an error page.**
+- **Transient network error:** DNS failures, timeouts, or 5xx responses from upstream. Usually self-resolves on the next run (fetch retries 2x before giving up).
+- **CSS selectors or API shape changed:** The site was redesigned or the API response format changed; parsers raise during `.text()`, `.json()`, or destructuring.
+- **Rate limit or auth:** `HTTP 403` / `HTTP 429` on GitHub sources without a valid `GITHUB_TOKEN`.
+
+**Note:** A source returning an empty array (no incidents on a healthy status page, no new blog posts this week) is **not** an error — it shows `status: "ok"` with `newItemCount: 0`.
 
 **Diagnosis:**
 

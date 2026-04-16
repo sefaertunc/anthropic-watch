@@ -171,21 +171,21 @@ describe("error resilience", () => {
 
     const goodSource = { ...failSource, key: "flaky", fixtureFile: goodPath };
 
-    // Run with bad fixture
-    await runPipeline({ stateDir, feedsDir, sourcesOverride: [failSource] });
+    // Run 1: bad fixture on first run — scraper throws, rejected-promise path records failure
+    // regardless of hasKnownIds (no more silent-success heuristic).
+    const run1 = await runPipeline({
+      stateDir,
+      feedsDir,
+      sourcesOverride: [failSource],
+    });
     let state = JSON.parse(
       await readFile(join(stateDir, "last-seen.json"), "utf-8"),
     );
-    // First run with no knownIds — treated as success (0 items on first run is ok)
-    // So consecutiveFailures should be 0
-    expect(state.flaky.consecutiveFailures).toBe(0);
+    expect(state.flaky.consecutiveFailures).toBe(1);
+    expect(run1.sourceResults[0].status).toBe("error");
+    expect(run1.sourceResults[0].error).toBeTruthy();
 
-    // Run again — now it has knownIds: [] but length 0, so still treated as first run
-    // Actually, after first run with bad fixture, scraper returns [], no items are marked seen
-    // So knownIds stays empty. 0 items + no knownIds = success (first run)
-
-    // Let's use a scenario where we first succeed, then fail
-    // Run 1: good fixture → gets items
+    // Run 2: good fixture → success → reset
     await runPipeline({ stateDir, feedsDir, sourcesOverride: [goodSource] });
     state = JSON.parse(
       await readFile(join(stateDir, "last-seen.json"), "utf-8"),
@@ -193,18 +193,52 @@ describe("error resilience", () => {
     expect(state.flaky.consecutiveFailures).toBe(0);
     expect(state.flaky.knownIds.length).toBeGreaterThan(0);
 
-    // Run 2: bad fixture → 0 items but has knownIds → failure
+    // Run 3: bad fixture again → failure counter increments
     await runPipeline({ stateDir, feedsDir, sourcesOverride: [failSource] });
     state = JSON.parse(
       await readFile(join(stateDir, "last-seen.json"), "utf-8"),
     );
     expect(state.flaky.consecutiveFailures).toBe(1);
 
-    // Run 3: good fixture → success → reset
+    // Run 4: good fixture → success → reset again
     await runPipeline({ stateDir, feedsDir, sourcesOverride: [goodSource] });
     state = JSON.parse(
       await readFile(join(stateDir, "last-seen.json"), "utf-8"),
     );
     expect(state.flaky.consecutiveFailures).toBe(0);
+  });
+
+  it("new source failing on first run is recorded as error, not silent success", async () => {
+    const badPath = join(tmpDir, "first-run-bad.json");
+    await writeFile(badPath, "definitely not valid json");
+
+    const source = {
+      key: "brand-new",
+      name: "Brand New Source",
+      category: "core",
+      scraperType: "github-releases",
+      owner: "test",
+      repo: "new",
+      url: "https://github.com/test/new/releases",
+      fixtureFile: badPath,
+    };
+
+    const result = await runPipeline({
+      stateDir,
+      feedsDir,
+      sourcesOverride: [source],
+    });
+
+    // Before Issue 1/2: this was silently treated as success because first run has no knownIds.
+    // After: the scraper throws, rejected-promise path records failure with err.message.
+    const sr = result.sourceResults.find((r) => r.key === "brand-new");
+    expect(sr.status).toBe("error");
+    expect(sr.error).toBeTruthy();
+    expect(sr.newItemCount).toBe(0);
+
+    const state = JSON.parse(
+      await readFile(join(stateDir, "last-seen.json"), "utf-8"),
+    );
+    expect(state["brand-new"].consecutiveFailures).toBe(1);
   });
 });

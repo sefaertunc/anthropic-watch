@@ -164,18 +164,19 @@ describe("scrapeBlogPage", () => {
       expect(items).toEqual([]);
     });
 
-    it("returns [] for nonexistent fixture file", async () => {
-      const items = await scrapeBlogPage({
-        key: "blog-engineering",
-        name: "Test",
-        category: "core",
-        scraperType: "blog-page",
-        parseMode: "nextjs-rsc",
-        basePath: "/engineering",
-        url: "https://www.anthropic.com/engineering",
-        fixtureFile: join(tmpDir, "nonexistent.html"),
-      });
-      expect(items).toEqual([]);
+    it("throws for nonexistent fixture file", async () => {
+      await expect(
+        scrapeBlogPage({
+          key: "blog-engineering",
+          name: "Test",
+          category: "core",
+          scraperType: "blog-page",
+          parseMode: "nextjs-rsc",
+          basePath: "/engineering",
+          url: "https://www.anthropic.com/engineering",
+          fixtureFile: join(tmpDir, "nonexistent.html"),
+        }),
+      ).rejects.toThrow();
     });
 
     it("max 20 items", async () => {

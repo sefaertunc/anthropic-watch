@@ -2,7 +2,10 @@ import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { writeFile, mkdtemp, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
+import { fileURLToPath } from "node:url";
 import { scrapeDocsPage } from "../../src/scrapers/docs-page.js";
+
+const FIXTURE_DIR = fileURLToPath(new URL("../fixtures/", import.meta.url));
 
 describe("scrapeDocsPage", () => {
   let tmpDir;
@@ -87,6 +90,56 @@ describe("scrapeDocsPage", () => {
     });
   });
 
+  describe("model-table mode", () => {
+    function makeSource(fixturePath) {
+      return {
+        key: "docs-release-notes",
+        name: "Anthropic Docs Release Notes",
+        category: "core",
+        scraperType: "docs-page",
+        parseMode: "model-table",
+        url: "https://docs.anthropic.com/en/docs/about-claude/models",
+        fixtureFile: fixturePath,
+      };
+    }
+
+    const realFixture = join(FIXTURE_DIR, "docs-release-notes.html");
+
+    it("emits one item per model with all required fields", async () => {
+      const items = await scrapeDocsPage(makeSource(realFixture));
+
+      expect(items.length).toBeGreaterThan(0);
+      for (const item of items) {
+        for (const field of requiredFields) {
+          expect(item).toHaveProperty(field);
+        }
+        expect(item.id).toBeTruthy();
+        expect(item.title).toBeTruthy();
+        expect(item.url).toContain(
+          "https://docs.anthropic.com/en/docs/about-claude/models",
+        );
+      }
+    });
+
+    it("produces stable ids across repeated runs of the same fixture", async () => {
+      const items1 = await scrapeDocsPage(makeSource(realFixture));
+      const items2 = await scrapeDocsPage(makeSource(realFixture));
+
+      expect(items1.length).toBe(items2.length);
+      expect(items1.map((i) => i.id)).toEqual(items2.map((i) => i.id));
+    });
+
+    it("throws when HTML has no <table> (malformed page)", async () => {
+      const fixturePath = join(tmpDir, "no-table.html");
+      await writeFile(
+        fixturePath,
+        "<!DOCTYPE html><html><body><h1>Models</h1><p>No table here.</p></body></html>",
+      );
+
+      await expect(scrapeDocsPage(makeSource(fixturePath))).rejects.toThrow();
+    });
+  });
+
   describe("intercom-article mode", () => {
     function makeSource(fixturePath) {
       return {
@@ -140,17 +193,18 @@ describe("scrapeDocsPage", () => {
       expect(items).toEqual([]);
     });
 
-    it("returns [] for nonexistent file", async () => {
-      const items = await scrapeDocsPage({
-        key: "docs-release-notes",
-        name: "Test",
-        category: "core",
-        scraperType: "docs-page",
-        parseMode: "docs-hash",
-        url: "https://docs.anthropic.com/en/docs/about-claude/models",
-        fixtureFile: join(tmpDir, "nonexistent.html"),
-      });
-      expect(items).toEqual([]);
+    it("throws for nonexistent file", async () => {
+      await expect(
+        scrapeDocsPage({
+          key: "docs-release-notes",
+          name: "Test",
+          category: "core",
+          scraperType: "docs-page",
+          parseMode: "docs-hash",
+          url: "https://docs.anthropic.com/en/docs/about-claude/models",
+          fixtureFile: join(tmpDir, "nonexistent.html"),
+        }),
+      ).rejects.toThrow();
     });
   });
 });

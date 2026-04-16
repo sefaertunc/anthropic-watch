@@ -97,12 +97,13 @@ describe("scrapeGithubReleases", () => {
     }
   });
 
-  it("returns [] for malformed input", async () => {
+  it("throws for malformed input", async () => {
     const fixturePath = join(tmpDir, "bad.json");
     await writeFile(fixturePath, "not json at all");
 
-    const items = await scrapeGithubReleases(makeSource(fixturePath));
-    expect(items).toEqual([]);
+    await expect(
+      scrapeGithubReleases(makeSource(fixturePath)),
+    ).rejects.toThrow();
   });
 
   it("returns [] for empty array", async () => {
