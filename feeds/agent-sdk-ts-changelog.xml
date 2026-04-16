@@ -6,14 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 15 Apr 2026 22:01:24 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 07:52:37 GMT</lastBuildDate>
     <item>
-      <title>0.2.109</title>
+      <title>0.2.110</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">bfe0888c4968</guid>
-      <pubDate>Wed, 15 Apr 2026 20:56:36 GMT</pubDate>
+      <guid isPermaLink="false">2a58968db246</guid>
+      <pubDate>Thu, 16 Apr 2026 07:52:33 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.109</description>
+      <description>- Fixed unstablev2createSession not respecting cwd, settingSources, and allowDangerouslySkipPermissions options
+- Added optional shouldQuery field to SDKUserMessage — set to false to append a user message without triggering an assistant turn; fixed shouldQuery: false messages incorrectly triggering </description>
     </item>
   </channel>
 </rss>

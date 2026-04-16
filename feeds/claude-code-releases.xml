@@ -6,102 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 15 Apr 2026 22:01:24 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 07:52:37 GMT</lastBuildDate>
     <item>
-      <title>v2.1.109</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.109</link>
-      <guid isPermaLink="false">v2.1.109</guid>
-      <pubDate>Wed, 15 Apr 2026 04:02:13 GMT</pubDate>
+      <title>v2.1.110</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.110</link>
+      <guid isPermaLink="false">v2.1.110</guid>
+      <pubDate>Wed, 15 Apr 2026 22:07:18 GMT</pubDate>
       <category>claude-code-releases</category>
       <description>What&apos;s changed
-- Improved the extended-thinking indicator with a rotating progress hint</description>
-    </item>
-    <item>
-      <title>v2.1.108</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.108</link>
-      <guid isPermaLink="false">v2.1.108</guid>
-      <pubDate>Tue, 14 Apr 2026 19:12:01 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added ENABLEPROMPTCACHING1H env var to opt into 1-hour prompt cache TTL on API key, Bedrock, Vertex, and Foundry (ENABLEPROMPTCACHING1HBEDROCK is deprecated but still honored), and FORCEPROMPTCACHING5M to force 5-minute TTL
-- Added recap feature to provide context when returning to </description>
-    </item>
-    <item>
-      <title>v2.1.107</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.107</link>
-      <guid isPermaLink="false">v2.1.107</guid>
-      <pubDate>Tue, 14 Apr 2026 06:11:20 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Show thinking hints sooner during long operations</description>
-    </item>
-    <item>
-      <title>v2.1.105</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.105</link>
-      <guid isPermaLink="false">v2.1.105</guid>
-      <pubDate>Mon, 13 Apr 2026 21:53:13 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added path parameter to the EnterWorktree tool to switch into an existing worktree of the current repository
-- Added PreCompact hook support: hooks can now block compaction by exiting with code 2 or returning {&quot;decision&quot;:&quot;block&quot;}
-- Added background monitor support for plugins via a </description>
-    </item>
-    <item>
-      <title>v2.1.104</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.104</link>
-      <guid isPermaLink="false">v2.1.104</guid>
-      <pubDate>Mon, 13 Apr 2026 01:45:26 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description/>
-    </item>
-    <item>
-      <title>v2.1.101</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.101</link>
-      <guid isPermaLink="false">v2.1.101</guid>
-      <pubDate>Fri, 10 Apr 2026 19:03:41 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added /team-onboarding command to generate a teammate ramp-up guide from your local Claude Code usage
-- Added OS CA certificate store trust by default, so enterprise TLS proxies work without extra setup (set CLAUDECODECERTSTORE=bundled to use only bundled CAs)
-- /ultraplan and other</description>
-    </item>
-    <item>
-      <title>v2.1.100</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.100</link>
-      <guid isPermaLink="false">v2.1.100</guid>
-      <pubDate>Fri, 10 Apr 2026 05:16:35 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description/>
-    </item>
-    <item>
-      <title>v2.1.98</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.98</link>
-      <guid isPermaLink="false">v2.1.98</guid>
-      <pubDate>Thu, 09 Apr 2026 19:18:28 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added interactive Google Vertex AI setup wizard accessible from the login screen when selecting &quot;3rd-party platform&quot;, guiding you through GCP authentication, project and region configuration, credential verification, and model pinning
-- Added CLAUDECODEPERFORCEMODE env var: when set</description>
-    </item>
-    <item>
-      <title>v2.1.97</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.97</link>
-      <guid isPermaLink="false">v2.1.97</guid>
-      <pubDate>Wed, 08 Apr 2026 21:52:34 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added focus view toggle (Ctrl+O) in NOFLICKER mode showing prompt, one-line tool summary with edit diffstats, and final response
-- Added refreshInterval status line setting to re-run the status line command every N seconds
-- Added workspace.gitworktree to the status line JSON input,</description>
-    </item>
-    <item>
-      <title>v2.1.96</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.96</link>
-      <guid isPermaLink="false">v2.1.96</guid>
-      <pubDate>Wed, 08 Apr 2026 04:37:36 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed Bedrock requests failing with 403 &quot;Authorization header is missing&quot; when using AWSBEARERTOKENBEDROCK or CLAUDECODESKIPBEDROCKAUTH (regression in 2.1.94)</description>
+
+- Added /tui command and tui setting — run /tui fullscreen to switch to flicker-free rendering in the same conversation
+- Changed Ctrl+O to toggle between normal and verbose transcript only; focus view is now toggled separately with the new /focus command
+- Added push notificatio</description>
     </item>
   </channel>
 </rss>
