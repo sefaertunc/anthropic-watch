@@ -96,6 +96,7 @@ Key test principles:
 ## Pull Requests
 
 - Branch from `main`
+- Name your branch `feat/<short-description>` — PRs targeting `main` from any other branch name will be rejected by the `Branch name check` workflow (`dependabot/*` and `renovate/*` branches are allowlisted for automated dependency PRs)
 - Keep PRs focused — one source or one fix per PR
 - Include the source key in the PR title if it's source-specific (e.g. "fix: update selectors for blog-engineering")
 - Make sure `npm test` passes before submitting
