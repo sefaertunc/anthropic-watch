@@ -230,7 +230,8 @@ There is no centralized error class (no `ScraperError` or `src/errors.js`). Erro
 
 - **Triggers:** Daily cron (`0 6 * * *`) + manual `workflow_dispatch`
 - **Permissions:** `contents: write`, `pages: write`
-- **Single job:** `scrape` — checkout, setup Node.js 20, `npm ci`, run `node src/cli.js` with `GITHUB_TOKEN`, write job summary via `node src/summary.js >> $GITHUB_STEP_SUMMARY`, commit state changes as `anthropic-watch[bot]` inside a `git pull --rebase origin main && git push` retry loop (3 attempts with 5/10/15s backoff to survive cron-race push failures), deploy to GitHub Pages via `peaceiris/actions-gh-pages@v4` with `keep_files: true`.
+- **Single job:** `scrape` — checkout (using `SCRAPER_PAT` so downstream workflows can see the commit), setup Node.js 20, `npm ci`, run `node src/cli.js` with `GITHUB_TOKEN`, write job summary via `node src/summary.js >> $GITHUB_STEP_SUMMARY`, commit state changes as `anthropic-watch[bot]` inside a `git pull --rebase origin main && git push` retry loop (3 attempts with 5/10/15s backoff to survive cron-race push failures), deploy to GitHub Pages via `peaceiris/actions-gh-pages@v4` with `github_token: SCRAPER_PAT` and `keep_files: true`.
+- **`SCRAPER_PAT` rationale:** The default `GITHUB_TOKEN` is deliberately scoped so pushes made with it do **not** trigger other workflows. Using a PAT for both the initial checkout and the Pages deploy means pushes to `main` and `gh-pages` can fan out to downstream automation. Required scopes: `repo` + `workflow`.
 
 Tests are not duplicated here — they run on push/PR in `test.yml`.
 
@@ -238,6 +239,11 @@ Tests are not duplicated here — they run on push/PR in `test.yml`.
 
 - **Triggers:** Push to `main`, pull requests to `main`
 - **Job:** checkout, setup Node.js 20, `npm ci`, `npm test`
+
+### `branch-name-check.yml` — Branch naming gate
+
+- **Triggers:** `pull_request` targeting `main` (`opened`, `reopened`, `synchronize`, `edited`)
+- **Job:** Fails the PR unless the source branch matches `feat/*`. `dependabot/*` and `renovate/*` branches are allowlisted so automated dependency PRs bypass the check.
 
 ### Job Summary
 
