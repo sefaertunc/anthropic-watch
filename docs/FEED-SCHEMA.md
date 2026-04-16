@@ -6,15 +6,16 @@ All feeds are published to GitHub Pages and update daily at ~06:00 UTC.
 
 ## Available Feeds
 
-| File                | Format   | Description                           |
-| ------------------- | -------- | ------------------------------------- |
-| `all.json`          | JSON     | All items from every source (max 100) |
-| `all.xml`           | RSS 2.0  | All items from every source (max 100) |
-| `{source-key}.json` | JSON     | Items from a single source (max 50)   |
-| `{source-key}.xml`  | RSS 2.0  | Items from a single source (max 50)   |
-| `run-report.json`   | JSON     | Latest scrape run status and summary  |
-| `run-history.json`  | JSON     | Last 90 run summaries                 |
-| `sources.opml`      | OPML 2.0 | Feed list importable by RSS readers   |
+| File                | Format  | Description                           |
+| ------------------- | ------- | ------------------------------------- |
+| `all.json`          | JSON    | All items from every source (max 100) |
+| `all.xml`           | RSS 2.0 | All items from every source (max 100) |
+| `{source-key}.json` | JSON    | Items from a single source (max 50)   |
+| `{source-key}.xml`  | RSS 2.0 | Items from a single source (max 50)   |
+| `run-report.json`   | JSON    | Latest scrape run status and summary  |
+| `run-history.json`  | JSON    | Last 90 run summaries                 |
+
+| `sources.opml` | OPML 2.0 | Feed list importable by RSS readers |
 
 ---
 

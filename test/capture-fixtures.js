@@ -62,7 +62,7 @@ function ghHeaders() {
 // ---------------------------------------------------------------------------
 
 async function captureGithubReleases(source) {
-  const url = `https://api.github.com/repos/${source.owner}/${source.repo}/releases?per_page=10`;
+  const url = `https://api.github.com/repos/${source.owner}/${source.repo}/releases?per_page=30`;
   console.log(`  GET ${url}`);
   const releases = await fetchJson(url, ghHeaders());
   const trimmed = releases.slice(0, 5);

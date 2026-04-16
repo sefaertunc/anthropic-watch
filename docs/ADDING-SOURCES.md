@@ -27,10 +27,13 @@ If none of these fit, you'll need to create a new scraper type (see step 7).
 
 ### Parse Mode Decision (for docs-page)
 
-| Content pattern                       | Parse mode         |
-| ------------------------------------- | ------------------ |
-| Intercom help center article          | `intercom-article` |
-| Any page where content-hash is enough | `docs-hash`        |
+| Content pattern                                          | Parse mode         |
+| -------------------------------------------------------- | ------------------ |
+| Intercom help center article                             | `intercom-article` |
+| Any page where content-hash is enough                    | `docs-hash`        |
+| Anthropic models reference page (stable per-model table) | `model-table`      |
+
+> **Note on `model-table`:** this mode hard-codes selectors against the model comparison table on `docs.anthropic.com/en/docs/about-claude/models` (reading the header row for model display names and the "Claude API ID" row for stable ids). It is not reusable for arbitrary docs pages — use `docs-hash` for generic content-change detection or `intercom-article` for Intercom-hosted articles.
 
 ---
 
@@ -105,7 +108,7 @@ Add an entry to the `sources` array in `src/sources.js`. Templates for each scra
   url: "https://docs.example.com/page",
   category: "extended",
   scraperType: "docs-page",
-  parseMode: "docs-hash",     // or "intercom-article"
+  parseMode: "docs-hash",     // "intercom-article" | "docs-hash" | "model-table"
 }
 ```
 
@@ -229,26 +232,24 @@ If no existing scraper type fits:
 import { fetchSource } from "../fetch-source.js";
 
 export async function scrapeMySource(source) {
-  try {
-    const res = await fetchSource(source.url, {}, source.fixtureFile);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const res = await fetchSource(source.url, {}, source.fixtureFile);
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${source.url}`);
 
-    // Parse response and return items
-    return [
-      {
-        id: "unique-id",
-        title: "Item title",
-        date: new Date().toISOString(),
-        url: source.url,
-        snippet: "Description text",
-        source: source.key,
-        sourceCategory: source.category,
-        sourceName: source.name,
-      },
-    ];
-  } catch {
-    return [];
-  }
+  // Parse response and return items. Let parse/network errors propagate —
+  // the orchestrator captures rejected promises via Promise.allSettled and
+  // records err.message in sourceResults[].error.
+  return [
+    {
+      id: "unique-id",
+      title: "Item title",
+      date: new Date().toISOString(),
+      url: source.url,
+      snippet: "Description text",
+      source: source.key,
+      sourceCategory: source.category,
+      sourceName: source.name,
+    },
+  ];
 }
 ```
 
@@ -265,10 +266,10 @@ const scraperMap = {
 
 Key requirements:
 
-- Accept a source config object, return `Array<Item>`
-- Catch all errors, return `[]` on failure
-- Use `fetchSource()` (not raw `fetch`) so fixture injection works in tests
-- Include all 8 item fields: `id`, `title`, `date`, `url`, `snippet`, `source`, `sourceCategory`, `sourceName`
+- Accept a source config object, return `Array<Item>` on success. An empty array is a **legitimate** result (source has no items right now) — do not use it to hide errors.
+- Throw on failure (HTTP 4xx/5xx, parse errors, missing expected fields). The orchestrator captures rejected promises via `Promise.allSettled` and writes `err.message` to `sourceResults[].error`.
+- Use `fetchSource()` (not raw `fetch`) so fixture injection works in tests.
+- Include all 8 item fields: `id`, `title`, `date`, `url`, `snippet`, `source`, `sourceCategory`, `sourceName`.
 
 ---
 

@@ -72,7 +72,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **URL**: https://github.com/anthropics/claude-code/releases
 - **Scraper type**: `github-releases` (`owner: "anthropics"`, `repo: "claude-code"`)
 - **What it tracks**: GitHub Releases for the Claude Code CLI.
-- **Detection method**: GitHub REST API (`/repos/anthropics/claude-code/releases?per_page=10`). ID = `tag_name`, date = `published_at`. Release body is stripped of markdown formatting for the snippet.
+- **Detection method**: GitHub REST API (`/repos/anthropics/claude-code/releases?per_page=30`). ID = `tag_name`, date = `published_at`. Release body is stripped of markdown formatting for the snippet.
 - **Update frequency**: Multiple times per week
 - **Feed**: [`claude-code-releases.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.xml)
 - **Notes**: Requires `GITHUB_TOKEN` for reliable rate limits.

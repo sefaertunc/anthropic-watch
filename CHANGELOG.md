@@ -1,5 +1,51 @@
 # Changelog
 
+## [1.0.1] - 2026-04-16
+
+A combined patch release bundling three waves of bug fixes, operational hardening, and a dashboard security fix. All changes are non-breaking for downstream (Worclaude) consumers — `run-report.json` schema stays `"1.0"`, `sources[]` is still indexed by `key`, and item shape is unchanged.
+
+### Security
+
+- Dashboard (`public/index.html`) rewrote item/table rendering using DOM APIs (`createElement` + `textContent`) instead of `innerHTML` string templates. Added `safeUrl()` to reject non-`http(s)` protocols (closes a `javascript:` URL XSS surface on `item.url`) and `rel="noopener noreferrer"` on item links.
+
+### Fixed
+
+- **Scraper error propagation.** All 6 scrapers no longer wrap their logic in `try { … } catch { return []; }`. Thrown errors flow through `Promise.allSettled` in the orchestrator, populating `sourceResults[].error` with the real message (e.g. `"HTTP 503 for …"`, `"Unexpected token …"`) instead of the former `"returned 0 items (possible error)"` placeholder.
+- **First-run silent failure.** Removed the "0 items + `hasKnownIds`" heuristic that skipped failure detection on a source's first run — a new source whose scraper throws is now correctly recorded with `status: "error"` and `consecutiveFailures: 1`.
+- **`github-changelog` false positives.** IDs previously hashed the whole file, so any byte-level edit emitted a phantom "new" item. IDs now derive from the first `## ` heading (e.g. `"2.1.109"`, `"[Unreleased]"`), with a 12-char SHA-256 hash fallback when no heading is present.
+- **`docs-release-notes` false positives.** Replaced the full-body hash scraper with a new `model-table` parse mode that emits one item per Claude model, keyed by the "Claude API ID" column (`claude-opus-4-6`, `claude-sonnet-4-6`, …). No more churn on page formatting tweaks.
+
+### Changed
+
+- `fetchWithRetry` retries on HTTP 429 (not just 5xx). When the response includes a `Retry-After` header, its value (in seconds) overrides the default linear backoff for that attempt.
+- `fetchWithRetry` default options now set `redirect: "follow"`; `status-page.js` no longer passes it explicitly.
+- User-Agent header now tracks `package.json` version (`anthropic-watch/1.0.1 (…)`), derived via `readFileSync` at module load. Was hardcoded `anthropic-watch/0.4`.
+- `github-releases` page size bumped from `per_page=10` to `per_page=30`.
+- Run-history cap raised from 30 to 90 entries.
+- Each `run-history.json` entry now carries `version: "1.0"` as its first field. Consumers should treat missing `version` on pre-v1.0.1 entries as `"1.0"`.
+
+### Workflow
+
+- `.github/workflows/scrape.yml` collapsed to a single `scrape` job (tests already run in `test.yml` on push/PR — the duplicate in-workflow test job was redundant).
+- Commit+push step wrapped in a `git pull --rebase origin main && git push` retry loop (3 attempts with 5/10/15s backoff) to survive cron-race push failures.
+- Added `public/.nojekyll` as belt-and-braces for GitHub Pages.
+
+### Docs
+
+- New "`nextjs-rsc` Known Brittleness" subsection in `docs/ARCHITECTURE.md` documenting the `self.__next_f.push` framework-internal dependency and the HTML fallback path.
+- New "Merge Semantics" subsection in `docs/FEED-SCHEMA.md` formalizing the dedup key (`${id}|${source}`), prepend order, and first-seen-wins conflict rule.
+- `docs/TROUBLESHOOTING.md` state-recovery section now documents `git checkout HEAD~N -- state/last-seen.json` as the preferred recovery path over delete-and-rebuild.
+- `docs/SOURCES.md`, `docs/ADDING-SOURCES.md` updated for the new scraper error contract and `model-table` parse mode.
+
+### Migration
+
+The first scheduled scrape run after this release will emit a one-shot batch of "new" items as state migrates:
+
+- Three `github-changelog` sources (`claude-code-changelog`, `agent-sdk-ts-changelog`, `agent-sdk-py-changelog`) each emit one phantom new item as their stored hash-based ID is replaced by the heading-derived ID.
+- `docs-release-notes` emits ~5 new items (one per current Claude model) as its single hash-based ID is replaced by per-model IDs.
+
+Subsequent runs settle to stable IDs — no further migration churn.
+
 ## [1.0.0] - 2026-04-16
 
 ### Added

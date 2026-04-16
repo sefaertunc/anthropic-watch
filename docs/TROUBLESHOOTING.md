@@ -4,7 +4,7 @@
 
 1. **Dashboard:** Check the [live dashboard](https://sefaertunc.github.io/anthropic-watch/) for at-a-glance source status (green/red/amber dots).
 2. **Run report:** Fetch [`run-report.json`](https://sefaertunc.github.io/anthropic-watch/feeds/run-report.json) — check `summary.sourcesWithErrors` and individual source `status`/`error` fields.
-3. **Run history:** Fetch [`run-history.json`](https://sefaertunc.github.io/anthropic-watch/feeds/run-history.json) — look for patterns in the `errors` array across recent runs (last 30 stored).
+3. **Run history:** Fetch [`run-history.json`](https://sefaertunc.github.io/anthropic-watch/feeds/run-history.json) — look for patterns in the `errors` array across recent runs (last 90 stored).
 4. **Actions logs:** Check the [GitHub Actions](../../actions) workflow runs for detailed per-scraper output with timestamps.
 
 ### Source Health History

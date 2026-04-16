@@ -217,8 +217,9 @@ There is no centralized error class (no `ScraperError` or `src/errors.js`). Erro
 - **Max retries:** 2 (3 total attempts)
 - **Backoff:** Linear — 1 second after first failure, 2 seconds after second (`1000 * (attempt + 1)`)
 - **Timeout:** 15 seconds per request (via `AbortSignal.timeout`)
-- **Retry condition:** 5xx responses and network errors. 4xx responses are **not** retried (returned immediately).
-- **User-Agent:** `anthropic-watch/0.4`
+- **Retry condition:** 5xx responses, network errors, and HTTP 429. When a 429 response carries a `Retry-After: N` header (seconds), that value overrides the default linear backoff for that attempt. Other 4xx responses are **not** retried (returned immediately).
+- **Redirect handling:** `redirect: "follow"` is set in the default options so redirects are followed transparently. Individual scrapers can override via `options.redirect`.
+- **User-Agent:** `` `anthropic-watch/${pkg.version} (…)` `` — version read from `package.json` at module load via `readFileSync` (currently `anthropic-watch/1.0.1`).
 - **Rate limit monitoring:** `logGitHubRateLimit(res)` warns when remaining GitHub API quota drops below 10.
 
 ---
@@ -229,9 +230,9 @@ There is no centralized error class (no `ScraperError` or `src/errors.js`). Erro
 
 - **Triggers:** Daily cron (`0 6 * * *`) + manual `workflow_dispatch`
 - **Permissions:** `contents: write`, `pages: write`
-- **Jobs:**
-  1. **`test`** — checkout, setup Node.js 20, `npm ci`, `npm test`
-  2. **`scrape`** (needs `test`) — checkout, setup Node.js 20, `npm ci`, run `node src/cli.js` with `GITHUB_TOKEN`, write job summary via `node src/summary.js >> $GITHUB_STEP_SUMMARY`, commit state changes as `anthropic-watch[bot]`, deploy to GitHub Pages via `peaceiris/actions-gh-pages@v4` with `keep_files: true`
+- **Single job:** `scrape` — checkout, setup Node.js 20, `npm ci`, run `node src/cli.js` with `GITHUB_TOKEN`, write job summary via `node src/summary.js >> $GITHUB_STEP_SUMMARY`, commit state changes as `anthropic-watch[bot]` inside a `git pull --rebase origin main && git push` retry loop (3 attempts with 5/10/15s backoff to survive cron-race push failures), deploy to GitHub Pages via `peaceiris/actions-gh-pages@v4` with `keep_files: true`.
+
+Tests are not duplicated here — they run on push/PR in `test.yml`.
 
 ### `test.yml` — Test
 

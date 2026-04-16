@@ -2,7 +2,7 @@
 
 ![Anthropic Watch — Upstream Intelligence for Claude Code](docs/images/anthropic-watch.png)
 
-[![version v1.0.0](https://img.shields.io/badge/version-v1.0.0-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
+[![version v1.0.1](https://img.shields.io/badge/version-v1.0.1-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
 [![schedule: daily 06:00 UTC](https://img.shields.io/badge/schedule-daily%2006%3A00%20UTC-brightgreen)](https://github.com/sefaertunc/anthropic-watch/actions)
 [![sources: 16 monitored](https://img.shields.io/badge/sources-16%20monitored-blue)](https://github.com/sefaertunc/anthropic-watch/blob/main/src/sources.js)
 [![feeds: RSS + JSON](https://img.shields.io/badge/feeds-RSS%20%2B%20JSON-orange)](https://sefaertunc.github.io/anthropic-watch/feeds/all.xml)
