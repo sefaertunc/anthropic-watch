@@ -1,6 +1,6 @@
 # Feed Schema Reference
 
-All feeds are published to GitHub Pages and update daily.
+All feeds are published to GitHub Pages and update daily at ~06:00 UTC.
 
 **Base URL:** `https://sefaertunc.github.io/anthropic-watch/feeds/`
 
@@ -20,38 +20,60 @@ All feeds are published to GitHub Pages and update daily.
 
 ## JSON Feed (`all.json`, `{source-key}.json`)
 
-### Envelope
+### Full Example
 
-```json
+```jsonc
 {
-  "version": "1.0",
-  "title": "anthropic-watch — all sources",
-  "description": "Monitoring Anthropic sources for changes",
+  "version": "1.0", // Schema version
+  "title": "anthropic-watch — all sources", // Feed title
+  "description": "Monitoring Anthropic sources for changes", // Static description
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
-  "ttl": 1440,
-  "generated": "2025-01-15T06:00:00.000Z",
-  "itemCount": 42,
-  "items": [...]
+  "ttl": 1440, // Minutes between updates
+  "generated": "2026-04-16T06:00:00.000Z", // ISO 8601 generation time
+  "itemCount": 42, // Number of items in this response
+  "items": [
+    {
+      "id": "v1.0.30", // Unique ID (format varies by scraper)
+      "title": "Claude Code v1.0.30", // Human-readable title
+      "date": "2026-04-15T18:30:00.000Z", // ISO 8601 or null
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v1.0.30",
+      "snippet": "Bug fixes and performance improvements", // Up to 300 chars, may be ""
+      "source": "claude-code-releases", // Source key
+      "sourceCategory": "core", // "core" or "extended"
+      "sourceName": "Claude Code Releases", // Human-readable source name
+    },
+  ],
 }
 ```
 
-Per-source feeds use the title format `"anthropic-watch — {source name}"` (e.g. `"anthropic-watch — Claude Code Releases"`).
+Per-source feeds use the title format `"anthropic-watch — {source name}"` and a max of 50 items.
 
-### Item Shape
+### Field Guarantees
 
-Every item has these fields:
+| Field            | Type             | Nullable | Max Length | Notes                                                            |
+| ---------------- | ---------------- | -------- | ---------- | ---------------------------------------------------------------- |
+| `id`             | `string`         | No       | —          | Format varies: tag name, URL, SHA-256 hash prefix, version, UUID |
+| `title`          | `string`         | No       | —          | Human-readable title from the source                             |
+| `date`           | `string \| null` | Yes      | —          | ISO 8601 timestamp. `null` when the source provides no date      |
+| `url`            | `string`         | No       | —          | Link to the original content                                     |
+| `snippet`        | `string`         | No       | 300 chars  | Body text excerpt. May be empty string `""`                      |
+| `source`         | `string`         | No       | —          | Source key from `src/sources.js`                                 |
+| `sourceCategory` | `string`         | No       | —          | Always `"core"` or `"extended"`                                  |
+| `sourceName`     | `string`         | No       | —          | Human-readable source name                                       |
 
-| Field            | Type             | Guarantee                                                                                 |
-| ---------------- | ---------------- | ----------------------------------------------------------------------------------------- |
-| `id`             | `string`         | Always present. Format varies by scraper (tag name, URL, SHA hash, version, incident ID). |
-| `title`          | `string`         | Always present. Human-readable title.                                                     |
-| `url`            | `string`         | Always present. Link to the original content.                                             |
-| `date`           | `string \| null` | ISO 8601 timestamp or `null` when the source provides no date.                            |
-| `source`         | `string`         | Always present. Source key (e.g. `"claude-code-releases"`).                               |
-| `sourceCategory` | `string`         | Always `"core"` or `"extended"`.                                                          |
-| `sourceName`     | `string`         | Human-readable source name.                                                               |
-| `snippet`        | `string`         | Up to 300 characters of body text. May be empty string.                                   |
+### Envelope Fields
+
+| Field           | Type     | Notes                                   |
+| --------------- | -------- | --------------------------------------- |
+| `version`       | `string` | Always `"1.0"`                          |
+| `title`         | `string` | Feed title                              |
+| `description`   | `string` | Static description                      |
+| `home_page_url` | `string` | Dashboard URL                           |
+| `generator`     | `string` | Always `"anthropic-watch"`              |
+| `ttl`           | `number` | Always `1440` (minutes between updates) |
+| `generated`     | `string` | ISO 8601 timestamp of generation        |
+| `itemCount`     | `number` | Number of items in the `items` array    |
 
 ### Sorting and Limits
 
@@ -60,25 +82,51 @@ Every item has these fields:
 - Deduplication key: `${id}|${source}` — an item is unique per source.
 - `all.json` / `all.xml`: max **100** items.
 - Per-source feeds: max **50** items.
-- New items are merged with existing feed contents each run (accumulation model), so items persist across runs until pushed out by the limit.
+- New items are merged with existing feed file contents each run (accumulation model), so items persist across runs until pushed out by the limit.
 
 ---
 
 ## RSS Feed (`all.xml`, `{source-key}.xml`)
 
-Standard RSS 2.0 with these mappings:
+Standard RSS 2.0. Full example:
 
-| RSS Element                        | Value                                                |
-| ---------------------------------- | ---------------------------------------------------- |
-| `<title>`                          | Same title as JSON feed                              |
-| `<link>`                           | `https://sefaertunc.github.io/anthropic-watch/`      |
-| `<generator>`                      | `anthropic-watch`                                    |
-| `<ttl>`                            | `1440`                                               |
-| `<lastBuildDate>`                  | UTC string of generation time                        |
-| `<item><guid isPermaLink="false">` | `item.id` (just the ID, not prefixed)                |
-| `<item><category>`                 | `item.source` (the source key, e.g. `"blog-news"`)   |
-| `<item><pubDate>`                  | UTC string from `item.date`, or empty string if null |
-| `<item><description>`              | `item.snippet` or empty string                       |
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>anthropic-watch — all sources</title>
+    <link>https://sefaertunc.github.io/anthropic-watch/</link>
+    <description>Monitoring Anthropic sources for changes</description>
+    <generator>anthropic-watch</generator>
+    <ttl>1440</ttl>
+    <lastBuildDate>Wed, 16 Apr 2026 06:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Claude Code v1.0.30</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v1.0.30</link>
+      <guid isPermaLink="false">v1.0.30</guid>
+      <pubDate>Tue, 15 Apr 2026 18:30:00 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>Bug fixes and performance improvements</description>
+    </item>
+  </channel>
+</rss>
+```
+
+### Field Mapping
+
+| RSS Element                        | Source                                          |
+| ---------------------------------- | ----------------------------------------------- |
+| `<title>`                          | Same title as JSON feed                         |
+| `<link>`                           | `https://sefaertunc.github.io/anthropic-watch/` |
+| `<generator>`                      | `anthropic-watch`                               |
+| `<ttl>`                            | `1440`                                          |
+| `<lastBuildDate>`                  | UTC string of generation time                   |
+| `<item><title>`                    | `item.title`                                    |
+| `<item><link>`                     | `item.url`                                      |
+| `<item><guid isPermaLink="false">` | `item.id`                                       |
+| `<item><pubDate>`                  | UTC string from `item.date`, or empty if null   |
+| `<item><category>`                 | `item.source` (the source key)                  |
+| `<item><description>`              | `item.snippet` or empty string                  |
 
 Same sorting, dedup, and limits as the JSON feed.
 
@@ -88,11 +136,13 @@ Same sorting, dedup, and limits as the JSON feed.
 
 Generated after each scrape run. Provides status for all sources.
 
+### Full Example
+
 ```json
 {
   "version": "1.0",
-  "runId": "2025-01-15T06:00:00.000Z",
-  "timestamp": "2025-01-15T06:00:00.000Z",
+  "runId": "2026-04-16T06:00:00.000Z",
+  "timestamp": "2026-04-16T06:00:00.000Z",
   "duration_ms": 12345,
   "summary": {
     "totalNewItems": 5,
@@ -109,16 +159,41 @@ Generated after each scrape run. Provides status for all sources.
       "newItemCount": 2,
       "durationMs": 1234,
       "error": null
+    },
+    {
+      "key": "status-page",
+      "name": "Anthropic Status Page",
+      "category": "extended",
+      "status": "error",
+      "newItemCount": 0,
+      "durationMs": 15023,
+      "error": "HTTP 503 for https://status.anthropic.com/api/v2/incidents.json"
     }
   ]
 }
 ```
 
-**Important notes:**
+### Schema
 
-- `summary.healthySources` = sources with `"ok"` status (not a "skipped" concept).
-- Source entry `status` is only `"ok"` or `"error"` — no other values.
-- Source entries do **not** contain an `items` array. Items are stripped before writing the report. To get items, fetch the feed files (`all.json` or `{source-key}.json`).
+| Field                       | Type             | Notes                                           |
+| --------------------------- | ---------------- | ----------------------------------------------- |
+| `version`                   | `string`         | Always `"1.0"`                                  |
+| `runId`                     | `string`         | ISO 8601 timestamp (same as `timestamp`)        |
+| `timestamp`                 | `string`         | ISO 8601 timestamp of run start                 |
+| `duration_ms`               | `number`         | Total pipeline duration in milliseconds         |
+| `summary.totalNewItems`     | `number`         | Total new items detected across all sources     |
+| `summary.sourcesChecked`    | `number`         | Number of sources scraped                       |
+| `summary.sourcesWithErrors` | `number`         | Number of sources that errored                  |
+| `summary.healthySources`    | `number`         | Sources with `"ok"` status                      |
+| `sources[].key`             | `string`         | Source key                                      |
+| `sources[].name`            | `string`         | Human-readable source name                      |
+| `sources[].category`        | `string`         | `"core"` or `"extended"`                        |
+| `sources[].status`          | `string`         | Only `"ok"` or `"error"`                        |
+| `sources[].newItemCount`    | `number`         | Number of new items (0 on error)                |
+| `sources[].durationMs`      | `number`         | Scrape duration for this source in milliseconds |
+| `sources[].error`           | `string \| null` | Error message or `null` on success              |
+
+**Important:** Source entries do **not** contain an `items` array. Items are stripped before writing the report. To get items, fetch the feed files.
 
 ---
 
@@ -126,20 +201,37 @@ Generated after each scrape run. Provides status for all sources.
 
 A **raw JSON array** (not a wrapper object). Most recent run first. Max 30 entries.
 
+### Example
+
 ```json
 [
   {
-    "timestamp": "2025-01-15T06:00:00.000Z",
+    "timestamp": "2026-04-16T06:00:00.000Z",
     "durationMs": 12345,
     "totalNewItems": 5,
     "sourcesChecked": 16,
     "sourcesWithErrors": 1,
-    "errors": [{ "key": "status-page", "error": "HTTP 503 for https://..." }]
+    "errors": [
+      {
+        "key": "status-page",
+        "error": "HTTP 503 for https://status.anthropic.com/api/v2/incidents.json"
+      }
+    ]
   }
 ]
 ```
 
-- `errors` is an array of `{ key, error }` objects (not plain strings).
+### Schema
+
+| Field               | Type     | Notes                                             |
+| ------------------- | -------- | ------------------------------------------------- |
+| `timestamp`         | `string` | ISO 8601 timestamp of run                         |
+| `durationMs`        | `number` | Total pipeline duration in milliseconds           |
+| `totalNewItems`     | `number` | New items detected                                |
+| `sourcesChecked`    | `number` | Sources scraped                                   |
+| `sourcesWithErrors` | `number` | Sources that errored                              |
+| `errors`            | `array`  | Array of `{ key: string, error: string }` objects |
+
 - Empty `errors` array means all sources succeeded.
 
 ---
@@ -155,34 +247,37 @@ Each outline entry has:
 - `xmlUrl` — `https://sefaertunc.github.io/anthropic-watch/feeds/{source-key}.xml`
 - `htmlUrl` — original source URL
 
-Import this file into any RSS reader to subscribe to all feeds at once.
+Import this file into any RSS reader to subscribe to all 16 feeds at once.
 
 ---
 
-## Versioning
-
-All feed files include `"version": "1.0"`. Schema changes that add new optional fields will not bump the version. Breaking changes (field removal, type changes) will increment the version number.
-
----
-
-## Example: Consuming Feeds
+## Programmatic Consumption
 
 ```js
-// Fetch the latest run status
-const report = await fetch(
-  "https://sefaertunc.github.io/anthropic-watch/feeds/run-report.json",
-).then((r) => r.json());
+const BASE = "https://sefaertunc.github.io/anthropic-watch/feeds";
 
+// Fetch the latest run status
+const report = await fetch(`${BASE}/run-report.json`).then((r) => r.json());
 console.log(
   `${report.summary.healthySources}/${report.summary.sourcesChecked} sources healthy`,
 );
 
-// Items are NOT in the report — fetch the feed separately
-const feed = await fetch(
-  "https://sefaertunc.github.io/anthropic-watch/feeds/all.json",
-).then((r) => r.json());
+// Check for errors
+for (const src of report.sources) {
+  if (src.status === "error") {
+    console.log(`${src.key}: ${src.error}`);
+  }
+}
 
+// Items are NOT in the report — fetch the feed separately
+const feed = await fetch(`${BASE}/all.json`).then((r) => r.json());
 for (const item of feed.items.slice(0, 5)) {
   console.log(`[${item.source}] ${item.title} — ${item.url}`);
 }
 ```
+
+---
+
+## Versioning Policy
+
+All feed files include `"version": "1.0"`. Schema changes that add new optional fields will not bump the version. Breaking changes (field removal, type changes) will increment the version number. Consumers should check the version field and handle unknown versions gracefully.

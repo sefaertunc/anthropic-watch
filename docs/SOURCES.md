@@ -11,214 +11,182 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 
 ## Core Sources
 
-### blog-engineering
+### 1. Anthropic Engineering Blog
 
-- **Key:** `blog-engineering`
-- **Name:** Anthropic Engineering Blog
-- **URL:** https://www.anthropic.com/engineering
-- **Scraper:** `blog-page`
-- **Config:** `parseMode: "nextjs-rsc"`, `basePath: "/engineering"`
-- **Tracks:** Engineering blog posts
-- **Detection:** Extracts post objects from Next.js RSC inline payload; falls back to HTML link parsing
-- **Update frequency:** Weekly to monthly
-- **Feed:** [`blog-engineering.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.xml)
-- **Quirks:** RSC payload structure may change between Next.js versions
+- **Key**: `blog-engineering`
+- **URL**: https://www.anthropic.com/engineering
+- **Scraper type**: `blog-page` (`parseMode: "nextjs-rsc"`, `basePath: "/engineering"`)
+- **What it tracks**: Engineering blog posts covering infrastructure, tooling, and technical deep-dives.
+- **Detection method**: Extracts post objects from Next.js RSC inline payload (`self.__next_f.push` chunks), looking for objects with `slug`, `title`, and `publishedOn` fields. Falls back to HTML link parsing (`a[href^="/engineering/"]`) with cheerio if RSC extraction yields no results. ID = post URL.
+- **Update frequency**: Weekly to monthly
+- **Feed**: [`blog-engineering.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.xml)
+- **Notes**: RSC payload structure may change between Next.js versions. The fallback HTML parser looks for `h2, h3, h4` and `[class*='title']` within links.
 
-### blog-news
+### 2. Anthropic News Blog
 
-- **Key:** `blog-news`
-- **Name:** Anthropic News Blog
-- **URL:** https://www.anthropic.com/news
-- **Scraper:** `blog-page`
-- **Config:** `parseMode: "nextjs-rsc"`, `basePath: "/news"`
-- **Tracks:** Company announcements, product launches, policy updates
-- **Detection:** Same as `blog-engineering` — Next.js RSC payload extraction
-- **Update frequency:** Weekly
-- **Feed:** [`blog-news.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-news.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-news.xml)
-- **Quirks:** Shares site framework with engineering blog
+- **Key**: `blog-news`
+- **URL**: https://www.anthropic.com/news
+- **Scraper type**: `blog-page` (`parseMode: "nextjs-rsc"`, `basePath: "/news"`)
+- **What it tracks**: Company announcements, product launches, policy updates, and partnerships.
+- **Detection method**: Same Next.js RSC payload extraction as blog-engineering. ID = post URL.
+- **Update frequency**: Weekly
+- **Feed**: [`blog-news.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-news.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-news.xml)
+- **Notes**: Shares site framework with engineering blog.
 
-### docs-release-notes
+### 3. Anthropic Docs Release Notes
 
-- **Key:** `docs-release-notes`
-- **Name:** Anthropic Docs Release Notes
-- **URL:** https://docs.anthropic.com/en/docs/about-claude/models
-- **Scraper:** `docs-page`
-- **Config:** `parseMode: "docs-hash"`
-- **Tracks:** Changes to the models documentation page (model additions, deprecations)
-- **Detection:** SHA-256 hash of page body text — any content change produces a new hash
-- **Update frequency:** When models are added or updated
-- **Feed:** [`docs-release-notes.json`](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.xml)
-- **Quirks:** Always emits exactly 1 item; ID changes on every content edit, so item churn is expected
+- **Key**: `docs-release-notes`
+- **URL**: https://docs.anthropic.com/en/docs/about-claude/models
+- **Scraper type**: `docs-page` (`parseMode: "docs-hash"`)
+- **What it tracks**: Changes to the models documentation page — model additions, parameter changes, deprecations.
+- **Detection method**: Strips nav/footer/script/style elements, extracts body text, computes SHA-256 hash (first 12 hex chars). Any content change produces a new hash. ID = hash.
+- **Update frequency**: When models are added or updated
+- **Feed**: [`docs-release-notes.json`](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.xml)
+- **Notes**: Always emits exactly 1 item. ID changes on every content edit, so item churn is expected. Date is set to scrape time.
 
-### claude-code-changelog
+### 4. Claude Code Changelog
 
-- **Key:** `claude-code-changelog`
-- **Name:** Claude Code Changelog
-- **URL:** https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md
-- **Scraper:** `github-changelog`
-- **Config:** `owner: "anthropics"`, `repo: "claude-code"`, `file: "CHANGELOG.md"`
-- **Tracks:** Latest changelog entry from the CHANGELOG.md file
-- **Detection:** Fetches file via GitHub Contents API, base64-decodes, SHA-256 hashes content, extracts topmost `## ` section
-- **Update frequency:** Multiple times per week
-- **Feed:** [`claude-code-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.xml)
-- **Quirks:** Only the most recent `## ` entry is extracted; date is set to scrape time
+- **Key**: `claude-code-changelog`
+- **URL**: https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md
+- **Scraper type**: `github-changelog` (`owner: "anthropics"`, `repo: "claude-code"`, `file: "CHANGELOG.md"`)
+- **What it tracks**: Latest changelog entry from the CHANGELOG.md file in the Claude Code repo.
+- **Detection method**: Fetches file via GitHub Contents API (`/repos/anthropics/claude-code/contents/CHANGELOG.md`), base64-decodes content, SHA-256 hashes the full file, extracts the topmost `## ` section. ID = hash (first 12 chars).
+- **Update frequency**: Multiple times per week
+- **Feed**: [`claude-code-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.xml)
+- **Notes**: Only the most recent `## ` entry is extracted. Date is set to scrape time, not the date in the heading. Requires `GITHUB_TOKEN` for rate limits.
 
-### support-release-notes
+### 5. Anthropic Support Release Notes
 
-- **Key:** `support-release-notes`
-- **Name:** Anthropic Support Release Notes
-- **URL:** https://support.claude.com/en/articles/12138966-release-notes
-- **Scraper:** `docs-page`
-- **Config:** `parseMode: "intercom-article"`
-- **Tracks:** Customer-facing release notes on the support site
-- **Detection:** Parses `<h3>` elements as date headings, extracts sibling `<p>` content
-- **Update frequency:** Weekly
-- **Feed:** [`support-release-notes.json`](https://sefaertunc.github.io/anthropic-watch/feeds/support-release-notes.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/support-release-notes.xml)
-- **Quirks:** Relies on Intercom article body classes (`.article_body`, `.intercom-article-body`)
+- **Key**: `support-release-notes`
+- **URL**: https://support.claude.com/en/articles/12138966-release-notes
+- **Scraper type**: `docs-page` (`parseMode: "intercom-article"`)
+- **What it tracks**: Customer-facing release notes on the Anthropic support site.
+- **Detection method**: Parses Intercom article body (`.article_body`, `.intercom-article-body`, or `<article>`). Finds `<h3>` elements as date headings, extracts bold text from sibling paragraphs as titles, collects `<p>` text as snippets. ID = URL with anchor.
+- **Update frequency**: Weekly
+- **Feed**: [`support-release-notes.json`](https://sefaertunc.github.io/anthropic-watch/feeds/support-release-notes.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/support-release-notes.xml)
+- **Notes**: Relies on Intercom article body classes. Max 20 items per scrape.
 
-### claude-code-releases
+### 6. Claude Code Releases
 
-- **Key:** `claude-code-releases`
-- **Name:** Claude Code Releases
-- **URL:** https://github.com/anthropics/claude-code/releases
-- **Scraper:** `github-releases`
-- **Config:** `owner: "anthropics"`, `repo: "claude-code"`
-- **Tracks:** GitHub Releases for the Claude Code CLI
-- **Detection:** GitHub REST API, fetches 10 most recent releases, ID = `tag_name`
-- **Update frequency:** Multiple times per week
-- **Feed:** [`claude-code-releases.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.xml)
-- **Quirks:** Requires `GITHUB_TOKEN` for reliable rate limits
+- **Key**: `claude-code-releases`
+- **URL**: https://github.com/anthropics/claude-code/releases
+- **Scraper type**: `github-releases` (`owner: "anthropics"`, `repo: "claude-code"`)
+- **What it tracks**: GitHub Releases for the Claude Code CLI.
+- **Detection method**: GitHub REST API (`/repos/anthropics/claude-code/releases?per_page=10`). ID = `tag_name`, date = `published_at`. Release body is stripped of markdown formatting for the snippet.
+- **Update frequency**: Multiple times per week
+- **Feed**: [`claude-code-releases.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.xml)
+- **Notes**: Requires `GITHUB_TOKEN` for reliable rate limits.
 
-### npm-claude-code
+### 7. Claude Code npm Package
 
-- **Key:** `npm-claude-code`
-- **Name:** Claude Code npm Package
-- **URL:** https://www.npmjs.com/package/@anthropic-ai/claude-code
-- **Scraper:** `npm-registry`
-- **Config:** `packageName: "@anthropic-ai/claude-code"`
-- **Tracks:** Latest published version on npm
-- **Detection:** Fetches `/latest` endpoint, then full package doc for publish timestamp. ID = version string
-- **Update frequency:** Multiple times per week (tracks same releases as `claude-code-releases`)
-- **Feed:** [`npm-claude-code.json`](https://sefaertunc.github.io/anthropic-watch/feeds/npm-claude-code.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/npm-claude-code.xml)
-- **Quirks:** Always emits exactly 1 item (latest version only)
+- **Key**: `npm-claude-code`
+- **URL**: https://www.npmjs.com/package/@anthropic-ai/claude-code
+- **Scraper type**: `npm-registry` (`packageName: "@anthropic-ai/claude-code"`)
+- **What it tracks**: Latest published version on npm.
+- **Detection method**: Two API calls — `registry.npmjs.org/@anthropic-ai/claude-code/latest` for version and description, then `registry.npmjs.org/@anthropic-ai/claude-code` (full doc) for the `time[version]` publish timestamp. ID = version string.
+- **Update frequency**: Multiple times per week (tracks same releases as claude-code-releases)
+- **Feed**: [`npm-claude-code.json`](https://sefaertunc.github.io/anthropic-watch/feeds/npm-claude-code.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/npm-claude-code.xml)
+- **Notes**: Always emits exactly 1 item (latest version only). Uses `fixtureFileFull` for the full package doc fixture in tests.
 
-### agent-sdk-ts-changelog
+### 8. Agent SDK TypeScript Changelog
 
-- **Key:** `agent-sdk-ts-changelog`
-- **Name:** Agent SDK TypeScript Changelog
-- **URL:** https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md
-- **Scraper:** `github-changelog`
-- **Config:** `owner: "anthropics"`, `repo: "claude-agent-sdk-typescript"`, `file: "CHANGELOG.md"`
-- **Tracks:** Latest changelog entry for the TypeScript Agent SDK
-- **Detection:** Same as `claude-code-changelog`
-- **Update frequency:** Weekly to monthly
-- **Feed:** [`agent-sdk-ts-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.xml)
-- **Quirks:** Same single-entry extraction as other changelog scrapers
+- **Key**: `agent-sdk-ts-changelog`
+- **URL**: https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md
+- **Scraper type**: `github-changelog` (`owner: "anthropics"`, `repo: "claude-agent-sdk-typescript"`, `file: "CHANGELOG.md"`)
+- **What it tracks**: Latest changelog entry for the TypeScript Agent SDK.
+- **Detection method**: Same as claude-code-changelog — GitHub Contents API, base64 decode, SHA-256 hash, topmost `## ` section extraction.
+- **Update frequency**: Weekly to monthly
+- **Feed**: [`agent-sdk-ts-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.xml)
+- **Notes**: Same single-entry extraction as other changelog scrapers.
 
-### agent-sdk-py-changelog
+### 9. Agent SDK Python Changelog
 
-- **Key:** `agent-sdk-py-changelog`
-- **Name:** Agent SDK Python Changelog
-- **URL:** https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md
-- **Scraper:** `github-changelog`
-- **Config:** `owner: "anthropics"`, `repo: "claude-agent-sdk-python"`, `file: "CHANGELOG.md"`
-- **Tracks:** Latest changelog entry for the Python Agent SDK
-- **Detection:** Same as `claude-code-changelog`
-- **Update frequency:** Weekly to monthly
-- **Feed:** [`agent-sdk-py-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.xml)
-- **Quirks:** Same single-entry extraction as other changelog scrapers
+- **Key**: `agent-sdk-py-changelog`
+- **URL**: https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md
+- **Scraper type**: `github-changelog` (`owner: "anthropics"`, `repo: "claude-agent-sdk-python"`, `file: "CHANGELOG.md"`)
+- **What it tracks**: Latest changelog entry for the Python Agent SDK.
+- **Detection method**: Same as claude-code-changelog.
+- **Update frequency**: Weekly to monthly
+- **Feed**: [`agent-sdk-py-changelog.json`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.xml)
+- **Notes**: Same single-entry extraction as other changelog scrapers.
 
-### api-sdk-ts-releases
+### 10. Anthropic SDK TypeScript Releases
 
-- **Key:** `api-sdk-ts-releases`
-- **Name:** Anthropic SDK TypeScript Releases
-- **URL:** https://github.com/anthropics/anthropic-sdk-typescript/releases
-- **Scraper:** `github-releases`
-- **Config:** `owner: "anthropics"`, `repo: "anthropic-sdk-typescript"`
-- **Tracks:** GitHub Releases for the official TypeScript SDK
-- **Detection:** Same as `claude-code-releases`
-- **Update frequency:** Weekly to monthly
-- **Feed:** [`api-sdk-ts-releases.json`](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.xml)
-- **Quirks:** Same rate limit considerations as other GitHub sources
+- **Key**: `api-sdk-ts-releases`
+- **URL**: https://github.com/anthropics/anthropic-sdk-typescript/releases
+- **Scraper type**: `github-releases` (`owner: "anthropics"`, `repo: "anthropic-sdk-typescript"`)
+- **What it tracks**: GitHub Releases for the official Anthropic TypeScript SDK.
+- **Detection method**: Same as claude-code-releases — GitHub REST API, 10 most recent releases.
+- **Update frequency**: Weekly to monthly
+- **Feed**: [`api-sdk-ts-releases.json`](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.xml)
+- **Notes**: Same rate limit considerations as other GitHub sources.
 
 ---
 
 ## Extended Sources
 
-### claude-code-action
+### 11. Claude Code Action Releases
 
-- **Key:** `claude-code-action`
-- **Name:** Claude Code Action Releases
-- **URL:** https://github.com/anthropics/claude-code-action/releases
-- **Scraper:** `github-releases`
-- **Config:** `owner: "anthropics"`, `repo: "claude-code-action"`
-- **Tracks:** GitHub Releases for the Claude Code GitHub Action
-- **Detection:** Same as `claude-code-releases`
-- **Update frequency:** Monthly
-- **Feed:** [`claude-code-action.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.xml)
+- **Key**: `claude-code-action`
+- **URL**: https://github.com/anthropics/claude-code-action/releases
+- **Scraper type**: `github-releases` (`owner: "anthropics"`, `repo: "claude-code-action"`)
+- **What it tracks**: GitHub Releases for the Claude Code GitHub Action.
+- **Detection method**: Same as claude-code-releases.
+- **Update frequency**: Monthly
+- **Feed**: [`claude-code-action.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.xml)
 
-### blog-alignment
+### 12. Anthropic Alignment Blog
 
-- **Key:** `blog-alignment`
-- **Name:** Anthropic Alignment Blog
-- **URL:** https://alignment.anthropic.com
-- **Scraper:** `blog-page`
-- **Config:** `parseMode: "distill"`
-- **Tracks:** Alignment and interpretability research posts
-- **Detection:** Parses Distill.pub-style TOC (`.toc .date` and `.toc a.note` elements)
-- **Update frequency:** Monthly to quarterly
-- **Feed:** [`blog-alignment.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.xml)
-- **Quirks:** Dates are grouped — a `.date` element followed by multiple `.note` links share the same date
+- **Key**: `blog-alignment`
+- **URL**: https://alignment.anthropic.com
+- **Scraper type**: `blog-page` (`parseMode: "distill"`)
+- **What it tracks**: Alignment and interpretability research posts.
+- **Detection method**: Parses Distill.pub-style TOC. Reads `.toc .date` elements for date context, then `.toc a.note` elements for post titles (`h3`), links (`href`), and descriptions (`.description`). ID = post URL.
+- **Update frequency**: Monthly to quarterly
+- **Feed**: [`blog-alignment.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.xml)
+- **Notes**: Dates are grouped — a `.date` element followed by multiple `.note` links share the same date.
 
-### blog-red-team
+### 13. Anthropic Red Team Blog
 
-- **Key:** `blog-red-team`
-- **Name:** Anthropic Red Team Blog
-- **URL:** https://red.anthropic.com
-- **Scraper:** `blog-page`
-- **Config:** `parseMode: "distill"`
-- **Tracks:** Red teaming research and trust & safety posts
-- **Detection:** Same Distill.pub parsing as `blog-alignment`
-- **Update frequency:** Monthly to quarterly
-- **Feed:** [`blog-red-team.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.xml)
+- **Key**: `blog-red-team`
+- **URL**: https://red.anthropic.com
+- **Scraper type**: `blog-page` (`parseMode: "distill"`)
+- **What it tracks**: Red teaming research and trust & safety posts.
+- **Detection method**: Same Distill.pub parsing as blog-alignment.
+- **Update frequency**: Monthly to quarterly
+- **Feed**: [`blog-red-team.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.xml)
 
-### blog-research
+### 14. Anthropic Research Blog
 
-- **Key:** `blog-research`
-- **Name:** Anthropic Research Blog
-- **URL:** https://www.anthropic.com/research
-- **Scraper:** `blog-page`
-- **Config:** `parseMode: "nextjs-rsc"`, `basePath: "/research"`
-- **Tracks:** Research papers and technical deep-dives
-- **Detection:** Same Next.js RSC parsing as `blog-engineering`
-- **Update frequency:** Monthly
-- **Feed:** [`blog-research.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.xml)
+- **Key**: `blog-research`
+- **URL**: https://www.anthropic.com/research
+- **Scraper type**: `blog-page` (`parseMode: "nextjs-rsc"`, `basePath: "/research"`)
+- **What it tracks**: Research papers and technical deep-dives.
+- **Detection method**: Same Next.js RSC parsing as blog-engineering.
+- **Update frequency**: Monthly
+- **Feed**: [`blog-research.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.xml)
 
-### blog-claude
+### 15. Anthropic Claude Blog
 
-- **Key:** `blog-claude`
-- **Name:** Anthropic Claude Blog
-- **URL:** https://claude.com/blog
-- **Scraper:** `blog-page`
-- **Config:** `parseMode: "webflow"`
-- **Tracks:** Claude product blog posts
-- **Detection:** Parses Webflow CMS items (`.blog_cms_item`, `.w-dyn-item` classes)
-- **Update frequency:** Weekly to monthly
-- **Feed:** [`blog-claude.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.xml)
-- **Quirks:** Webflow class names may change with site redesigns
+- **Key**: `blog-claude`
+- **URL**: https://claude.com/blog
+- **Scraper type**: `blog-page` (`parseMode: "webflow"`)
+- **What it tracks**: Claude product blog posts — feature announcements, tips, guides.
+- **Detection method**: Parses Webflow CMS items (`.blog_cms_item`, `.w-dyn-item` selectors). Titles from `.card_blog_title` or `h2`/`h3`. Dates from `[class*='date']` or `<time>`. ID = post URL.
+- **Update frequency**: Weekly to monthly
+- **Feed**: [`blog-claude.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.xml)
+- **Notes**: Webflow class names may change with site redesigns.
 
-### status-page
+### 16. Anthropic Status Page
 
-- **Key:** `status-page`
-- **Name:** Anthropic Status Page
-- **URL:** https://status.anthropic.com
-- **Scraper:** `status-page`
-- **Config:** (none — URL-derived)
-- **Tracks:** Incidents and outages from the Statuspage.io-powered status page
-- **Detection:** Fetches `/api/v2/incidents.json`, extracts up to 20 incidents. ID = incident ID
-- **Update frequency:** On incidents (variable)
-- **Feed:** [`status-page.json`](https://sefaertunc.github.io/anthropic-watch/feeds/status-page.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/status-page.xml)
-- **Quirks:** Snippet includes impact level and latest update body
+- **Key**: `status-page`
+- **URL**: https://status.anthropic.com
+- **Scraper type**: `status-page`
+- **What it tracks**: Incidents and outages from the Statuspage.io-powered status page.
+- **Detection method**: Fetches `https://status.anthropic.com/api/v2/incidents.json`, extracts up to 20 incidents. ID = incident ID. Snippet includes impact level and latest update body.
+- **Update frequency**: On incidents (variable)
+- **Feed**: [`status-page.json`](https://sefaertunc.github.io/anthropic-watch/feeds/status-page.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/status-page.xml)
+- **Notes**: Snippet format is `[impact] status — body`.
 
 ---
 
@@ -237,16 +205,16 @@ All scrapers use `fetch` (with retry) for HTTP requests. HTML scrapers use `chee
 
 ---
 
-## Source Health
+## Source Health Tracking
 
 Each source tracks health via state:
 
-- `consecutiveFailures` — incremented on error, reset on success
-- Warning logged at **3** consecutive failures
-- `lastSuccess` — timestamp of last successful scrape
+- **`consecutiveFailures`** — incremented on error, reset to 0 on success
+- **Warning threshold**: 3 consecutive failures triggers a warning in logs and GitHub Actions job summary
+- **`lastSuccess`** — ISO 8601 timestamp of last successful scrape
 
 Check source health in:
 
-- The [dashboard](https://sefaertunc.github.io/anthropic-watch/)
+- The [dashboard](https://sefaertunc.github.io/anthropic-watch/) — green/red/amber dots per source
 - `run-report.json` → each source's `status` and `error` fields
-- `run-history.json` → `errors` array across runs
+- `run-history.json` → `errors` array across runs for trend analysis

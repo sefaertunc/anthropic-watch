@@ -11,15 +11,32 @@ Pick the scraper that matches your source:
 | GitHub Releases page              | `github-releases`  | Repo publishes GitHub Releases                     |
 | Markdown changelog in a repo      | `github-changelog` | Repo has a `CHANGELOG.md` (or similar)             |
 | npm package                       | `npm-registry`     | Track latest version on npmjs.com                  |
-| Blog with HTML content            | `blog-page`        | Blog rendered as HTML (various frameworks)         |
+| Blog with server-rendered HTML    | `blog-page`        | Blog rendered as HTML (Next.js, Webflow, Distill)  |
 | Documentation page                | `docs-page`        | Docs page where you want to detect content changes |
 | Statuspage.io-powered status page | `status-page`      | Site uses Statuspage.io for incident tracking      |
 
 If none of these fit, you'll need to create a new scraper type (see step 7).
 
+### Parse Mode Decision (for blog-page)
+
+| HTML framework / pattern                      | Parse mode   |
+| --------------------------------------------- | ------------ |
+| Next.js with RSC payload (`self.__next_f`)    | `nextjs-rsc` |
+| Webflow CMS (`.blog_cms_item`, `.w-dyn-item`) | `webflow`    |
+| Distill.pub TOC (`.toc .date`, `.toc a.note`) | `distill`    |
+
+### Parse Mode Decision (for docs-page)
+
+| Content pattern                       | Parse mode         |
+| ------------------------------------- | ------------------ |
+| Intercom help center article          | `intercom-article` |
+| Any page where content-hash is enough | `docs-hash`        |
+
+---
+
 ## 2. Add Source Config
 
-Add an entry to the `sources` array in `src/sources.js`. The config shape depends on the scraper type.
+Add an entry to the `sources` array in `src/sources.js`. Templates for each scraper type:
 
 ### github-releases
 
@@ -46,7 +63,7 @@ Add an entry to the `sources` array in `src/sources.js`. The config shape depend
   scraperType: "github-changelog",
   owner: "org",
   repo: "repo",
-  file: "CHANGELOG.md",
+  file: "CHANGELOG.md",     // path within the repo
 }
 ```
 
@@ -63,6 +80,8 @@ Add an entry to the `sources` array in `src/sources.js`. The config shape depend
 }
 ```
 
+**Note:** The npm scraper makes two API calls — `/latest` and full doc. In tests, the full doc fixture path is set via `fixtureFileFull` on the source config (see `test/helpers/create-test-config.js`).
+
 ### blog-page
 
 ```js
@@ -73,7 +92,7 @@ Add an entry to the `sources` array in `src/sources.js`. The config shape depend
   category: "extended",
   scraperType: "blog-page",
   parseMode: "nextjs-rsc",   // or "webflow" or "distill"
-  basePath: "/blog",          // required for nextjs-rsc
+  basePath: "/blog",          // required for nextjs-rsc only
 }
 ```
 
@@ -102,22 +121,24 @@ Add an entry to the `sources` array in `src/sources.js`. The config shape depend
 }
 ```
 
+---
+
 ## 3. Investigate the Source
 
 Before writing code, inspect what the source returns:
 
 ```bash
-# For HTML sources
+# For HTML sources — look for post structure
 curl -s "https://example.com/blog" | head -200
 
-# For GitHub API
+# For GitHub API — check release format
 curl -s -H "Accept: application/vnd.github+json" \
   "https://api.github.com/repos/org/repo/releases?per_page=3" | head -100
 
-# For npm
+# For npm — check version and time fields
 curl -s "https://registry.npmjs.org/@scope/name/latest" | head -50
 
-# For status pages
+# For status pages — check incidents endpoint
 curl -s "https://status.example.com/api/v2/incidents.json" | head -100
 ```
 
@@ -127,13 +148,23 @@ Identify:
 - Which existing `parseMode` (if any) matches the HTML structure
 - Whether you need a new parse mode or scraper type
 
+---
+
 ## 4. Capture Fixture
 
 ```bash
 node test/capture-fixtures.js my-source
 ```
 
-This fetches live data and saves it to `test/fixtures/`. For HTML sources, the fixture is minimized (scripts/styles removed). Verify the fixture looks correct before proceeding.
+This fetches live data and saves it to `test/fixtures/`. For HTML sources, the fixture is minimized (scripts/styles/SVGs removed). For JSON sources, the response is formatted. Verify the fixture looks correct before proceeding.
+
+For GitHub API sources, set `GITHUB_TOKEN` to avoid rate limits:
+
+```bash
+GITHUB_TOKEN=ghp_... node test/capture-fixtures.js my-source
+```
+
+---
 
 ## 5. Add Tests
 
@@ -176,7 +207,19 @@ Run the tests:
 npm test
 ```
 
-## 6. Register a New Scraper Type (if needed)
+---
+
+## 6. Adding a New Parse Mode (for existing scrapers)
+
+If the source uses an existing scraper type but needs different HTML parsing:
+
+1. Add a new case to the `switch (source.parseMode)` block in the relevant scraper
+2. Write the parsing function following the pattern of existing modes
+3. Add a fixture and test for the new mode
+
+---
+
+## 7. Adding a New Scraper Type
 
 If no existing scraper type fits:
 
@@ -224,21 +267,17 @@ Key requirements:
 
 - Accept a source config object, return `Array<Item>`
 - Catch all errors, return `[]` on failure
-- Use `fetchSource()` (not raw `fetch`) so fixtures work in tests
+- Use `fetchSource()` (not raw `fetch`) so fixture injection works in tests
 - Include all 8 item fields: `id`, `title`, `date`, `url`, `snippet`, `source`, `sourceCategory`, `sourceName`
 
-## 7. Add a New Parse Mode (for existing scrapers)
-
-If the source uses an existing scraper type but needs different HTML parsing:
-
-1. Add a new case to the `switch (source.parseMode)` block in the relevant scraper
-2. Write the parsing function following the pattern of existing modes
-3. Add a fixture and test for the new mode
+---
 
 ## 8. Update Documentation
 
 - Add the source to `docs/SOURCES.md` in the appropriate tier section
-- Update the source count in `README.md` if it changed
+- Update the source count in `README.md` if the total changed
+
+---
 
 ## 9. Test End-to-End
 
@@ -256,6 +295,8 @@ For GitHub sources, set `GITHUB_TOKEN` to avoid rate limits:
 GITHUB_TOKEN=ghp_... node src/cli.js
 ```
 
+---
+
 ## Checklist
 
 - [ ] Source config added to `src/sources.js`
@@ -264,5 +305,5 @@ GITHUB_TOKEN=ghp_... node src/cli.js
 - [ ] If new scraper type: module created, registered in `scraperMap`
 - [ ] If new parse mode: case added to switch block
 - [ ] `docs/SOURCES.md` updated
-- [ ] `README.md` source count updated
+- [ ] `README.md` source count updated (if changed)
 - [ ] E2E verified with `node src/cli.js`

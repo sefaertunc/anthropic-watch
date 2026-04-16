@@ -1,12 +1,33 @@
-# anthropic-watch
+<div align="center">
 
-Monitor 16 Anthropic sources for changes and publish RSS/JSON feeds via GitHub Pages.
+![Anthropic Watch — Upstream Intelligence for Claude Code](docs/images/anthropic-watch.png)
+
+[![version v1.0.0](https://img.shields.io/badge/version-v1.0.0-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
+[![schedule: daily 06:00 UTC](https://img.shields.io/badge/schedule-daily%2006%3A00%20UTC-brightgreen)](https://github.com/sefaertunc/anthropic-watch/actions)
+[![sources: 16 monitored](https://img.shields.io/badge/sources-16%20monitored-blue)](https://github.com/sefaertunc/anthropic-watch/blob/main/src/sources.js)
+[![feeds: RSS + JSON](https://img.shields.io/badge/feeds-RSS%20%2B%20JSON-orange)](https://sefaertunc.github.io/anthropic-watch/feeds/all.xml)
+[![license: MIT](https://img.shields.io/github/license/sefaertunc/anthropic-watch)](https://github.com/sefaertunc/anthropic-watch/blob/main/LICENSE)
+[![built for Claude Code](https://img.shields.io/badge/built%20for-Claude%20Code-cc785c)](https://github.com/anthropics/claude-code)
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-support-ea4aaa?logo=githubsponsors&style=for-the-badge)](https://github.com/sponsors/sefaertunc)
+&nbsp;
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-yellow?logo=buymeacoffee&style=for-the-badge)](https://buymeacoffee.com/sefaertunc)
+
+[Dashboard](https://sefaertunc.github.io/anthropic-watch/) ·
+[RSS Feed](https://sefaertunc.github.io/anthropic-watch/feeds/all.xml) ·
+[JSON Feed](https://sefaertunc.github.io/anthropic-watch/feeds/all.json) ·
+[Sources](docs/SOURCES.md) ·
+[Documentation](docs/ARCHITECTURE.md)
+
+</div>
+
+Monitors 16 Anthropic sources daily for changes and publishes structured feeds — so you never miss a Claude Code update.
 
 ## What is this?
 
-anthropic-watch scrapes Anthropic blogs, GitHub repos, npm, docs, and status pages daily. It detects new content, accumulates items into feeds, and deploys everything to a static dashboard. No account needed — just subscribe via RSS or fetch the JSON feeds.
+anthropic-watch scrapes Anthropic blogs, changelogs, GitHub releases, npm packages, documentation, and the status page daily. It detects new content by comparing against persisted state, accumulates items into RSS and JSON feeds, and deploys everything to a static dashboard on GitHub Pages. No server needed — just subscribe via RSS or fetch the JSON feeds.
 
-## Subscribe to Feeds
+## Subscribe to feeds
 
 | Format             | URL                                                                                     |
 | ------------------ | --------------------------------------------------------------------------------------- |
@@ -15,125 +36,137 @@ anthropic-watch scrapes Anthropic blogs, GitHub repos, npm, docs, and status pag
 | OPML (import all)  | [`feeds/sources.opml`](https://sefaertunc.github.io/anthropic-watch/feeds/sources.opml) |
 
 <details>
-<summary>Per-source feeds</summary>
+<summary>Individual source feeds</summary>
 
-Every source has its own JSON and RSS feed at `feeds/{source-key}.json` and `feeds/{source-key}.xml`. See [docs/SOURCES.md](docs/SOURCES.md) for the full list with links.
+Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key}.xml`:
+
+| Source                 | JSON                                                                                    | RSS                                                                                   |
+| ---------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| blog-engineering       | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.json)       | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.xml)       |
+| blog-news              | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-news.json)              | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-news.xml)              |
+| docs-release-notes     | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.json)     | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.xml)     |
+| claude-code-changelog  | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.json)  | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.xml)  |
+| support-release-notes  | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/support-release-notes.json)  | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/support-release-notes.xml)  |
+| claude-code-releases   | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.json)   | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.xml)   |
+| npm-claude-code        | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/npm-claude-code.json)        | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/npm-claude-code.xml)        |
+| agent-sdk-ts-changelog | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.json) | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.xml) |
+| agent-sdk-py-changelog | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.json) | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.xml) |
+| api-sdk-ts-releases    | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.json)    | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.xml)    |
+| claude-code-action     | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.json)     | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.xml)     |
+| blog-alignment         | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.json)         | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.xml)         |
+| blog-red-team          | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.json)          | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.xml)          |
+| blog-research          | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.json)          | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.xml)          |
+| blog-claude            | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.json)            | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.xml)            |
+| status-page            | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/status-page.json)            | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/status-page.xml)            |
 
 </details>
 
-## Monitored Sources
+## Monitored sources
 
 ### Core (10)
 
-| Source                            | Key                      | Type             |
-| --------------------------------- | ------------------------ | ---------------- |
-| Anthropic Engineering Blog        | `blog-engineering`       | blog-page        |
-| Anthropic News Blog               | `blog-news`              | blog-page        |
-| Anthropic Docs Release Notes      | `docs-release-notes`     | docs-page        |
-| Claude Code Changelog             | `claude-code-changelog`  | github-changelog |
-| Anthropic Support Release Notes   | `support-release-notes`  | docs-page        |
-| Claude Code Releases              | `claude-code-releases`   | github-releases  |
-| Claude Code npm Package           | `npm-claude-code`        | npm-registry     |
-| Agent SDK TypeScript Changelog    | `agent-sdk-ts-changelog` | github-changelog |
-| Agent SDK Python Changelog        | `agent-sdk-py-changelog` | github-changelog |
-| Anthropic SDK TypeScript Releases | `api-sdk-ts-releases`    | github-releases  |
+| Name                                                                                                               | Key                      | What it tracks                             |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------ |
+| [Anthropic Engineering Blog](https://www.anthropic.com/engineering)                                                | `blog-engineering`       | Engineering blog posts                     |
+| [Anthropic News Blog](https://www.anthropic.com/news)                                                              | `blog-news`              | Company announcements and product launches |
+| [Anthropic Docs Release Notes](https://docs.anthropic.com/en/docs/about-claude/models)                             | `docs-release-notes`     | Model page content changes                 |
+| [Claude Code Changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)                          | `claude-code-changelog`  | Latest changelog entry                     |
+| [Anthropic Support Release Notes](https://support.claude.com/en/articles/12138966-release-notes)                   | `support-release-notes`  | Customer-facing release notes              |
+| [Claude Code Releases](https://github.com/anthropics/claude-code/releases)                                         | `claude-code-releases`   | GitHub releases                            |
+| [Claude Code npm Package](https://www.npmjs.com/package/@anthropic-ai/claude-code)                                 | `npm-claude-code`        | Latest npm version                         |
+| [Agent SDK TypeScript Changelog](https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md) | `agent-sdk-ts-changelog` | TS Agent SDK changelog                     |
+| [Agent SDK Python Changelog](https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md)         | `agent-sdk-py-changelog` | Python Agent SDK changelog                 |
+| [Anthropic SDK TypeScript Releases](https://github.com/anthropics/anthropic-sdk-typescript/releases)               | `api-sdk-ts-releases`    | TS SDK releases                            |
 
 ### Extended (6)
 
-| Source                      | Key                  | Type            |
-| --------------------------- | -------------------- | --------------- |
-| Claude Code Action Releases | `claude-code-action` | github-releases |
-| Anthropic Alignment Blog    | `blog-alignment`     | blog-page       |
-| Anthropic Red Team Blog     | `blog-red-team`      | blog-page       |
-| Anthropic Research Blog     | `blog-research`      | blog-page       |
-| Anthropic Claude Blog       | `blog-claude`        | blog-page       |
-| Anthropic Status Page       | `status-page`        | status-page     |
+| Name                                                                                     | Key                  | What it tracks           |
+| ---------------------------------------------------------------------------------------- | -------------------- | ------------------------ |
+| [Claude Code Action Releases](https://github.com/anthropics/claude-code-action/releases) | `claude-code-action` | GitHub Action releases   |
+| [Anthropic Alignment Blog](https://alignment.anthropic.com)                              | `blog-alignment`     | Alignment research posts |
+| [Anthropic Red Team Blog](https://red.anthropic.com)                                     | `blog-red-team`      | Red teaming research     |
+| [Anthropic Research Blog](https://www.anthropic.com/research)                            | `blog-research`      | Research papers          |
+| [Anthropic Claude Blog](https://claude.com/blog)                                         | `blog-claude`        | Claude product blog      |
+| [Anthropic Status Page](https://status.anthropic.com)                                    | `status-page`        | Incidents and outages    |
 
-## How It Works
+## How it works
 
-1. GitHub Actions runs daily at 06:00 UTC (plus manual dispatch)
-2. 16 scrapers run with concurrency limit of 4, using `fetch` + `cheerio` for HTML and REST APIs for GitHub/npm/status
-3. New items detected by comparing against persisted state (`state/last-seen.json`)
-4. Feeds generated with accumulation — items persist across runs until pushed out by limits (100 all, 50 per-source)
-5. State committed to `main`, feeds deployed to GitHub Pages via `peaceiris/actions-gh-pages`
+GitHub Actions runs daily at 06:00 UTC. The pipeline fetches all 16 sources using `fetch` + `cheerio` for HTML scraping and REST APIs for GitHub, npm, and status page data. Each source is compared against persisted state to detect new items. Results are accumulated into RSS and JSON feeds, then deployed to GitHub Pages.
+
+```
+Daily cron (06:00 UTC)
+  → Fetch 16 sources (GitHub API, HTML scraping, npm registry, Statuspage API)
+  → Compare against last-seen state
+  → New items → RSS/JSON feeds + run report
+  → Deploy to GitHub Pages
+```
+
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full technical deep-dive.
 
 ## Dashboard
 
-[sefaertunc.github.io/anthropic-watch](https://sefaertunc.github.io/anthropic-watch/) — live status, recent items, and run history.
+[sefaertunc.github.io/anthropic-watch](https://sefaertunc.github.io/anthropic-watch/) — live source status, recent items, and health at a glance.
 
 ## Use with Worclaude
 
-anthropic-watch feeds can be consumed by Worclaude for upstream change tracking. See [docs/WORCLAUDE-INTEGRATION.md](docs/WORCLAUDE-INTEGRATION.md) for the integration guide and corrected consumption patterns.
+anthropic-watch feeds are designed to be consumed by [Worclaude](https://github.com/sefaertunc/Worclaude) for upstream change tracking. Worclaude fetches `run-report.json` for status and `all.json` for items — keeping its workspace aware of Claude Code releases, API changes, and incidents. See [docs/WORCLAUDE-INTEGRATION.md](docs/WORCLAUDE-INTEGRATION.md) for the integration guide.
 
-## Run Locally
+## Run locally
 
 ```bash
-npm ci
+git clone https://github.com/sefaertunc/anthropic-watch.git
+cd anthropic-watch
+npm install
+
+# Run the scraper
 npm start
+
+# With GitHub API auth (higher rate limits)
+GITHUB_TOKEN=ghp_xxx npm start
+
+# Run tests
+npm test
+
+# Refresh test fixtures from live sources
+npm run test:live
 ```
 
-For higher GitHub API rate limits:
-
-```bash
-GITHUB_TOKEN=ghp_... npm start
-```
-
-Outputs:
-
-- `public/feeds/` — JSON, RSS, OPML, run report, run history
-- `state/last-seen.json` — persisted known item IDs
-- Console — timestamped per-source results
-
-## Project Structure
+## Project structure
 
 ```
-anthropic-watch/
-  .github/workflows/
-    scrape.yml              # Daily cron + manual trigger → test, scrape, deploy
-    test.yml                # Push/PR test runner
-  public/
-    index.html              # Self-contained dashboard
-    feeds/                  # Generated feeds (JSON, RSS, OPML)
-  src/
-    index.js                # Pipeline orchestrator
-    cli.js                  # CLI entry point
-    sources.js              # 16 source definitions
-    state.js                # State persistence + failure tracking
-    fetch-with-retry.js     # Retry wrapper (2 retries, 15s timeout, 5xx only)
-    fetch-source.js         # Fetch abstraction (supports fixture injection)
-    parse-date.js           # Flexible date parser
-    log.js                  # Timestamped structured logger
-    summary.js              # GitHub Actions job summary
-    feed/
-      json.js               # JSON feed generator
-      rss.js                # RSS 2.0 feed generator
-      opml.js               # OPML 2.0 feed list
-    scrapers/
-      github-releases.js    # GitHub Releases API
-      github-changelog.js   # GitHub CHANGELOG.md parser
-      npm-registry.js       # npm registry API
-      blog-page.js          # Multi-mode blog parser (nextjs-rsc, webflow, distill)
-      docs-page.js          # Multi-mode docs parser (intercom-article, docs-hash)
-      status-page.js        # Statuspage.io API
-  state/
-    last-seen.json          # Persisted known item IDs
-  test/
-    helpers/                # Test utilities
-    fixtures/               # Captured response fixtures
-    unit/                   # Unit tests
-    scrapers/               # Scraper tests
-    e2e/                    # End-to-end pipeline tests
+src/
+  index.js              # Pipeline orchestrator
+  cli.js                # CLI entry point
+  sources.js            # 16 source definitions
+  state.js              # State persistence + failure tracking
+  fetch-with-retry.js   # Retry wrapper (2 retries, 15s timeout, linear backoff)
+  fetch-source.js       # Fetch abstraction (supports fixture injection)
+  feed/                 # JSON, RSS, OPML generators
+  scrapers/             # 6 scraper types (github-releases, blog-page, etc.)
+test/                   # Vitest test suites (unit, scraper, e2e)
+public/                 # Dashboard + generated feeds
+state/                  # Persisted last-seen state
+docs/                   # Project documentation
 ```
 
 ## Documentation
 
-- [FEED-SCHEMA.md](docs/FEED-SCHEMA.md) — Feed formats, item shape, schemas
-- [ARCHITECTURE.md](docs/ARCHITECTURE.md) — Pipeline design, concurrency, state, error handling
-- [SOURCES.md](docs/SOURCES.md) — All 16 sources with detection methods and quirks
-- [ADDING-SOURCES.md](docs/ADDING-SOURCES.md) — Step-by-step guide for new sources
-- [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) — Common issues and fixes
-- [WORCLAUDE-INTEGRATION.md](docs/WORCLAUDE-INTEGRATION.md) — Downstream integration guide
+- [Architecture](docs/ARCHITECTURE.md) — pipeline design, concurrency, state, error handling
+- [Sources](docs/SOURCES.md) — all 16 sources with detection methods and quirks
+- [Feed Schema](docs/FEED-SCHEMA.md) — JSON and RSS schema reference for consumers
+- [Adding Sources](docs/ADDING-SOURCES.md) — step-by-step guide to add a new source
+- [Troubleshooting](docs/TROUBLESHOOTING.md) — common issues and fixes
+- [Worclaude Integration](docs/WORCLAUDE-INTEGRATION.md) — downstream integration guide
+
+## Links
+
+- [Documentation](docs/ARCHITECTURE.md)
+- [GitHub Issues](https://github.com/sefaertunc/anthropic-watch/issues)
+- [Contributing](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [License: MIT](LICENSE)
 
 ## License
 
-MIT
+[MIT](LICENSE)

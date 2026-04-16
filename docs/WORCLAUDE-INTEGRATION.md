@@ -2,13 +2,30 @@
 
 ## Overview
 
-**Worclaude** is a downstream consumer of anthropic-watch feeds. anthropic-watch provides the data layer — scraping Anthropic sources and publishing structured feeds — while Worclaude uses those feeds to power its own features (notifications, status checks, summaries).
+**[Worclaude](https://github.com/sefaertunc/Worclaude)** is a Claude Code-powered workspace assistant that manages development workflows. It is a downstream consumer of anthropic-watch feeds — using them to stay aware of upstream changes to Claude Code, Anthropic APIs, SDKs, and related tooling.
+
+anthropic-watch provides the data layer (scraping 16 Anthropic sources and publishing structured feeds), while Worclaude uses those feeds to power notifications, status checks, and summaries.
 
 ## Architecture
 
 ![Worclaude integration](images/worclaude-integration.png)
 
-anthropic-watch publishes static JSON/RSS files to GitHub Pages. Worclaude fetches these files over HTTP. There is no API, webhook, or direct integration — the feed files are the interface.
+```
+anthropic-watch (GitHub Actions, daily 06:00 UTC)
+  └─ Scrapes 16 sources
+  └─ Publishes to GitHub Pages
+       ├─ run-report.json    ← primary for status
+       ├─ all.json           ← primary for items
+       ├─ {source}.json      ← per-source items
+       └─ run-history.json   ← trend data
+
+Worclaude (scheduled task / on-demand command)
+  └─ Fetches feeds over HTTPS
+  └─ Processes items and status
+  └─ Surfaces relevant changes to user
+```
+
+There is no API, webhook, or direct integration — the static feed files on GitHub Pages are the interface.
 
 ## Feed Consumption
 
@@ -23,7 +40,7 @@ anthropic-watch publishes static JSON/RSS files to GitHub Pages. Worclaude fetch
 
 **Important:** Items are **not** included in `run-report.json`. The report contains only status metadata. To get actual items, fetch the feed files.
 
-### Corrected consumption pattern
+### Consumption Logic
 
 ```js
 const BASE = "https://sefaertunc.github.io/anthropic-watch/feeds";
@@ -33,24 +50,28 @@ const report = await fetch(`${BASE}/run-report.json`).then((r) => r.json());
 const { totalNewItems, sourcesChecked, sourcesWithErrors, healthySources } =
   report.summary;
 
-// 2. Get items from the feed (NOT from the report)
+// 2. Check if this is a new run (avoid reprocessing)
+if (report.runId === lastProcessedRunId) return; // already seen
+lastProcessedRunId = report.runId;
+
+// 3. Get items from the feed (NOT from the report)
 const feed = await fetch(`${BASE}/all.json`).then((r) => r.json());
 const recentItems = feed.items.slice(0, 20);
 
-// 3. Per-source status from the report
+// 4. Per-source status from the report
 for (const src of report.sources) {
   if (src.status === "error") {
     console.log(`${src.key}: ERROR — ${src.error}`);
   }
 }
 
-// 4. Per-source items (if needed) — separate fetch
+// 5. Per-source items (if needed) — separate fetch
 const claudeCodeItems = await fetch(`${BASE}/claude-code-releases.json`)
   .then((r) => r.json())
   .then((f) => f.items);
 ```
 
-### Run report source entry shape
+### Run Report Source Entry Shape
 
 ```json
 {
@@ -83,7 +104,7 @@ Which anthropic-watch sources are relevant to which Worclaude components:
 ## Planned Features
 
 - **/upstream-check command:** A Worclaude command that fetches `run-report.json` and displays a formatted summary of source health and recent changes.
-- **upstream-watcher agent:** A background agent that periodically checks feeds and alerts on new items matching configurable filters.
+- **upstream-watcher agent:** A background agent that periodically checks feeds and alerts on new items matching configurable filters (e.g., only Claude Code releases, or only incidents).
 
 ## Reliability Considerations
 
@@ -93,7 +114,11 @@ Feeds update daily at ~06:00 UTC. If a Worclaude feature needs fresher data, it 
 
 ### Error handling
 
-Always handle fetch failures gracefully. GitHub Pages can have brief outages. Cache the last successful response and fall back to it.
+Always handle fetch failures gracefully. GitHub Pages can have brief outages. Cache the last successful response and fall back to it when a fetch fails.
+
+### Deduplication
+
+Use the `runId` field from `run-report.json` to avoid reprocessing the same run. Cache the last seen `runId` and skip processing if it hasn't changed.
 
 ### Stable URLs
 
