@@ -1,27 +1,12 @@
 import { readFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPORT_PATH = join(__dirname, "..", "public", "feeds", "run-report.json");
 const STATE_PATH = join(__dirname, "..", "state", "last-seen.json");
 
-async function main() {
-  let report;
-  try {
-    report = JSON.parse(await readFile(REPORT_PATH, "utf-8"));
-  } catch {
-    console.log("No run report found.");
-    return;
-  }
-
-  let state = {};
-  try {
-    state = JSON.parse(await readFile(STATE_PATH, "utf-8"));
-  } catch {
-    // no state file
-  }
-
+export function generateSummary(report, state = {}) {
   const lines = [];
   lines.push("## Anthropic Watch \u2014 Run Summary\n");
   lines.push("| Source | Status | New Items |");
@@ -43,7 +28,6 @@ async function main() {
   );
   lines.push("");
 
-  // Warn for consecutive failures
   for (const src of report.sources) {
     const entry = state[src.key];
     const failures = entry?.consecutiveFailures || 0;
@@ -54,10 +38,35 @@ async function main() {
     }
   }
 
-  console.log(lines.join("\n"));
+  return lines.join("\n");
 }
 
-main().catch((err) => {
-  console.error("Summary error:", err.message);
-  process.exit(1);
-});
+async function main() {
+  let report;
+  try {
+    report = JSON.parse(await readFile(REPORT_PATH, "utf-8"));
+  } catch {
+    console.log("No run report found.");
+    return;
+  }
+
+  let state = {};
+  try {
+    state = JSON.parse(await readFile(STATE_PATH, "utf-8"));
+  } catch {
+    // no state file
+  }
+
+  console.log(generateSummary(report, state));
+}
+
+// Only run main() when this file is invoked directly (not when imported in tests).
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
+  main().catch((err) => {
+    console.error("Summary error:", err.message);
+    process.exit(1);
+  });
+}

@@ -4,11 +4,8 @@ export async function scrapeStatusPage(source) {
   const origin = new URL(source.url).origin;
   const apiUrl = `${origin}/api/v2/incidents.json`;
 
-  const res = await fetchSource(
-    apiUrl,
-    { redirect: "follow" },
-    source.fixtureFile,
-  );
+  // redirect: "follow" is the default in fetchWithRetry; no override needed.
+  const res = await fetchSource(apiUrl, {}, source.fixtureFile);
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${apiUrl}`);
 
   const data = await res.json();

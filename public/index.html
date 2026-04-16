@@ -274,10 +274,26 @@
         return days + "d ago";
       }
 
-      function escapeHtml(str) {
-        const d = document.createElement("div");
-        d.textContent = str;
-        return d.innerHTML;
+      // Allow only http(s) URLs. Anything else (javascript:, data:, vbscript:,
+      // relative with unexpected schemes) collapses to "#" so clicking the link
+      // is a no-op rather than a script execution.
+      function safeUrl(url) {
+        try {
+          const u = new URL(url, window.location.href);
+          if (u.protocol === "http:" || u.protocol === "https:") {
+            return u.href;
+          }
+        } catch {
+          // fall through
+        }
+        return "#";
+      }
+
+      function el(tag, className, text) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text != null) node.textContent = text;
+        return node;
       }
 
       async function load() {
@@ -304,58 +320,85 @@
           const total = report.summary.sourcesChecked;
           const badge = document.getElementById("health-badge");
           const cls = healthy === total ? "badge-green" : "badge-red";
-          badge.innerHTML = `<span class="badge ${cls}">${healthy}/${total} healthy</span>`;
+          badge.textContent = "";
+          badge.appendChild(
+            el("span", `badge ${cls}`, `${healthy}/${total} healthy`),
+          );
         }
 
-        // Latest items
-        const el = document.getElementById("latest");
+        // Latest items — built via DOM APIs so attacker-controlled feed fields
+        // (title, snippet, source, url) never reach innerHTML.
+        const latestEl = document.getElementById("latest");
+        latestEl.textContent = "";
+        latestEl.classList.remove("loading");
         if (feed && feed.items && feed.items.length > 0) {
-          const items = feed.items.slice(0, 20);
-          el.innerHTML = items
-            .map(
-              (item) =>
-                `<div class="item">
-              <div class="item-title"><a href="${escapeHtml(item.url)}">${escapeHtml(item.title)}</a></div>
-              <div class="item-meta">
-                <span class="source-badge">${escapeHtml(item.source)}</span>
-                ${timeAgo(item.date)}
-              </div>
-              ${item.snippet ? `<div class="item-snippet">${escapeHtml(item.snippet)}</div>` : ""}
-            </div>`,
-            )
-            .join("");
+          for (const item of feed.items.slice(0, 20)) {
+            const itemDiv = el("div", "item");
+
+            const titleDiv = el("div", "item-title");
+            const a = document.createElement("a");
+            a.href = safeUrl(item.url);
+            a.rel = "noopener noreferrer";
+            a.textContent = item.title || "";
+            titleDiv.appendChild(a);
+            itemDiv.appendChild(titleDiv);
+
+            const metaDiv = el("div", "item-meta");
+            metaDiv.appendChild(el("span", "source-badge", item.source || ""));
+            metaDiv.appendChild(
+              document.createTextNode(" " + timeAgo(item.date)),
+            );
+            itemDiv.appendChild(metaDiv);
+
+            if (item.snippet) {
+              itemDiv.appendChild(el("div", "item-snippet", item.snippet));
+            }
+
+            latestEl.appendChild(itemDiv);
+          }
         } else {
-          el.textContent = "No items yet.";
+          latestEl.textContent = "No items yet.";
         }
 
-        // Source table
+        // Source table — same DOM-construction pattern.
         const tbody = document.getElementById("sources");
         if (report && report.sources) {
           const core = report.sources.filter((s) => s.category === "core");
           const extended = report.sources.filter(
             (s) => s.category === "extended",
           );
-          let html = "";
+          tbody.textContent = "";
 
           function renderGroup(label, list) {
-            html += `<tr class="cat-header"><td colspan="4">${label}</td></tr>`;
+            const header = document.createElement("tr");
+            header.className = "cat-header";
+            const headerCell = el("td", null, label);
+            headerCell.colSpan = 4;
+            header.appendChild(headerCell);
+            tbody.appendChild(header);
+
             for (const src of list) {
               let dotClass = "dot-green";
               if (src.status === "error") dotClass = "dot-red";
               else if (src.error) dotClass = "dot-amber";
-              const items = src.status === "ok" ? src.newItemCount : "\u2014";
-              html += `<tr>
-                <td>${escapeHtml(src.name || src.key)}</td>
-                <td><span class="dot ${dotClass}"></span></td>
-                <td>${items}</td>
-                <td>${timeAgo(report.timestamp)}</td>
-              </tr>`;
+
+              const row = document.createElement("tr");
+              row.appendChild(el("td", null, src.name || src.key || ""));
+
+              const statusCell = document.createElement("td");
+              statusCell.appendChild(el("span", `dot ${dotClass}`));
+              row.appendChild(statusCell);
+
+              const itemsText =
+                src.status === "ok" ? String(src.newItemCount) : "\u2014";
+              row.appendChild(el("td", null, itemsText));
+              row.appendChild(el("td", null, timeAgo(report.timestamp)));
+              tbody.appendChild(row);
             }
           }
 
           renderGroup("Core", core);
           renderGroup("Extended", extended);
-          tbody.innerHTML = html;
         }
       }
 

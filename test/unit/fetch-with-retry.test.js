@@ -91,6 +91,61 @@ describe("fetchWithRetry", () => {
       `anthropic-watch/${pkg.version}`,
     );
   });
+
+  it("retries on 429 and succeeds on attempt 2", async () => {
+    globalThis.fetch = vi
+      .fn()
+      .mockResolvedValueOnce({
+        ok: false,
+        status: 429,
+        headers: new Headers(),
+      })
+      .mockResolvedValueOnce({ ok: true, status: 200, headers: new Headers() });
+    const res = await fetchWithRetry("http://example.com", {}, 1);
+    expect(res.ok).toBe(true);
+    expect(globalThis.fetch).toHaveBeenCalledTimes(2);
+  });
+
+  it("429 with Retry-After header uses the header value for backoff", async () => {
+    // Swap in a recorder setTimeout that runs callbacks on the microtask queue
+    // so we can assert on the requested delay without actually waiting.
+    const delays = [];
+    const stub = (cb, ms) => {
+      delays.push(ms);
+      Promise.resolve().then(cb);
+      return 0;
+    };
+    vi.stubGlobal("setTimeout", stub);
+
+    globalThis.fetch = vi
+      .fn()
+      .mockResolvedValueOnce({
+        ok: false,
+        status: 429,
+        headers: new Headers([["Retry-After", "2"]]),
+      })
+      .mockResolvedValueOnce({ ok: true, status: 200, headers: new Headers() });
+
+    const res = await fetchWithRetry("http://example.com", {}, 1);
+
+    expect(res.ok).toBe(true);
+    expect(delays).toContain(2000);
+    // The default first-attempt backoff is 1000ms — confirm it was overridden.
+    expect(delays).not.toContain(1000);
+
+    vi.unstubAllGlobals();
+  });
+
+  it("defaults redirect: follow on the fetch options", async () => {
+    globalThis.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers(),
+    });
+    await fetchWithRetry("http://example.com", {}, 0);
+    const opts = globalThis.fetch.mock.calls[0][1];
+    expect(opts.redirect).toBe("follow");
+  });
 });
 
 describe("logGitHubRateLimit", () => {

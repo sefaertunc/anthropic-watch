@@ -15,21 +15,33 @@ const DEFAULT_UA = `anthropic-watch/${pkg.version} (https://github.com/sefaertun
 export async function fetchWithRetry(url, options = {}, maxRetries = 2) {
   const headers = { "User-Agent": DEFAULT_UA, ...options.headers };
   const signal = options.signal || AbortSignal.timeout(DEFAULT_TIMEOUT);
-  const opts = { ...options, headers, signal };
+  const opts = { redirect: "follow", ...options, headers, signal };
 
   let lastError;
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    let waitMs = 1000 * (attempt + 1);
     try {
       const res = await fetch(url, opts);
-      // Don't retry on 4xx or success
-      if (res.ok || (res.status >= 400 && res.status < 500)) return res;
-      // 5xx → retry
+      // Success
+      if (res.ok) return res;
+      // 4xx: don't retry, except 429 (rate-limited — transient)
+      if (res.status >= 400 && res.status < 500 && res.status !== 429) {
+        return res;
+      }
+      // Retryable: 5xx and 429
       lastError = new Error(`HTTP ${res.status} for ${url}`);
+      if (res.status === 429) {
+        // Honor Retry-After (seconds) when the server provides it.
+        const retryAfter = Number(res.headers.get("retry-after"));
+        if (Number.isFinite(retryAfter) && retryAfter > 0) {
+          waitMs = retryAfter * 1000;
+        }
+      }
     } catch (err) {
       lastError = err;
     }
     if (attempt < maxRetries) {
-      await new Promise((r) => setTimeout(r, 1000 * (attempt + 1)));
+      await new Promise((r) => setTimeout(r, waitMs));
     }
   }
   throw lastError;

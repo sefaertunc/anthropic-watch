@@ -216,6 +216,7 @@ A **raw JSON array** (not a wrapper object). Most recent run first. Max 90 entri
 ```json
 [
   {
+    "version": "1.0",
     "timestamp": "2026-04-16T06:00:00.000Z",
     "durationMs": 12345,
     "totalNewItems": 5,
@@ -235,12 +236,15 @@ A **raw JSON array** (not a wrapper object). Most recent run first. Max 90 entri
 
 | Field               | Type     | Notes                                             |
 | ------------------- | -------- | ------------------------------------------------- |
+| `version`           | `string` | Entry schema version. Currently `"1.0"`.          |
 | `timestamp`         | `string` | ISO 8601 timestamp of run                         |
 | `durationMs`        | `number` | Total pipeline duration in milliseconds           |
 | `totalNewItems`     | `number` | New items detected                                |
 | `sourcesChecked`    | `number` | Sources scraped                                   |
 | `sourcesWithErrors` | `number` | Sources that errored                              |
 | `errors`            | `array`  | Array of `{ key: string, error: string }` objects |
+
+Older entries written before v1.0.2 lack the `version` field — consumers should treat a missing `version` as `"1.0"` for backward compatibility.
 
 - Empty `errors` array means all sources succeeded.
 

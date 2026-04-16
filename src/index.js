@@ -260,6 +260,7 @@ export async function runPipeline(options = {}) {
   const historyPath = join(feedsDir, "run-history.json");
   const existingHistory = (await readJsonSafe(historyPath)) || [];
   const historyEntry = {
+    version: "1.0",
     timestamp: runReport.timestamp,
     durationMs: runDuration,
     totalNewItems: allNewItems.length,
