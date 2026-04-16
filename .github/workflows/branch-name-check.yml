@@ -1,0 +1,31 @@
+name: Branch name check
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, edited]
+
+jobs:
+  validate-branch-name:
+    name: Validate branch name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check source branch name
+        run: |
+          BRANCH="${{ github.head_ref }}"
+          echo "Source branch: $BRANCH"
+
+          # Allow automated dependency PRs
+          if [[ "$BRANCH" =~ ^(dependabot|renovate)/ ]]; then
+            echo "✅ Automated dependency branch — skipping check."
+            exit 0
+          fi
+
+          # Enforce feat/* convention
+          if [[ ! "$BRANCH" =~ ^feat/.+ ]]; then
+            echo "❌ PRs to main must come from a branch named 'feat/<something>'."
+            echo "   Got: '$BRANCH'"
+            exit 1
+          fi
+
+          echo "✅ Branch name OK."
