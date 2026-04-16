@@ -13,7 +13,7 @@ All feeds are published to GitHub Pages and update daily at ~06:00 UTC.
 | `{source-key}.json` | JSON     | Items from a single source (max 50)   |
 | `{source-key}.xml`  | RSS 2.0  | Items from a single source (max 50)   |
 | `run-report.json`   | JSON     | Latest scrape run status and summary  |
-| `run-history.json`  | JSON     | Last 30 run summaries                 |
+| `run-history.json`  | JSON     | Last 90 run summaries                 |
 | `sources.opml`      | OPML 2.0 | Feed list importable by RSS readers   |
 
 ---
@@ -83,6 +83,16 @@ Per-source feeds use the title format `"anthropic-watch — {source name}"` and 
 - `all.json` / `all.xml`: max **100** items.
 - Per-source feeds: max **50** items.
 - New items are merged with existing feed file contents each run (accumulation model), so items persist across runs until pushed out by the limit.
+
+### Merge Semantics
+
+Each run reads the existing feed file, merges the current run's new items, deduplicates, sorts, and slices. Specifically:
+
+- **Dedup key:** `${id}|${source}` — two items with the same id and source are considered the same item.
+- **Ordering:** new items are prepended before existing items (`[...newItems, ...existingItems]`) before the dedup pass.
+- **Winner on conflict:** first-seen wins the dedup pass. Because new items are prepended, this means **the newly scraped version wins** — its `title`, `snippet`, `date`, and `url` overwrite the persisted copy. Use this when a source edits an entry in place (e.g. `[Unreleased]` in a changelog): the latest snippet/title reaches the feed, not a stale cached one.
+- Sorting (by `date` desc, nulls last) runs after dedup.
+- The slice is applied last: 100 for `all.*`, 50 for per-source feeds.
 
 ---
 
@@ -199,7 +209,7 @@ Generated after each scrape run. Provides status for all sources.
 
 ## Run History (`run-history.json`)
 
-A **raw JSON array** (not a wrapper object). Most recent run first. Max 30 entries.
+A **raw JSON array** (not a wrapper object). Most recent run first. Max 90 entries.
 
 ### Example
 

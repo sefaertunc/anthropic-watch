@@ -67,11 +67,31 @@ diff <(head -50 test/fixtures/blog-engineering.html) <(head -50 /tmp/current.htm
 
 **Diagnosis:** Check `state/last-seen.json` for syntax errors.
 
-**Fix:**
+**Fix (preferred — restore from git history):**
 
-1. Try to fix the JSON syntax manually
-2. If unrecoverable, delete the file — the pipeline will treat all items as new on the next run and rebuild state from scratch
-3. Commit and push the fix
+`state/last-seen.json` is committed by the workflow after every successful run (see [ARCHITECTURE.md — State Persistence](ARCHITECTURE.md#state-persistence)), so a recent good copy lives in git:
+
+```bash
+# Inspect recent state commits
+git log --oneline -20 -- state/last-seen.json
+
+# Roll back one run
+git checkout HEAD~1 -- state/last-seen.json
+
+# Or roll back to a specific known-good commit
+git checkout <sha> -- state/last-seen.json
+
+git commit -m "chore: restore last-seen state from <sha>"
+git push
+```
+
+This preserves existing `knownIds` so the next run doesn't flood feeds with "new" items.
+
+**Fix (fallback — delete and rebuild):**
+
+1. Delete the file — the pipeline will treat all items as new on the next run and rebuild state from scratch
+2. Commit and push the fix
+3. Expect a one-shot burst of "new" items across every source on the next scheduled run
 
 ### Feed duplicates
 

@@ -17,7 +17,7 @@ export async function scrapeGithubReleases(source) {
     headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   }
 
-  const url = `https://api.github.com/repos/${source.owner}/${source.repo}/releases?per_page=10`;
+  const url = `https://api.github.com/repos/${source.owner}/${source.repo}/releases?per_page=30`;
   const res = await fetchSource(url, { headers }, source.fixtureFile);
   if (!source.fixtureFile) logGitHubRateLimit(res);
 

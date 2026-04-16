@@ -81,6 +81,14 @@ Every item returned by a scraper must have these 8 fields:
 - **`webflow`** — Parses Webflow CMS items via `.blog_cms_item` and `.w-dyn-item` selectors. Extracts titles from `.card_blog_title` or heading elements.
 - **`distill`** — Parses Distill.pub-style TOC layout. Reads `.toc .date` elements for date context, then `.toc a.note` elements for post titles and links.
 
+#### `nextjs-rsc` Known Brittleness
+
+The primary path depends on Next.js's internal `self.__next_f.push([1, "..."])` chunk serialization — an undocumented framework implementation detail, not a public API. If Anthropic upgrades Next.js to a major version that changes this format (or switches to a different flight-data shape), JSON extraction yields 0 chunks.
+
+The HTML fallback path (`parseNextjsRscHtml` — anchor-href matching on `basePath/`, title from `h2, h3, h4` or `[class*='title']`) catches this case. It's less precise (smaller title set, no `publishedOn` date) but survives most redesigns.
+
+Re-validate both paths whenever Anthropic ships a blog redesign or a visible Next.js upgrade. The quickest check: `node test/capture-fixtures.js blog-engineering` + rerun the blog-page scraper tests.
+
 ### docs-page Parse Modes
 
 - **`intercom-article`** — Targets Intercom help center articles. Finds container via `.article_body`, `.intercom-article-body`, or `<article>`. Parses `<h3>` elements as date headings with sibling `<p>` content.
@@ -171,12 +179,14 @@ Feeds use an **accumulation model**: new items are merged with existing feed fil
 
 1. Read existing `all.json` from disk → extract its `items` array
 2. Merge new items in front of existing items
-3. Deduplicate by `${id}|${source}`
+3. Deduplicate by `${id}|${source}` (first-seen wins — the freshly scraped copy overwrites the persisted one)
 4. Sort by `date` descending (nulls last)
 5. Slice to limit (100 for all, 50 for per-source)
 6. Write JSON and RSS files
 
 The same merge/dedup/sort/slice logic runs for both JSON and RSS generation. Per-source feeds follow the same pattern but with items filtered to one source and a limit of 50.
+
+See [FEED-SCHEMA.md — Merge Semantics](FEED-SCHEMA.md#merge-semantics) for the full conflict-resolution rules (why new-wins matters for in-place edits like `[Unreleased]` changelog sections).
 
 ### Output Files
 
@@ -184,7 +194,7 @@ The same merge/dedup/sort/slice logic runs for both JSON and RSS generation. Per
 | ------------------------------ | --------------------------------------------------------- | --------------------------------- |
 | Feed files (`*.json`, `*.xml`) | Items with full content                                   | RSS readers, downstream consumers |
 | `run-report.json`              | Per-source status, timing, error messages, summary counts | Dashboard, monitoring             |
-| `run-history.json`             | Array of past run summaries with error lists (max 30)     | Trend analysis, health tracking   |
+| `run-history.json`             | Array of past run summaries with error lists (max 90)     | Trend analysis, health tracking   |
 | `sources.opml`                 | OPML 2.0 feed list grouped by Core/Extended               | Bulk RSS subscription             |
 
 Items are **not** included in `run-report.json` — they are stripped via destructuring (`{ items, ...rest }`) at write time.

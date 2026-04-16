@@ -53,10 +53,15 @@ describe("scrape.yml workflow", () => {
     expect(content).toContain("if: always()");
   });
 
-  it("has test job that runs before scrape", async () => {
+  it("has no in-workflow test job (tests run in test.yml)", async () => {
     const content = await readFile(workflowPath, "utf-8");
     workflow = parse(content);
-    expect(workflow.jobs.test).toBeDefined();
-    expect(workflow.jobs.scrape.needs).toBe("test");
+    expect(workflow.jobs.test).toBeUndefined();
+    expect(workflow.jobs.scrape.needs).toBeUndefined();
+  });
+
+  it("commit-state step uses pull --rebase to avoid push races", async () => {
+    const content = await readFile(workflowPath, "utf-8");
+    expect(content).toMatch(/git\s+pull\s+--rebase/);
   });
 });

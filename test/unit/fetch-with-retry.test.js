@@ -1,8 +1,17 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import {
   fetchWithRetry,
   logGitHubRateLimit,
 } from "../../src/fetch-with-retry.js";
+
+const pkg = JSON.parse(
+  readFileSync(
+    fileURLToPath(new URL("../../package.json", import.meta.url)),
+    "utf-8",
+  ),
+);
 
 describe("fetchWithRetry", () => {
   const originalFetch = globalThis.fetch;
@@ -68,6 +77,19 @@ describe("fetchWithRetry", () => {
     await fetchWithRetry("http://example.com", {}, 0);
     const calledHeaders = globalThis.fetch.mock.calls[0][1].headers;
     expect(calledHeaders["User-Agent"]).toContain("anthropic-watch");
+  });
+
+  it("User-Agent tracks package.json version (no hardcoded drift)", async () => {
+    globalThis.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers(),
+    });
+    await fetchWithRetry("http://example.com", {}, 0);
+    const calledHeaders = globalThis.fetch.mock.calls[0][1].headers;
+    expect(calledHeaders["User-Agent"]).toContain(
+      `anthropic-watch/${pkg.version}`,
+    );
   });
 });
 

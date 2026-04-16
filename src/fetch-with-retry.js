@@ -1,8 +1,16 @@
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import * as log from "./log.js";
 
+const pkg = JSON.parse(
+  readFileSync(
+    fileURLToPath(new URL("../package.json", import.meta.url)),
+    "utf-8",
+  ),
+);
+
 const DEFAULT_TIMEOUT = 15_000;
-const DEFAULT_UA =
-  "anthropic-watch/0.4 (https://github.com/sefaertunc/anthropic-watch)";
+const DEFAULT_UA = `anthropic-watch/${pkg.version} (https://github.com/sefaertunc/anthropic-watch)`;
 
 export async function fetchWithRetry(url, options = {}, maxRetries = 2) {
   const headers = { "User-Agent": DEFAULT_UA, ...options.headers };

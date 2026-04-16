@@ -272,7 +272,7 @@ export async function runPipeline(options = {}) {
   existingHistory.unshift(historyEntry);
   await writeFile(
     historyPath,
-    JSON.stringify(existingHistory.slice(0, 30), null, 2),
+    JSON.stringify(existingHistory.slice(0, 90), null, 2),
   );
 
   // Save state

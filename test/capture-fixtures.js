@@ -11,6 +11,7 @@
  */
 
 import { mkdir, writeFile, stat } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as cheerio from "cheerio";
@@ -19,7 +20,10 @@ import { sources } from "../src/sources.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const FIXTURES_DIR = join(__dirname, "fixtures");
 
-const UA = "anthropic-watch/0.4 (fixture-capture)";
+const pkg = JSON.parse(
+  readFileSync(join(__dirname, "..", "package.json"), "utf-8"),
+);
+const UA = `anthropic-watch/${pkg.version} (fixture-capture)`;
 
 // ---------------------------------------------------------------------------
 // Fetch helpers

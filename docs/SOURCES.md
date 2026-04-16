@@ -20,7 +20,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **Detection method**: Extracts post objects from Next.js RSC inline payload (`self.__next_f.push` chunks), looking for objects with `slug`, `title`, and `publishedOn` fields. Falls back to HTML link parsing (`a[href^="/engineering/"]`) with cheerio if RSC extraction yields no results. ID = post URL.
 - **Update frequency**: Weekly to monthly
 - **Feed**: [`blog-engineering.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.xml)
-- **Notes**: RSC payload structure may change between Next.js versions. The fallback HTML parser looks for `h2, h3, h4` and `[class*='title']` within links.
+- **Notes**: RSC payload structure may change between Next.js versions. The fallback HTML parser looks for `h2, h3, h4` and `[class*='title']` within links. See [ARCHITECTURE.md — `nextjs-rsc` Known Brittleness](ARCHITECTURE.md#nextjs-rsc-known-brittleness) for the failure mode and revalidation recipe.
 
 ### 2. Anthropic News Blog
 
