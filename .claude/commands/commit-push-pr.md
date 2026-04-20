@@ -1,0 +1,77 @@
+---
+description: "Commit, push, and create PR — branch-aware with session summary"
+---
+
+Determine which branch you're on, then follow the appropriate flow.
+Do not add Co-Authored-By trailers or AI-generated footers to commits or PR descriptions.
+
+## Worktree Awareness
+
+If you are in a git worktree session:
+
+- Verify you are on the correct branch: `git branch --show-current`
+- All changes must be committed before creating a PR — `git status --porcelain` should be empty after staging
+- Do NOT attempt to switch branches inside a worktree — each worktree is locked to its branch
+
+## On a feature branch (feature/_, fix/_, chore/_, refactor/_)
+
+Feature branches contain ONLY the task changes. Do NOT touch shared-state
+files (see git-conventions.md for the canonical list).
+
+1. Write a session summary to .claude/sessions/:
+   - Filename: YYYY-MM-DD-HHMM-{short-branch-name}.md
+   - Content format:
+
+     ```
+     # Session: {date}
+     **Branch:** {current branch}
+     **Task:** {one-line summary of what was worked on}
+
+     ## Completed
+     - {what was done, 3-5 bullet points}
+
+     ## Files Modified
+     - {list key files changed, from git diff --name-only}
+
+     ## Notes for Next Session
+     - {anything the next session should know}
+
+     ## Workflow Observability
+     - **Agents invoked:** {ALL agents used this session — explicit @agent calls AND agents invoked implicitly by commands like /verify, /review-plan, /refactor-clean. Write "none" if no agents were used.}
+     - **Commands used:** {all slash commands run earlier in this session, e.g. /start, /verify, /refactor-clean. Do NOT include the current /commit-push-pr or /end that is writing this summary. Write "none" if no other commands were used.}
+     - **Verification result:** {if /verify was run: passed/failed with brief summary; otherwise "not run".}
+     ```
+
+   - Keep it concise — this is for machine consumption at session start,
+     not a detailed report
+
+2. Stage all changes: git add -A
+3. Write a clear, conventional commit message
+4. Push to the current branch
+5. Create a PR targeting develop: gh pr create --base develop
+6. Include in PR description: title, changes, testing done, reviewer notes
+
+## On develop
+
+Only used for release merges after /sync has been run.
+
+1. Write a session summary to .claude/sessions/:
+   - Filename: YYYY-MM-DD-HHMM-{short-branch-name}.md
+   - Same format as the feature branch session summary above
+2. Stage all changes: git add -A
+3. Write a clear, conventional commit message
+4. Push to develop
+5. Create a PR targeting main: gh pr create --base main
+
+## On any other branch
+
+Ask the user which base branch to target before creating a PR.
+
+Use gh pr create for PR creation.
+
+## Trigger Phrases
+
+- "commit and push"
+- "create a PR"
+- "ship it"
+- "push my changes"
