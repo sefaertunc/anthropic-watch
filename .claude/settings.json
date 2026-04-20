@@ -97,7 +97,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "p=${WORCLAUDE_HOOK_PROFILE:-standard}; case \"$p\" in minimal) exit 0;; esac; npx prettier --write . || true"
+            "command": "p=${WORCLAUDE_HOOK_PROFILE:-standard}; case \"$p\" in minimal) exit 0;; esac; file=$(jq -r '.tool_input.file_path // empty' 2>/dev/null); [ -n \"$file\" ] && [ -f \"$file\" ] && npx --silent prettier --write \"$file\" 2>/dev/null || true"
           }
         ]
       },
