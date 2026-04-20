@@ -2,7 +2,7 @@
 
 ## Overview
 
-anthropic-watch is a Node.js pipeline that scrapes 16 Anthropic-related sources, detects new content, and publishes RSS/JSON feeds to GitHub Pages.
+anthropic-watch is a Node.js pipeline that scrapes 17 Anthropic-related sources, detects new content, and publishes RSS/JSON feeds to GitHub Pages.
 
 ![Pipeline architecture](images/architecture.png)
 
@@ -14,7 +14,7 @@ All scraping uses `fetch` + `cheerio` for HTML parsing or direct JSON API calls.
 src/cli.js
   └─ runPipeline()                          [src/index.js]
        ├─ loadState()                       [src/state.js]
-       ├─ Build scraper tasks (16 sources)  [src/sources.js]
+       ├─ Build scraper tasks (17 sources)  [src/sources.js]
        ├─ runWithConcurrency(tasks, 4)
        │    ├─ scraper(source)              [src/scrapers/*.js]
        │    │    └─ fetchSource(url)        [src/fetch-source.js]
@@ -219,7 +219,7 @@ There is no centralized error class (no `ScraperError` or `src/errors.js`). Erro
 - **Timeout:** 15 seconds per request (via `AbortSignal.timeout`)
 - **Retry condition:** 5xx responses, network errors, and HTTP 429. When a 429 response carries a `Retry-After: N` header (seconds), that value overrides the default linear backoff for that attempt. Other 4xx responses are **not** retried (returned immediately).
 - **Redirect handling:** `redirect: "follow"` is set in the default options so redirects are followed transparently. Individual scrapers can override via `options.redirect`.
-- **User-Agent:** `` `anthropic-watch/${pkg.version} (…)` `` — version read from `package.json` at module load via `readFileSync` (currently `anthropic-watch/1.0.1`).
+- **User-Agent:** `` `anthropic-watch/${pkg.version} (…)` `` — version read from `package.json` at module load via `readFileSync` (currently `anthropic-watch/1.1.0`).
 - **Rate limit monitoring:** `logGitHubRateLimit(res)` warns when remaining GitHub API quota drops below 10.
 
 ---
@@ -261,7 +261,7 @@ Scrapers accept a `fixtureFile` path via `fetchSource()`. When set, `fetchSource
 
 ### Test Helpers
 
-- `createTestConfigs(fixturesDir)` — generates configs for all 16 sources pointing to fixture files in the given directory
+- `createTestConfigs(fixturesDir)` — generates configs for all 17 sources pointing to fixture files in the given directory
 - `createSingleTestConfig(key, path)` — generates a config for one source with a specific fixture file
 
 ### Fixture Capture

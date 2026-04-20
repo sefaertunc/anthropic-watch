@@ -51,7 +51,7 @@ diff <(head -50 test/fixtures/blog-engineering.html) <(head -50 /tmp/current.htm
 
 **Symptoms:** Error message includes `HTTP 403` or `HTTP 429`. The log may show `"GitHub API rate limit low: N remaining"`.
 
-**Context:** Without a token, the GitHub API allows 60 requests/hour. With `GITHUB_TOKEN`, the limit is 5000/hour. anthropic-watch makes one API call per GitHub source per run (6 sources use GitHub APIs).
+**Context:** Without a token, the GitHub API allows 60 requests/hour. With `GITHUB_TOKEN`, the limit is 5000/hour. anthropic-watch makes one API call per GitHub source per run (7 sources use GitHub APIs).
 
 **Fix:**
 

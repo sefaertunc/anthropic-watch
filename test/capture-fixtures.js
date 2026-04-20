@@ -1,7 +1,7 @@
 /**
  * Fixture capture script for anthropic-watch.
  *
- * Fetches real responses from all 16 sources and saves them as fixture files
+ * Fetches real responses from all 17 sources and saves them as fixture files
  * under test/fixtures/. Accepts an optional [source-key] CLI argument to
  * capture just one source.
  *
