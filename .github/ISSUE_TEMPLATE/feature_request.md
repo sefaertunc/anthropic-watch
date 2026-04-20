@@ -3,8 +3,7 @@ name: Feature request
 about: Suggest a new source to monitor or an improvement to feeds
 title: "[FEATURE]"
 labels: enhancement
-assignees: ''
-
+assignees: ""
 ---
 
 ### What would you like?

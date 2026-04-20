@@ -1,0 +1,19 @@
+# Scraper-managed state — written by src/state.js with JSON.stringify(state, null, 2).
+# Prettier reformatting would race with the cron commit and produce noisy diffs.
+state/
+
+# Byte-faithful captures of live upstream responses.
+# Reformatting would desynchronize the fixture from what scrapers see in production.
+test/fixtures/
+
+# Generated outputs.
+public/feeds/
+
+# Dependencies and lockfiles.
+node_modules/
+package-lock.json
+
+# Ephemeral Claude Code workflow files.
+.claude/sessions/
+.claude/learnings/
+.claude/workflow-meta.json

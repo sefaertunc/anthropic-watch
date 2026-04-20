@@ -3,8 +3,7 @@ name: Bug report
 about: Report a broken scraper, incorrect feed output, or pipeline failure
 title: "[BUG]"
 labels: bug
-assignees: ''
-
+assignees: ""
 ---
 
 ### Source affected
@@ -22,6 +21,7 @@ What should have happened instead?
 ### Evidence
 
 Paste any of the following if available:
+
 - Error from [`run-report.json`](https://sefaertunc.github.io/anthropic-watch/feeds/run-report.json)
 - GitHub Actions log snippet
 - Feed output showing the problem
