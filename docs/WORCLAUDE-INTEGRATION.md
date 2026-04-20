@@ -91,15 +91,15 @@ Note: `status` is only `"ok"` or `"error"`. There is no `"skipped"` status.
 
 Which anthropic-watch sources are relevant to which Worclaude components:
 
-| Worclaude component   | Relevant sources                                                          |
-| --------------------- | ------------------------------------------------------------------------- |
-| Claude Code updates   | `claude-code-releases`, `claude-code-changelog`, `npm-claude-code`        |
+| Worclaude component   | Relevant sources                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------ |
+| Claude Code updates   | `claude-code-releases`, `claude-code-changelog`, `npm-claude-code`                               |
 | API/SDK changes       | `api-sdk-ts-releases`, `api-sdk-py-releases`, `agent-sdk-ts-changelog`, `agent-sdk-py-changelog` |
-| Product announcements | `blog-news`, `blog-engineering`, `blog-claude`                            |
-| Incident awareness    | `status-page`                                                             |
-| Research tracking     | `blog-research`, `blog-alignment`, `blog-red-team`                        |
-| Release notes         | `docs-release-notes`, `support-release-notes`                             |
-| CI/CD tooling         | `claude-code-action`                                                      |
+| Product announcements | `blog-news`, `blog-engineering`, `blog-claude`                                                   |
+| Incident awareness    | `status-page`                                                                                    |
+| Research tracking     | `blog-research`, `blog-alignment`, `blog-red-team`                                               |
+| Release notes         | `docs-release-notes`, `support-release-notes`                                                    |
+| CI/CD tooling         | `claude-code-action`                                                                             |
 
 ## Planned Features
 

@@ -243,7 +243,7 @@ Tests are not duplicated here — they run on push/PR in `test.yml`.
 ### `branch-name-check.yml` — Branch naming gate
 
 - **Triggers:** `pull_request` targeting `main` (`opened`, `reopened`, `synchronize`, `edited`)
-- **Job:** Fails the PR unless the source branch matches `feat/*`. `dependabot/*` and `renovate/*` branches are allowlisted so automated dependency PRs bypass the check.
+- **Job:** Fails the PR unless the source branch is `develop` (release source) or matches `feat/*`. `dependabot/*` and `renovate/*` branches are allowlisted so automated dependency PRs bypass the check.
 
 ### Job Summary
 
