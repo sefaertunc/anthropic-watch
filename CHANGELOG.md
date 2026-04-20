@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0] - 2026-04-20
+
+A minor feature release adding a single new source. Non-breaking for downstream consumers — `run-report.json` schema stays `"1.0"`, existing source keys and item shape are unchanged. Consumers that iterate `sources[]` by key will automatically pick up the new entry.
+
+### Added
+
+- **New source `api-sdk-py-releases`** tracking GitHub Releases for `anthropics/anthropic-sdk-python`. Uses the existing `github-releases` scraper — zero new scraper code. Symmetric with `api-sdk-ts-releases`, classified as `core`. Brings total sources from 16 to 17.
+
+### Changed
+
+- `package.json` version bumped to `1.1.0`. The User-Agent header derived from it automatically becomes `anthropic-watch/1.1.0 (…)`.
+- Documentation updated across `README.md`, `docs/SOURCES.md`, `docs/ARCHITECTURE.md`, and other files referencing the source count.
+
+### Migration
+
+No migration needed. On the next scheduled run, `state/last-seen.json` will gain a new `api-sdk-py-releases` entry automatically, and the first run will emit the 30 most recent Python SDK releases into the feed.
+
 ## [1.0.1] - 2026-04-16
 
 A combined patch release bundling three waves of bug fixes, operational hardening, and a dashboard security fix. All changes are non-breaking for downstream (Worclaude) consumers — `run-report.json` schema stays `"1.0"`, `sources[]` is still indexed by `key`, and item shape is unchanged.

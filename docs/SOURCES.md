@@ -1,10 +1,10 @@
 # Sources
 
-anthropic-watch monitors **16 sources** using **6 scraper types**, organized into two tiers.
+anthropic-watch monitors **17 sources** using **6 scraper types**, organized into two tiers.
 
 ## Source Tiers
 
-- **Core** (10 sources): Primary Anthropic product and developer surfaces. These are the highest-signal sources for tracking releases, API changes, and tooling updates.
+- **Core** (11 sources): Primary Anthropic product and developer surfaces. These are the highest-signal sources for tracking releases, API changes, and tooling updates.
 - **Extended** (6 sources): Research, alignment, and supplementary blogs plus the status page. Useful for broader awareness but update less frequently.
 
 ---
@@ -121,11 +121,22 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **Feed**: [`api-sdk-ts-releases.json`](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.xml)
 - **Notes**: Same rate limit considerations as other GitHub sources.
 
+### 11. Anthropic SDK Python Releases
+
+- **Key**: `api-sdk-py-releases`
+- **URL**: https://github.com/anthropics/anthropic-sdk-python/releases
+- **Scraper type**: `github-releases` (`owner: "anthropics"`, `repo: "anthropic-sdk-python"`)
+- **What it tracks**: GitHub Releases for the official Anthropic Python SDK.
+- **Detection method**: Same as `api-sdk-ts-releases` — GitHub REST API, 30 most recent releases per fetch. ID = `tag_name`, date = `published_at`.
+- **Update frequency**: Weekly
+- **Feed**: [`api-sdk-py-releases.json`](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-py-releases.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-py-releases.xml)
+- **Notes**: Symmetric with `api-sdk-ts-releases`. Same rate limit considerations — requires `GITHUB_TOKEN` for reliable operation.
+
 ---
 
 ## Extended Sources
 
-### 11. Claude Code Action Releases
+### 12. Claude Code Action Releases
 
 - **Key**: `claude-code-action`
 - **URL**: https://github.com/anthropics/claude-code-action/releases
@@ -135,7 +146,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **Update frequency**: Monthly
 - **Feed**: [`claude-code-action.json`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.xml)
 
-### 12. Anthropic Alignment Blog
+### 13. Anthropic Alignment Blog
 
 - **Key**: `blog-alignment`
 - **URL**: https://alignment.anthropic.com
@@ -146,7 +157,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **Feed**: [`blog-alignment.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.xml)
 - **Notes**: Dates are grouped — a `.date` element followed by multiple `.note` links share the same date.
 
-### 13. Anthropic Red Team Blog
+### 14. Anthropic Red Team Blog
 
 - **Key**: `blog-red-team`
 - **URL**: https://red.anthropic.com
@@ -156,7 +167,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **Update frequency**: Monthly to quarterly
 - **Feed**: [`blog-red-team.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.xml)
 
-### 14. Anthropic Research Blog
+### 15. Anthropic Research Blog
 
 - **Key**: `blog-research`
 - **URL**: https://www.anthropic.com/research
@@ -166,7 +177,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **Update frequency**: Monthly
 - **Feed**: [`blog-research.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.xml)
 
-### 15. Anthropic Claude Blog
+### 16. Anthropic Claude Blog
 
 - **Key**: `blog-claude`
 - **URL**: https://claude.com/blog
@@ -177,7 +188,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 - **Feed**: [`blog-claude.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.xml)
 - **Notes**: Webflow class names may change with site redesigns.
 
-### 16. Anthropic Status Page
+### 17. Anthropic Status Page
 
 - **Key**: `status-page`
 - **URL**: https://status.anthropic.com
@@ -194,7 +205,7 @@ anthropic-watch monitors **16 sources** using **6 scraper types**, organized int
 
 | Scraper Type       | Method                      | Parse Modes                                    | Sources                                                                                |
 | ------------------ | --------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `github-releases`  | GitHub REST API + fetch     | —                                              | claude-code-releases, api-sdk-ts-releases, claude-code-action                          |
+| `github-releases`  | GitHub REST API + fetch     | —                                              | claude-code-releases, api-sdk-ts-releases, api-sdk-py-releases, claude-code-action     |
 | `github-changelog` | GitHub Contents API + fetch | —                                              | claude-code-changelog, agent-sdk-ts-changelog, agent-sdk-py-changelog                  |
 | `npm-registry`     | npm registry API + fetch    | —                                              | npm-claude-code                                                                        |
 | `blog-page`        | fetch + cheerio             | `nextjs-rsc`, `webflow`, `distill`             | blog-engineering, blog-news, blog-research, blog-alignment, blog-red-team, blog-claude |

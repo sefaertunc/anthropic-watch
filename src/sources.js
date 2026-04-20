@@ -90,6 +90,15 @@ export const sources = [
     repo: "anthropic-sdk-typescript",
   },
   {
+    key: "api-sdk-py-releases",
+    name: "Anthropic SDK Python Releases",
+    url: "https://github.com/anthropics/anthropic-sdk-python/releases",
+    category: "core",
+    scraperType: "github-releases",
+    owner: "anthropics",
+    repo: "anthropic-sdk-python",
+  },
+  {
     key: "claude-code-action",
     name: "Claude Code Action Releases",
     url: "https://github.com/anthropics/claude-code-action/releases",

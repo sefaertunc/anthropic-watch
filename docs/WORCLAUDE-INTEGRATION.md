@@ -4,7 +4,7 @@
 
 **[Worclaude](https://github.com/sefaertunc/Worclaude)** is a Claude Code-powered workspace assistant that manages development workflows. It is a downstream consumer of anthropic-watch feeds — using them to stay aware of upstream changes to Claude Code, Anthropic APIs, SDKs, and related tooling.
 
-anthropic-watch provides the data layer (scraping 16 Anthropic sources and publishing structured feeds), while Worclaude uses those feeds to power notifications, status checks, and summaries.
+anthropic-watch provides the data layer (scraping 17 Anthropic sources and publishing structured feeds), while Worclaude uses those feeds to power notifications, status checks, and summaries.
 
 ## Architecture
 
@@ -12,7 +12,7 @@ anthropic-watch provides the data layer (scraping 16 Anthropic sources and publi
 
 ```
 anthropic-watch (GitHub Actions, daily 06:00 UTC)
-  └─ Scrapes 16 sources
+  └─ Scrapes 17 sources
   └─ Publishes to GitHub Pages
        ├─ run-report.json    ← primary for status
        ├─ all.json           ← primary for items
@@ -94,7 +94,7 @@ Which anthropic-watch sources are relevant to which Worclaude components:
 | Worclaude component   | Relevant sources                                                          |
 | --------------------- | ------------------------------------------------------------------------- |
 | Claude Code updates   | `claude-code-releases`, `claude-code-changelog`, `npm-claude-code`        |
-| API/SDK changes       | `api-sdk-ts-releases`, `agent-sdk-ts-changelog`, `agent-sdk-py-changelog` |
+| API/SDK changes       | `api-sdk-ts-releases`, `api-sdk-py-releases`, `agent-sdk-ts-changelog`, `agent-sdk-py-changelog` |
 | Product announcements | `blog-news`, `blog-engineering`, `blog-claude`                            |
 | Incident awareness    | `status-page`                                                             |
 | Research tracking     | `blog-research`, `blog-alignment`, `blog-red-team`                        |

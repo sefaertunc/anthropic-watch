@@ -2,9 +2,9 @@
 
 ![Anthropic Watch — Upstream Intelligence for Claude Code](docs/images/anthropic-watch.png)
 
-[![version v1.0.1](https://img.shields.io/badge/version-v1.0.1-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
+[![version v1.1.0](https://img.shields.io/badge/version-v1.1.0-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
 [![schedule: daily 06:00 UTC](https://img.shields.io/badge/schedule-daily%2006%3A00%20UTC-brightgreen)](https://github.com/sefaertunc/anthropic-watch/actions)
-[![sources: 16 monitored](https://img.shields.io/badge/sources-16%20monitored-blue)](https://github.com/sefaertunc/anthropic-watch/blob/main/src/sources.js)
+[![sources: 17 monitored](https://img.shields.io/badge/sources-17%20monitored-blue)](https://github.com/sefaertunc/anthropic-watch/blob/main/src/sources.js)
 [![feeds: RSS + JSON](https://img.shields.io/badge/feeds-RSS%20%2B%20JSON-orange)](https://sefaertunc.github.io/anthropic-watch/feeds/all.xml)
 [![license: MIT](https://img.shields.io/github/license/sefaertunc/anthropic-watch)](https://github.com/sefaertunc/anthropic-watch/blob/main/LICENSE)
 [![built for Claude Code](https://img.shields.io/badge/built%20for-Claude%20Code-cc785c)](https://github.com/anthropics/claude-code)
@@ -21,7 +21,7 @@
 
 </div>
 
-Monitors 16 Anthropic sources daily for changes and publishes structured feeds — so you never miss a Claude Code update.
+Monitors 17 Anthropic sources daily for changes and publishes structured feeds — so you never miss a Claude Code update.
 
 ## What is this?
 
@@ -52,6 +52,7 @@ Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key
 | agent-sdk-ts-changelog | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.json) | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.xml) |
 | agent-sdk-py-changelog | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.json) | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.xml) |
 | api-sdk-ts-releases    | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.json)    | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.xml)    |
+| api-sdk-py-releases    | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-py-releases.json)    | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-py-releases.xml)    |
 | claude-code-action     | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.json)     | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.xml)     |
 | blog-alignment         | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.json)         | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.xml)         |
 | blog-red-team          | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.json)          | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.xml)          |
@@ -63,7 +64,7 @@ Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key
 
 ## Monitored sources
 
-### Core (10)
+### Core (11)
 
 | Name                                                                                                               | Key                      | What it tracks                             |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------ |
@@ -77,6 +78,7 @@ Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key
 | [Agent SDK TypeScript Changelog](https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md) | `agent-sdk-ts-changelog` | TS Agent SDK changelog                     |
 | [Agent SDK Python Changelog](https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md)         | `agent-sdk-py-changelog` | Python Agent SDK changelog                 |
 | [Anthropic SDK TypeScript Releases](https://github.com/anthropics/anthropic-sdk-typescript/releases)               | `api-sdk-ts-releases`    | TS SDK releases                            |
+| [Anthropic SDK Python Releases](https://github.com/anthropics/anthropic-sdk-python/releases)                       | `api-sdk-py-releases`    | Python SDK releases                        |
 
 ### Extended (6)
 
@@ -91,11 +93,11 @@ Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key
 
 ## How it works
 
-GitHub Actions runs daily at 06:00 UTC. The pipeline fetches all 16 sources using `fetch` + `cheerio` for HTML scraping and REST APIs for GitHub, npm, and status page data. Each source is compared against persisted state to detect new items. Results are accumulated into RSS and JSON feeds, then deployed to GitHub Pages.
+GitHub Actions runs daily at 06:00 UTC. The pipeline fetches all 17 sources using `fetch` + `cheerio` for HTML scraping and REST APIs for GitHub, npm, and status page data. Each source is compared against persisted state to detect new items. Results are accumulated into RSS and JSON feeds, then deployed to GitHub Pages.
 
 ```
 Daily cron (06:00 UTC)
-  → Fetch 16 sources (GitHub API, HTML scraping, npm registry, Statuspage API)
+  → Fetch 17 sources (GitHub API, HTML scraping, npm registry, Statuspage API)
   → Compare against last-seen state
   → New items → RSS/JSON feeds + run report
   → Deploy to GitHub Pages
@@ -137,7 +139,7 @@ npm run test:live
 src/
   index.js              # Pipeline orchestrator
   cli.js                # CLI entry point
-  sources.js            # 16 source definitions
+  sources.js            # 17 source definitions
   state.js              # State persistence + failure tracking
   fetch-with-retry.js   # Retry wrapper (2 retries, 15s timeout, linear backoff)
   fetch-source.js       # Fetch abstraction (supports fixture injection)
@@ -152,7 +154,7 @@ docs/                   # Project documentation
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md) — pipeline design, concurrency, state, error handling
-- [Sources](docs/SOURCES.md) — all 16 sources with detection methods and quirks
+- [Sources](docs/SOURCES.md) — all 17 sources with detection methods and quirks
 - [Feed Schema](docs/FEED-SCHEMA.md) — JSON and RSS schema reference for consumers
 - [Adding Sources](docs/ADDING-SOURCES.md) — step-by-step guide to add a new source
 - [Troubleshooting](docs/TROUBLESHOOTING.md) — common issues and fixes
