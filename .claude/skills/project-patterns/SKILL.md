@@ -89,7 +89,7 @@ docs/
 .github/workflows/
   scrape.yml              Daily cron + manual dispatch
   test.yml                npm test on push/PR
-  branch-name-check.yml   Enforces feat/* on PRs to main
+  branch-name-check.yml   Enforces develop or feat/* on PRs to main
 ```
 
 ## Naming

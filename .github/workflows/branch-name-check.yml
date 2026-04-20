@@ -15,15 +15,21 @@ jobs:
           BRANCH="${{ github.head_ref }}"
           echo "Source branch: $BRANCH"
 
+          # Allow the documented release source (develop → main)
+          if [[ "$BRANCH" == "develop" ]]; then
+            echo "✅ Release source branch — skipping check."
+            exit 0
+          fi
+
           # Allow automated dependency PRs
           if [[ "$BRANCH" =~ ^(dependabot|renovate)/ ]]; then
             echo "✅ Automated dependency branch — skipping check."
             exit 0
           fi
 
-          # Enforce feat/* convention
+          # Enforce feat/* convention for everything else
           if [[ ! "$BRANCH" =~ ^feat/.+ ]]; then
-            echo "❌ PRs to main must come from a branch named 'feat/<something>'."
+            echo "❌ PRs to main must come from 'develop' (release) or 'feat/<something>' (direct feature)."
             echo "   Got: '$BRANCH'"
             exit 1
           fi
