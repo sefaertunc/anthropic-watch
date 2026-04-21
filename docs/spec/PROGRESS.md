@@ -25,7 +25,7 @@
   - Workflow: rebase-retry push loop to survive cron races
 - [x] Phase 3 — Source Growth (v1.1.0, 2026-04-20)
   - `api-sdk-py-releases` added (17 sources total)
-  - Branch-name enforcement workflow (`feat/*` required on PRs to `main`)
+  - Branch-name enforcement workflow (`develop` or `feat/*` required on PRs to `main`; `dependabot/*`/`renovate/*` allow-listed)
   - Scraper checkout + gh-pages deploy switched to `SCRAPER_PAT` so downstream workflows fire
 
 ## In Progress
