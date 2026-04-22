@@ -1,14 +1,15 @@
 export function generateJsonFeed(items, meta = {}, existingItems = []) {
   const maxItems = meta.maxItems || 100;
 
-  // Merge new items with existing, dedupe by id+source
+  // Merge new items with existing, dedupe by id+source, and stamp the
+  // composite key on each merged item as `uniqueKey` (added in v1.2.0).
   const seen = new Set();
   const merged = [];
   for (const item of [...items, ...existingItems]) {
     const key = `${item.id}|${item.source}`;
     if (seen.has(key)) continue;
     seen.add(key);
-    merged.push(item);
+    merged.push({ ...item, uniqueKey: key });
   }
 
   const sorted = merged
@@ -20,11 +21,6 @@ export function generateJsonFeed(items, meta = {}, existingItems = []) {
     })
     .slice(0, maxItems);
 
-  const sortedWithKeys = sorted.map((item) => ({
-    ...item,
-    uniqueKey: `${item.id}|${item.source}`,
-  }));
-
   return JSON.stringify(
     {
       version: "1.0",
@@ -35,8 +31,8 @@ export function generateJsonFeed(items, meta = {}, existingItems = []) {
       generator: "anthropic-watch",
       ttl: 1440,
       generated: new Date().toISOString(),
-      itemCount: sortedWithKeys.length,
-      items: sortedWithKeys,
+      itemCount: sorted.length,
+      items: sorted,
     },
     null,
     2,
