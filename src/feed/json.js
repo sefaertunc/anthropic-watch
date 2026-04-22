@@ -20,6 +20,11 @@ export function generateJsonFeed(items, meta = {}, existingItems = []) {
     })
     .slice(0, maxItems);
 
+  const sortedWithKeys = sorted.map((item) => ({
+    ...item,
+    uniqueKey: `${item.id}|${item.source}`,
+  }));
+
   return JSON.stringify(
     {
       version: "1.0",
@@ -30,8 +35,8 @@ export function generateJsonFeed(items, meta = {}, existingItems = []) {
       generator: "anthropic-watch",
       ttl: 1440,
       generated: new Date().toISOString(),
-      itemCount: sorted.length,
-      items: sorted,
+      itemCount: sortedWithKeys.length,
+      items: sortedWithKeys,
     },
     null,
     2,

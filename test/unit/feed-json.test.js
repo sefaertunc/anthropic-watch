@@ -138,4 +138,58 @@ describe("generateJsonFeed", () => {
     expect(result.items[0].id).toBe("new");
     expect(result.items[1].id).toBe("old");
   });
+
+  it("emits uniqueKey as `${id}|${source}` on every item", () => {
+    const items = [
+      {
+        id: "v1.0.30",
+        source: "claude-code-releases",
+        date: "2026-01-01T00:00:00Z",
+        title: "A",
+        url: "http://a",
+        snippet: "",
+      },
+      {
+        id: "v1.1.0",
+        source: "claude-code-releases",
+        date: "2026-02-01T00:00:00Z",
+        title: "B",
+        url: "http://b",
+        snippet: "",
+      },
+    ];
+    const result = JSON.parse(generateJsonFeed(items));
+    expect(result.items).toHaveLength(2);
+    for (const item of result.items) {
+      expect(typeof item.uniqueKey).toBe("string");
+      expect(item.uniqueKey).toBe(`${item.id}|${item.source}`);
+    }
+  });
+
+  it("same id across different sources yields distinct uniqueKey values", () => {
+    const items = [
+      {
+        id: "2.1.114",
+        source: "claude-code-changelog",
+        date: "2026-01-01T00:00:00Z",
+        title: "Changelog entry",
+        url: "http://a",
+        snippet: "",
+      },
+      {
+        id: "2.1.114",
+        source: "npm-claude-code",
+        date: "2026-01-01T00:00:00Z",
+        title: "npm release",
+        url: "http://b",
+        snippet: "",
+      },
+    ];
+    const result = JSON.parse(generateJsonFeed(items));
+    expect(result.itemCount).toBe(2);
+    const keys = result.items.map((i) => i.uniqueKey);
+    expect(keys).toContain("2.1.114|claude-code-changelog");
+    expect(keys).toContain("2.1.114|npm-claude-code");
+    expect(new Set(keys).size).toBe(2);
+  });
 });

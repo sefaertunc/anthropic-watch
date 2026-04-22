@@ -1,6 +1,6 @@
 # Sources
 
-anthropic-watch monitors **17 sources** using **6 scraper types**, organized into two tiers.
+anthropic-watch monitors Anthropic sources across **six scraper types**, organized into two tiers. The current source list is enumerated below; consumers should derive counts from `summary.sourcesChecked` in `run-report.json`.
 
 ## Source Tiers
 
