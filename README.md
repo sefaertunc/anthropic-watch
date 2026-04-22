@@ -2,9 +2,9 @@
 
 ![Anthropic Watch — Upstream Intelligence for Claude Code](docs/images/anthropic-watch.png)
 
-[![version v1.1.0](https://img.shields.io/badge/version-v1.1.0-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
+[![version v1.2.0](https://img.shields.io/badge/version-v1.2.0-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
 [![schedule: daily 06:00 UTC](https://img.shields.io/badge/schedule-daily%2006%3A00%20UTC-brightgreen)](https://github.com/sefaertunc/anthropic-watch/actions)
-[![sources: 17 monitored](https://img.shields.io/badge/sources-17%20monitored-blue)](https://github.com/sefaertunc/anthropic-watch/blob/main/src/sources.js)
+[![sources: monitored](https://img.shields.io/badge/sources-monitored-blue)](https://github.com/sefaertunc/anthropic-watch/blob/main/src/sources.js)
 [![feeds: RSS + JSON](https://img.shields.io/badge/feeds-RSS%20%2B%20JSON-orange)](https://sefaertunc.github.io/anthropic-watch/feeds/all.xml)
 [![license: MIT](https://img.shields.io/github/license/sefaertunc/anthropic-watch)](https://github.com/sefaertunc/anthropic-watch/blob/main/LICENSE)
 [![built for Claude Code](https://img.shields.io/badge/built%20for-Claude%20Code-cc785c)](https://github.com/anthropics/claude-code)
@@ -21,7 +21,7 @@
 
 </div>
 
-Monitors 17 Anthropic sources daily for changes and publishes structured feeds — so you never miss a Claude Code update.
+Monitors Anthropic sources daily for changes and publishes structured feeds — so you never miss a Claude Code update.
 
 ## What is this?
 
@@ -93,11 +93,11 @@ Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key
 
 ## How it works
 
-GitHub Actions runs daily at 06:00 UTC. The pipeline fetches all 17 sources using `fetch` + `cheerio` for HTML scraping and REST APIs for GitHub, npm, and status page data. Each source is compared against persisted state to detect new items. Results are accumulated into RSS and JSON feeds, then deployed to GitHub Pages.
+GitHub Actions runs daily at 06:00 UTC. The pipeline fetches every source using `fetch` + `cheerio` for HTML scraping and REST APIs for GitHub, npm, and status page data. Each source is compared against persisted state to detect new items. Results are accumulated into RSS and JSON feeds, then deployed to GitHub Pages.
 
 ```
 Daily cron (06:00 UTC)
-  → Fetch 17 sources (GitHub API, HTML scraping, npm registry, Statuspage API)
+  → Fetch sources (GitHub API, HTML scraping, npm registry, Statuspage API)
   → Compare against last-seen state
   → New items → RSS/JSON feeds + run report
   → Deploy to GitHub Pages
@@ -139,7 +139,7 @@ npm run test:live
 src/
   index.js              # Pipeline orchestrator
   cli.js                # CLI entry point
-  sources.js            # 17 source definitions
+  sources.js            # Source definitions
   state.js              # State persistence + failure tracking
   fetch-with-retry.js   # Retry wrapper (2 retries, 15s timeout, linear backoff)
   fetch-source.js       # Fetch abstraction (supports fixture injection)
@@ -154,7 +154,7 @@ docs/                   # Project documentation
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md) — pipeline design, concurrency, state, error handling
-- [Sources](docs/SOURCES.md) — all 17 sources with detection methods and quirks
+- [Sources](docs/SOURCES.md) — every monitored source with detection methods and quirks
 - [Feed Schema](docs/FEED-SCHEMA.md) — JSON and RSS schema reference for consumers
 - [Adding Sources](docs/ADDING-SOURCES.md) — step-by-step guide to add a new source
 - [Troubleshooting](docs/TROUBLESHOOTING.md) — common issues and fixes

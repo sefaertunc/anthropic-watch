@@ -4,7 +4,7 @@
 
 anthropic-watch is a GitHub Actions–powered scraper that monitors public Anthropic sources (blogs, GitHub releases, npm registry, docs, status page) on a daily cron, detects new content by diffing against persisted state, and publishes structured RSS, JSON, and OPML feeds via GitHub Pages.
 
-No server, no database — just static feeds anyone can subscribe to. The current source count is tracked in `docs/SOURCES.md` and the README badge; as of v1.1.0 it is 17 sources across 6 scraper types.
+No server, no database — just static feeds anyone can subscribe to. The current source count is tracked in `docs/SOURCES.md` and the README badge; as of v1.2.0 it is 17 sources across 6 scraper types.
 
 ### Audience
 
@@ -60,7 +60,7 @@ See `docs/ARCHITECTURE.md` for the complete deep-dive: scraper contract, concurr
 
 ## Data Shapes
 
-Canonical schemas live in `docs/FEED-SCHEMA.md`. The item shape (8 fields: `id`, `title`, `date`, `url`, `snippet`, `source`, `sourceCategory`, `sourceName`) is part of the public contract — consumers like Worclaude depend on it. Schema version is `"1.0"`; additive changes don't bump it, breaking changes do.
+Canonical schemas live in `docs/FEED-SCHEMA.md`. The item shape is part of the public contract — consumers like Worclaude depend on it. Required fields: `id`, `title`, `date`, `url`, `snippet`, `source`, `sourceCategory`, `sourceName`. As of v1.2.0 a pre-computed `uniqueKey` (`${id}|${source}`) is also emitted on every new item; it is `Nullable=Yes` in the Field Guarantees table because archived pre-v1.2.0 feeds predate it, and consumers handle absence via the documented fallback. Schema version is `"1.0"`; additive changes don't bump it, breaking changes do.
 
 ## Scraper Types
 
@@ -109,13 +109,23 @@ The canonical consumer is **Worclaude**; integration details in `docs/WORCLAUDE-
 - [x] Workflow: rebase-retry push loop to survive cron races
 - [x] Docs: `nextjs-rsc` brittleness, feed merge semantics
 
-### Phase 3 — Source Growth (in progress as of v1.1.0, 2026-04-20)
+### Phase 3 — Source Growth (complete as of v1.1.0, 2026-04-20)
 
 - [x] `api-sdk-py-releases` added (17 sources total)
 - [x] Branch-name enforcement workflow (merged 2026-04-16)
 - [ ] Continue source additions as new public Anthropic surfaces appear
 
-### Phase 4 — Future / Conditional
+### Phase 4 — Schema Hardening (complete as of v1.2.0, 2026-04-22)
+
+- [x] `uniqueKey` field on every JSON feed item (`${id}|${source}`), Nullable=Yes for archived-feed compatibility
+- [x] Consumer Expectations classification (primary vs. observability) in `docs/FEED-SCHEMA.md`
+- [x] Rewritten Programmatic Consumption example with version gating + composite-key dedup + state persistence
+- [x] Reference fixtures shipped at `docs/fixtures/`
+- [x] Hardcoded source counts removed from README body, OPML doc, and prose docs (badge switched to non-numeric `sources-monitored`)
+- [x] Forward-looking v2.0 RSS `guid` deferral note
+- [ ] v2.0 envelope-version bump + RSS `guid` composite-key change (scheduled for future release)
+
+### Phase 5 — Future / Conditional
 
 Only pursued if a concrete need emerges — not planned speculatively.
 

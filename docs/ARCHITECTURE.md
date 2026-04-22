@@ -2,7 +2,7 @@
 
 ## Overview
 
-anthropic-watch is a Node.js pipeline that scrapes 17 Anthropic-related sources, detects new content, and publishes RSS/JSON feeds to GitHub Pages.
+anthropic-watch is a Node.js pipeline that scrapes Anthropic-related sources, detects new content, and publishes RSS/JSON feeds to GitHub Pages. The current source count is enumerated in `src/sources.js`; consumers should derive it from `summary.sourcesChecked` in `run-report.json`.
 
 ![Pipeline architecture](images/architecture.png)
 
@@ -14,7 +14,7 @@ All scraping uses `fetch` + `cheerio` for HTML parsing or direct JSON API calls.
 src/cli.js
   └─ runPipeline()                          [src/index.js]
        ├─ loadState()                       [src/state.js]
-       ├─ Build scraper tasks (17 sources)  [src/sources.js]
+       ├─ Build scraper tasks               [src/sources.js]
        ├─ runWithConcurrency(tasks, 4)
        │    ├─ scraper(source)              [src/scrapers/*.js]
        │    │    └─ fetchSource(url)        [src/fetch-source.js]
@@ -261,7 +261,7 @@ Scrapers accept a `fixtureFile` path via `fetchSource()`. When set, `fetchSource
 
 ### Test Helpers
 
-- `createTestConfigs(fixturesDir)` — generates configs for all 17 sources pointing to fixture files in the given directory
+- `createTestConfigs(fixturesDir)` — generates configs for every source pointing to fixture files in the given directory
 - `createSingleTestConfig(key, path)` — generates a config for one source with a specific fixture file
 
 ### Fixture Capture

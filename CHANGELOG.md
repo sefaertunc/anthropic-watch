@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.2.0] - 2026-04-22
+
+A minor release addressing schema documentation and contract gaps surfaced by the integration audit of Worclaude's `anthropic-watch` consumer. JSON feed changes are strictly additive — non-breaking for existing consumers. The feed envelope `version` stays `"1.0"` because the new `uniqueKey` field is optional (may be absent in archived pre-v1.2.0 feeds), fitting the Versioning Policy's "new optional fields" exemption.
+
+### Added
+
+- **`uniqueKey` field on every JSON feed item** — pre-computed `${id}|${source}` composite key. Consumers can now deduplicate directly using this field instead of reconstructing the composite key themselves. Prevents the class of bug where consumers dedupe on `id` alone and collide across sources. This is additive; existing consumers are unaffected.
+- **Reference fixtures** at `docs/fixtures/all.sample.json` and `docs/fixtures/run-report.sample.json`, with provenance documented in `docs/fixtures/README.md`. Consumers can pin against these for contract testing.
+- **"Consumer Expectations" subsection** in `docs/FEED-SCHEMA.md` classifying fields as primary (load-bearing, version-bumped on change) vs observability (may change freely).
+
+### Changed
+
+- **`docs/FEED-SCHEMA.md` "Programmatic Consumption" example rewritten** to demonstrate version gating, composite-key dedup with a `uniqueKey ?? \`${id}|${source}\`` fallback, and state persistence. Previous example showed only a slice of items; new example is a full consumer template.
+- **Hardcoded source counts removed from README body copy and prose docs** (`docs/FEED-SCHEMA.md` OPML section, `docs/SOURCES.md`, `docs/ARCHITECTURE.md`, `docs/WORCLAUDE-INTEGRATION.md`). The README sources badge was also updated from a numeric count to a non-numeric `sources-monitored` label. Consumers should derive counts from `summary.sourcesChecked` or `sources.length` in `run-report.json`.
+- `package.json` version bumped to `1.2.0`.
+
+### Deferred
+
+- **RSS `guid` composite-key change deferred to v2.0.** Switching `guid` from the bare `id` to `${id}|${source}` in a point release would cause every RSS reader to treat every existing feed item as new on the first post-release sync, across `all.xml` and each per-source feed. That blast radius is inappropriate for a point release. The change is batched with the next envelope `version` bump to `"2.0"`, where consumers will be explicitly prepared for schema changes. A forward-looking note now exists in `docs/FEED-SCHEMA.md`.
+
+### Docs
+
+- `docs/FEED-SCHEMA.md` — new `uniqueKey` field documented, new "Consumer Expectations" subsection, rewritten "Programmatic Consumption" example, new "Reference Fixtures" subsection (placed immediately before "Versioning Policy"), source count warning, and a forward-looking note that RSS `guid` will change to composite form in v2.0.
+- `docs/WORCLAUDE-INTEGRATION.md` — v1.2.0 consumer note at the top pointing at the rewritten Programmatic Consumption example.
+
+### Migration
+
+No consumer-side migration is required for v1.2.0. Existing consumers that dedupe on `id` alone continue to work (same bug they had before), but are encouraged to switch to `uniqueKey`-based dedup. RSS consumers are unaffected in this release — `guid` output is unchanged. RSS `guid` is planned to change to `${id}|${source}` in a future v2.0 release, at which point the envelope `version` will bump to `"2.0"` and a one-time re-notification of feed items across RSS readers is expected; that change is deliberately deferred to batch with the envelope version bump.
+
 ## [1.1.0] - 2026-04-20
 
 A minor feature release adding a single new source. Non-breaking for downstream consumers — `run-report.json` schema stays `"1.0"`, existing source keys and item shape are unchanged. Consumers that iterate `sources[]` by key will automatically pick up the new entry.
