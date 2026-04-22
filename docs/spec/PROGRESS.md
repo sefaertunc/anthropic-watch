@@ -2,8 +2,8 @@
 
 ## Current Status
 
-**Phase:** Phase 3 — Source Growth (production, v1.1.0 shipped)
-**Last Updated:** 2026-04-21
+**Phase:** Phase 4 — Schema Hardening (production, v1.2.0 shipped)
+**Last Updated:** 2026-04-22
 
 ## Completed
 
@@ -27,6 +27,12 @@
   - `api-sdk-py-releases` added (17 sources total)
   - Branch-name enforcement workflow (`develop` or `feat/*` required on PRs to `main`; `dependabot/*`/`renovate/*` allow-listed)
   - Scraper checkout + gh-pages deploy switched to `SCRAPER_PAT` so downstream workflows fire
+- [x] Phase 4 — Schema Hardening (v1.2.0, 2026-04-22)
+  - `uniqueKey` field (`${id}|${source}`) added to every JSON feed item — consumers dedupe directly without string concatenation
+  - `docs/FEED-SCHEMA.md` expanded: Consumer Expectations (primary vs. observability), rewritten Programmatic Consumption example (version gating + composite-key dedup with fallback + state persistence), Reference Fixtures subsection, source-count variability warning, v2.0 RSS `guid` deferral note
+  - Reference fixtures shipped at `docs/fixtures/{all,run-report}.sample.json` with `docs/fixtures/README.md` documenting provenance
+  - Prose sweeps removing hardcoded source counts from README body copy, `docs/SOURCES.md`, `docs/ARCHITECTURE.md`, `docs/WORCLAUDE-INTEGRATION.md`, and `test/capture-fixtures.js`
+  - RSS `guid` composite-key change deferred to v2.0 (one-shot re-notification burst inappropriate for a point release; batched with future envelope `version` bump)
 
 ## In Progress
 
@@ -36,7 +42,8 @@ Nothing open. The next change should begin with a SPEC check and a fresh feature
 
 1. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
 2. Watch the dashboard and run-report for sources with `consecutiveFailures > 0` — that's the signal for scraper rot (usually a site redesign).
-3. Phase 4 items (live drift detection, dashboard browser tests, more consumers) are conditional — only pursue when a concrete need emerges.
+3. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
+4. Phase 5 items (live drift detection, dashboard browser tests, more consumers) are conditional — only pursue when a concrete need emerges.
 
 ## Blockers
 
