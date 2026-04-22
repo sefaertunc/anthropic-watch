@@ -6,17 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 21 Apr 2026 07:57:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 07:53:46 GMT</lastBuildDate>
     <item>
-      <title>v2.1.116</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.116</link>
-      <guid isPermaLink="false">v2.1.116</guid>
-      <pubDate>Mon, 20 Apr 2026 22:18:28 GMT</pubDate>
+      <title>v2.1.117</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.117</link>
+      <guid isPermaLink="false">v2.1.117</guid>
+      <pubDate>Wed, 22 Apr 2026 00:04:40 GMT</pubDate>
       <category>claude-code-releases</category>
       <description>What&apos;s changed
-- /resume on large sessions is significantly faster (up to 67% on 40MB+ sessions) and handles sessions with many dead-fork entries more efficiently
-- Faster MCP startup when multiple stdio servers are configured; resources/templates/list is now deferred to first @-mention
-- Smoother f</description>
+- Forked subagents can now be enabled on external builds by setting CLAUDECODEFORKSUBAGENT=1
+- Agent frontmatter mcpServers are now loaded for main-thread agent sessions via --agent
+- Improved /model: selections now persist across restarts even when the project pins a different model,</description>
     </item>
   </channel>
 </rss>
