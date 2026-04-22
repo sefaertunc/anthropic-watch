@@ -36,6 +36,7 @@ All feeds are published to GitHub Pages and update daily at ~06:00 UTC.
   "items": [
     {
       "id": "v1.0.30", // Unique ID (format varies by scraper)
+      "uniqueKey": "v1.0.30|claude-code-releases", // Composite dedup key: `${id}|${source}`
       "title": "Claude Code v1.0.30", // Human-readable title
       "date": "2026-04-15T18:30:00.000Z", // ISO 8601 or null
       "url": "https://github.com/anthropics/claude-code/releases/tag/v1.0.30",
@@ -52,16 +53,36 @@ Per-source feeds use the title format `"anthropic-watch — {source name}"` and 
 
 ### Field Guarantees
 
-| Field            | Type             | Nullable | Max Length | Notes                                                            |
-| ---------------- | ---------------- | -------- | ---------- | ---------------------------------------------------------------- |
-| `id`             | `string`         | No       | —          | Format varies: tag name, URL, SHA-256 hash prefix, version, UUID |
-| `title`          | `string`         | No       | —          | Human-readable title from the source                             |
-| `date`           | `string \| null` | Yes      | —          | ISO 8601 timestamp. `null` when the source provides no date      |
-| `url`            | `string`         | No       | —          | Link to the original content                                     |
-| `snippet`        | `string`         | No       | 300 chars  | Body text excerpt. May be empty string `""`                      |
-| `source`         | `string`         | No       | —          | Source key from `src/sources.js`                                 |
-| `sourceCategory` | `string`         | No       | —          | Always `"core"` or `"extended"`                                  |
-| `sourceName`     | `string`         | No       | —          | Human-readable source name                                       |
+| Field            | Type             | Nullable | Max Length | Notes                                                                                                                                                                                                                                                            |
+| ---------------- | ---------------- | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`             | `string`         | No       | —          | Format varies: tag name, URL, SHA-256 hash prefix, version, UUID                                                                                                                                                                                                 |
+| `uniqueKey`      | `string`         | Yes      | —          | Composite dedup key in the form `${id}\|${source}`. Use this directly to deduplicate across sources. **Present since v1.2.0** — absent in archived pre-v1.2.0 feeds; consumers should fall back to `` `${item.id}\|${item.source}` `` when the field is missing. |
+| `title`          | `string`         | No       | —          | Human-readable title from the source                                                                                                                                                                                                                             |
+| `date`           | `string \| null` | Yes      | —          | ISO 8601 timestamp. `null` when the source provides no date                                                                                                                                                                                                      |
+| `url`            | `string`         | No       | —          | Link to the original content                                                                                                                                                                                                                                     |
+| `snippet`        | `string`         | No       | 300 chars  | Body text excerpt. May be empty string `""`                                                                                                                                                                                                                      |
+| `source`         | `string`         | No       | —          | Source key from `src/sources.js`                                                                                                                                                                                                                                 |
+| `sourceCategory` | `string`         | No       | —          | Always `"core"` or `"extended"`                                                                                                                                                                                                                                  |
+| `sourceName`     | `string`         | No       | —          | Human-readable source name                                                                                                                                                                                                                                       |
+
+### Consumer Expectations
+
+Fields fall into two categories based on whether consumers should drive logic off them:
+
+**Primary fields** — load-bearing. Consumers are expected to read these. Contract changes to these fields will be reflected in a major version bump (`version: "2.0"`).
+
+- Item-level: `id`, `uniqueKey`, `title`, `date`, `url`, `snippet`, `source`, `sourceCategory`, `sourceName`
+- Envelope-level: `version`, `items`
+
+**Informational / observability fields** — present for debugging, rendering, and dashboards. Consumers may read these but should not depend on their exact values or presence beyond the current version.
+
+- Envelope-level: `title`, `description`, `home_page_url`, `generator`, `ttl`, `generated`, `itemCount`
+- Run-report: `runId`, `duration_ms`, `summary.*`, `sources[].durationMs`
+- Run-history file: entire file is observability
+
+Observability fields may be added, renamed, or removed across any patch release without a major version bump. Primary fields will not change without a major version bump.
+
+**Note on nullability:** the primary vs. observability classification describes how contract changes are communicated (a major version bump for primary fields, free-to-change for observability), not whether a field is always present. A primary field may be nullable in the Field Guarantees table and may be introduced in a minor version — `uniqueKey` is the canonical example: primary (load-bearing for dedup), but `Nullable=Yes` because archived pre-v1.2.0 feeds predate it. Consumers must handle primary-but-nullable fields via the fallback documented on the field's row.
 
 ### Envelope Fields
 
@@ -89,7 +110,7 @@ Per-source feeds use the title format `"anthropic-watch — {source name}"` and 
 
 Each run reads the existing feed file, merges the current run's new items, deduplicates, sorts, and slices. Specifically:
 
-- **Dedup key:** `${id}|${source}` — two items with the same id and source are considered the same item.
+- **Dedup key:** `${id}|${source}` — two items with the same id and source are considered the same item. The `uniqueKey` field on each item (added in v1.2.0) contains this pre-composed value so consumers can dedupe directly without string concatenation.
 - **Ordering:** new items are prepended before existing items (`[...newItems, ...existingItems]`) before the dedup pass.
 - **Winner on conflict:** first-seen wins the dedup pass. Because new items are prepended, this means **the newly scraped version wins** — its `title`, `snippet`, `date`, and `url` overwrite the persisted copy. Use this when a source edits an entry in place (e.g. `[Unreleased]` in a changelog): the latest snippet/title reaches the feed, not a stale cached one.
 - Sorting (by `date` desc, nulls last) runs after dedup.
@@ -140,6 +161,8 @@ Standard RSS 2.0. Full example:
 | `<item><description>`              | `item.snippet` or empty string                  |
 
 Same sorting, dedup, and limits as the JSON feed.
+
+> **Planned for v2.0:** The RSS `guid` element currently uses the bare item `id`, which can collide across sources. In v2.0 the `guid` will change to the composite `${id}|${source}` form (matching the JSON `uniqueKey` field added in v1.2.0). Because RSS readers dedupe on `guid`, this change will cause a one-time re-notification of every existing feed item across `all.xml` and each per-source feed, and will therefore be released alongside the envelope `version` bump from `"1.0"` to `"2.0"`. RSS consumers who need collision-free identifiers today should compute `${id}|${source}` from the parsed feed manually or switch to `all.json` and use the `uniqueKey` field.
 
 ---
 
@@ -262,34 +285,70 @@ Each outline entry has:
 - `xmlUrl` — `https://sefaertunc.github.io/anthropic-watch/feeds/{source-key}.xml`
 - `htmlUrl` — original source URL
 
-Import this file into any RSS reader to subscribe to all 17 feeds at once.
+Import this file into any RSS reader to subscribe to every source at once. The exact number of sources is not stable — sources may be added or removed over time. Consumers must derive counts from `summary.sourcesChecked` or `sources.length` in `run-report.json`, never hardcode a number. The `sources.opml` file regenerates each run from `src/sources.js`, so the outline always matches the current source list.
 
 ---
 
 ## Programmatic Consumption
 
+Consumers in any language can fetch and process the feeds directly. Here is a worked example in JavaScript that demonstrates **version gating**, **composite-key deduplication**, and **state persistence** — three patterns every consumer should implement.
+
 ```js
-const BASE = "https://sefaertunc.github.io/anthropic-watch/feeds";
+import { readFile, writeFile } from "node:fs/promises";
 
-// Fetch the latest run status
-const report = await fetch(`${BASE}/run-report.json`).then((r) => r.json());
-console.log(
-  `${report.summary.healthySources}/${report.summary.sourcesChecked} sources healthy`,
-);
+const FEED_URL = "https://sefaertunc.github.io/anthropic-watch/feeds/all.json";
+const STATE_PATH = "./state.json";
 
-// Check for errors
-for (const src of report.sources) {
-  if (src.status === "error") {
-    console.log(`${src.key}: ${src.error}`);
-  }
+// Fetch the feed
+const res = await fetch(FEED_URL);
+const feed = await res.json();
+
+// Version gate — fail fast on schema mismatch
+if (feed.version !== "1.0") {
+  throw new Error(
+    `anthropic-watch feed version ${feed.version} is not supported by this consumer.`,
+  );
 }
 
-// Items are NOT in the report — fetch the feed separately
-const feed = await fetch(`${BASE}/all.json`).then((r) => r.json());
-for (const item of feed.items.slice(0, 5)) {
-  console.log(`[${item.source}] ${item.title} — ${item.url}`);
+// Load previously seen uniqueKeys
+const prev = JSON.parse(await readFile(STATE_PATH, "utf8").catch(() => "[]"));
+const seen = new Set(prev);
+
+// Compute the composite key, falling back if the feed predates v1.2.0.
+// Archived feeds from before 2026-04 won't have `uniqueKey` on items.
+const keyOf = (item) => item.uniqueKey ?? `${item.id}|${item.source}`;
+
+// Filter to genuinely new items using the composite dedup key.
+// Two items with the same `id` but different `source` are distinct.
+const fresh = feed.items.filter((item) => !seen.has(keyOf(item)));
+
+console.log(`Found ${fresh.length} new items since last run.`);
+for (const item of fresh) {
+  console.log(`[${item.source}] ${item.title} → ${item.url}`);
 }
+
+// Persist keys for the next run.
+// Note: we store the composite key, not id, so the next run's dedup is also correct.
+const nextState = [...seen, ...fresh.map(keyOf)];
+await writeFile(STATE_PATH, JSON.stringify(nextState, null, 2));
 ```
+
+**Common pitfalls to avoid:**
+
+- Do **not** deduplicate on `id` alone. Different sources can emit items with the same `id` (e.g. `claude-code-changelog` and `npm-claude-code` both use version strings like `"2.1.114"`). Always use `uniqueKey` or compute `${id}|${source}` yourself.
+- Do **not** skip the version check. Future breaking schema changes will bump `version` from `"1.0"` to `"2.0"`; silent consumption of a new shape will surface as `undefined` field errors rather than a readable mismatch.
+- Do **not** persist `id` in your state file. Persist `uniqueKey` (or `{id, source}` pairs). State files keyed only on `id` will silently collide across sources.
+
+---
+
+## Reference Fixtures
+
+Consumers can pin against reference fixtures shipped in this repo for contract testing:
+
+- `docs/fixtures/all.sample.json` — sample `all.json` response conforming to this schema
+- `docs/fixtures/run-report.sample.json` — sample `run-report.json` response
+
+These fixtures are regenerated each release and reflect the current schema version. Fixtures update additively — fields may be added across releases. Contract tests should assert on fields they care about rather than on the full shape.
 
 ---
 

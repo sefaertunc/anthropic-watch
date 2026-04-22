@@ -1,10 +1,12 @@
 # Worclaude Integration
 
+> **v1.2.0 note:** The JSON feed now includes a pre-computed `uniqueKey` field (`${id}|${source}`) on every item — consumers should use this directly for deduplication rather than computing the composite key themselves. See the rewritten **Programmatic Consumption** example in `docs/FEED-SCHEMA.md` for the version-gated, composite-key dedup, state-persisting consumer template this release is designed around. RSS `guid` is unchanged in v1.2.0 and will change to the composite form in v2.0.
+
 ## Overview
 
 **[Worclaude](https://github.com/sefaertunc/Worclaude)** is a Claude Code-powered workspace assistant that manages development workflows. It is a downstream consumer of anthropic-watch feeds — using them to stay aware of upstream changes to Claude Code, Anthropic APIs, SDKs, and related tooling.
 
-anthropic-watch provides the data layer (scraping 17 Anthropic sources and publishing structured feeds), while Worclaude uses those feeds to power notifications, status checks, and summaries.
+anthropic-watch provides the data layer (scraping Anthropic sources and publishing structured feeds), while Worclaude uses those feeds to power notifications, status checks, and summaries.
 
 ## Architecture
 
@@ -12,7 +14,7 @@ anthropic-watch provides the data layer (scraping 17 Anthropic sources and publi
 
 ```
 anthropic-watch (GitHub Actions, daily 06:00 UTC)
-  └─ Scrapes 17 sources
+  └─ Scrapes Anthropic sources
   └─ Publishes to GitHub Pages
        ├─ run-report.json    ← primary for status
        ├─ all.json           ← primary for items
