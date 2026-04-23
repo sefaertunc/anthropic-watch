@@ -106,6 +106,8 @@ This preserves existing `knownIds` so the next run doesn't flood feeds with "new
 
 **Fix:** Check the scraper's ID generation logic. For hash-based scrapers, duplicates are expected behavior — old items are eventually pushed out by the feed limit (100 for all, 50 per-source).
 
+**Consumer-side duplicates (not a scraper bug):** If duplicates appear in your downstream application even though they don't appear in the published feed, you're deduplicating on `id` alone rather than on the composite `uniqueKey`. The [`@sefaertunc/anthropic-watch-client`](../packages/client) npm package handles this correctly — or see the **Programmatic Consumption** section of `docs/FEED-SCHEMA.md` for the raw pattern.
+
 ### RSS validation errors
 
 **Symptoms:** RSS readers reject or fail to parse `*.xml` feeds.
