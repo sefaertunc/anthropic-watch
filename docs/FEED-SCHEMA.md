@@ -291,7 +291,9 @@ Import this file into any RSS reader to subscribe to every source at once. The e
 
 ## Programmatic Consumption
 
-Consumers in any language can fetch and process the feeds directly. Here is a worked example in JavaScript that demonstrates **version gating**, **composite-key deduplication**, and **state persistence** — three patterns every consumer should implement.
+> **Recommended path:** the official `@sefaertunc/anthropic-watch-client` npm package implements this exact pattern with version gating, typed errors, and a proven `uniqueKey` fallback. Install it with `npm install @sefaertunc/anthropic-watch-client` and see [`packages/client/README.md`](../packages/client/README.md). The example below is the canonical reference for this contract and is provided for non-JS consumers, consumers without npm access, and anyone evaluating the library.
+
+Consumers in any language can fetch and process the feeds directly. Here is a worked example in JavaScript that demonstrates **version gating**, **composite-key deduplication**, and **state persistence** — three patterns every consumer should implement. The per-run work lives in an exported `async function run(seenSet)` so drift-protection tests can drive it directly; the bottom of the file shows how a driver script wires it up to disk-backed state.
 
 ```js
 import { readFile, writeFile } from "node:fs/promises";
@@ -299,38 +301,53 @@ import { readFile, writeFile } from "node:fs/promises";
 const FEED_URL = "https://sefaertunc.github.io/anthropic-watch/feeds/all.json";
 const STATE_PATH = "./state.json";
 
-// Fetch the feed
-const res = await fetch(FEED_URL);
-const feed = await res.json();
-
-// Version gate — fail fast on schema mismatch
-if (feed.version !== "1.0") {
-  throw new Error(
-    `anthropic-watch feed version ${feed.version} is not supported by this consumer.`,
-  );
-}
-
-// Load previously seen uniqueKeys
-const prev = JSON.parse(await readFile(STATE_PATH, "utf8").catch(() => "[]"));
-const seen = new Set(prev);
-
 // Compute the composite key, falling back if the feed predates v1.2.0.
 // Archived feeds from before 2026-04 won't have `uniqueKey` on items.
 const keyOf = (item) => item.uniqueKey ?? `${item.id}|${item.source}`;
 
-// Filter to genuinely new items using the composite dedup key.
-// Two items with the same `id` but different `source` are distinct.
-const fresh = feed.items.filter((item) => !seen.has(keyOf(item)));
+/**
+ * Perform one consumption cycle. Fetch, version-gate, filter to new items,
+ * mutate `seenSet` in place with each fresh item's uniqueKey, and return the
+ * fresh items. The caller owns the seen-set and its persistence.
+ */
+export async function run(seenSet) {
+  const res = await fetch(FEED_URL);
+  const feed = await res.json();
 
-console.log(`Found ${fresh.length} new items since last run.`);
-for (const item of fresh) {
-  console.log(`[${item.source}] ${item.title} → ${item.url}`);
+  // Version gate — fail fast on schema mismatch
+  if (feed.version !== "1.0") {
+    throw new Error(
+      `anthropic-watch feed version ${feed.version} is not supported by this consumer.`,
+    );
+  }
+
+  // Filter to genuinely new items using the composite dedup key.
+  // Two items with the same `id` but different `source` are distinct.
+  const fresh = feed.items.filter((item) => !seenSet.has(keyOf(item)));
+
+  // Mutate the seen-set with the newly-seen keys. The caller will persist.
+  for (const item of fresh) seenSet.add(keyOf(item));
+
+  return fresh;
 }
 
-// Persist keys for the next run.
-// Note: we store the composite key, not id, so the next run's dedup is also correct.
-const nextState = [...seen, ...fresh.map(keyOf)];
-await writeFile(STATE_PATH, JSON.stringify(nextState, null, 2));
+// Driver: load state, call run, report, persist. Runs only when this file is
+// invoked directly (not when the module is imported by a test).
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const prev = JSON.parse(await readFile(STATE_PATH, "utf8").catch(() => "[]"));
+  const seen = new Set(prev);
+
+  const fresh = await run(seen);
+
+  console.log(`Found ${fresh.length} new items since last run.`);
+  for (const item of fresh) {
+    console.log(`[${item.source}] ${item.title} → ${item.url}`);
+  }
+
+  // Persist keys for the next run. Note: we store the composite key, not id,
+  // so the next run's dedup is also correct.
+  await writeFile(STATE_PATH, JSON.stringify([...seen], null, 2));
+}
 ```
 
 **Common pitfalls to avoid:**

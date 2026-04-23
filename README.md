@@ -2,7 +2,7 @@
 
 ![Anthropic Watch — Upstream Intelligence for Claude Code](docs/images/anthropic-watch.png)
 
-[![version v1.2.0](https://img.shields.io/badge/version-v1.2.0-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
+[![version v1.3.0](https://img.shields.io/badge/version-v1.3.0-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
 [![schedule: daily 06:00 UTC](https://img.shields.io/badge/schedule-daily%2006%3A00%20UTC-brightgreen)](https://github.com/sefaertunc/anthropic-watch/actions)
 [![sources: monitored](https://img.shields.io/badge/sources-monitored-blue)](https://github.com/sefaertunc/anthropic-watch/blob/main/src/sources.js)
 [![feeds: RSS + JSON](https://img.shields.io/badge/feeds-RSS%20%2B%20JSON-orange)](https://sefaertunc.github.io/anthropic-watch/feeds/all.xml)
@@ -26,6 +26,16 @@ Monitors Anthropic sources daily for changes and publishes structured feeds — 
 ## What is this?
 
 anthropic-watch scrapes Anthropic blogs, changelogs, GitHub releases, npm packages, documentation, and the status page daily. It detects new content by comparing against persisted state, accumulates items into RSS and JSON feeds, and deploys everything to a static dashboard on GitHub Pages. No server needed — just subscribe via RSS or fetch the JSON feeds.
+
+## For consumers
+
+Applications consuming the feeds programmatically should use the official client library:
+
+```bash
+npm install @sefaertunc/anthropic-watch-client
+```
+
+The library handles version gating, composite-key deduplication, and typed errors. See [`packages/client/`](packages/client) for the full API. The hand-rolled consumption pattern is also documented in [`docs/FEED-SCHEMA.md`](docs/FEED-SCHEMA.md) for non-JS consumers.
 
 ## Subscribe to feeds
 

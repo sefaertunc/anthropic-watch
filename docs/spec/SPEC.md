@@ -4,7 +4,7 @@
 
 anthropic-watch is a GitHub Actions–powered scraper that monitors public Anthropic sources (blogs, GitHub releases, npm registry, docs, status page) on a daily cron, detects new content by diffing against persisted state, and publishes structured RSS, JSON, and OPML feeds via GitHub Pages.
 
-No server, no database — just static feeds anyone can subscribe to. The current source count is tracked in `docs/SOURCES.md` and the README badge; as of v1.2.0 it is 17 sources across 6 scraper types.
+No server, no database — just static feeds anyone can subscribe to. The current source count is tracked in `docs/SOURCES.md` and the README badge; as of v1.3.0 it remains 17 sources across 6 scraper types (v1.3.0 added no new sources — it shipped a sibling consumer SDK instead).
 
 ### Audience
 
@@ -19,9 +19,10 @@ Anthropic ships fast across many surfaces (blog, engineering blog, research, mul
 
 - **No browser automation.** All HTML uses `fetch` + `cheerio`. If a source requires JS rendering, solve it with a new parse mode (RSC extraction, API discovery), not a headless browser.
 - **No authenticated Anthropic surfaces.** Public web only; no API keys, no Console, no billing, no logged-in pages.
-- **No npm publish.** Ships as GitHub Releases; it is infrastructure, not a package.
+- **No npm publish for the scraper.** The scraper ships as GitHub Releases; it is infrastructure, not a package. The sibling `@sefaertunc/anthropic-watch-client` library at `packages/client/` IS published to npm — but that is a separately-versioned product (see Repository Layout and Release Policy), not the scraper itself.
 - **No paid dependencies.** Every source must be fetchable from a stock GitHub Actions runner with only `GITHUB_TOKEN`.
 - **No database or backing service.** State lives in a JSON file committed to `main`; feeds are static files on GitHub Pages.
+- **No workspace tooling in the monorepo.** No Turborepo, Nx, Lerna, pnpm workspaces, or npm workspaces. Two packages do not justify the weight; cross-package coordination is manual and deliberate.
 
 ## Architecture at a Glance
 
@@ -44,6 +45,17 @@ Daily cron (06:00 UTC) in .github/workflows/scrape.yml
 ```
 
 See `docs/ARCHITECTURE.md` for the complete deep-dive: scraper contract, concurrency model, retry logic, state management, failure detection, and testing architecture. That document is authoritative — this SPEC points to it rather than duplicating.
+
+## Repository Layout
+
+As of v1.3.0 this is a two-package monorepo:
+
+| Package                              | Location           | Shipping                                                  | Versioning                                            |
+| ------------------------------------ | ------------------ | --------------------------------------------------------- | ----------------------------------------------------- |
+| `anthropic-watch` (scraper)          | repo root          | GitHub Releases only; runs on GitHub Actions cron         | SemVer (root `package.json`)                          |
+| `@sefaertunc/anthropic-watch-client` | `packages/client/` | Published to npm as a scoped package; zero deps; Node 18+ | SemVer independently (`packages/client/package.json`) |
+
+The scraper remains the primary entry point — someone landing on the repo sees infrastructure first, with the client clearly labeled as a subdirectory. The client library encapsulates the feed consumption contract (version gating, composite-key dedup, typed errors) so downstream consumers don't each reinvent it.
 
 ## Tech Stack
 
@@ -79,12 +91,25 @@ Full source list and detection methods: `docs/SOURCES.md`.
 
 The canonical consumer is **Worclaude**; integration details in `docs/WORCLAUDE-INTEGRATION.md`. Consumers fetch `run-report.json` for status and `all.json` (or per-source feeds) for items. The feed files are the interface — there is no API, webhook, or direct integration.
 
+The recommended path for new JavaScript/TypeScript consumers is the **official client library** `@sefaertunc/anthropic-watch-client` (see `packages/client/README.md`). It encapsulates the consumption contract: version gating, composite-key deduplication with `${id}|${source}` fallback, and typed errors. Non-JS consumers continue to use the raw JSON feeds directly; `docs/FEED-SCHEMA.md` Programmatic Consumption remains the canonical hand-rolled reference and is now enforced in CI by a drift-protection test that extracts the inline example and runs it against the reference fixture.
+
 ## Release Policy
 
-- **Semantic versioning.** `package.json` `version` is the source of truth; User-Agent header derives from it at module load.
-- **CHANGELOG.md** is updated in the release commit for every user-visible change.
-- **Tagged GitHub Releases** are how versions ship; no npm publish.
+Two independent versioning tracks:
+
+**Scraper** (root `package.json`):
+
+- **Semantic versioning.** Root `package.json` `version` is the source of truth; User-Agent header derives from it at module load.
+- **CHANGELOG.md** (root) is updated in the release commit for every user-visible change.
+- **Tagged GitHub Releases** are how scraper versions ship. Never published to npm.
 - **Feed schema version** (`"1.0"` in every output file) bumps only on breaking changes. See `docs/FEED-SCHEMA.md — Versioning Policy`.
+
+**Client library** (`packages/client/package.json`):
+
+- **Semantic versioning, independent of the scraper.** Scraper v1.3.0 shipped alongside client v1.0.0; they are not locked together after that.
+- **Separate CHANGELOG** at `packages/client/CHANGELOG.md` — internal to the package and shipped in the published tarball.
+- **npm publish** as a scoped package with `--access public`. Release engineer runs `npm publish` manually from `packages/client/` after the scraper release PR merges; CI does not publish.
+- **Feed version support is version-gated at the library level.** The library declares which feed envelope version it speaks (currently `"1.0"`); any other version throws `FeedVersionMismatchError`. When the feed bumps to `"2.0"` a new major of the client library will ship supporting it.
 
 ## Implementation Phases
 
@@ -125,13 +150,25 @@ The canonical consumer is **Worclaude**; integration details in `docs/WORCLAUDE-
 - [x] Forward-looking v2.0 RSS `guid` deferral note
 - [ ] v2.0 envelope-version bump + RSS `guid` composite-key change (scheduled for future release)
 
-### Phase 5 — Future / Conditional
+### Phase 5 — Client Library (complete as of v1.3.0, 2026-04-23)
+
+- [x] Monorepo restructuring: `packages/client/` sibling to the scraper; no workspace tooling introduced
+- [x] `@sefaertunc/anthropic-watch-client@1.0.0` — zero-dep, ESM-only, Node 18+. Class + pure helpers + typed error hierarchy + constants
+- [x] JSDoc-sourced TypeScript types via `tsc --emitDeclarationOnly` at publish; `dist/index.d.ts` surfaces `Item`/`FeedEnvelope`/`RunReport` to consumers
+- [x] 53 client tests — mocked fetch for class, byte-identity check on fixtures against `docs/fixtures/`, drift-protection test that extracts the FEED-SCHEMA Programmatic Consumption example and runs it against the reference fixture
+- [x] FEED-SCHEMA Programmatic Consumption example restructured to export `async function run(seenSet)` (enforced by the drift test)
+- [x] Root `vitest.config.js` excludes `packages/**` so scraper test command is unchanged
+- [x] One-time `test.yml` `pull_request` trigger expansion to `[develop, main]`
+- [x] Scraper-side documentation pointers: `docs/FEED-SCHEMA.md` recommended-path note, `README.md` "For consumers" section, `docs/WORCLAUDE-INTEGRATION.md` handshake note, `docs/TROUBLESHOOTING.md` consumer-side duplicates pointer
+- [ ] Subpackage CI job (matrix step installing + testing `packages/client/` in CI) — deferred to v1.3.1 if it becomes friction
+
+### Phase 6 — Future / Conditional
 
 Only pursued if a concrete need emerges — not planned speculatively.
 
-- Automated "live drift" detection (currently an accepted gap — consecutive-failure tracking + dashboard amber/red dots are considered sufficient)
+- Automated "live drift" detection for the scraper (currently an accepted gap — consecutive-failure tracking + dashboard amber/red dots are considered sufficient)
 - Stronger browser testing for the dashboard (currently manual inspection only)
-- Additional downstream consumers beyond Worclaude
+- Additional downstream consumers beyond Worclaude (the client library now lowers the cost of each new consumer)
 
 ## Accepted Limitations
 
