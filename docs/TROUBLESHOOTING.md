@@ -132,7 +132,7 @@ This preserves existing `knownIds` so the next run doesn't flood feeds with "new
 
 1. Log in to Reddit from a residential IP (Reddit's app-creation page is also datacenter-IP-blocked). Go to `https://www.reddit.com/prefs/apps`.
 2. Scroll to the bottom and click **"are you a developer? create an app..."**. Fill in: **Name** `anthropic-watch`, **App type** `script` (critical — the free client-credentials flow), **Redirect URI** `http://localhost:8080` (unused but required).
-3. Submit the Responsible Builder Policy application via Reddit's Developer Support form (linked from the policy page). Describe the use case, subreddits accessed, request volume, and data handling. Wait for approval (~7 days).
+3. Submit the Responsible Builder Policy application via Reddit's Developer Support form (linked from the policy page). Use the field values and use-case text in [`reddit-oauth-setup.md`](reddit-oauth-setup.md). Wait for approval (~7 days).
 4. Once approved, the credentials become available on the app detail page: the **client ID** (short ~14-char string directly under the words "personal use script") and the **secret** (~27-char string labeled "secret").
 5. Add both as GitHub Actions secrets:
 
