@@ -27,6 +27,16 @@ Monitors Anthropic sources daily for changes and publishes structured feeds — 
 
 anthropic-watch scrapes Anthropic blogs, changelogs, GitHub releases, npm packages, documentation, and the status page daily. It detects new content by comparing against persisted state, accumulates items into RSS and JSON feeds, and deploys everything to a static dashboard on GitHub Pages. No server needed — just subscribe via RSS or fetch the JSON feeds.
 
+## For consumers
+
+Applications consuming the feeds programmatically should use the official client library:
+
+```bash
+npm install @sefaertunc/anthropic-watch-client
+```
+
+The library handles version gating, composite-key deduplication, and typed errors. See [`packages/client/`](packages/client) for the full API. The hand-rolled consumption pattern is also documented in [`docs/FEED-SCHEMA.md`](docs/FEED-SCHEMA.md) for non-JS consumers.
+
 ## Subscribe to feeds
 
 | Format             | URL                                                                                     |

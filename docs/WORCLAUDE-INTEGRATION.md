@@ -1,6 +1,8 @@
 # Worclaude Integration
 
-> **v1.2.0 note:** The JSON feed now includes a pre-computed `uniqueKey` field (`${id}|${source}`) on every item — consumers should use this directly for deduplication rather than computing the composite key themselves. See the rewritten **Programmatic Consumption** example in `docs/FEED-SCHEMA.md` for the version-gated, composite-key dedup, state-persisting consumer template this release is designed around. RSS `guid` is unchanged in v1.2.0 and will change to the composite form in v2.0.
+> **v1.3.0 note:** The recommended way to consume these feeds is now the `@sefaertunc/anthropic-watch-client` npm package ([packages/client/](../packages/client)). It encapsulates version gating, composite-key deduplication with `uniqueKey` fallback, and typed error handling. Worclaude's own consumer is planned to migrate to the client library in Worclaude v2.6.0. Until then, Worclaude's hand-rolled consumer at `scripts/upstream-precheck.mjs` continues to work using the patterns documented in the **Programmatic Consumption** section of `docs/FEED-SCHEMA.md`.
+>
+> **v1.2.0 note (retained):** The JSON feed includes a pre-computed `uniqueKey` field (`${id}|${source}`) on every item — consumers should use this directly for deduplication rather than computing the composite key themselves. RSS `guid` is unchanged and will change to the composite form in v2.0.
 
 ## Overview
 
