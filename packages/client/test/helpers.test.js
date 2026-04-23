@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { uniqueKey, filterNew, dedupe } from "../src/client.js";
+import { uniqueKey, filterNew, dedupe } from "../src/helpers.js";
 
 describe("uniqueKey", () => {
   it("returns pre-computed value when present", () => {

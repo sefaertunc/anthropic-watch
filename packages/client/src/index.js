@@ -6,7 +6,7 @@ export {
   dedupe,
   SUPPORTED_FEED_VERSION,
   DEFAULT_BASE_URL,
-} from "./client.js";
+} from "./helpers.js";
 export {
   AnthropicWatchError,
   FeedVersionMismatchError,

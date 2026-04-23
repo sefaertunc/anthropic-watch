@@ -1,20 +1,11 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import { dirname, resolve } from "node:path";
 import {
   AnthropicWatchClient,
   FeedVersionMismatchError,
   FeedFetchError,
   FeedMalformedError,
 } from "../src/index.js";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const FIXTURES_DIR = resolve(__dirname, "../fixtures");
-
-function readFixture(name) {
-  return JSON.parse(readFileSync(resolve(FIXTURES_DIR, name), "utf8"));
-}
+import { readFixture } from "./fixture-path.js";
 
 function mockResponse(body, { status = 200 } = {}) {
   return {

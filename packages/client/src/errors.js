@@ -1,3 +1,5 @@
+import { SUPPORTED_FEED_VERSION } from "./helpers.js";
+
 export class AnthropicWatchError extends Error {
   /**
    * @param {string} message
@@ -5,7 +7,7 @@ export class AnthropicWatchError extends Error {
    */
   constructor(message, options = {}) {
     super(message);
-    this.name = "AnthropicWatchError";
+    this.name = this.constructor.name;
     if (options.cause) this.cause = options.cause;
   }
 }
@@ -15,11 +17,10 @@ export class FeedVersionMismatchError extends AnthropicWatchError {
    * @param {string} actualVersion
    * @param {string} [expectedVersion]
    */
-  constructor(actualVersion, expectedVersion = "1.0") {
+  constructor(actualVersion, expectedVersion = SUPPORTED_FEED_VERSION) {
     super(
       `Feed version mismatch: expected "${expectedVersion}", got "${actualVersion}"`,
     );
-    this.name = "FeedVersionMismatchError";
     this.actualVersion = actualVersion;
     this.expectedVersion = expectedVersion;
   }
@@ -32,7 +33,6 @@ export class FeedFetchError extends AnthropicWatchError {
    */
   constructor(message, { url, status, cause } = {}) {
     super(message, { cause });
-    this.name = "FeedFetchError";
     this.url = url;
     /** @type {number | null} */
     this.status = status ?? null;
@@ -46,7 +46,6 @@ export class FeedMalformedError extends AnthropicWatchError {
    */
   constructor(message, { url, reason } = {}) {
     super(message);
-    this.name = "FeedMalformedError";
     this.url = url;
     this.reason = reason;
   }

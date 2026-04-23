@@ -3,47 +3,11 @@ import {
   FeedFetchError,
   FeedMalformedError,
 } from "./errors.js";
-
-// These are the source of truth; src/index.js re-exports them. Declaring
-// them here (rather than in both places) prevents drift.
-export const SUPPORTED_FEED_VERSION = "1.0";
-export const DEFAULT_BASE_URL = "https://sefaertunc.github.io/anthropic-watch/";
-
-/**
- * @param {import('./types.js').Item} item
- * @returns {string}
- */
-export function uniqueKey(item) {
-  return item.uniqueKey ?? `${item.id}|${item.source}`;
-}
-
-/**
- * @param {import('./types.js').Item[]} items
- * @param {Set<string>} seenSet
- * @returns {import('./types.js').Item[]}
- */
-export function filterNew(items, seenSet) {
-  if (!(seenSet instanceof Set)) {
-    throw new TypeError("filterNew: seenSet must be a Set");
-  }
-  return items.filter((item) => !seenSet.has(uniqueKey(item)));
-}
-
-/**
- * @param {import('./types.js').Item[]} items
- * @returns {import('./types.js').Item[]}
- */
-export function dedupe(items) {
-  const seen = new Set();
-  const out = [];
-  for (const item of items) {
-    const key = uniqueKey(item);
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(item);
-  }
-  return out;
-}
+import {
+  DEFAULT_BASE_URL,
+  SUPPORTED_FEED_VERSION,
+  filterNew,
+} from "./helpers.js";
 
 export class AnthropicWatchClient {
   /**
@@ -153,16 +117,29 @@ export class AnthropicWatchClient {
   }
 
   /**
+   * Runtime guard: throws FeedMalformedError if value is not a non-null object.
+   * Not a TypeScript assertion predicate by design — callers are typed `any`
+   * so property access stays open without fighting tsc's type narrowing.
+   *
+   * @param {unknown} value
+   * @param {string} label - Human-readable noun used in the error message (e.g. "Feed", "Run report").
+   * @param {string} url
+   */
+  #assertObject(value, label, url) {
+    if (typeof value !== "object" || value === null) {
+      throw new FeedMalformedError(`${label} is not an object`, {
+        url,
+        reason: `got ${typeof value}`,
+      });
+    }
+  }
+
+  /**
    * @param {any} feed
    * @param {string} url
    */
   #assertFeedShape(feed, url) {
-    if (typeof feed !== "object" || feed === null) {
-      throw new FeedMalformedError("Feed is not an object", {
-        url,
-        reason: `got ${typeof feed}`,
-      });
-    }
+    this.#assertObject(feed, "Feed", url);
     if (feed.version !== SUPPORTED_FEED_VERSION) {
       throw new FeedVersionMismatchError(feed.version);
     }
@@ -179,12 +156,7 @@ export class AnthropicWatchClient {
    * @param {string} url
    */
   #assertRunReportShape(report, url) {
-    if (typeof report !== "object" || report === null) {
-      throw new FeedMalformedError("Run report is not an object", {
-        url,
-        reason: `got ${typeof report}`,
-      });
-    }
+    this.#assertObject(report, "Run report", url);
     if (report.version !== SUPPORTED_FEED_VERSION) {
       throw new FeedVersionMismatchError(report.version);
     }

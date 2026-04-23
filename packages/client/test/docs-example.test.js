@@ -1,22 +1,18 @@
-import { describe, it, expect } from "vitest";
-import { readFileSync, writeFileSync, mkdtempSync } from "node:fs";
-import { fileURLToPath, pathToFileURL } from "node:url";
-import { dirname, resolve, join } from "node:path";
+import { describe, it, expect, afterAll } from "vitest";
+import { writeFileSync, mkdtempSync, rmSync } from "node:fs";
+import { pathToFileURL } from "node:url";
+import { join } from "node:path";
 import { tmpdir } from "node:os";
+import { readFixture, readRepoText } from "./fixture-path.js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const REPO_ROOT = resolve(__dirname, "../../..");
+// Anchor on the exact section heading so a stray ```js fence elsewhere in the
+// doc cannot satisfy this match. Section heading is "## Programmatic Consumption"
+// at the time of writing.
+const SECTION_RE =
+  /(^|\n)## Programmatic Consumption\s*\n[\s\S]*?\n```js\n([\s\S]*?)\n```/;
 
 function extractProgrammaticConsumptionExample() {
-  const schemaDoc = readFileSync(
-    resolve(REPO_ROOT, "docs/FEED-SCHEMA.md"),
-    "utf8",
-  );
-  // Anchor on the exact section heading so a stray ```js fence elsewhere in the
-  // doc cannot satisfy this match. Section heading is "## Programmatic Consumption"
-  // at the time of writing.
-  const SECTION_RE =
-    /(^|\n)## Programmatic Consumption\s*\n[\s\S]*?\n```js\n([\s\S]*?)\n```/;
+  const schemaDoc = readRepoText("docs/FEED-SCHEMA.md");
   const sectionMatch = schemaDoc.match(SECTION_RE);
   if (!sectionMatch) {
     throw new Error(
@@ -27,24 +23,25 @@ function extractProgrammaticConsumptionExample() {
   return sectionMatch[2];
 }
 
+const tmpDirs = [];
+afterAll(() => {
+  for (const dir of tmpDirs) {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 describe("docs/FEED-SCHEMA.md Programmatic Consumption example", () => {
   it("runs against the valid fixture without error and dedupes correctly across two runs", async () => {
     const exampleSource = extractProgrammaticConsumptionExample();
-    const fixture = JSON.parse(
-      readFileSync(
-        resolve(REPO_ROOT, "packages/client/fixtures/all.valid.json"),
-        "utf8",
-      ),
-    );
+    const fixture = readFixture("all.valid.json");
 
     // The canonical example MUST export a top-level `async function run(seenSet)`.
     // The wrapper concatenates the example source with `export { run };` — if the
     // example doesn't declare `run` at top level, import fails at module-load time
     // and this test fails loudly.
-    const tmpFile = join(
-      mkdtempSync(join(tmpdir(), "aw-docs-example-")),
-      "ex.mjs",
-    );
+    const tmpDir = mkdtempSync(join(tmpdir(), "aw-docs-example-"));
+    tmpDirs.push(tmpDir);
+    const tmpFile = join(tmpDir, "ex.mjs");
     const wrapped = `
 globalThis.__mockFeed = ${JSON.stringify(fixture)};
 globalThis.fetch = async () => ({
