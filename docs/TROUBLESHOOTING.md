@@ -128,10 +128,12 @@ This preserves existing `knownIds` so the next run doesn't flood feeds with "new
 
 **Fix:** Register a Reddit script-app and set the two secrets.
 
+> **November 2025 policy change:** Reddit replaced self-service API-key issuance with the [Responsible Builder Policy](https://support.reddithelp.com/hc/en-us/articles/42728983564564-Responsible-Builder-Policy). New apps are pre-gated — submitting the create-app form no longer mints credentials instantly; it triggers a manual review. Reddit's stated turnaround is ~7 days. Credentials issued before the policy change keep working.
+
 1. Log in to Reddit from a residential IP (Reddit's app-creation page is also datacenter-IP-blocked). Go to `https://www.reddit.com/prefs/apps`.
-2. Scroll to the bottom and click **"are you a developer? create an app..."**.
-3. Fill in: **Name** `anthropic-watch`, **App type** `script` (critical — the free client-credentials flow), **Redirect URI** `http://localhost:8080` (unused but required).
-4. Click create. Two values appear: the **client ID** (short ~14-char string directly under the words "personal use script") and the **secret** (~27-char string labeled "secret").
+2. Scroll to the bottom and click **"are you a developer? create an app..."**. Fill in: **Name** `anthropic-watch`, **App type** `script` (critical — the free client-credentials flow), **Redirect URI** `http://localhost:8080` (unused but required).
+3. Submit the Responsible Builder Policy application via Reddit's Developer Support form (linked from the policy page). Describe the use case, subreddits accessed, request volume, and data handling. Wait for approval (~7 days).
+4. Once approved, the credentials become available on the app detail page: the **client ID** (short ~14-char string directly under the words "personal use script") and the **secret** (~27-char string labeled "secret").
 5. Add both as GitHub Actions secrets:
 
    ```bash
