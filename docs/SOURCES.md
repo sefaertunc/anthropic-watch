@@ -201,16 +201,74 @@ anthropic-watch monitors Anthropic sources across **six scraper types**, organiz
 
 ---
 
+## Community Sources
+
+Third-party sources not operated by Anthropic. Signal quality is lower than `core`/`extended` (higher duplication, community opinions mixed with fact, external API availability). Consumers should treat `community` as informational only, not autonomous-action-trigger material.
+
+### GitHub commits (6)
+
+Direct-commit activity on repositories that ship via commits rather than tagged releases.
+
+- `gh-commits-cookbooks` — `anthropics/claude-cookbooks`
+- `gh-commits-skills` — `anthropics/skills`
+- `gh-commits-plugins-official` — `anthropics/claude-plugins-official`
+- `gh-commits-claude-code` — `anthropics/claude-code` (pre-release development signal; complements the existing `npm-claude-code` release signal — composite `uniqueKey` prevents collision between them)
+- `gh-commits-everything-claude-code` — `affaan-m/everything-claude-code` (community resource list)
+- `gh-commits-antigravity-awesome-skills` — `sickn33/antigravity-awesome-skills` (community skills list)
+
+Detection: `GET api.github.com/repos/{owner}/{repo}/commits?per_page=10&sha=main`. ID = short SHA (7 chars). Bots matching `*[bot]` are filtered by default; override with `excludeBots: false`.
+
+### Reddit (5)
+
+- `reddit-claudecode` — `r/ClaudeCode` (top/day, 15 posts, no score floor)
+- `reddit-claudeai` — `r/ClaudeAI` (top/day, 10 posts)
+- `reddit-claude` — `r/claude` (top/day, 5 posts)
+- `reddit-claudeskills` — `r/claudeskills` (top/day, 10 posts)
+- `reddit-claudeopus` — `r/Claudeopus` (new mode with `minScore: 20` — lower-traffic sub)
+
+Detection: `GET reddit.com/r/{sub}/{mode}.json`. ID = Reddit `t3_*` name. Stickied posts are filtered in `top` mode only; pass through in `new` mode.
+
+### Hacker News (1)
+
+- `hn-anthropic-mentions` — HN stories mentioning `anthropic.com`, `claude.ai`, or `claude.com` (via HN Algolia API)
+
+Detection: `GET hn.algolia.com/api/v1/search_by_date?query=...&tags=story`. ID = Algolia `objectID`. Falls back to HN comment link for Ask HN entries without a URL.
+
+### Twitter / X (8)
+
+Posts from two official Anthropic accounts, one community/developer account, and five individual-person accounts (Anthropic employees and community leaders). All handles verified active and on-topic at implementation time.
+
+- `twitter-anthropicai` — `@AnthropicAI` (official)
+- `twitter-claudeai` — `@claudeai` (official)
+- `twitter-claudedevs` — `@ClaudeDevs`
+- `twitter-bcherny` — `@bcherny` (Boris Cherny, Anthropic)
+- `twitter-theamolavasare` — `@TheAmolAvasare` (Amol Avasare)
+- `twitter-felixrieseberg` — `@felixrieseberg` (Felix Rieseberg)
+- `twitter-noahzweben` — `@noahzweben` (Noah Zweben)
+- `twitter-janleike` — `@janleike` (Jan Leike, alignment)
+
+Detection: `GET api.twitterapi.io/twitter/user/last_tweets?userName={handle}`. Header `X-API-Key: ${TWITTERAPI_IO_KEY}`. Response wraps tweets under `data.tweets[]`; `createdAt` arrives in Twitter legacy format and is converted to ISO-8601 by the scraper. ID = tweet ID as string (Twitter snowflake IDs exceed `2^53` — the API correctly returns them quoted).
+
+**Graceful-skip contract:** if `TWITTERAPI_IO_KEY` is unset or empty, the scraper returns `[]` immediately without attempting any fetch. This makes forks and local dev sessions work without the paid credential. The source's `consecutiveFailures` counter does not tick up when the key is missing — returning `[]` is success, not failure. All other failure modes (401, 403, 429, 5xx, network, parse) throw per Rule 4.
+
+Cost at current volume (8 accounts × 10 tweets × 30 days): ≈ $0.36/month on twitterapi.io's pay-per-request pricing. Free-tier rate limit is 1 req / 5 s — `fetchWithRetry` honors `Retry-After` on 429s, so in-run rate limiting resolves transparently.
+
+---
+
 ## Scraper Type Reference
 
-| Scraper Type       | Method                      | Parse Modes                                    | Sources                                                                                |
-| ------------------ | --------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `github-releases`  | GitHub REST API + fetch     | —                                              | claude-code-releases, api-sdk-ts-releases, api-sdk-py-releases, claude-code-action     |
-| `github-changelog` | GitHub Contents API + fetch | —                                              | claude-code-changelog, agent-sdk-ts-changelog, agent-sdk-py-changelog                  |
-| `npm-registry`     | npm registry API + fetch    | —                                              | npm-claude-code                                                                        |
-| `blog-page`        | fetch + cheerio             | `nextjs-rsc`, `webflow`, `distill`             | blog-engineering, blog-news, blog-research, blog-alignment, blog-red-team, blog-claude |
-| `docs-page`        | fetch + cheerio             | `intercom-article`, `docs-hash`, `model-table` | docs-release-notes, support-release-notes                                              |
-| `status-page`      | Statuspage.io API + fetch   | —                                              | status-page                                                                            |
+| Scraper Type       | Method                        | Parse Modes                                    | Sources                                                                                                                                                                |
+| ------------------ | ----------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `github-releases`  | GitHub REST API + fetch       | —                                              | claude-code-releases, api-sdk-ts-releases, api-sdk-py-releases, claude-code-action                                                                                     |
+| `github-changelog` | GitHub Contents API + fetch   | —                                              | claude-code-changelog, agent-sdk-ts-changelog, agent-sdk-py-changelog                                                                                                  |
+| `github-commits`   | GitHub REST API + fetch       | —                                              | gh-commits-cookbooks, gh-commits-skills, gh-commits-plugins-official, gh-commits-claude-code, gh-commits-everything-claude-code, gh-commits-antigravity-awesome-skills |
+| `npm-registry`     | npm registry API + fetch      | —                                              | npm-claude-code                                                                                                                                                        |
+| `blog-page`        | fetch + cheerio               | `nextjs-rsc`, `webflow`, `distill`             | blog-engineering, blog-news, blog-research, blog-alignment, blog-red-team, blog-claude                                                                                 |
+| `docs-page`        | fetch + cheerio               | `intercom-article`, `docs-hash`, `model-table` | docs-release-notes, support-release-notes                                                                                                                              |
+| `status-page`      | Statuspage.io API + fetch     | —                                              | status-page                                                                                                                                                            |
+| `reddit-subreddit` | Reddit public JSON + fetch    | —                                              | reddit-claudecode, reddit-claudeai, reddit-claude, reddit-claudeskills, reddit-claudeopus                                                                              |
+| `hn-algolia`       | HN Algolia search API + fetch | —                                              | hn-anthropic-mentions                                                                                                                                                  |
+| `twitter-account`  | twitterapi.io + fetch         | —                                              | twitter-anthropicai, twitter-claudeai, twitter-claudedevs, twitter-bcherny, twitter-theamolavasare, twitter-felixrieseberg, twitter-noahzweben, twitter-janleike       |
 
 All scrapers use `fetch` (with retry) for HTTP requests. HTML scrapers use `cheerio` for DOM parsing. There is no browser automation.
 

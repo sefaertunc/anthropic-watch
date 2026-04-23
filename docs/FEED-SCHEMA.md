@@ -42,7 +42,7 @@ All feeds are published to GitHub Pages and update daily at ~06:00 UTC.
       "url": "https://github.com/anthropics/claude-code/releases/tag/v1.0.30",
       "snippet": "Bug fixes and performance improvements", // Up to 300 chars, may be ""
       "source": "claude-code-releases", // Source key
-      "sourceCategory": "core", // "core" or "extended"
+      "sourceCategory": "core", // "core" | "extended" | "community" (extensible)
       "sourceName": "Claude Code Releases", // Human-readable source name
     },
   ],
@@ -62,7 +62,7 @@ Per-source feeds use the title format `"anthropic-watch — {source name}"` and 
 | `url`            | `string`         | No       | —          | Link to the original content                                                                                                                                                                                                                                     |
 | `snippet`        | `string`         | No       | 300 chars  | Body text excerpt. May be empty string `""`                                                                                                                                                                                                                      |
 | `source`         | `string`         | No       | —          | Source key from `src/sources.js`                                                                                                                                                                                                                                 |
-| `sourceCategory` | `string`         | No       | —          | Always `"core"` or `"extended"`                                                                                                                                                                                                                                  |
+| `sourceCategory` | `string`         | No       | —          | One of `"core"`, `"extended"`, or `"community"`. **Open/extensible** — new values may be added in minor releases; consumers should not treat this as an exhaustive enumeration. See the Extensibility note below.                                                |
 | `sourceName`     | `string`         | No       | —          | Human-readable source name                                                                                                                                                                                                                                       |
 
 ### Consumer Expectations
@@ -83,6 +83,22 @@ Fields fall into two categories based on whether consumers should drive logic of
 Observability fields may be added, renamed, or removed across any patch release without a major version bump. Primary fields will not change without a major version bump.
 
 **Note on nullability:** the primary vs. observability classification describes how contract changes are communicated (a major version bump for primary fields, free-to-change for observability), not whether a field is always present. A primary field may be nullable in the Field Guarantees table and may be introduced in a minor version — `uniqueKey` is the canonical example: primary (load-bearing for dedup), but `Nullable=Yes` because archived pre-v1.2.0 feeds predate it. Consumers must handle primary-but-nullable fields via the fallback documented on the field's row.
+
+### Source Categories (extensible)
+
+`sourceCategory` on items and `sources[].category` on the run report share the same value space:
+
+- **`core`** — Primary Anthropic signal: official blogs, docs, status, SDK releases. High-reliability; consumer logic can act on these autonomously (e.g. open an issue, create a branch).
+- **`extended`** — Anthropic-owned secondary signal: GitHub repos, npm packages, secondary blogs. Lower frequency than core but same trust level.
+- **`community`** — Third-party sources not owned or operated by Anthropic. Includes Reddit, Hacker News, GitHub commits on Anthropic-owned repos that ship via direct commits rather than tagged releases, and (planned) Twitter. Consumers should treat `community` as **informational signal only** — lower reliability, potential for duplication with other sources, subject to external API availability and community opinion mixing. Not suitable for autonomous-action triggers.
+
+**Extensibility policy.** The set of category values is **open**. New values may be added in minor releases of anthropic-watch (e.g. `"partner"`, `"research"`). Consumers:
+
+- MUST handle unknown category values gracefully — e.g. default to "informational" rendering, log and continue, or pass through without special-casing.
+- MUST NOT write `switch` statements that exhaust the known values without a default clause.
+- SHOULD widen TypeScript type unions when adopting a new producer version rather than hardcoding the historical two/three values.
+
+The `@sefaertunc/anthropic-watch-client` library's TypeScript typedef for `sourceCategory` widens in lockstep with producer releases. See `packages/client/CHANGELOG.md` for the version history.
 
 ### Envelope Fields
 
@@ -209,23 +225,23 @@ Generated after each scrape run. Provides status for all sources.
 
 ### Schema
 
-| Field                       | Type             | Notes                                           |
-| --------------------------- | ---------------- | ----------------------------------------------- |
-| `version`                   | `string`         | Always `"1.0"`                                  |
-| `runId`                     | `string`         | ISO 8601 timestamp (same as `timestamp`)        |
-| `timestamp`                 | `string`         | ISO 8601 timestamp of run start                 |
-| `duration_ms`               | `number`         | Total pipeline duration in milliseconds         |
-| `summary.totalNewItems`     | `number`         | Total new items detected across all sources     |
-| `summary.sourcesChecked`    | `number`         | Number of sources scraped                       |
-| `summary.sourcesWithErrors` | `number`         | Number of sources that errored                  |
-| `summary.healthySources`    | `number`         | Sources with `"ok"` status                      |
-| `sources[].key`             | `string`         | Source key                                      |
-| `sources[].name`            | `string`         | Human-readable source name                      |
-| `sources[].category`        | `string`         | `"core"` or `"extended"`                        |
-| `sources[].status`          | `string`         | Only `"ok"` or `"error"`                        |
-| `sources[].newItemCount`    | `number`         | Number of new items (0 on error)                |
-| `sources[].durationMs`      | `number`         | Scrape duration for this source in milliseconds |
-| `sources[].error`           | `string \| null` | Error message or `null` on success              |
+| Field                       | Type             | Notes                                                                               |
+| --------------------------- | ---------------- | ----------------------------------------------------------------------------------- |
+| `version`                   | `string`         | Always `"1.0"`                                                                      |
+| `runId`                     | `string`         | ISO 8601 timestamp (same as `timestamp`)                                            |
+| `timestamp`                 | `string`         | ISO 8601 timestamp of run start                                                     |
+| `duration_ms`               | `number`         | Total pipeline duration in milliseconds                                             |
+| `summary.totalNewItems`     | `number`         | Total new items detected across all sources                                         |
+| `summary.sourcesChecked`    | `number`         | Number of sources scraped                                                           |
+| `summary.sourcesWithErrors` | `number`         | Number of sources that errored                                                      |
+| `summary.healthySources`    | `number`         | Sources with `"ok"` status                                                          |
+| `sources[].key`             | `string`         | Source key                                                                          |
+| `sources[].name`            | `string`         | Human-readable source name                                                          |
+| `sources[].category`        | `string`         | `"core"`, `"extended"`, or `"community"` (extensible — see Source Categories below) |
+| `sources[].status`          | `string`         | Only `"ok"` or `"error"`                                                            |
+| `sources[].newItemCount`    | `number`         | Number of new items (0 on error)                                                    |
+| `sources[].durationMs`      | `number`         | Scrape duration for this source in milliseconds                                     |
+| `sources[].error`           | `string \| null` | Error message or `null` on success                                                  |
 
 **Important:** Source entries do **not** contain an `items` array. Items are stripped before writing the report. To get items, fetch the feed files.
 
