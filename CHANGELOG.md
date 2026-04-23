@@ -1,5 +1,45 @@
 # Changelog
 
+## [1.4.0] - 2026-04-23
+
+The largest source expansion since v1.0.0. Adds four new scraper types, twenty new community sources, and the `community` source category for third-party signal. Triggers a paired `@sefaertunc/anthropic-watch-client@1.0.1` release widening the `sourceCategory` type union.
+
+### Added
+
+- **`github-commits` scraper type** monitors direct commits on GitHub repositories that ship via commits rather than tagged releases. Includes bot-author filtering (`*[bot]` login suffix), with per-source `excludeBots: false` escape hatch for noisy repos.
+- **`reddit-subreddit` scraper type** monitors subreddit posts via Reddit's public JSON endpoint. Supports `top` / `new` / `hot` modes, time window selection, score floor. User-Agent derived from root `package.json` version per Reddit's public-API guidance.
+- **`hn-algolia` scraper type** monitors Hacker News via the HN Algolia public search API. Query-based. Logs info-line on zero-hit responses so silently-broken queries are visible in run output.
+- **`twitter-account` scraper type** monitors Twitter/X accounts via the [twitterapi.io](https://twitterapi.io) API. **Graceful-skip when `TWITTERAPI_IO_KEY` is unset** — the scraper returns `[]` without attempting any fetch, so forks and local dev sessions work without configuring the paid credential. Every other failure mode (401, 403, 429, 5xx, network, parse) throws per Rule 4. Projected cost ≈ $0.36/month at current volume.
+- **New `community` source category** for third-party sources. Joins `core` and `extended`. Intended for informational signal; consumers should treat as lower-reliability than first-party sources. Dashboard renders as a third group below Core/Extended.
+- **Twenty new community sources** (17 → 37 total):
+  - **GitHub commits (6)**: `anthropics/claude-cookbooks`, `anthropics/skills`, `anthropics/claude-plugins-official`, `anthropics/claude-code` (pre-release signal — composite `uniqueKey` prevents collision with the existing `npm-claude-code` release signal), `affaan-m/everything-claude-code`, `sickn33/antigravity-awesome-skills`.
+  - **Reddit (5)**: `r/ClaudeCode`, `r/ClaudeAI`, `r/claude`, `r/claudeskills`, `r/Claudeopus` (uses `mode: "new"` with `minScore: 20` for low-traffic substantive-post detection).
+  - **Hacker News (1)**: anthropic.com / claude.ai / claude.com mentions.
+  - **Twitter / X (8)**: `@AnthropicAI`, `@claudeai`, `@ClaudeDevs`, `@bcherny`, `@TheAmolAvasare`, `@felixrieseberg`, `@noahzweben`, `@janleike`. All verified active and on-topic via live twitterapi.io API at implementation time.
+- **`TWITTERAPI_IO_KEY` GitHub Actions secret** (optional). Scraper gracefully returns `[]` when absent.
+- **`src/github-auth.js`** (`githubHeaders()`) extracted to eliminate 3× header-construction duplication across GitHub scrapers.
+- **OPML feed now emits a third `Community` outline group**. Previously silently dropped community-category sources.
+- **Feed schema extensibility policy** formalized in `docs/FEED-SCHEMA.md` — the set of `sourceCategory` values is open; new values may be added in minor releases; consumers must handle unknown values gracefully.
+- Three new `docs/TROUBLESHOOTING.md` entries (Reddit 403, Twitter 0 items, GitHub commits missing human-authored commit).
+
+### Changed
+
+- `public/index.html` dashboard renders a third `Community` group in the source table. Matches the existing grouped-sub-header pattern — no new filter UI, no layout changes.
+- `.github/workflows/scrape.yml` now passes `TWITTERAPI_IO_KEY` to the scraper step (one-line env addition; only workflow-file change in v1.4.0).
+- `src/feed/opml.js`: `generateOpml()` now takes an optional `sources` argument for testability (default remains the imported sources list).
+- `docs/spec/SPEC.md` Non-Goals refined: paid third-party APIs are acceptable for `community`-category sources when they implement graceful-skip-on-missing-credential, cost is documented, and the source functions with or without the credential. twitterapi.io is the sole current instance.
+
+### Migration
+
+No migration required for existing consumers. The feed envelope version remains `"1.0"`. Consumers that treat `sourceCategory` as an open/extensible field (the documented contract) need no changes. Consumers with strict two-value enumerations must widen to include `"community"` or, better, handle unknown values gracefully.
+
+TypeScript consumers of the client library: update to `@sefaertunc/anthropic-watch-client@1.0.1` (shipped simultaneously) for the widened type union covering both `Item.sourceCategory` and `SourceResult.category`.
+
+### Notes
+
+- First scheduled cron run after this release will emit a backfill burst — each of the 20 new sources emits its initial limit (mostly 10–20 items). Expected, not a regression; matches the precedent of v1.1.0 and prior source-addition releases.
+- Twitter free-tier rate limit is 1 req / 5 s. `fetchWithRetry` honors `Retry-After` on 429s; under `runWithConcurrency(4)` the 8 Twitter sources queue naturally via backoff. No special handling required.
+
 ## [1.3.0] - 2026-04-23
 
 A monorepo restructuring release introducing the first-party consumer SDK. The scraper is unchanged — no source additions, no scraper logic changes, no feed schema changes. The new `@sefaertunc/anthropic-watch-client` package ships at 1.0.0 simultaneously, published separately to npm.
