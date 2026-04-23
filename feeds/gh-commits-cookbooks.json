@@ -1,0 +1,122 @@
+{
+  "version": "1.0",
+  "title": "anthropic-watch — anthropics/claude-cookbooks (main commits)",
+  "description": "Monitoring Anthropic sources for changes",
+  "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
+  "generator": "anthropic-watch",
+  "ttl": 1440,
+  "generated": "2026-04-23T14:38:56.934Z",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "753ddfe",
+      "title": "Merge pull request #526 from anthropics/sre-incident-response-agent-fixes",
+      "date": "2026-04-11T00:33:35Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/753ddfe35fdc7e310a45cadcfe314ba6809672f8",
+      "snippet": "fix(managed_agents): Fix console image, missing fixture, and summary blurb",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "753ddfe|gh-commits-cookbooks"
+    },
+    {
+      "id": "355d201",
+      "title": "chore(registry): bump SRE incident responder date to 2026-04-10",
+      "date": "2026-04-11T00:12:21Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/355d2011d91a3d37e7d9999ec275732e26dcd439",
+      "snippet": null,
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "355d201|gh-commits-cookbooks"
+    },
+    {
+      "id": "2aae611",
+      "title": "fix(managed_agents): add missing checkout-svc.log fixture for SRE cookbook",
+      "date": "2026-04-11T00:09:44Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/2aae6112fbb5a1fc1a5544cfd9906aa54a8313aa",
+      "snippet": "The SRE incident responder notebook mounts logs/checkout-svc.log as a session resource, but the fixture didn't make it into the public repo during the initial managed_agents import (root .gitignore has *.log). Force-add the file so readers can run the notebook end-to-end.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "2aae611|gh-commits-cookbooks"
+    },
+    {
+      "id": "11be135",
+      "title": "fix(managed_agents): SRE registry summary + use raw URL for console image",
+      "date": "2026-04-10T23:46:27Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/11be1356d0f9e0716abfe4d92d9a09849bc0c3c1",
+      "snippet": "- registry.yaml: rewrite SRE incident responder description with the   on-call-flow framing. - sre_incident_responder.ipynb: replace the attachment: image ref with a   self-closed <img> pointing at the raw.githubusercontent URL (matches   data_analyst_agent / slack_data_bot). The platform's MDX rend",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "11be135|gh-commits-cookbooks"
+    },
+    {
+      "id": "b96dc04",
+      "title": "Merge pull request #516 from anthropics/mnowicki/cma-versioning-header-fix",
+      "date": "2026-04-09T01:57:10Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/b96dc048794747788e5479079c3116a976e9cece",
+      "snippet": "Print 'v1 results:' header before score loop",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "b96dc04|gh-commits-cookbooks"
+    },
+    {
+      "id": "9164000",
+      "title": "Print 'v1 results:' header before score loop",
+      "date": "2026-04-09T01:53:05Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/9164000ad1bba2feb0b67af686f1b2a3f39df561",
+      "snippet": "VS Code's notebook output renderer strips leading whitespace from the first line of stdout, so the api-platform row rendered two columns left of the others. A header line at position 0 absorbs the strip and the data rows stay aligned.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "9164000|gh-commits-cookbooks"
+    },
+    {
+      "id": "8f6e61a",
+      "title": "Merge pull request #511 from anthropics/charmaine/fix-managed-agents-mdx-formatting",
+      "date": "2026-04-08T22:41:01Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/8f6e61acf266c1f036ca7691a32b226ddef1a0f7",
+      "snippet": "fix(managed_agents): unwrap markdown paragraphs for MDX rendering",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "8f6e61a|gh-commits-cookbooks"
+    },
+    {
+      "id": "370c1f5",
+      "title": "fix(registry): correct SRE incident responder published date to 2026-04-08",
+      "date": "2026-04-08T22:38:11Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/370c1f5d24d05603ecfa648d2d40369413dd3f40",
+      "snippet": null,
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "370c1f5|gh-commits-cookbooks"
+    },
+    {
+      "id": "65da848",
+      "title": "fix(managed_agents): address review — blockquotes, source normalization",
+      "date": "2026-04-08T22:07:08Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/65da848d7632a11c3ee692ef2e39c23f088d2729",
+      "snippet": "- Join multi-line blockquotes in sre_incident_responder (Next steps)   and data_analyst_agent (Warning) onto single lines so inline links   and prose render correctly in MDX - Remove trailing empty-string source elements in sre_incident_responder   markdown cells (reflow artifact) - Normalize slack_",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "65da848|gh-commits-cookbooks"
+    },
+    {
+      "id": "09b8972",
+      "title": "fix(managed_agents): unwrap markdown paragraphs for MDX rendering",
+      "date": "2026-04-08T21:58:24Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/09b89727477b38b14bf2007a73d2d0c4d8eb2450",
+      "snippet": "The docs site's MDX renderer treats single newlines as hard breaks, so hard-wrapped source paragraphs rendered with mid-sentence line breaks (most visibly, inline links appearing alone on their own line).  - Reflow all prose paragraphs to single lines across 8 notebooks - Convert the 4-space-indente",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "09b8972|gh-commits-cookbooks"
+    }
+  ]
+}

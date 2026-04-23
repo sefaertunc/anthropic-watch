@@ -367,6 +367,9 @@
           const extended = report.sources.filter(
             (s) => s.category === "extended",
           );
+          const community = report.sources.filter(
+            (s) => s.category === "community",
+          );
           tbody.textContent = "";
 
           function renderGroup(label, list) {
@@ -399,6 +402,7 @@
 
           renderGroup("Core", core);
           renderGroup("Extended", extended);
+          renderGroup("Community", community);
         }
       }
 

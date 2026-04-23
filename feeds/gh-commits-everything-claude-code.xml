@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>anthropic-watch — affaan-m/everything-claude-code (community resource list)</title>
+    <link>https://sefaertunc.github.io/anthropic-watch/</link>
+    <description>Monitoring Anthropic sources for changes</description>
+    <generator>anthropic-watch</generator>
+    <ttl>1440</ttl>
+    <lastBuildDate>Thu, 23 Apr 2026 14:38:56 GMT</lastBuildDate>
+    <item>
+      <title>docs: fix plugin quick start for continuous learning v2 (#1546)</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/4e66b2882da9afb9747468b08a253ca2f09c85f3</link>
+      <guid isPermaLink="false">4e66b28</guid>
+      <pubDate>Tue, 21 Apr 2026 22:41:36 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(observe): skip Windows AppInstallerPythonRedirector.exe in resolve_python_cmd (#1511)</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/e63241c6993eb78eea1c635e174e159e052293dd</link>
+      <guid isPermaLink="false">e63241c</guid>
+      <pubDate>Tue, 21 Apr 2026 22:39:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>On Windows 10/11 without Python installed from the Microsoft Store, the &quot;App Execution Alias&quot; stubs at %LOCALAPPDATA%\Microsoft\WindowsApps\python.exe and python3.exe are symlinks to AppInstallerPythonRedirector.exe. These stubs neither launch Python nor honor `-c`; calls print a bare &quot;Python &quot; line</description>
+    </item>
+    <item>
+      <title>fix(continuous-learning-v2): accept claude-desktop as valid entrypoint (#1522)</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/81bde5c3cd1c282fbd6009230c88c94c7057c6e1</link>
+      <guid isPermaLink="false">81bde5c</guid>
+      <pubDate>Tue, 21 Apr 2026 22:37:23 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: fix bottom overflow in hero PNG, tighten stats labels (#1535)</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/602894efdd87cf7562bc6cdba9f51409a4fc1e4d</link>
+      <guid isPermaLink="false">602894e</guid>
+      <pubDate>Tue, 21 Apr 2026 22:36:59 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The merged hero was being clipped at the bottom by the Puppeteer capture because the HTML body used flex-centering with 24px padding, shifting the stage below the viewport top.  - Captures now flush to (0,0) via a min-width 1300px media-query wrapper   so the in-browser preview keeps its padding but</description>
+    </item>
+    <item>
+      <title>fix(hooks): avoid Claude Code v2.1.116 argv-dup bug in settings.local.json (#1524)</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/df9a478ea1dba0d7bae20862784e31a29f0cbf6b</link>
+      <guid isPermaLink="false">df9a478</guid>
+      <pubDate>Tue, 21 Apr 2026 22:35:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: resolve Claude Code Bash hook &quot;cannot execute binary file&quot; on Windows  Root cause in ~/.claude/settings.local.json (user-global): 1. UTF-8 BOM + CRLF line endings left by patch_settings_cl_v2_simple.ps1 2. Double-wrapped command &quot;\&quot;bash.exe\&quot; \&quot;wrapper.sh\&quot;&quot; broke Windows    argument splittin</description>
+    </item>
+    <item>
+      <title>fix: install native Cursor hook and MCP config (#1543)</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/92e0c7e9ff9202b60da34659204420aea487f71f</link>
+      <guid isPermaLink="false">92e0c7e</guid>
+      <pubDate>Tue, 21 Apr 2026 22:35:21 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: install native cursor hook and MCP config  * fix: avoid false healthy stdio mcp probes</description>
+    </item>
+    <item>
+      <title>docs: separate plugin install from full manual install (#1544)</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/8c422a76f4e330f13bded314bb2b4255315e4109</link>
+      <guid isPermaLink="false">8c422a7</guid>
+      <pubDate>Tue, 21 Apr 2026 22:28:52 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #1540 from suusuu0927/claude/install-hook-wrapper-argv-dup-fix-20260422</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/8ae1499122cbfc657a7e93b573f19fc4592898db</link>
+      <guid isPermaLink="false">8ae1499</guid>
+      <pubDate>Tue, 21 Apr 2026 22:19:16 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix(hooks): rewrite install_hook_wrapper.ps1 to avoid argv-dup bug</description>
+    </item>
+    <item>
+      <title>Merge pull request #1542 from suusuu0927/claude/patch-settings-simple-fix-20260422</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/c42818f1032c3a405ae2b540cb31f98c2669892b</link>
+      <guid isPermaLink="false">c42818f</guid>
+      <pubDate>Tue, 21 Apr 2026 22:18:47 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix(hooks): rewrite patch_settings_cl_v2_simple.ps1 to avoid argv-dup bug</description>
+    </item>
+    <item>
+      <title>Merge pull request #1495 from ratorin/fix/session-end-transcript-path-isolation</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/601c626b0336a4ae27edf4302d9f6e7a59a7b3e3</link>
+      <guid isPermaLink="false">601c626</guid>
+      <pubDate>Tue, 21 Apr 2026 22:14:23 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix(hooks): isolate session-end.js filename using transcript_path UUID (#1494)</description>
+    </item>
+  </channel>
+</rss>

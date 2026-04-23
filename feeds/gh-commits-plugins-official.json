@@ -1,0 +1,122 @@
+{
+  "version": "1.0",
+  "title": "anthropic-watch — anthropics/claude-plugins-official (main commits)",
+  "description": "Monitoring Anthropic sources for changes",
+  "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
+  "generator": "anthropic-watch",
+  "ttl": 1440,
+  "generated": "2026-04-23T14:38:56.936Z",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "cf62a6c",
+      "title": "Merge pull request #1439 from anthropics/add-datadog",
+      "date": "2026-04-21T21:04:18Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/cf62a6c02dc03db88da8eb7c61bdb9fd88da6326",
+      "snippet": "Add datadog plugin",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "cf62a6c|gh-commits-plugins-official"
+    },
+    {
+      "id": "3bd94cc",
+      "title": "Bump SHA pins for 39 plugins (>7d stale) (#1502)",
+      "date": "2026-04-21T19:56:31Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/3bd94cc81028f23b95efb924df3bb3b4f49c5808",
+      "snippet": "Rebased on latest main to resolve conflict with cockroachdb unpin (#1514) and liquid-lsp addition (#1520). Excludes netsuite-suitecloud (4d).",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "3bd94cc|gh-commits-plugins-official"
+    },
+    {
+      "id": "a8be018",
+      "title": "Merge pull request #1514 from anthropics/update-cockroachdb",
+      "date": "2026-04-21T19:38:05Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/a8be0183174c7696e06d83f710fdb93f0e36d2f8",
+      "snippet": "Update cockroachdb plugin — add author + category, bump SHA",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "a8be018|gh-commits-plugins-official"
+    },
+    {
+      "id": "33e62b9",
+      "title": "Remove SHA pin from cockroachdb entry",
+      "date": "2026-04-21T19:32:10Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/33e62b9bd6048b9ec86abafe901710222984fd88",
+      "snippet": "Let installs follow the repo's default branch instead of a fixed SHA. Removes the plugin from the weekly SHA-bump rotation and lets developer updates reach users directly on `claude plugin install`.",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "33e62b9|gh-commits-plugins-official"
+    },
+    {
+      "id": "9f103c6",
+      "title": "Add liquid-lsp plugin (#1520)",
+      "date": "2026-04-21T18:07:52Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/9f103c621dbe3d3c5b5862e43b2cc56986f18239",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "9f103c6|gh-commits-plugins-official"
+    },
+    {
+      "id": "caa8c1a",
+      "title": "Update cockroachdb description + author per developer request",
+      "date": "2026-04-21T17:33:39Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/caa8c1a539e1a8f1a1d72eb82789d22f8db0a5d8",
+      "snippet": "- Description: expand to reflect current capabilities (14 tools, 2 MCP   backends, 3 agents, 32 skills, safety hooks) - Author: \"CockroachDB\" → \"Cockroach Labs\" (company name)",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "caa8c1a|gh-commits-plugins-official"
+    },
+    {
+      "id": "33fd73c",
+      "title": "Update cockroachdb plugin — add author + category, bump SHA",
+      "date": "2026-04-21T12:03:06Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/33fd73c8b96880d1b62246560d3abbdd7798b88f",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "33fd73c|gh-commits-plugins-official"
+    },
+    {
+      "id": "777db5c",
+      "title": "Add liquid-skills plugin (#1507)",
+      "date": "2026-04-20T21:01:55Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/777db5c30b30fd1809cdc0ed26a6b2cec57628dd",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "777db5c|gh-commits-plugins-official"
+    },
+    {
+      "id": "aeecad8",
+      "title": "fix(amplitude): use git-subdir source to point at plugins/amplitude (#1505)",
+      "date": "2026-04-20T19:34:29Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/aeecad8f431a434040719fab6434dbecae7d5b4e",
+      "snippet": "The amplitude entry used source type \"url\" which clones the root of https://github.com/amplitude/mcp-marketplace — a multi-plugin repo where the actual plugin lives at plugins/amplitude/. Claude Code found no skills there, so /reload-plugins loaded 0 skills for amplitude.  Switching to \"git-subdir\" ",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "aeecad8|gh-commits-plugins-official"
+    },
+    {
+      "id": "bb77301",
+      "title": "Consolidate Oracle NetSuite skills into a single plugin (#1464)",
+      "date": "2026-04-17T21:03:25Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/bb7730114d873b91acd477e696066f217f882391",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "bb77301|gh-commits-plugins-official"
+    }
+  ]
+}
