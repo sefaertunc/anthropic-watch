@@ -6,6 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 22 Apr 2026 07:53:47 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 08:00:17 GMT</lastBuildDate>
+    <item>
+      <title>0.1.65</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.1.65</guid>
+      <pubDate>Thu, 23 Apr 2026 08:00:09 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- Batch session summaries: Added SessionStore.listsessionsummaries() optional protocol method and foldsessionsummary() helper for O(1)-per-session list views. Stores that maintain append-time summary sidecars can now serve listsessionsfromstore() without loading full transcripts, reduci</description>
+    </item>
   </channel>
 </rss>

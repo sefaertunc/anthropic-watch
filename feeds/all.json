@@ -5,58 +5,107 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-04-22T07:53:46.980Z",
-  "itemCount": 5,
+  "generated": "2026-04-23T08:00:17.083Z",
+  "itemCount": 9,
   "items": [
     {
-      "id": "0.2.117",
-      "title": "0.2.117",
-      "date": "2026-04-22T07:53:45.064Z",
+      "id": "0.1.65",
+      "title": "0.1.65",
+      "date": "2026-04-23T08:00:09.293Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "New Features\n- Batch session summaries: Added SessionStore.listsessionsummaries() optional protocol method and foldsessionsummary() helper for O(1)-per-session list views. Stores that maintain append-time summary sidecars can now serve listsessionsfromstore() without loading full transcripts, reduci",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.1.65|agent-sdk-py-changelog"
+    },
+    {
+      "id": "0.2.118",
+      "title": "0.2.118",
+      "date": "2026-04-23T08:00:09.025Z",
       "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Updated to parity with Claude Code v2.1.117",
+      "snippet": "- Added Options.managedSettings for embedders to pass policy-tier settings to the spawned CLI in-memory, honored below IT-controlled managed sources",
       "source": "agent-sdk-ts-changelog",
       "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog"
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.2.118|agent-sdk-ts-changelog"
     },
     {
-      "id": "2.1.117",
-      "title": "2.1.117",
-      "date": "2026-04-22T07:53:44.422Z",
+      "id": "2.1.118",
+      "title": "2.1.118",
+      "date": "2026-04-23T08:00:08.026Z",
       "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Forked subagents can now be enabled on external builds by setting CLAUDECODEFORKSUBAGENT=1\n- Agent frontmatter mcpServers are now loaded for main-thread agent sessions via --agent\n- Improved /model: selections now persist across restarts even when the project pins a different model, and the startu",
+      "snippet": "- Added vim visual mode (v) and visual-line mode (V) with selection, operators, and visual feedback\n- Merged /cost and /stats into /usage — both remain as typing shortcuts that open the relevant tab\n- Create and switch between named custom themes from /theme, or hand-edit JSON files in ~/.claude/the",
       "source": "claude-code-changelog",
       "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog"
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.118|claude-code-changelog"
     },
     {
-      "id": "v1.0.103",
-      "title": "v1.0.103",
-      "date": "2026-04-22T00:05:53Z",
-      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.103",
-      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.103",
+      "id": "v1.0.104",
+      "title": "v1.0.104",
+      "date": "2026-04-23T00:43:31Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.104",
+      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.104",
       "source": "claude-code-action",
       "sourceCategory": "extended",
-      "sourceName": "Claude Code Action Releases"
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.104|claude-code-action"
     },
     {
-      "id": "v2.1.117",
-      "title": "v2.1.117",
-      "date": "2026-04-22T00:04:40Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.117",
-      "snippet": "What's changed\n- Forked subagents can now be enabled on external builds by setting CLAUDECODEFORKSUBAGENT=1\n- Agent frontmatter mcpServers are now loaded for main-thread agent sessions via --agent\n- Improved /model: selections now persist across restarts even when the project pins a different model,",
+      "id": "v2.1.118",
+      "title": "v2.1.118",
+      "date": "2026-04-23T00:42:21Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.118",
+      "snippet": "What's changed\n- Added vim visual mode (v) and visual-line mode (V) with selection, operators, and visual feedback\n- Merged /cost and /stats into /usage — both remain as typing shortcuts that open the relevant tab\n- Create and switch between named custom themes from /theme, or hand-edit JSON files i",
       "source": "claude-code-releases",
       "sourceCategory": "core",
-      "sourceName": "Claude Code Releases"
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.118|claude-code-releases"
     },
     {
-      "id": "2.1.117",
-      "title": "@anthropic-ai/claude-code@2.1.117",
-      "date": "2026-04-21T21:54:08.640Z",
+      "id": "9tyl1z4b03cs",
+      "title": "MCP apps unavailable on Claude.ai",
+      "date": "2026-04-23T00:41:43.270Z",
+      "url": "https://stspg.io/rx62k66jm0lj",
+      "snippet": "[minor] resolved — This incident has been resolved.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "9tyl1z4b03cs|status-page"
+    },
+    {
+      "id": "2.1.118",
+      "title": "@anthropic-ai/claude-code@2.1.118",
+      "date": "2026-04-22T23:48:56.690Z",
       "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
       "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
       "source": "npm-claude-code",
       "sourceCategory": "core",
-      "sourceName": "Claude Code npm Package"
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.118|npm-claude-code"
+    },
+    {
+      "id": "https://www.anthropic.com/research/economic-index-survey-announcement",
+      "title": "Announcing the Anthropic Economic Index Survey ",
+      "date": "2026-04-22T14:27:03.434Z",
+      "url": "https://www.anthropic.com/research/economic-index-survey-announcement",
+      "snippet": "We're launching the Anthropic Economic Index Survey, a monthly survey conducted through Anthropic Interviewer.",
+      "source": "blog-research",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Research Blog",
+      "uniqueKey": "https://www.anthropic.com/research/economic-index-survey-announcement|blog-research"
+    },
+    {
+      "id": "https://www.anthropic.com/research/81k-economics",
+      "title": "What 81,000 people told us about the economics of AI",
+      "date": "2026-04-22T14:12:30.673Z",
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "snippet": "Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.",
+      "source": "blog-research",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Research Blog",
+      "uniqueKey": "https://www.anthropic.com/research/81k-economics|blog-research"
     }
   ]
 }

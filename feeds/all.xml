@@ -6,51 +6,84 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 22 Apr 2026 07:53:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 08:00:17 GMT</lastBuildDate>
     <item>
-      <title>0.2.117</title>
+      <title>0.1.65</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.1.65</guid>
+      <pubDate>Thu, 23 Apr 2026 08:00:09 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- Batch session summaries: Added SessionStore.listsessionsummaries() optional protocol method and foldsessionsummary() helper for O(1)-per-session list views. Stores that maintain append-time summary sidecars can now serve listsessionsfromstore() without loading full transcripts, reduci</description>
+    </item>
+    <item>
+      <title>0.2.118</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.117</guid>
-      <pubDate>Wed, 22 Apr 2026 07:53:45 GMT</pubDate>
+      <guid isPermaLink="false">0.2.118</guid>
+      <pubDate>Thu, 23 Apr 2026 08:00:09 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.117</description>
+      <description>- Added Options.managedSettings for embedders to pass policy-tier settings to the spawned CLI in-memory, honored below IT-controlled managed sources</description>
     </item>
     <item>
-      <title>2.1.117</title>
+      <title>2.1.118</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.117</guid>
-      <pubDate>Wed, 22 Apr 2026 07:53:44 GMT</pubDate>
+      <guid isPermaLink="false">2.1.118</guid>
+      <pubDate>Thu, 23 Apr 2026 08:00:08 GMT</pubDate>
       <category>claude-code-changelog</category>
-      <description>- Forked subagents can now be enabled on external builds by setting CLAUDECODEFORKSUBAGENT=1
-- Agent frontmatter mcpServers are now loaded for main-thread agent sessions via --agent
-- Improved /model: selections now persist across restarts even when the project pins a different model, and the startu</description>
+      <description>- Added vim visual mode (v) and visual-line mode (V) with selection, operators, and visual feedback
+- Merged /cost and /stats into /usage — both remain as typing shortcuts that open the relevant tab
+- Create and switch between named custom themes from /theme, or hand-edit JSON files in ~/.claude/the</description>
     </item>
     <item>
-      <title>v1.0.103</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.103</link>
-      <guid isPermaLink="false">v1.0.103</guid>
-      <pubDate>Wed, 22 Apr 2026 00:05:53 GMT</pubDate>
+      <title>v1.0.104</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.104</link>
+      <guid isPermaLink="false">v1.0.104</guid>
+      <pubDate>Thu, 23 Apr 2026 00:43:31 GMT</pubDate>
       <category>claude-code-action</category>
-      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.103</description>
+      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.104</description>
     </item>
     <item>
-      <title>v2.1.117</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.117</link>
-      <guid isPermaLink="false">v2.1.117</guid>
-      <pubDate>Wed, 22 Apr 2026 00:04:40 GMT</pubDate>
+      <title>v2.1.118</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.118</link>
+      <guid isPermaLink="false">v2.1.118</guid>
+      <pubDate>Thu, 23 Apr 2026 00:42:21 GMT</pubDate>
       <category>claude-code-releases</category>
       <description>What&apos;s changed
-- Forked subagents can now be enabled on external builds by setting CLAUDECODEFORKSUBAGENT=1
-- Agent frontmatter mcpServers are now loaded for main-thread agent sessions via --agent
-- Improved /model: selections now persist across restarts even when the project pins a different model,</description>
+- Added vim visual mode (v) and visual-line mode (V) with selection, operators, and visual feedback
+- Merged /cost and /stats into /usage — both remain as typing shortcuts that open the relevant tab
+- Create and switch between named custom themes from /theme, or hand-edit JSON files i</description>
     </item>
     <item>
-      <title>@anthropic-ai/claude-code@2.1.117</title>
+      <title>MCP apps unavailable on Claude.ai</title>
+      <link>https://stspg.io/rx62k66jm0lj</link>
+      <guid isPermaLink="false">9tyl1z4b03cs</guid>
+      <pubDate>Thu, 23 Apr 2026 00:41:43 GMT</pubDate>
+      <category>status-page</category>
+      <description>[minor] resolved — This incident has been resolved.</description>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.118</title>
       <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
-      <guid isPermaLink="false">2.1.117</guid>
-      <pubDate>Tue, 21 Apr 2026 21:54:08 GMT</pubDate>
+      <guid isPermaLink="false">2.1.118</guid>
+      <pubDate>Wed, 22 Apr 2026 23:48:56 GMT</pubDate>
       <category>npm-claude-code</category>
       <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>Announcing the Anthropic Economic Index Survey </title>
+      <link>https://www.anthropic.com/research/economic-index-survey-announcement</link>
+      <guid isPermaLink="false">https://www.anthropic.com/research/economic-index-survey-announcement</guid>
+      <pubDate>Wed, 22 Apr 2026 14:27:03 GMT</pubDate>
+      <category>blog-research</category>
+      <description>We&apos;re launching the Anthropic Economic Index Survey, a monthly survey conducted through Anthropic Interviewer.</description>
+    </item>
+    <item>
+      <title>What 81,000 people told us about the economics of AI</title>
+      <link>https://www.anthropic.com/research/81k-economics</link>
+      <guid isPermaLink="false">https://www.anthropic.com/research/81k-economics</guid>
+      <pubDate>Wed, 22 Apr 2026 14:12:30 GMT</pubDate>
+      <category>blog-research</category>
+      <description>Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.</description>
     </item>
   </channel>
 </rss>
