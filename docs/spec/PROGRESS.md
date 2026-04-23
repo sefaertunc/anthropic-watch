@@ -2,8 +2,8 @@
 
 ## Current Status
 
-**Phase:** Phase 4 — Schema Hardening (production, v1.2.0 shipped)
-**Last Updated:** 2026-04-22
+**Phase:** Phase 5 — Client Library (production, v1.3.0 shipped; client `@sefaertunc/anthropic-watch-client@1.0.0` ready for npm publish)
+**Last Updated:** 2026-04-23
 
 ## Completed
 
@@ -33,17 +33,28 @@
   - Reference fixtures shipped at `docs/fixtures/{all,run-report}.sample.json` with `docs/fixtures/README.md` documenting provenance
   - Prose sweeps removing hardcoded source counts from README body copy, `docs/SOURCES.md`, `docs/ARCHITECTURE.md`, `docs/WORCLAUDE-INTEGRATION.md`, and `test/capture-fixtures.js`
   - RSS `guid` composite-key change deferred to v2.0 (one-shot re-notification burst inappropriate for a point release; batched with future envelope `version` bump)
+- [x] Phase 5 — Client Library (v1.3.0, 2026-04-23)
+  - Monorepo restructuring: `packages/client/` sibling to the scraper at repo root. No workspaces tooling — manual cross-package coordination by design.
+  - `@sefaertunc/anthropic-watch-client@1.0.0` — zero-dep, ESM-only, Node 18+. Public API: `AnthropicWatchClient` class (`fetchAllItems`, `fetchSourceItems`, `fetchRunReport`, `filterNew`), pure helpers (`uniqueKey`, `filterNew`, `dedupe`), typed error hierarchy (`AnthropicWatchError`, `FeedVersionMismatchError`, `FeedFetchError`, `FeedMalformedError`), constants (`SUPPORTED_FEED_VERSION`, `DEFAULT_BASE_URL`).
+  - JSDoc-sourced TypeScript types generated via `tsc --emitDeclarationOnly` at publish time; `dist/index.d.ts` transitively surfaces `Item`/`FeedEnvelope`/`RunReport` via `export * from "./types.js"`.
+  - 53 client tests: helpers, errors, client (mocked fetch), fixture byte-identity with `docs/fixtures/`, and drift-protection for the FEED-SCHEMA Programmatic Consumption example (extracts the inline `run(seenSet)` function, runs it twice with a shared `Set`, asserts dedup invariants).
+  - FEED-SCHEMA Programmatic Consumption example restructured to export `async function run(seenSet)`; inline example retained as canonical reference for non-JS consumers and kept honest by the drift test.
+  - Root `vitest.config.js` excludes `packages/**` so the scraper test command stays unchanged. One-time `test.yml` `pull_request` trigger expansion to `[develop, main]` so feature PRs to develop get CI coverage.
+  - Scraper code, state, workflows (except `test.yml` trigger), and feed output all unchanged from v1.2.0.
 
 ## In Progress
 
-Nothing open. The next change should begin with a SPEC check and a fresh feature branch.
+**Release execution for v1.3.0 (scraper) and client 1.0.0 (npm publish).** Release PR from develop → main is the next step after this sync commit. Pre-publish gates (placeholder sweep, `npm ci` + `npm run types` + dist inspection + consumer TS smoke in scratch dir + `npm pack --dry-run`) must ALL pass before `npm publish --access public` from `packages/client/`.
 
 ## Next Steps
 
-1. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
-2. Watch the dashboard and run-report for sources with `consecutiveFailures > 0` — that's the signal for scraper rot (usually a site redesign).
-3. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
-4. Phase 5 items (live drift detection, dashboard browser tests, more consumers) are conditional — only pursue when a concrete need emerges.
+1. Merge release PR (develop → main). Tag `v1.3.0` on main and create the GitHub release.
+2. Run Phase 6.2.5 pre-publish verification gates for the client package, then `cd packages/client && npm ci && npm run types && npm publish --access public`. Confirm `npm whoami` is correct before publishing; `--access public` is required for scoped packages.
+3. Phase 7 post-publish: `npm view @sefaertunc/anthropic-watch-client` returns correct metadata; live install smoke in `/tmp/aw-client-smoke` fetches items and shows `uniqueKey` populated.
+4. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
+5. Watch the dashboard and run-report for sources with `consecutiveFailures > 0` — that's the signal for scraper rot (usually a site redesign).
+6. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
+7. Subpackage CI job (`cd packages/client && npm ci && npm test` in a matrix step) is deferred — pick up in v1.3.1 if `packages/client/` changes in follow-up PRs start slipping through without test coverage.
 
 ## Blockers
 
