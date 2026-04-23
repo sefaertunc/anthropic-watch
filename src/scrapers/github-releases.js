@@ -1,5 +1,6 @@
 import { fetchSource } from "../fetch-source.js";
 import { logGitHubRateLimit } from "../fetch-with-retry.js";
+import { githubHeaders } from "../github-auth.js";
 
 function stripMarkdown(text) {
   if (!text) return "";
@@ -12,13 +13,12 @@ function stripMarkdown(text) {
 }
 
 export async function scrapeGithubReleases(source) {
-  const headers = { Accept: "application/vnd.github+json" };
-  if (process.env.GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-  }
-
   const url = `https://api.github.com/repos/${source.owner}/${source.repo}/releases?per_page=30`;
-  const res = await fetchSource(url, { headers }, source.fixtureFile);
+  const res = await fetchSource(
+    url,
+    { headers: githubHeaders() },
+    source.fixtureFile,
+  );
   if (!source.fixtureFile) logGitHubRateLimit(res);
 
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);

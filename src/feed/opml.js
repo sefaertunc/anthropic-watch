@@ -1,11 +1,12 @@
 import { XMLBuilder } from "fast-xml-parser";
-import { sources } from "../sources.js";
+import { sources as defaultSources } from "../sources.js";
 
 const BASE_URL = "https://sefaertunc.github.io/anthropic-watch/feeds";
 
-export function generateOpml() {
+export function generateOpml(sources = defaultSources) {
   const core = sources.filter((s) => s.category === "core");
   const extended = sources.filter((s) => s.category === "extended");
+  const community = sources.filter((s) => s.category === "community");
 
   function makeOutlines(list) {
     return list.map((s) => ({
@@ -33,6 +34,10 @@ export function generateOpml() {
           {
             "@_text": "Extended",
             outline: makeOutlines(extended),
+          },
+          {
+            "@_text": "Community",
+            outline: makeOutlines(community),
           },
         ],
       },

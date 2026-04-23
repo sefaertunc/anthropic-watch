@@ -124,6 +124,87 @@ Add an entry to the `sources` array in `src/sources.js`. Templates for each scra
 }
 ```
 
+### github-commits
+
+For repositories that ship via direct commits to a branch rather than tagged releases. Typically `category: "community"`.
+
+```js
+{
+  key: "gh-commits-my-repo",
+  name: "my-org/my-repo (main commits)",
+  url: "https://github.com/my-org/my-repo",
+  category: "community",
+  scraperType: "github-commits",
+  owner: "my-org",
+  repo: "my-repo",
+  branch: "main",        // optional, default "main"
+  limit: 10,             // optional, default 10
+  excludeBots: true,     // optional, default true — filters login/name matching /\[bot\]$/i
+}
+```
+
+Notes: the bot filter catches GitHub App-style logins (`dependabot[bot]`, `renovate[bot]`). Classic-account bots without brackets (e.g. `renovate-bot`) will slip through — set `excludeBots: false` on noisy repos or accept the noise.
+
+### reddit-subreddit
+
+```js
+{
+  key: "reddit-mysub",
+  name: "r/MySub (top/day)",
+  url: "https://www.reddit.com/r/MySub/",
+  category: "community",
+  scraperType: "reddit-subreddit",
+  subreddit: "MySub",          // required, no "r/" prefix
+  mode: "top",                 // "top" | "new" | "hot"
+  timeWindow: "day",           // only meaningful for mode:"top"; default "day"
+  limit: 10,
+  minScore: 0,                 // drop posts below this score after fetch
+}
+```
+
+Notes: Reddit blocks generic User-Agents; the scraper sends a UA derived from root `package.json` version — you don't configure it. In `top` mode, stickied posts are filtered to avoid daily recurrence; in `new` mode they pass through.
+
+### hn-algolia
+
+```js
+{
+  key: "hn-my-filter",
+  name: "Hacker News — my-filter",
+  url: "https://hn.algolia.com/?q=my-query",
+  category: "community",
+  scraperType: "hn-algolia",
+  query: "my-query OR another-query",   // Algolia query syntax
+  tags: "story",                         // optional, default "story"
+  limit: 20,
+}
+```
+
+Notes: Algolia returns `hits:[]` for malformed queries without error. The scraper logs an info line on zero hits so a silently-broken query is visible in run output. Ask HN stories (no URL) fall back to the HN comment link.
+
+### twitter-account
+
+Requires the `TWITTERAPI_IO_KEY` GitHub Actions secret for production. Omitted locally without the key — the scraper returns `[]` gracefully.
+
+```js
+{
+  key: "twitter-my-handle",
+  name: "@my_handle (description)",
+  url: "https://x.com/my_handle",
+  category: "community",
+  scraperType: "twitter-account",
+  username: "my_handle",                 // no @ prefix
+  limit: 10,
+}
+```
+
+Notes:
+
+- **Credential:** `TWITTERAPI_IO_KEY` env var is read in the scraper. Missing-or-empty key triggers the only Rule-4 carve-out in the scraper — return `[]` immediately without fetch, log info line, no `consecutiveFailures` tick.
+- **All other failures throw.** 401 (bad key), 403, 429, 5xx, network errors — all surface as run-report errors. `fetchWithRetry` handles 429 with `Retry-After` automatically.
+- **Field mapping:** tweet IDs are strings (Twitter snowflake IDs exceed `2^53`), `createdAt` arrives in Twitter legacy format (`"Wed Apr 22 17:36:07 +0000 2026"`) and is converted to ISO-8601 by the scraper. The API's `tweet.url` field is used directly (host is `x.com`, not `twitter.com`).
+- **Pricing:** twitterapi.io pay-per-request — 8 accounts × 10 tweets × 30 days ≈ $0.36/month. Free tier is 1 req / 5 s; `fetchWithRetry` backs off on 429.
+- **Retweets** pass through — titles starting with `RT @` are self-identifying. Replies are filtered at the API level via `includeReplies=false`.
+
 ---
 
 ## 3. Investigate the Source
