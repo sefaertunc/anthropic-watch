@@ -110,15 +110,38 @@ This preserves existing `knownIds` so the next run doesn't flood feeds with "new
 
 ### Reddit source returns HTTP 403
 
-**Symptoms:** One or more `reddit-*` sources show errors in the run report; error message reads `HTTP 403 for https://www.reddit.com/...`.
+**Symptoms:** One or more `reddit-*` sources show errors in the run report; error message reads `HTTP 403 for https://www.reddit.com/...` or `HTTP 403 for https://oauth.reddit.com/...`.
 
-**Cause:** Reddit blocks requests with generic User-Agents and aggressively rate-limits unrecognized clients. It can also change its UA acceptance policy without notice.
+**Cause:** Reddit blocks unauthenticated traffic from datacenter IP ranges — including GitHub Actions runners. This has been Reddit policy since the 2023 API pricing changes and is persistent, not transient. The scraper's User-Agent is NOT the issue: the same request from a residential IP using the scraper's exact UA succeeds (HTTP 200 with `x-ratelimit-remaining: 99.0`). A 403 from a datacenter IP is an environmental block, not a scraper bug or UA drift. As of v1.4.1 the scraper uses OAuth2 against `oauth.reddit.com` to bypass the unauthenticated-IP block — see "Reddit sources return 0 items" below for credential setup.
 
 **Fix:**
 
-1. Check the UA the scraper is sending — it's built at module load in `src/scrapers/reddit-subreddit.js` from the root `package.json` version: `sefaertunc/anthropic-watch:v${pkg.version} (by /u/sefaertunc)`. Reddit's public API guidance recommends this format.
-2. If Reddit has tightened its policy and the UA no longer works, check Reddit's current public-API docs for the new format and update the UA string in `reddit-subreddit.js`. Do not emulate a browser UA (ToS violation).
-3. If Reddit revokes public JSON endpoints entirely for all UAs, the `reddit-*` sources should be removed in a patch release.
+1. If the pipeline is running from a residential environment (local dev, self-hosted runner on a home network), unauthenticated access typically works — check that `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` are NOT set in that environment (they force the OAuth path even when unauthenticated would succeed).
+2. If running from GitHub Actions or any datacenter context, configure OAuth credentials per the next entry. A persistent 403 on `oauth.reddit.com` (after credentials are configured correctly) would indicate Reddit has extended its datacenter-IP block to the OAuth endpoint — in that case, see `v1.4.1-reddit-diagnostic.md` for the escalation path (Path B source removal, or a self-hosted-runner split).
+3. Do NOT emulate a browser UA — it is a Reddit ToS violation and does not bypass the datacenter block anyway.
+
+### Reddit sources return 0 items
+
+**Symptoms:** All `reddit-*` sources consistently report 0 items in the run report with `status: ok`.
+
+**Cause:** Expected behavior when `REDDIT_CLIENT_ID` or `REDDIT_CLIENT_SECRET` is not configured. This is a deliberate graceful-skip — forks and local dev sessions run cleanly without configuring OAuth. The scraper returns `[]` without any fetch when either env var is absent or empty.
+
+**Fix:** Register a Reddit script-app and set the two secrets.
+
+> **November 2025 policy change:** Reddit replaced self-service API-key issuance with the [Responsible Builder Policy](https://support.reddithelp.com/hc/en-us/articles/42728983564564-Responsible-Builder-Policy). New apps are pre-gated — submitting the create-app form no longer mints credentials instantly; it triggers a manual review. Reddit's stated turnaround is ~7 days. Credentials issued before the policy change keep working.
+
+1. Log in to Reddit from a residential IP (Reddit's app-creation page is also datacenter-IP-blocked). Go to `https://www.reddit.com/prefs/apps`.
+2. Scroll to the bottom and click **"are you a developer? create an app..."**. Fill in: **Name** `anthropic-watch`, **App type** `script` (critical — the free client-credentials flow), **Redirect URI** `http://localhost:8080` (unused but required).
+3. Submit the Responsible Builder Policy application via Reddit's Developer Support form (linked from the policy page). Use the field values and use-case text in [`reddit-oauth-setup.md`](reddit-oauth-setup.md). Wait for approval (~7 days).
+4. Once approved, the credentials become available on the app detail page: the **client ID** (short ~14-char string directly under the words "personal use script") and the **secret** (~27-char string labeled "secret").
+5. Add both as GitHub Actions secrets:
+
+   ```bash
+   gh secret set REDDIT_CLIENT_ID --body "<client-id>"
+   gh secret set REDDIT_CLIENT_SECRET --body "<secret>"
+   ```
+
+The scraper picks up the credentials on the next cron run. No cost; Reddit's OAuth2 client-credentials tier is free. Rate limit is 100 QPM per OAuth client — well above our ≤5 reddit requests/run usage.
 
 ### Twitter sources return 0 items
 

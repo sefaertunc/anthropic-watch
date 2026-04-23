@@ -30,6 +30,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
         run: node src/cli.js
 
       - name: Write job summary
@@ -37,24 +39,44 @@ jobs:
         run: node src/summary.js >> $GITHUB_STEP_SUMMARY
 
       - name: Commit state changes
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "anthropic-watch[bot]"
           git config user.email "anthropic-watch[bot]@users.noreply.github.com"
-          git add state/last-seen.json
-          if git diff --cached --quiet; then
+          if git diff --quiet -- state/last-seen.json; then
             echo "No state changes to commit"
             exit 0
           fi
+          # Stash the scraper's state-file content so we can re-apply it after
+          # a hard-reset in the retry loop. State is monotonically-regenerated
+          # each run (Rule 8), so "local wins" is the correct merge semantic
+          # on conflict.
+          STATE_CONTENT=$(cat state/last-seen.json)
+          git add state/last-seen.json
           git commit -m "chore: update last-seen state"
           for i in 1 2 3; do
-            if git pull --rebase origin main && git push; then
+            if git push origin main; then
               exit 0
             fi
+            # Push failed (non-fast-forward or conflict). Abort any in-flight
+            # rebase, resync to origin/main, re-apply state, commit fresh,
+            # retry on the next iteration.
+            git rebase --abort 2>/dev/null || true
+            git fetch origin main
+            git reset --hard origin/main
+            printf '%s' "$STATE_CONTENT" >state/last-seen.json
+            if git diff --quiet -- state/last-seen.json; then
+              echo "state already present on origin/main after resync; done"
+              exit 0
+            fi
+            git add state/last-seen.json
+            git commit -m "chore: update last-seen state"
             sleep $((i * 5))
           done
           exit 1
 
       - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.SCRAPER_PAT }}

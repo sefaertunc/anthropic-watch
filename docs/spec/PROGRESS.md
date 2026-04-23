@@ -2,8 +2,8 @@
 
 ## Current Status
 
-**Phase:** Phase 6 — Community Sources (production, v1.4.0 shipped; paired client `@sefaertunc/anthropic-watch-client@1.0.1` ready for npm publish)
-**Last Updated:** 2026-04-23
+**Phase:** Phase 6 — Community Sources (production, v1.4.1 production fixes merged to develop; release PR to main pending)
+**Last Updated:** 2026-04-24
 
 ## Completed
 
@@ -51,21 +51,29 @@
   - Feed schema extensibility policy formalized in `docs/FEED-SCHEMA.md` — consumers must handle unknown `sourceCategory` values gracefully; the set is open.
   - SPEC.md Non-Goals refined: paid third-party APIs acceptable for `community`-category sources with graceful-skip + documented cost + fork-compatible. twitterapi.io at ≈$0.36/month is the sole current instance.
   - 30 new tests (145 total): 6 github-commits, 7 reddit-subreddit, 3 hn-algolia, 8 twitter-account (including Rule-4 graceful-skip carve-out coverage), 3 category pass-through feed tests, 3 OPML community-group round-trip tests.
+- [x] v1.4.1 — Production Fixes (2026-04-24)
+  - Reddit OAuth2: scraper switched from anonymous `www.reddit.com/*.json` (403 from GitHub Actions datacenter-IP range) to `oauth.reddit.com` with client_credentials bearer token, module-scope memoized token (one fetch per pipeline run shared across all 5 reddit-\* sources), one-shot 401 retry, graceful-skip when `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` absent. Credentials provisioning gated by Reddit's Responsible Builder Policy (Nov 2025 deprecation of self-service API keys) — sources return `[]` gracefully until approval lands.
+  - Twitter rate-gate: module-scope chained-Promise `waitForSlot()` paces all `twitter-account` calls to 1 req / 6 s, serializing across all 8 Twitter sources so twitterapi.io's free-tier limiter doesn't 429. Adds ~+40 s pipeline wall-clock; accepted tradeoff.
+  - Workflow hardening (`.github/workflows/scrape.yml`): state-commit retry replaced with stash-and-resync (no more broken rebase state between iterations); commit + deploy steps gated by `if: github.ref == 'refs/heads/main'` so feature-branch preflights run read-only; `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` env pass-through added.
+  - Docs: `docs/TROUBLESHOOTING.md` Reddit 403 section rewritten (real cause: datacenter-IP block) + new OAuth setup entry flagging the November 2025 Responsible Builder Policy gate; `docs/reddit-oauth-setup.md` added as the RBP submission reference (fields, use case, subreddits, volume, data handling, compliance).
+  - 12 new tests (157 total): Reddit OAuth graceful-skip / token fetch / 401 retry / fixture short-circuit, Twitter gate timing + reset helper, workflow main-branch guards + Reddit env pass-through.
+  - No schema changes, no new sources, no new scraper types, no client-library release. CHANGELOG honesty correction for the v1.4.0 "queue naturally via backoff" claim.
 
 ## In Progress
 
-**Release execution for v1.4.0 (scraper) and client 1.0.1 (npm publish).** Release PR from develop → main is the next step after this sync commit. After the release PR merges to main: tag `v1.4.0`, GitHub release, back-merge to develop, then `cd packages/client && npm ci && npm run types && npm publish` for the client 1.0.1 paired release.
+**Release execution for v1.4.1 (scraper).** Release PR from develop → main is the next step after this sync commit. After the release PR merges to main: tag `v1.4.1`, GitHub release, back-merge to develop. Reddit sources remain in graceful-skip mode until Reddit's Responsible Builder Policy application is approved (stated ~7-day turnaround); they come online automatically on the next cron run after `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` are added as repo secrets. Remote routine `trig_012EHpWTm2hU7jK2wdWKk2Fi` checks in on 2026-05-01 and opens a status issue either way.
 
 ## Next Steps
 
-1. Merge release PR (develop → main). Tag `v1.4.0` on main and create the GitHub release.
+1. Merge release PR (develop → main). Tag `v1.4.1` on main and create the GitHub release.
 2. Back-merge `main` into `develop` after the release PR merges.
-3. Publish client: `cd packages/client && npm ci && npm run types && npm publish` (from `main` post-merge; confirm `npm whoami` first). Smoke test: `npm view @sefaertunc/anthropic-watch-client@1.0.1 dist.tarball` resolves; live install smoke in `/tmp` with a `community`-category item type-check.
-4. **First scheduled cron run after main merge** — watch the run report. Expected backfill burst of ~200–300 new items from the 20 new sources (normal per v1.1.0 / v1.2.0 precedent). Twitter sources populate only if `TWITTERAPI_IO_KEY` repo secret is configured (confirmed provisioned during v1.4.0 implementation).
-5. Watch the dashboard and run-report for sources with `consecutiveFailures > 0` — that's the signal for scraper rot (usually a site redesign, Reddit UA policy tightening, or twitterapi.io shape change).
-6. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
-7. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
-8. Subpackage CI job (`cd packages/client && npm ci && npm test` in a matrix step) remains deferred — pick up in a patch release if `packages/client/` changes start slipping through without coverage.
+3. Submit Reddit Responsible Builder Policy application via Reddit's Developer Support form (use `docs/reddit-oauth-setup.md` as the field reference). Add `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` as repo secrets once approval lands.
+4. Carry-over from v1.4.0 cycle: publish client `@sefaertunc/anthropic-watch-client@1.0.1` — `cd packages/client && npm ci && npm run types && npm publish` (from `main` post-merge; confirm `npm whoami` first). Smoke test: `npm view @sefaertunc/anthropic-watch-client@1.0.1 dist.tarball` resolves; live install smoke in `/tmp` with a `community`-category item type-check. (npm currently has 1.0.0; local `packages/client/package.json` is at 1.0.1.)
+5. **First scheduled cron run after main merge** — watch the run report for the Twitter spacing gate (no 429s across 8 sources) and the workflow rebase-retry loop under real state-commit contention.
+6. Watch the dashboard and run-report for sources with `consecutiveFailures > 0` — that's the signal for scraper rot (site redesigns, policy changes, API shape drift).
+7. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
+8. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
+9. Subpackage CI job (`cd packages/client && npm ci && npm test` in a matrix step) remains deferred — pick up in a patch release if `packages/client/` changes start slipping through without coverage.
 
 ## Blockers
 
