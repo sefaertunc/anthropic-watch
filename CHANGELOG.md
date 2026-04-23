@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.3.0] - 2026-04-23
+
+A monorepo restructuring release introducing the first-party consumer SDK. The scraper is unchanged — no source additions, no scraper logic changes, no feed schema changes. The new `@sefaertunc/anthropic-watch-client` package ships at 1.0.0 simultaneously, published separately to npm.
+
+### Added
+
+- **`packages/client/` directory** containing the new `@sefaertunc/anthropic-watch-client` package. Published to npm as version `1.0.0`. Zero runtime dependencies, Node 18+ required. Encapsulates the v1.2.0 `uniqueKey` consumption pattern — version gating, composite-key deduplication with `${id}|${source}` fallback, typed error hierarchy (`AnthropicWatchError`, `FeedVersionMismatchError`, `FeedFetchError`, `FeedMalformedError`) — so consumers don't each reinvent it.
+- **Client library documentation pointers** in `docs/FEED-SCHEMA.md` (pointer note prepended to "Programmatic Consumption" recommending the npm package) and `README.md` ("For consumers" section).
+- **Drift-protection test** at `packages/client/test/docs-example.test.js` that extracts the `docs/FEED-SCHEMA.md` Programmatic Consumption JavaScript example, executes it against the reference fixture with a mocked fetch and in-memory seen-set, and asserts the two-run dedup invariant. If the inline example diverges from library behavior, CI fails.
+- **Fixture-identity test** at `packages/client/test/fixtures.test.js` asserting byte-equality between the subpackage's fixture copies and `docs/fixtures/*.sample.json`, so producer fixture regeneration forces client-side re-copy in the same PR.
+- **Handshake note** in `docs/WORCLAUDE-INTEGRATION.md` naming the npm package and flagging Worclaude v2.6.0 migration as separately tracked.
+- **Consumer-side duplicates troubleshooting pointer** in `docs/TROUBLESHOOTING.md` distinguishing scraper-side from consumer-side `id`-only dedup bugs.
+
+### Changed
+
+- **Repository is now a monorepo.** Root remains the scraper as before; `packages/client/` is the new sibling. No workspace tooling (Turborepo, Nx, pnpm workspaces, npm workspaces) was introduced — cross-package coordination is manual and deliberate.
+- **Root `package.json` version bumped to `1.3.0`.** The scraper continues to version independently of the client (client at `1.0.0`, scraper at `1.3.0`).
+- **Root `vitest.config.js` added** excluding `packages/**` so `npm test` at the repo root continues to run only the scraper suite. The client runs via `cd packages/client && npm test`.
+- **`docs/FEED-SCHEMA.md` Programmatic Consumption example restructured** to export `async function run(seenSet)`. Driver code (read state, call `run`, persist) remains for non-JS consumers and evaluators. The restructuring enables the drift-protection test to drive the example directly against a shared seen-set across two simulated runs.
+- **`.github/workflows/test.yml`** `pull_request` triggers expanded from `[main]` to `[develop, main]`. One-time carve-out; only workflow change in this release.
+
+### Migration
+
+No migration required for existing anthropic-watch feed consumers — the scraper output is byte-for-byte identical to v1.2.0. Consumers interested in adopting the client library can run `npm install @sefaertunc/anthropic-watch-client` and follow the patterns in that package's README.
+
 ## [1.2.0] - 2026-04-22
 
 A minor release addressing schema documentation and contract gaps surfaced by the integration audit of Worclaude's `anthropic-watch` consumer. JSON feed changes are strictly additive — non-breaking for existing consumers. The feed envelope `version` stays `"1.0"` because the new `uniqueKey` field is optional (may be absent in archived pre-v1.2.0 feeds), fitting the Versioning Policy's "new optional fields" exemption.
