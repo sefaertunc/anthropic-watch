@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.4.1] - 2026-04-24
+
+Patch release fixing two production issues surfaced in the v1.4.0 live smoke test. No schema changes, no new sources, no new scraper types.
+
+### Fixed
+
+- **Reddit sources no longer fail with HTTP 403 from GitHub Actions runners.** The `reddit-subreddit` scraper now authenticates against `oauth.reddit.com` using `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET`. Graceful-skip when credentials are absent (forks, local dev without setup), mirroring the v1.4.0 `TWITTERAPI_IO_KEY` pattern. Residential-IP (unauthenticated) requests continue to work identically. Includes a bounded one-shot 401 retry with token refresh to recover from upstream token revocation or expiry within long-running local sessions.
+- **Twitter sources no longer fail with HTTP 429 under normal pipeline concurrency.** Added a module-scope minimum-spacing gate in `src/scrapers/twitter-account.js` pacing all Twitter calls to 1 req / 6 s, safely inside twitterapi.io's 1 req / 5 s free-tier limit. Twitter lane wall-clock grows by ~40 s per run; run-report 429 count drops to 0.
+- **`.github/workflows/scrape.yml` state-commit retry loop** now resyncs to `origin/main` and re-applies the scraper's state file after a push failure, instead of the v1.4.0 loop's broken `git pull --rebase` retry that bricked on any content conflict. Two scratch-remote verifier scripts (`scripts/verify-rebase-retry-{happy,conflict}.sh`) exercise both paths end-to-end.
+- **`.github/workflows/scrape.yml` Commit + Deploy steps are now guarded by `if: github.ref == 'refs/heads/main'`.** Manual `workflow_dispatch` on non-main branches (feature branches, develop preflight) now runs the scraper read-only — no state push, no gh-pages deploy. Enables safe preflight verification from the GitHub Actions IP range before release.
+- **`docs/TROUBLESHOOTING.md` Reddit 403 entry** now correctly identifies the datacenter-IP block as the cause instead of blaming the User-Agent. New entry added for Reddit credential setup.
+
+### Changed
+
+- **CHANGELOG honesty note (v1.4.0 correction):** the v1.4.0 Notes entry claimed the 8 Twitter sources would "queue naturally via backoff" under `runWithConcurrency(4)`. That claim was wrong; twitterapi.io does not emit `Retry-After`, so `fetchWithRetry` exhausted its 3-attempt budget inside the rate window. v1.4.1's spacing gate is the actual mechanism.
+
+### Notes
+
+- New optional repo secrets `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET`. Forks without them run cleanly via graceful-skip. Setup: `docs/TROUBLESHOOTING.md` — "Reddit sources return 0 items".
+- Pipeline wall-clock per run grows by roughly +40 s due to Twitter spacing. No downstream timeouts affected (gh-pages deploy fan-out is not time-gated).
+- No client-library (`@sefaertunc/anthropic-watch-client`) release is paired with v1.4.1 — no API surface changes.
+- Live-API e2e test tier (drafted in `v1.4.1-live-e2e-prompt.md`) is explicitly deferred to v1.4.2 — its assertions assume Reddit and Twitter work in production contexts, which this release establishes.
+
 ## [1.4.0] - 2026-04-23
 
 The largest source expansion since v1.0.0. Adds four new scraper types, twenty new community sources, and the `community` source category for third-party signal. Triggers a paired `@sefaertunc/anthropic-watch-client@1.0.1` release widening the `sourceCategory` type union.

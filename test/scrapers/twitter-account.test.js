@@ -4,9 +4,50 @@ import { readFileSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { tmpdir } from "node:os";
-import { scrapeTwitterAccount } from "../../src/scrapers/twitter-account.js";
+import {
+  scrapeTwitterAccount,
+  waitForSlot,
+  _resetGateForTests,
+  MIN_SPACING_MS,
+} from "../../src/scrapers/twitter-account.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+describe("twitter-account: waitForSlot spacing gate", () => {
+  beforeEach(() => {
+    _resetGateForTests();
+    vi.useFakeTimers();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("should not block the first call (gate starts open)", async () => {
+    const t0 = Date.now();
+    await waitForSlot();
+    expect(Date.now() - t0).toBe(0);
+  });
+
+  it("should block the second call for at least MIN_SPACING_MS", async () => {
+    await waitForSlot();
+    const t0 = Date.now();
+    const p = waitForSlot();
+    await vi.advanceTimersByTimeAsync(MIN_SPACING_MS);
+    await p;
+    expect(Date.now() - t0).toBeGreaterThanOrEqual(MIN_SPACING_MS);
+  });
+
+  it("should chain correctly across three calls (not just pairwise)", async () => {
+    await waitForSlot();
+    const t0 = Date.now();
+    const p2 = waitForSlot();
+    const p3 = waitForSlot();
+    await vi.advanceTimersByTimeAsync(MIN_SPACING_MS * 2);
+    await Promise.all([p2, p3]);
+    expect(Date.now() - t0).toBeGreaterThanOrEqual(MIN_SPACING_MS * 2);
+  });
+});
 
 describe("scrapeTwitterAccount", () => {
   let tmpDir;
@@ -15,6 +56,7 @@ describe("scrapeTwitterAccount", () => {
   beforeEach(async () => {
     tmpDir = await mkdtemp(join(tmpdir(), "aw-test-"));
     savedKey = process.env.TWITTERAPI_IO_KEY;
+    _resetGateForTests();
   });
 
   afterEach(async () => {
