@@ -20,7 +20,7 @@ Anthropic ships fast across many surfaces (blog, engineering blog, research, mul
 - **No browser automation.** All HTML uses `fetch` + `cheerio`. If a source requires JS rendering, solve it with a new parse mode (RSC extraction, API discovery), not a headless browser.
 - **No authenticated Anthropic surfaces.** Public web only; no API keys, no Console, no billing, no logged-in pages.
 - **No npm publish for the scraper.** The scraper ships as GitHub Releases; it is infrastructure, not a package. The sibling `@sefaertunc/anthropic-watch-client` library at `packages/client/` IS published to npm — but that is a separately-versioned product (see Repository Layout and Release Policy), not the scraper itself.
-- **No paid dependencies.** Every source must be fetchable from a stock GitHub Actions runner with only `GITHUB_TOKEN`.
+- **No paid dependencies for `core` or `extended` sources.** Every core/extended source must be fetchable from a stock GitHub Actions runner with only `GITHUB_TOKEN`. `community`-category sources MAY use a paid third-party API **iff** (1) the scraper implements graceful-skip-on-missing-credential — absent credentials return `[]` without throwing and without incrementing `consecutiveFailures`; (2) the monthly cost at documented volume is declared in the CHANGELOG and in the source's prose documentation; (3) forks of the repository, and local dev sessions without the credential, continue to work — the scraper MUST NOT fail when the key is absent. As of v1.4.0 the only instance is `twitterapi.io` at ≈$0.36/month. Adding another paid third-party API requires a new SPEC revision.
 - **No database or backing service.** State lives in a JSON file committed to `main`; feeds are static files on GitHub Pages.
 - **No workspace tooling in the monorepo.** No Turborepo, Nx, Lerna, pnpm workspaces, or npm workspaces. Two packages do not justify the weight; cross-package coordination is manual and deliberate.
 
@@ -162,13 +162,24 @@ Two independent versioning tracks:
 - [x] Scraper-side documentation pointers: `docs/FEED-SCHEMA.md` recommended-path note, `README.md` "For consumers" section, `docs/WORCLAUDE-INTEGRATION.md` handshake note, `docs/TROUBLESHOOTING.md` consumer-side duplicates pointer
 - [ ] Subpackage CI job (matrix step installing + testing `packages/client/` in CI) — deferred to v1.3.1 if it becomes friction
 
-### Phase 6 — Future / Conditional
+### Phase 6 — Community Sources (complete as of v1.4.0, 2026-04-23)
+
+- [x] Four new scraper types: `github-commits` (direct-commit activity on commits-only repos), `reddit-subreddit` (public Reddit JSON), `hn-algolia` (HN search), `twitter-account` (twitterapi.io)
+- [x] New `community` source category — third value joining `core` and `extended`. Dashboard renders as a third group; OPML feed emits a third `Community` outline group.
+- [x] 20 new sources (17 → 37 total): 6 GitHub-commits, 5 Reddit subs, 1 HN filter, 8 Twitter handles. All handles verified active and on-topic via live API at implementation time.
+- [x] `TWITTERAPI_IO_KEY` GitHub Actions secret (optional) with graceful-skip semantics in the Twitter scraper — forks and local dev sessions without the credential continue to work.
+- [x] Paired client release `@sefaertunc/anthropic-watch-client@1.0.1` widening both `Item.sourceCategory` and `SourceResult.category` TypeScript unions to include `'community'`.
+- [x] Feed schema extensibility policy formalized — the set of category values is open; new values may be added in minor releases; consumers must handle unknown values gracefully (Source Categories section of `docs/FEED-SCHEMA.md`).
+- [x] `src/github-auth.js` (`githubHeaders()`) helper extracted to eliminate 3× duplication across GitHub scrapers.
+
+### Phase 7 — Future / Conditional
 
 Only pursued if a concrete need emerges — not planned speculatively.
 
 - Automated "live drift" detection for the scraper (currently an accepted gap — consecutive-failure tracking + dashboard amber/red dots are considered sufficient)
 - Stronger browser testing for the dashboard (currently manual inspection only)
 - Additional downstream consumers beyond Worclaude (the client library now lowers the cost of each new consumer)
+- Subpackage CI job (matrix step installing + testing `packages/client/` in CI) — still deferred; pick up if `packages/client/` changes begin slipping through without coverage
 
 ## Accepted Limitations
 

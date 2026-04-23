@@ -12,7 +12,7 @@
  * @property {string} url
  * @property {string} snippet - Up to 300 chars.
  * @property {string} source
- * @property {'core' | 'extended'} sourceCategory
+ * @property {'core' | 'extended' | 'community'} sourceCategory
  * @property {string} sourceName
  */
 
@@ -51,7 +51,7 @@
  * @typedef {Object} SourceResult
  * @property {string} key
  * @property {string} name
- * @property {'core' | 'extended'} category
+ * @property {'core' | 'extended' | 'community'} category
  * @property {'ok' | 'error'} status
  * @property {number} newItemCount
  * @property {number} durationMs

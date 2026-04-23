@@ -13,10 +13,14 @@ import {
 } from "./state.js";
 import { scrapeGithubReleases } from "./scrapers/github-releases.js";
 import { scrapeGithubChangelog } from "./scrapers/github-changelog.js";
+import { scrapeGithubCommits } from "./scrapers/github-commits.js";
 import { scrapeNpmRegistry } from "./scrapers/npm-registry.js";
 import { scrapeBlogPage } from "./scrapers/blog-page.js";
 import { scrapeDocsPage } from "./scrapers/docs-page.js";
 import { scrapeStatusPage } from "./scrapers/status-page.js";
+import { scrapeRedditSubreddit } from "./scrapers/reddit-subreddit.js";
+import { scrapeHnAlgolia } from "./scrapers/hn-algolia.js";
+import { scrapeTwitterAccount } from "./scrapers/twitter-account.js";
 import { generateJsonFeed } from "./feed/json.js";
 import { generateRssFeed } from "./feed/rss.js";
 import { generateOpml } from "./feed/opml.js";
@@ -27,10 +31,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const scraperMap = {
   "github-releases": scrapeGithubReleases,
   "github-changelog": scrapeGithubChangelog,
+  "github-commits": scrapeGithubCommits,
   "npm-registry": scrapeNpmRegistry,
   "blog-page": scrapeBlogPage,
   "docs-page": scrapeDocsPage,
   "status-page": scrapeStatusPage,
+  "reddit-subreddit": scrapeRedditSubreddit,
+  "hn-algolia": scrapeHnAlgolia,
+  "twitter-account": scrapeTwitterAccount,
 };
 
 async function runWithConcurrency(tasks, limit = 4) {

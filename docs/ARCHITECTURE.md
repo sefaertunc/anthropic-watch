@@ -70,10 +70,14 @@ Every item returned by a scraper must have these 8 fields:
 | ------------------ | ------------------------------ | ------------------------------------------------- | --------------------------------------------- | ----------------------------- |
 | `github-releases`  | `scrapers/github-releases.js`  | GitHub REST API (`/repos/:owner/:repo/releases`)  | `tag_name`                                    | `published_at`                |
 | `github-changelog` | `scrapers/github-changelog.js` | GitHub Contents API (base64 decode)               | SHA-256 hash of file content (first 12 chars) | Current timestamp             |
+| `github-commits`   | `scrapers/github-commits.js`   | GitHub REST API (`/repos/:owner/:repo/commits`)   | Short SHA (first 7 chars)                     | `commit.author.date`          |
 | `npm-registry`     | `scrapers/npm-registry.js`     | npm registry API (`/latest` + full doc)           | Version string                                | `time[version]` from registry |
 | `blog-page`        | `scrapers/blog-page.js`        | fetch HTML + cheerio, with `parseMode` switch     | Post URL                                      | Parsed from page content      |
 | `docs-page`        | `scrapers/docs-page.js`        | fetch HTML + cheerio, with `parseMode` switch     | URL or SHA-256 hash                           | Parsed or current timestamp   |
 | `status-page`      | `scrapers/status-page.js`      | Statuspage.io REST API (`/api/v2/incidents.json`) | Incident ID                                   | `created_at`                  |
+| `reddit-subreddit` | `scrapers/reddit-subreddit.js` | Reddit public JSON (`/r/:sub/:mode.json`)         | Reddit `t3_*` name                            | `created_utc` (ISO-converted) |
+| `hn-algolia`       | `scrapers/hn-algolia.js`       | HN Algolia (`/api/v1/search_by_date`)             | Algolia `objectID`                            | `created_at`                  |
+| `twitter-account`  | `scrapers/twitter-account.js`  | twitterapi.io (`/twitter/user/last_tweets`)       | Tweet ID (string)                             | `createdAt` (ISO-converted)   |
 
 ### blog-page Parse Modes
 

@@ -108,6 +108,34 @@ This preserves existing `knownIds` so the next run doesn't flood feeds with "new
 
 **Consumer-side duplicates (not a scraper bug):** If duplicates appear in your downstream application even though they don't appear in the published feed, you're deduplicating on `id` alone rather than on the composite `uniqueKey`. The [`@sefaertunc/anthropic-watch-client`](../packages/client) npm package handles this correctly — or see the **Programmatic Consumption** section of `docs/FEED-SCHEMA.md` for the raw pattern.
 
+### Reddit source returns HTTP 403
+
+**Symptoms:** One or more `reddit-*` sources show errors in the run report; error message reads `HTTP 403 for https://www.reddit.com/...`.
+
+**Cause:** Reddit blocks requests with generic User-Agents and aggressively rate-limits unrecognized clients. It can also change its UA acceptance policy without notice.
+
+**Fix:**
+
+1. Check the UA the scraper is sending — it's built at module load in `src/scrapers/reddit-subreddit.js` from the root `package.json` version: `sefaertunc/anthropic-watch:v${pkg.version} (by /u/sefaertunc)`. Reddit's public API guidance recommends this format.
+2. If Reddit has tightened its policy and the UA no longer works, check Reddit's current public-API docs for the new format and update the UA string in `reddit-subreddit.js`. Do not emulate a browser UA (ToS violation).
+3. If Reddit revokes public JSON endpoints entirely for all UAs, the `reddit-*` sources should be removed in a patch release.
+
+### Twitter sources return 0 items
+
+**Symptoms:** All `twitter-*` sources consistently report 0 items in the run report.
+
+**Cause:** Expected behavior when `TWITTERAPI_IO_KEY` is not configured. This is a deliberate graceful-skip — forks and local runs work without the key; the scraper returns `[]` without attempting any fetch when the env var is absent or empty.
+
+**Fix:** Obtain a key from [twitterapi.io](https://twitterapi.io) and add it as a GitHub Actions secret named `TWITTERAPI_IO_KEY`. The scraper picks it up on the next cron run. Expected cost at current volume (8 accounts × 10 tweets × 30 days): ≈$0.36/month.
+
+### github-commits scraper is missing a real commit
+
+**Symptoms:** A human-authored commit is missing from the `gh-commits-*` feed.
+
+**Cause:** The scraper filters commits whose `author.login` (or `commit.author.name` when login is absent) matches `/\[bot\]$/i`. A human commits from an account whose login happens to end in `[bot]` would be filtered. Classic-account bots without brackets (`renovate-bot`, `copilot-swe-agent`) slip THROUGH the filter, which is a different problem.
+
+**Fix:** Set `excludeBots: false` on the specific source config in `src/sources.js` to disable the filter for that repo. Alternatively, if you suspect a specific login is matching when it shouldn't, check `src/scrapers/github-commits.js` and confirm the `BOT_LOGIN_RE` regex hasn't been broadened.
+
 ### RSS validation errors
 
 **Symptoms:** RSS readers reject or fail to parse `*.xml` feeds.

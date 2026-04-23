@@ -136,6 +136,71 @@ async function captureStatusPage(source) {
   ];
 }
 
+async function captureGithubCommits(source) {
+  const branch = source.branch ?? "main";
+  const limit = source.limit ?? 10;
+  const url = `https://api.github.com/repos/${source.owner}/${source.repo}/commits?per_page=${limit}&sha=${branch}`;
+  console.log(`  GET ${url}`);
+  const commits = await fetchJson(url, ghHeaders());
+  const trimmed = commits.slice(0, 5);
+  return [
+    { filename: `${source.key}.json`, data: JSON.stringify(trimmed, null, 2) },
+  ];
+}
+
+async function captureRedditSubreddit(source) {
+  const mode = source.mode;
+  const limit = source.limit ?? 10;
+  const timeWindow = source.timeWindow ?? "day";
+  const url = `https://www.reddit.com/r/${source.subreddit}/${mode}.json?limit=${limit}&t=${timeWindow}`;
+  // Reddit blocks generic UAs; match the scraper's UA format.
+  const redditUA = `sefaertunc/anthropic-watch:v${pkg.version} (by /u/sefaertunc)`;
+  console.log(`  GET ${url}`);
+  const json = await fetchJson(url, { "User-Agent": redditUA });
+  return [
+    { filename: `${source.key}.json`, data: JSON.stringify(json, null, 2) },
+  ];
+}
+
+async function captureHnAlgolia(source) {
+  const tags = source.tags ?? "story";
+  const limit = source.limit ?? 20;
+  const url = `https://hn.algolia.com/api/v1/search_by_date?query=${encodeURIComponent(
+    source.query,
+  )}&tags=${tags}&hitsPerPage=${limit}`;
+  console.log(`  GET ${url}`);
+  const json = await fetchJson(url);
+  // Trim hits to first 5 to keep fixture small while covering shape.
+  const trimmed = { ...json, hits: (json.hits ?? []).slice(0, 5) };
+  return [
+    { filename: `${source.key}.json`, data: JSON.stringify(trimmed, null, 2) },
+  ];
+}
+
+async function captureTwitterAccount(source) {
+  const key = process.env.TWITTERAPI_IO_KEY;
+  if (!key) {
+    console.log(
+      `  SKIP ${source.key} — TWITTERAPI_IO_KEY not set (fixture requires the paid credential)`,
+    );
+    return [];
+  }
+  const url = `https://api.twitterapi.io/twitter/user/last_tweets?userName=${encodeURIComponent(
+    source.username,
+  )}&includeReplies=false`;
+  console.log(`  GET ${url}`);
+  const json = await fetchJson(url, { "X-API-Key": key });
+  // Trim tweets to first 5 to keep fixture small while covering shape.
+  const tweets = (json.data?.tweets ?? []).slice(0, 5);
+  const trimmed = {
+    ...json,
+    data: { ...(json.data ?? {}), tweets },
+  };
+  return [
+    { filename: `${source.key}.json`, data: JSON.stringify(trimmed, null, 2) },
+  ];
+}
+
 // ---------------------------------------------------------------------------
 // Dispatcher
 // ---------------------------------------------------------------------------
@@ -146,6 +211,8 @@ async function captureSource(source) {
       return captureGithubReleases(source);
     case "github-changelog":
       return captureGithubChangelog(source);
+    case "github-commits":
+      return captureGithubCommits(source);
     case "npm-registry":
       return captureNpmRegistry(source);
     case "blog-page":
@@ -154,6 +221,12 @@ async function captureSource(source) {
       return captureDocsPage(source);
     case "status-page":
       return captureStatusPage(source);
+    case "reddit-subreddit":
+      return captureRedditSubreddit(source);
+    case "hn-algolia":
+      return captureHnAlgolia(source);
+    case "twitter-account":
+      return captureTwitterAccount(source);
     default:
       throw new Error(`Unknown scraperType: ${source.scraperType}`);
   }

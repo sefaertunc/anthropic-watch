@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.1] - 2026-04-23
+
+Paired release with `anthropic-watch` v1.4.0.
+
+### Changed
+
+- **Widened `Item.sourceCategory` and `SourceResult.category` type unions** from `'core' | 'extended'` to `'core' | 'extended' | 'community'`. Reflects the new `community` category introduced by `anthropic-watch` v1.4.0, which categorizes third-party sources (Reddit, Hacker News, Twitter/X, and GitHub commits on Anthropic-owned repositories that ship via direct commits rather than tagged releases). Runtime behavior is unchanged — the client has always passed through whatever string is present in the feed; this is a type-signature-only update for TypeScript consumers.
+
+### Migration
+
+No code changes required. TypeScript consumers pinned to client `^1.0.0` pick up the widened type automatically. Consumers with strict enumerations (`sourceCategory === 'core' || sourceCategory === 'extended'` as exhaustive checks) should update to include `'community'` or, better, handle unknown category values gracefully — the schema contract treats `category` as extensible.
+
 ## [1.0.0] - 2026-04-23
 
 Initial release of `@sefaertunc/anthropic-watch-client` — the official client library for consuming anthropic-watch feeds.
