@@ -1,5 +1,12 @@
 # @sefaertunc/anthropic-watch-client
 
+[![npm version](https://img.shields.io/npm/v/@sefaertunc/anthropic-watch-client?color=cb3837&logo=npm)](https://www.npmjs.com/package/@sefaertunc/anthropic-watch-client)
+[![node: 18+](https://img.shields.io/badge/node-%3E%3D18-brightgreen?logo=nodedotjs)](https://nodejs.org)
+[![zero dependencies](https://img.shields.io/badge/runtime%20deps-0-brightgreen)](./package.json)
+[![license: MIT](https://img.shields.io/npm/l/@sefaertunc/anthropic-watch-client)](../../LICENSE)
+
+[Install](#installation) · [Quick start](#quick-start) · [API](#api) · [Scraper repo](https://github.com/sefaertunc/anthropic-watch)
+
 Official client library for consuming [anthropic-watch](https://github.com/sefaertunc/anthropic-watch) feeds. Version-gated fetch, correct composite-key deduplication, typed errors. Zero runtime dependencies.
 
 ## What this is
@@ -9,6 +16,11 @@ Official client library for consuming [anthropic-watch](https://github.com/sefae
 **The scraper** ([anthropic-watch](https://github.com/sefaertunc/anthropic-watch)) produces those feeds. It runs on a GitHub Actions cron, publishes to GitHub Pages, and is **not** on npm — it is infrastructure, not a package.
 
 This is an unofficial community library. Anthropic does not maintain it. If Anthropic ships a first-party feed consumer, defer to that.
+
+## Why
+
+- **Correct deduplication by default** — composite `${id}|${source}` keys with fallback for archived pre-v1.2.0 feeds. Downstream apps that dedupe on `id` alone will drop real items when two sources happen to share an ID.
+- **Version-gated fetch** — refuses to return items from a feed envelope it doesn't understand (throws `FeedVersionMismatchError`). Upgrading the scraper's schema doesn't silently corrupt your consumer.
 
 ## Installation
 
@@ -88,70 +100,43 @@ try {
 
 The scraper's [`docs/FEED-SCHEMA.md`](https://github.com/sefaertunc/anthropic-watch/blob/main/docs/FEED-SCHEMA.md) contains a hand-rolled version of the same pattern without this library — useful for non-JS consumers or anyone evaluating the shape before adopting.
 
-## API reference
+## API
 
 ### `new AnthropicWatchClient(options?)`
 
-| Option    | Type           | Default                                         | Description                                                                     |
-| --------- | -------------- | ----------------------------------------------- | ------------------------------------------------------------------------------- |
-| `baseUrl` | `string`       | `https://sefaertunc.github.io/anthropic-watch/` | Override the default feed host. Useful for self-hosters or local testing.       |
-| `fetch`   | `typeof fetch` | `globalThis.fetch`                              | Custom fetch implementation. Used by tests or non-Node environments.            |
-| `timeout` | `number`       | `10000`                                         | Request timeout in ms. Aborts the underlying fetch via an internal AbortSignal. |
+| Option    | Type           | Default                                         | Description                                                      |
+| --------- | -------------- | ----------------------------------------------- | ---------------------------------------------------------------- |
+| `baseUrl` | `string`       | `https://sefaertunc.github.io/anthropic-watch/` | Override the default feed host — self-hosters or local testing.  |
+| `fetch`   | `typeof fetch` | `globalThis.fetch`                              | Custom fetch implementation, used by tests or non-Node runtimes. |
+| `timeout` | `number`       | `10000`                                         | Request timeout in ms, wired through an internal `AbortSignal`.  |
 
-Throws `TypeError` if no fetch implementation is available (e.g. Node <18 with no polyfill and no `options.fetch`).
+Throws `TypeError` if no fetch is available (Node <18 with no polyfill and no `options.fetch`).
 
 ### Methods
 
-#### `client.fetchAllItems({ signal? }): Promise<Item[]>`
-
-Fetches `feeds/all.json`. Validates `feed.version === "1.0"`, asserts `feed.items` is an array, returns `feed.items`.
-
-#### `client.fetchSourceItems(sourceKey, { signal? }): Promise<Item[]>`
-
-Fetches `feeds/{sourceKey}.json`. Same validation as `fetchAllItems`. Throws `TypeError` for empty or non-string `sourceKey`. The source key is URL-encoded.
-
-#### `client.fetchRunReport({ signal? }): Promise<RunReport>`
-
-Fetches `feeds/run-report.json`. Validates version, asserts `report.summary` and `report.sources` shape, returns the full report.
-
-#### `client.filterNew(items, seenSet): Item[]`
-
-Instance-method mirror of the pure helper. Returns items whose `uniqueKey` is not in `seenSet`.
+| Method                                     | Returns              | Description                                                                    |
+| ------------------------------------------ | -------------------- | ------------------------------------------------------------------------------ |
+| `fetchAllItems({ signal? })`               | `Promise<Item[]>`    | Fetches `feeds/all.json`, validates envelope version, returns `feed.items`.    |
+| `fetchSourceItems(sourceKey, { signal? })` | `Promise<Item[]>`    | Fetches `feeds/{sourceKey}.json`. URL-encoded. Throws on empty/non-string key. |
+| `fetchRunReport({ signal? })`              | `Promise<RunReport>` | Fetches `feeds/run-report.json`, validates shape, returns the full report.     |
+| `filterNew(items, seenSet)`                | `Item[]`             | Items whose `uniqueKey` is not in `seenSet`. Mirror of the pure helper.        |
 
 ### Pure helpers
 
-#### `uniqueKey(item): string`
-
-Returns `item.uniqueKey ?? \`${item.id}|${item.source}\``. The fallback is important: items archived from pre-v1.2.0 feeds don't have the `uniqueKey` field.
-
-#### `filterNew(items, seenSet): Item[]`
-
-Returns items whose `uniqueKey` is not in the provided `Set`. Throws `TypeError` if `seenSet` is not a `Set` — a common mistake worth failing loudly on.
-
-#### `dedupe(items): Item[]`
-
-Removes duplicates within an array, keeping the first occurrence of each `uniqueKey`. Stable (preserves input order of kept items).
+| Helper                      | Description                                                                                                                             |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `uniqueKey(item)`           | Returns `item.uniqueKey` if present, else `` `${item.id}                                                                                | ${item.source}` `` — the fallback matters for items archived from pre-v1.2.0 feeds. |
+| `filterNew(items, seenSet)` | Items whose `uniqueKey` is not in `seenSet`. Throws `TypeError` if `seenSet` is not a `Set` — a common mistake worth failing loudly on. |
+| `dedupe(items)`             | Removes duplicates within an array, keeping the first occurrence of each `uniqueKey`. Stable.                                           |
 
 ### Constants
 
-- `SUPPORTED_FEED_VERSION: "1.0"` — the only feed envelope version this library speaks.
-- `DEFAULT_BASE_URL: "https://sefaertunc.github.io/anthropic-watch/"` — default feed host.
+- `SUPPORTED_FEED_VERSION` — `"1.0"`. The only feed envelope version this library speaks.
+- `DEFAULT_BASE_URL` — `"https://sefaertunc.github.io/anthropic-watch/"`.
 
-### Error classes
+### Errors
 
-All errors inherit from `AnthropicWatchError`, so consumers can catch one class to handle everything this library throws:
-
-```js
-try {
-  /* ... */
-} catch (err) {
-  if (err instanceof AnthropicWatchError) {
-    // library error
-  } else {
-    throw err;
-  }
-}
-```
+All errors extend `AnthropicWatchError`, so `catch (err) { if (err instanceof AnthropicWatchError) { … } }` catches everything this library throws.
 
 | Class                      | Thrown when                           | Carries                                      |
 | -------------------------- | ------------------------------------- | -------------------------------------------- |
@@ -177,6 +162,12 @@ The client appends `feeds/{name}.json` to the base URL. Trailing slashes are nor
 This library follows [semver](https://semver.org). Feed schema support is version-gated: the current `SUPPORTED_FEED_VERSION` is `"1.0"`. If anthropic-watch publishes a feed with a different version, the library throws `FeedVersionMismatchError` rather than silently returning items of unknown shape.
 
 When anthropic-watch bumps the feed envelope version (currently planned for a hypothetical v2.0 release), a new major version of this library will support the new version. Consumers can pin to a library major version matching the feed schema they understand.
+
+## Related
+
+- [anthropic-watch](https://github.com/sefaertunc/anthropic-watch) — the scraper that produces these feeds
+- [Feed schema reference](https://github.com/sefaertunc/anthropic-watch/blob/main/docs/FEED-SCHEMA.md) — JSON / RSS / OPML schema for hand-rolled consumers
+- [Changelog](./CHANGELOG.md) — release notes
 
 ## License
 
