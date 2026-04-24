@@ -1,10 +1,11 @@
 # Worclaude Integration
 
-> **v1.4.0 note:** The feed now includes a third `sourceCategory` value: `community`. Reddit, Hacker News, and GitHub-commits sources (on Anthropic-owned commits-only repos) carry `sourceCategory: "community"`. Worclaude's planned policy: **autonomously act on `core` changes** (create branches, open issues); **treat `community` changes as informational only** (log, surface in dashboards, do not take autonomous action). This is the recommended pattern for any downstream consumer. Update to `@sefaertunc/anthropic-watch-client@1.0.1` for the widened TypeScript type union if your consumer is type-checked.
+> **Current contract (as of v1.4.1):**
 >
-> **v1.3.0 note (retained):** The recommended way to consume these feeds is the `@sefaertunc/anthropic-watch-client` npm package ([packages/client/](../packages/client)). It encapsulates version gating, composite-key deduplication with `uniqueKey` fallback, and typed error handling. Worclaude's own consumer is planned to migrate to the client library in Worclaude v2.6.0.
->
-> **v1.2.0 note (retained):** The JSON feed includes a pre-computed `uniqueKey` field (`${id}|${source}`) on every item — consumers should use this directly for deduplication rather than computing the composite key themselves. RSS `guid` is unchanged and will change to the composite form in v2.0.
+> - Feeds include `sourceCategory` values `core`, `extended`, and `community`. Recommended downstream policy: **act autonomously on `core` changes** (branches, issues); **treat `community` as informational** (log and surface, do not autonomously act).
+> - Recommended consumer is the npm package [`@sefaertunc/anthropic-watch-client`](https://www.npmjs.com/package/@sefaertunc/anthropic-watch-client) — encapsulates version gating, composite-key deduplication with `uniqueKey` fallback, and typed errors. Worclaude's own migration is tracked separately (Worclaude v2.6.0).
+> - Every feed item carries `uniqueKey: "${id}|${source}"`. RSS `guid` remains `id`-only in v1.0 feeds; composite `guid` is deferred to feed v2.0.
+> - Feed envelope version is `"1.0"`. Consumers must check this and handle unknown versions gracefully — see [FEED-SCHEMA.md](./FEED-SCHEMA.md) for the versioning contract.
 
 ## Overview
 

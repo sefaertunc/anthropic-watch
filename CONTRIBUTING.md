@@ -1,6 +1,6 @@
 # Contributing to Anthropic Watch
 
-Thanks for your interest in contributing! This project monitors 16 Anthropic sources and publishes structured feeds. Contributions that add new sources, fix broken scrapers, or improve feed quality are especially welcome.
+Thanks for your interest in contributing! This project monitors public Anthropic and community sources and publishes structured feeds. Contributions that add new sources, fix broken scrapers, or improve feed quality are especially welcome.
 
 ## Getting Started
 
@@ -8,7 +8,6 @@ Thanks for your interest in contributing! This project monitors 16 Anthropic sou
 git clone https://github.com/sefaertunc/anthropic-watch.git
 cd anthropic-watch
 npm install
-npx playwright install chromium --with-deps
 ```
 
 Run the scraper locally:

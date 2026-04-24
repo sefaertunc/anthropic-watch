@@ -25,7 +25,7 @@ anthropic-watch is an open-source, non-commercial monitoring pipeline that
 tracks official Anthropic sources (blog, docs, status page, public GitHub
 repos, npm releases) and five Anthropic-focused subreddits. It publishes a
 daily RSS/JSON/OPML feed to GitHub Pages so developers can subscribe to a
-single consolidated feed instead of polling 17 sources manually. No data is
+single consolidated feed instead of polling each source manually. No data is
 resold, monetized, or used to train models.
 
 The API access need is read-only post listings from five public subreddits,
