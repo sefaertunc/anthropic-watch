@@ -66,18 +66,18 @@ Every item returned by a scraper must have these 8 fields:
 
 ## Scraper Types
 
-| Type               | File                           | API/Method                                        | ID Strategy                                   | Date Strategy                 |
-| ------------------ | ------------------------------ | ------------------------------------------------- | --------------------------------------------- | ----------------------------- |
-| `github-releases`  | `scrapers/github-releases.js`  | GitHub REST API (`/repos/:owner/:repo/releases`)  | `tag_name`                                    | `published_at`                |
-| `github-changelog` | `scrapers/github-changelog.js` | GitHub Contents API (base64 decode)               | SHA-256 hash of file content (first 12 chars) | Current timestamp             |
-| `github-commits`   | `scrapers/github-commits.js`   | GitHub REST API (`/repos/:owner/:repo/commits`)   | Short SHA (first 7 chars)                     | `commit.author.date`          |
-| `npm-registry`     | `scrapers/npm-registry.js`     | npm registry API (`/latest` + full doc)           | Version string                                | `time[version]` from registry |
-| `blog-page`        | `scrapers/blog-page.js`        | fetch HTML + cheerio, with `parseMode` switch     | Post URL                                      | Parsed from page content      |
-| `docs-page`        | `scrapers/docs-page.js`        | fetch HTML + cheerio, with `parseMode` switch     | URL or SHA-256 hash                           | Parsed or current timestamp   |
-| `status-page`      | `scrapers/status-page.js`      | Statuspage.io REST API (`/api/v2/incidents.json`) | Incident ID                                   | `created_at`                  |
-| `reddit-subreddit` | `scrapers/reddit-subreddit.js` | Reddit public JSON (`/r/:sub/:mode.json`)         | Reddit `t3_*` name                            | `created_utc` (ISO-converted) |
-| `hn-algolia`       | `scrapers/hn-algolia.js`       | HN Algolia (`/api/v1/search_by_date`)             | Algolia `objectID`                            | `created_at`                  |
-| `twitter-account`  | `scrapers/twitter-account.js`  | twitterapi.io (`/twitter/user/last_tweets`)       | Tweet ID (string)                             | `createdAt` (ISO-converted)   |
+| Type               | File                           | API/Method                                                                                                                                                           | ID Strategy                                   | Date Strategy                 |
+| ------------------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ----------------------------- |
+| `github-releases`  | `scrapers/github-releases.js`  | GitHub REST API (`/repos/:owner/:repo/releases`)                                                                                                                     | `tag_name`                                    | `published_at`                |
+| `github-changelog` | `scrapers/github-changelog.js` | GitHub Contents API (base64 decode)                                                                                                                                  | SHA-256 hash of file content (first 12 chars) | Current timestamp             |
+| `github-commits`   | `scrapers/github-commits.js`   | GitHub REST API (`/repos/:owner/:repo/commits`)                                                                                                                      | Short SHA (first 7 chars)                     | `commit.author.date`          |
+| `npm-registry`     | `scrapers/npm-registry.js`     | npm registry API (`/latest` + full doc)                                                                                                                              | Version string                                | `time[version]` from registry |
+| `blog-page`        | `scrapers/blog-page.js`        | fetch HTML + cheerio, with `parseMode` switch                                                                                                                        | Post URL                                      | Parsed from page content      |
+| `docs-page`        | `scrapers/docs-page.js`        | fetch HTML + cheerio, with `parseMode` switch                                                                                                                        | URL or SHA-256 hash                           | Parsed or current timestamp   |
+| `status-page`      | `scrapers/status-page.js`      | Statuspage.io REST API (`/api/v2/incidents.json`)                                                                                                                    | Incident ID                                   | `created_at`                  |
+| `reddit-subreddit` | `scrapers/reddit-subreddit.js` | OAuth2 against `oauth.reddit.com/r/:sub/:mode.json` (v1.4.1+); graceful-skip to `[]` when `REDDIT_CLIENT_ID`/`REDDIT_CLIENT_SECRET` unset                            | Reddit `t3_*` name                            | `created_utc` (ISO-converted) |
+| `hn-algolia`       | `scrapers/hn-algolia.js`       | HN Algolia (`/api/v1/search_by_date`)                                                                                                                                | Algolia `objectID`                            | `created_at`                  |
+| `twitter-account`  | `scrapers/twitter-account.js`  | twitterapi.io (`/twitter/user/last_tweets`); module-scope `waitForSlot()` paces calls to 1 req / 6 s (v1.4.1+); graceful-skip to `[]` when `TWITTERAPI_IO_KEY` unset | Tweet ID (string)                             | `createdAt` (ISO-converted)   |
 
 ### blog-page Parse Modes
 
@@ -223,7 +223,7 @@ There is no centralized error class (no `ScraperError` or `src/errors.js`). Erro
 - **Timeout:** 15 seconds per request (via `AbortSignal.timeout`)
 - **Retry condition:** 5xx responses, network errors, and HTTP 429. When a 429 response carries a `Retry-After: N` header (seconds), that value overrides the default linear backoff for that attempt. Other 4xx responses are **not** retried (returned immediately).
 - **Redirect handling:** `redirect: "follow"` is set in the default options so redirects are followed transparently. Individual scrapers can override via `options.redirect`.
-- **User-Agent:** `` `anthropic-watch/${pkg.version} (…)` `` — version read from `package.json` at module load via `readFileSync` (currently `anthropic-watch/1.1.0`).
+- **User-Agent:** `` `anthropic-watch/${pkg.version} (…)` `` — version read from `package.json` at module load via `readFileSync`. Derivation means point releases require no manual doc edits.
 - **Rate limit monitoring:** `logGitHubRateLimit(res)` warns when remaining GitHub API quota drops below 10.
 
 ---
@@ -234,7 +234,8 @@ There is no centralized error class (no `ScraperError` or `src/errors.js`). Erro
 
 - **Triggers:** Daily cron (`0 6 * * *`) + manual `workflow_dispatch`
 - **Permissions:** `contents: write`, `pages: write`
-- **Single job:** `scrape` — checkout (using `SCRAPER_PAT` so downstream workflows can see the commit), setup Node.js 20, `npm ci`, run `node src/cli.js` with `GITHUB_TOKEN`, write job summary via `node src/summary.js >> $GITHUB_STEP_SUMMARY`, commit state changes as `anthropic-watch[bot]` inside a `git pull --rebase origin main && git push` retry loop (3 attempts with 5/10/15s backoff to survive cron-race push failures), deploy to GitHub Pages via `peaceiris/actions-gh-pages@v4` with `github_token: SCRAPER_PAT` and `keep_files: true`.
+- **Single job:** `scrape` — checkout (using `SCRAPER_PAT` so downstream workflows can see the commit), setup Node.js 20, `npm ci`, run `node src/cli.js` with `GITHUB_TOKEN` + optional `TWITTERAPI_IO_KEY` / `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET`, write job summary via `node src/summary.js >> $GITHUB_STEP_SUMMARY`, commit state changes as `anthropic-watch[bot]` inside a stash-and-resync retry loop (3 attempts with 5/10/15s backoff), deploy to GitHub Pages via `peaceiris/actions-gh-pages@v4` with `github_token: SCRAPER_PAT` and `keep_files: true`. The commit + deploy steps are guarded by `if: github.ref == 'refs/heads/main'` so feature-branch `workflow_dispatch` runs are read-only preflight validation.
+- **State-commit retry (v1.4.1+):** on push failure the job stashes the generated state file, aborts any in-flight rebase, resyncs hard to `origin/main`, re-applies the stashed content, and retries the push. This replaces the v1.4.0 `git pull --rebase origin main && git push` loop, which could leave broken merge state between iterations when the state-file diff conflicted with a concurrent commit on main. `.github/workflows/scrape.yml` is the canonical source.
 - **`SCRAPER_PAT` rationale:** The default `GITHUB_TOKEN` is deliberately scoped so pushes made with it do **not** trigger other workflows. Using a PAT for both the initial checkout and the Pages deploy means pushes to `main` and `gh-pages` can fan out to downstream automation. Required scopes: `repo` + `workflow`.
 
 Tests are not duplicated here — they run on push/PR in `test.yml`.
@@ -248,6 +249,12 @@ Tests are not duplicated here — they run on push/PR in `test.yml`.
 
 - **Triggers:** `pull_request` targeting `main` (`opened`, `reopened`, `synchronize`, `edited`)
 - **Job:** Fails the PR unless the source branch is `develop` (release source) or matches `feat/*`. `dependabot/*` and `renovate/*` branches are allowlisted so automated dependency PRs bypass the check.
+
+### `release.yml` — Tag and GitHub Release automation (v1.4.1+)
+
+- **Triggers:** `pull_request: closed` on `main` with the `merged==true` guard — fires only when a PR is actually merged, not when one is closed without merging. The daily `scrape.yml` state-commit push never opens a PR, so it cannot false-fire this workflow.
+- **Job:** reads `package.json` version, skips cleanly if the matching `vX.Y.Z` tag already exists, otherwise extracts the matching `## [X.Y.Z]` section from `CHANGELOG.md` via awk, creates an annotated tag on the merge commit (`github-actions[bot]` identity), pushes it, and publishes a GitHub Release via `gh release create --notes-file`. Idempotent: docs-only PRs merge as a no-op. `concurrency: release-main` with `cancel-in-progress: false` serializes near-simultaneous merges.
+- **Permissions:** `contents: write` using the default `GITHUB_TOKEN` — no `SCRAPER_PAT`, no external secrets. Orthogonal to `scrape.yml` (does not run the scraper, does not touch gh-pages).
 
 ### Job Summary
 

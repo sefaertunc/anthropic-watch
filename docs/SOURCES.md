@@ -226,7 +226,9 @@ Detection: `GET api.github.com/repos/{owner}/{repo}/commits?per_page=10&sha=main
 - `reddit-claudeskills` — `r/claudeskills` (top/day, 10 posts)
 - `reddit-claudeopus` — `r/Claudeopus` (new mode with `minScore: 20` — lower-traffic sub)
 
-Detection: `GET reddit.com/r/{sub}/{mode}.json`. ID = Reddit `t3_*` name. Stickied posts are filtered in `top` mode only; pass through in `new` mode.
+Detection: OAuth2 against `oauth.reddit.com/r/{sub}/{mode}.json` using `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` (script-app `client_credentials` flow). ID = Reddit `t3_*` name. Stickied posts are filtered in `top` mode only; pass through in `new` mode. Token is minted once per pipeline run and shared across all `reddit-*` sources; one-shot 401 retry on stale tokens.
+
+**Credentials:** Required for datacenter-IP runners (including GitHub Actions), which Reddit blocks on anonymous endpoints. As of November 2025, Reddit's Responsible Builder Policy gates new app registration behind a ~7-day manual review. See [TROUBLESHOOTING.md — Reddit sources return 0 items](TROUBLESHOOTING.md#reddit-sources-return-0-items) and [reddit-oauth-setup.md](reddit-oauth-setup.md) for the full flow. Graceful-skip when credentials absent — sources return `[]` and the pipeline proceeds cleanly.
 
 ### Hacker News (1)
 
@@ -251,7 +253,9 @@ Detection: `GET api.twitterapi.io/twitter/user/last_tweets?userName={handle}`. H
 
 **Graceful-skip contract:** if `TWITTERAPI_IO_KEY` is unset or empty, the scraper returns `[]` immediately without attempting any fetch. This makes forks and local dev sessions work without the paid credential. The source's `consecutiveFailures` counter does not tick up when the key is missing — returning `[]` is success, not failure. All other failure modes (401, 403, 429, 5xx, network, parse) throw per Rule 4.
 
-Cost at current volume (8 accounts × 10 tweets × 30 days): ≈ $0.36/month on twitterapi.io's pay-per-request pricing. Free-tier rate limit is 1 req / 5 s — `fetchWithRetry` honors `Retry-After` on 429s, so in-run rate limiting resolves transparently.
+Cost at current volume (8 accounts × 10 tweets × 30 days): ≈ $0.36/month on twitterapi.io's pay-per-request pricing. Free-tier rate limit is 1 req / 5 s.
+
+**Rate pacing (v1.4.1+):** All Twitter calls are serialized through a module-scope `waitForSlot()` chained-Promise gate at 1 req / 6 s — inside twitterapi.io's free-tier ceiling with a 20% safety margin. This adds ~40 s pipeline wall-clock per run and replaces the v1.4.0 attempt to rely on `fetchWithRetry`'s `Retry-After` handling, which failed because twitterapi.io does not emit `Retry-After`.
 
 ---
 

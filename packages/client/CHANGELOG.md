@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.2] - 2026-04-24
+
+README-only refresh for the npm landing page. No code changes.
+
+### Changed
+
+- Added badge row (npm version, Node 18+, zero runtime deps, license).
+- Added a compact top-nav line (Install · Quick start · API · Scraper repo).
+- Hoisted "What this is" callout and added a two-bullet "Why" block describing correct-dedup-by-default and version-gated-fetch value.
+- Compacted the API reference into scannable tables (methods, helpers, errors) instead of per-method prose blocks.
+- Added a "Related" section linking the scraper repo, feed-schema docs, and changelog.
+
+No API, behavior, or type changes. Consumers pinned to `^1.0.0` pick this up automatically.
+
 ## [1.0.1] - 2026-04-23
 
 Paired release with `anthropic-watch` v1.4.0.

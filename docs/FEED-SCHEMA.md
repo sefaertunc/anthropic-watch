@@ -196,9 +196,9 @@ Generated after each scrape run. Provides status for all sources.
   "duration_ms": 12345,
   "summary": {
     "totalNewItems": 5,
-    "sourcesChecked": 17,
+    "sourcesChecked": 37,
     "sourcesWithErrors": 1,
-    "healthySources": 15
+    "healthySources": 36
   },
   "sources": [
     {
@@ -260,7 +260,7 @@ A **raw JSON array** (not a wrapper object). Most recent run first. Max 90 entri
     "timestamp": "2026-04-16T06:00:00.000Z",
     "durationMs": 12345,
     "totalNewItems": 5,
-    "sourcesChecked": 17,
+    "sourcesChecked": 37,
     "sourcesWithErrors": 1,
     "errors": [
       {
