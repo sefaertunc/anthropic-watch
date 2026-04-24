@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-anthropic-watch — Monitors 17 Anthropic sources daily for changes and publishes structured RSS/JSON/OPML feeds to GitHub Pages.
+anthropic-watch — Monitors public Anthropic and community sources daily for changes and publishes structured RSS/JSON/OPML feeds to GitHub Pages.
 
 ## Key Files
 

@@ -4,14 +4,14 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
+| 1.x     | :white_check_mark: |
 
 ## Scope
 
 anthropic-watch is a read-only scraper that fetches public web pages and APIs. It does not handle user authentication, store credentials, or process user input. The primary security considerations are:
 
 - **GITHUB_TOKEN exposure** — used for GitHub API access and Pages deployment. Scoped to the repository and provided automatically by GitHub Actions.
-- **Dependency vulnerabilities** — third-party packages (cheerio, playwright-chromium, fast-xml-parser) could introduce vulnerabilities.
+- **Dependency vulnerabilities** — third-party packages (cheerio, fast-xml-parser) could introduce vulnerabilities.
 - **Feed injection** — a compromised source could inject malicious content into published feeds. Feeds are plain text (titles, snippets) and do not render HTML.
 
 ## Reporting a Vulnerability

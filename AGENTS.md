@@ -1,15 +1,15 @@
 # AGENTS.md
 
-anthropic-watch — Monitors 17 Anthropic sources daily for changes and publishes structured feeds.
+anthropic-watch — Monitors public Anthropic and community sources daily for changes and publishes structured feeds.
 
 ## Tech Stack
 
-- Node.js / TypeScript
+- Node.js 20+, plain JavaScript (no TypeScript, no build step)
 
 ## Build & Test Commands
 
 ```bash
-# Node.js / TypeScript
+# Node.js
 npm test                        # Run tests
 npx eslint .                    # Lint
 npx prettier --write .          # Format

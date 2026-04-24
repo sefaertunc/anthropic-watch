@@ -2,6 +2,14 @@
 
 Official client library for consuming [anthropic-watch](https://github.com/sefaertunc/anthropic-watch) feeds. Version-gated fetch, correct composite-key deduplication, typed errors. Zero runtime dependencies.
 
+## What this is
+
+**This package** reads anthropic-watch's published feeds and is distributed on npm. Use it in apps that consume Claude Code / Anthropic upstream-change data.
+
+**The scraper** ([anthropic-watch](https://github.com/sefaertunc/anthropic-watch)) produces those feeds. It runs on a GitHub Actions cron, publishes to GitHub Pages, and is **not** on npm — it is infrastructure, not a package.
+
+This is an unofficial community library. Anthropic does not maintain it. If Anthropic ships a first-party feed consumer, defer to that.
+
 ## Installation
 
 ```bash
@@ -169,12 +177,6 @@ The client appends `feeds/{name}.json` to the base URL. Trailing slashes are nor
 This library follows [semver](https://semver.org). Feed schema support is version-gated: the current `SUPPORTED_FEED_VERSION` is `"1.0"`. If anthropic-watch publishes a feed with a different version, the library throws `FeedVersionMismatchError` rather than silently returning items of unknown shape.
 
 When anthropic-watch bumps the feed envelope version (currently planned for a hypothetical v2.0 release), a new major version of this library will support the new version. Consumers can pin to a library major version matching the feed schema they understand.
-
-## Relation to the scraper
-
-The scraper itself — [anthropic-watch](https://github.com/sefaertunc/anthropic-watch) — is infrastructure (GitHub Actions cron + GitHub Pages static hosting) and is not published to npm. Only this client library is.
-
-This is an **unofficial community library**. Anthropic does not maintain it. If Anthropic ever ships a first-party feed consumer, defer to that.
 
 ## License
 

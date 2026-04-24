@@ -17,6 +17,7 @@
 [RSS Feed](https://sefaertunc.github.io/anthropic-watch/feeds/all.xml) ·
 [JSON Feed](https://sefaertunc.github.io/anthropic-watch/feeds/all.json) ·
 [Sources](docs/SOURCES.md) ·
+[Feed Schema](docs/FEED-SCHEMA.md) ·
 [Documentation](docs/ARCHITECTURE.md)
 
 </div>
@@ -25,7 +26,7 @@ Monitors Anthropic sources daily for changes and publishes structured feeds — 
 
 ## What is this?
 
-anthropic-watch scrapes Anthropic blogs, changelogs, GitHub releases, npm packages, documentation, and the status page daily. It detects new content by comparing against persisted state, accumulates items into RSS and JSON feeds, and deploys everything to a static dashboard on GitHub Pages. No server needed — just subscribe via RSS or fetch the JSON feeds.
+anthropic-watch scrapes Anthropic blogs, changelogs, GitHub releases, npm packages, documentation, the status page, and community signal (Reddit, Hacker News, curated Twitter) daily. It detects new content by comparing against persisted state, accumulates items into RSS and JSON feeds, and deploys everything to a static dashboard on GitHub Pages. No server needed — just subscribe via RSS or fetch the JSON feeds.
 
 ## For consumers
 
@@ -45,36 +46,11 @@ The library handles version gating, composite-key deduplication, and typed error
 | JSON (all sources) | [`feeds/all.json`](https://sefaertunc.github.io/anthropic-watch/feeds/all.json)         |
 | OPML (import all)  | [`feeds/sources.opml`](https://sefaertunc.github.io/anthropic-watch/feeds/sources.opml) |
 
-<details>
-<summary>Individual source feeds</summary>
-
-Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key}.xml`:
-
-| Source                 | JSON                                                                                    | RSS                                                                                   |
-| ---------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| blog-engineering       | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.json)       | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-engineering.xml)       |
-| blog-news              | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-news.json)              | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-news.xml)              |
-| docs-release-notes     | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.json)     | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/docs-release-notes.xml)     |
-| claude-code-changelog  | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.json)  | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-changelog.xml)  |
-| support-release-notes  | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/support-release-notes.json)  | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/support-release-notes.xml)  |
-| claude-code-releases   | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.json)   | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-releases.xml)   |
-| npm-claude-code        | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/npm-claude-code.json)        | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/npm-claude-code.xml)        |
-| agent-sdk-ts-changelog | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.json) | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-ts-changelog.xml) |
-| agent-sdk-py-changelog | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.json) | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/agent-sdk-py-changelog.xml) |
-| api-sdk-ts-releases    | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.json)    | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-ts-releases.xml)    |
-| api-sdk-py-releases    | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-py-releases.json)    | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/api-sdk-py-releases.xml)    |
-| claude-code-action     | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.json)     | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/claude-code-action.xml)     |
-| blog-alignment         | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.json)         | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-alignment.xml)         |
-| blog-red-team          | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.json)          | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-red-team.xml)          |
-| blog-research          | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.json)          | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-research.xml)          |
-| blog-claude            | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.json)            | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.xml)            |
-| status-page            | [.json](https://sefaertunc.github.io/anthropic-watch/feeds/status-page.json)            | [.xml](https://sefaertunc.github.io/anthropic-watch/feeds/status-page.xml)            |
-
-</details>
+Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key}.xml`. Browse all of them from the [dashboard](https://sefaertunc.github.io/anthropic-watch/) or see keys in [docs/SOURCES.md](docs/SOURCES.md).
 
 ## Monitored sources
 
-### Core (11)
+### Core
 
 | Name                                                                                                               | Key                      | What it tracks                             |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------ |
@@ -90,7 +66,7 @@ Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key
 | [Anthropic SDK TypeScript Releases](https://github.com/anthropics/anthropic-sdk-typescript/releases)               | `api-sdk-ts-releases`    | TS SDK releases                            |
 | [Anthropic SDK Python Releases](https://github.com/anthropics/anthropic-sdk-python/releases)                       | `api-sdk-py-releases`    | Python SDK releases                        |
 
-### Extended (6)
+### Extended
 
 | Name                                                                                     | Key                  | What it tracks           |
 | ---------------------------------------------------------------------------------------- | -------------------- | ------------------------ |
@@ -100,6 +76,19 @@ Every source has its own JSON and RSS feed at `feeds/{key}.json` and `feeds/{key
 | [Anthropic Research Blog](https://www.anthropic.com/research)                            | `blog-research`      | Research papers          |
 | [Anthropic Claude Blog](https://claude.com/blog)                                         | `blog-claude`        | Claude product blog      |
 | [Anthropic Status Page](https://status.anthropic.com)                                    | `status-page`        | Incidents and outages    |
+
+### Community
+
+Third-party signal added in v1.4.0. Lower-reliability than Core/Extended by design; consumers should treat `sourceCategory: "community"` as informational — log and surface, but do not autonomously act on it.
+
+| Type              | Count | Examples                                                                                 |
+| ----------------- | ----- | ---------------------------------------------------------------------------------------- |
+| GitHub commits    | 6     | `anthropics/claude-cookbooks`, `anthropics/skills`, `anthropics/claude-plugins-official` |
+| Reddit subreddits | 5     | `r/ClaudeCode`, `r/ClaudeAI`, `r/claude`                                                 |
+| Hacker News       | 1     | anthropic.com / claude.ai / claude.com mentions via Algolia                              |
+| Twitter / X       | 8     | `@AnthropicAI`, `@claudeai`, `@ClaudeDevs`                                               |
+
+Full list with scraper types, cadence, and detection methods: [docs/SOURCES.md](docs/SOURCES.md).
 
 ## How it works
 
@@ -154,7 +143,7 @@ src/
   fetch-with-retry.js   # Retry wrapper (2 retries, 15s timeout, linear backoff)
   fetch-source.js       # Fetch abstraction (supports fixture injection)
   feed/                 # JSON, RSS, OPML generators
-  scrapers/             # 6 scraper types (github-releases, blog-page, etc.)
+  scrapers/             # Scraper modules by source type (github-releases, blog-page, reddit-subreddit, twitter-account, etc.)
 test/                   # Vitest test suites (unit, scraper, e2e)
 public/                 # Dashboard + generated feeds
 state/                  # Persisted last-seen state
@@ -172,7 +161,6 @@ docs/                   # Project documentation
 
 ## Links
 
-- [Documentation](docs/ARCHITECTURE.md)
 - [GitHub Issues](https://github.com/sefaertunc/anthropic-watch/issues)
 - [Contributing](CONTRIBUTING.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
