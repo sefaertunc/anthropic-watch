@@ -117,7 +117,7 @@ This preserves existing `knownIds` so the next run doesn't flood feeds with "new
 **Fix:**
 
 1. If the pipeline is running from a residential environment (local dev, self-hosted runner on a home network), unauthenticated access typically works — check that `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` are NOT set in that environment (they force the OAuth path even when unauthenticated would succeed).
-2. If running from GitHub Actions or any datacenter context, configure OAuth credentials per the next entry. A persistent 403 on `oauth.reddit.com` (after credentials are configured correctly) would indicate Reddit has extended its datacenter-IP block to the OAuth endpoint — in that case, see `v1.4.1-reddit-diagnostic.md` for the escalation path (Path B source removal, or a self-hosted-runner split).
+2. If running from GitHub Actions or any datacenter context, configure OAuth credentials per the next entry. A persistent 403 on `oauth.reddit.com` (after credentials are configured correctly) would indicate Reddit has extended its datacenter-IP block to the OAuth endpoint. Escalation paths in that unlikely case: (a) remove the five `reddit-*` sources from `src/sources.js` (update source-count references and tests accordingly), or (b) split the Reddit leg onto a self-hosted runner on a residential IP (introduces operational surface this project deliberately avoids).
 3. Do NOT emulate a browser UA — it is a Reddit ToS violation and does not bypass the datacenter block anyway.
 
 ### Reddit sources return 0 items

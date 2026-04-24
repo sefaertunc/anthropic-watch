@@ -6,14 +6,18 @@ Guide for adding a new source to anthropic-watch.
 
 Pick the scraper that matches your source:
 
-| Source type                       | Scraper type       | When to use                                        |
-| --------------------------------- | ------------------ | -------------------------------------------------- |
-| GitHub Releases page              | `github-releases`  | Repo publishes GitHub Releases                     |
-| Markdown changelog in a repo      | `github-changelog` | Repo has a `CHANGELOG.md` (or similar)             |
-| npm package                       | `npm-registry`     | Track latest version on npmjs.com                  |
-| Blog with server-rendered HTML    | `blog-page`        | Blog rendered as HTML (Next.js, Webflow, Distill)  |
-| Documentation page                | `docs-page`        | Docs page where you want to detect content changes |
-| Statuspage.io-powered status page | `status-page`      | Site uses Statuspage.io for incident tracking      |
+| Source type                       | Scraper type       | When to use                                                                                       |
+| --------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| GitHub Releases page              | `github-releases`  | Repo publishes GitHub Releases                                                                    |
+| Markdown changelog in a repo      | `github-changelog` | Repo has a `CHANGELOG.md` (or similar)                                                            |
+| npm package                       | `npm-registry`     | Track latest version on npmjs.com                                                                 |
+| Blog with server-rendered HTML    | `blog-page`        | Blog rendered as HTML (Next.js, Webflow, Distill)                                                 |
+| Documentation page                | `docs-page`        | Docs page where you want to detect content changes                                                |
+| Statuspage.io-powered status page | `status-page`      | Site uses Statuspage.io for incident tracking                                                     |
+| GitHub commits (no releases)      | `github-commits`   | Repos that ship via direct commits rather than tagged releases (curated lists, skill directories) |
+| Subreddit                         | `reddit-subreddit` | Public subreddit post feed. Requires OAuth2 credentials.                                          |
+| Hacker News query                 | `hn-algolia`       | HN stories matching a search query. Public endpoint, no credentials.                              |
+| Twitter / X account               | `twitter-account`  | Public Twitter timeline via twitterapi.io. Requires paid `TWITTERAPI_IO_KEY`.                     |
 
 If none of these fit, you'll need to create a new scraper type (see step 7).
 
@@ -162,7 +166,9 @@ Notes: the bot filter catches GitHub App-style logins (`dependabot[bot]`, `renov
 }
 ```
 
-Notes: Reddit blocks generic User-Agents; the scraper sends a UA derived from root `package.json` version — you don't configure it. In `top` mode, stickied posts are filtered to avoid daily recurrence; in `new` mode they pass through.
+Notes: Reddit blocks generic User-Agents AND unauthenticated datacenter-IP traffic (including GitHub Actions runners). The scraper uses OAuth2 against `oauth.reddit.com` and sends a UA derived from root `package.json` version — you don't configure the UA. In `top` mode, stickied posts are filtered to avoid daily recurrence; in `new` mode they pass through.
+
+**Credentials:** This scraper requires `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` as GitHub Actions secrets. As of November 2025, obtaining these requires submitting a Reddit Responsible Builder Policy application (~7-day review). See [reddit-oauth-setup.md](./reddit-oauth-setup.md) for the submission template and [TROUBLESHOOTING.md — Reddit sources return 0 items](TROUBLESHOOTING.md#reddit-sources-return-0-items) for the full setup. Graceful-skip when credentials absent — forks and local dev sessions work without them, sources just return `[]`.
 
 ### hn-algolia
 
