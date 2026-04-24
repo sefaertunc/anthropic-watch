@@ -6,6 +6,86 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 23 Apr 2026 14:51:25 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 08:09:44 GMT</lastBuildDate>
+    <item>
+      <title>Add quarkus-agent plugin (#1534)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/020446a4294f09d9c32e60bff0c4ae8fb39205cb</link>
+      <guid isPermaLink="false">020446a</guid>
+      <pubDate>Thu, 23 Apr 2026 21:45:48 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add vanta-mcp-plugin (#1563)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/740e9d551371b14bc7af912b72856df25c05153a</link>
+      <guid isPermaLink="false">740e9d5</guid>
+      <pubDate>Thu, 23 Apr 2026 21:29:25 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>telegram: gate /start, /help, /status behind dmPolicy (#894)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/5a71459c03148c5952923bcdf6d399bc4da8dc70</link>
+      <guid isPermaLink="false">5a71459</guid>
+      <pubDate>Thu, 23 Apr 2026 19:02:34 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The bot command handlers bypassed access control — they responded to any DM user regardless of dmPolicy, leaking bot presence and contradicting ACCESS.md&apos;s &quot;Drop silently. No reply.&quot; contract for allowlist mode.  Add dmCommandGate() that applies the same disabled/allowlist checks as gate() without t</description>
+    </item>
+    <item>
+      <title>Add Apache 2.0 LICENSE to math-olympiad plugin (#868)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ae54b113c47ebdd47835f6727b9df5a33116b972</link>
+      <guid isPermaLink="false">ae54b11</guid>
+      <pubDate>Thu, 23 Apr 2026 19:02:30 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>skill-creator: sync from anthropics/skills (drop ANTHROPIC_API_KEY requirement) (#1523)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/2a40fd2e7c52207aa903bd33fc4c65716126966e</link>
+      <guid isPermaLink="false">2a40fd2</guid>
+      <pubDate>Thu, 23 Apr 2026 19:02:26 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Ports anthropics/skills#547 (b0cbd3d) so this repo matches the upstream skills repo.  improve_description.py and run_loop.py now shell out to `claude -p` instead of using the Anthropic SDK directly, so the description optimizer uses the session&apos;s existing Claude Code auth and no longer requires a se</description>
+    </item>
+    <item>
+      <title>Add zscaler plugin (#1552)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/95f6172405c834cce4a23134bdd8b1d2497ac311</link>
+      <guid isPermaLink="false">95f6172</guid>
+      <pubDate>Thu, 23 Apr 2026 19:01:19 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add data-agent-kit-starter-pack plugin (#1551)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/7bbdb8434ed850c8b41c69a4dc1684f970b33724</link>
+      <guid isPermaLink="false">7bbdb84</guid>
+      <pubDate>Thu, 23 Apr 2026 19:01:12 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add atlassian-forge-skills plugin (#1539)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/4bbf944de1a9937903c272a1bdd01cba228d96a7</link>
+      <guid isPermaLink="false">4bbf944</guid>
+      <pubDate>Thu, 23 Apr 2026 19:01:06 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add apollo plugin (#1538)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/06830b2ccd9801d80d90799709fb3d8539e1e60d</link>
+      <guid isPermaLink="false">06830b2</guid>
+      <pubDate>Thu, 23 Apr 2026 19:01:00 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add windsor-ai plugin (#1536)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/bd6f1d7f48fcc5e1eee039a921b8c73d5e2c8223</link>
+      <guid isPermaLink="false">bd6f1d7</guid>
+      <pubDate>Thu, 23 Apr 2026 19:00:53 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
   </channel>
 </rss>
