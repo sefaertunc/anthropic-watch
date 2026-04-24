@@ -16,7 +16,7 @@ Stated review turnaround is ~7 days.
 | App type                                       | `script` (read-only; no posting, voting, commenting, messaging, or write action) |
 | Developer Reddit username                      | `/u/sefaertunc`                                                                  |
 | Primary contact email                          | `sefaertnc@gmail.com`                                                            |
-| Source code / project URL                      | `https://github.com/sefaertnc/anthropic-watch`                                   |
+| Source code / project URL                      | `https://github.com/sefaertunc/anthropic-watch`                                  |
 | Redirect URI (required, unused by script apps) | `http://localhost:8080`                                                          |
 
 ## Use case
