@@ -1,0 +1,98 @@
+name: Release
+
+# Fires on PR merges to main. The daily scrape.yml state-commit push never
+# opens a PR, so it cannot trigger this workflow. Back-merges main -> develop
+# target develop, not main, so they are ignored. The merged==true guard below
+# is belt-and-suspenders — a closed-without-merge event is silently ignored.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+permissions:
+  contents: write
+
+# Serialize release runs so two near-simultaneous merges to main don't race
+# on tag push. cancel-in-progress: false lets the first release finish before
+# the second starts, rather than dropping it.
+concurrency:
+  group: release-main
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve merge commit SHA
+        id: sha
+        run: |
+          SHA="${{ github.event.pull_request.merge_commit_sha }}"
+          if [ -z "$SHA" ]; then
+            echo "::error::pull_request.merge_commit_sha is empty (was the PR merged via a path that doesn't produce one?). Aborting."
+            exit 1
+          fi
+          echo "sha=${SHA}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout merge commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.sha.outputs.sha }}
+          fetch-depth: 0
+
+      - name: Read package version
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "tag=v${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "Detected version: v${VERSION}"
+
+      - name: Skip if tag already exists
+        id: check
+        run: |
+          TAG="${{ steps.version.outputs.tag }}"
+          if git rev-parse --verify --quiet "refs/tags/${TAG}" >/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "Tag ${TAG} already exists — skipping release steps."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Extract CHANGELOG section
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          awk -v ver="${{ steps.version.outputs.version }}" '
+            /^## \[/ {
+              if (inside) exit
+              if ($0 ~ "^## \\["ver"\\]") { inside=1; next }
+            }
+            inside { print }
+          ' CHANGELOG.md > /tmp/release-notes.md
+          if [ ! -s /tmp/release-notes.md ]; then
+            echo "::error::No CHANGELOG section found for v${{ steps.version.outputs.version }}. Did the release PR add the CHANGELOG entry?"
+            exit 1
+          fi
+          echo "--- Extracted release notes: ---"
+          cat /tmp/release-notes.md
+
+      - name: Create and push tag
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          TAG="${{ steps.version.outputs.tag }}"
+          SHA="${{ steps.sha.outputs.sha }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "${TAG}" "${SHA}" -m "Release ${TAG}"
+          git push origin "${TAG}"
+
+      - name: Create GitHub Release
+        if: steps.check.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ steps.version.outputs.tag }}" \
+            --target "${{ steps.sha.outputs.sha }}" \
+            --title "${{ steps.version.outputs.tag }}" \
+            --notes-file /tmp/release-notes.md
