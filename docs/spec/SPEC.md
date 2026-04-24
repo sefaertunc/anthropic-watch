@@ -102,6 +102,7 @@ Two independent versioning tracks:
 - **Semantic versioning.** Root `package.json` `version` is the source of truth; User-Agent header derives from it at module load.
 - **CHANGELOG.md** (root) is updated in the release commit for every user-visible change.
 - **Tagged GitHub Releases** are how scraper versions ship. Never published to npm.
+- **Release automation.** The tag and GitHub Release are created automatically by `.github/workflows/release.yml` when a pull request merges to `main`. The workflow reads `package.json` version, extracts the matching `## [X.Y.Z]` section from `CHANGELOG.md`, tags the merge commit, and publishes the release. Requires only default `GITHUB_TOKEN` — no additional secrets. Idempotent: a PR that does not bump version (docs-only, workflow changes, etc.) merges as a no-op. Version bumping in `package.json` and the `CHANGELOG.md` entry remain manual release-PR steps.
 - **Feed schema version** (`"1.0"` in every output file) bumps only on breaking changes. See `docs/FEED-SCHEMA.md — Versioning Policy`.
 
 **Client library** (`packages/client/package.json`):
