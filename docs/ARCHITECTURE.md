@@ -190,6 +190,8 @@ Feeds use an **accumulation model**: new items are merged with existing feed fil
 
 The same merge/dedup/sort/slice logic runs for both JSON and RSS generation. Per-source feeds follow the same pattern but with items filtered to one source and a limit of 50.
 
+**Persistence boundary:** existing feed files live on the `gh-pages` branch, not `main`. The CI workflow (`scrape.yml`) hydrates `public/feeds/` from `gh-pages` via a second `actions/checkout@v4` step before the scraper runs, so step 1's "read existing `all.json` from disk" finds the prior run's content. Without this hydration the merge degenerates to "this run's items only" — the v1.4.2 fix establishes the precondition this section's logic depends on.
+
 See [FEED-SCHEMA.md — Merge Semantics](FEED-SCHEMA.md#merge-semantics) for the full conflict-resolution rules (why new-wins matters for in-place edits like `[Unreleased]` changelog sections).
 
 ### Output Files

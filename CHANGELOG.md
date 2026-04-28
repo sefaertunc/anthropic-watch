@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.4.2] - 2026-04-28
+
+Patch release fixing a silent feed-truncation bug present since v1.0.0. The published JSON/RSS feed-accumulation logic was correct in code but never actually accumulated in production: the `scrape.yml` workflow only checked out `main`, so `public/feeds/` did not pre-exist when the scraper ran in CI, the `readJsonSafe` accumulation reads at `src/index.js:191,226,269` returned `null`, and `peaceiris/actions-gh-pages@v4` overwrote the gh-pages copy with the truncated result. Schema, scraper, and feed-merge code are unchanged.
+
+### Fixed
+
+- **`scrape.yml` now hydrates `public/feeds/` from the `gh-pages` branch before the scraper runs** via a second `actions/checkout@v4` step against `ref: gh-pages` into a sibling path, then `cp -r` into `public/feeds/`. The step is `continue-on-error: true` so the first run after deploy and forks without an existing `gh-pages` branch both work cleanly. `gh-pages` is a public branch — the reused `SCRAPER_PAT` is for consistency with the other workflow steps, not because authentication is required.
+- **The 100-item rolling window for `feeds/all.{json,xml}` and 50-item per-source windows now actually accumulate.** Same merge code in `src/feed/json.js` and `src/feed/rss.js`; the precondition (existing feed files on disk before the scraper runs) is finally met.
+- **`feeds/run-history.json` now actually retains 90 entries** instead of 1.
+
+### Added
+
+- `test/unit/workflow.test.js` — assertion that a `gh-pages` checkout step exists before `Run scraper`, catches regression on workflow edits.
+- `test/e2e/full-pipeline.test.js` — two-runs-against-shared-`feedsDir` accumulation test, including a `run-history.json.length === 2` assertion that piggybacks on the same disk boundary.
+
+### Notes
+
+- **Historical items lost between v1.0.0 and v1.4.1 (October 2025 → April 2026) cannot be recovered from these feeds and will not be backfilled.** The first scheduled run after this release seeds the rolling windows from this point forward. Consumers who archived prior `all.json` snapshots locally retain their own history.
+- v1.4.0's community-sources work was technically functional (scrapers ran, items were emitted, the daily run wrote them to gh-pages once), but consumer-visible feeds only ever showed each day's slice. v1.4.2 is the release where that work becomes observable in the feeds as designed.
+- First post-fix gh-pages commit is bounded but larger than steady-state: `all.json` may grow up to its 100-item cap and per-source feeds up to 50 items each in one commit. Subsequent runs are normal-sized.
+- No code or schema change in `src/`. `src/index.js`, `src/feed/`, and `src/scrapers/` are unchanged. No client-library (`@sefaertunc/anthropic-watch-client`) release is paired with v1.4.2.
+
 ## [1.4.1] - 2026-04-24
 
 Patch release fixing two production issues surfaced in the v1.4.0 live smoke test. No schema changes, no new sources, no new scraper types.

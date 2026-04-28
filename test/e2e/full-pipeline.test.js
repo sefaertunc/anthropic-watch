@@ -116,4 +116,67 @@ describe("full pipeline", () => {
     expect(state["test-releases"]).toBeTruthy();
     expect(state["test-releases"].knownIds).toContain("v1.0.0");
   });
+
+  it("accumulates items across consecutive runs against shared feedsDir", async () => {
+    // Fresh stateDir on run 2 ensures the new fixture's items count as unseen;
+    // state reuse would mask the disk-persistence boundary this test verifies.
+    const writeReleaseFixture = async (path, tag, date) => {
+      const data = [
+        {
+          tag_name: tag,
+          name: tag,
+          published_at: date,
+          html_url: `https://github.com/test/repo/releases/tag/${tag}`,
+          body: `Release notes for ${tag}`,
+        },
+      ];
+      await writeFile(path, JSON.stringify(data));
+      return path;
+    };
+    const sourceFor = (fixture) => [
+      {
+        key: "test-releases",
+        name: "Test Releases",
+        category: "core",
+        scraperType: "github-releases",
+        owner: "test",
+        repo: "repo",
+        url: "https://github.com/test/repo/releases",
+        fixtureFile: fixture,
+      },
+    ];
+
+    const fix1 = await writeReleaseFixture(
+      join(tmpDir, "releases-1.json"),
+      "v1.0.0",
+      "2026-01-01T00:00:00Z",
+    );
+    await runPipeline({
+      stateDir,
+      feedsDir,
+      sourcesOverride: sourceFor(fix1),
+    });
+    let all = JSON.parse(await readFile(join(feedsDir, "all.json"), "utf-8"));
+    expect(all.itemCount).toBe(1);
+
+    const fix2 = await writeReleaseFixture(
+      join(tmpDir, "releases-2.json"),
+      "v2.0.0",
+      "2026-02-01T00:00:00Z",
+    );
+    const stateDir2 = join(tmpDir, "state-2");
+    await runPipeline({
+      stateDir: stateDir2,
+      feedsDir,
+      sourcesOverride: sourceFor(fix2),
+    });
+    all = JSON.parse(await readFile(join(feedsDir, "all.json"), "utf-8"));
+    expect(all.itemCount).toBe(2);
+    expect(all.items.map((i) => i.id)).toEqual(["v2.0.0", "v1.0.0"]);
+
+    const history = JSON.parse(
+      await readFile(join(feedsDir, "run-history.json"), "utf-8"),
+    );
+    expect(history.length).toBe(2);
+  });
 });
