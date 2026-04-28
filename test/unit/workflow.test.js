@@ -90,4 +90,20 @@ describe("scrape.yml workflow", () => {
       /REDDIT_CLIENT_SECRET:\s*\$\{\{\s*secrets\.REDDIT_CLIENT_SECRET\s*\}\}/,
     );
   });
+
+  it("hydrates gh-pages feeds before running scraper", async () => {
+    // public/feeds/ lives on gh-pages, not main. Without hydration,
+    // readJsonSafe returns null on a fresh CI checkout and the rolling-window
+    // merge silently truncates each run to "today's new items only."
+    const content = await readFile(workflowPath, "utf-8");
+    workflow = parse(content);
+    const steps = workflow.jobs.scrape.steps;
+    const hydrateIdx = steps.findIndex(
+      (s) =>
+        s.uses?.startsWith("actions/checkout") && s.with?.ref === "gh-pages",
+    );
+    const scraperIdx = steps.findIndex((s) => s.name === "Run scraper");
+    expect(hydrateIdx).toBeGreaterThanOrEqual(0);
+    expect(hydrateIdx).toBeLessThan(scraperIdx);
+  });
 });
