@@ -26,6 +26,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Hydrate existing feeds from gh-pages
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages-feeds
+          token: ${{ secrets.SCRAPER_PAT }}
+
+      - name: Copy hydrated feeds into public/
+        run: |
+          mkdir -p public
+          if [ -d gh-pages-feeds/feeds ]; then
+            cp -r gh-pages-feeds/feeds public/
+            echo "Hydrated $(ls public/feeds | wc -l) feed files from gh-pages"
+          else
+            echo "No prior gh-pages feeds (first run or branch missing); accumulating from empty"
+          fi
+          rm -rf gh-pages-feeds
+
       - name: Run scraper
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
