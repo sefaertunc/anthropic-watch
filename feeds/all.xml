@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 28 Apr 2026 08:30:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 11:33:40 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #1621 from anthropics/fix/validate-frontmatter-shell-injection</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/99832739a1b76c6ffa25c03f2c351bbd68f7cf45</link>
+      <guid isPermaLink="false">9983273</guid>
+      <pubDate>Tue, 28 Apr 2026 10:41:07 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Harden validate-frontmatter workflow</description>
+    </item>
     <item>
       <title>0.1.69</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -51,6 +59,14 @@
       <pubDate>Tue, 28 Apr 2026 03:46:23 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
+    </item>
+    <item>
+      <title>Fix shell injection in validate-frontmatter workflow</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/068a59e000f2aa4f0dee0fc5bb4d196c6120a3e6</link>
+      <guid isPermaLink="false">068a59e</guid>
+      <pubDate>Tue, 28 Apr 2026 00:38:18 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The &apos;Validate frontmatter&apos; step interpolated step output directly into a double-quoted shell string, allowing a fork PR that adds a file named e.g. agents/$(curl ...).md to execute arbitrary commands on the runner.  - Pass the file list via env: and reference as &quot;$FILES&quot; so the shell   never re-eval</description>
     </item>
     <item>
       <title>v1.0.108</title>

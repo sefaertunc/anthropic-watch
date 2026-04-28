@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-04-28T08:30:01.236Z",
-  "itemCount": 9,
+  "generated": "2026-04-28T11:33:40.782Z",
+  "itemCount": 11,
   "items": [
+    {
+      "id": "9983273",
+      "title": "Merge pull request #1621 from anthropics/fix/validate-frontmatter-shell-injection",
+      "date": "2026-04-28T10:41:07Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/99832739a1b76c6ffa25c03f2c351bbd68f7cf45",
+      "snippet": "Harden validate-frontmatter workflow",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "9983273|gh-commits-plugins-official"
+    },
     {
       "id": "c5837a2",
       "title": "Add aws-dev-toolkit plugin (#1617)",
@@ -29,6 +40,17 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "f4b5494|gh-commits-plugins-official"
+    },
+    {
+      "id": "068a59e",
+      "title": "Fix shell injection in validate-frontmatter workflow",
+      "date": "2026-04-28T00:38:18Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/068a59e000f2aa4f0dee0fc5bb4d196c6120a3e6",
+      "snippet": "The 'Validate frontmatter' step interpolated step output directly into a double-quoted shell string, allowing a fork PR that adds a file named e.g. agents/$(curl ...).md to execute arbitrary commands on the runner.  - Pass the file list via env: and reference as \"$FILES\" so the shell   never re-eval",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "068a59e|gh-commits-plugins-official"
     },
     {
       "id": "1c81b81",
