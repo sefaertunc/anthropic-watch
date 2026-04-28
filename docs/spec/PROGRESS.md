@@ -2,8 +2,8 @@
 
 ## Current Status
 
-**Phase:** Phase 6 — Community Sources (production, v1.4.1 production fixes merged to develop; release PR to main pending)
-**Last Updated:** 2026-04-24
+**Phase:** Phase 6 — Community Sources (v1.4.1 in production on `main`; release automation live; no active feature work)
+**Last Updated:** 2026-04-28
 
 ## Completed
 
@@ -58,22 +58,24 @@
   - Docs: `docs/TROUBLESHOOTING.md` Reddit 403 section rewritten (real cause: datacenter-IP block) + new OAuth setup entry flagging the November 2025 Responsible Builder Policy gate; `docs/reddit-oauth-setup.md` added as the RBP submission reference (fields, use case, subreddits, volume, data handling, compliance).
   - 12 new tests (157 total): Reddit OAuth graceful-skip / token fetch / 401 retry / fixture short-circuit, Twitter gate timing + reset helper, workflow main-branch guards + Reddit env pass-through.
   - No schema changes, no new sources, no new scraper types, no client-library release. CHANGELOG honesty correction for the v1.4.0 "queue naturally via backoff" claim.
+- [x] v1.4.1 release shipped (2026-04-24) — PR #15 merged to `main`, tag `v1.4.1` created, back-merged to `develop`. First scheduled cron run on `main` validated the Twitter spacing gate and rebase-retry loop in production.
+- [x] Release automation (2026-04-24, PR #16) — `.github/workflows/release.yml` auto-creates tag + GitHub Release on `pull_request: closed + merged==true + branches: [main]`. Concurrency-gated, idempotent via tag-exists check, awk-extracted CHANGELOG section, `--notes-file` to dodge shell-quote issues, `merge_commit_sha` null-check, `github-actions[bot]` identity. Self-test on PR #16 merge correctly skipped (tag already existed). No scraper code change.
+- [x] v1.4.1 docs refresh (2026-04-24, PR #17) — 8 files: `README.md`, `packages/client/README.md`, `docs/WORCLAUDE-INTEGRATION.md`, `CONTRIBUTING.md`, `SECURITY.md`, `CLAUDE.md`, `AGENTS.md`, `docs/reddit-oauth-setup.md`, plus `docs/spec/SPEC.md:7` source-count fix. Removed stale Playwright references, hardcoded source counts, stacked version notes. SPEC.md gained Release Policy bullet for the new workflow.
+- [x] Client `@sefaertunc/anthropic-watch-client@1.0.2` (2026-04-28, PR #18) — README polish for npm landing page (relation to scraper hoisted, npm-friendly framing). 1.0.1 was published in the same window (community-category union widening). Paired stale-reference sweep across `docs/ARCHITECTURE.md`, `docs/SOURCES.md`, `docs/FEED-SCHEMA.md`, `docs/ADDING-SOURCES.md`, `docs/TROUBLESHOOTING.md`. No scraper code change.
+- [x] Scaffolding upgrade (2026-04-24 → 2026-04-28) — worclaude `.claude/` scaffolding 2.6.3 → 2.7.1 → 2.9.0 (PR #19). Internal tooling only.
 
 ## In Progress
 
-**Release execution for v1.4.1 (scraper).** Release PR from develop → main is the next step after this sync commit. After the release PR merges to main: tag `v1.4.1`, GitHub release, back-merge to develop. Reddit sources remain in graceful-skip mode until Reddit's Responsible Builder Policy application is approved (stated ~7-day turnaround); they come online automatically on the next cron run after `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` are added as repo secrets. Remote routine `trig_012EHpWTm2hU7jK2wdWKk2Fi` checks in on 2026-05-01 and opens a status issue either way.
+None — no active feature work. Operational watch items in Next Steps.
 
 ## Next Steps
 
-1. Merge release PR (develop → main). Tag `v1.4.1` on main and create the GitHub release.
-2. Back-merge `main` into `develop` after the release PR merges.
-3. Submit Reddit Responsible Builder Policy application via Reddit's Developer Support form (use `docs/reddit-oauth-setup.md` as the field reference). Add `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` as repo secrets once approval lands.
-4. Carry-over from v1.4.0 cycle: publish client `@sefaertunc/anthropic-watch-client@1.0.1` — `cd packages/client && npm ci && npm run types && npm publish` (from `main` post-merge; confirm `npm whoami` first). Smoke test: `npm view @sefaertunc/anthropic-watch-client@1.0.1 dist.tarball` resolves; live install smoke in `/tmp` with a `community`-category item type-check. (npm currently has 1.0.0; local `packages/client/package.json` is at 1.0.1.)
-5. **First scheduled cron run after main merge** — watch the run report for the Twitter spacing gate (no 429s across 8 sources) and the workflow rebase-retry loop under real state-commit contention.
-6. Watch the dashboard and run-report for sources with `consecutiveFailures > 0` — that's the signal for scraper rot (site redesigns, policy changes, API shape drift).
-7. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
-8. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
-9. Subpackage CI job (`cd packages/client && npm ci && npm test` in a matrix step) remains deferred — pick up in a patch release if `packages/client/` changes start slipping through without coverage.
+1. Reddit Responsible Builder Policy application — submit via Reddit's Developer Support form using `docs/reddit-oauth-setup.md` as the field reference. Add `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` as repo secrets once approval lands. Sources remain in graceful-skip until then. Remote routine `trig_012EHpWTm2hU7jK2wdWKk2Fi` checks in on 2026-05-01.
+2. Watch the dashboard and run-report for sources with `consecutiveFailures > 0` — signal for scraper rot (site redesigns, policy changes, API shape drift).
+3. First end-to-end live-fire of `release.yml` happens on the next versioned scraper release (v1.4.2 / v1.5.0). Compare resulting GitHub Release body format against the manual v1.4.1 release.
+4. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
+5. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
+6. Subpackage CI job (`cd packages/client && npm ci && npm test` in a matrix step) remains deferred — pick up in a patch release if `packages/client/` changes start slipping through without coverage.
 
 ## Blockers
 
