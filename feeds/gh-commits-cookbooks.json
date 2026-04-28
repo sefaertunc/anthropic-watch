@@ -5,7 +5,107 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-04-27T08:31:30.352Z",
-  "itemCount": 0,
-  "items": []
+  "generated": "2026-04-28T08:30:01.234Z",
+  "itemCount": 9,
+  "items": [
+    {
+      "id": "33424c3",
+      "title": "Merge pull request #573 from anthropics/claude/copy-memory-cookbook-pr-ZRx6N",
+      "date": "2026-04-27T21:00:00Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/33424c3eb476cd56379435be086ccc228af1050d",
+      "snippet": "feat(managed_agents): add Managed Agents Memory Cookbook",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "33424c3|gh-commits-cookbooks"
+    },
+    {
+      "id": "869f7e7",
+      "title": "fix(managed_agents): round 5 of memory cookbook review feedback",
+      "date": "2026-04-25T22:49:49Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/869f7e76d9c2539a0831cf610fc85fbed41a88bb",
+      "snippet": "- Simplify status_idle handler to a single unconditional break - Document run_turn return value in the docstring - Restore inline 'Optional: run before cleanup' hint in the seeding cell - Add catalog store cleanup reminder to the combine-stores snippet - Tighten registry description and intro phrasi",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "869f7e7|gh-commits-cookbooks"
+    },
+    {
+      "id": "293bd2a",
+      "title": "fix(managed_agents): address remaining memory cookbook review items",
+      "date": "2026-04-25T22:03:06Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/293bd2a7734aa69f693e826a9268d96838577c02",
+      "snippet": "- Add wait_for_idle_status calls before session archive in cleanup - Break out of run_turn on any status_idle, not just end_turn - Guard event.input against None in tool_use handler - Move seeding-order warning to a markdown Note callout - Add %pip install cell for minimum SDK version - Link to sibl",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "293bd2a|gh-commits-cookbooks"
+    },
+    {
+      "id": "fd673f8",
+      "title": "fix(managed_agents): pin agent version in combine-stores snippet too",
+      "date": "2026-04-25T01:50:16Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/fd673f83bb8b0d293e8f3aed6f2e95de55349b33",
+      "snippet": "The illustrative markdown snippet under \"Combine per-customer and shared stores\" still passed agent=agent.id while the runnable cells were already using the pinned dict form. Align the snippet so readers copying the production pattern get the same version-pinned shape.  https://claude.ai/code/sessio",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "fd673f8|gh-commits-cookbooks"
+    },
+    {
+      "id": "5343894",
+      "title": "fix(managed_agents): pin agent version on sessions.create in memory cookbook",
+      "date": "2026-04-25T01:22:03Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/534389445fbac11079b2336929bd8eb4cf811350",
+      "snippet": "Pass agent={\"type\": \"agent\", \"id\": agent.id, \"version\": agent.version} instead of the bare agent.id, matching every other notebook in the managed_agents series.  https://claude.ai/code/session_01VkfVPdiJTWVh6Vj5owqRXH",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "5343894|gh-commits-cookbooks"
+    },
+    {
+      "id": "6c32b29",
+      "title": "fix(managed_agents): round 3 of memory cookbook review feedback",
+      "date": "2026-04-25T01:16:18Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/6c32b29f7453a25835029d786962466789dd15e3",
+      "snippet": "- run_turn: handle session.status_terminated and call   wait_for_idle_status before returning, mirroring   utilities.stream_until_end_turn; drop the now-redundant   wait_for_idle_status calls from the cleanup cell - environments.create: pass an explicit cloud/limited config - agent_toolset_20260401:",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "6c32b29|gh-commits-cookbooks"
+    },
+    {
+      "id": "892f846",
+      "title": "fix(managed_agents): align memory cookbook with CMA series conventions",
+      "date": "2026-04-25T01:10:44Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/892f846d1a5e6034e3c1db5075e0837e193b955b",
+      "snippet": "- Guard the session.status_idle break on stop_reason.type == \"end_turn\"   so the pattern is safe to copy into custom-tool agents - Import wait_for_idle_status from utilities and call it before each   sessions.archive() to absorb the SSE-vs-status race - Use environments.archive instead of environmen",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "892f846|gh-commits-cookbooks"
+    },
+    {
+      "id": "1016f8f",
+      "title": "docs(managed_agents): address review feedback on memory cookbook",
+      "date": "2026-04-25T00:41:28Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/1016f8f3527b8170e68a21c8396a7adfaf88cab2",
+      "snippet": "- Prefer uv add over pip in the prerequisites - Clarify that the agent_toolset_20260401 type string identifies the   toolset, not a model, and does not need bumping - Drop unused reply variable from the second run_turn call  Intentionally skip the dotenv suggestion: the other managed_agents notebook",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "1016f8f|gh-commits-cookbooks"
+    },
+    {
+      "id": "3e44f8d",
+      "title": "feat(managed_agents): add memory store cookbook",
+      "date": "2026-04-25T00:08:56Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/3e44f8d442bb0ec5ceda082408cebaa5b94d4155",
+      "snippet": "A guided tutorial showing how to give a Managed Agent a memory store so it learns and recalls a customer's shopping preferences across separate sessions. Covers store creation, the resources attachment with per-attachment instructions, inspecting and seeding memories from your own application, and c",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "3e44f8d|gh-commits-cookbooks"
+    }
+  ]
 }

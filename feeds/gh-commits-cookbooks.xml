@@ -6,6 +6,78 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 27 Apr 2026 08:31:30 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 08:30:01 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #573 from anthropics/claude/copy-memory-cookbook-pr-ZRx6N</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/33424c3eb476cd56379435be086ccc228af1050d</link>
+      <guid isPermaLink="false">33424c3</guid>
+      <pubDate>Mon, 27 Apr 2026 21:00:00 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>feat(managed_agents): add Managed Agents Memory Cookbook</description>
+    </item>
+    <item>
+      <title>fix(managed_agents): round 5 of memory cookbook review feedback</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/869f7e76d9c2539a0831cf610fc85fbed41a88bb</link>
+      <guid isPermaLink="false">869f7e7</guid>
+      <pubDate>Sat, 25 Apr 2026 22:49:49 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>- Simplify status_idle handler to a single unconditional break - Document run_turn return value in the docstring - Restore inline &apos;Optional: run before cleanup&apos; hint in the seeding cell - Add catalog store cleanup reminder to the combine-stores snippet - Tighten registry description and intro phrasi</description>
+    </item>
+    <item>
+      <title>fix(managed_agents): address remaining memory cookbook review items</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/293bd2a7734aa69f693e826a9268d96838577c02</link>
+      <guid isPermaLink="false">293bd2a</guid>
+      <pubDate>Sat, 25 Apr 2026 22:03:06 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>- Add wait_for_idle_status calls before session archive in cleanup - Break out of run_turn on any status_idle, not just end_turn - Guard event.input against None in tool_use handler - Move seeding-order warning to a markdown Note callout - Add %pip install cell for minimum SDK version - Link to sibl</description>
+    </item>
+    <item>
+      <title>fix(managed_agents): pin agent version in combine-stores snippet too</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/fd673f83bb8b0d293e8f3aed6f2e95de55349b33</link>
+      <guid isPermaLink="false">fd673f8</guid>
+      <pubDate>Sat, 25 Apr 2026 01:50:16 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>The illustrative markdown snippet under &quot;Combine per-customer and shared stores&quot; still passed agent=agent.id while the runnable cells were already using the pinned dict form. Align the snippet so readers copying the production pattern get the same version-pinned shape.  https://claude.ai/code/sessio</description>
+    </item>
+    <item>
+      <title>fix(managed_agents): pin agent version on sessions.create in memory cookbook</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/534389445fbac11079b2336929bd8eb4cf811350</link>
+      <guid isPermaLink="false">5343894</guid>
+      <pubDate>Sat, 25 Apr 2026 01:22:03 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Pass agent={&quot;type&quot;: &quot;agent&quot;, &quot;id&quot;: agent.id, &quot;version&quot;: agent.version} instead of the bare agent.id, matching every other notebook in the managed_agents series.  https://claude.ai/code/session_01VkfVPdiJTWVh6Vj5owqRXH</description>
+    </item>
+    <item>
+      <title>fix(managed_agents): round 3 of memory cookbook review feedback</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/6c32b29f7453a25835029d786962466789dd15e3</link>
+      <guid isPermaLink="false">6c32b29</guid>
+      <pubDate>Sat, 25 Apr 2026 01:16:18 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>- run_turn: handle session.status_terminated and call   wait_for_idle_status before returning, mirroring   utilities.stream_until_end_turn; drop the now-redundant   wait_for_idle_status calls from the cleanup cell - environments.create: pass an explicit cloud/limited config - agent_toolset_20260401:</description>
+    </item>
+    <item>
+      <title>fix(managed_agents): align memory cookbook with CMA series conventions</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/892f846d1a5e6034e3c1db5075e0837e193b955b</link>
+      <guid isPermaLink="false">892f846</guid>
+      <pubDate>Sat, 25 Apr 2026 01:10:44 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>- Guard the session.status_idle break on stop_reason.type == &quot;end_turn&quot;   so the pattern is safe to copy into custom-tool agents - Import wait_for_idle_status from utilities and call it before each   sessions.archive() to absorb the SSE-vs-status race - Use environments.archive instead of environmen</description>
+    </item>
+    <item>
+      <title>docs(managed_agents): address review feedback on memory cookbook</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/1016f8f3527b8170e68a21c8396a7adfaf88cab2</link>
+      <guid isPermaLink="false">1016f8f</guid>
+      <pubDate>Sat, 25 Apr 2026 00:41:28 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>- Prefer uv add over pip in the prerequisites - Clarify that the agent_toolset_20260401 type string identifies the   toolset, not a model, and does not need bumping - Drop unused reply variable from the second run_turn call  Intentionally skip the dotenv suggestion: the other managed_agents notebook</description>
+    </item>
+    <item>
+      <title>feat(managed_agents): add memory store cookbook</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/3e44f8d442bb0ec5ceda082408cebaa5b94d4155</link>
+      <guid isPermaLink="false">3e44f8d</guid>
+      <pubDate>Sat, 25 Apr 2026 00:08:56 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>A guided tutorial showing how to give a Managed Agent a memory store so it learns and recalls a customer&apos;s shopping preferences across separate sessions. Covers store creation, the resources attachment with per-attachment instructions, inspecting and seeding memories from your own application, and c</description>
+    </item>
   </channel>
 </rss>
