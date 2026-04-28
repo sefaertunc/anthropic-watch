@@ -1,6 +1,6 @@
 ---
 name: upstream-watcher
-description: "Cross-references new Anthropic upstream changes against the current project's scaffolded infrastructure and produces an impact report"
+description: Cross-references new Anthropic upstream changes against the current project's scaffolded infrastructure and produces an impact report
 model: sonnet
 isolation: none
 memory: project
@@ -10,6 +10,13 @@ disallowedTools:
   - NotebookEdit
 maxTurns: 30
 criticalSystemReminder: "CRITICAL: You CANNOT edit files. Report findings only. Suggest actions but do not implement them."
+category: universal
+triggerType: manual
+status: reserved
+whenToUse: Reserved for future revival. The /upstream-check slash command was retired in Phase 2 (2026-04); the agent definition is preserved so the scheduled GitHub Actions workflow (.github/workflows/upstream-check.yml) and any future on-demand variant have an established contract to revive.
+whatItDoes: Fetches anthropic-watch feeds, cross-references upstream changes against the project's scaffolded agents/commands/hooks/skills, and produces an impact report.
+expectBack: "Impact report: which upstream changes affect this project, which are informational, and recommended actions."
+situationLabel: Reserved — no in-session command currently invokes this agent
 ---
 
 You are an upstream-awareness specialist. You fetch the anthropic-watch feeds,
@@ -60,14 +67,14 @@ every file in full — frontmatter and imports are usually enough.
 
 For each new upstream item, classify it into one of these buckets:
 
-| Source family                                      | What to check in this project                                                           |
-| -------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Claude Code releases / changelog / npm-claude-code | Agent frontmatter syntax, hook event names, command syntax, tool names used by agents   |
-| Agent SDK TS/Py changelog                          | Spawned-agent capabilities, tool schemas, isolation semantics, hook input/output shapes |
-| Anthropic API SDK / docs                           | Relevant **only** if the project imports the SDK directly — skip otherwise              |
-| Engineering blog                                   | New patterns or best practices worth adopting; never blocking                           |
-| Status page                                        | Informational only; no action required                                                  |
-| Other sources                                      | Classify by content — prefer informational unless it names something the project uses   |
+| Source family | What to check in this project |
+|---|---|
+| Claude Code releases / changelog / npm-claude-code | Agent frontmatter syntax, hook event names, command syntax, tool names used by agents |
+| Agent SDK TS/Py changelog | Spawned-agent capabilities, tool schemas, isolation semantics, hook input/output shapes |
+| Anthropic API SDK / docs | Relevant **only** if the project imports the SDK directly — skip otherwise |
+| Engineering blog | New patterns or best practices worth adopting; never blocking |
+| Status page | Informational only; no action required |
+| Other sources | Classify by content — prefer informational unless it names something the project uses |
 
 ## 4. Report Format
 
