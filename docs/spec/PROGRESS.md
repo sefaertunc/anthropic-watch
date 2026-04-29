@@ -2,8 +2,8 @@
 
 ## Current Status
 
-**Phase:** Phase 6 — Community Sources (v1.4.2 awaiting release; release.yml first live-fire on develop → main merge; no active feature work)
-**Last Updated:** 2026-04-28
+**Phase:** Phase 6 — Community Sources (v1.4.2 shipped 2026-04-28; worclaude scaffolding 2.10.1 upgrade + new per-PR Version bump declaration workflow shipped 2026-04-30; no active feature work)
+**Last Updated:** 2026-04-30
 
 ## Completed
 
@@ -64,6 +64,8 @@
 - [x] Client `@sefaertunc/anthropic-watch-client@1.0.2` (2026-04-28, PR #18) — README polish for npm landing page (relation to scraper hoisted, npm-friendly framing). 1.0.1 was published in the same window (community-category union widening). Paired stale-reference sweep across `docs/ARCHITECTURE.md`, `docs/SOURCES.md`, `docs/FEED-SCHEMA.md`, `docs/ADDING-SOURCES.md`, `docs/TROUBLESHOOTING.md`. No scraper code change.
 - [x] Scaffolding upgrade (2026-04-24 → 2026-04-28) — worclaude `.claude/` scaffolding 2.6.3 → 2.7.1 → 2.9.0 (PR #19). Internal tooling only.
 - [x] v1.4.2 — Feed-truncation fix (2026-04-28, PR #21) — Diagnosed and fixed silent feed-accumulation bug present since v1.0.0. The published JSON/RSS feeds at `https://sefaertunc.github.io/anthropic-watch/feeds/` had been resetting to "today's new items only" each day instead of the rolling 100/50-item windows documented in `docs/FEED-SCHEMA.md`. Live evidence: `feeds/all.json` on 2026-04-21 contained 37 items spanning 6 months; on 2026-04-28 it contained 28 items spanning 4 days (items lost, not a superset). Root cause: `scrape.yml` checked out `main` only; `public/feeds/*` lives on `gh-pages`; `readJsonSafe` at `src/index.js:191,226,269` returned `null` on every CI run; `peaceiris/actions-gh-pages@v4` then overwrote the gh-pages copy with the truncated result. Fix: insert two steps between `Install dependencies` and `Run scraper` — `actions/checkout@v4 ref: gh-pages` into a sibling path with `continue-on-error: true`, then `cp -r` into `public/feeds/`. First-run-after-deploy and forks-without-gh-pages handled cleanly via the existence check + continue-on-error. Two new tests catch the disk-persistence boundary the existing merge-unit test skipped: workflow structural assertion + e2e two-runs-shared-feedsDir accumulation test (159/159 passing). Historical items lost (October 2025 → April 2026) will not be backfilled; rolling windows seed fresh from this point. No `src/`, schema, or scraper changes.
+- [x] v1.4.2 release shipped (2026-04-28, PR #22) — First end-to-end live-fire of `release.yml`. Tag `v1.4.2` auto-created by `github-actions[bot]` at 11:10 UTC on the develop → main release PR merge; CHANGELOG `[1.4.2]` section extracted via awk and posted as the GitHub Release body verbatim. Concurrency gate, idempotency check, `--notes-file` shell-quote workaround, and `merge_commit_sha` null-check all behaved as designed. Release-automation contract is now proven against a real version cut.
+- [x] Scaffolding upgrade 2.9.0 → 2.10.1 + per-PR Version bump workflow adoption (2026-04-30, PR #23) — Selective merge of 22 worclaude 2.10.1 templates per PR #19's pattern. Adopted the new per-PR Version bump declaration workflow (`/commit-push-pr` non-skippable AskUserQuestion + `/sync` max-precedence aggregation), SHA-based session tracking (`sha:` line in session summaries; `/start` SHA-based drift with date fallback), `/end` handoff/summary split + push consent, `/review-changes` ↔ `/refactor-clean` SHA-stamped scratch artifact handoff, `/verify` scope locked to fast read-only test+lint, `/build-fix` 3-attempt bug-fixer escalation, `/setup` state-machine rewrite (131 → 834 lines), `claude-md-maintenance` 200-line target + `@import` + worktree-share, `subagent-usage` `origin/HEAD` gotcha (`ci-fixer` preserved in worktree-isolated list), `upstream-watcher` agent migrated to client lib. CLAUDE.md gained Critical Rule 13 (slash-command invocation contract) and reworded Project-Specific Rule 12 for per-PR aggregation. No scraper, schema, or source-list changes; tests 159/159.
 
 ## In Progress
 
@@ -73,11 +75,10 @@ None — no active feature work. Operational watch items in Next Steps.
 
 1. Reddit Responsible Builder Policy application — submit via Reddit's Developer Support form using `docs/reddit-oauth-setup.md` as the field reference. Add `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` as repo secrets once approval lands. Sources remain in graceful-skip until then. Remote routine `trig_012EHpWTm2hU7jK2wdWKk2Fi` checks in on 2026-05-01.
 2. Watch the dashboard and run-report for sources with `consecutiveFailures > 0` — signal for scraper rot (site redesigns, policy changes, API shape drift).
-3. First end-to-end live-fire of `release.yml` happens on the **v1.4.2 develop → main release PR** opened by this sync. Watch the workflow run for tag creation, CHANGELOG extraction, and GitHub Release publishing — compare the resulting body format against the manually-cut v1.4.1 release.
-4. After v1.4.2 ships, monitor the first scheduled cron run on `main` for the `Hydrated N feed files from gh-pages` log line and confirm `feeds/run-history.json` accumulates beyond 1 entry. The first post-fix gh-pages commit will be larger than steady-state (bounded: `all.json` up to 100 items, per-source up to 50 each).
-5. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
-6. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
-7. Subpackage CI job (`cd packages/client && npm ci && npm test` in a matrix step) remains deferred — pick up in a patch release if `packages/client/` changes start slipping through without coverage.
+3. Monitor the first scheduled cron run on `main` after the v1.4.2 fix for the `Hydrated N feed files from gh-pages` log line and confirm `feeds/run-history.json` accumulates beyond 1 entry. The first post-fix gh-pages commit will be larger than steady-state (bounded: `all.json` up to 100 items, per-source up to 50 each).
+4. Continue source additions as new public Anthropic surfaces appear. Follow the pattern in `.claude/skills/project-patterns/SKILL.md` and `docs/ADDING-SOURCES.md`.
+5. v2.0 RSS `guid` composite-key change is scheduled for the next envelope-version bump — not before. Any v1.x.y release must keep `guid` as bare `id`.
+6. Subpackage CI job (`cd packages/client && npm ci && npm test` in a matrix step) remains deferred — pick up in a patch release if `packages/client/` changes start slipping through without coverage.
 
 ## Blockers
 
