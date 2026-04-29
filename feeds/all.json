@@ -5,9 +5,383 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-04-28T11:33:40.759Z",
-  "itemCount": 30,
+  "generated": "2026-04-29T08:24:17.700Z",
+  "itemCount": 69,
   "items": [
+    {
+      "id": "0.1.71",
+      "title": "0.1.71",
+      "date": "2026-04-29T08:23:31.703Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "New Features\n- Domain allowlist fields for sandbox network config: Added allowedDomains, deniedDomains, allowManagedDomainsOnly, and allowMachLookup fields to SandboxNetworkConfig, bringing parity with the TypeScript schema and enabling Python SDK users to configure network allowlists with proper ty",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.1.71|agent-sdk-py-changelog"
+    },
+    {
+      "id": "0.2.123",
+      "title": "0.2.123",
+      "date": "2026-04-29T08:23:31.597Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Updated to parity with Claude Code v2.1.123",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.2.123|agent-sdk-ts-changelog"
+    },
+    {
+      "id": "2.1.123",
+      "title": "2.1.123",
+      "date": "2026-04-29T08:23:30.763Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed OAuth authentication failing with a 401 retry loop when CLAUDECODEDISABLEEXPERIMENTALBETAS=1 is set",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.123|claude-code-changelog"
+    },
+    {
+      "id": "v1.0.110",
+      "title": "v1.0.110",
+      "date": "2026-04-29T03:30:34Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.110",
+      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.110",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.110|claude-code-action"
+    },
+    {
+      "id": "v2.1.123",
+      "title": "v2.1.123",
+      "date": "2026-04-29T03:29:13Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.123",
+      "snippet": "What's changed\n- Fixed OAuth authentication failing with a 401 retry loop when CLAUDECODEDISABLEEXPERIMENTALBETAS=1 is set",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.123|claude-code-releases"
+    },
+    {
+      "id": "e512ec9",
+      "title": "chore: Update CHANGELOG.md",
+      "date": "2026-04-29T03:29:06Z",
+      "url": "https://github.com/anthropics/claude-code/commit/e512ec99188d191b07662fc9f69c5764f750a302",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "e512ec9|gh-commits-claude-code"
+    },
+    {
+      "id": "c7c7d37",
+      "title": "Merge remote-tracking branch 'origin/main' into feat/ecc2-rc1-preview-surface",
+      "date": "2026-04-29T02:15:34Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/c7c7d37f2946d7497577408d19adaee6a8341ddc",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "c7c7d37|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b6b5b6d",
+      "title": "test: cover CI catalog validator",
+      "date": "2026-04-29T02:14:19Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/b6b5b6d08ed48ee21156caa31e8c20da9915a8ce",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b6b5b6d|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f6acf6e",
+      "title": "Merge pull request #1606 from affaan-m/fix/1598-observer-sigusr1-wait",
+      "date": "2026-04-29T02:12:04Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/f6acf6e19f87fc57de83ab42677f1d9b7cb5bcca",
+      "snippet": "fix: retry observer wait after SIGUSR1",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f6acf6e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "46aa301",
+      "title": "Merge remote-tracking branch 'origin/main' into feat/ecc2-rc1-preview-surface",
+      "date": "2026-04-29T02:11:54Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/46aa301f1d608baee0fb204a75d76fd365813f44",
+      "snippet": "# Conflicts: #\tdocs/fixes/HOOK-FIX-20260421-ADDENDUM.md",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "46aa301|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "83d6bb2",
+      "title": "Merge pull request #1605 from affaan-m/fix/1587-codex-skills-validation",
+      "date": "2026-04-29T02:11:29Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/83d6bb230d634852a299cbb803aca93add9972d8",
+      "snippet": "fix: normalize codex skill metadata",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "83d6bb2|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "6c8a6bd",
+      "title": "docs: remove unicode markers from hook addendum",
+      "date": "2026-04-29T02:11:19Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/6c8a6bd7c0eec4e2f9e4f59b7ad3513a23af78f8",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "6c8a6bd|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0a87323",
+      "title": "feat(ecc2): finalize rc1 release surface",
+      "date": "2026-04-29T02:10:04Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/0a87323eda77ee412fa3a3bf028a577536966505",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0a87323|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5595c07",
+      "title": "Merge pull request #1555 from affaan-m/fix/install-uninstall-readme-clarity",
+      "date": "2026-04-29T02:10:03Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/5595c074fecdde8fc8bf4b24d168363930b1e388",
+      "snippet": "docs: clarify install and uninstall paths",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5595c07|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "fd95cf6",
+      "title": "fix: retry observer wait after signal",
+      "date": "2026-04-29T02:08:35Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/fd95cf6b29231b8dc58c4faac5db04e441c1729d",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "fd95cf6|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2.1.123",
+      "title": "@anthropic-ai/claude-code@2.1.123",
+      "date": "2026-04-29T01:52:47.690Z",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+      "source": "npm-claude-code",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.123|npm-claude-code"
+    },
+    {
+      "id": "lryjwwy0q9pl",
+      "title": "Elevated errors on Claude Opus 4.7",
+      "date": "2026-04-28T23:33:07.339Z",
+      "url": "https://stspg.io/gsg6msbs6shy",
+      "snippet": "[minor] resolved — The incident is now resolved. The impact was between 16:25 PT / 23:25 UTC and 16:33 PT / 23:33 UTC.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "lryjwwy0q9pl|status-page"
+    },
+    {
+      "id": "e73e9a6",
+      "title": "Merge pull request #1636 from anthropics/pete/remove-transcript-examples-from-agents",
+      "date": "2026-04-28T23:04:44Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/e73e9a6257ac5285a7218dc5e7e99b1ae2dc65e7",
+      "snippet": "Replace transcript-style agent examples with prose trigger descriptions",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "e73e9a6|gh-commits-plugins-official"
+    },
+    {
+      "id": "v1.0.109",
+      "title": "v1.0.109",
+      "date": "2026-04-28T22:07:07Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.109",
+      "snippet": "What's Changed\n docs: pullrequesttarget guidance and base-action trust model by @OctavianGuzu in https://github.com/anthropics/claude-code-action/pull/1250\nFull Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.109",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.109|claude-code-action"
+    },
+    {
+      "id": "v2.1.122",
+      "title": "v2.1.122",
+      "date": "2026-04-28T22:05:15Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.122",
+      "snippet": "What's changed\n- Added ANTHROPICBEDROCKSERVICETIER environment variable to select a Bedrock service tier (default, flex, or priority), sent as the X-Amzn-Bedrock-Service-Tier header\n- Pasting a PR URL into the /resume search box now finds the session that created that PR (GitHub, GitHub Enterprise, ",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.122|claude-code-releases"
+    },
+    {
+      "id": "a609cfb",
+      "title": "chore: Update CHANGELOG.md",
+      "date": "2026-04-28T22:05:09Z",
+      "url": "https://github.com/anthropics/claude-code/commit/a609cfbee3c5e0066a25f62f7b4109420c58b940",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "a609cfb|gh-commits-claude-code"
+    },
+    {
+      "id": "2049240989441925388",
+      "title": "RT @trq212: we're doing a lot more of this, hunting down some of the most annoying bugs in Claude Code\n\nlet me know if you have any white w…",
+      "date": "2026-04-28T21:34:59.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2049240989441925388",
+      "snippet": "RT @trq212: we're doing a lot more of this, hunting down some of the most annoying bugs in Claude Code\n\nlet me know if you have any white w…",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2049240989441925388|twitter-claudedevs"
+    },
+    {
+      "id": "ce721c1",
+      "title": "Replace transcript-style agent examples with prose trigger descriptions",
+      "date": "2026-04-28T20:56:06Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/ce721c1f1d5da2c281588818e072ae01a05d2e73",
+      "snippet": "Several agent files used <example> blocks containing user: \"...\" / assistant: \"...\" turn markers, embedded as \\n-escaped strings inside the YAML frontmatter description: field. Replace those with flat prose trigger descriptions in description: and a 'When to invoke' section in the agent body contain",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "ce721c1|gh-commits-plugins-official"
+    },
+    {
+      "id": "2049230075799966179",
+      "title": "RT @ClaudeDevs: In the last four Claude Code CLI releases, we’ve shipped 50+ stability and performance fixes.\n\nFaster resume, stable auth,…",
+      "date": "2026-04-28T20:51:37.000Z",
+      "url": "https://x.com/bcherny/status/2049230075799966179",
+      "snippet": "RT @ClaudeDevs: In the last four Claude Code CLI releases, we’ve shipped 50+ stability and performance fixes.\n\nFaster resume, stable auth,…",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2049230075799966179|twitter-bcherny"
+    },
+    {
+      "id": "2049228273813750030",
+      "title": "In the last four Claude Code CLI releases, we’ve shipped 50+ stability and performance fixes.\n\nFaster resume, stable auth, lower memory, fewer hangs: 🧵",
+      "date": "2026-04-28T20:44:27.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2049228273813750030",
+      "snippet": "In the last four Claude Code CLI releases, we’ve shipped 50+ stability and performance fixes.\n\nFaster resume, stable auth, lower memory, fewer hangs: 🧵",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2049228273813750030|twitter-claudedevs"
+    },
+    {
+      "id": "5b643ee",
+      "title": "Update vanta-mcp-plugin plugin (#1637)",
+      "date": "2026-04-28T20:35:16Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/5b643ee82aee1aee9b2bb0437e5118102f352c3f",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "5b643ee|gh-commits-plugins-official"
+    },
+    {
+      "id": "9l93x2ht4s5w",
+      "title": "Claude.ai unavailable and elevated errors on the API",
+      "date": "2026-04-28T17:41:55.352Z",
+      "url": "https://stspg.io/mz37pbn6yt3w",
+      "snippet": "[major] resolved — This incident has been resolved.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "9l93x2ht4s5w|status-page"
+    },
+    {
+      "id": "38b5056",
+      "title": "Merge pull request #1582 from anthropics/morganl/code-modernization-plugin",
+      "date": "2026-04-28T17:02:28Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/38b5056c446aaf7895d5563591b94bc49e8e976e",
+      "snippet": "Add code-modernization plugin",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "38b5056|gh-commits-plugins-official"
+    },
+    {
+      "id": "2049156618496127482",
+      "title": "AI has broken my mental model for time estimates. I used to lean on Pareto's 80/20: first 80% of the work takes 20% of the time. \n\nI think the underlying principle is still true, but both ratio and cu",
+      "date": "2026-04-28T15:59:43.000Z",
+      "url": "https://x.com/felixrieseberg/status/2049156618496127482",
+      "snippet": "AI has broken my mental model for time estimates. I used to lean on Pareto's 80/20: first 80% of the work takes 20% of the time. \n\nI think the underlying principle is still true, but both ratio and curve have moved. Getting to \"basically works\" is nearly instant, sweating every single last detail st",
+      "source": "twitter-felixrieseberg",
+      "sourceCategory": "community",
+      "sourceName": "@felixrieseberg (Felix Rieseberg)",
+      "uniqueKey": "2049156618496127482|twitter-felixrieseberg"
+    },
+    {
+      "id": "2049154855143649315",
+      "title": "Claude Code can now send push notifications to your phone when a long task finishes or Claude needs your input.\n\nWalk away from the terminal, we'll let you know when it's done. https://t.co/FavNOxThSa",
+      "date": "2026-04-28T15:52:43.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2049154855143649315",
+      "snippet": "Claude Code can now send push notifications to your phone when a long task finishes or Claude needs your input.\n\nWalk away from the terminal, we'll let you know when it's done. https://t.co/FavNOxThSa",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2049154855143649315|twitter-claudedevs"
+    },
+    {
+      "id": "2049143438281445811",
+      "title": "Claude now connects to the tools creative professionals already use.\n\nWith the new Blender connector, you can debug a scene, build new tools, or batch-apply changes across every object, directly from ",
+      "date": "2026-04-28T15:07:21.000Z",
+      "url": "https://x.com/claudeai/status/2049143438281445811",
+      "snippet": "Claude now connects to the tools creative professionals already use.\n\nWith the new Blender connector, you can debug a scene, build new tools, or batch-apply changes across every object, directly from Claude. https://t.co/Kc3cBHTNpV",
+      "source": "twitter-claudeai",
+      "sourceCategory": "community",
+      "sourceName": "@claudeai (official)",
+      "uniqueKey": "2049143438281445811|twitter-claudeai"
+    },
+    {
+      "id": "x1y91zcb2rp2",
+      "title": "Elevated errors on Claude Sonnet 4.5",
+      "date": "2026-04-28T13:29:56.320Z",
+      "url": "https://stspg.io/65gx9qk9yyd6",
+      "snippet": "[minor] resolved — The incident has now been resolved. The timeline for the elevated errors was 6:22 PT / 13:22 UTC -> 6:39 PT / 13:39 UTC.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "x1y91zcb2rp2|status-page"
+    },
+    {
+      "id": "c20m4lbfd6pm",
+      "title": "Elevated errors on Claude Haiku 4.5",
+      "date": "2026-04-28T12:24:00.726Z",
+      "url": "https://stspg.io/v1941b5q9yxp",
+      "snippet": "[minor] resolved — The incident has now been resolved. The elevated error rate for Haiku 4.5 was between 4:53 PT / 11:53 UTC and 5:36 PT / 12:44 UTC.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "c20m4lbfd6pm|status-page"
+    },
+    {
+      "id": "18113ad",
+      "title": "Add adobe-for-creativity plugin (#1625)",
+      "date": "2026-04-28T11:43:59Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/18113ade5c13cd90e669c650a58b1c815f0b158b",
+      "snippet": "Adobe's Creative Cloud skills for image editing, design automation, background removal, vectorization, and retouching. Points at the plugins/creative-cloud/adobe-for-creativity subdir of adobe/skills.",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "18113ad|gh-commits-plugins-official"
+    },
     {
       "id": "9983273",
       "title": "Merge pull request #1621 from anthropics/fix/validate-frontmatter-shell-injection",
@@ -51,6 +425,17 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.121|claude-code-changelog"
+    },
+    {
+      "id": "7bk0ftl0mpny",
+      "title": "Claude Code Code Review was intermittently failing",
+      "date": "2026-04-28T06:00:00.000Z",
+      "url": "https://stspg.io/jw32q5lgvrhk",
+      "snippet": "[none] resolved — Claude Code Code Review intermittently wasn't starting sessions.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "7bk0ftl0mpny|status-page"
     },
     {
       "id": "c5837a2",
@@ -119,6 +504,17 @@
       "uniqueKey": "1586204|gh-commits-claude-code"
     },
     {
+      "id": "https://www.anthropic.com/news/claude-for-creative-work",
+      "title": "Claude for Creative Work",
+      "date": "2026-04-28T00:00:00.000Z",
+      "url": "https://www.anthropic.com/news/claude-for-creative-work",
+      "snippet": "",
+      "source": "blog-news",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic News Blog",
+      "uniqueKey": "https://www.anthropic.com/news/claude-for-creative-work|blog-news"
+    },
+    {
       "id": "33424c3",
       "title": "Merge pull request #573 from anthropics/claude/copy-memory-cookbook-pr-ZRx6N",
       "date": "2026-04-27T21:00:00Z",
@@ -128,6 +524,17 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "33424c3|gh-commits-cookbooks"
+    },
+    {
+      "id": "d89f8d8",
+      "title": "fix: normalize codex skill metadata",
+      "date": "2026-04-27T20:04:58Z",
+      "url": "https://github.com/affaan-m/everything-claude-code/commit/d89f8d895dde93ec5e6a88f5c41cd789511c70fb",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d89f8d8|gh-commits-everything-claude-code"
     },
     {
       "id": "2.1.121",
@@ -337,6 +744,28 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "3e44f8d|gh-commits-cookbooks"
+    },
+    {
+      "id": "https://alignment.anthropic.com/2026/backdooring-classifiers/",
+      "title": "Poisoning Fine-tuning Datasets of Constitutional Classifiers",
+      "date": "2026-04-01T00:00:00.000Z",
+      "url": "https://alignment.anthropic.com/2026/backdooring-classifiers/",
+      "snippet": "We study the conditions needed for a backdoor, installed in a constitutional classifier via fine-tuning data poisoning, to evade black-box red-teaming.",
+      "source": "blog-alignment",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Alignment Blog",
+      "uniqueKey": "https://alignment.anthropic.com/2026/backdooring-classifiers/|blog-alignment"
+    },
+    {
+      "id": "https://alignment.anthropic.com/2026/introspection-adapters/",
+      "title": "Introspection Adapters: Training LLMs to Report Their Learned Behaviors",
+      "date": "2026-04-01T00:00:00.000Z",
+      "url": "https://alignment.anthropic.com/2026/introspection-adapters/",
+      "snippet": "We introduce introspection adapters (IA), a technique for training an LLM to self-report behaviors\n                    it learned during fine-tuning. This IA generalizes to models that were fine-tuned in very different\n                    ways.",
+      "source": "blog-alignment",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Alignment Blog",
+      "uniqueKey": "https://alignment.anthropic.com/2026/introspection-adapters/|blog-alignment"
     }
   ]
 }

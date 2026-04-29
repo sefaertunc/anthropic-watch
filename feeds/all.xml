@@ -6,7 +6,309 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 28 Apr 2026 11:33:40 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 08:24:17 GMT</lastBuildDate>
+    <item>
+      <title>0.1.71</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.1.71</guid>
+      <pubDate>Wed, 29 Apr 2026 08:23:31 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- Domain allowlist fields for sandbox network config: Added allowedDomains, deniedDomains, allowManagedDomainsOnly, and allowMachLookup fields to SandboxNetworkConfig, bringing parity with the TypeScript schema and enabling Python SDK users to configure network allowlists with proper ty</description>
+    </item>
+    <item>
+      <title>0.2.123</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.123</guid>
+      <pubDate>Wed, 29 Apr 2026 08:23:31 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Updated to parity with Claude Code v2.1.123</description>
+    </item>
+    <item>
+      <title>2.1.123</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.123</guid>
+      <pubDate>Wed, 29 Apr 2026 08:23:30 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed OAuth authentication failing with a 401 retry loop when CLAUDECODEDISABLEEXPERIMENTALBETAS=1 is set</description>
+    </item>
+    <item>
+      <title>v1.0.110</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.110</link>
+      <guid isPermaLink="false">v1.0.110</guid>
+      <pubDate>Wed, 29 Apr 2026 03:30:34 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.110</description>
+    </item>
+    <item>
+      <title>v2.1.123</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.123</link>
+      <guid isPermaLink="false">v2.1.123</guid>
+      <pubDate>Wed, 29 Apr 2026 03:29:13 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed OAuth authentication failing with a 401 retry loop when CLAUDECODEDISABLEEXPERIMENTALBETAS=1 is set</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md</title>
+      <link>https://github.com/anthropics/claude-code/commit/e512ec99188d191b07662fc9f69c5764f750a302</link>
+      <guid isPermaLink="false">e512ec9</guid>
+      <pubDate>Wed, 29 Apr 2026 03:29:06 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge remote-tracking branch &apos;origin/main&apos; into feat/ecc2-rc1-preview-surface</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/c7c7d37f2946d7497577408d19adaee6a8341ddc</link>
+      <guid isPermaLink="false">c7c7d37</guid>
+      <pubDate>Wed, 29 Apr 2026 02:15:34 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test: cover CI catalog validator</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/b6b5b6d08ed48ee21156caa31e8c20da9915a8ce</link>
+      <guid isPermaLink="false">b6b5b6d</guid>
+      <pubDate>Wed, 29 Apr 2026 02:14:19 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #1606 from affaan-m/fix/1598-observer-sigusr1-wait</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/f6acf6e19f87fc57de83ab42677f1d9b7cb5bcca</link>
+      <guid isPermaLink="false">f6acf6e</guid>
+      <pubDate>Wed, 29 Apr 2026 02:12:04 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix: retry observer wait after SIGUSR1</description>
+    </item>
+    <item>
+      <title>Merge remote-tracking branch &apos;origin/main&apos; into feat/ecc2-rc1-preview-surface</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/46aa301f1d608baee0fb204a75d76fd365813f44</link>
+      <guid isPermaLink="false">46aa301</guid>
+      <pubDate>Wed, 29 Apr 2026 02:11:54 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description># Conflicts: #	docs/fixes/HOOK-FIX-20260421-ADDENDUM.md</description>
+    </item>
+    <item>
+      <title>Merge pull request #1605 from affaan-m/fix/1587-codex-skills-validation</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/83d6bb230d634852a299cbb803aca93add9972d8</link>
+      <guid isPermaLink="false">83d6bb2</guid>
+      <pubDate>Wed, 29 Apr 2026 02:11:29 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix: normalize codex skill metadata</description>
+    </item>
+    <item>
+      <title>docs: remove unicode markers from hook addendum</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/6c8a6bd7c0eec4e2f9e4f59b7ad3513a23af78f8</link>
+      <guid isPermaLink="false">6c8a6bd</guid>
+      <pubDate>Wed, 29 Apr 2026 02:11:19 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat(ecc2): finalize rc1 release surface</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/0a87323eda77ee412fa3a3bf028a577536966505</link>
+      <guid isPermaLink="false">0a87323</guid>
+      <pubDate>Wed, 29 Apr 2026 02:10:04 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #1555 from affaan-m/fix/install-uninstall-readme-clarity</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/5595c074fecdde8fc8bf4b24d168363930b1e388</link>
+      <guid isPermaLink="false">5595c07</guid>
+      <pubDate>Wed, 29 Apr 2026 02:10:03 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>docs: clarify install and uninstall paths</description>
+    </item>
+    <item>
+      <title>fix: retry observer wait after signal</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/fd95cf6b29231b8dc58c4faac5db04e441c1729d</link>
+      <guid isPermaLink="false">fd95cf6</guid>
+      <pubDate>Wed, 29 Apr 2026 02:08:35 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.123</title>
+      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
+      <guid isPermaLink="false">2.1.123</guid>
+      <pubDate>Wed, 29 Apr 2026 01:52:47 GMT</pubDate>
+      <category>npm-claude-code</category>
+      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>Elevated errors on Claude Opus 4.7</title>
+      <link>https://stspg.io/gsg6msbs6shy</link>
+      <guid isPermaLink="false">lryjwwy0q9pl</guid>
+      <pubDate>Tue, 28 Apr 2026 23:33:07 GMT</pubDate>
+      <category>status-page</category>
+      <description>[minor] resolved — The incident is now resolved. The impact was between 16:25 PT / 23:25 UTC and 16:33 PT / 23:33 UTC.</description>
+    </item>
+    <item>
+      <title>Merge pull request #1636 from anthropics/pete/remove-transcript-examples-from-agents</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e73e9a6257ac5285a7218dc5e7e99b1ae2dc65e7</link>
+      <guid isPermaLink="false">e73e9a6</guid>
+      <pubDate>Tue, 28 Apr 2026 23:04:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Replace transcript-style agent examples with prose trigger descriptions</description>
+    </item>
+    <item>
+      <title>v1.0.109</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.109</link>
+      <guid isPermaLink="false">v1.0.109</guid>
+      <pubDate>Tue, 28 Apr 2026 22:07:07 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>What&apos;s Changed
+ docs: pullrequesttarget guidance and base-action trust model by @OctavianGuzu in https://github.com/anthropics/claude-code-action/pull/1250
+Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.109</description>
+    </item>
+    <item>
+      <title>v2.1.122</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.122</link>
+      <guid isPermaLink="false">v2.1.122</guid>
+      <pubDate>Tue, 28 Apr 2026 22:05:15 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added ANTHROPICBEDROCKSERVICETIER environment variable to select a Bedrock service tier (default, flex, or priority), sent as the X-Amzn-Bedrock-Service-Tier header
+- Pasting a PR URL into the /resume search box now finds the session that created that PR (GitHub, GitHub Enterprise, </description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md</title>
+      <link>https://github.com/anthropics/claude-code/commit/a609cfbee3c5e0066a25f62f7b4109420c58b940</link>
+      <guid isPermaLink="false">a609cfb</guid>
+      <pubDate>Tue, 28 Apr 2026 22:05:09 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>RT @trq212: we&apos;re doing a lot more of this, hunting down some of the most annoying bugs in Claude Code
+
+let me know if you have any white w…</title>
+      <link>https://x.com/ClaudeDevs/status/2049240989441925388</link>
+      <guid isPermaLink="false">2049240989441925388</guid>
+      <pubDate>Tue, 28 Apr 2026 21:34:59 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>RT @trq212: we&apos;re doing a lot more of this, hunting down some of the most annoying bugs in Claude Code
+
+let me know if you have any white w…</description>
+    </item>
+    <item>
+      <title>Replace transcript-style agent examples with prose trigger descriptions</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ce721c1f1d5da2c281588818e072ae01a05d2e73</link>
+      <guid isPermaLink="false">ce721c1</guid>
+      <pubDate>Tue, 28 Apr 2026 20:56:06 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Several agent files used &lt;example&gt; blocks containing user: &quot;...&quot; / assistant: &quot;...&quot; turn markers, embedded as \n-escaped strings inside the YAML frontmatter description: field. Replace those with flat prose trigger descriptions in description: and a &apos;When to invoke&apos; section in the agent body contain</description>
+    </item>
+    <item>
+      <title>RT @ClaudeDevs: In the last four Claude Code CLI releases, we’ve shipped 50+ stability and performance fixes.
+
+Faster resume, stable auth,…</title>
+      <link>https://x.com/bcherny/status/2049230075799966179</link>
+      <guid isPermaLink="false">2049230075799966179</guid>
+      <pubDate>Tue, 28 Apr 2026 20:51:37 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @ClaudeDevs: In the last four Claude Code CLI releases, we’ve shipped 50+ stability and performance fixes.
+
+Faster resume, stable auth,…</description>
+    </item>
+    <item>
+      <title>In the last four Claude Code CLI releases, we’ve shipped 50+ stability and performance fixes.
+
+Faster resume, stable auth, lower memory, fewer hangs: 🧵</title>
+      <link>https://x.com/ClaudeDevs/status/2049228273813750030</link>
+      <guid isPermaLink="false">2049228273813750030</guid>
+      <pubDate>Tue, 28 Apr 2026 20:44:27 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>In the last four Claude Code CLI releases, we’ve shipped 50+ stability and performance fixes.
+
+Faster resume, stable auth, lower memory, fewer hangs: 🧵</description>
+    </item>
+    <item>
+      <title>Update vanta-mcp-plugin plugin (#1637)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/5b643ee82aee1aee9b2bb0437e5118102f352c3f</link>
+      <guid isPermaLink="false">5b643ee</guid>
+      <pubDate>Tue, 28 Apr 2026 20:35:16 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Claude.ai unavailable and elevated errors on the API</title>
+      <link>https://stspg.io/mz37pbn6yt3w</link>
+      <guid isPermaLink="false">9l93x2ht4s5w</guid>
+      <pubDate>Tue, 28 Apr 2026 17:41:55 GMT</pubDate>
+      <category>status-page</category>
+      <description>[major] resolved — This incident has been resolved.</description>
+    </item>
+    <item>
+      <title>Merge pull request #1582 from anthropics/morganl/code-modernization-plugin</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/38b5056c446aaf7895d5563591b94bc49e8e976e</link>
+      <guid isPermaLink="false">38b5056</guid>
+      <pubDate>Tue, 28 Apr 2026 17:02:28 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Add code-modernization plugin</description>
+    </item>
+    <item>
+      <title>AI has broken my mental model for time estimates. I used to lean on Pareto&apos;s 80/20: first 80% of the work takes 20% of the time. 
+
+I think the underlying principle is still true, but both ratio and cu</title>
+      <link>https://x.com/felixrieseberg/status/2049156618496127482</link>
+      <guid isPermaLink="false">2049156618496127482</guid>
+      <pubDate>Tue, 28 Apr 2026 15:59:43 GMT</pubDate>
+      <category>twitter-felixrieseberg</category>
+      <description>AI has broken my mental model for time estimates. I used to lean on Pareto&apos;s 80/20: first 80% of the work takes 20% of the time. 
+
+I think the underlying principle is still true, but both ratio and curve have moved. Getting to &quot;basically works&quot; is nearly instant, sweating every single last detail st</description>
+    </item>
+    <item>
+      <title>Claude Code can now send push notifications to your phone when a long task finishes or Claude needs your input.
+
+Walk away from the terminal, we&apos;ll let you know when it&apos;s done. https://t.co/FavNOxThSa</title>
+      <link>https://x.com/ClaudeDevs/status/2049154855143649315</link>
+      <guid isPermaLink="false">2049154855143649315</guid>
+      <pubDate>Tue, 28 Apr 2026 15:52:43 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>Claude Code can now send push notifications to your phone when a long task finishes or Claude needs your input.
+
+Walk away from the terminal, we&apos;ll let you know when it&apos;s done. https://t.co/FavNOxThSa</description>
+    </item>
+    <item>
+      <title>Claude now connects to the tools creative professionals already use.
+
+With the new Blender connector, you can debug a scene, build new tools, or batch-apply changes across every object, directly from </title>
+      <link>https://x.com/claudeai/status/2049143438281445811</link>
+      <guid isPermaLink="false">2049143438281445811</guid>
+      <pubDate>Tue, 28 Apr 2026 15:07:21 GMT</pubDate>
+      <category>twitter-claudeai</category>
+      <description>Claude now connects to the tools creative professionals already use.
+
+With the new Blender connector, you can debug a scene, build new tools, or batch-apply changes across every object, directly from Claude. https://t.co/Kc3cBHTNpV</description>
+    </item>
+    <item>
+      <title>Elevated errors on Claude Sonnet 4.5</title>
+      <link>https://stspg.io/65gx9qk9yyd6</link>
+      <guid isPermaLink="false">x1y91zcb2rp2</guid>
+      <pubDate>Tue, 28 Apr 2026 13:29:56 GMT</pubDate>
+      <category>status-page</category>
+      <description>[minor] resolved — The incident has now been resolved. The timeline for the elevated errors was 6:22 PT / 13:22 UTC -&gt; 6:39 PT / 13:39 UTC.</description>
+    </item>
+    <item>
+      <title>Elevated errors on Claude Haiku 4.5</title>
+      <link>https://stspg.io/v1941b5q9yxp</link>
+      <guid isPermaLink="false">c20m4lbfd6pm</guid>
+      <pubDate>Tue, 28 Apr 2026 12:24:00 GMT</pubDate>
+      <category>status-page</category>
+      <description>[minor] resolved — The incident has now been resolved. The elevated error rate for Haiku 4.5 was between 4:53 PT / 11:53 UTC and 5:36 PT / 12:44 UTC.</description>
+    </item>
+    <item>
+      <title>Add adobe-for-creativity plugin (#1625)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/18113ade5c13cd90e669c650a58b1c815f0b158b</link>
+      <guid isPermaLink="false">18113ad</guid>
+      <pubDate>Tue, 28 Apr 2026 11:43:59 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Adobe&apos;s Creative Cloud skills for image editing, design automation, background removal, vectorization, and retouching. Points at the plugins/creative-cloud/adobe-for-creativity subdir of adobe/skills.</description>
+    </item>
     <item>
       <title>Merge pull request #1621 from anthropics/fix/validate-frontmatter-shell-injection</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/99832739a1b76c6ffa25c03f2c351bbd68f7cf45</link>
@@ -43,6 +345,14 @@
       <description>- Added alwaysLoad option to MCP server config — when true, all tools from that server skip tool-search deferral and are always available
 - Added claude plugin prune to remove orphaned auto-installed plugin dependencies; plugin uninstall --prune cascades
 - Added a type-to-filter search box to /skill</description>
+    </item>
+    <item>
+      <title>Claude Code Code Review was intermittently failing</title>
+      <link>https://stspg.io/jw32q5lgvrhk</link>
+      <guid isPermaLink="false">7bk0ftl0mpny</guid>
+      <pubDate>Tue, 28 Apr 2026 06:00:00 GMT</pubDate>
+      <category>status-page</category>
+      <description>[none] resolved — Claude Code Code Review intermittently wasn&apos;t starting sessions.</description>
     </item>
     <item>
       <title>Add aws-dev-toolkit plugin (#1617)</title>
@@ -96,12 +406,28 @@
       <description/>
     </item>
     <item>
+      <title>Claude for Creative Work</title>
+      <link>https://www.anthropic.com/news/claude-for-creative-work</link>
+      <guid isPermaLink="false">https://www.anthropic.com/news/claude-for-creative-work</guid>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
+      <category>blog-news</category>
+      <description/>
+    </item>
+    <item>
       <title>Merge pull request #573 from anthropics/claude/copy-memory-cookbook-pr-ZRx6N</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/33424c3eb476cd56379435be086ccc228af1050d</link>
       <guid isPermaLink="false">33424c3</guid>
       <pubDate>Mon, 27 Apr 2026 21:00:00 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>feat(managed_agents): add Managed Agents Memory Cookbook</description>
+    </item>
+    <item>
+      <title>fix: normalize codex skill metadata</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/d89f8d895dde93ec5e6a88f5c41cd789511c70fb</link>
+      <guid isPermaLink="false">d89f8d8</guid>
+      <pubDate>Mon, 27 Apr 2026 20:04:58 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
     </item>
     <item>
       <title>@anthropic-ai/claude-code@2.1.121</title>
@@ -254,6 +580,24 @@
       <pubDate>Sat, 25 Apr 2026 00:08:56 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>A guided tutorial showing how to give a Managed Agent a memory store so it learns and recalls a customer&apos;s shopping preferences across separate sessions. Covers store creation, the resources attachment with per-attachment instructions, inspecting and seeding memories from your own application, and c</description>
+    </item>
+    <item>
+      <title>Poisoning Fine-tuning Datasets of Constitutional Classifiers</title>
+      <link>https://alignment.anthropic.com/2026/backdooring-classifiers/</link>
+      <guid isPermaLink="false">https://alignment.anthropic.com/2026/backdooring-classifiers/</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <category>blog-alignment</category>
+      <description>We study the conditions needed for a backdoor, installed in a constitutional classifier via fine-tuning data poisoning, to evade black-box red-teaming.</description>
+    </item>
+    <item>
+      <title>Introspection Adapters: Training LLMs to Report Their Learned Behaviors</title>
+      <link>https://alignment.anthropic.com/2026/introspection-adapters/</link>
+      <guid isPermaLink="false">https://alignment.anthropic.com/2026/introspection-adapters/</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <category>blog-alignment</category>
+      <description>We introduce introspection adapters (IA), a technique for training an LLM to self-report behaviors
+                    it learned during fine-tuning. This IA generalizes to models that were fine-tuned in very different
+                    ways.</description>
     </item>
   </channel>
 </rss>
