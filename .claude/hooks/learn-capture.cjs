@@ -1,19 +1,12 @@
 #!/usr/bin/env node
-"use strict";
+'use strict';
 
 // Stop hook: scans the transcript for [LEARN] blocks and persists them
 // to .claude/learnings/ as markdown files with YAML frontmatter.
 // Always exits 0 — never blocks session stop.
 
-const {
-  readFileSync,
-  writeFileSync,
-  mkdirSync,
-  existsSync,
-  statSync,
-  unlinkSync,
-} = require("fs");
-const { join, basename } = require("path");
+const { readFileSync, writeFileSync, mkdirSync, existsSync, statSync, unlinkSync } = require('fs');
+const { join, basename } = require('path');
 
 const LEARN_REGEX =
   /\[LEARN\]\s*([\w][\w\s-]*?)\s*:\s*(.+?)(?:\r?\nMistake:\s*(.+?))?(?:\r?\nCorrection:\s*(.+?))?(?=\r?\n\[LEARN\]|\r?\n\r?\n|$)/gim;
@@ -23,12 +16,12 @@ const STALE_THRESHOLD_MS = 30000; // 30 seconds
 function slugify(text) {
   return text
     .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^a-z0-9-]/g, "");
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
 }
 
 function checkStopHookActive(cwd) {
-  const flagPath = join(cwd, ".claude", ".stop-hook-active");
+  const flagPath = join(cwd, '.claude', '.stop-hook-active');
   if (existsSync(flagPath)) {
     try {
       const stat = statSync(flagPath);
@@ -43,7 +36,7 @@ function checkStopHookActive(cwd) {
 }
 
 function setStopHookActive(cwd) {
-  const flagPath = join(cwd, ".claude", ".stop-hook-active");
+  const flagPath = join(cwd, '.claude', '.stop-hook-active');
   try {
     writeFileSync(flagPath, String(Date.now()));
   } catch {
@@ -52,7 +45,7 @@ function setStopHookActive(cwd) {
 }
 
 function clearStopHookActive(cwd) {
-  const flagPath = join(cwd, ".claude", ".stop-hook-active");
+  const flagPath = join(cwd, '.claude', '.stop-hook-active');
   try {
     unlinkSync(flagPath);
   } catch {
@@ -61,10 +54,10 @@ function clearStopHookActive(cwd) {
 }
 
 function readIndex(learningsDir) {
-  const indexPath = join(learningsDir, "index.json");
+  const indexPath = join(learningsDir, 'index.json');
   if (existsSync(indexPath)) {
     try {
-      return JSON.parse(readFileSync(indexPath, "utf8"));
+      return JSON.parse(readFileSync(indexPath, 'utf8'));
     } catch {
       return { learnings: [] };
     }
@@ -73,18 +66,13 @@ function readIndex(learningsDir) {
 }
 
 function writeIndex(learningsDir, index) {
-  writeFileSync(
-    join(learningsDir, "index.json"),
-    JSON.stringify(index, null, 2) + "\n",
-  );
+  writeFileSync(join(learningsDir, 'index.json'), JSON.stringify(index, null, 2) + '\n');
 }
 
 function extractLearnings(transcriptPath) {
   if (!existsSync(transcriptPath)) return [];
 
-  const lines = readFileSync(transcriptPath, "utf8")
-    .split(/\r?\n/)
-    .filter(Boolean);
+  const lines = readFileSync(transcriptPath, 'utf8').split(/\r?\n/).filter(Boolean);
   const learnings = [];
 
   // Scan last 20 lines for assistant messages containing [LEARN] blocks
@@ -92,13 +80,13 @@ function extractLearnings(transcriptPath) {
   for (const line of recent) {
     try {
       const entry = JSON.parse(line);
-      if (entry.type !== "assistant") continue;
+      if (entry.type !== 'assistant') continue;
 
       const content = entry.message?.content;
       if (!Array.isArray(content)) continue;
 
       for (const block of content) {
-        if (block.type !== "text" || !block.text) continue;
+        if (block.type !== 'text' || !block.text) continue;
 
         let match;
         LEARN_REGEX.lastIndex = 0;
@@ -120,7 +108,7 @@ function extractLearnings(transcriptPath) {
 }
 
 try {
-  const input = readFileSync(0, "utf8");
+  const input = readFileSync(0, 'utf8');
   const data = JSON.parse(input);
   const cwd = data.cwd || process.cwd();
   const transcriptPath = data.transcript_path;
@@ -134,11 +122,11 @@ try {
     const learnings = extractLearnings(transcriptPath);
     if (learnings.length === 0) process.exit(0);
 
-    const learningsDir = join(cwd, ".claude", "learnings");
+    const learningsDir = join(cwd, '.claude', 'learnings');
     mkdirSync(learningsDir, { recursive: true });
 
     const index = readIndex(learningsDir);
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toISOString().split('T')[0];
     const projectName = basename(cwd);
 
     for (const learning of learnings) {
@@ -147,25 +135,23 @@ try {
       const filePath = join(learningsDir, filename);
 
       const entry = [
-        "---",
+        '---',
         `created: ${today}`,
         `category: ${learning.category}`,
         `project: ${projectName}`,
-        "times_applied: 0",
-        "---",
-        "",
+        '---',
+        '',
         `**Rule:** ${learning.rule}`,
       ];
       if (learning.mistake) entry.push(`**Mistake:** ${learning.mistake}`);
-      if (learning.correction)
-        entry.push(`**Correction:** ${learning.correction}`);
-      entry.push("");
+      if (learning.correction) entry.push(`**Correction:** ${learning.correction}`);
+      entry.push('');
 
       if (existsSync(filePath)) {
-        const existing = readFileSync(filePath, "utf8");
-        writeFileSync(filePath, existing + "\n" + entry.join("\n"));
+        const existing = readFileSync(filePath, 'utf8');
+        writeFileSync(filePath, existing + '\n' + entry.join('\n'));
       } else {
-        writeFileSync(filePath, entry.join("\n"));
+        writeFileSync(filePath, entry.join('\n'));
       }
 
       const existingEntry = index.learnings.find((l) => l.file === filename);
@@ -176,7 +162,6 @@ try {
           file: filename,
           category: learning.category,
           created: today,
-          times_applied: 0,
         });
       }
     }
