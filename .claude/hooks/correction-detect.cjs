@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-"use strict";
+'use strict';
 
 // UserPromptSubmit hook: detects correction and learn patterns in user prompts.
 // Outputs a hint to stdout if a pattern matches; empty output otherwise.
 // No file I/O, no network. Always exits 0.
 
-const { readFileSync } = require("fs");
+const { readFileSync } = require('fs');
 
 const correctionPatterns = [
   /no,?\s*(that's|thats)?\s*(wrong|incorrect|not right)/i,
@@ -27,17 +27,17 @@ const learnPatterns = [
 ];
 
 try {
-  const data = JSON.parse(readFileSync(0, "utf8"));
-  const prompt = data.input?.prompt || "";
+  const data = JSON.parse(readFileSync(0, 'utf8'));
+  const prompt = data.input?.prompt || '';
 
   if (prompt) {
     if (learnPatterns.some((p) => p.test(prompt))) {
       process.stdout.write(
-        "[Learn trigger detected] Capture this as a [LEARN] block with category, rule, and optional mistake/correction.\n",
+        '[Learn trigger detected] Capture this as a [LEARN] block with category, rule, and optional mistake/correction.\n'
       );
     } else if (correctionPatterns.some((p) => p.test(prompt))) {
       process.stdout.write(
-        "[Correction detected] Consider proposing a [LEARN] block if this is a generalizable rule.\n",
+        '[Correction detected — semi-auto] Draft a one-line generalizable rule, then prompt via AskUserQuestion: "Capture as team learning? yes / yes, let me edit / no". On yes or yes-edit, emit a [LEARN] block; the Stop hook will persist it.\n'
       );
     }
   }
