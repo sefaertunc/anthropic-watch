@@ -174,7 +174,18 @@ Two independent versioning tracks:
 - [x] `src/github-auth.js` (`githubHeaders()`) helper extracted to eliminate 3× duplication across GitHub scrapers.
 - [x] v1.4.1 production fixes: Reddit OAuth2 (`REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` — free, Responsible Builder Policy-gated) to bypass Reddit's datacenter-IP filter; Twitter module-scope `waitForSlot()` gate pacing calls to 1 req / 6 s for twitterapi.io free-tier compliance; workflow `scrape.yml` hardened with stash-and-resync state-commit retry and `if: github.ref == 'refs/heads/main'` guards so feature-branch preflights stay read-only.
 
-### Phase 7 — Future / Conditional
+### Phase 7 — Feed-health observability (complete as of v1.5.0, 2026-04-30)
+
+- [x] `public/feeds/feed-health.json` — new published artifact, schemaVersion `"1.0"`, generated every cron run alongside existing feeds. Hydrated and deployed for free by the v1.4.2 mechanism. Four indicators (`runHistoryDepth`, `allJsonItemCount`, `perSourceFeedContinuity`, `cronFreshness`) with three severity states (`ok` / `warning` / `fired`).
+- [x] `src/feed/health.js` — pure async `computeFeedHealth` reading already-on-disk artifacts plus the previous run's envelope and per-source baseline. Per-source continuity uses item-membership (not count-only) so cap-saturated 50-item feeds are correctly checked. `cronFreshness` publishes inputs only — state computed at read time because a stale envelope cannot self-report staleness.
+- [x] Orchestrator wiring in `src/index.js` runs as the LAST pipeline step, after `saveState` and the GHA `has_new_items` output. Wrapped in try/catch (Rule-4 carve-out for observability code) — failure emits a degenerate envelope and never breaks feed publishing. Verified by `test/e2e/feed-health-isolation.test.js`.
+- [x] Dashboard "Feed Health" section at the top of `public/index.html` rendered by `public/health-render.js` (ESM module with named exports for direct vitest unit testing without JSDOM). Server/client `aggregateOverall` parity locked by `test/fixtures/aggregate-cases.json` and a fail-CI-on-drift parity test.
+- [x] `src/read-json-safe.js` — extracted shared helper, was duplicated between `src/index.js` and `src/feed/health.js`.
+- [x] Schema-version policy formalized: additive minor for new indicators, optional fields, and state values; `summary.byState` is an open map. `summary.serverOverall` excludes `cronFreshness` by design (named for honesty); consumers merge in the read-time cron-freshness state — canonical 5-line example in `docs/FEED-SCHEMA.md`.
+- [x] Scope ceiling held: no Slack, email, webhooks, GitHub-Issue auto-opening — v1.5 publishes the structured signal and the documented merge pattern; consumers compose the alerting layer.
+- [ ] Client library `fetchFeedHealth()` — deferred until the `feed-health.json` schema settles in production for ≥2 weeks of real cron runs. Then ship as `@sefaertunc/anthropic-watch-client@1.0.4` (or wherever the version lands).
+
+### Phase 8 — Future / Conditional
 
 Only pursued if a concrete need emerges — not planned speculatively.
 
@@ -182,6 +193,7 @@ Only pursued if a concrete need emerges — not planned speculatively.
 - Stronger browser testing for the dashboard (currently manual inspection only)
 - Additional downstream consumers beyond Worclaude (the client library now lowers the cost of each new consumer)
 - Subpackage CI job (matrix step installing + testing `packages/client/` in CI) — still deferred; pick up if `packages/client/` changes begin slipping through without coverage
+- External alerting layer wrapping `feed-health.json` (Slack/email/GitHub-Issue auto-open). The seam exists in the JSON shape — consumers merge `summary.serverOverall` with the read-time cron-freshness state and post when `"fired"`. v1.5.x or v1.6 candidate if a concrete need emerges.
 
 ## Accepted Limitations
 

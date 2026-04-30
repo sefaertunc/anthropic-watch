@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.5.0] - 2026-04-30
+
+A small feature release that institutionalizes the v1.4.2 lesson. Adds a published `feed-health.json` artifact and a dashboard panel exposing pipeline-output integrity indicators distinct from per-source health. Catches the class of bug v1.4.2 fixed _before_ it accumulates six months of silent damage. v1.5 publishes a structured signal and a documented merge pattern; consumers compose the alerting layer.
+
+### Added
+
+- **`public/feeds/feed-health.json`** published every cron alongside existing feeds. Schema version `"1.0"`. Four indicators: `runHistoryDepth`, `allJsonItemCount`, `perSourceFeedContinuity`, `cronFreshness`. Three server-side indicators publish `state: "ok" | "warning" | "fired"`; `cronFreshness` publishes inputs only and is evaluated at read time because a stale envelope cannot self-report staleness. See `docs/FEED-SCHEMA.md` for the full schema and the canonical 5-line read-time merge example. (#24)
+- **Dashboard "Feed Health" section** at the top of `public/index.html`. New `public/health-render.js` extracts client-side helpers (cron-freshness state computation, indicator-row rendering) into named exports for direct vitest unit testing without JSDOM. (#24)
+- **`src/feed/health.js`** — pure async function computing the health envelope from already-on-disk artifacts plus the previous run's envelope and per-source baseline (for shrinkage detection). Per-source continuity uses item-membership comparison against yesterday's keys (not count-only) so cap-saturated 50-item feeds are correctly checked. Wrapped in try/catch in the orchestrator so a health-module bug cannot break feed publishing — failures emit a degenerate envelope with an `error` field. (#24)
+- **Tests** — `test/unit/feed-health.test.js` (including a deliberate v1.4.2-truncation-bug regression test asserting sudden run-history shrinkage fires the indicator), `test/unit/health-render.test.js` (client-side helpers + server/client `aggregateOverall` parity locked by `test/fixtures/aggregate-cases.json`), `test/e2e/feed-health-isolation.test.js` (carve-out integration test verifying a thrown computation does not break feed publishing). 30 new unit tests + 2 new e2e (189/189 passing total). (#24)
+
+### Changed
+
+- **`readJsonSafe` extracted to `src/read-json-safe.js`** as a shared helper; was duplicated between `src/index.js` and `src/feed/health.js`. (#24)
+- **Worclaude scaffolding upgraded 2.9.0 → 2.10.1** with selective merge of 22 templates (adopts per-PR Version bump declaration workflow + SHA-based session tracking + `/end` handoff/summary split + `/review-changes` ↔ `/refactor-clean` SHA-stamped scratch artifact handoff + `/verify` scope lock + `/build-fix` 3-attempt bug-fixer escalation + `/setup` state-machine rewrite + `claude-md-maintenance` 200-line target + `subagent-usage` `origin/HEAD` gotcha + `upstream-watcher` agent migrated to client lib). CLAUDE.md gained Critical Rule 13 (slash-command invocation contract). No scraper, schema, or source-list changes. (#23)
+
+### Notes
+
+- **No external services.** No Slack, no email, no GitHub Issues auto-opening, no third-party integrations. The artifact is published; what consumers do with it is out of scope.
+- **The seam for future automation exists** — consumers compute the merged "is this healthy?" state from `summary.serverOverall` plus a read-time cron-freshness state derived from `lastCronAttemptedAt` + `thresholdHours` (canonical 5-line example in `docs/FEED-SCHEMA.md`), and post somewhere if it is `"fired"`. v1.5 does not implement that posting; it only publishes the structured signal and the documented merge pattern.
+- **Client library `@sefaertunc/anthropic-watch-client` is not updated in v1.5.** The JSON shape ships first, gets production exposure, and is wrapped in a future client release after the schema settles.
+- **First few cron runs after v1.5 deploys will show `runHistoryDepth: warning`** until `run-history.json` grows back to 90 entries (currently at ~3 post-v1.4.2). Expected, not a regression.
+- **Open extensibility:** `summary.byState` is a map (not fixed `okCount`/`warningCount`/`firedCount`). Adding new state values like `"stale"` in a future release is additive. Consumers must iterate the map and handle unknown keys gracefully.
+
 ## [1.4.2] - 2026-04-28
 
 Patch release fixing a silent feed-truncation bug present since v1.0.0. The published JSON/RSS feed-accumulation logic was correct in code but never actually accumulated in production: the `scrape.yml` workflow only checked out `main`, so `public/feeds/` did not pre-exist when the scraper ran in CI, the `readJsonSafe` accumulation reads at `src/index.js:191,226,269` returned `null`, and `peaceiris/actions-gh-pages@v4` overwrote the gh-pages copy with the truncated result. Schema, scraper, and feed-merge code are unchanged.
