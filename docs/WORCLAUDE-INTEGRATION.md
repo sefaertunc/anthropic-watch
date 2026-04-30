@@ -44,8 +44,11 @@ There is no API, webhook, or direct integration — the static feed files on Git
 | Source status (ok/error, timing)      | `run-report.json`                     |                       |
 | Run history and trends                | `run-history.json`                    |                       |
 | Per-source health                     | `run-report.json` → each source entry |                       |
+| Pipeline-output integrity             | `feed-health.json` (v1.5.0+)          |                       |
 
 **Important:** Items are **not** included in `run-report.json`. The report contains only status metadata. To get actual items, fetch the feed files.
+
+**`feed-health.json`** is a pipeline-output integrity artifact published every cron run. It exposes four indicators (run-history depth, all.json item count, per-source feed continuity, cron freshness) with three severity states. It complements — does not replace — per-source health in `run-report.json`. Its primary v1.5 consumer is the dashboard's Feed Health panel; the schema is documented in [`docs/FEED-SCHEMA.md`](FEED-SCHEMA.md#feed-health-feed-healthjson). The client library `@sefaertunc/anthropic-watch-client` does not yet wrap this artifact (deferred to a future minor release once the schema settles in production).
 
 ### Consumption Logic
 

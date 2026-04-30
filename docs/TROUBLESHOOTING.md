@@ -169,6 +169,50 @@ The scraper picks up the credentials on the next cron run. No cost; Reddit's OAu
 2. Check for entities in item content that aren't being escaped
 3. The RSS generator uses `fast-xml-parser` with `processEntities: true` — most encoding is handled automatically
 
+### Feed Health panel shows red "Run history depth"
+
+**Symptoms:** The dashboard's Feed Health section shows `runHistoryDepth` in red ("fired"), or `feed-health.json` reports `runHistoryDepth.state === "fired"`.
+
+**Cause:** `run-history.json` length dropped from yesterday by more than 5 entries. This is the v1.4.2 truncation-bug signature — the canonical case is a hydration step regression that overwrites accumulated history with a single fresh entry.
+
+**Fix:**
+
+1. Inspect the latest GitHub Actions run for the `scrape.yml` workflow. Confirm the gh-pages hydration step pulled `public/feeds/` before the scraper ran (look for the second `actions/checkout@v4` step targeting the `gh-pages` ref). A missing or broken hydration step is the primary cause.
+2. Check `feed-health.json.indicators.runHistoryDepth.previous` and `current` to confirm the magnitude of the drop.
+3. If hydration is healthy, fetch `https://sefaertunc.github.io/anthropic-watch/feeds/run-history.json` and compare against `feed-health.json` to confirm the drop is real (not a stale dashboard).
+
+A `warning` state on this indicator is expected during the post-v1.4.2 seeding period (run-history climbing 3 → 90 over ~12 weeks). Only `fired` indicates regression.
+
+### Feed Health panel shows red "Cron freshness"
+
+**Symptoms:** Dashboard's Feed Health section shows `cronFreshness` in red.
+
+**Cause:** The `cronFreshness` state is computed at read time from `feed-health.json.generatedAt`. Red means the artifact is more than 36 hours stale. The JSON itself does not publish a state for this indicator — the dashboard derives it. GitHub Actions free-tier cron drift typically tops out around 2–3 hours; >36 hours indicates the workflow is failing or disabled.
+
+**Fix:**
+
+1. `gh run list --workflow=scrape.yml --limit 5` — confirm whether recent runs are succeeding.
+2. If runs are failing, open the most recent failed run and inspect logs.
+3. If no runs are listed, confirm the workflow is enabled in repo settings.
+4. The 24h `warning` threshold accommodates documented cron drift; only `fired` (>36h) indicates a genuine outage.
+
+### Per-source continuity warning fired
+
+**Symptoms:** `feed-health.json.indicators.perSourceFeedContinuity.state` is `warning` (1–2 sources) or `fired` (≥3 sources). The `details` array names the affected sources.
+
+**Cause:** A source's per-source feed lost retained items unexpectedly — yesterday's items did not survive into today's feed despite there being room (less than 50 new items pushed nothing out).
+
+**What it does NOT mean:**
+
+- **Cap-saturated eviction:** a source at the 50-item cap with 5 new items pushing 5 old ones out is normal — the membership check accounts for `expectedRetained = min(yesterday.length, max(0, 50 - todayNewCount))`.
+- **Legitimate empty days:** zero new items, all 50 of yesterday's items retained, `retainedCount = 50, expectedRetained = 50`. Not flagged.
+
+**Known false-positive class:** changelog sources (`*-changelog`) where items move from `[Unreleased]` to a versioned section change ID (heading-derived), looking like non-retention. Rate is ~1–2 events per active changelog source per month. Cross-reference `details[].source` against the source's recent releases — if the affected source published a new version yesterday, this is likely the cause and will resolve on the next run.
+
+**Source config changes** (e.g., `excludeBots: false → true`) can legitimately shrink retained items. If you intentionally tighten a source filter, delete the source's per-source feed entry from `gh-pages` before deploy to reset the baseline.
+
+**How to investigate:** `details[]` entries include `yesterdayCount`, `todayCount`, `retainedCount`, `expectedRetained`. If `todayCount === 0` and `yesterdayCount > 0`, the source likely returned an empty result today (transient API issue or scraper regression). If `todayCount` is healthy but `retainedCount` is 0, look at item IDs to see whether the IDs themselves changed shape.
+
 ### Dashboard shows stale data
 
 **Symptoms:** Dashboard shows old run data even though the pipeline has run recently.

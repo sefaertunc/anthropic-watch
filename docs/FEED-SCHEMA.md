@@ -290,6 +290,120 @@ Older entries written before v1.0.2 lack the `version` field — consumers shoul
 
 ---
 
+## Feed Health (`feed-health.json`)
+
+Published every cron run alongside the other feeds. Surfaces pipeline-output integrity as four indicators with three severity states (`ok` / `warning` / `fired`). Distinct from `run-report.json`, which is per-source per-run; this is cross-run, system-level, durable-output-focused.
+
+### Full Example
+
+```json
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-04-29T08:24:17.000Z",
+  "lastCronAttemptedAt": "2026-04-29T08:24:17.000Z",
+  "indicators": {
+    "runHistoryDepth": {
+      "state": "warning",
+      "current": 14,
+      "expected": 90,
+      "previous": 13,
+      "threshold": {
+        "warning": "<expected",
+        "fired": "shrunk-from-previous-by->5"
+      },
+      "summary": "14 of 90 expected entries (still seeding)"
+    },
+    "allJsonItemCount": {
+      "state": "ok",
+      "current": 100,
+      "expected": 100,
+      "previous": 100,
+      "threshold": { "warning": "<80", "fired": "shrunk-from-previous-by->10" },
+      "summary": "100 of 100 capacity (steady state)"
+    },
+    "perSourceFeedContinuity": {
+      "state": "ok",
+      "sourcesChecked": 37,
+      "sourcesShrinkingUnexpectedly": 0,
+      "threshold": {
+        "warning": ">=1 source losing retained items",
+        "fired": ">=3 sources losing retained items"
+      },
+      "summary": "All 37 sources retaining items as expected",
+      "details": []
+    },
+    "cronFreshness": {
+      "lastCronAttemptedAt": "2026-04-29T08:24:17.000Z",
+      "thresholdHours": { "warning": 24, "fired": 36 },
+      "summary": "Cron freshness is computed at read time from generatedAt; this object publishes inputs only (no state field)"
+    }
+  },
+  "summary": {
+    "serverOverall": "warning",
+    "byState": { "ok": 2, "warning": 1, "fired": 0 }
+  }
+}
+```
+
+### Indicators
+
+- **`runHistoryDepth`** — checks `run-history.json` length. `expected = 90`. Fires on sudden shrinkage (current < previous − 5). Warns when below expected (e.g., during seeding). The shrinkage check exists because the v1.4.2 silent-truncation bug ran for six months without per-source health flagging it.
+- **`allJsonItemCount`** — checks `all.json.itemCount`. `expected = 100`. Fires on sudden shrinkage (current < previous − 10). Warns when below the 80-item floor.
+- **`perSourceFeedContinuity`** — membership check, not count check. For each source, compares yesterday's item composite keys against today's. `expectedRetained = min(yesterday.length, max(0, 50 - todayNewCount))`. Warns when 1–2 sources lost retained items unexpectedly; fires at ≥3. Per-source feeds are capped at 50, so count-only checks have a 50-item blind spot exactly on the most-active sources.
+- **`cronFreshness`** — publishes inputs only (`lastCronAttemptedAt`, `thresholdHours`). No `state` field. See "Read-time cron-freshness computation" below.
+
+### Schema-version policy
+
+`schemaVersion` starts at `"1.0"`. Bump policy:
+
+- New optional fields under existing indicators → minor.
+- New indicators added under `indicators` → minor (consumers must already iterate).
+- New state values in any indicator's `state` field → minor (consumers iterate `summary.byState`, an open map).
+- Renaming or removing fields → major.
+- Changing the meaning of an existing state value → major.
+
+### Read-time cron-freshness computation
+
+`cronFreshness` deliberately publishes inputs only. A stale envelope cannot self-report staleness — the cron didn't run, so neither did the writer. Consumers MUST compute the cron-freshness state at read time:
+
+```js
+// Cron-freshness state — computed at read time because a stale envelope
+// cannot self-report staleness. Consumers MUST do this themselves.
+const ageHours =
+  (Date.now() - new Date(feedHealth.generatedAt).getTime()) / 3600000;
+const t = feedHealth.indicators.cronFreshness.thresholdHours;
+const cronState =
+  ageHours > t.fired ? "fired" : ageHours > t.warning ? "warning" : "ok";
+
+// serverOverall excludes cronFreshness by design. To get a true "is the
+// pipeline healthy?" answer, merge:
+const overall = [feedHealth.summary.serverOverall, cronState].includes("fired")
+  ? "fired"
+  : [feedHealth.summary.serverOverall, cronState].includes("warning")
+    ? "warning"
+    : "ok";
+```
+
+Both the dashboard (`public/health-render.js`) and any future external poller implement the same arithmetic. The dashboard is the first and only consumer of this contract in v1.5.
+
+### `summary.serverOverall` excludes `cronFreshness`
+
+This is intentional, named for honesty: server-side aggregation only. A consumer reading `serverOverall` alone has a stale-cron blind spot and must merge in the read-time cron-freshness state as shown above.
+
+### `summary.byState` is an open map
+
+Counts only indicators that publish a `state` field — three in v1.5.0. Consumers iterate via `Object.entries`; unknown keys must be handled gracefully. Adding a new state value (e.g., `"stale"`) is an additive minor-version change.
+
+### Failure mode
+
+If `feedHealth.error !== undefined`, health computation failed in the orchestrator and the indicators are empty. Consumers should detect this before iterating indicators. The dashboard renders this as a single "Feed-health computation failed" row.
+
+### Future-automation seam
+
+The seam for future webhook/email integration is exactly the merged `overall` computation above. Consumers compute it and post somewhere if it equals `"fired"`. v1.5 does not implement that posting; it only publishes the structured signal and the documented merge pattern. The client library `@sefaertunc/anthropic-watch-client` does not yet wrap `feed-health.json` — deferred until the schema settles in production.
+
+---
+
 ## OPML (`sources.opml`)
 
 OPML **2.0** file with two groups: **Core** and **Extended**.
