@@ -196,14 +196,23 @@ See [FEED-SCHEMA.md — Merge Semantics](FEED-SCHEMA.md#merge-semantics) for the
 
 ### Output Files
 
-| Output                         | Contains                                                  | Use case                          |
-| ------------------------------ | --------------------------------------------------------- | --------------------------------- |
-| Feed files (`*.json`, `*.xml`) | Items with full content                                   | RSS readers, downstream consumers |
-| `run-report.json`              | Per-source status, timing, error messages, summary counts | Dashboard, monitoring             |
-| `run-history.json`             | Array of past run summaries with error lists (max 90)     | Trend analysis, health tracking   |
-| `sources.opml`                 | OPML 2.0 feed list grouped by Core/Extended               | Bulk RSS subscription             |
+| Output                         | Contains                                                  | Use case                                  |
+| ------------------------------ | --------------------------------------------------------- | ----------------------------------------- |
+| Feed files (`*.json`, `*.xml`) | Items with full content                                   | RSS readers, downstream consumers         |
+| `run-report.json`              | Per-source status, timing, error messages, summary counts | Dashboard, monitoring                     |
+| `run-history.json`             | Array of past run summaries with error lists (max 90)     | Trend analysis, health tracking           |
+| `sources.opml`                 | OPML 2.0 feed list grouped by Core/Extended               | Bulk RSS subscription                     |
+| `feed-health.json`             | Pipeline-output integrity indicators (v1.5.0+)            | Dashboard health panel, future automation |
 
 Items are **not** included in `run-report.json` — they are stripped via destructuring (`{ items, ...rest }`) at write time.
+
+### Pipeline-output integrity indicators
+
+The v1.4.2 lesson — a silent feed-truncation bug that ran for six months because every existing health check was per-source — motivated a distinct class of indicator. `feed-health.json` (computed in `src/feed/health.js`) checks **cross-run, system-level, durable-output** signatures: run-history depth, all.json item count, per-source feed continuity (membership against yesterday's keys), and cron freshness. These are evaluated against the just-written feeds plus the previous run's `feed-health.json` envelope and complement — they do not replace — per-source health in `run-report.json`.
+
+Health computation runs as the LAST pipeline step, wrapped in try/catch. A bug or I/O failure in the health module emits a degenerate envelope (`{ error, indicators: {}, summary: { serverOverall: "fired" } }`) and never blocks feed publishing — the carve-out justification is that observability code must not break the system being observed. Verified by `test/e2e/feed-health-isolation.test.js`.
+
+**Soft scope-protection rule:** v1.5 ships four indicators rendered as a top strip on the dashboard. If the indicator count grows beyond ~6 in a future release, split the panel to a separate `public/health.html` page linked from the main dashboard rather than accreting indicators on the main page.
 
 ---
 
