@@ -202,6 +202,36 @@
         border-bottom: none;
       }
 
+      /* Feed Health */
+      .indicator-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .health-indicator {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 200px;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background: var(--surface);
+        font-size: 0.85rem;
+      }
+      .health-label {
+        font-weight: 600;
+        color: var(--fg);
+      }
+      .health-summary {
+        color: var(--muted);
+        flex: 1;
+      }
+      .dot-neutral {
+        background: var(--muted);
+      }
+
       footer {
         margin-top: 3rem;
         color: var(--muted);
@@ -229,6 +259,15 @@
       <a href="feeds/all.json">JSON Feed</a>
       <a href="feeds/sources.opml">OPML</a>
     </div>
+
+    <section class="feed-health" id="feed-health">
+      <h2>Feed Health</h2>
+      <div class="indicator-strip" id="indicator-strip">
+        <div class="loading">Loading...</div>
+      </div>
+    </section>
+
+    <script type="module" src="./health-render.js"></script>
 
     <section>
       <h2>Latest Changes</h2>

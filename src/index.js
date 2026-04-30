@@ -1,7 +1,8 @@
-import { mkdir, readFile, writeFile, appendFile } from "node:fs/promises";
+import { mkdir, writeFile, appendFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { readJsonSafe } from "./read-json-safe.js";
 import { sources as defaultSources } from "./sources.js";
 import {
   loadState,
@@ -24,6 +25,7 @@ import { scrapeTwitterAccount } from "./scrapers/twitter-account.js";
 import { generateJsonFeed } from "./feed/json.js";
 import { generateRssFeed } from "./feed/rss.js";
 import { generateOpml } from "./feed/opml.js";
+import { computeFeedHealth } from "./feed/health.js";
 import * as log from "./log.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -60,14 +62,6 @@ async function runWithConcurrency(tasks, limit = 4) {
     if (executing.size >= limit) await Promise.race(executing).catch(() => {});
   }
   return Promise.allSettled(results);
-}
-
-async function readJsonSafe(path) {
-  try {
-    return JSON.parse(await readFile(path, "utf-8"));
-  } catch {
-    return null;
-  }
 }
 
 export async function runPipeline(options = {}) {
@@ -221,12 +215,17 @@ export async function runPipeline(options = {}) {
     sourceGroups[item.source].push(item);
   }
 
+  const previousPerSourceItems = new Map();
   for (const source of sources) {
     const newItems = sourceGroups[source.key] || [];
     const existingSource = await readJsonSafe(
       join(feedsDir, `${source.key}.json`),
     );
     const existingSourceItems = existingSource?.items || [];
+    previousPerSourceItems.set(
+      source.key,
+      existingSourceItems.map((it) => it.uniqueKey ?? `${it.id}|${it.source}`),
+    );
     const meta = {
       title: `anthropic-watch — ${source.name}`,
       maxItems: 50,
@@ -294,6 +293,37 @@ export async function runPipeline(options = {}) {
       `has_new_items=${allNewItems.length > 0}\n`,
     );
   }
+
+  // Feed-health computation runs LAST. Rule-4 carve-out: observability code
+  // must never break the system being observed. A thrown computation lands
+  // a degenerate envelope on disk; the pipeline continues.
+  const previousFeedHealth = await readJsonSafe(
+    join(feedsDir, "feed-health.json"),
+  );
+  let feedHealth;
+  try {
+    feedHealth = await computeFeedHealth({
+      feedsDir,
+      runReport,
+      previousFeedHealth,
+      previousPerSourceItems,
+    });
+  } catch (err) {
+    log.warn(`Feed-health computation failed: ${err.message}`);
+    const ts = new Date().toISOString();
+    feedHealth = {
+      schemaVersion: "1.0",
+      generatedAt: ts,
+      lastCronAttemptedAt: ts,
+      error: err.message,
+      indicators: {},
+      summary: { serverOverall: "fired", byState: {} },
+    };
+  }
+  await writeFile(
+    join(feedsDir, "feed-health.json"),
+    JSON.stringify(feedHealth, null, 2),
+  );
 
   log.info(`Done in ${(runDuration / 1000).toFixed(1)}s`);
 

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "all ok",
+    "indicators": {
+      "a": { "state": "ok" },
+      "b": { "state": "ok" },
+      "c": { "state": "ok" }
+    },
+    "expectedOverall": "ok"
+  },
+  {
+    "name": "one warning",
+    "indicators": {
+      "a": { "state": "ok" },
+      "b": { "state": "warning" },
+      "c": { "state": "ok" }
+    },
+    "expectedOverall": "warning"
+  },
+  {
+    "name": "one fired wins",
+    "indicators": {
+      "a": { "state": "warning" },
+      "b": { "state": "fired" },
+      "c": { "state": "ok" }
+    },
+    "expectedOverall": "fired"
+  },
+  {
+    "name": "ignores indicators without state",
+    "indicators": {
+      "a": { "state": "ok" },
+      "b": { "summary": "no state field" }
+    },
+    "expectedOverall": "ok"
+  },
+  {
+    "name": "unknown state falls through to ok",
+    "indicators": {
+      "a": { "state": "stale" },
+      "b": { "state": "ok" }
+    },
+    "expectedOverall": "ok"
+  },
+  {
+    "name": "empty indicators",
+    "indicators": {},
+    "expectedOverall": "ok"
+  }
+]

@@ -2,7 +2,7 @@
 
 ![Anthropic Watch — Upstream Intelligence for Claude Code](docs/images/anthropic-watch.png)
 
-[![version v1.4.1](https://img.shields.io/badge/version-v1.4.1-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
+[![version v1.5.0](https://img.shields.io/badge/version-v1.5.0-blue)](https://github.com/sefaertunc/anthropic-watch/releases)
 [![schedule: daily 06:00 UTC](https://img.shields.io/badge/schedule-daily%2006%3A00%20UTC-brightgreen)](https://github.com/sefaertunc/anthropic-watch/actions)
 [![sources: monitored](https://img.shields.io/badge/sources-monitored-blue)](https://github.com/sefaertunc/anthropic-watch/blob/main/src/sources.js)
 [![feeds: RSS + JSON](https://img.shields.io/badge/feeds-RSS%20%2B%20JSON-orange)](https://sefaertunc.github.io/anthropic-watch/feeds/all.xml)
@@ -142,7 +142,8 @@ src/
   state.js              # State persistence + failure tracking
   fetch-with-retry.js   # Retry wrapper (2 retries, 15s timeout, linear backoff)
   fetch-source.js       # Fetch abstraction (supports fixture injection)
-  feed/                 # JSON, RSS, OPML generators
+  feed/                 # JSON, RSS, OPML, feed-health generators
+  read-json-safe.js     # Shared JSON-read helper (returns null on parse/IO error)
   scrapers/             # Scraper modules by source type (github-releases, blog-page, reddit-subreddit, twitter-account, etc.)
 test/                   # Vitest test suites (unit, scraper, e2e)
 public/                 # Dashboard + generated feeds

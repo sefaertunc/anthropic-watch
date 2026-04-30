@@ -73,6 +73,7 @@ See `.claude/skills/` — load only what's relevant:
 10. Surgical changes only — every changed line must trace to the request. Don't "improve" adjacent code, comments, or formatting.
 11. Push back when simpler approaches exist. Present alternatives, don't pick silently.
 12. Transform tasks to success criteria. "Fix the bug" → "Write a failing test, then make it pass."
+13. **Slash-command invocation contract.** /commit-push-pr and /sync run only when the human explicitly types the command (or a Trigger Phrase). Their AskUserQuestion prompts (`Version bump:`, ship/wait, push consent) are non-skippable — refuse to proceed without an explicit human selection.
 
 ## Project-Specific Rules
 
@@ -87,7 +88,7 @@ See `.claude/skills/` — load only what's relevant:
 9. **CHANGELOG.md must be updated** in the same PR as any user-visible change (new source, scraper change, schema change, security fix). Internal refactors don't require it.
 10. **Docs update in the same PR as the code.** If a PR adds a source, `README.md`, `docs/SOURCES.md`, and any source-count references are updated in that PR — never a follow-up.
 11. **Source count consistency.** Any change in source count must propagate to the README badge, the "Monitors X sources" line, `docs/SOURCES.md` headers, and any test assertions.
-12. **Version bumps happen on the release commit**, not PR-by-PR. Tagged GitHub Releases are the source of truth.
+12. **Version bumps committed at release time.** Every PR to `develop` declares `Version bump: {major|minor|patch|none}` in the description; /sync aggregates these and picks max precedence (`major > minor > patch > none`) for the release commit. Tagged GitHub Releases remain the source of truth.
 
 ## Memory Architecture
 
