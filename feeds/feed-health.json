@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-01T08:16:51.639Z",
+  "lastCronAttemptedAt": "2026-05-01T08:16:51.639Z",
+  "indicators": {
+    "runHistoryDepth": {
+      "state": "warning",
+      "current": 5,
+      "expected": 90,
+      "previous": null,
+      "threshold": {
+        "warning": "<expected",
+        "fired": "shrunk-from-previous-by->5"
+      },
+      "summary": "5 of 90 expected entries (still seeding)"
+    },
+    "allJsonItemCount": {
+      "state": "ok",
+      "current": 100,
+      "expected": 100,
+      "previous": null,
+      "threshold": {
+        "warning": "<80",
+        "fired": "shrunk-from-previous-by->10"
+      },
+      "summary": "100 of 100 capacity (steady state)"
+    },
+    "perSourceFeedContinuity": {
+      "state": "ok",
+      "sourcesChecked": 20,
+      "sourcesShrinkingUnexpectedly": 0,
+      "threshold": {
+        "warning": ">=1 source losing retained items",
+        "fired": ">=3 sources losing retained items"
+      },
+      "summary": "All 20 sources retaining items as expected",
+      "details": []
+    },
+    "cronFreshness": {
+      "lastCronAttemptedAt": "2026-05-01T08:16:51.639Z",
+      "thresholdHours": {
+        "warning": 24,
+        "fired": 36
+      },
+      "summary": "Cron freshness is computed at read time from generatedAt; this object publishes inputs only (no state field)"
+    }
+  },
+  "summary": {
+    "serverOverall": "warning",
+    "byState": {
+      "warning": 1,
+      "ok": 2
+    }
+  }
+}
