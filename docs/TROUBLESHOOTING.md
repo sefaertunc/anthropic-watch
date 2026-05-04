@@ -108,40 +108,20 @@ This preserves existing `knownIds` so the next run doesn't flood feeds with "new
 
 **Consumer-side duplicates (not a scraper bug):** If duplicates appear in your downstream application even though they don't appear in the published feed, you're deduplicating on `id` alone rather than on the composite `uniqueKey`. The [`@sefaertunc/anthropic-watch-client`](../packages/client) npm package handles this correctly — or see the **Programmatic Consumption** section of `docs/FEED-SCHEMA.md` for the raw pattern.
 
-### Reddit source returns HTTP 403
+### Reddit sources return errors or 0 items
 
-**Symptoms:** One or more `reddit-*` sources show errors in the run report; error message reads `HTTP 403 for https://www.reddit.com/...` or `HTTP 403 for https://oauth.reddit.com/...`.
+**Symptoms:** One or more `reddit-*` sources show errors in the run report (e.g. `HTTP 403 for https://www.reddit.com/...`) or report 0 items consistently.
 
-**Cause:** Reddit blocks unauthenticated traffic from datacenter IP ranges — including GitHub Actions runners. This has been Reddit policy since the 2023 API pricing changes and is persistent, not transient. The scraper's User-Agent is NOT the issue: the same request from a residential IP using the scraper's exact UA succeeds (HTTP 200 with `x-ratelimit-remaining: 99.0`). A 403 from a datacenter IP is an environmental block, not a scraper bug or UA drift. As of v1.4.1 the scraper uses OAuth2 against `oauth.reddit.com` to bypass the unauthenticated-IP block — see "Reddit sources return 0 items" below for credential setup.
+**Cause:** Reddit's `*.json` endpoints (and the `oauth.reddit.com` API) block traffic from datacenter IP ranges, including GitHub Actions runners — a Reddit policy since the 2023 API pricing changes. The Atom RSS endpoints (`/r/<sub>/<mode>.rss`) are NOT subject to that block, and that's what the scraper uses as of v1.5.1.
+
+History: v1.4.1 added an OAuth2 flow against `oauth.reddit.com` to bypass the unauthenticated-IP block on `*.json`. After Reddit's November 2025 [Responsible Builder Policy](https://support.reddithelp.com/hc/en-us/articles/42728983564564-Responsible-Builder-Policy) gated all new app registrations behind manual review, this project's RBP application was denied twice with no specifics. v1.5.1 swapped to public Atom RSS — bypassing both the OAuth gate and the datacenter-IP block on `*.json` simultaneously.
 
 **Fix:**
 
-1. If the pipeline is running from a residential environment (local dev, self-hosted runner on a home network), unauthenticated access typically works — check that `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` are NOT set in that environment (they force the OAuth path even when unauthenticated would succeed).
-2. If running from GitHub Actions or any datacenter context, configure OAuth credentials per the next entry. A persistent 403 on `oauth.reddit.com` (after credentials are configured correctly) would indicate Reddit has extended its datacenter-IP block to the OAuth endpoint. Escalation paths in that unlikely case: (a) remove the five `reddit-*` sources from `src/sources.js` (update source-count references and tests accordingly), or (b) split the Reddit leg onto a self-hosted runner on a residential IP (introduces operational surface this project deliberately avoids).
-3. Do NOT emulate a browser UA — it is a Reddit ToS violation and does not bypass the datacenter block anyway.
-
-### Reddit sources return 0 items
-
-**Symptoms:** All `reddit-*` sources consistently report 0 items in the run report with `status: ok`.
-
-**Cause:** Expected behavior when `REDDIT_CLIENT_ID` or `REDDIT_CLIENT_SECRET` is not configured. This is a deliberate graceful-skip — forks and local dev sessions run cleanly without configuring OAuth. The scraper returns `[]` without any fetch when either env var is absent or empty.
-
-**Fix:** Register a Reddit script-app and set the two secrets.
-
-> **November 2025 policy change:** Reddit replaced self-service API-key issuance with the [Responsible Builder Policy](https://support.reddithelp.com/hc/en-us/articles/42728983564564-Responsible-Builder-Policy). New apps are pre-gated — submitting the create-app form no longer mints credentials instantly; it triggers a manual review. Reddit's stated turnaround is ~7 days. Credentials issued before the policy change keep working.
-
-1. Log in to Reddit from a residential IP (Reddit's app-creation page is also datacenter-IP-blocked). Go to `https://www.reddit.com/prefs/apps`.
-2. Scroll to the bottom and click **"are you a developer? create an app..."**. Fill in: **Name** `anthropic-watch`, **App type** `script` (critical — the free client-credentials flow), **Redirect URI** `http://localhost:8080` (unused but required).
-3. Submit the Responsible Builder Policy application via Reddit's Developer Support form (linked from the policy page). Use the field values and use-case text in [`reddit-oauth-setup.md`](reddit-oauth-setup.md). Wait for approval (~7 days).
-4. Once approved, the credentials become available on the app detail page: the **client ID** (short ~14-char string directly under the words "personal use script") and the **secret** (~27-char string labeled "secret").
-5. Add both as GitHub Actions secrets:
-
-   ```bash
-   gh secret set REDDIT_CLIENT_ID --body "<client-id>"
-   gh secret set REDDIT_CLIENT_SECRET --body "<secret>"
-   ```
-
-The scraper picks up the credentials on the next cron run. No cost; Reddit's OAuth2 client-credentials tier is free. Rate limit is 100 QPM per OAuth client — well above our ≤5 reddit requests/run usage.
+1. Confirm the failing source's URL ends in `.rss` (not `.json`) — `src/scrapers/reddit-subreddit.js` since v1.5.1 builds `https://www.reddit.com/r/<sub>/<mode>.rss?t=<window>&limit=<n>`.
+2. A persistent 403/429 on the `.rss` endpoint from a runner would indicate Reddit has extended its datacenter-IP block to RSS as well. Escalation paths in that unlikely case: (a) remove the five `reddit-*` sources from `src/sources.js` (update source-count references and tests accordingly), or (b) split the Reddit leg onto a self-hosted runner on a residential IP (introduces operational surface this project deliberately avoids).
+3. The scraper has no graceful-skip path — there are no credentials to be missing. A non-2xx response or unparseable Atom body throws per Rule 4 and surfaces in the run report.
+4. Do NOT emulate a browser UA — it is a Reddit ToS violation and does not bypass the datacenter block on `*.json` anyway.
 
 ### Twitter sources return 0 items
 

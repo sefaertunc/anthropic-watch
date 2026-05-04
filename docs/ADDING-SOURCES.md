@@ -162,13 +162,10 @@ Notes: the bot filter catches GitHub App-style logins (`dependabot[bot]`, `renov
   mode: "top",                 // "top" | "new" | "hot"
   timeWindow: "day",           // only meaningful for mode:"top"; default "day"
   limit: 10,
-  minScore: 0,                 // drop posts below this score after fetch
 }
 ```
 
-Notes: Reddit blocks generic User-Agents AND unauthenticated datacenter-IP traffic (including GitHub Actions runners). The scraper uses OAuth2 against `oauth.reddit.com` and sends a UA derived from root `package.json` version — you don't configure the UA. In `top` mode, stickied posts are filtered to avoid daily recurrence; in `new` mode they pass through.
-
-**Credentials:** This scraper requires `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` as GitHub Actions secrets. As of November 2025, obtaining these requires submitting a Reddit Responsible Builder Policy application (~7-day review). See [reddit-oauth-setup.md](./reddit-oauth-setup.md) for the submission template and [TROUBLESHOOTING.md — Reddit sources return 0 items](TROUBLESHOOTING.md#reddit-sources-return-0-items) for the full setup. Graceful-skip when credentials absent — forks and local dev sessions work without them, sources just return `[]`.
+Notes: the scraper fetches Reddit's public Atom RSS endpoint (`/r/<sub>/<mode>.rss`), which bypasses both the OAuth gate and Reddit's datacenter-IP block on `*.json`. The User-Agent is derived from root `package.json` version — you don't configure it. No credentials required. Per-post `score` and `stickied` are not exposed in the Atom response; rely on listing-level ranking (`mode: "top"`) for noise filtering.
 
 ### hn-algolia
 

@@ -236,7 +236,6 @@ export const sources = [
     mode: "top",
     timeWindow: "day",
     limit: 15,
-    minScore: 0,
   },
   {
     key: "reddit-claudeai",
@@ -248,7 +247,6 @@ export const sources = [
     mode: "top",
     timeWindow: "day",
     limit: 10,
-    minScore: 0,
   },
   {
     key: "reddit-claude",
@@ -260,7 +258,6 @@ export const sources = [
     mode: "top",
     timeWindow: "day",
     limit: 5,
-    minScore: 0,
   },
   {
     key: "reddit-claudeskills",
@@ -272,21 +269,21 @@ export const sources = [
     mode: "top",
     timeWindow: "day",
     limit: 10,
-    minScore: 0,
   },
-  // Claudeopus uses mode:"new" with minScore floor — lower-traffic sub where
-  // top/day returns too few items. New + score floor catches substantive posts
-  // without waiting end-of-day.
+  // Claudeopus uses top/week — lower-traffic sub where top/day returns too few
+  // items. Reddit's listing-level ranking does the noise filtering (Atom feeds
+  // expose no per-post score, so the v1.4.x minScore filter is no longer
+  // possible).
   {
     key: "reddit-claudeopus",
-    name: "r/Claudeopus (new)",
+    name: "r/Claudeopus (top/week)",
     url: "https://www.reddit.com/r/Claudeopus/",
     category: "community",
     scraperType: "reddit-subreddit",
     subreddit: "Claudeopus",
-    mode: "new",
+    mode: "top",
+    timeWindow: "week",
     limit: 10,
-    minScore: 20,
   },
 
   // ─── Community: Hacker News (1) ───
