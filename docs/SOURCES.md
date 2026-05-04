@@ -1,11 +1,12 @@
 # Sources
 
-anthropic-watch monitors Anthropic sources across **six scraper types**, organized into two tiers. The current source list is enumerated below; consumers should derive counts from `summary.sourcesChecked` in `run-report.json`.
+anthropic-watch monitors Anthropic sources across **ten scraper types**, organized into three tiers. The current source list is enumerated below; consumers should derive counts from `summary.sourcesChecked` in `run-report.json`.
 
 ## Source Tiers
 
 - **Core** (11 sources): Primary Anthropic product and developer surfaces. These are the highest-signal sources for tracking releases, API changes, and tooling updates.
 - **Extended** (6 sources): Research, alignment, and supplementary blogs plus the status page. Useful for broader awareness but update less frequently.
+- **Community** (20 sources): GitHub-commit activity, Reddit subreddits, Hacker News, and Twitter/X accounts. Higher-volume, lower-signal feeds for tracking community discussion and pre-release development.
 
 ---
 
@@ -220,15 +221,15 @@ Detection: `GET api.github.com/repos/{owner}/{repo}/commits?per_page=10&sha=main
 
 ### Reddit (5)
 
-- `reddit-claudecode` — `r/ClaudeCode` (top/day, 15 posts, no score floor)
+- `reddit-claudecode` — `r/ClaudeCode` (top/day, 15 posts)
 - `reddit-claudeai` — `r/ClaudeAI` (top/day, 10 posts)
 - `reddit-claude` — `r/claude` (top/day, 5 posts)
 - `reddit-claudeskills` — `r/claudeskills` (top/day, 10 posts)
-- `reddit-claudeopus` — `r/Claudeopus` (new mode with `minScore: 20` — lower-traffic sub)
+- `reddit-claudeopus` — `r/Claudeopus` (top/week, 10 posts — lower-traffic sub; week window catches substantive posts)
 
-Detection: OAuth2 against `oauth.reddit.com/r/{sub}/{mode}.json` using `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` (script-app `client_credentials` flow). ID = Reddit `t3_*` name. Stickied posts are filtered in `top` mode only; pass through in `new` mode. Token is minted once per pipeline run and shared across all `reddit-*` sources; one-shot 401 retry on stale tokens.
+Detection: public Atom 1.0 RSS at `https://www.reddit.com/r/{sub}/{mode}.rss?t={window}&limit={n}`. ID = Reddit `t3_*` name (read directly from `<entry><id>`). Date = `<entry><published>`. Snippet = HTML-stripped `div.md` content from `<entry><content type="html">`, truncated to 300 chars; `null` for link posts with no selftext.
 
-**Credentials:** Required for datacenter-IP runners (including GitHub Actions), which Reddit blocks on anonymous endpoints. As of November 2025, Reddit's Responsible Builder Policy gates new app registration behind a ~7-day manual review. See [TROUBLESHOOTING.md — Reddit sources return 0 items](TROUBLESHOOTING.md#reddit-sources-return-0-items) and [reddit-oauth-setup.md](reddit-oauth-setup.md) for the full flow. Graceful-skip when credentials absent — sources return `[]` and the pipeline proceeds cleanly.
+**Credentials:** None required — public Atom feeds bypass both the OAuth gate and Reddit's datacenter-IP block on `*.json`. See [TROUBLESHOOTING.md — Reddit sources return errors or 0 items](TROUBLESHOOTING.md#reddit-sources-return-errors-or-0-items) for the historical context (v1.4.1 OAuth path, RBP denial, v1.5.1 RSS swap).
 
 ### Hacker News (1)
 
@@ -270,7 +271,7 @@ Cost at current volume (8 accounts × 10 tweets × 30 days): ≈ $0.36/month on 
 | `blog-page`        | fetch + cheerio               | `nextjs-rsc`, `webflow`, `distill`             | blog-engineering, blog-news, blog-research, blog-alignment, blog-red-team, blog-claude                                                                                 |
 | `docs-page`        | fetch + cheerio               | `intercom-article`, `docs-hash`, `model-table` | docs-release-notes, support-release-notes                                                                                                                              |
 | `status-page`      | Statuspage.io API + fetch     | —                                              | status-page                                                                                                                                                            |
-| `reddit-subreddit` | Reddit public JSON + fetch    | —                                              | reddit-claudecode, reddit-claudeai, reddit-claude, reddit-claudeskills, reddit-claudeopus                                                                              |
+| `reddit-subreddit` | Reddit Atom RSS + fetch       | —                                              | reddit-claudecode, reddit-claudeai, reddit-claude, reddit-claudeskills, reddit-claudeopus                                                                              |
 | `hn-algolia`       | HN Algolia search API + fetch | —                                              | hn-anthropic-mentions                                                                                                                                                  |
 | `twitter-account`  | twitterapi.io + fetch         | —                                              | twitter-anthropicai, twitter-claudeai, twitter-claudedevs, twitter-bcherny, twitter-theamolavasare, twitter-felixrieseberg, twitter-noahzweben, twitter-janleike       |
 

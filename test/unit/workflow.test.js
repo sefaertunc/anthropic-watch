@@ -81,16 +81,6 @@ describe("scrape.yml workflow", () => {
     );
   });
 
-  it("passes optional REDDIT_CLIENT_ID/SECRET to the scraper step (v1.4.1 OAuth)", async () => {
-    const content = await readFile(workflowPath, "utf-8");
-    expect(content).toMatch(
-      /REDDIT_CLIENT_ID:\s*\$\{\{\s*secrets\.REDDIT_CLIENT_ID\s*\}\}/,
-    );
-    expect(content).toMatch(
-      /REDDIT_CLIENT_SECRET:\s*\$\{\{\s*secrets\.REDDIT_CLIENT_SECRET\s*\}\}/,
-    );
-  });
-
   it("hydrates gh-pages feeds before running scraper", async () => {
     // public/feeds/ lives on gh-pages, not main. Without hydration,
     // readJsonSafe returns null on a fresh CI checkout and the rolling-window

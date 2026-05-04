@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.5.1] - 2026-05-05
+
+Patch release swapping the Reddit scraper from authenticated OAuth/JSON to the public Atom RSS endpoints. Reddit's Responsible Builder Policy review denied this project's OAuth API application twice with no specifics. A probe from a real GitHub Actions runner confirmed the public Atom RSS endpoints (`/r/<sub>/<mode>.rss`) return HTTP 200 from datacenter IPs — bypassing both the OAuth gate and the datacenter-IP block on `*.json` that prompted the v1.4.1 OAuth migration in the first place. Restores compliance with project Rule 2 ("no OAuth flows beyond `GITHUB_TOKEN`") and removes ~120 lines of token-mint / 401-retry / memoization code plus the 97-line OAuth setup doc.
+
+### Changed
+
+- **`src/scrapers/reddit-subreddit.js` rewritten** from OAuth2 JSON to public Atom 1.0 RSS. Endpoint: `https://www.reddit.com/r/<sub>/<mode>.rss?t=<window>&limit=<n>`. Uses `fast-xml-parser` to parse the Atom envelope and `cheerio` to extract `div.md` post-body text for the snippet (excludes the trailing `submitted by /u/x [link] [comments]` cruft). Item shape unchanged — IDs come straight from `<entry><id>` in the same `t3_<base36>` format the legacy OAuth scraper emitted via `post.name`.
+- **`r/Claudeopus` source migrated** from `mode: "new" + minScore: 20` to `mode: "top" + timeWindow: "week"`. Atom feeds expose no per-post score, so Reddit's listing-level ranking now does the noise filtering. The other four reddit-\* sources (already on `mode: "top"`) are unchanged.
+
+### Removed
+
+- **`REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` env vars** dropped from `.github/workflows/scrape.yml`. The matching repo secrets can be deleted via the GitHub UI; no functional impact if left in place.
+- **`docs/reddit-oauth-setup.md` (97 lines)** — the OAuth setup reference is no longer applicable.
+- **OAuth token-mint, module-scope memoization, one-shot 401 retry, and graceful-skip on missing creds** all removed from the scraper. Public RSS has no creds to be missing; the scraper now throws on HTTP/network/parse errors per Rule 4.
+- **Per-post `score` and `stickied` filtering.** Atom feeds expose neither field; feed quality now relies on Reddit's listing-level ranking (`top` mode).
+
+### Notes
+
+- **No items lost in the swap.** All five `reddit-*` `knownIds` arrays in `state/last-seen.json` were empty — OAuth never went live in production because credentials were never issued — so there was no dedup history to preserve.
+- **`<entry><id>` byte-identical to legacy IDs.** Reddit's Atom output emits IDs in the `t3_<base36>` format directly, matching what the OAuth scraper produced via `post.name`. Future restoration of the JSON path would dedupe correctly without migration.
+- **Test count adjusted:** -11 reddit OAuth tests, +9 reddit RSS tests, -1 workflow env-passthrough assertion.
+
 ## [1.5.0] - 2026-04-30
 
 A small feature release that institutionalizes the v1.4.2 lesson. Adds a published `feed-health.json` artifact and a dashboard panel exposing pipeline-output integrity indicators distinct from per-source health. Catches the class of bug v1.4.2 fixed _before_ it accumulates six months of silent damage. v1.5 publishes a structured signal and a documented merge pattern; consumers compose the alerting layer.
