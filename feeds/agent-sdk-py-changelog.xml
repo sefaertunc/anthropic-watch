@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 04 May 2026 08:34:20 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 08:15:16 GMT</lastBuildDate>
+    <item>
+      <title>0.1.73</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.1.73</guid>
+      <pubDate>Tue, 05 May 2026 08:14:30 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- Eager session store flushing: Added sessionstoreflush option to ClaudeAgentOptions (&quot;batched&quot; or &quot;eager&quot;). When set to &quot;eager&quot;, the transcript mirror delivers frames to SessionStore.append() in near-real-time instead of waiting for the end-of-turn flush, enabling live-tailing UIs, cro</description>
+    </item>
     <item>
       <title>0.1.72</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
