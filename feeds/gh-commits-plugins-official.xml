@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 05 May 2026 08:15:16 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 09:18:43 GMT</lastBuildDate>
+    <item>
+      <title>cwc-makers: curl+tar fallback when git is missing (#1731)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/06f52cd3ac3e47ecb45228a86183ea2a86e9d6ff</link>
+      <guid isPermaLink="false">06f52cd</guid>
+      <pubDate>Wed, 06 May 2026 01:04:20 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>/maker-setup now falls back to GitHub&apos;s tarball endpoint when git isn&apos;t on PATH, instead of detouring through a package-manager git install. curl and tar ship with macOS, Linux, and Windows 10 1803+ out of the box, so this is zero-install on every target platform — and a CwC attendee just needs the </description>
+    </item>
+    <item>
+      <title>Add cwc-makers plugin: /maker-setup Cardputer onboarding (#1730)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/574a879067b3046fa73a25cf7ab3c11e482ec0d1</link>
+      <guid isPermaLink="false">574a879</guid>
+      <pubDate>Wed, 06 May 2026 00:16:30 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* Add cwc-makers plugin: /keep-thinking Cardputer onboarding  Packages the Code-with-Claude Makers (claude.com/cwc-makers) Cardputer experience as a one-command flow for event attendees:  - commands/keep-thinking.md: user entry point — clones   moremas/build-with-claude and runs the m5-onboard provi</description>
+    </item>
     <item>
       <title>Add speakai plugin (#1687)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/ac45fdae4b7af187b5624599ab054090dedadd94</link>

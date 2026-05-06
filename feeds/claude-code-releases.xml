@@ -6,7 +6,28 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 05 May 2026 08:15:16 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 09:18:43 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.131</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.131</link>
+      <guid isPermaLink="false">v2.1.131</guid>
+      <pubDate>Wed, 06 May 2026 07:47:56 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed VS Code extension failing to activate on Windows due to a hardcoded build path in the bundled SDK (createRequire polyfill bug)
+- Fixed Mantle endpoint authentication failing with missing x-api-key header</description>
+    </item>
+    <item>
+      <title>v2.1.129</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.129</link>
+      <guid isPermaLink="false">v2.1.129</guid>
+      <pubDate>Wed, 06 May 2026 01:40:18 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added --plugin-url &lt;url&gt; flag to fetch a plugin .zip archive from a URL for the current session
+- Added CLAUDECODEFORCESYNCOUTPUT=1 env var to force-enable synchronized output on terminals that auto-detection misses (e.g. Emacs eat)
+- Added CLAUDECODEPACKAGEMANAGERAUTOUPDATE: when s</description>
+    </item>
     <item>
       <title>v2.1.128</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.128</link>

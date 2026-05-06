@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-05T08:15:16.455Z",
-  "itemCount": 26,
+  "generated": "2026-05-06T09:18:43.875Z",
+  "itemCount": 28,
   "items": [
+    {
+      "id": "06f52cd",
+      "title": "cwc-makers: curl+tar fallback when git is missing (#1731)",
+      "date": "2026-05-06T01:04:20Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/06f52cd3ac3e47ecb45228a86183ea2a86e9d6ff",
+      "snippet": "/maker-setup now falls back to GitHub's tarball endpoint when git isn't on PATH, instead of detouring through a package-manager git install. curl and tar ship with macOS, Linux, and Windows 10 1803+ out of the box, so this is zero-install on every target platform — and a CwC attendee just needs the ",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "06f52cd|gh-commits-plugins-official"
+    },
+    {
+      "id": "574a879",
+      "title": "Add cwc-makers plugin: /maker-setup Cardputer onboarding (#1730)",
+      "date": "2026-05-06T00:16:30Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/574a879067b3046fa73a25cf7ab3c11e482ec0d1",
+      "snippet": "* Add cwc-makers plugin: /keep-thinking Cardputer onboarding  Packages the Code-with-Claude Makers (claude.com/cwc-makers) Cardputer experience as a one-command flow for event attendees:  - commands/keep-thinking.md: user entry point — clones   moremas/build-with-claude and runs the m5-onboard provi",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "574a879|gh-commits-plugins-official"
+    },
     {
       "id": "ac45fda",
       "title": "Add speakai plugin (#1687)",
