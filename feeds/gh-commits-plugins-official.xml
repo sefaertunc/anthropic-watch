@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 11 May 2026 09:45:55 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 08:45:04 GMT</lastBuildDate>
+    <item>
+      <title>Make Scan Plugins a viable required check; auto-dispatch on bump PRs (#1815)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/45896c8f2fe68e68ca2a8e3554d4441f48475431</link>
+      <guid isPermaLink="false">45896c8</guid>
+      <pubDate>Mon, 11 May 2026 20:14:33 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Scan Plugins is meant to gate every change to marketplace.json, but two gaps made that unenforceable:  1. The bump workflow opens PRs with GITHUB_TOKEN, which GitHub exempts    from on:pull_request triggers. Weekly bump PRs (e.g. #1809) get no    scan check at all. 2. The workflow had a paths filter</description>
+    </item>
+    <item>
+      <title>Add airtable plugin (#1817)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/7f6f5a88364b3eaf44e3859e3bca47f17ca4eeee</link>
+      <guid isPermaLink="false">7f6f5a8</guid>
+      <pubDate>Mon, 11 May 2026 20:12:42 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Adds the airtable marketplace entry. Sourced from Airtable/skills at plugins/airtable, pinned to aaeb4f3e (latest main, tag 2026-05-06). Bundles the official Airtable MCP server (mcp.airtable.com/mcp) plus skills for the Airtable data model and filter syntax.  https://claude.ai/code/session_01Vom6Rz</description>
+    </item>
+    <item>
+      <title>Bump bump-plugin-shas action so bump commits are signed (#1814)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/fe8f81309e7b5c983d1e2a23ed476efec458057d</link>
+      <guid isPermaLink="false">fe8f813</guid>
+      <pubDate>Mon, 11 May 2026 19:45:40 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The pinned version of anthropics/claude-plugins-community&apos;s bump-plugin-shas action creates the bump commit with a local git commit, which is unsigned and unmergeable under the required_signatures ruleset on main. The new SHA creates the commit via the GraphQL createCommitOnBranch mutation, which Gi</description>
+    </item>
+    <item>
+      <title>Add mercadopago plugin (#1813)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6196a61bdeece7b9889ecda1e45bd7085788ae75</link>
+      <guid isPermaLink="false">6196a61</guid>
+      <pubDate>Mon, 11 May 2026 17:37:36 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Mercado Pago full-product integration toolkit — 13 skills, agents, and a bundled MCP for live API data. Sourced from mercadopago/mercadopago-claude-marketplace at plugins/mercadopago, pinned to 1de8d97e.  Closes #1272  https://claude.ai/code/session_01XCupEyAPLqxo2eHgVoWevi  Co-authored-by: Claude &lt;</description>
+    </item>
+    <item>
+      <title>Add sap-cds-mcp plugin + SAP SE author block on cds-mcp (#1778)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/480a410cc0dd25378b069f65f9ae44b7808b300f</link>
+      <guid isPermaLink="false">480a410</guid>
+      <pubDate>Mon, 11 May 2026 16:54:50 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>CAP CDS work as one cohesive unit, split out of #1616 to keep that PR narrowly scoped to sap-hana-cli (which is currently held on an upstream plugin.json fix).  - Adds new sap-cds-mcp entry alongside existing cds-mcp (additive,   non-breaking — both point to cap-js/mcp-server). Pinned at 8ce2e13a. -</description>
+    </item>
+    <item>
+      <title>Align SAP author blocks on existing entries (#1779)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0ed793245971a677bb97356161ee58f61315973f</link>
+      <guid isPermaLink="false">0ed7932</guid>
+      <pubDate>Mon, 11 May 2026 16:51:50 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Metadata-only refresh per the SAP namespace policy (Florian/Klaus/Avital, 2026-05-04). No slug renames, no new entries.  - sap-mdk-server: expand author from {&quot;name&quot;:&quot;SAP&quot;} to the unified   SAP SE block with ospo@sap.com. - ui5: add unified UI5 author block (openui5@sap.com per Florian&apos;s   carve-out</description>
+    </item>
     <item>
       <title>Add sap-fiori-mcp-server plugin (#1777)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/00679aef889efe36bb0389f81d70b6229a2013ee</link>
