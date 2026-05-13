@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-12T08:45:04.854Z",
-  "itemCount": 47,
+  "generated": "2026-05-13T08:48:44.946Z",
+  "itemCount": 50,
   "items": [
+    {
+      "id": "1a2f18b",
+      "title": "chore: modify data-agent-kit-starter-pack plugin details (#1826)",
+      "date": "2026-05-12T21:59:22Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/1a2f18b05cf5652fd25403e8d229fc884fb84103",
+      "snippet": "* chore: modify data-agent-kit-starter-pack plugin details  Updated the description and homepage of the data-agent-kit-starter-pack plugin, and changed the SHA.  * update sha for latest commit",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "1a2f18b|gh-commits-plugins-official"
+    },
+    {
+      "id": "1cf022e",
+      "title": "Fix servicenow-sdk ref: ServiceNow/sdk uses master, not main (#1830)",
+      "date": "2026-05-12T17:05:45Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/1cf022eba106dce65cd2ce28a42d34d1b2874acf",
+      "snippet": "The ServiceNow/sdk repository's default branch is 'master' and there is no 'main' branch. The pinned SHA (06adf37) is the current head of 'master'. Update the ref so future SHA bumps target the correct branch.",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "1cf022e|gh-commits-plugins-official"
+    },
+    {
+      "id": "573ecf3",
+      "title": "Merge pull request #1820 from anthropics/morganl/code-modernization-plugin",
+      "date": "2026-05-12T16:58:41Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/573ecf32cd82a8ec997b0e92acbdd46d17b67bb1",
+      "snippet": "code-modernization: fix pipeline gaps, redesign harden, dry-run hardening",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "573ecf3|gh-commits-plugins-official"
+    },
+    {
+      "id": "5e4a450",
+      "title": "code-modernization: harden writes a patch instead of editing legacy; make map/security guidance language-agnostic",
+      "date": "2026-05-11T23:46:03Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/5e4a45001d608ce34437181d96340faa1f5899c9",
+      "snippet": "- modernize-harden: never edits legacy/ anymore. Writes findings plus a   reviewed unified diff to analysis/<system>/security_remediation.patch.   A second security-auditor pass reviews each hunk (RESOLVES / PARTIAL /   INTRODUCES-RISK) before presenting. The user reviews and applies the   patch del",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "5e4a450|gh-commits-plugins-official"
+    },
+    {
+      "id": "22a1b25",
+      "title": "Harden code-modernization plugin from a real CardDemo dry run",
+      "date": "2026-05-11T23:28:27Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/22a1b2597750246f104c88e66f0c379932d05c9b",
+      "snippet": "Fixes found by running the discovery workflow against the AWS CardDemo mainframe sample (~50 KLOC of COBOL/CICS/JCL/BMS/VSAM):  - modernize-assess: add scc -> cloc -> find/wc fallback chain with the   COCOMO-II formula so Step 1 works when scc isn't installed; same for   portfolio-mode cloc/lizard. ",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "22a1b25|gh-commits-plugins-official"
+    },
+    {
+      "id": "7188181",
+      "title": "Fix code-modernization plugin: align README with commands, fix pipeline gaps",
+      "date": "2026-05-11T23:17:59Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/718818146e93eeef3a94a3dac9ffa087558115cc",
+      "snippet": "- modernize-brief: read TOPOLOGY.html (what modernize-map actually   produces) instead of nonexistent TOPOLOGY.md, and tell the user which   command produces each missing input. - README: rewrite the Commands section to match actual command behavior —   correct output filenames, ordering (brief is t",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "7188181|gh-commits-plugins-official"
+    },
     {
       "id": "45896c8",
       "title": "Make Scan Plugins a viable required check; auto-dispatch on bump PRs (#1815)",
@@ -491,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "458b279|gh-commits-plugins-official"
-    },
-    {
-      "id": "26973b8",
-      "title": "Add fullstory plugin (#1577)",
-      "date": "2026-04-27T19:37:03Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/26973b887b74a8fc478a4ba8de60d6df4b2cda12",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "26973b8|gh-commits-plugins-official"
-    },
-    {
-      "id": "6fc0a4b",
-      "title": "Add jfrog plugin (#1576)",
-      "date": "2026-04-27T19:36:58Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/6fc0a4b36a5beb6d64af78d8504e401ad3d7b0c3",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "6fc0a4b|gh-commits-plugins-official"
-    },
-    {
-      "id": "27cab8e",
-      "title": "Add rails-query plugin (#1575)",
-      "date": "2026-04-27T19:36:54Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/27cab8ee355c8bfaff1f9cefe17b27f63b6d537f",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "27cab8e|gh-commits-plugins-official"
     }
   ]
 }

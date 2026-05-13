@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 12 May 2026 08:45:04 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 08:48:44 GMT</lastBuildDate>
+    <item>
+      <title>chore: modify data-agent-kit-starter-pack plugin details (#1826)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1a2f18b05cf5652fd25403e8d229fc884fb84103</link>
+      <guid isPermaLink="false">1a2f18b</guid>
+      <pubDate>Tue, 12 May 2026 21:59:22 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* chore: modify data-agent-kit-starter-pack plugin details  Updated the description and homepage of the data-agent-kit-starter-pack plugin, and changed the SHA.  * update sha for latest commit</description>
+    </item>
+    <item>
+      <title>Fix servicenow-sdk ref: ServiceNow/sdk uses master, not main (#1830)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1cf022eba106dce65cd2ce28a42d34d1b2874acf</link>
+      <guid isPermaLink="false">1cf022e</guid>
+      <pubDate>Tue, 12 May 2026 17:05:45 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The ServiceNow/sdk repository&apos;s default branch is &apos;master&apos; and there is no &apos;main&apos; branch. The pinned SHA (06adf37) is the current head of &apos;master&apos;. Update the ref so future SHA bumps target the correct branch.</description>
+    </item>
+    <item>
+      <title>Merge pull request #1820 from anthropics/morganl/code-modernization-plugin</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/573ecf32cd82a8ec997b0e92acbdd46d17b67bb1</link>
+      <guid isPermaLink="false">573ecf3</guid>
+      <pubDate>Tue, 12 May 2026 16:58:41 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>code-modernization: fix pipeline gaps, redesign harden, dry-run hardening</description>
+    </item>
+    <item>
+      <title>code-modernization: harden writes a patch instead of editing legacy; make map/security guidance language-agnostic</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/5e4a45001d608ce34437181d96340faa1f5899c9</link>
+      <guid isPermaLink="false">5e4a450</guid>
+      <pubDate>Mon, 11 May 2026 23:46:03 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>- modernize-harden: never edits legacy/ anymore. Writes findings plus a   reviewed unified diff to analysis/&lt;system&gt;/security_remediation.patch.   A second security-auditor pass reviews each hunk (RESOLVES / PARTIAL /   INTRODUCES-RISK) before presenting. The user reviews and applies the   patch del</description>
+    </item>
+    <item>
+      <title>Harden code-modernization plugin from a real CardDemo dry run</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/22a1b2597750246f104c88e66f0c379932d05c9b</link>
+      <guid isPermaLink="false">22a1b25</guid>
+      <pubDate>Mon, 11 May 2026 23:28:27 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes found by running the discovery workflow against the AWS CardDemo mainframe sample (~50 KLOC of COBOL/CICS/JCL/BMS/VSAM):  - modernize-assess: add scc -&gt; cloc -&gt; find/wc fallback chain with the   COCOMO-II formula so Step 1 works when scc isn&apos;t installed; same for   portfolio-mode cloc/lizard. </description>
+    </item>
+    <item>
+      <title>Fix code-modernization plugin: align README with commands, fix pipeline gaps</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/718818146e93eeef3a94a3dac9ffa087558115cc</link>
+      <guid isPermaLink="false">7188181</guid>
+      <pubDate>Mon, 11 May 2026 23:17:59 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>- modernize-brief: read TOPOLOGY.html (what modernize-map actually   produces) instead of nonexistent TOPOLOGY.md, and tell the user which   command produces each missing input. - README: rewrite the Commands section to match actual command behavior —   correct output filenames, ordering (brief is t</description>
+    </item>
     <item>
       <title>Make Scan Plugins a viable required check; auto-dispatch on bump PRs (#1815)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/45896c8f2fe68e68ca2a8e3554d4441f48475431</link>
@@ -356,30 +404,6 @@
       <link>https://github.com/anthropics/claude-plugins-official/commit/458b2799c55e5a8c66b95345c4657d43e095a388</link>
       <guid isPermaLink="false">458b279</guid>
       <pubDate>Mon, 27 Apr 2026 19:37:07 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add fullstory plugin (#1577)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/26973b887b74a8fc478a4ba8de60d6df4b2cda12</link>
-      <guid isPermaLink="false">26973b8</guid>
-      <pubDate>Mon, 27 Apr 2026 19:37:03 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add jfrog plugin (#1576)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/6fc0a4b36a5beb6d64af78d8504e401ad3d7b0c3</link>
-      <guid isPermaLink="false">6fc0a4b</guid>
-      <pubDate>Mon, 27 Apr 2026 19:36:58 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add rails-query plugin (#1575)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/27cab8ee355c8bfaff1f9cefe17b27f63b6d537f</link>
-      <guid isPermaLink="false">27cab8e</guid>
-      <pubDate>Mon, 27 Apr 2026 19:36:54 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
     </item>
