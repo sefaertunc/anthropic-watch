@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 13 May 2026 08:48:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 08:41:30 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #607 from anthropics/lance/managed-agents-linear</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/b5b727b70a6e2f89b741ee075cca67917d2b3488</link>
+      <guid isPermaLink="false">b5b727b</guid>
+      <pubDate>Wed, 13 May 2026 21:40:05 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>feat(managed_agents): Linear stateless webhook bridge template</description>
+    </item>
+    <item>
+      <title>Merge pull request #617 from anthropics/lance/managed-agents-cma-mcp</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/e7b800d472527085494e3846d25e4dfc555b2857</link>
+      <guid isPermaLink="false">e7b800d</guid>
+      <pubDate>Wed, 13 May 2026 15:52:01 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>feat(managed_agents): CMA Sessions API as an MCP server (stdio + HTTP)</description>
+    </item>
+    <item>
+      <title>feat(managed_agents): Linear stateless webhook bridge template</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/96442914bfee9842faa97b1d45ee7b43317f7391</link>
+      <guid isPermaLink="false">9644291</guid>
+      <pubDate>Wed, 13 May 2026 15:45:31 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Minimal TypeScript/Bun bridge connecting Linear&apos;s Agent Platform to Managed Agents via CMA outbound webhooks — no held SSE streams, no session-map DB (session.metadata carries linear_session_id + org_id).  - setup/create-agent.ts: one-time agent + environment (claude-opus-4-7) - src/agent.ts: Linear</description>
+    </item>
+    <item>
+      <title>feat(managed_agents): CMA Sessions API as an MCP server (stdio + HTTP)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/a0902061e41142ff203d80c1bd87fae3066af440</link>
+      <guid isPermaLink="false">a090206</guid>
+      <pubDate>Wed, 13 May 2026 15:45:31 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Thin MCP server wrapping Managed Agents sessions so Claude Desktop or claude.ai can drive hosted CMA agents via tool calls. DIY bridge until &apos;publish agent to claude.ai&apos; is first-class.  9 tools in shared src/tools.ts — 8 are 1:1 endpoint wrappers; wait_for_idle is the SSE→request/response shim. Two</description>
+    </item>
     <item>
       <title>Merge pull request #606 from anthropics/mnowicki/cma-category-tag</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/3f8bf356e779d366ae7fcc0e84be12019747e5e3</link>
