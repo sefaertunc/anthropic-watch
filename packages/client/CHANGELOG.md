@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.3] - 2026-05-14
+
+Adds `fetchFeedHealth()` and `computeCronFreshnessState()` — wrappers for the `feed-health.json` artifact introduced in `anthropic-watch` v1.5.0 (PR #24). Deferred from v1.5.0 to allow ≥2 weeks of production exposure before locking the client shape; 14 clean cron runs observed with no schema drift.
+
+### Added
+
+- **`AnthropicWatchClient.fetchFeedHealth({ signal? })`** — fetches `feeds/feed-health.json`, validates the basic shape (checks for the degenerate error envelope, verifies `indicators` and `summary` are objects), and returns a typed `FeedHealth` object. Reuses `FeedFetchError` (network/HTTP) and `FeedMalformedError` (error envelope or shape failure); no new error classes.
+- **`computeCronFreshnessState({ feedHealth, now? })`** — pure helper that mirrors the read-time arithmetic documented in `docs/FEED-SCHEMA.md § "Read-time cron-freshness computation"`. Returns `'ok' | 'warning' | 'fired'`. Accepts an optional `now` (milliseconds since epoch) for deterministic testing; defaults to `Date.now()`. Exported from the package root alongside the existing helpers.
+- **JSDoc types** — `FeedHealth`, `FeedHealthIndicators`, `FeedHealthSummary`, `RunHistoryDepthIndicator`, `AllJsonItemCountIndicator`, `PerSourceFeedContinuityIndicator`, `PerSourceContinuityDetail`, `CronFreshnessIndicator`, `IndicatorState`. All surface through `dist/index.d.ts` via the existing `export * from "./types.js"` re-export.
+- **Fixture** — `packages/client/fixtures/feed-health.valid.json` captured from the 2026-05-14 production artifact (schemaVersion 1.0, serverOverall warning / runHistoryDepth still seeding).
+
+### Notes
+
+- `cronFreshness` has no `state` field by design — the cron cannot self-report staleness. Call `computeCronFreshnessState` to derive the state and merge it with `summary.serverOverall` per the FEED-SCHEMA.md merge pattern.
+- `fetchFeedHealth` does not gate on `schemaVersion` (unlike `fetchAllItems`/`fetchRunReport` which gate on `feed.version`). The health schema is explicitly designed for additive forward compatibility; minor bumps add optional fields and the client handles them gracefully via the open-map `byState` contract.
+
 ## [1.0.2] - 2026-04-24
 
 README-only refresh for the npm landing page. No code changes.
