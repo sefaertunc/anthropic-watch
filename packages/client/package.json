@@ -41,6 +41,10 @@
     "test:watch": "vitest",
     "types": "tsc -p . --emitDeclarationOnly --outDir dist"
   },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "devDependencies": {
     "vitest": "^3.2.4",
     "typescript": "^5.5.0"
