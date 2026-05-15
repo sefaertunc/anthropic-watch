@@ -30,6 +30,20 @@ npm install @sefaertunc/anthropic-watch-client
 
 Requires Node 18+ (for global `fetch` and `AbortController`).
 
+## Provenance and integrity
+
+Starting with `1.0.3`, every release is published from GitHub Actions with [npm provenance](https://docs.npmjs.com/generating-provenance-statements) — a Sigstore attestation linking the npm tarball to the exact commit and workflow run that produced it. The npm package page shows a **Provenance** badge for verified releases.
+
+Verify a release from the command line:
+
+```bash
+npm view @sefaertunc/anthropic-watch-client@1.0.3 dist.signatures
+```
+
+The output includes a `keyid` and `sig` block when provenance is attached.
+
+Versions `1.0.0` – `1.0.2` predate the publish workflow and were uploaded manually without attestation. Pin to `>=1.0.3` if you require a verifiable build chain.
+
 ## Quick start
 
 ```js
