@@ -184,7 +184,7 @@ Two independent versioning tracks:
 - [x] `src/read-json-safe.js` — extracted shared helper, was duplicated between `src/index.js` and `src/feed/health.js`.
 - [x] Schema-version policy formalized: additive minor for new indicators, optional fields, and state values; `summary.byState` is an open map. `summary.serverOverall` excludes `cronFreshness` by design (named for honesty); consumers merge in the read-time cron-freshness state — canonical 5-line example in `docs/FEED-SCHEMA.md`.
 - [x] Scope ceiling held: no Slack, email, webhooks, GitHub-Issue auto-opening — v1.5 publishes the structured signal and the documented merge pattern; consumers compose the alerting layer.
-- [ ] Client library `fetchFeedHealth()` — deferred until the `feed-health.json` schema settles in production for ≥2 weeks of real cron runs. Then ship as `@sefaertunc/anthropic-watch-client@1.0.4` (or wherever the version lands).
+- [x] Client library `fetchFeedHealth()` — shipped in `@sefaertunc/anthropic-watch-client@1.0.3` (2026-05-15, PR #29) after 14 production runs (2026-05-01 → 2026-05-14) confirmed zero shape drift against `docs/FEED-SCHEMA.md`. Adds `AnthropicWatchClient.fetchFeedHealth()` (validates error-envelope-vs-success shape, reuses `FeedFetchError`/`FeedMalformedError`) and `computeCronFreshnessState()` pure helper mirroring the canonical read-time arithmetic. Deliberately does not gate on `schemaVersion` because the health schema is designed for additive forward compatibility.
 
 ### Phase 8 — Future / Conditional
 
