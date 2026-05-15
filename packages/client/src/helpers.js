@@ -34,10 +34,7 @@ export function filterNew(items, seenSet) {
  * @param {{ feedHealth: import('./types.js').FeedHealth, now?: number }} options
  * @returns {'ok' | 'warning' | 'fired'}
  */
-export function computeCronFreshnessState({
-  feedHealth,
-  now = Date.now(),
-} = {}) {
+export function computeCronFreshnessState({ feedHealth, now = Date.now() }) {
   const ageHours = (now - new Date(feedHealth.generatedAt).getTime()) / 3600000;
   const t = feedHealth.indicators.cronFreshness.thresholdHours;
   return ageHours > t.fired ? "fired" : ageHours > t.warning ? "warning" : "ok";
