@@ -1,0 +1,83 @@
+name: Publish Client
+
+# Publishes @sefaertunc/anthropic-watch-client to npm with provenance.
+# Triggered manually after a release PR merges to main and the version in
+# packages/client/package.json has been bumped past whatever is on npm.
+#
+# Provenance requires:
+# - `permissions: id-token: write` (OIDC token for Sigstore attestation)
+# - npm >= 9.5.0 (default in setup-node@v4 with Node 20+)
+# - Public GitHub repository (anthropic-watch is public)
+# - `publishConfig.provenance: true` in packages/client/package.json
+#
+# Required secret: NPM_TOKEN — npm automation token scoped to
+# @sefaertunc/anthropic-watch-client with publish permission.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - packages/client/package.json
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: publish-client
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/client
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      - name: Read package version
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "Detected version: ${VERSION}"
+
+      - name: Skip if version already on npm
+        id: check
+        run: |
+          NAME=$(node -p "require('./package.json').name")
+          VERSION="${{ steps.version.outputs.version }}"
+          if npm view "${NAME}@${VERSION}" version >/dev/null 2>&1; then
+            echo "${NAME}@${VERSION} already published — skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "${NAME}@${VERSION} not on npm — will publish."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install dependencies
+        if: steps.check.outputs.skip == 'false'
+        run: npm ci
+
+      - name: Run tests
+        if: steps.check.outputs.skip == 'false'
+        run: npm test
+
+      - name: Build TypeScript declarations
+        if: steps.check.outputs.skip == 'false'
+        run: npm run types
+
+      - name: Publish to npm with provenance
+        if: steps.check.outputs.skip == 'false'
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

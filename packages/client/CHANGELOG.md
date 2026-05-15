@@ -15,6 +15,7 @@ Adds `fetchFeedHealth()` and `computeCronFreshnessState()` — wrappers for the 
 
 - `cronFreshness` has no `state` field by design — the cron cannot self-report staleness. Call `computeCronFreshnessState` to derive the state and merge it with `summary.serverOverall` per the FEED-SCHEMA.md merge pattern.
 - `fetchFeedHealth` does not gate on `schemaVersion` (unlike `fetchAllItems`/`fetchRunReport` which gate on `feed.version`). The health schema is explicitly designed for additive forward compatibility; minor bumps add optional fields and the client handles them gracefully via the open-map `byState` contract.
+- **First release published with npm provenance attestation.** Built and signed by `.github/workflows/publish-client.yml` running in GitHub Actions with `id-token: write` permissions. Verify on npm via the "Provenance" badge or `npm view @sefaertunc/anthropic-watch-client@1.0.3` showing a `signatures` block with `keyid: SHA256:...`. Closes the supply-chain attestation gap that left v1.0.0 – v1.0.2 unverifiable against the git source.
 
 ## [1.0.2] - 2026-04-24
 
