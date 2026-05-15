@@ -100,6 +100,33 @@ try {
 
 The scraper's [`docs/FEED-SCHEMA.md`](https://github.com/sefaertunc/anthropic-watch/blob/main/docs/FEED-SCHEMA.md) contains a hand-rolled version of the same pattern without this library — useful for non-JS consumers or anyone evaluating the shape before adopting.
 
+## Feed health
+
+`feed-health.json` publishes cross-run, system-level pipeline integrity as four indicators. Three publish a `state`; `cronFreshness` publishes inputs only — a stale cron cannot self-report, so the state must be derived at read time.
+
+```js
+import {
+  AnthropicWatchClient,
+  computeCronFreshnessState,
+} from "@sefaertunc/anthropic-watch-client";
+
+const client = new AnthropicWatchClient();
+const health = await client.fetchFeedHealth();
+
+// serverOverall covers runHistoryDepth, allJsonItemCount, perSourceFeedContinuity.
+// Merge in cron-freshness (computed at read time) for the full picture.
+const cronState = computeCronFreshnessState({ feedHealth: health });
+const overall = [health.summary.serverOverall, cronState].includes("fired")
+  ? "fired"
+  : [health.summary.serverOverall, cronState].includes("warning")
+    ? "warning"
+    : "ok";
+
+if (overall === "fired") {
+  console.error("Pipeline health alert:", health.summary.byState);
+}
+```
+
 ## API
 
 ### `new AnthropicWatchClient(options?)`
@@ -114,20 +141,22 @@ Throws `TypeError` if no fetch is available (Node <18 with no polyfill and no `o
 
 ### Methods
 
-| Method                                     | Returns              | Description                                                                    |
-| ------------------------------------------ | -------------------- | ------------------------------------------------------------------------------ |
-| `fetchAllItems({ signal? })`               | `Promise<Item[]>`    | Fetches `feeds/all.json`, validates envelope version, returns `feed.items`.    |
-| `fetchSourceItems(sourceKey, { signal? })` | `Promise<Item[]>`    | Fetches `feeds/{sourceKey}.json`. URL-encoded. Throws on empty/non-string key. |
-| `fetchRunReport({ signal? })`              | `Promise<RunReport>` | Fetches `feeds/run-report.json`, validates shape, returns the full report.     |
-| `filterNew(items, seenSet)`                | `Item[]`             | Items whose `uniqueKey` is not in `seenSet`. Mirror of the pure helper.        |
+| Method                                     | Returns               | Description                                                                                                                                               |
+| ------------------------------------------ | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `fetchAllItems({ signal? })`               | `Promise<Item[]>`     | Fetches `feeds/all.json`, validates envelope version, returns `feed.items`.                                                                               |
+| `fetchSourceItems(sourceKey, { signal? })` | `Promise<Item[]>`     | Fetches `feeds/{sourceKey}.json`. URL-encoded. Throws on empty/non-string key.                                                                            |
+| `fetchRunReport({ signal? })`              | `Promise<RunReport>`  | Fetches `feeds/run-report.json`, validates shape, returns the full report.                                                                                |
+| `fetchFeedHealth({ signal? })`             | `Promise<FeedHealth>` | Fetches `feeds/feed-health.json`, validates shape, returns the full health object. Throws `FeedMalformedError` if a degenerate error envelope is present. |
+| `filterNew(items, seenSet)`                | `Item[]`              | Items whose `uniqueKey` is not in `seenSet`. Mirror of the pure helper.                                                                                   |
 
 ### Pure helpers
 
-| Helper                      | Description                                                                                                                             |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `uniqueKey(item)`           | Returns `item.uniqueKey` if present, else `` `${item.id}                                                                                | ${item.source}` `` — the fallback matters for items archived from pre-v1.2.0 feeds. |
-| `filterNew(items, seenSet)` | Items whose `uniqueKey` is not in `seenSet`. Throws `TypeError` if `seenSet` is not a `Set` — a common mistake worth failing loudly on. |
-| `dedupe(items)`             | Removes duplicates within an array, keeping the first occurrence of each `uniqueKey`. Stable.                                           |
+| Helper                                            | Description                                                                                                                                                                                    |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `uniqueKey(item)`                                 | Returns `item.uniqueKey` if present, else `` `${item.id}                                                                                                                                       | ${item.source}` `` — the fallback matters for items archived from pre-v1.2.0 feeds. |
+| `filterNew(items, seenSet)`                       | Items whose `uniqueKey` is not in `seenSet`. Throws `TypeError` if `seenSet` is not a `Set` — a common mistake worth failing loudly on.                                                        |
+| `dedupe(items)`                                   | Removes duplicates within an array, keeping the first occurrence of each `uniqueKey`. Stable.                                                                                                  |
+| `computeCronFreshnessState({ feedHealth, now? })` | Returns `'ok' \| 'warning' \| 'fired'`. Derives cron-freshness state at read time — a stale cron cannot self-report, so this must be computed by the consumer. `now` defaults to `Date.now()`. |
 
 ### Constants
 
