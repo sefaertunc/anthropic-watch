@@ -79,6 +79,17 @@ export class AnthropicWatchClient {
   }
 
   /**
+   * @param {{ signal?: AbortSignal }} [options]
+   * @returns {Promise<import('./types.js').FeedHealth>}
+   */
+  async fetchFeedHealth({ signal } = {}) {
+    const url = `${this.baseUrl}feeds/feed-health.json`;
+    const health = await this.#fetchJson(url, { signal });
+    this.#assertFeedHealthShape(health, url);
+    return health;
+  }
+
+  /**
    * @param {string} url
    * @param {{ signal?: AbortSignal }} [options]
    * @returns {Promise<any>}
@@ -170,6 +181,32 @@ export class AnthropicWatchClient {
       throw new FeedMalformedError("Run report is missing summary", {
         url,
         reason: "report.summary is not an object",
+      });
+    }
+  }
+
+  /**
+   * @param {any} health
+   * @param {string} url
+   */
+  #assertFeedHealthShape(health, url) {
+    this.#assertObject(health, "Feed health", url);
+    if (health.error !== undefined) {
+      throw new FeedMalformedError(
+        `Feed-health computation failed: ${health.error}`,
+        { url, reason: String(health.error) },
+      );
+    }
+    if (typeof health.indicators !== "object" || health.indicators === null) {
+      throw new FeedMalformedError("Feed health is missing indicators", {
+        url,
+        reason: "feedHealth.indicators is not an object",
+      });
+    }
+    if (typeof health.summary !== "object" || health.summary === null) {
+      throw new FeedMalformedError("Feed health is missing summary", {
+        url,
+        reason: "feedHealth.summary is not an object",
       });
     }
   }

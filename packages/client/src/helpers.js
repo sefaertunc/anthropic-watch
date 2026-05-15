@@ -26,6 +26,24 @@ export function filterNew(items, seenSet) {
 }
 
 /**
+ * Computes the cron-freshness state at read time. A stale envelope cannot
+ * self-report staleness (the cron didn't run, so neither did the writer), so
+ * this arithmetic must happen on the consumer side. Mirrors the canonical
+ * example in docs/FEED-SCHEMA.md § "Read-time cron-freshness computation".
+ *
+ * @param {{ feedHealth: import('./types.js').FeedHealth, now?: number }} options
+ * @returns {'ok' | 'warning' | 'fired'}
+ */
+export function computeCronFreshnessState({
+  feedHealth,
+  now = Date.now(),
+} = {}) {
+  const ageHours = (now - new Date(feedHealth.generatedAt).getTime()) / 3600000;
+  const t = feedHealth.indicators.cronFreshness.thresholdHours;
+  return ageHours > t.fired ? "fired" : ageHours > t.warning ? "warning" : "ok";
+}
+
+/**
  * @param {import('./types.js').Item[]} items
  * @returns {import('./types.js').Item[]}
  */

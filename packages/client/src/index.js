@@ -4,6 +4,7 @@ export {
   uniqueKey,
   filterNew,
   dedupe,
+  computeCronFreshnessState,
   SUPPORTED_FEED_VERSION,
   DEFAULT_BASE_URL,
 } from "./helpers.js";

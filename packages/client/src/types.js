@@ -58,4 +58,75 @@
  * @property {string | null} error
  */
 
+/**
+ * @typedef {'ok' | 'warning' | 'fired'} IndicatorState
+ */
+
+/**
+ * @typedef {Object} RunHistoryDepthIndicator
+ * @property {IndicatorState} state
+ * @property {number} current
+ * @property {number} expected
+ * @property {number | null} previous
+ * @property {{ warning: string, fired: string }} threshold
+ * @property {string} summary
+ */
+
+/**
+ * @typedef {Object} AllJsonItemCountIndicator
+ * @property {IndicatorState} state
+ * @property {number} current
+ * @property {number} expected
+ * @property {number | null} previous
+ * @property {{ warning: string, fired: string }} threshold
+ * @property {string} summary
+ */
+
+/**
+ * @typedef {Object} PerSourceContinuityDetail
+ * @property {string} source
+ * @property {string} reason
+ */
+
+/**
+ * @typedef {Object} PerSourceFeedContinuityIndicator
+ * @property {IndicatorState} state
+ * @property {number} sourcesChecked
+ * @property {number} sourcesShrinkingUnexpectedly
+ * @property {{ warning: string, fired: string }} threshold
+ * @property {string} summary
+ * @property {PerSourceContinuityDetail[]} details
+ */
+
+/**
+ * @typedef {Object} CronFreshnessIndicator
+ * @property {string} lastCronAttemptedAt - ISO 8601. No `state` field — computed at read time.
+ * @property {{ warning: number, fired: number }} thresholdHours
+ * @property {string} summary
+ */
+
+/**
+ * @typedef {Object} FeedHealthIndicators
+ * @property {RunHistoryDepthIndicator} runHistoryDepth
+ * @property {AllJsonItemCountIndicator} allJsonItemCount
+ * @property {PerSourceFeedContinuityIndicator} perSourceFeedContinuity
+ * @property {CronFreshnessIndicator} cronFreshness
+ */
+
+/**
+ * @typedef {Object} FeedHealthSummary
+ * @property {IndicatorState} serverOverall - Excludes cronFreshness; server-side only.
+ * @property {Record<string, number>} byState - Open map: only states with count > 0 are present.
+ */
+
+/**
+ * @typedef {Object} FeedHealth
+ * @property {string} schemaVersion
+ * @property {string} generatedAt - ISO 8601.
+ * @property {string} lastCronAttemptedAt - ISO 8601.
+ * @property {FeedHealthIndicators} indicators
+ * @property {FeedHealthSummary} summary
+ * @property {string} [error] - Present only on degenerate error envelope.
+ */
+
 export {};
