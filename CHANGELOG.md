@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.2] - 2026-05-15
+
+Security patch bumping `fast-xml-parser` from `^5.6.0` to `^5.8.0`. Resolves the two CVEs surfaced by a Socket SCA scan of commit `fe704be`: a High-severity XML attribute injection in transitive `fast-xml-builder@1.1.4` (CVSS 8.7, fixed in `1.1.7+`, now pinned to `1.2.0` via the `5.8.0` line) and a Medium-severity XML Comment/CDATA injection in `fast-xml-parser`'s own XMLBuilder (CVSS 6.1, fixed in `5.7.0+`). No call-site changes — the project uses `XMLParser` for Reddit Atom feeds and GitHub Atom feeds; `XMLBuilder` only appears in RSS/OPML output where the inputs are project-controlled, so the practical exposure was low even before the bump.
+
+### Security
+
+- **`fast-xml-parser` bumped from `^5.6.0` to `^5.8.0`.** Picks up `fast-xml-builder@1.2.0` (past the 1.1.7 fix), `@nodable/entities@2.1.0`, `xml-naming@0.1.0`, and the matching `XMLBuilder` patch in `fast-xml-parser` itself. All upgraded transitives are published by the same maintainer (`amitgupta`) as `fast-xml-parser` — confirmed legitimate refactor splits, not supply-chain substitution.
+
+### Notes
+
+- **Two Socket alerts intentionally left in place as triaged-not-fixed.** `entities@4.5.0`/`6.0.1` "obfuscated code" is a false positive on `lib/decode-data-html.ts` — a generated HTML-entity lookup table whose dense Unicode escape sequences trip Socket's ML heuristic; both versions ship from `fb55` (legitimate cheerio/htmlparser2 author). `whatwg-encoding@3.1.1` is officially deprecated in favor of `@exodus/bytes` but arrives transitively through `cheerio@1.2.0` (already latest) → `encoding-sniffer`; cannot be fixed in this repo until cheerio migrates upstream.
+- **Test count unchanged at 183/183 passing.** No behavior change — only a transitive version bump and the resulting lockfile churn.
+
 ## [1.5.1] - 2026-05-05
 
 Patch release swapping the Reddit scraper from authenticated OAuth/JSON to the public Atom RSS endpoints. Reddit's Responsible Builder Policy review denied this project's OAuth API application twice with no specifics. A probe from a real GitHub Actions runner confirmed the public Atom RSS endpoints (`/r/<sub>/<mode>.rss`) return HTTP 200 from datacenter IPs — bypassing both the OAuth gate and the datacenter-IP block on `*.json` that prompted the v1.4.1 OAuth migration in the first place. Restores compliance with project Rule 2 ("no OAuth flows beyond `GITHUB_TOKEN`") and removes ~120 lines of token-mint / 401-retry / memoization code plus the 97-line OAuth setup doc.
