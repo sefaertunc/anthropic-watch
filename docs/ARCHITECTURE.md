@@ -267,6 +267,13 @@ Tests are not duplicated here — they run on push/PR in `test.yml`.
 - **Job:** reads `package.json` version, skips cleanly if the matching `vX.Y.Z` tag already exists, otherwise extracts the matching `## [X.Y.Z]` section from `CHANGELOG.md` via awk, creates an annotated tag on the merge commit (`github-actions[bot]` identity), pushes it, and publishes a GitHub Release via `gh release create --notes-file`. Idempotent: docs-only PRs merge as a no-op. `concurrency: release-main` with `cancel-in-progress: false` serializes near-simultaneous merges.
 - **Permissions:** `contents: write` using the default `GITHUB_TOKEN` — no `SCRAPER_PAT`, no external secrets. Orthogonal to `scrape.yml` (does not run the scraper, does not touch gh-pages).
 
+### `publish-client.yml` — Client npm publish with provenance (v1.5.2+)
+
+- **Triggers:** `workflow_dispatch` (manual trigger via Actions UI) + `push` to `main` filtered by `paths: [packages/client/package.json]`, so a client version-bump commit auto-fires the workflow. The path filter prevents unrelated `main` pushes (state-update commits, scraper changes) from running it.
+- **Job:** Reads the version from `packages/client/package.json`, queries npm via `npm view <name>@<version>` and skips cleanly if that version is already published — makes the workflow safely re-runnable. Otherwise: `npm ci` → `npm test` (73 client tests) → `npm run types` (TypeScript declaration emit into `dist/`) → `npm publish --provenance --access public` with `NODE_AUTH_TOKEN` from the `NPM_TOKEN` repo secret. All steps run with `working-directory: packages/client`.
+- **Permissions:** `contents: read`, **`id-token: write`** — the OIDC token is required so npm can mint a Sigstore attestation linking the published tarball to this specific workflow run and commit. `concurrency: publish-client` with `cancel-in-progress: false` serializes near-simultaneous triggers so two version bumps don't race.
+- **Why separate from `release.yml`:** the scraper is not an npm package; the client is not a GitHub Release. The two artifacts ship through orthogonal pipelines — `release.yml` cuts scraper tags from `package.json` (root), `publish-client.yml` cuts npm releases from `packages/client/package.json`. A single merge to `main` can trigger zero, one, or both depending on which manifest moved.
+
 ### Job Summary
 
 `src/summary.js` reads the run report and state, then outputs a markdown table with per-source status. Sources with 3+ consecutive failures generate `::warning` annotations visible in the Actions UI.
