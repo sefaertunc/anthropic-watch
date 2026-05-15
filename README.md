@@ -36,7 +36,7 @@ Applications consuming the feeds programmatically should use the official client
 npm install @sefaertunc/anthropic-watch-client
 ```
 
-The library handles version gating, composite-key deduplication, and typed errors. See [`packages/client/`](packages/client) for the full API. The hand-rolled consumption pattern is also documented in [`docs/FEED-SCHEMA.md`](docs/FEED-SCHEMA.md) for non-JS consumers.
+The library handles version gating, composite-key deduplication, and typed errors. See [`packages/client/`](packages/client) for the full API. The hand-rolled consumption pattern is also documented in [`docs/FEED-SCHEMA.md`](docs/FEED-SCHEMA.md) for non-JS consumers. Releases from `1.0.3` onward ship with [npm provenance](packages/client/README.md#provenance-and-integrity) — a Sigstore attestation linking each tarball to its source commit.
 
 ## Subscribe to feeds
 

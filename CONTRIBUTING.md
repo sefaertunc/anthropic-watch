@@ -101,6 +101,15 @@ Key test principles:
 - Make sure `npm test` passes before submitting
 - Describe what changed and why in the PR description
 
+## Releases
+
+Two artifacts ship from this repo through orthogonal pipelines:
+
+- **Scraper (`anthropic-watch`)** — bump the root `package.json` version on `develop` through `/sync`, merge the resulting `release: vX.Y.Z` PR to `main`. `.github/workflows/release.yml` reads the new version, creates the `vX.Y.Z` tag on the merge commit, and publishes a GitHub Release with the extracted `CHANGELOG.md` section. The scraper is not on npm — it's infrastructure distributed as tagged GitHub Releases.
+- **Client (`@sefaertunc/anthropic-watch-client`)** — bump `packages/client/package.json`, land on `main` via the normal develop → main flow. `.github/workflows/publish-client.yml` auto-fires on the path change (or trigger it manually via Actions → "Publish Client" → "Run workflow"), publishes to npm with `--provenance --access public`, and skips cleanly if the version is already published. Verify the release via `npm view @sefaertunc/anthropic-watch-client@<version> dist.signatures`.
+
+The two pipelines are independent. A scraper-only PR fires `release.yml` and not `publish-client.yml`; a client-only PR fires `publish-client.yml` and not `release.yml`; a PR touching both fires both.
+
 ## Code of Conduct
 
 This project follows the [Contributor Covenant](CODE_OF_CONDUCT.md). Be kind and constructive.
