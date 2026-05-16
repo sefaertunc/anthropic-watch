@@ -6,7 +6,486 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 15 May 2026 08:53:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 08:08:41 GMT</lastBuildDate>
+    <item>
+      <title>0.3.143</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.143</guid>
+      <pubDate>Sat, 16 May 2026 08:07:55 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- @anthropic-ai/sdk and @modelcontextprotocol/sdk are now peerDependencies instead of dependencies. Runtime is unaffected (both are bundled); npm/bun/pnpm auto-install them. yarn classic users should add them explicitly for full TypeScript type resolution</description>
+    </item>
+    <item>
+      <title>2.1.143</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.143</guid>
+      <pubDate>Sat, 16 May 2026 08:07:54 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added plugin dependency enforcement: claude plugin disable now refuses when another enabled plugin depends on the target (with a copy-pasteable disable-chain hint), and claude plugin enable force-enables transitive dependencies
+- Added projected context cost (per-turn and per-invocation token esti</description>
+    </item>
+    <item>
+      <title>docs: Add recsys pipeline source credit</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/2e0c5a9cbf515a0611afcec73ef2a6644c4191e3</link>
+      <guid isPermaLink="false">2e0c5a9</guid>
+      <pubDate>Sat, 16 May 2026 07:53:05 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Credit mturac/recsys-pipeline-architect in the README community sources list after merging PR #595.\n\nRefs #595</description>
+    </item>
+    <item>
+      <title>chore: release v11.3.0</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/d628dbf67917e06bff91bad0b3b2320f0434a566</link>
+      <guid isPermaLink="false">d628dbf</guid>
+      <pubDate>Sat, 16 May 2026 07:52:15 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: Sync generated state for v11.3.0</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/8addfb100364ef490139bbcba581a2fa7c773bf9</link>
+      <guid isPermaLink="false">8addfb1</guid>
+      <pubDate>Sat, 16 May 2026 07:51:11 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Refresh canonical registry artifacts, plugin mirrors, web assets, docs counts, contributor-visible release notes, and the package description after merging PR #595 and closing issue #596.\n\nRefs #595\nRefs #596</description>
+    </item>
+    <item>
+      <title>feat: add recsys pipeline architect skill</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/5246a6693f01071f87dfe29b58a88a03fd0b10fe</link>
+      <guid isPermaLink="false">5246a66</guid>
+      <pubDate>Sat, 16 May 2026 07:49:27 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Adds the community recsys-pipeline-architect skill for recommendation, ranking, and feed pipeline design.\n\nCo-authored-by: mehmet turac &lt;mehmetturac@gmail.com&gt;</description>
+    </item>
+    <item>
+      <title>fix: recognize legacy salvage manual review backlog</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/aaabe5949edea987f8f8497232f62545ca72bc55</link>
+      <guid isPermaLink="false">aaabe59</guid>
+      <pubDate>Sat, 16 May 2026 07:37:10 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: stabilize skills manifest contract</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/17865c988a5683d2c866972d03e6b0aa9c5e1eb3</link>
+      <guid isPermaLink="false">17865c9</guid>
+      <pubDate>Sat, 16 May 2026 07:31:56 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: clean up lint blockers</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/039c7f111a34372eb0fa16a48510a1e423f9567c</link>
+      <guid isPermaLink="false">039c7f1</guid>
+      <pubDate>Sat, 16 May 2026 07:21:10 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: tighten supply-chain IOC package matching</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/7420441512cc168898f36a3438433c2089e423a4</link>
+      <guid isPermaLink="false">7420441</guid>
+      <pubDate>Sat, 16 May 2026 07:15:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: refresh operator dashboard after fleet review items</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/eb59afb590f6800c5bd84b37c87933dd0720dd67</link>
+      <guid isPermaLink="false">eb59afb</guid>
+      <pubDate>Sat, 16 May 2026 06:21:20 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: record AgentShield fleet review items</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/fc2d23de805ecdc4f31d2b1df75110d5d262349a</link>
+      <guid isPermaLink="false">fc2d23d</guid>
+      <pubDate>Sat, 16 May 2026 06:20:50 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>I built a plugin that gives claude code to view videos directly into the session</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1tela8s/i_built_a_plugin_that_gives_claude_code_to_view/</link>
+      <guid isPermaLink="false">t3_1tela8s</guid>
+      <pubDate>Sat, 16 May 2026 06:13:47 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: refresh operator dashboard after harness fleet routing</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/efd05409c31c67a56acc98d1bb7364bffc58e73d</link>
+      <guid isPermaLink="false">efd0540</guid>
+      <pubDate>Sat, 16 May 2026 06:02:39 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: record ECC Tools harness fleet routing</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/6976a2a7ddc7b553d1fe9e2a73080afae6bd6789</link>
+      <guid isPermaLink="false">6976a2a</guid>
+      <pubDate>Sat, 16 May 2026 06:02:17 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: refresh operator dashboard after hosted finding evidence</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/7ac506036cd76b7f67cbff6bd58e404c2c6b9c35</link>
+      <guid isPermaLink="false">7ac5060</guid>
+      <pubDate>Sat, 16 May 2026 05:50:12 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: record ECC Tools hosted finding evidence</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/fb28e469f1b94d18c9196f1cac9dabbf08286ef3</link>
+      <guid isPermaLink="false">fb28e46</guid>
+      <pubDate>Sat, 16 May 2026 05:49:46 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: refresh operator dashboard after ECC Tools fleet sync</title>
+      <link>https://github.com/affaan-m/everything-claude-code/commit/257aa67b6175db02179c22a2afd9e4e51d190c2b</link>
+      <guid isPermaLink="false">257aa67</guid>
+      <pubDate>Sat, 16 May 2026 05:38:36 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Is it just me or has Claude Code been super slow lately?</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tej30c/is_it_just_me_or_has_claude_code_been_super_slow/</link>
+      <guid isPermaLink="false">t3_1tej30c</guid>
+      <pubDate>Sat, 16 May 2026 04:19:50 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>Like last 2-3 days at least. Or since they announced the higher usage limits. Maybe not actually higher usage limits...just slower product so people can&apos;t use it as fast... Anyone else feel the same?</description>
+    </item>
+    <item>
+      <title>RT @logangraham: A lot of people have been wondering about Mythos, Glasswing, and the vulns we / our partners are fixing. Today, I’m excite…</title>
+      <link>https://x.com/bcherny/status/2055442833612611832</link>
+      <guid isPermaLink="false">2055442833612611832</guid>
+      <pubDate>Sat, 16 May 2026 00:18:54 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @logangraham: A lot of people have been wondering about Mythos, Glasswing, and the vulns we / our partners are fixing. Today, I’m excite…</description>
+    </item>
+    <item>
+      <title>RT @AndrewCurran_: Mythos has cracked MacOS. It took five days. https://t.co/ukbraIHejS</title>
+      <link>https://x.com/bcherny/status/2055442742088815047</link>
+      <guid isPermaLink="false">2055442742088815047</guid>
+      <pubDate>Sat, 16 May 2026 00:18:32 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @AndrewCurran_: Mythos has cracked MacOS. It took five days. https://t.co/ukbraIHejS</description>
+    </item>
+    <item>
+      <title>RT @PrimeIntellect: Automating AI research is the next major step in AI
+
+We let Claude Code (Opus 4.7) and Codex (GPT 5.5) run autonomously…</title>
+      <link>https://x.com/bcherny/status/2055441434363449404</link>
+      <guid isPermaLink="false">2055441434363449404</guid>
+      <pubDate>Sat, 16 May 2026 00:13:20 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @PrimeIntellect: Automating AI research is the next major step in AI
+
+We let Claude Code (Opus 4.7) and Codex (GPT 5.5) run autonomously…</description>
+    </item>
+    <item>
+      <title>I built a local codebase wiki for AI coding agents</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tecpu5/i_built_a_local_codebase_wiki_for_ai_coding_agents/</link>
+      <guid isPermaLink="false">t3_1tecpu5</guid>
+      <pubDate>Fri, 15 May 2026 23:26:54 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>Hey everyone, I’ve been using AI coding agents more and more, and I kept running into the same problem: They can read the code in front of them, but they usually don’t know the history. They don’t know why a weird workaround exists. They don’t know what broke the last time someone touched checkout/a</description>
+    </item>
+    <item>
+      <title>Bad Deferral Habit</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tecadk/bad_deferral_habit/</link>
+      <guid isPermaLink="false">t3_1tecadk</guid>
+      <pubDate>Fri, 15 May 2026 23:08:53 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>Opus 4.7 has increasingly developed this bad habit of not doing assigned tasks that fall ever so slightly outside its plan and saying “this item was deferred”. In my knowledge management system it clearly says “undocumented deferrals are a bug, not a feature” and has a process for documenting everyt</description>
+    </item>
+    <item>
+      <title>Bump box plugin SHA and enumerate skills (#1845)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/5dbfa0fade3058791bf8134b2bd441cb9d5f9a10</link>
+      <guid isPermaLink="false">5dbfa0f</guid>
+      <pubDate>Fri, 15 May 2026 22:54:38 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>When is Sonnet 4.5 actually becoming unavailable?</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tebwok/when_is_sonnet_45_actually_becoming_unavailable/</link>
+      <guid isPermaLink="false">t3_1tebwok</guid>
+      <pubDate>Fri, 15 May 2026 22:53:13 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>I thought it would become unavailable on May 15th, but I can still use it.</description>
+    </item>
+    <item>
+      <title>v2.1.143</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.143</link>
+      <guid isPermaLink="false">v2.1.143</guid>
+      <pubDate>Fri, 15 May 2026 22:28:22 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added plugin dependency enforcement: claude plugin disable now refuses when another enabled plugin depends on the target (with a copy-pasteable disable-chain hint), and claude plugin enable force-enables transitive dependencies
+- Added projected context cost (per-turn and per-invoca</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md</title>
+      <link>https://github.com/anthropics/claude-code/commit/8bdbb7296d3fa2217283d3ef94452dd64097393b</link>
+      <guid isPermaLink="false">8bdbb72</guid>
+      <pubDate>Fri, 15 May 2026 22:28:17 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Drug design with Claude skills?</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1te8lae/drug_design_with_claude_skills/</link>
+      <guid isPermaLink="false">t3_1te8lae</guid>
+      <pubDate>Fri, 15 May 2026 20:43:12 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description>You can now run full protein design workflows with Claude. Has been used to make antibodies against 4 cancer targets. Feels like the future is getting a bit wild. Repo: https://github.com/001TMF/blatant-why</description>
+    </item>
+    <item>
+      <title>Is Sonnet 4.5 actually gonna get axed or was that just panic?</title>
+      <link>https://www.reddit.com/r/claude/comments/1te7onu/is_sonnet_45_actually_gonna_get_axed_or_was_that/</link>
+      <guid isPermaLink="false">t3_1te7onu</guid>
+      <pubDate>Fri, 15 May 2026 20:10:09 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description>So there was all this talk this week about them killing off Sonnet 4.5, and I&apos;m sitting here refreshing claude.ai like an idiot waiting to see it disappear. But it&apos;s still there lol. Did I miss something or was everyone just freaking out over nothing? Honestly kinda stressing because Sonnet 4.5 is l</description>
+    </item>
+    <item>
+      <title>what&apos;s the best claude code framework and do you even need one?</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1te6oti/whats_the_best_claude_code_framework_and_do_you/</link>
+      <guid isPermaLink="false">t3_1te6oti</guid>
+      <pubDate>Fri, 15 May 2026 19:34:14 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>I&apos;ve seen a lot of stuff on x recently about gsd, superpowers, etc. are these frameworks useful? and if anyone uses them how much do they slow you down?</description>
+    </item>
+    <item>
+      <title>Average r/ClaudeCode comment section</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1te68sn/average_rclaudecode_comment_section/</link>
+      <guid isPermaLink="false">t3_1te68sn</guid>
+      <pubDate>Fri, 15 May 2026 19:18:05 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description/>
+    </item>
+    <item>
+      <title>I got tired of Claude Code silently dying at rate limits during mid task, so I built something</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1te5pvk/i_got_tired_of_claude_code_silently_dying_at_rate/</link>
+      <guid isPermaLink="false">t3_1te5pvk</guid>
+      <pubDate>Fri, 15 May 2026 18:59:47 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>I got tired of Claude Code silently hitting rate limits, so I decided to build something to address the issue. Imagine you’re 40 minutes into a refactor. Claude is running tools and making progress, then suddenly, everything stops. The session has reached its rate limit without any warning—no alert </description>
+    </item>
+    <item>
+      <title>Three questions every AI-generated PR has to pass before we ship it</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1te5ifn/three_questions_every_aigenerated_pr_has_to_pass/</link>
+      <guid isPermaLink="false">t3_1te5ifn</guid>
+      <pubDate>Fri, 15 May 2026 18:52:18 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description/>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.143</title>
+      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
+      <guid isPermaLink="false">2.1.143</guid>
+      <pubDate>Fri, 15 May 2026 18:45:53 GMT</pubDate>
+      <category>npm-claude-code</category>
+      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>the most annoying part of Claude</title>
+      <link>https://www.reddit.com/r/claude/comments/1te55xs/the_most_annoying_part_of_claude/</link>
+      <guid isPermaLink="false">t3_1te55xs</guid>
+      <pubDate>Fri, 15 May 2026 18:39:52 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description>when I&apos;m in a massive chat and don&apos;t want to start a new one because of the context.....there doesn&apos;t seem to be a way to &quot;remove images&quot; you think Claude could figure something out</description>
+    </item>
+    <item>
+      <title>Talking to AI all the time has unexpectedly made me feel like I&apos;m thinking more clearly and communicating much better</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1te4w3q/talking_to_ai_all_the_time_has_unexpectedly_made/</link>
+      <guid isPermaLink="false">t3_1te4w3q</guid>
+      <pubDate>Fri, 15 May 2026 18:30:09 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>It might be the fact that as you use AI more, you quickly learn that being direct, making specific requests, and giving constraints will get you the best results. At the same time it has me thinking carefully about exactly what my intentions and wants are. And although I think LLMs are honestly pret</description>
+    </item>
+    <item>
+      <title>Everyone just got a full usage reset, all limits back to 0%</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1te48cv/everyone_just_got_a_full_usage_reset_all_limits/</link>
+      <guid isPermaLink="false">t3_1te48cv</guid>
+      <pubDate>Fri, 15 May 2026 18:07:01 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>https://preview.redd.it/cuaqebwjcc1h1.png?width=1678&amp;format=png&amp;auto=webp&amp;s=fefd682b812002a5ede32b418e8dfe7cd4b0975f usage just reset for everyone ! https://preview.redd.it/ukle8kvkec1h1.png?width=913&amp;format=png&amp;auto=webp&amp;s=f93c442f3f81a91688146447e2aca52d7a546171</description>
+    </item>
+    <item>
+      <title>Styles are migrating to skills on May 20th</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1te44rz/styles_are_migrating_to_skills_on_may_20th/</link>
+      <guid isPermaLink="false">t3_1te44rz</guid>
+      <pubDate>Fri, 15 May 2026 18:03:32 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description/>
+    </item>
+    <item>
+      <title>Uh, was usage just reset?</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1te43vx/uh_was_usage_just_reset/</link>
+      <guid isPermaLink="false">t3_1te43vx</guid>
+      <pubDate>Fri, 15 May 2026 18:02:42 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description/>
+    </item>
+    <item>
+      <title>Weekly / session limits just reset</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1te42vp/weekly_session_limits_just_reset/</link>
+      <guid isPermaLink="false">t3_1te42vp</guid>
+      <pubDate>Fri, 15 May 2026 18:01:41 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>All my weekly / session limits just reset. 5x Max. Might be due to the debacle of the weekly limit increase not actually increasing. I&apos;ll take it, now to figure out how to use a week in 18 hours.</description>
+    </item>
+    <item>
+      <title>Happy Friday! We&apos;ve reset everyone&apos;s 5-hour and weekly rate limits.</title>
+      <link>https://x.com/ClaudeDevs/status/2055347539923308703</link>
+      <guid isPermaLink="false">2055347539923308703</guid>
+      <pubDate>Fri, 15 May 2026 18:00:14 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>Happy Friday! We&apos;ve reset everyone&apos;s 5-hour and weekly rate limits.</description>
+    </item>
+    <item>
+      <title>!!!THEY JUST RESET OUR USAGE!!! Mine was supposed to be tonight</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1te40i2/they_just_reset_our_usage_mine_was_supposed_to_be/</link>
+      <guid isPermaLink="false">t3_1te40i2</guid>
+      <pubDate>Fri, 15 May 2026 17:59:40 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description/>
+    </item>
+    <item>
+      <title>Building something with a lot of code? Tips from Anthropic you might not know about</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1te13l3/building_something_with_a_lot_of_code_tips_from/</link>
+      <guid isPermaLink="false">t3_1te13l3</guid>
+      <pubDate>Fri, 15 May 2026 16:17:24 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>Some really great tips, especially for anyone building games. Or for anyone running into context window issues where Claude becomes dumb and forgetful really quickly because there&apos;s just so much code. Some things I found that are new to me: Using dot ignore files Building a codebase map Re-updating </description>
+    </item>
+    <item>
+      <title>Claude is telling users to go to sleep mid-session and nobody, including Anthropic, seems to fully understand why it keeps doing it</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1te0mhh/claude_is_telling_users_to_go_to_sleep_midsession/</link>
+      <guid isPermaLink="false">t3_1te0mhh</guid>
+      <pubDate>Fri, 15 May 2026 16:01:10 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>Anthropic’s Claude is telling people to go to sleep and users can’t figure out why. A quick scan of Reddit reveals that hundreds of people have had the same issue dating back months—and as recently as Wednesday. Claude’s sleep demands are varied and, often, quirky variations of the same message. To </description>
+    </item>
+    <item>
+      <title>I let Claude Code run my Instagram + TikTok marketing. Here&apos;s the plugin</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1te0jzb/i_let_claude_code_run_my_instagram_tiktok/</link>
+      <guid isPermaLink="false">t3_1te0jzb</guid>
+      <pubDate>Fri, 15 May 2026 15:58:57 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>Claude Code already ships your features. Wonda is a Claude Code plugin that lets it run the marketing too. The whole loop in one session: scrape what&apos;s actually working on Instagram, TikTok, Meta Ads, Reddit, LinkedIn, and X, generate content across ~40 models (image, video, voice, music), edit it w</description>
+    </item>
+    <item>
+      <title>Bro&apos;s been editing for almost an hour.</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1te033e/bros_been_editing_for_almost_an_hour/</link>
+      <guid isPermaLink="false">t3_1te033e</guid>
+      <pubDate>Fri, 15 May 2026 15:42:09 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description/>
+    </item>
+    <item>
+      <title>Claude&apos;s first day at Dunder Mifflin</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tdyrdv/claudes_first_day_at_dunder_mifflin/</link>
+      <guid isPermaLink="false">t3_1tdyrdv</guid>
+      <pubDate>Fri, 15 May 2026 14:55:35 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description/>
+    </item>
+    <item>
+      <title>I built and Apple watch app for claude code usage monitor (Open Source)</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tdy5xj/i_built_and_apple_watch_app_for_claude_code_usage/</link>
+      <guid isPermaLink="false">t3_1tdy5xj</guid>
+      <pubDate>Fri, 15 May 2026 14:33:50 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>Built this over the weekend a Mac daemon + Apple Watch app that shows your live Claude Code subscription usage on the watch face. Repo https://github.com/akashbangad/ccwatch What you see on the watch: 5-hour session % 7-day window % Animated pixel Clawd whose mood reflects how hard you&apos;re working Fo</description>
+    </item>
+    <item>
+      <title>Two skills for Claude Code/Windsurf: OWE (permanent memory) and GitPilfer (GitHub search)</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1tdxe9k/two_skills_for_claude_codewindsurf_owe_permanent/</link>
+      <guid isPermaLink="false">t3_1tdxe9k</guid>
+      <pubDate>Fri, 15 May 2026 14:05:56 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description/>
+    </item>
+    <item>
+      <title>The AI war is rough.</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tdwf64/the_ai_war_is_rough/</link>
+      <guid isPermaLink="false">t3_1tdwf64</guid>
+      <pubDate>Fri, 15 May 2026 13:29:24 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>The irony of that name sinking into the depths…</description>
+    </item>
+    <item>
+      <title>If your job requires zero intelligence</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tdwd0t/if_your_job_requires_zero_intelligence/</link>
+      <guid isPermaLink="false">t3_1tdwd0t</guid>
+      <pubDate>Fri, 15 May 2026 13:27:03 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description/>
+    </item>
+    <item>
+      <title>I turned 50 popular apps into Claude-readable design specs. Here&apos;s what actually makes Claude nail a UI clone.</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tdwau0/i_turned_50_popular_apps_into_claudereadable/</link>
+      <guid isPermaLink="false">t3_1tdwau0</guid>
+      <pubDate>Fri, 15 May 2026 13:24:45 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>Over the last few weeks I reverse-engineered 50 popular apps into structured markdown design specs and fed them to Claude to rebuild the UIs. Some clones came out near-perfect, others drifted. The difference came down to a few things that aren&apos;t obvious until you do it at volume. What made Claude na</description>
+    </item>
+    <item>
+      <title>AI Engineer Who Does Not Code and Uses Claude for Everything</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tdvyfr/ai_engineer_who_does_not_code_and_uses_claude_for/</link>
+      <guid isPermaLink="false">t3_1tdvyfr</guid>
+      <pubDate>Fri, 15 May 2026 13:11:16 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>My company recently hired a Senior AI Engineer who claims to be a “vibe coder” and says he has not done much hands-on coding for more than a year. His day-to-day work appears to consist mainly of prompting AI tools, and his PRs are all Claude co-authored. I am not confident that he thoroughly review</description>
+    </item>
+    <item>
+      <title>Now I&apos;m supposed to tell YOU how to make drugs?</title>
+      <link>https://www.reddit.com/r/claude/comments/1tdtgkw/now_im_supposed_to_tell_you_how_to_make_drugs/</link>
+      <guid isPermaLink="false">t3_1tdtgkw</guid>
+      <pubDate>Fri, 15 May 2026 11:26:57 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description/>
+    </item>
+    <item>
+      <title>Anthropic: It is the sci-fi authors, not us, that are to blame for Claude blackmailing users</title>
+      <link>https://www.reddit.com/r/claude/comments/1tdrjpk/anthropic_it_is_the_scifi_authors_not_us_that_are/</link>
+      <guid isPermaLink="false">t3_1tdrjpk</guid>
+      <pubDate>Fri, 15 May 2026 09:51:32 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description/>
+    </item>
+    <item>
+      <title>&quot;Now say their limits are increasing by 50%, but don&apos;t actually give them more credits&quot;</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tdr7um/now_say_their_limits_are_increasing_by_50_but/</link>
+      <guid isPermaLink="false">t3_1tdr7um</guid>
+      <pubDate>Fri, 15 May 2026 09:32:29 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description/>
+    </item>
+    <item>
+      <title>Claude Mythos has cracked MacOS. It took 5 days.</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tdr1o7/claude_mythos_has_cracked_macos_it_took_5_days/</link>
+      <guid isPermaLink="false">t3_1tdr1o7</guid>
+      <pubDate>Fri, 15 May 2026 09:22:36 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>src https://www.wsj.com/tech/ai/anthropic-mythos-apple-macos-bug-339da403</description>
+    </item>
+    <item>
+      <title>HELP!!! Claude has gone insane!!!</title>
+      <link>https://www.reddit.com/r/claude/comments/1tdqqrd/help_claude_has_gone_insane/</link>
+      <guid isPermaLink="false">t3_1tdqqrd</guid>
+      <pubDate>Fri, 15 May 2026 09:05:27 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description>so im using claude code, and vibe coding a webpage, I asked it to make some edits to the html code and it started talking about islands in fcking costa rica. i thought it went insane, so i started a new cc chat and same thing, it keeps referring to travelling to some costa rican island and wont edit</description>
+    </item>
     <item>
       <title>0.2.82</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -350,516 +829,6 @@ When the real user request lands, it&apos;ll hit a warm cache. https://t.co/6BdE
       <pubDate>Thu, 14 May 2026 20:33:01 GMT</pubDate>
       <category>status-page</category>
       <description>[minor] resolved — This incident has been resolved.</description>
-    </item>
-    <item>
-      <title>@anthropic-ai/claude-code@2.1.142</title>
-      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
-      <guid isPermaLink="false">2.1.142</guid>
-      <pubDate>Thu, 14 May 2026 20:17:28 GMT</pubDate>
-      <category>npm-claude-code</category>
-      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
-    </item>
-    <item>
-      <title>(Phil) Anthropic forms $200 million partnership with the Gates Foundation</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1td99ol/phil_anthropic_forms_200_million_partnership_with/</link>
-      <guid isPermaLink="false">t3_1td99ol</guid>
-      <pubDate>Thu, 14 May 2026 19:53:03 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description/>
-    </item>
-    <item>
-      <title>Is there a Codex bot takeover happening in this sub?</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1td6lxt/is_there_a_codex_bot_takeover_happening_in_this/</link>
-      <guid isPermaLink="false">t3_1td6lxt</guid>
-      <pubDate>Thu, 14 May 2026 18:19:48 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>It feels like overnight this became a sub dedicated to talking about why switching to Codex is the right move and idk it just feels like an Altman-backed operation to convince everyone Claude sucks now and Codex is the move. It feels uncanny enough to be driven by bots</description>
-    </item>
-    <item>
-      <title>We&apos;ve published a paper that explains our views on AI competition between the US and China.
-
-The US and democratic allies hold the lead in frontier AI today. Read more on what it’ll take to keep that </title>
-      <link>https://x.com/AnthropicAI/status/2054987444664377374</link>
-      <guid isPermaLink="false">2054987444664377374</guid>
-      <pubDate>Thu, 14 May 2026 18:09:21 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>We&apos;ve published a paper that explains our views on AI competition between the US and China.
-
-The US and democratic allies hold the lead in frontier AI today. Read more on what it’ll take to keep that lead: https://t.co/TgJBeodWYK</description>
-    </item>
-    <item>
-      <title>This is the only sub where you can freely complain about Claude&apos;s usage problems. That&apos;s why Dario Amodei keeps sending his bot army to whine about &quot;lack of mods&quot; and &quot;no interesting discussion!&quot;</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1td657l/this_is_the_only_sub_where_you_can_freely/</link>
-      <guid isPermaLink="false">t3_1td657l</guid>
-      <pubDate>Thu, 14 May 2026 18:04:12 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>Never stop fighting. Otherwise, they will install Boris Cherny as the mod and he will throttle all complaints to megathread.</description>
-    </item>
-    <item>
-      <title>Claude Pro Plan is Finally Usable!</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1td4hxl/claude_pro_plan_is_finally_usable/</link>
-      <guid isPermaLink="false">t3_1td4hxl</guid>
-      <pubDate>Thu, 14 May 2026 17:07:50 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>After the session and weekly limits increases, I feel I can finally use my pro subscription for longer than 1 hour at a time</description>
-    </item>
-    <item>
-      <title>2028: Two scenarios for global AI leadership</title>
-      <link>https://www.anthropic.com/research/2028-ai-leadership</link>
-      <guid isPermaLink="false">https://www.anthropic.com/research/2028-ai-leadership</guid>
-      <pubDate>Thu, 14 May 2026 17:06:12 GMT</pubDate>
-      <category>blog-research</category>
-      <description>Our views on the AI competition between the US and China.</description>
-    </item>
-    <item>
-      <title>Extended Thinking being deprecated for supported models (Opus 4.6, Sonnet 4.6); Adaptive Thinking will be enforced by default</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1td4dl1/extended_thinking_being_deprecated_for_supported/</link>
-      <guid isPermaLink="false">t3_1td4dl1</guid>
-      <pubDate>Thu, 14 May 2026 17:03:44 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>For anyone who disable adaptive thinking in Claude Code to maintain its quality levels, Anthropic is deprecating this toggle and will force adaptive thinking to be the default. This change will affect legacy models such as Opus 4.6 and Sonnet 4.6 which were rolled out with &quot;hybrid&quot; support for both </description>
-    </item>
-    <item>
-      <title>Anthropic over OpenAI on business adoption</title>
-      <link>https://www.reddit.com/r/claude/comments/1td35a8/anthropic_over_openai_on_business_adoption/</link>
-      <guid isPermaLink="false">t3_1td35a8</guid>
-      <pubDate>Thu, 14 May 2026 16:21:12 GMT</pubDate>
-      <category>reddit-claude</category>
-      <description>Source: https://ramp.com/leading-indicators/ai-index-may-2026</description>
-    </item>
-    <item>
-      <title>RT @amorriscode: today&apos;s release of claude code on desktop makes it easy to turn remote control on by default for your sessions https://t.c…</title>
-      <link>https://x.com/noahzweben/status/2054954715218382937</link>
-      <guid isPermaLink="false">2054954715218382937</guid>
-      <pubDate>Thu, 14 May 2026 15:59:17 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>RT @amorriscode: today&apos;s release of claude code on desktop makes it easy to turn remote control on by default for your sessions https://t.c…</description>
-    </item>
-    <item>
-      <title>Just downgroaded to Pro from Max 5. Jfc.</title>
-      <link>https://www.reddit.com/r/claude/comments/1td2b3i/just_downgroaded_to_pro_from_max_5_jfc/</link>
-      <guid isPermaLink="false">t3_1td2b3i</guid>
-      <pubDate>Thu, 14 May 2026 15:52:24 GMT</pubDate>
-      <category>reddit-claude</category>
-      <description>2 messages in a context heavy chat with Opus 4.6 EX. That&apos;s when I hit the session limit. What&apos;s even more egregious however, is that whenever I&apos;m above 50% session limit and prompt a big task - like creating a .md file - it will simply eat the rest of my tokens starting to execute my prompt, then g</description>
-    </item>
-    <item>
-      <title>Your Claude Code is still &quot;coding blind.&quot;</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1td254j/your_claude_code_is_still_coding_blind/</link>
-      <guid isPermaLink="false">t3_1td254j</guid>
-      <pubDate>Thu, 14 May 2026 15:46:27 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>Hey everyone, 3 months ago, I built a local UI for Claude Code that actually shows you the diffs, tool calls, and hidden memory files instead of just those generic green checkmarks. I also posted a rough version here back then because I was tired of Claude hiding its work. The response was way bigge</description>
-    </item>
-    <item>
-      <title>RT @AnthropicAI: We’re partnering with the Gates Foundation, committing $200 million in grants, Claude credits, and technical support to pr…</title>
-      <link>https://x.com/noahzweben/status/2054944835770171560</link>
-      <guid isPermaLink="false">2054944835770171560</guid>
-      <pubDate>Thu, 14 May 2026 15:20:02 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>RT @AnthropicAI: We’re partnering with the Gates Foundation, committing $200 million in grants, Claude credits, and technical support to pr…</description>
-    </item>
-    <item>
-      <title>We’re partnering with the Gates Foundation, committing $200 million in grants, Claude credits, and technical support to programs in global health, life sciences, education, agriculture, and economic m</title>
-      <link>https://x.com/AnthropicAI/status/2054941901900611787</link>
-      <guid isPermaLink="false">2054941901900611787</guid>
-      <pubDate>Thu, 14 May 2026 15:08:23 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>We’re partnering with the Gates Foundation, committing $200 million in grants, Claude credits, and technical support to programs in global health, life sciences, education, agriculture, and economic mobility.
-
-Read more: https://t.co/eqCrLKtNCq</description>
-    </item>
-    <item>
-      <title>Replaced my $15/mo Wispr Flow subscription with a free local macOS app I built using Claude Code</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tczjvp/replaced_my_15mo_wispr_flow_subscription_with_a/</link>
-      <guid isPermaLink="false">t3_1tczjvp</guid>
-      <pubDate>Thu, 14 May 2026 14:16:51 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>I spend most of my day writing prompts to Claude. Read a study recently that said people speak ~3x faster than they type, which lands differently when &quot;writing&quot; is basically your whole workflow. Looked at Wispr Flow – it&apos;s genuinely great, but $15/month forever for something I&apos;d mostly use to dictat</description>
-    </item>
-    <item>
-      <title>I used Claude code to create a bunch of live sci-fi UIs, it took an enormous amount of time but beautiful eye-catching design is definitely possible with claude!</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tczgta/i_used_claude_code_to_create_a_bunch_of_live/</link>
-      <guid isPermaLink="false">t3_1tczgta</guid>
-      <pubDate>Thu, 14 May 2026 14:13:45 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>I wanted to have something for sci-fi vibes on my monitors while working and couldn&apos;t find anything I liked out there, so spent the last several weeks making something on my own and have really enjoyed how it turned out! I purely used claude code (design wasn&apos;t out), no image generators (but did pro</description>
-    </item>
-    <item>
-      <title>Claude Code skill for saving agent-generated audio to Spotify (Personal Podcasts)</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tcxh7a/claude_code_skill_for_saving_agentgenerated_audio/</link>
-      <guid isPermaLink="false">t3_1tcxh7a</guid>
-      <pubDate>Thu, 14 May 2026 13:00:25 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>Been wanting Claude Code to produce something I could actually listen to away from the laptop, and Spotify shipping Personal Podcasts this week made the idea work. Disclosure: I work on the team that built this at Spotify. Shipped with the Personal Podcasts launch. It&apos;s a CLI + .claude/skills/ manif</description>
-    </item>
-    <item>
-      <title>Claude Certified Architect</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tcwna3/claude_certified_architect/</link>
-      <guid isPermaLink="false">t3_1tcwna3</guid>
-      <pubDate>Thu, 14 May 2026 12:26:17 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>This was an interesting Anthropic cert that I took last week- the material focused on the engineering side of working with LLMs: evals, guardrails, RAG done properly, multi-agent orchestration, and knowing when not to throw an LLM at a problem. Skills learnt including scoping a solution, when single</description>
-    </item>
-    <item>
-      <title>Opus 4.7 vs Opus 4.6 - ONE MONTH POST RELEASE</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tcwkgv/opus_47_vs_opus_46_one_month_post_release/</link>
-      <guid isPermaLink="false">t3_1tcwkgv</guid>
-      <pubDate>Thu, 14 May 2026 12:22:56 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>Hey all, Like many I was pretty disappointed by the launch of Opus 4.7 in April and found myself reverting to Opus 4.6 [1M] for most of my work because I found it much more reliable. I wanted to ask for your thoughts. Now a couple of weeks post launch which model do you prefer/use? Has Opus 4.7 impr</description>
-    </item>
-    <item>
-      <title>Graphmind – Persistent memory and code graph for Claude Code (MCP, CLI, GUI)</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1tcvvb6/graphmind_persistent_memory_and_code_graph_for/</link>
-      <guid isPermaLink="false">t3_1tcvvb6</guid>
-      <pubDate>Thu, 14 May 2026 11:53:31 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description/>
-    </item>
-    <item>
-      <title>Faithful Python port of Morloc&apos;s Tower (Apple II, 1979) running in your browser, now also being played 24/7 by LLMs</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1tcuvxt/faithful_python_port_of_morlocs_tower_apple_ii/</link>
-      <guid isPermaLink="false">t3_1tcuvxt</guid>
-      <pubDate>Thu, 14 May 2026 11:08:44 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description/>
-    </item>
-    <item>
-      <title>&quot;WHY NOBODY DISCUSSING ABOUT PROJECT, PROMPT, CODE, SKILLS ANYMORE ?&quot;</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tcsgvk/why_nobody_discussing_about_project_prompt_code/</link>
-      <guid isPermaLink="false">t3_1tcsgvk</guid>
-      <pubDate>Thu, 14 May 2026 09:00:41 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>every marketing/pr stunt done by anthropic, it always like trojan horse. and someone asking, why nobody discuss about code anymore ? well how to discuss about code, project, app if anthropic keep shitting their entire users? and use their specialized skills : GASLIGHTING.</description>
-    </item>
-    <item>
-      <title>Claude Opus 4.7 just revealed its System prompt, without beeing asked for it</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tcsec4/claude_opus_47_just_revealed_its_system_prompt/</link>
-      <guid isPermaLink="false">t3_1tcsec4</guid>
-      <pubDate>Thu, 14 May 2026 08:56:58 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>I just had a Chat with Claude and for no reason and without any question in that direction, it added a disclaimer with the system prompt in the answer. (after answering my initial question) https://pastebin.com/C0s47rjV After I asked why it shared that I got: You&apos;ll have to help me out a little here</description>
-    </item>
-    <item>
-      <title>0.2.141</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.141</guid>
-      <pubDate>Thu, 14 May 2026 08:40:45 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- TaskCreateInput, TaskCreateOutput, TaskGetInput, TaskGetOutput, TaskUpdateInput, TaskUpdateOutput, TaskListInput, and TaskListOutput types are now exported from @anthropic-ai/claude-agent-sdk/sdk-tools and included in the ToolInputSchemas/ToolOutputSchemas unions
-- Aligned @anthropic-ai/sdk depend</description>
-    </item>
-    <item>
-      <title>2.1.141</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.141</guid>
-      <pubDate>Thu, 14 May 2026 08:40:43 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added terminalSequence field to hook JSON output so hooks can emit desktop notifications, window titles, and bells without a controlling terminal
-- Added CLAUDECODEPLUGINPREFERHTTPS to clone GitHub plugin sources over HTTPS instead of SSH, for environments without a GitHub SSH key
-- Added ANTHROPI</description>
-    </item>
-    <item>
-      <title>Anyone else think it’s super obnoxious how often Claude says to “stop for the night” or similar…</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tcnpua/anyone_else_think_its_super_obnoxious_how_often/</link>
-      <guid isPermaLink="false">t3_1tcnpua</guid>
-      <pubDate>Thu, 14 May 2026 04:43:31 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>I’ll do like 30 minutes of work and then Claude will be like “do this and take the rest of the night off” or “we finished phase 1: A time for a break”. It really gets under my skin lol. Does anyone else experience this??</description>
-    </item>
-    <item>
-      <title>docs: sync ECC Tools hosted output scoring (#1891)</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/4423f10cfb9e3fa088d04ab10c838c7f7fa74a45</link>
-      <guid isPermaLink="false">4423f10</guid>
-      <pubDate>Thu, 14 May 2026 03:02:23 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Claude decided to leave mid conversation after pushing broken code without approval</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tclb0x/claude_decided_to_leave_mid_conversation_after/</link>
-      <guid isPermaLink="false">t3_1tclb0x</guid>
-      <pubDate>Thu, 14 May 2026 02:49:39 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync ECC Tools hosted promotion readiness (#1890)</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/3b12fb273ffbb9e96dbb21b601e0eed409c3bff9</link>
-      <guid isPermaLink="false">3b12fb2</guid>
-      <pubDate>Thu, 14 May 2026 02:39:01 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Sync ECC Tools status-aware depth plan roadmap (#1887)</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/4fb80d8861ce678a79d2856d81ecd66468c73451</link>
-      <guid isPermaLink="false">4fb80d8</guid>
-      <pubDate>Thu, 14 May 2026 02:12:11 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>In Time (2011) was a documentary about Claude Pro users and nobody told us</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tckar7/in_time_2011_was_a_documentary_about_claude_pro/</link>
-      <guid isPermaLink="false">t3_1tckar7</guid>
-      <pubDate>Thu, 14 May 2026 02:05:31 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>Saw In Time when it came out in 2011 and thought it was a wild sci-fi premise. glowing green numbers on your arm counting down to your death, what a concept. 15 years later i just pay per month for the same experience and call it productivity. justin timberlake was just a guy trying to finish his pr</description>
-    </item>
-    <item>
-      <title>Sync ECC Tools hosted status roadmap (#1886)</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/a27831c13e54d0eb0d49a9a9578f06cd6040afbe</link>
-      <guid isPermaLink="false">a27831c</guid>
-      <pubDate>Thu, 14 May 2026 01:49:42 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>The unintuitive difficulty of using AI</title>
-      <link>https://www.reddit.com/r/claude/comments/1tcjpl7/the_unintuitive_difficulty_of_using_ai/</link>
-      <guid isPermaLink="false">t3_1tcjpl7</guid>
-      <pubDate>Thu, 14 May 2026 01:40:34 GMT</pubDate>
-      <category>reddit-claude</category>
-      <description>As more mainstream (non-geeky) people are trying to use AI for work (and come ask me for help as the resident &quot;expert&quot;), I&apos;m seeing patterns in the ways the current products fail them. They simply don&apos;t get that: Something that can converse pretty fluently doesn&apos;t learn. For anything complex, you ne</description>
-    </item>
-    <item>
-      <title>Sync ECC Tools hosted result history roadmap (#1885)</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/b24d762caa23cb67499156ef48008a62e57fe335</link>
-      <guid isPermaLink="false">b24d762</guid>
-      <pubDate>Thu, 14 May 2026 01:31:08 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync roadmap after ECC-Tools hosted dispatch</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/f94478e5242ce775b854a871014abc9b9e6cc8ca</link>
-      <guid isPermaLink="false">f94478e</guid>
-      <pubDate>Thu, 14 May 2026 00:30:48 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Oh !</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tcht9d/oh/</link>
-      <guid isPermaLink="false">t3_1tcht9d</guid>
-      <pubDate>Thu, 14 May 2026 00:18:14 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync roadmap after ECC-Tools depth-plan check</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/6cdac19764fd19cb572a18f61bdc7a9903ec9767</link>
-      <guid isPermaLink="false">6cdac19</guid>
-      <pubDate>Thu, 14 May 2026 00:10:38 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Anthropic forms $200 million partnership with the Gates Foundation</title>
-      <link>https://www.anthropic.com/news/gates-foundation-partnership</link>
-      <guid isPermaLink="false">https://www.anthropic.com/news/gates-foundation-partnership</guid>
-      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
-      <category>blog-news</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync roadmap after ECC-Tools team backlog job (#1880)</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/af3a2064129d1cdad4e5d6e91838916d4ce6e4a1</link>
-      <guid isPermaLink="false">af3a206</guid>
-      <pubDate>Wed, 13 May 2026 23:44:49 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync roadmap after ECC-Tools AI cost job (#1878)</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/20f00c1410bce5460a7fedbc9009c8e07841c358</link>
-      <guid isPermaLink="false">20f00c1</guid>
-      <pubDate>Wed, 13 May 2026 23:26:48 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>v1.0.122</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.122</link>
-      <guid isPermaLink="false">v1.0.122</guid>
-      <pubDate>Wed, 13 May 2026 23:20:49 GMT</pubDate>
-      <category>claude-code-action</category>
-      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.122</description>
-    </item>
-    <item>
-      <title>v2.1.141</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.141</link>
-      <guid isPermaLink="false">v2.1.141</guid>
-      <pubDate>Wed, 13 May 2026 23:19:16 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added terminalSequence field to hook JSON output so hooks can emit desktop notifications, window titles, and bells without a controlling terminal
-- Added CLAUDECODEPLUGINPREFERHTTPS to clone GitHub plugin sources over HTTPS instead of SSH, for environments without a GitHub SSH key
--</description>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md</title>
-      <link>https://github.com/anthropics/claude-code/commit/c5712671c87f8ec283ecf1c5024a4952ba5bfbcd</link>
-      <guid isPermaLink="false">c571267</guid>
-      <pubDate>Wed, 13 May 2026 23:19:09 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: Claude Code weekly limits are increasing 50%, now through July 13.
-
-Live now for all Pro, Max, Team, and seat-based Enterpr…</title>
-      <link>https://x.com/TheAmolAvasare/status/2054701936209994142</link>
-      <guid isPermaLink="false">2054701936209994142</guid>
-      <pubDate>Wed, 13 May 2026 23:14:50 GMT</pubDate>
-      <category>twitter-theamolavasare</category>
-      <description>RT @ClaudeDevs: Claude Code weekly limits are increasing 50%, now through July 13.
-
-Live now for all Pro, Max, Team, and seat-based Enterpr…</description>
-    </item>
-    <item>
-      <title>docs: sync roadmap after ECC-Tools reference-set job (#1877)</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/e7a6f137e5f0c6d8d6545f3005c95adf7e23c7bb</link>
-      <guid isPermaLink="false">e7a6f13</guid>
-      <pubDate>Wed, 13 May 2026 23:09:35 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Show me what you’ve created with Claude!</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tcftws/show_me_what_youve_created_with_claude/</link>
-      <guid isPermaLink="false">t3_1tcftws</guid>
-      <pubDate>Wed, 13 May 2026 22:56:20 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>I’ve made a couple nice HTML things that help a lot with work. I’m not tech savvy and this all feels a bit foreign. I can never think of anything to make that will help with my personal life and productivity. I’d love to see what you all have made that helps you or you’re proud of!</description>
-    </item>
-    <item>
-      <title>@anthropic-ai/claude-code@2.1.141</title>
-      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
-      <guid isPermaLink="false">2.1.141</guid>
-      <pubDate>Wed, 13 May 2026 22:42:55 GMT</pubDate>
-      <category>npm-claude-code</category>
-      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
-    </item>
-    <item>
-      <title>I&apos;m moving and found a fun little use for Claude Cowork: Hand it a floorplan and ask it create a 3D planner. The attached demo (not my real place) was a one-shot.
-
-I also had it find all the email rec</title>
-      <link>https://x.com/felixrieseberg/status/2054690676076609657</link>
-      <guid isPermaLink="false">2054690676076609657</guid>
-      <pubDate>Wed, 13 May 2026 22:30:06 GMT</pubDate>
-      <category>twitter-felixrieseberg</category>
-      <description>I&apos;m moving and found a fun little use for Claude Cowork: Hand it a floorplan and ask it create a 3D planner. The attached demo (not my real place) was a one-shot.
-
-I also had it find all the email receipts for furniture I got over the last few years and put in matching models.
-
-Yesterday, I asked it</description>
-    </item>
-    <item>
-      <title>I&apos;m cooked. Anthropic just split &quot;--print&quot; mode to $/mo credits</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tcetsd/im_cooked_anthropic_just_split_print_mode_to_mo/</link>
-      <guid isPermaLink="false">t3_1tcetsd</guid>
-      <pubDate>Wed, 13 May 2026 22:16:44 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>So, my entire project concept of an autonomous self-monitoring self-orchestrating Kanban production system for Claude Code to live within has now potentially been torpedoed. I built the entire system on the premise that [tickets + agents + hooks + executors -&gt; &quot;claude -p&quot; -&gt; hands-free always-on pro</description>
-    </item>
-    <item>
-      <title>Merge pull request #607 from anthropics/lance/managed-agents-linear</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/b5b727b70a6e2f89b741ee075cca67917d2b3488</link>
-      <guid isPermaLink="false">b5b727b</guid>
-      <pubDate>Wed, 13 May 2026 21:40:05 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>feat(managed_agents): Linear stateless webhook bridge template</description>
-    </item>
-    <item>
-      <title>It’s official. Anthropic pulled the plug on all programmatic use of Claude subscription.</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tccd7c/its_official_anthropic_pulled_the_plug_on_all/</link>
-      <guid isPermaLink="false">t3_1tccd7c</guid>
-      <pubDate>Wed, 13 May 2026 20:47:48 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description/>
-    </item>
-    <item>
-      <title>Did anyone use this Chinese AI tool for daily stock trading??</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1tcbdby/did_anyone_use_this_chinese_ai_tool_for_daily/</link>
-      <guid isPermaLink="false">t3_1tcbdby</guid>
-      <pubDate>Wed, 13 May 2026 20:12:00 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description>It&apos;s been trending on Beam for more than a week and looks like it&apos;s only gathering more and more attention. It uses LLM-driven agents to digest news, market data, and sentiment into a dashboard.</description>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: Starting June 15, paid Claude plans can claim a dedicated monthly credit for programmatic usage.
-
-The credit covers usage o…</title>
-      <link>https://x.com/bcherny/status/2054655192105373753</link>
-      <guid isPermaLink="false">2054655192105373753</guid>
-      <pubDate>Wed, 13 May 2026 20:09:06 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @ClaudeDevs: Starting June 15, paid Claude plans can claim a dedicated monthly credit for programmatic usage.
-
-The credit covers usage o…</description>
-    </item>
-    <item>
-      <title>RT @Dakshay: More cardputer code incoming. 
-
-Thank you Claude. https://t.co/s0ikNXmsjN</title>
-      <link>https://x.com/bcherny/status/2054655072681009282</link>
-      <guid isPermaLink="false">2054655072681009282</guid>
-      <pubDate>Wed, 13 May 2026 20:08:37 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @Dakshay: More cardputer code incoming. 
-
-Thank you Claude. https://t.co/s0ikNXmsjN</description>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: Claude Code weekly limits are increasing 50%, now through July 13.
-
-Live now for all Pro, Max, Team, and seat-based Enterpr…</title>
-      <link>https://x.com/bcherny/status/2054652905425359235</link>
-      <guid isPermaLink="false">2054652905425359235</guid>
-      <pubDate>Wed, 13 May 2026 20:00:00 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @ClaudeDevs: Claude Code weekly limits are increasing 50%, now through July 13.
-
-Live now for all Pro, Max, Team, and seat-based Enterpr…</description>
-    </item>
-    <item>
-      <title>Did anyone here moved from claude to codex recently? And why?</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tca4tu/did_anyone_here_moved_from_claude_to_codex/</link>
-      <guid isPermaLink="false">t3_1tca4tu</guid>
-      <pubDate>Wed, 13 May 2026 19:28:45 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>Been hearing on ijustvibecodedthis.com alot of people moving, why?</description>
-    </item>
-    <item>
-      <title>How to use personas in CC\Codex ?</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1tca2sd/how_to_use_personas_in_cccodex/</link>
-      <guid isPermaLink="false">t3_1tca2sd</guid>
-      <pubDate>Wed, 13 May 2026 19:26:46 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description/>
-    </item>
-    <item>
-      <title>My AI runs 24/7 on Claude Code without -p. Here&apos;s it&apos;s own 50-line hook.</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tc9rua/my_ai_runs_247_on_claude_code_without_p_heres_its/</link>
-      <guid isPermaLink="false">t3_1tc9rua</guid>
-      <pubDate>Wed, 13 May 2026 19:16:32 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>Saw the thread about the June 15 credit change. Built a drop-in -p replacement using hooks — no SDK credits needed. A lot of people are upset about losing subsidized -p usage. I built something that gives you the same stateless, one-message-at-a-time behavior — but in interactive mode, on your regul</description>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: Claude Code weekly limits are increasing 50%, now through July 13.
-
-Live now for all Pro, Max, Team, and seat-based Enterpr…</title>
-      <link>https://x.com/claudeai/status/2054641166155497503</link>
-      <guid isPermaLink="false">2054641166155497503</guid>
-      <pubDate>Wed, 13 May 2026 19:13:22 GMT</pubDate>
-      <category>twitter-claudeai</category>
-      <description>RT @ClaudeDevs: Claude Code weekly limits are increasing 50%, now through July 13.
-
-Live now for all Pro, Max, Team, and seat-based Enterpr…</description>
     </item>
   </channel>
 </rss>
