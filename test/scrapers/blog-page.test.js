@@ -99,8 +99,8 @@ describe("scrapeBlogPage", () => {
 
     it("parses webflow blog items", async () => {
       const html = `<!DOCTYPE html><html><body>
-<div class="w-dyn-item">
-  <h3>Webflow Post</h3>
+<div class="blog_cms_item w-dyn-item">
+  <div class="card_blog_title">Webflow Post</div>
   <a href="/blog/test-post">Link</a>
   <div class="date">March 10, 2026</div>
   <p>A test description</p>
@@ -113,6 +113,44 @@ describe("scrapeBlogPage", () => {
       expect(items.length).toBe(1);
       expect(items[0].title).toBe("Webflow Post");
       expect(items[0].sourceCategory).toBe("extended");
+    });
+
+    it("extracts date from fs-list-field='date' attribute and excludes sidebar filter checkboxes", async () => {
+      // Mirrors the live claude.com/blog DOM shape:
+      // - A real post card (`.blog_cms_item`) carrying a hidden Finsweet date
+      //   element and both grid/list title classes.
+      // - A sidebar filter checkbox (`.w-dyn-item` without `.blog_cms_item`)
+      //   whose label text ("Agents") used to leak into the feed as a phantom
+      //   post when the parser matched `.w-dyn-item` directly.
+      const html = `<!DOCTYPE html><html><body>
+<div class="blog_cms_item w-dyn-item">
+  <div class="card_blog_content">
+    <div>
+      <div class="u-text-style-caption u-foreground-tertiary u-mb-1-5">May 14, 2026</div>
+      <div class="card_blog_title u-text-style-h6">The founder's playbook</div>
+    </div>
+  </div>
+  <div fs-list-fieldtype="date" fs-list-field="date" class="u-display-none">May 14, 2026</div>
+  <a href="/blog/the-founders-playbook">Read</a>
+  <p>A teaser sentence.</p>
+</div>
+<div role="listitem" class="u-display-contents w-dyn-item">
+  <label class="form_main_checkbox_label">
+    <input type="checkbox" name="category" data-checkbox-list-value="Agents"/>
+    <span class="form_main_checkbox_text u-text-style-body-3">Agents</span>
+  </label>
+</div>
+</body></html>`;
+      const fixturePath = join(tmpDir, "blog.html");
+      await writeFile(fixturePath, html);
+
+      const items = await scrapeBlogPage(makeSource(fixturePath));
+      expect(items).toHaveLength(1);
+      expect(items[0].title).toBe("The founder's playbook");
+      expect(items[0].date).not.toBeNull();
+      expect(items[0].url).toBe(
+        "https://claude.com/blog/the-founders-playbook",
+      );
     });
   });
 

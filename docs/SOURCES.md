@@ -184,7 +184,7 @@ anthropic-watch monitors Anthropic sources across **ten scraper types**, organiz
 - **URL**: https://claude.com/blog
 - **Scraper type**: `blog-page` (`parseMode: "webflow"`)
 - **What it tracks**: Claude product blog posts — feature announcements, tips, guides.
-- **Detection method**: Parses Webflow CMS items (`.blog_cms_item`, `.w-dyn-item` selectors). Titles from `.card_blog_title` or `h2`/`h3`. Dates from `[class*='date']` or `<time>`. ID = post URL.
+- **Detection method**: Parses Webflow CMS items (`.blog_cms_item` selector only — `.w-dyn-item` alone matches sidebar filter checkboxes). Titles from `.card_blog_title` (grid layout) or `.card_blog_list_title` (list layout) with `h2`/`h3` fallback. Dates from Finsweet's `[fs-list-field='date']` attribute (present on every card in both layouts) with `[class*='date']`/`<time>` fallbacks. ID = post URL.
 - **Update frequency**: Weekly to monthly
 - **Feed**: [`blog-claude.json`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.json) / [`.xml`](https://sefaertunc.github.io/anthropic-watch/feeds/blog-claude.xml)
 - **Notes**: Webflow class names may change with site redesigns.

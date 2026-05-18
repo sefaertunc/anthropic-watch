@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+
+- **`blog-claude` webflow parser was returning category navigation as posts and emitting `date: null` for every item.** Two root causes: the `.blog_cms_item, .w-dyn-item` post selector also matched the sidebar filter checkboxes (`.w-dyn-item` is Webflow's generic dynamic-list-item class), and the date selector chain (`[class*='date']` / `<time>` / `<time datetime>`) didn't match anything on the current page. Narrowed the post selector to `.blog_cms_item`, added a primary date selector for Finsweet's `[fs-list-field='date']` attribute (present on all 30 cards in both grid and list layouts), and added a regression test asserting non-null dates and category exclusion. Verified live: 20 posts emitted, 0 null dates, 0 category leakage.
+
 ## [1.5.2] - 2026-05-15
 
 Security patch bumping `fast-xml-parser` from `^5.6.0` to `^5.8.0`. Resolves the two CVEs surfaced by a Socket SCA scan of commit `fe704be`: a High-severity XML attribute injection in transitive `fast-xml-builder@1.1.4` (CVSS 8.7, fixed in `1.1.7+`, now pinned to `1.2.0` via the `5.8.0` line) and a Medium-severity XML Comment/CDATA injection in `fast-xml-parser`'s own XMLBuilder (CVSS 6.1, fixed in `5.7.0+`). No call-site changes — the project uses `XMLParser` for Reddit Atom feeds and GitHub Atom feeds; `XMLBuilder` only appears in RSS/OPML output where the inputs are project-controlled, so the practical exposure was low even before the bump.
