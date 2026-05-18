@@ -71,6 +71,26 @@ describe("generateRssFeed", () => {
     expect(result.itemCount).toBe(1);
   });
 
+  it("perSourceCap mirrors JSON feed behaviour — aggregate cap enforced", () => {
+    // 3 sources × 10 items; perSourceCap: 2 should leave 6 items.
+    const items = [];
+    for (const source of ["a", "b", "c"]) {
+      for (let n = 1; n <= 10; n++) {
+        items.push({
+          id: `${source}-${n}`,
+          source,
+          date: `2026-05-${String(n).padStart(2, "0")}T00:00:00Z`,
+          title: `${source} ${n}`,
+          url: `http://${source}/${n}`,
+          snippet: "",
+        });
+      }
+    }
+    const xml = generateRssFeed(items, { perSourceCap: 2 });
+    const result = validateRss(xml);
+    expect(result.itemCount).toBe(6);
+  });
+
   it("accumulation merges correctly", () => {
     const existing = [
       {

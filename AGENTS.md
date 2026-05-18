@@ -25,7 +25,7 @@ npx prettier --write .          # Format
 ## Project Structure
 
 - `src/` — Source code
-- `tests/` — Test files
+- `test/` — Test files
 - `docs/` — Documentation
 
 ## Key Principles

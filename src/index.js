@@ -185,27 +185,23 @@ export async function runPipeline(options = {}) {
   const existingAll = await readJsonSafe(join(feedsDir, "all.json"));
   const existingAllItems = existingAll?.items || [];
 
+  // `perSourceCap: 5` keeps the aggregate balanced — without it, high-cadence
+  // community sources (Reddit, gh-commits) fill the 100-item window in <48 h
+  // and push low-cadence core sources (blogs, releases) off the feed entirely.
+  // Per-source feeds (below) omit this so each source's own retention is
+  // unaffected.
+  const aggregateMeta = {
+    title: "anthropic-watch — all sources",
+    maxItems: 100,
+    perSourceCap: 5,
+  };
   await writeFile(
     join(feedsDir, "all.json"),
-    generateJsonFeed(
-      allNewItems,
-      {
-        title: "anthropic-watch — all sources",
-        maxItems: 100,
-      },
-      existingAllItems,
-    ),
+    generateJsonFeed(allNewItems, aggregateMeta, existingAllItems),
   );
   await writeFile(
     join(feedsDir, "all.xml"),
-    generateRssFeed(
-      allNewItems,
-      {
-        title: "anthropic-watch — all sources",
-        maxItems: 100,
-      },
-      existingAllItems,
-    ),
+    generateRssFeed(allNewItems, aggregateMeta, existingAllItems),
   );
 
   // Per-source feeds

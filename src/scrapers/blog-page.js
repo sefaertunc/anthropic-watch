@@ -141,13 +141,18 @@ function parseWebflow(html, source) {
   const items = [];
   const origin = new URL(source.url).origin;
 
-  const postEls = $(".blog_cms_item, .w-dyn-item");
+  // `.w-dyn-item` is Webflow's generic dynamic-list-item class — it also wraps
+  // sidebar filter checkboxes (Agents, Claude Code, …), so matching on it
+  // alone pulls navigation chrome into the feed. `.blog_cms_item` is the
+  // post-specific wrapper.
+  const postEls = $(".blog_cms_item");
 
   postEls.each((_i, el) => {
     const $el = $(el);
 
     const title = (
       $el.find(".card_blog_title").first().text() ||
+      $el.find(".card_blog_list_title").first().text() ||
       $el.find("h2, h3").first().text()
     ).trim();
     if (!title) return;
@@ -157,7 +162,12 @@ function parseWebflow(html, source) {
     if (!href) return;
     const postUrl = href.startsWith("http") ? href : new URL(href, origin).href;
 
+    // Finsweet List Attributes exposes the post date as a hidden element
+    // tagged `fs-list-field="date"` on every card (both grid + list layouts).
+    // The visible caption (`.u-text-style-caption`) carries the same text but
+    // its class isn't post-specific, so prefer the semantic attribute.
     const dateText = (
+      $el.find("[fs-list-field='date']").first().text() ||
       $el.find("[class*='date']").first().text() ||
       $el.find("time").first().text() ||
       $el.find("time").first().attr("datetime") ||

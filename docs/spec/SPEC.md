@@ -4,7 +4,7 @@
 
 anthropic-watch is a GitHub Actions–powered scraper that monitors public Anthropic sources (blogs, GitHub releases, npm registry, docs, status page) on a daily cron, detects new content by diffing against persisted state, and publishes structured RSS, JSON, and OPML feeds via GitHub Pages.
 
-No server, no database — just static feeds anyone can subscribe to. The current source count is tracked in `docs/SOURCES.md` and the README badge. As of v1.4.0 the repo monitors 37 sources across three categories (Core, Extended, Community) and ten scraper types.
+No server, no database — just static feeds anyone can subscribe to. The current source count is tracked in `docs/SOURCES.md` and the README badge. The repo monitors 39 sources across three categories (Core, Extended, Community) and ten scraper types.
 
 ### Audience
 
@@ -35,7 +35,7 @@ Daily cron (06:00 UTC) in .github/workflows/scrape.yml
             ├─ runWithConcurrency(tasks, 4)          Promise.allSettled
             ├─ Diff results vs. knownIds            isNew / markSeen
             ├─ Generate feeds                       feed/json.js, rss.js, opml.js
-            │    ├─ public/feeds/all.{json,xml}      (max 100)
+            │    ├─ public/feeds/all.{json,xml}      (max 100, max 5 per source)
             │    ├─ public/feeds/{key}.{json,xml}    (max 50 each)
             │    ├─ public/feeds/sources.opml
             │    ├─ public/feeds/run-report.json
@@ -165,7 +165,7 @@ Two independent versioning tracks:
 
 ### Phase 6 — Community Sources (complete as of v1.4.0, 2026-04-23; production fixes in v1.4.1, 2026-04-24)
 
-- [x] Four new scraper types: `github-commits` (direct-commit activity on commits-only repos), `reddit-subreddit` (public Reddit JSON, upgraded to OAuth2 in v1.4.1), `hn-algolia` (HN search), `twitter-account` (twitterapi.io)
+- [x] Four new scraper types: `github-commits` (direct-commit activity on commits-only repos), `reddit-subreddit` (public Reddit JSON in v1.4.0, OAuth2 in v1.4.1, reverted to public Atom RSS in v1.5.1 — see entry below), `hn-algolia` (HN search), `twitter-account` (twitterapi.io)
 - [x] New `community` source category — third value joining `core` and `extended`. Dashboard renders as a third group; OPML feed emits a third `Community` outline group.
 - [x] 20 new sources (17 → 37 total): 6 GitHub-commits, 5 Reddit subs, 1 HN filter, 8 Twitter handles. All handles verified active and on-topic via live API at implementation time.
 - [x] `TWITTERAPI_IO_KEY` GitHub Actions secret (optional) with graceful-skip semantics in the Twitter scraper — forks and local dev sessions without the credential continue to work.
