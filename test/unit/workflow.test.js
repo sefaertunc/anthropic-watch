@@ -63,8 +63,7 @@ describe("scrape.yml workflow", () => {
   it("commit-state step resyncs to origin/main on push failure (v1.4.1 rebase-abort fix)", async () => {
     const content = await readFile(workflowPath, "utf-8");
     // The v1.4.1 retry loop abandons pull --rebase (which bricked on conflicts
-    // per the v1.4.0 bug) for a hard-reset + re-apply pattern. See
-    // v1.4.1-ops-diagnostic.md Issue 1 and scripts/verify-rebase-retry-*.sh.
+    // per the v1.4.0 bug) for a hard-reset + re-apply pattern.
     expect(content).toMatch(/git reset --hard\s+-?q?\s*origin\/main/);
     expect(content).toMatch(/git rebase --abort/);
   });

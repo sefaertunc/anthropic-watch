@@ -90,7 +90,7 @@ Observability fields may be added, renamed, or removed across any patch release 
 
 - **`core`** — Primary Anthropic signal: official blogs, docs, status, SDK releases. High-reliability; consumer logic can act on these autonomously (e.g. open an issue, create a branch).
 - **`extended`** — Anthropic-owned secondary signal: GitHub repos, npm packages, secondary blogs. Lower frequency than core but same trust level.
-- **`community`** — Third-party sources not owned or operated by Anthropic. Includes Reddit, Hacker News, GitHub commits on Anthropic-owned repos that ship via direct commits rather than tagged releases, and (planned) Twitter. Consumers should treat `community` as **informational signal only** — lower reliability, potential for duplication with other sources, subject to external API availability and community opinion mixing. Not suitable for autonomous-action triggers.
+- **`community`** — Third-party sources not owned or operated by Anthropic. Includes Reddit, Hacker News, GitHub commits on Anthropic-owned repos that ship via direct commits rather than tagged releases, and Twitter. Consumers should treat `community` as **informational signal only** — lower reliability, potential for duplication with other sources, subject to external API availability and community opinion mixing. Not suitable for autonomous-action triggers.
 
 **Extensibility policy.** The set of category values is **open**. New values may be added in minor releases of anthropic-watch (e.g. `"partner"`, `"research"`). Consumers:
 

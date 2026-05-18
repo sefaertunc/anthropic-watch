@@ -66,7 +66,7 @@ If feed output is missing fields, has bad date parsing, or has formatting issues
 - **ESM only** — use `import/export`, no `require()`
 - **No build step** — plain JavaScript, no TypeScript, no bundler
 - **Minimal dependencies** — don't add a package if the standard library can do it
-- **Scraper contract** — every scraper exports `async function scrape(sourceConfig)` and returns `Array<Item>`. Never throws — catch errors and return `[]`.
+- **Scraper contract** — every scraper exports `async function scrape(sourceConfig)` and returns `Array<Item>`. Scrapers **throw on failure** (HTTP non-2xx, parse errors); the orchestrator's `Promise.allSettled` aggregates errors. An empty array means "no items right now," not "an error." Wrapping scraper logic in `try/catch { return [] }` is forbidden — that was the v1.0.1 silent-failure root cause.
 - **Use `fetchSource()`** — not bare `fetch()`. This enables fixture-based testing.
 - **Use `parseDate()`** — not inline `new Date()`. This ensures consistent date normalization.
 - **Logging** — use `src/log.js`, not `console.log` directly
@@ -94,7 +94,7 @@ Key test principles:
 
 ## Pull Requests
 
-- Branch from `main`
+- Branch from `develop` (the integration branch). Hotfixes that need to bypass `develop` may branch from `main` as `feat/*`.
 - Name your branch `feat/<short-description>` — PRs targeting `main` from any other branch name will be rejected by the `Branch name check` workflow (`dependabot/*` and `renovate/*` branches are allowlisted for automated dependency PRs)
 - Keep PRs focused — one source or one fix per PR
 - Include the source key in the PR title if it's source-specific (e.g. "fix: update selectors for blog-engineering")

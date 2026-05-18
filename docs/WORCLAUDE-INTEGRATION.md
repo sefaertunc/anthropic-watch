@@ -1,6 +1,6 @@
 # Worclaude Integration
 
-> **Current contract (as of v1.4.1):**
+> **Current contract (as of v1.5.2):**
 >
 > - Feeds include `sourceCategory` values `core`, `extended`, and `community`. Recommended downstream policy: **act autonomously on `core` changes** (branches, issues); **treat `community` as informational** (log and surface, do not autonomously act).
 > - Recommended consumer is the npm package [`@sefaertunc/anthropic-watch-client`](https://www.npmjs.com/package/@sefaertunc/anthropic-watch-client) — encapsulates version gating, composite-key deduplication with `uniqueKey` fallback, and typed errors. Worclaude's own migration is tracked separately (Worclaude v2.6.0).

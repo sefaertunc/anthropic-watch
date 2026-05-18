@@ -15,7 +15,7 @@ Pick the scraper that matches your source:
 | Documentation page                | `docs-page`        | Docs page where you want to detect content changes                                                |
 | Statuspage.io-powered status page | `status-page`      | Site uses Statuspage.io for incident tracking                                                     |
 | GitHub commits (no releases)      | `github-commits`   | Repos that ship via direct commits rather than tagged releases (curated lists, skill directories) |
-| Subreddit                         | `reddit-subreddit` | Public subreddit post feed. Requires OAuth2 credentials.                                          |
+| Subreddit                         | `reddit-subreddit` | Public subreddit post feed via Atom RSS. No credentials required.                                 |
 | Hacker News query                 | `hn-algolia`       | HN stories matching a search query. Public endpoint, no credentials.                              |
 | Twitter / X account               | `twitter-account`  | Public Twitter timeline via twitterapi.io. Requires paid `TWITTERAPI_IO_KEY`.                     |
 
