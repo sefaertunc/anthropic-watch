@@ -78,7 +78,7 @@ See `.claude/skills/` — load only what's relevant:
 ## Project-Specific Rules
 
 1. **No browser automation.** No Playwright, Puppeteer, or headless Chrome. All HTML is fetched via `fetch` + parsed with `cheerio`. Pages requiring JS-rendered data are solved with a new `parseMode` (RSC payload extraction, API endpoint discovery, etc.) — never by adding a browser.
-2. **No authenticated endpoints beyond `GITHUB_TOKEN`.** No Anthropic API keys, no OAuth flows, no paid services. Every source must be fetchable from a stock GitHub Actions runner with only `GITHUB_TOKEN`.
+2. **No authenticated endpoints beyond `GITHUB_TOKEN`** for `core`/`extended` sources. No Anthropic API keys, no OAuth flows. Paid third-party APIs permitted only for `community`-category sources with graceful-skip-on-missing-credential, documented cost, and fork-compatibility (`twitterapi.io` at ≈$0.36/month is the sole current instance). Core/extended sources must remain fetchable from a stock GitHub Actions runner with only `GITHUB_TOKEN`.
 3. **No private or paid Anthropic surfaces.** Public web pages, public GitHub repos, public npm, public docs, public status page only. Never the Anthropic Console, billing, or logged-in surfaces.
 4. **Scrapers never catch their own errors.** They throw; `Promise.allSettled` in `src/index.js` handles aggregation. Wrapping scraper logic in `try/catch { return [] }` is forbidden — that was the v1.0.1 silent-failure root cause.
 5. **No shared error class hierarchy.** Plain `Error` with descriptive messages. Don't introduce `ScraperError`, `FetchError`, etc.
