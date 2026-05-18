@@ -17,13 +17,13 @@ describe("scrapeHnAlgolia", () => {
 
   function makeSource(fixturePath, overrides = {}) {
     return {
-      key: "hn-anthropic-mentions",
-      name: "Hacker News — anthropic.com / claude.ai / claude.com",
+      key: "hn-anthropic-com",
+      name: "Hacker News — anthropic.com",
       category: "community",
       scraperType: "hn-algolia",
-      query: "anthropic.com OR claude.ai OR claude.com",
+      query: "anthropic.com",
       tags: "story",
-      limit: 20,
+      limit: 10,
       url: "https://hn.algolia.com/",
       fixtureFile: fixturePath,
       ...overrides,
@@ -59,9 +59,9 @@ describe("scrapeHnAlgolia", () => {
         date: "2026-04-01T00:00:00Z",
         url: "https://example.com/a",
         snippet: "Details",
-        source: "hn-anthropic-mentions",
+        source: "hn-anthropic-com",
         sourceCategory: "community",
-        sourceName: "Hacker News — anthropic.com / claude.ai / claude.com",
+        sourceName: "Hacker News — anthropic.com",
       }),
     );
   });
@@ -92,7 +92,7 @@ describe("scrapeHnAlgolia", () => {
     expect(logSpy).toHaveBeenCalled();
     const combined = logSpy.mock.calls.map((c) => c[0]).join("\n");
     expect(combined).toContain("hn-algolia: 0 hits");
-    expect(combined).toContain("anthropic.com OR claude.ai");
+    expect(combined).toContain("anthropic.com");
     logSpy.mockRestore();
   });
 });
