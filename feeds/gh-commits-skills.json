@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-17T08:25:10.172Z",
-  "itemCount": 3,
+  "generated": "2026-05-18T10:10:53.172Z",
+  "itemCount": 4,
   "items": [
+    {
+      "id": "6a5bb06",
+      "title": "Fix model config shape in managed-agents API reference (#1145)",
+      "date": "2026-05-17T22:47:17Z",
+      "url": "https://github.com/anthropics/skills/commit/6a5bb06904ab164a345e41c381fc9097954b83da",
+      "snippet": "The model field on agent create accepts {id, speed}, not {type: \"model_config\", id, speed}. Aligns with the shape documented elsewhere in managed-agents-core.md and the request body table.",
+      "source": "gh-commits-skills",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/skills (main commits)",
+      "uniqueKey": "6a5bb06|gh-commits-skills"
+    },
     {
       "id": "f458cee",
       "title": "Update README.md (#1094)",

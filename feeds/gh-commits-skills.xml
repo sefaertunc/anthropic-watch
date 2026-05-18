@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 17 May 2026 08:25:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 10:10:53 GMT</lastBuildDate>
+    <item>
+      <title>Fix model config shape in managed-agents API reference (#1145)</title>
+      <link>https://github.com/anthropics/skills/commit/6a5bb06904ab164a345e41c381fc9097954b83da</link>
+      <guid isPermaLink="false">6a5bb06</guid>
+      <pubDate>Sun, 17 May 2026 22:47:17 GMT</pubDate>
+      <category>gh-commits-skills</category>
+      <description>The model field on agent create accepts {id, speed}, not {type: &quot;model_config&quot;, id, speed}. Aligns with the shape documented elsewhere in managed-agents-core.md and the request body table.</description>
+    </item>
     <item>
       <title>Update README.md (#1094)</title>
       <link>https://github.com/anthropics/skills/commit/f458cee31a7577a47ba0c9a101976fa599385174</link>

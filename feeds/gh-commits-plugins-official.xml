@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 17 May 2026 08:25:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 10:10:53 GMT</lastBuildDate>
+    <item>
+      <title>Add zoominfo plugin (#1885)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f475d3ce5806c7edf9fc204ee276e7f45e24c798</link>
+      <guid isPermaLink="false">f475d3c</guid>
+      <pubDate>Mon, 18 May 2026 00:49:38 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Bump crowdstrike-falcon-foundry SHA to v1.0.0 (#1842)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d7b273d2b4c5b01cf938dace461e3ebb7a07b4d5</link>
+      <guid isPermaLink="false">d7b273d</guid>
+      <pubDate>Mon, 18 May 2026 00:49:15 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Pins to the v1.0.0 tag (a6a500c) instead of pre-release HEAD (e7fa026).</description>
+    </item>
     <item>
       <title>Add carta-cap-table plugin (#1876)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/b5a156b6ecd2f69c418184b7c093930ddabaf9c0</link>
@@ -390,22 +406,6 @@
       <pubDate>Tue, 28 Apr 2026 05:40:28 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
-    </item>
-    <item>
-      <title>mcp-server-dev: hosting, payload-cap, lifecycle, and directory guidance (#1566)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f4b5494fb45946c1256e883001300dad87ffa036</link>
-      <guid isPermaLink="false">f4b5494</guid>
-      <pubDate>Tue, 28 Apr 2026 03:46:23 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Fix shell injection in validate-frontmatter workflow</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/068a59e000f2aa4f0dee0fc5bb4d196c6120a3e6</link>
-      <guid isPermaLink="false">068a59e</guid>
-      <pubDate>Tue, 28 Apr 2026 00:38:18 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>The &apos;Validate frontmatter&apos; step interpolated step output directly into a double-quoted shell string, allowing a fork PR that adds a file named e.g. agents/$(curl ...).md to execute arbitrary commands on the runner.  - Pass the file list via env: and reference as &quot;$FILES&quot; so the shell   never re-eval</description>
     </item>
   </channel>
 </rss>

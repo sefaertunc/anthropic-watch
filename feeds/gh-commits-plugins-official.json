@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-17T08:25:10.173Z",
+  "generated": "2026-05-18T10:10:53.173Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "f475d3c",
+      "title": "Add zoominfo plugin (#1885)",
+      "date": "2026-05-18T00:49:38Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/f475d3ce5806c7edf9fc204ee276e7f45e24c798",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "f475d3c|gh-commits-plugins-official"
+    },
+    {
+      "id": "d7b273d",
+      "title": "Bump crowdstrike-falcon-foundry SHA to v1.0.0 (#1842)",
+      "date": "2026-05-18T00:49:15Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/d7b273d2b4c5b01cf938dace461e3ebb7a07b4d5",
+      "snippet": "Pins to the v1.0.0 tag (a6a500c) instead of pre-release HEAD (e7fa026).",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "d7b273d|gh-commits-plugins-official"
+    },
     {
       "id": "b5a156b",
       "title": "Add carta-cap-table plugin (#1876)",
@@ -535,28 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "c5837a2|gh-commits-plugins-official"
-    },
-    {
-      "id": "f4b5494",
-      "title": "mcp-server-dev: hosting, payload-cap, lifecycle, and directory guidance (#1566)",
-      "date": "2026-04-28T03:46:23Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/f4b5494fb45946c1256e883001300dad87ffa036",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "f4b5494|gh-commits-plugins-official"
-    },
-    {
-      "id": "068a59e",
-      "title": "Fix shell injection in validate-frontmatter workflow",
-      "date": "2026-04-28T00:38:18Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/068a59e000f2aa4f0dee0fc5bb4d196c6120a3e6",
-      "snippet": "The 'Validate frontmatter' step interpolated step output directly into a double-quoted shell string, allowing a fork PR that adds a file named e.g. agents/$(curl ...).md to execute arbitrary commands on the runner.  - Pass the file list via env: and reference as \"$FILES\" so the shell   never re-eval",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "068a59e|gh-commits-plugins-official"
     }
   ]
 }
