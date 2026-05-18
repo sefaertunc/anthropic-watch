@@ -35,7 +35,7 @@ Daily cron (06:00 UTC) in .github/workflows/scrape.yml
             ├─ runWithConcurrency(tasks, 4)          Promise.allSettled
             ├─ Diff results vs. knownIds            isNew / markSeen
             ├─ Generate feeds                       feed/json.js, rss.js, opml.js
-            │    ├─ public/feeds/all.{json,xml}      (max 100)
+            │    ├─ public/feeds/all.{json,xml}      (max 100, max 5 per source)
             │    ├─ public/feeds/{key}.{json,xml}    (max 50 each)
             │    ├─ public/feeds/sources.opml
             │    ├─ public/feeds/run-report.json

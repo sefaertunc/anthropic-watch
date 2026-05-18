@@ -2,6 +2,7 @@ import { XMLBuilder } from "fast-xml-parser";
 
 export function generateRssFeed(items, meta = {}, existingItems = []) {
   const maxItems = meta.maxItems || 100;
+  const perSourceCap = meta.perSourceCap;
 
   // Merge new items with existing, dedupe by id+source
   const seen = new Set();
@@ -13,14 +14,32 @@ export function generateRssFeed(items, meta = {}, existingItems = []) {
     merged.push(item);
   }
 
-  const sorted = merged
-    .sort((a, b) => {
-      if (!a.date && !b.date) return 0;
-      if (!a.date) return 1;
-      if (!b.date) return -1;
-      return new Date(b.date) - new Date(a.date);
-    })
-    .slice(0, maxItems);
+  const byDateDesc = (a, b) => {
+    if (!a.date && !b.date) return 0;
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return new Date(b.date) - new Date(a.date);
+  };
+
+  // Per-source cap (v1.6.0+): see src/feed/json.js for rationale. Kept in
+  // lockstep with the JSON feed so RSS and JSON consumers see the same
+  // aggregate composition.
+  let capped = merged;
+  if (perSourceCap) {
+    const bySource = new Map();
+    for (const item of merged) {
+      const arr = bySource.get(item.source) ?? [];
+      arr.push(item);
+      bySource.set(item.source, arr);
+    }
+    capped = [];
+    for (const arr of bySource.values()) {
+      arr.sort(byDateDesc);
+      capped.push(...arr.slice(0, perSourceCap));
+    }
+  }
+
+  const sorted = capped.sort(byDateDesc).slice(0, maxItems);
 
   const title = meta.title || "anthropic-watch";
   const link = meta.link || "https://sefaertunc.github.io/anthropic-watch/";
