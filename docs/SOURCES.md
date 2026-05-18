@@ -6,7 +6,7 @@ anthropic-watch monitors Anthropic sources across **ten scraper types**, organiz
 
 - **Core** (11 sources): Primary Anthropic product and developer surfaces. These are the highest-signal sources for tracking releases, API changes, and tooling updates.
 - **Extended** (6 sources): Research, alignment, and supplementary blogs plus the status page. Useful for broader awareness but update less frequently.
-- **Community** (20 sources): GitHub-commit activity, Reddit subreddits, Hacker News, and Twitter/X accounts. Higher-volume, lower-signal feeds for tracking community discussion and pre-release development.
+- **Community** (22 sources): GitHub-commit activity, Reddit subreddits, Hacker News, and Twitter/X accounts. Higher-volume, lower-signal feeds for tracking community discussion and pre-release development.
 
 ---
 
@@ -231,11 +231,15 @@ Detection: public Atom 1.0 RSS at `https://www.reddit.com/r/{sub}/{mode}.rss?t={
 
 **Credentials:** None required — public Atom feeds bypass both the OAuth gate and Reddit's datacenter-IP block on `*.json`. See [TROUBLESHOOTING.md — Reddit sources return errors or 0 items](TROUBLESHOOTING.md#reddit-sources-return-errors-or-0-items) for the historical context (v1.4.1 OAuth path, RBP denial, v1.5.1 RSS swap).
 
-### Hacker News (1)
+### Hacker News (3)
 
-- `hn-anthropic-mentions` — HN stories mentioning `anthropic.com`, `claude.ai`, or `claude.com` (via HN Algolia API)
+- `hn-anthropic-com` — HN stories mentioning `anthropic.com` (via HN Algolia API)
+- `hn-claude-ai` — HN stories mentioning `claude.ai`
+- `hn-claude-com` — HN stories mentioning `claude.com`
 
 Detection: `GET hn.algolia.com/api/v1/search_by_date?query=...&tags=story`. ID = Algolia `objectID`. Falls back to HN comment link for Ask HN entries without a URL.
+
+**Why three sources rather than one:** HN Algolia's `query` parameter does not implement boolean `OR` — bare `OR` is matched as a literal token, so a combined query like `anthropic.com OR claude.ai` returns 0 hits. Each domain runs as its own source; consumers wanting the union can subscribe to all three feeds or use `all.json`.
 
 ### Twitter / X (8)
 
@@ -272,7 +276,7 @@ Cost at current volume (8 accounts × 10 tweets × 30 days): ≈ $0.36/month on 
 | `docs-page`        | fetch + cheerio               | `intercom-article`, `docs-hash`, `model-table` | docs-release-notes, support-release-notes                                                                                                                              |
 | `status-page`      | Statuspage.io API + fetch     | —                                              | status-page                                                                                                                                                            |
 | `reddit-subreddit` | Reddit Atom RSS + fetch       | —                                              | reddit-claudecode, reddit-claudeai, reddit-claude, reddit-claudeskills, reddit-claudeopus                                                                              |
-| `hn-algolia`       | HN Algolia search API + fetch | —                                              | hn-anthropic-mentions                                                                                                                                                  |
+| `hn-algolia`       | HN Algolia search API + fetch | —                                              | hn-anthropic-com, hn-claude-ai, hn-claude-com                                                                                                                          |
 | `twitter-account`  | twitterapi.io + fetch         | —                                              | twitter-anthropicai, twitter-claudeai, twitter-claudedevs, twitter-bcherny, twitter-theamolavasare, twitter-felixrieseberg, twitter-noahzweben, twitter-janleike       |
 
 All scrapers use `fetch` (with retry) for HTTP requests. HTML scrapers use `cheerio` for DOM parsing. There is no browser automation.

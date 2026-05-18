@@ -286,16 +286,41 @@ export const sources = [
     limit: 10,
   },
 
-  // ─── Community: Hacker News (1) ───
+  // ─── Community: Hacker News (3) ───
+  // HN Algolia's `query` parameter does not implement boolean `OR` — bare `OR`
+  // is treated as a literal token and matches nothing. The original combined
+  // entry (`anthropic.com OR claude.ai OR claude.com`) was silently returning
+  // 0 hits since v1.4.0. Split into one source per domain so each query is a
+  // single token Algolia can actually match.
   {
-    key: "hn-anthropic-mentions",
-    name: "Hacker News — anthropic.com / claude.ai / claude.com",
-    url: "https://hn.algolia.com/?q=anthropic.com+OR+claude.ai+OR+claude.com",
+    key: "hn-anthropic-com",
+    name: "Hacker News — anthropic.com",
+    url: "https://hn.algolia.com/?q=anthropic.com",
     category: "community",
     scraperType: "hn-algolia",
-    query: "anthropic.com OR claude.ai OR claude.com",
+    query: "anthropic.com",
     tags: "story",
-    limit: 20,
+    limit: 10,
+  },
+  {
+    key: "hn-claude-ai",
+    name: "Hacker News — claude.ai",
+    url: "https://hn.algolia.com/?q=claude.ai",
+    category: "community",
+    scraperType: "hn-algolia",
+    query: "claude.ai",
+    tags: "story",
+    limit: 10,
+  },
+  {
+    key: "hn-claude-com",
+    name: "Hacker News — claude.com",
+    url: "https://hn.algolia.com/?q=claude.com",
+    category: "community",
+    scraperType: "hn-algolia",
+    query: "claude.com",
+    tags: "story",
+    limit: 10,
   },
 
   // ─── Community: Twitter (8) ───

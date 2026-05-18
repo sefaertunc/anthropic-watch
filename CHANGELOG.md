@@ -4,6 +4,7 @@
 
 ### Fixed
 
+- **`hn-anthropic-mentions` was silently returning zero hits since v1.4.0.** HN Algolia's `query` parameter does not implement boolean `OR` — the original combined query `anthropic.com OR claude.ai OR claude.com` was matched as a literal token and returned `nbHits: 0` upstream. Split into three single-domain sources (`hn-anthropic-com`, `hn-claude-ai`, `hn-claude-com`), each with `limit: 10`. Source count 37 → 39. First run after this change emits a backfill burst of up to 30 HN items (10 per new source), then settles. The orphaned `hn-anthropic-mentions` key in `state/last-seen.json` is left in place per Rule 8 and becomes inert.
 - **`blog-claude` webflow parser was returning category navigation as posts and emitting `date: null` for every item.** Two root causes: the `.blog_cms_item, .w-dyn-item` post selector also matched the sidebar filter checkboxes (`.w-dyn-item` is Webflow's generic dynamic-list-item class), and the date selector chain (`[class*='date']` / `<time>` / `<time datetime>`) didn't match anything on the current page. Narrowed the post selector to `.blog_cms_item`, added a primary date selector for Finsweet's `[fs-list-field='date']` attribute (present on all 30 cards in both grid and list layouts), and added a regression test asserting non-null dates and category exclusion. Verified live: 20 posts emitted, 0 null dates, 0 category leakage.
 
 ## [1.5.2] - 2026-05-15
