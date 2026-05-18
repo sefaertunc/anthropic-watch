@@ -4,7 +4,7 @@
 
 anthropic-watch is a GitHub Actions–powered scraper that monitors public Anthropic sources (blogs, GitHub releases, npm registry, docs, status page) on a daily cron, detects new content by diffing against persisted state, and publishes structured RSS, JSON, and OPML feeds via GitHub Pages.
 
-No server, no database — just static feeds anyone can subscribe to. The current source count is tracked in `docs/SOURCES.md` and the README badge. The repo monitors 37 sources across three categories (Core, Extended, Community) and ten scraper types.
+No server, no database — just static feeds anyone can subscribe to. The current source count is tracked in `docs/SOURCES.md` and the README badge. The repo monitors 39 sources across three categories (Core, Extended, Community) and ten scraper types.
 
 ### Audience
 

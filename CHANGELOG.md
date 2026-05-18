@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+
+- **`hn-anthropic-mentions` was silently returning zero hits since v1.4.0.** HN Algolia's `query` parameter does not implement boolean `OR` — the original combined query `anthropic.com OR claude.ai OR claude.com` was matched as a literal token and returned `nbHits: 0` upstream. Split into three single-domain sources (`hn-anthropic-com`, `hn-claude-ai`, `hn-claude-com`), each with `limit: 10`. Source count 37 → 39. First run after this change emits a backfill burst of up to 30 HN items (10 per new source), then settles. The orphaned `hn-anthropic-mentions` key in `state/last-seen.json` is left in place per Rule 8 and becomes inert.
+
 ## [1.5.2] - 2026-05-15
 
 Security patch bumping `fast-xml-parser` from `^5.6.0` to `^5.8.0`. Resolves the two CVEs surfaced by a Socket SCA scan of commit `fe704be`: a High-severity XML attribute injection in transitive `fast-xml-builder@1.1.4` (CVSS 8.7, fixed in `1.1.7+`, now pinned to `1.2.0` via the `5.8.0` line) and a Medium-severity XML Comment/CDATA injection in `fast-xml-parser`'s own XMLBuilder (CVSS 6.1, fixed in `5.7.0+`). No call-site changes — the project uses `XMLParser` for Reddit Atom feeds and GitHub Atom feeds; `XMLBuilder` only appears in RSS/OPML output where the inputs are project-controlled, so the practical exposure was low even before the bump.
