@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- **`all.json` / `all.xml` now apply a per-source cap of 5 before the 100-item global truncation.** Each source contributes at most 5 of its newest items to the aggregate, so high-cadence community sources (Reddit, gh-commits, Twitter) no longer fill the 100-item window in under 48 hours and push low-cadence core sources (engineering blog, releases, docs) off the feed. Per-source feeds (`feeds/{key}.json` / `.xml`) are unaffected — each retains up to 50 items as before. The envelope `version` field stays `"1.0"` because item shape and field set are unchanged; this is a composition policy, not a schema change. Consumers reading the aggregate will see broader source diversity per fetch and a longer effective time window. Surfaced by the 22-day post-v1.5.2 quality audit which found 89% of the aggregate was Reddit + a single third-party resource-list repo and no core Anthropic content appeared in the top 100. See `docs/FEED-SCHEMA.md — Sorting and Limits` and `docs/ARCHITECTURE.md — Feed Generation` for the policy and merge-step ordering.
+
 ### Fixed
 
 - **`hn-anthropic-mentions` was silently returning zero hits since v1.4.0.** HN Algolia's `query` parameter does not implement boolean `OR` — the original combined query `anthropic.com OR claude.ai OR claude.com` was matched as a literal token and returned `nbHits: 0` upstream. Split into three single-domain sources (`hn-anthropic-com`, `hn-claude-ai`, `hn-claude-com`), each with `limit: 10`. Source count 37 → 39. First run after this change emits a backfill burst of up to 30 HN items (10 per new source), then settles. The orphaned `hn-anthropic-mentions` key in `state/last-seen.json` is left in place per Rule 8 and becomes inert.

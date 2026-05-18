@@ -6,14 +6,14 @@ All feeds are published to GitHub Pages and update daily at ~06:00 UTC.
 
 ## Available Feeds
 
-| File                | Format  | Description                           |
-| ------------------- | ------- | ------------------------------------- |
-| `all.json`          | JSON    | All items from every source (max 100) |
-| `all.xml`           | RSS 2.0 | All items from every source (max 100) |
-| `{source-key}.json` | JSON    | Items from a single source (max 50)   |
-| `{source-key}.xml`  | RSS 2.0 | Items from a single source (max 50)   |
-| `run-report.json`   | JSON    | Latest scrape run status and summary  |
-| `run-history.json`  | JSON    | Last 90 run summaries                 |
+| File                | Format  | Description                                             |
+| ------------------- | ------- | ------------------------------------------------------- |
+| `all.json`          | JSON    | All items from every source (max 100, max 5 per source) |
+| `all.xml`           | RSS 2.0 | All items from every source (max 100, max 5 per source) |
+| `{source-key}.json` | JSON    | Items from a single source (max 50)                     |
+| `{source-key}.xml`  | RSS 2.0 | Items from a single source (max 50)                     |
+| `run-report.json`   | JSON    | Latest scrape run status and summary                    |
+| `run-history.json`  | JSON    | Last 90 run summaries                                   |
 
 | `sources.opml` | OPML 2.0 | Feed list importable by RSS readers |
 
@@ -118,8 +118,8 @@ The `@sefaertunc/anthropic-watch-client` library's TypeScript typedef for `sourc
 - Items are sorted by `date` descending.
 - Items with `null` dates sort last.
 - Deduplication key: `${id}|${source}` — an item is unique per source.
-- `all.json` / `all.xml`: max **100** items.
-- Per-source feeds: max **50** items.
+- `all.json` / `all.xml`: max **100** items overall, with a **per-source cap of 5** applied before the global truncation (added in v1.6.0). High-cadence sources cannot crowd out low-cadence ones; the aggregate stays representative even when one source emits 50 items in 24 hours.
+- Per-source feeds: max **50** items. The per-source cap does not apply here — each `{source-key}.json` retains up to 50 of that source's items.
 - New items are merged with existing feed file contents each run (accumulation model), so items persist across runs until pushed out by the limit.
 
 ### Merge Semantics
@@ -129,7 +129,8 @@ Each run reads the existing feed file, merges the current run's new items, dedup
 - **Dedup key:** `${id}|${source}` — two items with the same id and source are considered the same item. The `uniqueKey` field on each item (added in v1.2.0) contains this pre-composed value so consumers can dedupe directly without string concatenation.
 - **Ordering:** new items are prepended before existing items (`[...newItems, ...existingItems]`) before the dedup pass.
 - **Winner on conflict:** first-seen wins the dedup pass. Because new items are prepended, this means **the newly scraped version wins** — its `title`, `snippet`, `date`, and `url` overwrite the persisted copy. Use this when a source edits an entry in place (e.g. `[Unreleased]` in a changelog): the latest snippet/title reaches the feed, not a stale cached one.
-- Sorting (by `date` desc, nulls last) runs after dedup.
+- **Per-source cap (aggregate feeds only, v1.6.0+):** after dedup, items are grouped by `source` and each group sorted by `date` desc; only the top **5** per source survive. This step is skipped for per-source feeds since they contain a single source.
+- Sorting (by `date` desc, nulls last) runs after dedup (and after the per-source cap for aggregate feeds).
 - The slice is applied last: 100 for `all.*`, 50 for per-source feeds.
 
 ---

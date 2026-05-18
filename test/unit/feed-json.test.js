@@ -166,6 +166,81 @@ describe("generateJsonFeed", () => {
     }
   });
 
+  describe("perSourceCap", () => {
+    function makeItem(source, n) {
+      return {
+        id: `${source}-${n}`,
+        source,
+        date: `2026-05-${String(n).padStart(2, "0")}T00:00:00Z`,
+        title: `${source} ${n}`,
+        url: `http://${source}/${n}`,
+        snippet: "",
+      };
+    }
+
+    it("caps each source at perSourceCap items in the aggregate", () => {
+      // 3 sources × 10 items each. Without a cap, the newest source would
+      // dominate. With perSourceCap: 2, each source contributes its 2
+      // newest items — 6 items total before global truncation.
+      const items = [];
+      for (const source of ["a", "b", "c"]) {
+        for (let n = 1; n <= 10; n++) items.push(makeItem(source, n));
+      }
+      const result = JSON.parse(generateJsonFeed(items, { perSourceCap: 2 }));
+      const counts = {};
+      for (const it of result.items)
+        counts[it.source] = (counts[it.source] || 0) + 1;
+      expect(counts).toEqual({ a: 2, b: 2, c: 2 });
+      // Each source's surviving items are its newest two (n=9 and n=10).
+      for (const source of ["a", "b", "c"]) {
+        const ids = result.items
+          .filter((it) => it.source === source)
+          .map((it) => it.id)
+          .sort();
+        expect(ids).toEqual([`${source}-10`, `${source}-9`]);
+      }
+    });
+
+    it("does not cap when perSourceCap is unset (per-source feed call shape)", () => {
+      const items = Array.from({ length: 8 }, (_, i) =>
+        makeItem("only", i + 1),
+      );
+      const result = JSON.parse(generateJsonFeed(items, { maxItems: 50 }));
+      expect(result.itemCount).toBe(8);
+    });
+
+    it("applies maxItems after the per-source cap", () => {
+      // 30 sources × 5 items = 150 considered → cap of 5 leaves 150 → trim to 100.
+      const items = [];
+      for (let s = 0; s < 30; s++) {
+        for (let n = 1; n <= 5; n++) items.push(makeItem(`s${s}`, n));
+      }
+      const result = JSON.parse(
+        generateJsonFeed(items, { perSourceCap: 5, maxItems: 100 }),
+      );
+      expect(result.itemCount).toBe(100);
+      // No single source exceeds the cap.
+      const counts = {};
+      for (const it of result.items)
+        counts[it.source] = (counts[it.source] || 0) + 1;
+      for (const count of Object.values(counts)) {
+        expect(count).toBeLessThanOrEqual(5);
+      }
+    });
+
+    it("preserves dedupe + uniqueKey when capping (no duplicates inside a source)", () => {
+      const items = [
+        makeItem("a", 1),
+        makeItem("a", 1), // exact duplicate
+        makeItem("a", 2),
+      ];
+      const result = JSON.parse(generateJsonFeed(items, { perSourceCap: 5 }));
+      expect(result.itemCount).toBe(2);
+      const keys = result.items.map((it) => it.uniqueKey);
+      expect(new Set(keys).size).toBe(2);
+    });
+  });
+
   it("same id across different sources yields distinct uniqueKey values", () => {
     const items = [
       {

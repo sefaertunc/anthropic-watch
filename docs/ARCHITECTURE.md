@@ -184,11 +184,12 @@ Feeds use an **accumulation model**: new items are merged with existing feed fil
 1. Read existing `all.json` from disk → extract its `items` array
 2. Merge new items in front of existing items
 3. Deduplicate by `${id}|${source}` (first-seen wins — the freshly scraped copy overwrites the persisted one)
-4. Sort by `date` descending (nulls last)
-5. Slice to limit (100 for all, 50 for per-source)
-6. Write JSON and RSS files
+4. **Per-source cap (aggregate feeds only, v1.6.0+):** group by `source`, sort each group by `date` desc, keep the newest 5 per source. Skipped for per-source feeds.
+5. Sort by `date` descending (nulls last)
+6. Slice to limit (100 for all, 50 for per-source)
+7. Write JSON and RSS files
 
-The same merge/dedup/sort/slice logic runs for both JSON and RSS generation. Per-source feeds follow the same pattern but with items filtered to one source and a limit of 50.
+The same merge/dedup/cap/sort/slice logic runs for both JSON and RSS generation. Per-source feeds follow the same pattern but with items filtered to one source, the cap step skipped, and a limit of 50.
 
 **Persistence boundary:** existing feed files live on the `gh-pages` branch, not `main`. The CI workflow (`scrape.yml`) hydrates `public/feeds/` from `gh-pages` via a second `actions/checkout@v4` step before the scraper runs, so step 1's "read existing `all.json` from disk" finds the prior run's content. Without this hydration the merge degenerates to "this run's items only" — the v1.4.2 fix establishes the precondition this section's logic depends on.
 
