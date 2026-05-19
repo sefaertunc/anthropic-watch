@@ -5,9 +5,119 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-18T10:10:53.177Z",
+  "generated": "2026-05-19T09:51:51.036Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "9ee1e15",
+      "title": "docs: define ECC 2.0 hypergrowth release lane",
+      "date": "2026-05-19T09:27:19Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9ee1e15564eef515875dc7511d23deded4265b7d",
+      "snippet": "Refresh the active 2.0 release surface for the affaan-m/ECC repo identity, update package/plugin/workflow launch metadata, and add an operator command center for release video, partner, sponsor, consulting, and social launch execution.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9ee1e15|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2199b22",
+      "title": "docs: keep renamed README install paths usable",
+      "date": "2026-05-19T09:18:28Z",
+      "url": "https://github.com/affaan-m/ECC/commit/2199b223510aeadb8f8adf95e6939676488cfc50",
+      "snippet": "Adjust README manual-install snippets after the affaan-m/ECC repo rename so cloned paths use the new ECC checkout or relative paths.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "2199b22|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b66fa78",
+      "title": "Apply suggestion from @karnavpargi",
+      "date": "2026-05-19T09:08:34Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b66fa78fe8c700deec24eab6b86a862fc200099b",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b66fa78|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "6cb194a",
+      "title": "fix(hooks): avoid escaped quotes in plugin bootstrap",
+      "date": "2026-05-19T09:05:26Z",
+      "url": "https://github.com/affaan-m/ECC/commit/6cb194a3c633beced9381b767700af8764dc45da",
+      "snippet": "Generate the inline hook root resolver with single-quoted JavaScript literals so Windows Git Bash does not choke on nested escaped double quotes before Node starts. Refresh hooks.json and add regression coverage for parsed hook commands and installed hook manifests.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "6cb194a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "673dff9",
+      "title": "Update README links to new repository name 'ECC'",
+      "date": "2026-05-19T08:58:25Z",
+      "url": "https://github.com/affaan-m/ECC/commit/673dff977f6a6d0f88b70dcf20472764215d3fd4",
+      "snippet": "Changed `everything-claude-code` to `ECC`",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "673dff9|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f93e8f6",
+      "title": "fix(hooks): use shared renameWithRetry in writeWarnState (ecc-context-monitor)",
+      "date": "2026-05-19T02:01:28Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f93e8f6869d4575fa51cc6c8da614e5806302f69",
+      "snippet": "Mirror the previous commit's Windows-EPERM retry on the companion `writeWarnState` in `scripts/hooks/ecc-context-monitor.js`. Same race: two PostToolUse subprocesses writing concurrent debounce state racing on `MoveFileExW`, target-in-use throwing EPERM on Windows even though each writer's tmp path ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f93e8f6|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "116e61d",
+      "title": "fix(lib): retry rename on Windows EPERM/EACCES/EBUSY in writeBridgeAtomic",
+      "date": "2026-05-19T02:01:10Z",
+      "url": "https://github.com/affaan-m/ECC/commit/116e61d8cbf214d15c22f867ff6b69c585a86098",
+      "snippet": "PR #1983 round 1 introduced unique-suffix tmp paths so two concurrent writers no longer share a single `.tmp` file. That fix is correct under POSIX semantics — `rename(2)` is atomic between source and destination, so each writer renames onto the same target without conflict.  Windows `MoveFileExW` i",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "116e61d|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "d904edc",
+      "title": "test(lib): make concurrent-write test actually concurrent + use regex matcher for assert.throws",
+      "date": "2026-05-19T00:44:53Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d904edc6156bc056f39efc0d8be967995a10bc10",
+      "snippet": "Two round-1 review findings in `tests/lib/session-bridge.test.js`, both about test correctness rather than the underlying fix:  1. **greptile P1 + coderabbitai Major + cubic P2 (all three): concurrent-write test ran sequentially.**     The test spawned two child processes with two consecutive    `sp",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d904edc|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5acb01a",
+      "title": "test(lib): concurrent writeBridgeAtomic + tmp-cleanup regression",
+      "date": "2026-05-19T00:31:35Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5acb01a276b7fe61b0cdbef8015dee556b3a2621",
+      "snippet": "Two regression tests pin down the previous two commits' atomic-rename fixes:  1. **concurrent writes don't throw ENOENT or corrupt the file** —    spawns two child Node processes (`tests/__tmp_bridge_writer.js`    created in-test, cleaned up in finally) that each call    `writeBridgeAtomic(sid, …)` ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5acb01a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "7c2f713",
+      "title": "fix(hooks): use unique tmp suffix in writeWarnState (ecc-context-monitor)",
+      "date": "2026-05-19T00:30:07Z",
+      "url": "https://github.com/affaan-m/ECC/commit/7c2f71315b826a3fd27fb89ef70fe02459635d44",
+      "snippet": "Mirror the previous commit's `writeBridgeAtomic` fix on the companion `writeWarnState` in `ecc-context-monitor.js`. Same shape: fixed `${target}.tmp` → `${target}.${process.pid}.${randomNonce}.tmp`, plus best-effort cleanup of the tmp file on `renameSync` failure (throws original error after cleanup",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "7c2f713|gh-commits-everything-claude-code"
+    },
     {
       "id": "feeaa97",
       "title": "docs: regenerate operator readiness dashboard",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "8cfadfe|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4423f10",
-      "title": "docs: sync ECC Tools hosted output scoring (#1891)",
-      "date": "2026-05-14T03:02:23Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/4423f10cfb9e3fa088d04ab10c838c7f7fa74a45",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4423f10|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "3b12fb2",
-      "title": "docs: sync ECC Tools hosted promotion readiness (#1890)",
-      "date": "2026-05-14T02:39:01Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/3b12fb273ffbb9e96dbb21b601e0eed409c3bff9",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "3b12fb2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4fb80d8",
-      "title": "Sync ECC Tools status-aware depth plan roadmap (#1887)",
-      "date": "2026-05-14T02:12:11Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/4fb80d8861ce678a79d2856d81ecd66468c73451",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4fb80d8|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a27831c",
-      "title": "Sync ECC Tools hosted status roadmap (#1886)",
-      "date": "2026-05-14T01:49:42Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/a27831c13e54d0eb0d49a9a9578f06cd6040afbe",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a27831c|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "b24d762",
-      "title": "Sync ECC Tools hosted result history roadmap (#1885)",
-      "date": "2026-05-14T01:31:08Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/b24d762caa23cb67499156ef48008a62e57fe335",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "b24d762|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "f94478e",
-      "title": "docs: sync roadmap after ECC-Tools hosted dispatch",
-      "date": "2026-05-14T00:30:48Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/f94478e5242ce775b854a871014abc9b9e6cc8ca",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "f94478e|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "6cdac19",
-      "title": "docs: sync roadmap after ECC-Tools depth-plan check",
-      "date": "2026-05-14T00:10:38Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/6cdac19764fd19cb572a18f61bdc7a9903ec9767",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "6cdac19|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "af3a206",
-      "title": "docs: sync roadmap after ECC-Tools team backlog job (#1880)",
-      "date": "2026-05-13T23:44:49Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/af3a2064129d1cdad4e5d6e91838916d4ce6e4a1",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "af3a206|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "20f00c1",
-      "title": "docs: sync roadmap after ECC-Tools AI cost job (#1878)",
-      "date": "2026-05-13T23:26:48Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/20f00c1410bce5460a7fedbc9009c8e07841c358",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "20f00c1|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e7a6f13",
-      "title": "docs: sync roadmap after ECC-Tools reference-set job (#1877)",
-      "date": "2026-05-13T23:09:35Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/e7a6f137e5f0c6d8d6545f3005c95adf7e23c7bb",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e7a6f13|gh-commits-everything-claude-code"
     }
   ]
 }

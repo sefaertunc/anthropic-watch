@@ -1,29 +1,29 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-05-18T10:10:53.213Z",
-  "lastCronAttemptedAt": "2026-05-18T10:10:53.213Z",
+  "generatedAt": "2026-05-19T09:51:51.068Z",
+  "lastCronAttemptedAt": "2026-05-19T09:51:51.068Z",
   "indicators": {
     "runHistoryDepth": {
       "state": "warning",
-      "current": 22,
+      "current": 23,
       "expected": 90,
-      "previous": 21,
+      "previous": 22,
       "threshold": {
         "warning": "<expected",
         "fired": "shrunk-from-previous-by->5"
       },
-      "summary": "22 of 90 expected entries (still seeding)"
+      "summary": "23 of 90 expected entries (still seeding)"
     },
     "allJsonItemCount": {
       "state": "ok",
-      "current": 100,
+      "current": 91,
       "expected": 100,
       "previous": 100,
       "threshold": {
         "warning": "<80",
         "fired": "shrunk-from-previous-by->10"
       },
-      "summary": "100 of 100 capacity (steady state)"
+      "summary": "91 of 100 capacity (steady state)"
     },
     "perSourceFeedContinuity": {
       "state": "ok",
@@ -37,7 +37,7 @@
       "details": []
     },
     "cronFreshness": {
-      "lastCronAttemptedAt": "2026-05-18T10:10:53.213Z",
+      "lastCronAttemptedAt": "2026-05-19T09:51:51.068Z",
       "thresholdHours": {
         "warning": 24,
         "fired": 36

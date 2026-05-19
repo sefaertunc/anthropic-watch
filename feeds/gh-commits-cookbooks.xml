@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 18 May 2026 10:10:53 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 09:51:51 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #640 from anthropics/rlm/private-sandbox-updates</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/1a4f78a64a894fc2796072f76fb1041c218544cc</link>
+      <guid isPermaLink="false">1a4f78a</guid>
+      <pubDate>Tue, 19 May 2026 07:51:49 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>feat(managed_agents): sandbox worker templates</description>
+    </item>
+    <item>
+      <title>refactor(self_hosted_sandboxes): use published SDK releases; fix worker API usage</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/74edd9e7e774be07e76277e2371744a814d062d1</link>
+      <guid isPermaLink="false">74edd9e</guid>
+      <pubDate>Tue, 19 May 2026 05:55:37 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Installs: - ant CLI from GitHub releases (v1.9.0 tarball) instead of pinned   prerelease build URLs; drop the unzip step in the Dockerfiles. - Python / TypeScript SDKs from PyPI / npm (anthropic, @anthropic-ai/sdk   ^0.97.0) instead of prerelease build URLs. - Drop the committed package-lock.json fi</description>
+    </item>
+    <item>
+      <title>fix(self_hosted_sandboxes): address review — scrub staging/internal refs, tighten exception handling</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/3c26fa886042cad6ecd0922b7205f7c586da4e9f</link>
+      <guid isPermaLink="false">3c26fa8</guid>
+      <pubDate>Tue, 19 May 2026 04:44:09 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>- wrangler.toml (cf, cf-worker): default ANTHROPIC_BASE_URL to prod;   replace real env_01… ids with placeholders + guidance comment - docs/usage-guide.md: replace real env ids with env_01... placeholders - modal/daytona webhook: catch (WebhookVerificationError, KeyError)   instead of bare Exception</description>
+    </item>
+    <item>
+      <title>refactor(self_hosted_sandboxes): drop tool demos, rename privatesandbox* → self_hosted_sandbox*</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/67aadb7e6564c1e370170a4c61101e68aea9ad79</link>
+      <guid isPermaLink="false">67aadb7</guid>
+      <pubDate>Tue, 19 May 2026 04:40:30 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>- Remove browseruse/, cloudrepl/, livepage/ (custom-tool demos, out of scope) - Rename privatesandbox-* → self_hosted_sandbox-* for all six providers - Rewrite top-level README around the self-hosted sandbox contract - Fix cross-references in sub-READMEs, daytona_webhook.py, modal docstring - Repoin</description>
+    </item>
+    <item>
+      <title>feat(managed_agents): self-hosted sandbox worker templates</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/7d1dc7d034c3a6bd0bdccacf1eba4ffc54e7cdc6</link>
+      <guid isPermaLink="false">7d1dc7d</guid>
+      <pubDate>Tue, 19 May 2026 04:21:55 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Reference implementations for running CMA sessions against self-hosted execution sandboxes via the session webhook + tool_result pattern.  Includes: - privatesandbox-{cf,cf-worker,docker,daytona,modal,vercel}: private   code-execution sandboxes on various compute providers - cloudrepl: QuickJS-WASM </description>
+    </item>
+    <item>
+      <title>Merge pull request #614 from anthropics/lance/managed-agents-slack</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/a102bbecf486e7e8372ad4ecfbf9e9c9aa469fa1</link>
+      <guid isPermaLink="false">a102bbe</guid>
+      <pubDate>Mon, 18 May 2026 21:33:14 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>feat(managed_agents): Slack stateless webhook bridge template</description>
+    </item>
     <item>
       <title>Merge pull request #607 from anthropics/lance/managed-agents-linear</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/b5b727b70a6e2f89b741ee075cca67917d2b3488</link>
