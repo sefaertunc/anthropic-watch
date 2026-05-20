@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 19 May 2026 09:51:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 09:40:11 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #1935 from anthropics/fix/quote-claude-plugin-root-paths</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/bef2b9b246e2072d167a71b7a8d65718ec55d2ef</link>
+      <guid isPermaLink="false">bef2b9b</guid>
+      <pubDate>Wed, 20 May 2026 00:54:18 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>fix: quote ${CLAUDE_PLUGIN_ROOT} in hookify and security-guidance hook commands</description>
+    </item>
+    <item>
+      <title>fix: quote \${CLAUDE_PLUGIN_ROOT} in hookify and security-guidance hook commands</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/b58bdbf5512a8c4f03c24057fe7bd756ce4db962</link>
+      <guid isPermaLink="false">b58bdbf</guid>
+      <pubDate>Tue, 19 May 2026 22:37:56 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Paths containing spaces (common on Windows, e.g. C:\Users\Some User\...) cause shell word-splitting when CLAUDE_PLUGIN_ROOT is unquoted, resulting in hooks erroring with &quot;No such file or directory&quot; on every tool call.  Wraps the path in double quotes for all five affected hook commands. Fixes the pa</description>
+    </item>
+    <item>
+      <title>Bump snowflake-cortex-code to v3.1.0 (#1932)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ae21a9367949f92df4e31231d7efe43eaa08207c</link>
+      <guid isPermaLink="false">ae21a93</guid>
+      <pubDate>Tue, 19 May 2026 17:55:48 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add 24 first-party plugins from major-brand orgs (#1919)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6a05dc286dcfa0f524d5c1f94fd513d2956fa494</link>
+      <guid isPermaLink="false">6a05dc2</guid>
+      <pubDate>Tue, 19 May 2026 13:20:20 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Promote first-party plugins from recognizable companies that publish deep, actively-maintained Claude Code plugins from their official GitHub orgs. All entries are SHA-pinned to current default-branch HEAD.  Development: - apollo-skills (Apollo GraphQL): 14 GraphQL skills + Apollo MCP server - appwr</description>
+    </item>
+    <item>
+      <title>Bump 25 plugin SHA pins to upstream HEAD (huggingface–railway) (#1914)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d42e163958b98eeb578591954d89f4de6b87e86b</link>
+      <guid isPermaLink="false">d42e163</guid>
+      <pubDate>Tue, 19 May 2026 13:19:35 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* Bump 26 plugin SHA pins to upstream HEAD  * Revert mercadopago SHA bump  The new upstream SHA adds a PreToolUse hook that fires on every Bash/Edit/Write/Read in all sessions and globally blocks reading .env files, regardless of project relevance. The policy scan flags this as out of scope for what</description>
+    </item>
     <item>
       <title>Add carta-crm and carta-investors plugins (#1877)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/4bf08583c37e04f764806ea7a96ca74fb80ced1d</link>
@@ -364,46 +404,6 @@
       <link>https://github.com/anthropics/claude-plugins-official/commit/f0b80b185df9a40fa15f33661f9a1855ff77ff34</link>
       <guid isPermaLink="false">f0b80b1</guid>
       <pubDate>Fri, 01 May 2026 19:43:25 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add snowflake-cortex-code plugin (#1671)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/8f221ca1e9209825d7fcb0ec7916e61917d6cc91</link>
-      <guid isPermaLink="false">8f221ca</guid>
-      <pubDate>Fri, 01 May 2026 19:42:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add servicenow-sdk plugin (#1668)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/69fc2571cdd059a41abb762a46396a138c34f82a</link>
-      <guid isPermaLink="false">69fc257</guid>
-      <pubDate>Fri, 01 May 2026 19:42:11 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add desktop-commander plugin (#1667)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/fc98ea052c3d863af5d8f88feeed4b2cd1fc6195</link>
-      <guid isPermaLink="false">fc98ea0</guid>
-      <pubDate>Fri, 01 May 2026 19:41:22 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add sap-mdk-server plugin (#1649)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/9c19d662fc4b52cf0b86d9c686e4c025bfa439f8</link>
-      <guid isPermaLink="false">9c19d66</guid>
-      <pubDate>Fri, 01 May 2026 19:40:45 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add youdotcom-agent-skills plugin (#1646)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/920fdd0d325cc85f06e1ec6ca0addd4ff8f1a142</link>
-      <guid isPermaLink="false">920fdd0</guid>
-      <pubDate>Fri, 01 May 2026 19:40:08 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
     </item>

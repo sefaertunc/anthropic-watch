@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 19 May 2026 09:51:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 09:40:10 GMT</lastBuildDate>
+    <item>
+      <title>2.1.145</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.145</guid>
+      <pubDate>Wed, 20 May 2026 09:39:23 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added claude agents --json to list live Claude sessions as JSON for scripting (tmux-resurrect, status bars, session pickers)
+- Added agentid and parentagentid attributes to claudecode.tool OTEL spans, and fixed trace parenting so background subagent spans nest under the dispatching Agent tool span</description>
+    </item>
     <item>
       <title>2.1.144</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>

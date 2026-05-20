@@ -5,9 +5,64 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-19T09:51:51.032Z",
+  "generated": "2026-05-20T09:40:11.098Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "bef2b9b",
+      "title": "Merge pull request #1935 from anthropics/fix/quote-claude-plugin-root-paths",
+      "date": "2026-05-20T00:54:18Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/bef2b9b246e2072d167a71b7a8d65718ec55d2ef",
+      "snippet": "fix: quote ${CLAUDE_PLUGIN_ROOT} in hookify and security-guidance hook commands",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "bef2b9b|gh-commits-plugins-official"
+    },
+    {
+      "id": "b58bdbf",
+      "title": "fix: quote \\${CLAUDE_PLUGIN_ROOT} in hookify and security-guidance hook commands",
+      "date": "2026-05-19T22:37:56Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/b58bdbf5512a8c4f03c24057fe7bd756ce4db962",
+      "snippet": "Paths containing spaces (common on Windows, e.g. C:\\Users\\Some User\\...) cause shell word-splitting when CLAUDE_PLUGIN_ROOT is unquoted, resulting in hooks erroring with \"No such file or directory\" on every tool call.  Wraps the path in double quotes for all five affected hook commands. Fixes the pa",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "b58bdbf|gh-commits-plugins-official"
+    },
+    {
+      "id": "ae21a93",
+      "title": "Bump snowflake-cortex-code to v3.1.0 (#1932)",
+      "date": "2026-05-19T17:55:48Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/ae21a9367949f92df4e31231d7efe43eaa08207c",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "ae21a93|gh-commits-plugins-official"
+    },
+    {
+      "id": "6a05dc2",
+      "title": "Add 24 first-party plugins from major-brand orgs (#1919)",
+      "date": "2026-05-19T13:20:20Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/6a05dc286dcfa0f524d5c1f94fd513d2956fa494",
+      "snippet": "Promote first-party plugins from recognizable companies that publish deep, actively-maintained Claude Code plugins from their official GitHub orgs. All entries are SHA-pinned to current default-branch HEAD.  Development: - apollo-skills (Apollo GraphQL): 14 GraphQL skills + Apollo MCP server - appwr",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "6a05dc2|gh-commits-plugins-official"
+    },
+    {
+      "id": "d42e163",
+      "title": "Bump 25 plugin SHA pins to upstream HEAD (huggingface–railway) (#1914)",
+      "date": "2026-05-19T13:19:35Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/d42e163958b98eeb578591954d89f4de6b87e86b",
+      "snippet": "* Bump 26 plugin SHA pins to upstream HEAD  * Revert mercadopago SHA bump  The new upstream SHA adds a PreToolUse hook that fires on every Bash/Edit/Write/Read in all sessions and globally blocks reading .env files, regardless of project relevance. The policy scan flags this as out of scope for what",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "d42e163|gh-commits-plugins-official"
+    },
     {
       "id": "4bf0858",
       "title": "Add carta-crm and carta-investors plugins (#1877)",
@@ -502,61 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "f0b80b1|gh-commits-plugins-official"
-    },
-    {
-      "id": "8f221ca",
-      "title": "Add snowflake-cortex-code plugin (#1671)",
-      "date": "2026-05-01T19:42:50Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/8f221ca1e9209825d7fcb0ec7916e61917d6cc91",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "8f221ca|gh-commits-plugins-official"
-    },
-    {
-      "id": "69fc257",
-      "title": "Add servicenow-sdk plugin (#1668)",
-      "date": "2026-05-01T19:42:11Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/69fc2571cdd059a41abb762a46396a138c34f82a",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "69fc257|gh-commits-plugins-official"
-    },
-    {
-      "id": "fc98ea0",
-      "title": "Add desktop-commander plugin (#1667)",
-      "date": "2026-05-01T19:41:22Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/fc98ea052c3d863af5d8f88feeed4b2cd1fc6195",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "fc98ea0|gh-commits-plugins-official"
-    },
-    {
-      "id": "9c19d66",
-      "title": "Add sap-mdk-server plugin (#1649)",
-      "date": "2026-05-01T19:40:45Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/9c19d662fc4b52cf0b86d9c686e4c025bfa439f8",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "9c19d66|gh-commits-plugins-official"
-    },
-    {
-      "id": "920fdd0",
-      "title": "Add youdotcom-agent-skills plugin (#1646)",
-      "date": "2026-05-01T19:40:08Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/920fdd0d325cc85f06e1ec6ca0addd4ff8f1a142",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "920fdd0|gh-commits-plugins-official"
     }
   ]
 }
