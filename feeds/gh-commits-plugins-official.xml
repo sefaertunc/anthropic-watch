@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 20 May 2026 09:40:11 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 09:47:31 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #1953 from anthropics/add-plugin/mcp-tunnels</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6cc16f4b16e80893695da60b8b82a236be9f9546</link>
+      <guid isPermaLink="false">6cc16f4</guid>
+      <pubDate>Thu, 21 May 2026 06:16:43 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Add mcp-tunnels plugin</description>
+    </item>
+    <item>
+      <title>Rename mcp-gateway -&gt; mcp-proxy throughout</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/529d105a7891249e14d9ec7fe53d78692a15bfa4</link>
+      <guid isPermaLink="false">529d105</guid>
+      <pubDate>Thu, 21 May 2026 06:06:15 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Aligns the compose service name, local config filename, and all log/restart commands with the image and binary name. Adds an explicit -config arg since the image CMD still defaults to the legacy /etc/mcp-gateway path.  :house: Remote-Dev: homespace</description>
+    </item>
+    <item>
+      <title>Link to public MCP tunnels docs and use public mcp-proxy image</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/12482fd9e2deccf76d17ab05c17a06c260d884f7</link>
+      <guid isPermaLink="false">12482fd</guid>
+      <pubDate>Thu, 21 May 2026 05:39:34 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>- Replace doc references with platform.claude.com URLs (overview,   quickstart, security, deploy-compose, deploy-helm, console,   troubleshooting, reference, WIF) - Swap the POC mcp-proxy image for the public registry digest used in   the published quickstart  :house: Remote-Dev: homespace</description>
+    </item>
+    <item>
+      <title>Add mcp-tunnels plugin</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0a6ff879090ac8b9e0df9412a198f677a494c4fb</link>
+      <guid isPermaLink="false">0a6ff87</guid>
+      <pubDate>Thu, 21 May 2026 05:24:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Adds the /create-docker-mcp-tunnel command, which drives the MCP tunnels Docker Compose quickstart end to end: preflight checks, certificate generation, proxy config, cloudflared, an optional sample FastMCP server, and verification from Managed Agents and the Messages API.  Migrated from anthropic-e</description>
+    </item>
     <item>
       <title>Merge pull request #1935 from anthropics/fix/quote-claude-plugin-root-paths</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/bef2b9b246e2072d167a71b7a8d65718ec55d2ef</link>
@@ -374,38 +406,6 @@
       <pubDate>Wed, 06 May 2026 01:04:20 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>/maker-setup now falls back to GitHub&apos;s tarball endpoint when git isn&apos;t on PATH, instead of detouring through a package-manager git install. curl and tar ship with macOS, Linux, and Windows 10 1803+ out of the box, so this is zero-install on every target platform — and a CwC attendee just needs the </description>
-    </item>
-    <item>
-      <title>Add cwc-makers plugin: /maker-setup Cardputer onboarding (#1730)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/574a879067b3046fa73a25cf7ab3c11e482ec0d1</link>
-      <guid isPermaLink="false">574a879</guid>
-      <pubDate>Wed, 06 May 2026 00:16:30 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Add cwc-makers plugin: /keep-thinking Cardputer onboarding  Packages the Code-with-Claude Makers (claude.com/cwc-makers) Cardputer experience as a one-command flow for event attendees:  - commands/keep-thinking.md: user entry point — clones   moremas/build-with-claude and runs the m5-onboard provi</description>
-    </item>
-    <item>
-      <title>Add speakai plugin (#1687)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ac45fdae4b7af187b5624599ab054090dedadd94</link>
-      <guid isPermaLink="false">ac45fda</guid>
-      <pubDate>Mon, 04 May 2026 16:00:31 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add oracle-data-platform plugin (#1669)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b392f51899343f35a203260a4b344803de236d13</link>
-      <guid isPermaLink="false">b392f51</guid>
-      <pubDate>Fri, 01 May 2026 20:38:18 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Add oracle-data-platform plugin  * Align entry name with plugin.json</description>
-    </item>
-    <item>
-      <title>Rename adlc plugin to agentforce-adlc (#1672)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f0b80b185df9a40fa15f33661f9a1855ff77ff34</link>
-      <guid isPermaLink="false">f0b80b1</guid>
-      <pubDate>Fri, 01 May 2026 19:43:25 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
     </item>
   </channel>
 </rss>
