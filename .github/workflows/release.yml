@@ -36,7 +36,7 @@ jobs:
           echo "sha=${SHA}" >> "$GITHUB_OUTPUT"
 
       - name: Checkout merge commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ steps.sha.outputs.sha }}
           fetch-depth: 0
