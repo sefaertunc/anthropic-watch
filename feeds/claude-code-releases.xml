@@ -6,7 +6,26 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 21 May 2026 09:47:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 09:32:10 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.148</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.148</link>
+      <guid isPermaLink="false">v2.1.148</guid>
+      <pubDate>Fri, 22 May 2026 01:16:52 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed the Bash tool returning exit code 127 on every command for some users (a regression introduced in 2.1.147)</description>
+    </item>
+    <item>
+      <title>v2.1.147</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.147</link>
+      <guid isPermaLink="false">v2.1.147</guid>
+      <pubDate>Thu, 21 May 2026 20:39:22 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Pinned background sessions (Ctrl+T in claude agents) now stay alive when idle, are restarted in place to apply Claude Code updates, and are shed under memory pressure only after non-pinned sessions
+- Renamed /simplify to /code-review. It now reports correctness bugs at a chosen effo</description>
+    </item>
     <item>
       <title>v2.1.146</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.146</link>
