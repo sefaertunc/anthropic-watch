@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 22 May 2026 09:32:10 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 08:23:57 GMT</lastBuildDate>
+    <item>
+      <title>fix(UI5): Rename GitHub repository and bump SHAs (#1976)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/3449c10cd1f254c2529a4a7e96a094ef118a00a5</link>
+      <guid isPermaLink="false">3449c10</guid>
+      <pubDate>Fri, 22 May 2026 15:48:25 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Updates ui5 and ui5-typescript-conversion to the renamed upstream repo UI5/plugins-coding-agents (formerly UI5/plugins-claude) and bumps both SHA pins to current upstream main.  Co-authored-by: Claude Opus 4.7 (1M context) &lt;noreply@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>Fix MCP URL probe: connection failure was reported as PASS (#1922)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/cb8424c0997bd26effb85fc182ae8737ace3b06f</link>
+      <guid isPermaLink="false">cb8424c</guid>
+      <pubDate>Fri, 22 May 2026 14:57:14 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>curl writes &quot;000&quot; to -w &apos;%{http_code}&apos; on a connection failure AND exits nonzero. The previous fallback put the echo inside the command substitution — both wrote, the captured value was &quot;000000&quot;, and the case statement&apos;s 000) arm didn&apos;t match, so dead hosts fell through to PASS. Move the fallback as</description>
+    </item>
     <item>
       <title>Merge pull request #1953 from anthropics/add-plugin/mcp-tunnels</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/6cc16f4b16e80893695da60b8b82a236be9f9546</link>
@@ -390,22 +406,6 @@
       <pubDate>Wed, 06 May 2026 17:06:55 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Add twilio-developer-kit plugin</description>
-    </item>
-    <item>
-      <title>Add twilio-developer-kit plugin</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/d38ce61a4a15485b0471172b3cfe2aec01c22c06</link>
-      <guid isPermaLink="false">d38ce61</guid>
-      <pubDate>Wed, 06 May 2026 16:25:30 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>cwc-makers: curl+tar fallback when git is missing (#1731)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/06f52cd3ac3e47ecb45228a86183ea2a86e9d6ff</link>
-      <guid isPermaLink="false">06f52cd</guid>
-      <pubDate>Wed, 06 May 2026 01:04:20 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>/maker-setup now falls back to GitHub&apos;s tarball endpoint when git isn&apos;t on PATH, instead of detouring through a package-manager git install. curl and tar ship with macOS, Linux, and Windows 10 1803+ out of the box, so this is zero-install on every target platform — and a CwC attendee just needs the </description>
     </item>
   </channel>
 </rss>
