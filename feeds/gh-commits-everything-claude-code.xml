@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 24 May 2026 08:33:36 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 10:01:53 GMT</lastBuildDate>
+    <item>
+      <title>chore: export marketing campaign command</title>
+      <link>https://github.com/affaan-m/ECC/commit/928076cc08cbb31e8549cea2883b4f51811de1c8</link>
+      <guid isPermaLink="false">928076c</guid>
+      <pubDate>Mon, 25 May 2026 18:19:03 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: sync catalog counts after PR triage</title>
+      <link>https://github.com/affaan-m/ECC/commit/d7813494cb44c49c9ab51b2dcf7174c09a6c4633</link>
+      <guid isPermaLink="false">d781349</guid>
+      <pubDate>Mon, 25 May 2026 18:14:42 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(docs): remove unicode verdict markers</title>
+      <link>https://github.com/affaan-m/ECC/commit/3add394cca759c6cdc826b4810775a14ce5d9ff2</link>
+      <guid isPermaLink="false">3add394</guid>
+      <pubDate>Mon, 25 May 2026 18:13:36 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs(i18n): add German localization scout (#2029)</title>
+      <link>https://github.com/affaan-m/ECC/commit/7fef1ddbebec2acb5d3bd78bb2a405affe47f672</link>
+      <guid isPermaLink="false">7fef1dd</guid>
+      <pubDate>Mon, 25 May 2026 18:12:01 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds de-DE docs, installer wiring, and locale tests. Pre-validated on current main with install manifest checks, markdownlint, locale-install tests, and ECC 2.0 release-surface tests.</description>
+    </item>
+    <item>
+      <title>fix(docs): wrap integration reference links</title>
+      <link>https://github.com/affaan-m/ECC/commit/5b4c4bda978d1d2a1f68dc560d91c1757b2e89c0</link>
+      <guid isPermaLink="false">5b4c4bd</guid>
+      <pubDate>Mon, 25 May 2026 18:11:05 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat(integrations): add opt-in AURA trust adapter (#2026)</title>
+      <link>https://github.com/affaan-m/ECC/commit/1d72dfb2d54f26c1477a77fbec0650b1c0b5094e</link>
+      <guid isPermaLink="false">1d72dfb</guid>
+      <pubDate>Mon, 25 May 2026 18:10:42 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds a read-only opt-in AURA trust-check adapter. Synthetic merge passed validators and 22 AURA offline tests via uvx pytest.</description>
+    </item>
+    <item>
+      <title>feat(mcp): add Squish Memory server catalog entry (#2039)</title>
+      <link>https://github.com/affaan-m/ECC/commit/c2b3899685b3b22094965ef7cc85bf5b26fdf1b5</link>
+      <guid isPermaLink="false">c2b3899</guid>
+      <pubDate>Mon, 25 May 2026 18:10:39 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds Squish Memory to the MCP server catalog. Pre-validated in a synthetic current-main merge.</description>
+    </item>
+    <item>
+      <title>feat: add marketing campaign agent skill and command (#2031)</title>
+      <link>https://github.com/affaan-m/ECC/commit/d29dad1688bc21c23abfc35cff879eddb8c4c232</link>
+      <guid isPermaLink="false">d29dad1</guid>
+      <pubDate>Mon, 25 May 2026 18:10:35 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds marketing-agent, marketing-campaign skill, and marketing-campaign command. Pre-validated in a synthetic current-main merge.</description>
+    </item>
+    <item>
+      <title>feat(skills): add social publisher skill (#2052)</title>
+      <link>https://github.com/affaan-m/ECC/commit/61dd56901b198efeb2e766f29cc6892861c4a364</link>
+      <guid isPermaLink="false">61dd569</guid>
+      <pubDate>Mon, 25 May 2026 18:10:32 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds a SocialClaw-backed social-publisher skill. Pre-validated in a synthetic current-main merge.</description>
+    </item>
+    <item>
+      <title>feat(skills): add frontend accessibility skill (#2048)</title>
+      <link>https://github.com/affaan-m/ECC/commit/8fb728d7eb48e0524b6fc46affae1dd1e0cd09ad</link>
+      <guid isPermaLink="false">8fb728d</guid>
+      <pubDate>Mon, 25 May 2026 18:09:14 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds the frontend-a11y skill for React and Next.js accessibility patterns. Pre-validated against current main with validate-skills and markdownlint.</description>
+    </item>
     <item>
       <title>docs: sync live native payments gate evidence</title>
       <link>https://github.com/affaan-m/ECC/commit/1e8c7e7994223e0ff337d1626cd08e04a1ae67ed</link>
@@ -326,86 +406,6 @@
       <pubDate>Sat, 16 May 2026 23:51:06 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>Add files present in zh-CN but missing from ja-JP: - commands: claw, context-budget, devfleet, docs, projects, prompt-optimize, rules-distill (7 files) - skills: regex-vs-llm-structured-text, remotion-video-creation, repo-scan, research-ops,   returns-reverse-logistics, rules-distill, rust-patterns,</description>
-    </item>
-    <item>
-      <title>fix: recognize legacy salvage manual review backlog</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/aaabe5949edea987f8f8497232f62545ca72bc55</link>
-      <guid isPermaLink="false">aaabe59</guid>
-      <pubDate>Sat, 16 May 2026 07:37:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: clean up lint blockers</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/039c7f111a34372eb0fa16a48510a1e423f9567c</link>
-      <guid isPermaLink="false">039c7f1</guid>
-      <pubDate>Sat, 16 May 2026 07:21:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: tighten supply-chain IOC package matching</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/7420441512cc168898f36a3438433c2089e423a4</link>
-      <guid isPermaLink="false">7420441</guid>
-      <pubDate>Sat, 16 May 2026 07:15:55 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: refresh operator dashboard after fleet review items</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/eb59afb590f6800c5bd84b37c87933dd0720dd67</link>
-      <guid isPermaLink="false">eb59afb</guid>
-      <pubDate>Sat, 16 May 2026 06:21:20 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: record AgentShield fleet review items</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/fc2d23de805ecdc4f31d2b1df75110d5d262349a</link>
-      <guid isPermaLink="false">fc2d23d</guid>
-      <pubDate>Sat, 16 May 2026 06:20:50 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: refresh operator dashboard after harness fleet routing</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/efd05409c31c67a56acc98d1bb7364bffc58e73d</link>
-      <guid isPermaLink="false">efd0540</guid>
-      <pubDate>Sat, 16 May 2026 06:02:39 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: record ECC Tools harness fleet routing</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/6976a2a7ddc7b553d1fe9e2a73080afae6bd6789</link>
-      <guid isPermaLink="false">6976a2a</guid>
-      <pubDate>Sat, 16 May 2026 06:02:17 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: refresh operator dashboard after hosted finding evidence</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/7ac506036cd76b7f67cbff6bd58e404c2c6b9c35</link>
-      <guid isPermaLink="false">7ac5060</guid>
-      <pubDate>Sat, 16 May 2026 05:50:12 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: record ECC Tools hosted finding evidence</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/fb28e469f1b94d18c9196f1cac9dabbf08286ef3</link>
-      <guid isPermaLink="false">fb28e46</guid>
-      <pubDate>Sat, 16 May 2026 05:49:46 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: refresh operator dashboard after ECC Tools fleet sync</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/257aa67b6175db02179c22a2afd9e4e51d190c2b</link>
-      <guid isPermaLink="false">257aa67</guid>
-      <pubDate>Sat, 16 May 2026 05:38:36 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>

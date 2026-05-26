@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 24 May 2026 08:33:36 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 10:01:53 GMT</lastBuildDate>
+    <item>
+      <title>ci: migrate claude-code-action workflows to Workload Identity Federation (#662)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/3c30b020594de29a7f24ee579c511ac3ac45fb6a</link>
+      <guid isPermaLink="false">3c30b02</guid>
+      <pubDate>Sun, 24 May 2026 21:44:59 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Replaces the static ANTHROPIC_API_KEY repo secret with Workload Identity Federation across the 6 workflows that invoke claude-code-action: the action exchanges this job&apos;s GitHub OIDC token for a short-lived access token. The federation rule is bound to this repository (repository_id-pinned).  - Adds</description>
+    </item>
     <item>
       <title>Merge pull request #601 from anthropics/devsec/pin-actions</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/39a350b6790c132337dcc3ec35240728fcc1dc0e</link>

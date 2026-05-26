@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-24T08:33:36.238Z",
+  "generated": "2026-05-26T10:01:53.083Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "1b527e2",
+      "title": "ci: migrate scan-plugins.yml to Workload Identity Federation auth (#1991)",
+      "date": "2026-05-24T21:48:46Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/1b527e2ee74e6dbd198e22cd41701c3b6f47dfec",
+      "snippet": "* ci: migrate scan-plugins.yml to Workload Identity Federation auth  Replaces the static ANTHROPIC_API_KEY repo secret with Workload Identity Federation: the scan-plugins shared action mints a GitHub OIDC token (id-token: write) and the claude CLI exchanges it for a short-lived bearer. The federatio",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "1b527e2|gh-commits-plugins-official"
+    },
     {
       "id": "3449c10",
       "title": "fix(UI5): Rename GitHub repository and bump SHAs (#1976)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "e324370|gh-commits-plugins-official"
-    },
-    {
-      "id": "d6947b6",
-      "title": "Merge pull request #1748 from anthropics/add-twilio-developer-kit",
-      "date": "2026-05-06T17:06:55Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/d6947b6f35ada84a029349c76e9e44b1d35fb71e",
-      "snippet": "Add twilio-developer-kit plugin",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "d6947b6|gh-commits-plugins-official"
     }
   ]
 }
