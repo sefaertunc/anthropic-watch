@@ -5,9 +5,97 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-27T09:58:02.981Z",
+  "generated": "2026-05-28T10:08:14.037Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "06b6d5b",
+      "title": "Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata (#1980)",
+      "date": "2026-05-28T02:54:06Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/06b6d5b96fe846f05d79e2818501700a58aa49e5",
+      "snippet": "* Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata  Picked up from sethconvex's PR #1966 (auto-closed by membership gate). Original entry added by Tobin in PR #1918 (2026-05-18).  Changes to the Convex marketplace.json entry:  - **Rename slug** `convex-backend` → `conve",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "06b6d5b|gh-commits-plugins-official"
+    },
+    {
+      "id": "2a3dd81",
+      "title": "Merge pull request #2055 from anthropics/fix-windows-agentic-reviewer",
+      "date": "2026-05-27T22:43:11Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/2a3dd8114676c7075807389e0f6b482adba0fc8b",
+      "snippet": "security-guidance: enable agentic commit reviewer on Windows",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "2a3dd81|gh-commits-plugins-official"
+    },
+    {
+      "id": "c112447",
+      "title": "Address Windows verification: --prefer-binary + pywin32 bootstrap",
+      "date": "2026-05-27T22:07:33Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/c11244778df46ce0cf8192377637b09f8c323351",
+      "snippet": "The first round of this PR removed SKIP_WIN32, fixed venv_py to use Scripts/python.exe, and added Lib/site-packages to the consumer glob — all necessary. Windows verification (Win11 ARM64, Py 3.13, Git Bash) showed two more blockers, both addressed here.  1. Pip dependency resolver picks unbuildable",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "c112447|gh-commits-plugins-official"
+    },
+    {
+      "id": "4decd2e",
+      "title": "Enable agentic commit reviewer on Windows",
+      "date": "2026-05-27T21:50:51Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/4decd2e3b26f6c17e458fcdcf2dd60aef8566f3e",
+      "snippet": "The agentic reviewer is silently no-op on Windows today. SessionStart bootstrap (ensure_agent_sdk.py) short-circuits with SKIP_WIN32 because the consumer glob in llm.py only matches POSIX venv layout (lib/pythonX.Y/site-packages). On Windows, venvs use Lib/site-packages (capital L, no pythonX.Y subd",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "4decd2e|gh-commits-plugins-official"
+    },
+    {
+      "id": "e77ff91",
+      "title": "Merge pull request #2054 from anthropics/fix-2043-windows-posix-path",
+      "date": "2026-05-27T21:49:38Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/e77ff913adf42724268d1fa22f8f241b51ae7d61",
+      "snippet": "security-guidance: convert POSIX script paths to Windows form on Git Bash",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "e77ff91|gh-commits-plugins-official"
+    },
+    {
+      "id": "390c2fe",
+      "title": "Convert POSIX script paths to Windows form before exec on Git Bash",
+      "date": "2026-05-27T21:04:09Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/390c2fe785f6d67e1279dbcb7f6b38f852bf7a87",
+      "snippet": "Fixes #2043. On Git Bash for Windows, Claude Code hands script paths to the shim in POSIX form (`/c/Users/...`). We exec a Windows `python.exe` (the `python3` Microsoft Store stub fails the probe), and Windows Python interprets the leading `/` as the root of the current drive — `/c/...` becomes `C:\\",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "390c2fe|gh-commits-plugins-official"
+    },
+    {
+      "id": "4c4b300",
+      "title": "ci: validate Apache 2.0 LICENSE file exists in every plugin (#2028)",
+      "date": "2026-05-27T16:25:23Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/4c4b3009e067493def95aabd0ce34a59d45eb18d",
+      "snippet": "Co-authored-by: Claude <noreply@anthropic.com>",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "4c4b300|gh-commits-plugins-official"
+    },
+    {
+      "id": "fd06e99",
+      "title": "Bump carta-* SHA pins (3 plugins) to upstream HEAD (#2052)",
+      "date": "2026-05-27T16:23:47Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/fd06e9957e6b178fd1e0979c2ac37f68fa7bfd47",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "fd06e99|gh-commits-plugins-official"
+    },
     {
       "id": "a8f5f1b",
       "title": "Merge pull request #2041 from anthropics/security-guidance-update",
@@ -469,94 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "00679ae|gh-commits-plugins-official"
-    },
-    {
-      "id": "76b35e9",
-      "title": "Tighten policy scan: hook scope, telemetry, disclosure; make blocking (#1771)",
-      "date": "2026-05-07T22:34:32Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/76b35e91d1c99c090b1a08dade53bcc5e352c1b2",
-      "snippet": "* Tighten policy scan: hook scope, telemetry, disclosure; make blocking  policy/prompt.md — adds Part 2 (hook scope and disclosure): - Enumerate every registered hook and read its source. - Flag has_broad_scope_hooks when UserPromptSubmit/PreToolUse/   PostToolUse runs without a project-relevance ga",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "76b35e9|gh-commits-plugins-official"
-    },
-    {
-      "id": "ccd0c95",
-      "title": "Remove flint from marketplace (#1769)",
-      "date": "2026-05-07T21:01:43Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/ccd0c95a3de5eb2c7eb5011caa5278fecb99fcad",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "ccd0c95|gh-commits-plugins-official"
-    },
-    {
-      "id": "fcb2361",
-      "title": "Remove optibot from marketplace (#1768)",
-      "date": "2026-05-07T21:01:05Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/fcb236134fabe4e87d9f5383c011c50289eb6087",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "fcb2361|gh-commits-plugins-official"
-    },
-    {
-      "id": "7ce4a6f",
-      "title": "Add clickhouse plugin (#1683)",
-      "date": "2026-05-07T20:31:12Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/7ce4a6fb5354ca2b89b3f8d527c8c647f7f232dc",
-      "snippet": "* Add clickhouse plugin  * Pin clickhouse to SHA db1c108",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "7ce4a6f|gh-commits-plugins-official"
-    },
-    {
-      "id": "83cbef8",
-      "title": "Add pigment plugin (#1684)",
-      "date": "2026-05-07T20:31:06Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/83cbef8d254e4a7493ff239acb5cd3c169cb837b",
-      "snippet": "* Add pigment plugin  * Pin pigment to SHA 5bdf088",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "83cbef8|gh-commits-plugins-official"
-    },
-    {
-      "id": "2c6fb0c",
-      "title": "Add qdrant-skills plugin (#1685)",
-      "date": "2026-05-07T20:31:00Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/2c6fb0c6f2294b008ca82d39f53bf5eefedf8c26",
-      "snippet": "* Add qdrant-skills plugin  * Pin qdrant-skills to SHA 9f935f8",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "2c6fb0c|gh-commits-plugins-official"
-    },
-    {
-      "id": "494115a",
-      "title": "Add zilliz plugin (#1686)",
-      "date": "2026-05-07T20:30:55Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/494115a20745cac8e52affa0d97db931d47d1ed9",
-      "snippet": "* Add zilliz plugin  * Pin zilliz to SHA 17cf04e",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "494115a|gh-commits-plugins-official"
-    },
-    {
-      "id": "89e002a",
-      "title": "Add dash0 plugin (#1641)",
-      "date": "2026-05-07T20:30:50Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/89e002a367c95198815c385861e962dd053a5702",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "89e002a|gh-commits-plugins-official"
     }
   ]
 }

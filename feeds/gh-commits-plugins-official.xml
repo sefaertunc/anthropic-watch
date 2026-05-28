@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 27 May 2026 09:58:02 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 10:08:14 GMT</lastBuildDate>
+    <item>
+      <title>Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata (#1980)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/06b6d5b96fe846f05d79e2818501700a58aa49e5</link>
+      <guid isPermaLink="false">06b6d5b</guid>
+      <pubDate>Thu, 28 May 2026 02:54:06 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata  Picked up from sethconvex&apos;s PR #1966 (auto-closed by membership gate). Original entry added by Tobin in PR #1918 (2026-05-18).  Changes to the Convex marketplace.json entry:  - **Rename slug** `convex-backend` → `conve</description>
+    </item>
+    <item>
+      <title>Merge pull request #2055 from anthropics/fix-windows-agentic-reviewer</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/2a3dd8114676c7075807389e0f6b482adba0fc8b</link>
+      <guid isPermaLink="false">2a3dd81</guid>
+      <pubDate>Wed, 27 May 2026 22:43:11 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: enable agentic commit reviewer on Windows</description>
+    </item>
+    <item>
+      <title>Address Windows verification: --prefer-binary + pywin32 bootstrap</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c11244778df46ce0cf8192377637b09f8c323351</link>
+      <guid isPermaLink="false">c112447</guid>
+      <pubDate>Wed, 27 May 2026 22:07:33 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The first round of this PR removed SKIP_WIN32, fixed venv_py to use Scripts/python.exe, and added Lib/site-packages to the consumer glob — all necessary. Windows verification (Win11 ARM64, Py 3.13, Git Bash) showed two more blockers, both addressed here.  1. Pip dependency resolver picks unbuildable</description>
+    </item>
+    <item>
+      <title>Enable agentic commit reviewer on Windows</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/4decd2e3b26f6c17e458fcdcf2dd60aef8566f3e</link>
+      <guid isPermaLink="false">4decd2e</guid>
+      <pubDate>Wed, 27 May 2026 21:50:51 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The agentic reviewer is silently no-op on Windows today. SessionStart bootstrap (ensure_agent_sdk.py) short-circuits with SKIP_WIN32 because the consumer glob in llm.py only matches POSIX venv layout (lib/pythonX.Y/site-packages). On Windows, venvs use Lib/site-packages (capital L, no pythonX.Y subd</description>
+    </item>
+    <item>
+      <title>Merge pull request #2054 from anthropics/fix-2043-windows-posix-path</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e77ff913adf42724268d1fa22f8f241b51ae7d61</link>
+      <guid isPermaLink="false">e77ff91</guid>
+      <pubDate>Wed, 27 May 2026 21:49:38 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: convert POSIX script paths to Windows form on Git Bash</description>
+    </item>
+    <item>
+      <title>Convert POSIX script paths to Windows form before exec on Git Bash</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/390c2fe785f6d67e1279dbcb7f6b38f852bf7a87</link>
+      <guid isPermaLink="false">390c2fe</guid>
+      <pubDate>Wed, 27 May 2026 21:04:09 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes #2043. On Git Bash for Windows, Claude Code hands script paths to the shim in POSIX form (`/c/Users/...`). We exec a Windows `python.exe` (the `python3` Microsoft Store stub fails the probe), and Windows Python interprets the leading `/` as the root of the current drive — `/c/...` becomes `C:\</description>
+    </item>
+    <item>
+      <title>ci: validate Apache 2.0 LICENSE file exists in every plugin (#2028)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/4c4b3009e067493def95aabd0ce34a59d45eb18d</link>
+      <guid isPermaLink="false">4c4b300</guid>
+      <pubDate>Wed, 27 May 2026 16:25:23 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>Bump carta-* SHA pins (3 plugins) to upstream HEAD (#2052)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/fd06e9957e6b178fd1e0979c2ac37f68fa7bfd47</link>
+      <guid isPermaLink="false">fd06e99</guid>
+      <pubDate>Wed, 27 May 2026 16:23:47 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #2041 from anthropics/security-guidance-update</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/a8f5f1b3c940d98694ac74032d7de55439c8394b</link>
@@ -342,70 +406,6 @@
       <pubDate>Sat, 09 May 2026 20:40:06 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>MCP server for SAP Fiori development tools — build and modify SAP Fiori applications with AI assistance. Pinned at d9d4ab7e (latest main of SAP/open-ux-tools).</description>
-    </item>
-    <item>
-      <title>Tighten policy scan: hook scope, telemetry, disclosure; make blocking (#1771)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/76b35e91d1c99c090b1a08dade53bcc5e352c1b2</link>
-      <guid isPermaLink="false">76b35e9</guid>
-      <pubDate>Thu, 07 May 2026 22:34:32 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Tighten policy scan: hook scope, telemetry, disclosure; make blocking  policy/prompt.md — adds Part 2 (hook scope and disclosure): - Enumerate every registered hook and read its source. - Flag has_broad_scope_hooks when UserPromptSubmit/PreToolUse/   PostToolUse runs without a project-relevance ga</description>
-    </item>
-    <item>
-      <title>Remove flint from marketplace (#1769)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ccd0c95a3de5eb2c7eb5011caa5278fecb99fcad</link>
-      <guid isPermaLink="false">ccd0c95</guid>
-      <pubDate>Thu, 07 May 2026 21:01:43 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Remove optibot from marketplace (#1768)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/fcb236134fabe4e87d9f5383c011c50289eb6087</link>
-      <guid isPermaLink="false">fcb2361</guid>
-      <pubDate>Thu, 07 May 2026 21:01:05 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add clickhouse plugin (#1683)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/7ce4a6fb5354ca2b89b3f8d527c8c647f7f232dc</link>
-      <guid isPermaLink="false">7ce4a6f</guid>
-      <pubDate>Thu, 07 May 2026 20:31:12 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Add clickhouse plugin  * Pin clickhouse to SHA db1c108</description>
-    </item>
-    <item>
-      <title>Add pigment plugin (#1684)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/83cbef8d254e4a7493ff239acb5cd3c169cb837b</link>
-      <guid isPermaLink="false">83cbef8</guid>
-      <pubDate>Thu, 07 May 2026 20:31:06 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Add pigment plugin  * Pin pigment to SHA 5bdf088</description>
-    </item>
-    <item>
-      <title>Add qdrant-skills plugin (#1685)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/2c6fb0c6f2294b008ca82d39f53bf5eefedf8c26</link>
-      <guid isPermaLink="false">2c6fb0c</guid>
-      <pubDate>Thu, 07 May 2026 20:31:00 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Add qdrant-skills plugin  * Pin qdrant-skills to SHA 9f935f8</description>
-    </item>
-    <item>
-      <title>Add zilliz plugin (#1686)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/494115a20745cac8e52affa0d97db931d47d1ed9</link>
-      <guid isPermaLink="false">494115a</guid>
-      <pubDate>Thu, 07 May 2026 20:30:55 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Add zilliz plugin  * Pin zilliz to SHA 17cf04e</description>
-    </item>
-    <item>
-      <title>Add dash0 plugin (#1641)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/89e002a367c95198815c385861e962dd053a5702</link>
-      <guid isPermaLink="false">89e002a</guid>
-      <pubDate>Thu, 07 May 2026 20:30:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
     </item>
   </channel>
 </rss>
