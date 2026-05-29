@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 28 May 2026 10:08:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 09:58:37 GMT</lastBuildDate>
+    <item>
+      <title>fix: surface warn-only PreToolUse hooks (#2084)</title>
+      <link>https://github.com/affaan-m/ECC/commit/64cd1ba248e77e377e76f70fc4e6434bfdddd511</link>
+      <guid isPermaLink="false">64cd1ba</guid>
+      <pubDate>Thu, 28 May 2026 11:45:46 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add React language track with agents, skills, rules, and commands (#2024)</title>
+      <link>https://github.com/affaan-m/ECC/commit/04c68e483af8c2cc2717ad4b8013c3673124836c</link>
+      <guid isPermaLink="false">04c68e4</guid>
+      <pubDate>Thu, 28 May 2026 11:32:52 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat(rules): add rules/react/ track  Five rule files mirroring per-language convention (coding-style, hooks, patterns, security, testing). Each has `paths:` glob frontmatter for auto-activation when editing matching files.  - coding-style.md: file extensions, naming, JSX, RSC boundary - hooks.md: </description>
+    </item>
+    <item>
+      <title>docs: neutralize public ECC metadata (#2083)</title>
+      <link>https://github.com/affaan-m/ECC/commit/7d6ca9612dc745efab47bb0ec87a1550b26e8afa</link>
+      <guid isPermaLink="false">7d6ca96</guid>
+      <pubDate>Thu, 28 May 2026 11:30:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>chore: export marketing campaign command</title>
       <link>https://github.com/affaan-m/ECC/commit/928076cc08cbb31e8549cea2883b4f51811de1c8</link>
@@ -382,30 +406,6 @@
       <pubDate>Sun, 17 May 2026 06:13:33 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>fix(ja-JP): translate frontmatter description to Japanese in 3 skills</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/6b59276d76c5083b0bcc0f0dba595ec1bfcf4d49</link>
-      <guid isPermaLink="false">6b59276</guid>
-      <pubDate>Sun, 17 May 2026 00:13:45 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>- skill-scout: translate description field - tinystruct-patterns: translate description field - ui-to-vue: translate description field</description>
-    </item>
-    <item>
-      <title>fix(ja-JP): address review feedback and add 5 missing skills</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/fabb4d0c110794f9662461be722edaffd714e9c7</link>
-      <guid isPermaLink="false">fabb4d0</guid>
-      <pubDate>Sun, 17 May 2026 00:08:06 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>- Fix Chinese term &apos;提炼&apos; → &apos;蒸留&apos; in commands/rules-distill.md - Fix &apos;重大な所見&apos; (Critical→重大) in agents/opensource-sanitizer.md - Fix non-transactional persistence in swift-actor-persistence/SKILL.md:   add rollback logic so cache stays consistent if disk write fails - Clarify anti-pattern wording: &apos;confi</description>
-    </item>
-    <item>
-      <title>docs: fix zh-CN parity — add 44 missing files to ja-JP</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/d66b5fa48048fb933d781e44dc651003ad833944</link>
-      <guid isPermaLink="false">d66b5fa</guid>
-      <pubDate>Sat, 16 May 2026 23:51:06 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Add files present in zh-CN but missing from ja-JP: - commands: claw, context-budget, devfleet, docs, projects, prompt-optimize, rules-distill (7 files) - skills: regex-vs-llm-structured-text, remotion-video-creation, repo-scan, research-ops,   returns-reverse-logistics, rules-distill, rust-patterns,</description>
     </item>
   </channel>
 </rss>

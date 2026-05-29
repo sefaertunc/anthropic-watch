@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 28 May 2026 10:08:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 09:58:37 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2077 from anthropics/fix-1358-1375-1783-hook-output-protocol</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8435428dfc0fd6e4fea1c8e505ef5022b1f0d403</link>
+      <guid isPermaLink="false">8435428</guid>
+      <pubDate>Fri, 29 May 2026 07:20:48 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: emit findings via hookSpecificOutput.additionalContext (#1358 #1375 #1783)</description>
+    </item>
+    <item>
+      <title>security-guidance: emit findings via hookSpecificOutput.additionalContext (#1358 #1375 #1783)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/37ffc76005c4c63c50d91943bafa8d96de4b17b1</link>
+      <guid isPermaLink="false">37ffc76</guid>
+      <pubDate>Fri, 29 May 2026 06:53:04 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes #1358, #1375, and #1783 — three related complaints about the hook output protocol used at the three asyncRewake exit-2 sites (handle_commit_review_posttooluse, handle_push_sweep_posttooluse, handle_stop_hook).  The old shape at each site was:    emit_metrics({...})                             </description>
+    </item>
+    <item>
+      <title>Merge pull request #2076 from anthropics/fix-2048-graphite-gt-workflow</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/982070e51f0227b638a861cb5f685e000d673d6b</link>
+      <guid isPermaLink="false">982070e</guid>
+      <pubDate>Fri, 29 May 2026 06:44:58 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: detect Graphite (gt) commands as commit/push events (#2048)</description>
+    </item>
+    <item>
+      <title>Merge pull request #2075 from anthropics/fix-2056-windows-unicode-decode</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/68a700837c0c8eaf803375c3e14727dde4a9b83c</link>
+      <guid isPermaLink="false">68a7008</guid>
+      <pubDate>Fri, 29 May 2026 06:36:36 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: lenient UTF-8 decode in 6 git-subprocess helpers (#2056)</description>
+    </item>
+    <item>
+      <title>security-guidance: detect Graphite (gt) commands as commit/push events (#2048)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/521230897980f10f503f41e2cecc81af98fe8dcb</link>
+      <guid isPermaLink="false">5212308</guid>
+      <pubDate>Fri, 29 May 2026 06:33:14 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes anthropics/claude-plugins-official#2048 — teams using Graphite for stacked PRs (`gt create` / `gt modify` / `gt submit`) never get the commit/push agentic review because the hook matcher only catches literal `git commit` / `git push` Bash calls. gt shells out to git as a subprocess, but the ho</description>
+    </item>
+    <item>
+      <title>Merge pull request #2074 from anthropics/fix-xss-rules-non-js-false-positives</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/3d349d40b9f25044568a4bee48e73eb635135fb9</link>
+      <guid isPermaLink="false">3d349d4</guid>
+      <pubDate>Fri, 29 May 2026 06:18:17 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: gate XSS pattern rules to JS-family files</description>
+    </item>
+    <item>
+      <title>security-guidance: lenient UTF-8 decode in 6 git-subprocess helpers (#2056)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6a63e35e75f1888ed981614ca518b2f257a7cfc7</link>
+      <guid isPermaLink="false">6a63e35</guid>
+      <pubDate>Fri, 29 May 2026 06:15:16 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes anthropics/claude-plugins-official#2056 — on Windows, when the worktree contains an untracked file whose name has a character undefined in cp1252 (accented capitals like Á Í Ï Ð Ý, most CJK, emoji), the UserPromptSubmit hook crashes:    Exception in thread Thread-5 (_readerthread):     Unicode</description>
+    </item>
+    <item>
+      <title>security-guidance: gate XSS pattern rules to JS-family files</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/12a5376e205c8c519a53ee06115bd279a1e121d1</link>
+      <guid isPermaLink="false">12a5376</guid>
+      <pubDate>Fri, 29 May 2026 06:07:53 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Closes #410, #2037, #2045, #1640, #1280, #1329, #1341, #255, anthropics/claude-code#46720 (partial closes on overlap with other rules).  The plugin&apos;s substring-only XSS / browser-DOM rules (new_function_injection, react_dangerously_set_html, document_write_xss, innerHTML_xss, outerHTML_xss, insertAd</description>
+    </item>
+    <item>
+      <title>Merge pull request #2073 from anthropics/fix-2071-macos-python-39</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/04127de5d1e4ebadfa3190c55693e972b4c03acd</link>
+      <guid isPermaLink="false">04127de</guid>
+      <pubDate>Fri, 29 May 2026 05:59:23 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: enable LLM review on default macOS Python 3.9 (#2071)</description>
+    </item>
+    <item>
+      <title>security-guidance: enable LLM review on default macOS Python 3.9</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a67587c81615b0cb92f17ea7dba2ff1b34a9050d</link>
+      <guid isPermaLink="false">a67587c</guid>
+      <pubDate>Fri, 29 May 2026 05:46:03 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes anthropics/claude-plugins-official#2071 — on macOS where the default `python3` is Apple&apos;s Command Line Tools Python 3.9.6, the plugin&apos;s agentic commit reviewer silently does not run, even when the user has a newer Python installed.  Three compounding factors in the bug:  1. `sg-python.sh` only</description>
+    </item>
     <item>
       <title>Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata (#1980)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/06b6d5b96fe846f05d79e2818501700a58aa49e5</link>
@@ -326,86 +406,6 @@
       <pubDate>Tue, 12 May 2026 16:58:41 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>code-modernization: fix pipeline gaps, redesign harden, dry-run hardening</description>
-    </item>
-    <item>
-      <title>code-modernization: harden writes a patch instead of editing legacy; make map/security guidance language-agnostic</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/5e4a45001d608ce34437181d96340faa1f5899c9</link>
-      <guid isPermaLink="false">5e4a450</guid>
-      <pubDate>Mon, 11 May 2026 23:46:03 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>- modernize-harden: never edits legacy/ anymore. Writes findings plus a   reviewed unified diff to analysis/&lt;system&gt;/security_remediation.patch.   A second security-auditor pass reviews each hunk (RESOLVES / PARTIAL /   INTRODUCES-RISK) before presenting. The user reviews and applies the   patch del</description>
-    </item>
-    <item>
-      <title>Harden code-modernization plugin from a real CardDemo dry run</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/22a1b2597750246f104c88e66f0c379932d05c9b</link>
-      <guid isPermaLink="false">22a1b25</guid>
-      <pubDate>Mon, 11 May 2026 23:28:27 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Fixes found by running the discovery workflow against the AWS CardDemo mainframe sample (~50 KLOC of COBOL/CICS/JCL/BMS/VSAM):  - modernize-assess: add scc -&gt; cloc -&gt; find/wc fallback chain with the   COCOMO-II formula so Step 1 works when scc isn&apos;t installed; same for   portfolio-mode cloc/lizard. </description>
-    </item>
-    <item>
-      <title>Fix code-modernization plugin: align README with commands, fix pipeline gaps</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/718818146e93eeef3a94a3dac9ffa087558115cc</link>
-      <guid isPermaLink="false">7188181</guid>
-      <pubDate>Mon, 11 May 2026 23:17:59 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>- modernize-brief: read TOPOLOGY.html (what modernize-map actually   produces) instead of nonexistent TOPOLOGY.md, and tell the user which   command produces each missing input. - README: rewrite the Commands section to match actual command behavior —   correct output filenames, ordering (brief is t</description>
-    </item>
-    <item>
-      <title>Make Scan Plugins a viable required check; auto-dispatch on bump PRs (#1815)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/45896c8f2fe68e68ca2a8e3554d4441f48475431</link>
-      <guid isPermaLink="false">45896c8</guid>
-      <pubDate>Mon, 11 May 2026 20:14:33 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Scan Plugins is meant to gate every change to marketplace.json, but two gaps made that unenforceable:  1. The bump workflow opens PRs with GITHUB_TOKEN, which GitHub exempts    from on:pull_request triggers. Weekly bump PRs (e.g. #1809) get no    scan check at all. 2. The workflow had a paths filter</description>
-    </item>
-    <item>
-      <title>Add airtable plugin (#1817)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/7f6f5a88364b3eaf44e3859e3bca47f17ca4eeee</link>
-      <guid isPermaLink="false">7f6f5a8</guid>
-      <pubDate>Mon, 11 May 2026 20:12:42 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Adds the airtable marketplace entry. Sourced from Airtable/skills at plugins/airtable, pinned to aaeb4f3e (latest main, tag 2026-05-06). Bundles the official Airtable MCP server (mcp.airtable.com/mcp) plus skills for the Airtable data model and filter syntax.  https://claude.ai/code/session_01Vom6Rz</description>
-    </item>
-    <item>
-      <title>Bump bump-plugin-shas action so bump commits are signed (#1814)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/fe8f81309e7b5c983d1e2a23ed476efec458057d</link>
-      <guid isPermaLink="false">fe8f813</guid>
-      <pubDate>Mon, 11 May 2026 19:45:40 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>The pinned version of anthropics/claude-plugins-community&apos;s bump-plugin-shas action creates the bump commit with a local git commit, which is unsigned and unmergeable under the required_signatures ruleset on main. The new SHA creates the commit via the GraphQL createCommitOnBranch mutation, which Gi</description>
-    </item>
-    <item>
-      <title>Add mercadopago plugin (#1813)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/6196a61bdeece7b9889ecda1e45bd7085788ae75</link>
-      <guid isPermaLink="false">6196a61</guid>
-      <pubDate>Mon, 11 May 2026 17:37:36 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Mercado Pago full-product integration toolkit — 13 skills, agents, and a bundled MCP for live API data. Sourced from mercadopago/mercadopago-claude-marketplace at plugins/mercadopago, pinned to 1de8d97e.  Closes #1272  https://claude.ai/code/session_01XCupEyAPLqxo2eHgVoWevi  Co-authored-by: Claude &lt;</description>
-    </item>
-    <item>
-      <title>Add sap-cds-mcp plugin + SAP SE author block on cds-mcp (#1778)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/480a410cc0dd25378b069f65f9ae44b7808b300f</link>
-      <guid isPermaLink="false">480a410</guid>
-      <pubDate>Mon, 11 May 2026 16:54:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>CAP CDS work as one cohesive unit, split out of #1616 to keep that PR narrowly scoped to sap-hana-cli (which is currently held on an upstream plugin.json fix).  - Adds new sap-cds-mcp entry alongside existing cds-mcp (additive,   non-breaking — both point to cap-js/mcp-server). Pinned at 8ce2e13a. -</description>
-    </item>
-    <item>
-      <title>Align SAP author blocks on existing entries (#1779)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0ed793245971a677bb97356161ee58f61315973f</link>
-      <guid isPermaLink="false">0ed7932</guid>
-      <pubDate>Mon, 11 May 2026 16:51:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Metadata-only refresh per the SAP namespace policy (Florian/Klaus/Avital, 2026-05-04). No slug renames, no new entries.  - sap-mdk-server: expand author from {&quot;name&quot;:&quot;SAP&quot;} to the unified   SAP SE block with ospo@sap.com. - ui5: add unified UI5 author block (openui5@sap.com per Florian&apos;s   carve-out</description>
-    </item>
-    <item>
-      <title>Add sap-fiori-mcp-server plugin (#1777)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/00679aef889efe36bb0389f81d70b6229a2013ee</link>
-      <guid isPermaLink="false">00679ae</guid>
-      <pubDate>Sat, 09 May 2026 20:40:06 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>MCP server for SAP Fiori development tools — build and modify SAP Fiori applications with AI assistance. Pinned at d9d4ab7e (latest main of SAP/open-ux-tools).</description>
     </item>
   </channel>
 </rss>
