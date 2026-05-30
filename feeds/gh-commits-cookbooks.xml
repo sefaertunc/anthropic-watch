@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 29 May 2026 09:58:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 08:31:40 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #678 from anthropics/kevintang/agent-sdk-hosting-followup</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/f1d568d5da7f9167d0830a459b9b66b8627d49a5</link>
+      <guid isPermaLink="false">f1d568d</guid>
+      <pubDate>Sat, 30 May 2026 01:31:29 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>hosting: lint fixes + address #677 review comments</description>
+    </item>
+    <item>
+      <title>hosting: address #677 review comments</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/4c55042d610b228b8983fafccdcfd0849e9eca5d</link>
+      <guid isPermaLink="false">4c55042</guid>
+      <pubDate>Fri, 29 May 2026 02:55:17 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>- server.py, gateway/main.py: note that _limit_body_size only checks   Content-Length; chunked bodies pass through (review #1) - gateway/main.py: strip token:tenant pairs and skip malformed entries   when parsing GATEWAY_TENANTS; log loaded count (review #2) - requirements.txt, server.py _remember, </description>
+    </item>
+    <item>
+      <title>chore(hosting): ruff format + lint fixes</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/14c14bc2f7d02551fbd99d0d41a6b62632f77815</link>
+      <guid isPermaLink="false">14c14bc</guid>
+      <pubDate>Fri, 29 May 2026 02:53:49 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #677 from anthropics/kevintang/agent-sdk-hosting-public</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/31cfc00ca5e8049a23a410d1fee0dd8428104cad</link>

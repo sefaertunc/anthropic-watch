@@ -5,9 +5,64 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-29T09:58:37.544Z",
+  "generated": "2026-05-30T08:31:40.878Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "c40770a",
+      "title": "Merge pull request #2078 from anthropics/fix-1868-claude-config-dir",
+      "date": "2026-05-29T23:14:35Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/c40770ae5a1d6855fce096c5b747e709ec946b2b",
+      "snippet": "security-guidance: respect CLAUDE_CONFIG_DIR for plugin state files (#1868)",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "c40770a|gh-commits-plugins-official"
+    },
+    {
+      "id": "42487ee",
+      "title": "Merge pull request #2091 from anthropics/fix-2089-if-clause-regression",
+      "date": "2026-05-29T20:39:45Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/42487ee6fd791694cc9724f5d065c5872afc2a19",
+      "snippet": "URGENT: security-guidance: fix #2089 regression — split |-joined if clauses",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "42487ee|gh-commits-plugins-official"
+    },
+    {
+      "id": "bc07f7a",
+      "title": "security-guidance: 5 precise if entries fixing #2089 regression + gt support",
+      "date": "2026-05-29T20:08:46Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/bc07f7a1fd10614ed5aa7563cad47f35b4a69377",
+      "snippet": "URGENT REGRESSION FIX. PR #2076 (Graphite gt workflow) gated the PostToolUse commit/push hooks with:      \"if\": \"Bash(git commit:*)|Bash(gt create:*)|Bash(gt modify:*)\"     \"if\": \"Bash(git push:*)|Bash(gt submit:*)\"  mirroring the regex-OR idiom that `matcher` uses (\"Edit|Write|MultiEdit|NotebookEdi",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "bc07f7a|gh-commits-plugins-official"
+    },
+    {
+      "id": "9e150cf",
+      "title": "Merge pull request #2086 from anthropics/fix-2082-diff-parser-non-ascii",
+      "date": "2026-05-29T15:11:25Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/9e150cfd48b87280cc76e035de04a11aa604e9c5",
+      "snippet": "security-guidance: pass core.quotePath=false to diff feeders (#2082)",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "9e150cf|gh-commits-plugins-official"
+    },
+    {
+      "id": "38b298d",
+      "title": "security-guidance: pass core.quotePath=false to diff feeders (#2082)",
+      "date": "2026-05-29T14:56:22Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/38b298d5b29ece40893d3469ee1b3fe7b234494a",
+      "snippet": "Fixes anthropics/claude-plugins-official#2082 — diff feeders use git's default quotePath setting, which C-quotes any path with a non-ASCII byte. The downstream parsers in gitutil.parse_diff_into_files / gitutil.extract_file_paths_from_diff match the diff header with `re.match(r'^a/(.+?) b/(.+)$', ..",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "38b298d|gh-commits-plugins-official"
+    },
     {
       "id": "8435428",
       "title": "Merge pull request #2077 from anthropics/fix-1358-1375-1783-hook-output-protocol",
@@ -18,6 +73,17 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "8435428|gh-commits-plugins-official"
+    },
+    {
+      "id": "0d22ba3",
+      "title": "security-guidance: respect CLAUDE_CONFIG_DIR for plugin state files (#1868)",
+      "date": "2026-05-29T06:57:10Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/0d22ba3501ef549eb657e47e0bc08b7045a72dc9",
+      "snippet": "Fixes #1868 — when CLAUDE_CONFIG_DIR is set to a non-default location (e.g. ~/.config/claude for XDG compliance, or a multi-tenant install path), the plugin still wrote state files to the hardcoded ~/.claude/ path, leaving stale state and breaking CLAUDE_CONFIG_DIR's purpose.  Resolution precedence ",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "0d22ba3|gh-commits-plugins-official"
     },
     {
       "id": "37ffc76",
@@ -491,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "b5a156b|gh-commits-plugins-official"
-    },
-    {
-      "id": "32b176e",
-      "title": "Bump pagerduty plugin to latest upstream SHA (#1862)",
-      "date": "2026-05-16T12:55:14Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/32b176e6aa8e85a5236b8f0fc76be9e4a40098d2",
-      "snippet": "Picks up v1.1.0: new /create-pagerduty-skill command (Early Access).",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "32b176e|gh-commits-plugins-official"
-    },
-    {
-      "id": "d8e4105",
-      "title": "Bump vanta-mcp-plugin SHA to 345d86b5 (#1843)",
-      "date": "2026-05-16T12:55:04Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/d8e4105231e9e605eb429a9bd31f6114799edbd4",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "d8e4105|gh-commits-plugins-official"
-    },
-    {
-      "id": "5dbfa0f",
-      "title": "Bump box plugin SHA and enumerate skills (#1845)",
-      "date": "2026-05-15T22:54:38Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/5dbfa0fade3058791bf8134b2bd441cb9d5f9a10",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "5dbfa0f|gh-commits-plugins-official"
-    },
-    {
-      "id": "1a2f18b",
-      "title": "chore: modify data-agent-kit-starter-pack plugin details (#1826)",
-      "date": "2026-05-12T21:59:22Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/1a2f18b05cf5652fd25403e8d229fc884fb84103",
-      "snippet": "* chore: modify data-agent-kit-starter-pack plugin details  Updated the description and homepage of the data-agent-kit-starter-pack plugin, and changed the SHA.  * update sha for latest commit",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "1a2f18b|gh-commits-plugins-official"
-    },
-    {
-      "id": "1cf022e",
-      "title": "Fix servicenow-sdk ref: ServiceNow/sdk uses master, not main (#1830)",
-      "date": "2026-05-12T17:05:45Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/1cf022eba106dce65cd2ce28a42d34d1b2874acf",
-      "snippet": "The ServiceNow/sdk repository's default branch is 'master' and there is no 'main' branch. The pinned SHA (06adf37) is the current head of 'master'. Update the ref so future SHA bumps target the correct branch.",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "1cf022e|gh-commits-plugins-official"
-    },
-    {
-      "id": "573ecf3",
-      "title": "Merge pull request #1820 from anthropics/morganl/code-modernization-plugin",
-      "date": "2026-05-12T16:58:41Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/573ecf32cd82a8ec997b0e92acbdd46d17b67bb1",
-      "snippet": "code-modernization: fix pipeline gaps, redesign harden, dry-run hardening",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "573ecf3|gh-commits-plugins-official"
     }
   ]
 }

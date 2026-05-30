@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 29 May 2026 09:58:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 08:31:40 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2078 from anthropics/fix-1868-claude-config-dir</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c40770ae5a1d6855fce096c5b747e709ec946b2b</link>
+      <guid isPermaLink="false">c40770a</guid>
+      <pubDate>Fri, 29 May 2026 23:14:35 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: respect CLAUDE_CONFIG_DIR for plugin state files (#1868)</description>
+    </item>
+    <item>
+      <title>Merge pull request #2091 from anthropics/fix-2089-if-clause-regression</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/42487ee6fd791694cc9724f5d065c5872afc2a19</link>
+      <guid isPermaLink="false">42487ee</guid>
+      <pubDate>Fri, 29 May 2026 20:39:45 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>URGENT: security-guidance: fix #2089 regression — split |-joined if clauses</description>
+    </item>
+    <item>
+      <title>security-guidance: 5 precise if entries fixing #2089 regression + gt support</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/bc07f7a1fd10614ed5aa7563cad47f35b4a69377</link>
+      <guid isPermaLink="false">bc07f7a</guid>
+      <pubDate>Fri, 29 May 2026 20:08:46 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>URGENT REGRESSION FIX. PR #2076 (Graphite gt workflow) gated the PostToolUse commit/push hooks with:      &quot;if&quot;: &quot;Bash(git commit:*)|Bash(gt create:*)|Bash(gt modify:*)&quot;     &quot;if&quot;: &quot;Bash(git push:*)|Bash(gt submit:*)&quot;  mirroring the regex-OR idiom that `matcher` uses (&quot;Edit|Write|MultiEdit|NotebookEdi</description>
+    </item>
+    <item>
+      <title>Merge pull request #2086 from anthropics/fix-2082-diff-parser-non-ascii</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/9e150cfd48b87280cc76e035de04a11aa604e9c5</link>
+      <guid isPermaLink="false">9e150cf</guid>
+      <pubDate>Fri, 29 May 2026 15:11:25 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: pass core.quotePath=false to diff feeders (#2082)</description>
+    </item>
+    <item>
+      <title>security-guidance: pass core.quotePath=false to diff feeders (#2082)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/38b298d5b29ece40893d3469ee1b3fe7b234494a</link>
+      <guid isPermaLink="false">38b298d</guid>
+      <pubDate>Fri, 29 May 2026 14:56:22 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes anthropics/claude-plugins-official#2082 — diff feeders use git&apos;s default quotePath setting, which C-quotes any path with a non-ASCII byte. The downstream parsers in gitutil.parse_diff_into_files / gitutil.extract_file_paths_from_diff match the diff header with `re.match(r&apos;^a/(.+?) b/(.+)$&apos;, ..</description>
+    </item>
     <item>
       <title>Merge pull request #2077 from anthropics/fix-1358-1375-1783-hook-output-protocol</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/8435428dfc0fd6e4fea1c8e505ef5022b1f0d403</link>
@@ -14,6 +54,14 @@
       <pubDate>Fri, 29 May 2026 07:20:48 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: emit findings via hookSpecificOutput.additionalContext (#1358 #1375 #1783)</description>
+    </item>
+    <item>
+      <title>security-guidance: respect CLAUDE_CONFIG_DIR for plugin state files (#1868)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0d22ba3501ef549eb657e47e0bc08b7045a72dc9</link>
+      <guid isPermaLink="false">0d22ba3</guid>
+      <pubDate>Fri, 29 May 2026 06:57:10 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes #1868 — when CLAUDE_CONFIG_DIR is set to a non-default location (e.g. ~/.config/claude for XDG compliance, or a multi-tenant install path), the plugin still wrote state files to the hardcoded ~/.claude/ path, leaving stale state and breaking CLAUDE_CONFIG_DIR&apos;s purpose.  Resolution precedence </description>
     </item>
     <item>
       <title>security-guidance: emit findings via hookSpecificOutput.additionalContext (#1358 #1375 #1783)</title>
@@ -358,54 +406,6 @@
       <pubDate>Sat, 16 May 2026 12:55:29 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
-    </item>
-    <item>
-      <title>Bump pagerduty plugin to latest upstream SHA (#1862)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/32b176e6aa8e85a5236b8f0fc76be9e4a40098d2</link>
-      <guid isPermaLink="false">32b176e</guid>
-      <pubDate>Sat, 16 May 2026 12:55:14 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Picks up v1.1.0: new /create-pagerduty-skill command (Early Access).</description>
-    </item>
-    <item>
-      <title>Bump vanta-mcp-plugin SHA to 345d86b5 (#1843)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/d8e4105231e9e605eb429a9bd31f6114799edbd4</link>
-      <guid isPermaLink="false">d8e4105</guid>
-      <pubDate>Sat, 16 May 2026 12:55:04 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Bump box plugin SHA and enumerate skills (#1845)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/5dbfa0fade3058791bf8134b2bd441cb9d5f9a10</link>
-      <guid isPermaLink="false">5dbfa0f</guid>
-      <pubDate>Fri, 15 May 2026 22:54:38 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: modify data-agent-kit-starter-pack plugin details (#1826)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/1a2f18b05cf5652fd25403e8d229fc884fb84103</link>
-      <guid isPermaLink="false">1a2f18b</guid>
-      <pubDate>Tue, 12 May 2026 21:59:22 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* chore: modify data-agent-kit-starter-pack plugin details  Updated the description and homepage of the data-agent-kit-starter-pack plugin, and changed the SHA.  * update sha for latest commit</description>
-    </item>
-    <item>
-      <title>Fix servicenow-sdk ref: ServiceNow/sdk uses master, not main (#1830)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/1cf022eba106dce65cd2ce28a42d34d1b2874acf</link>
-      <guid isPermaLink="false">1cf022e</guid>
-      <pubDate>Tue, 12 May 2026 17:05:45 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>The ServiceNow/sdk repository&apos;s default branch is &apos;master&apos; and there is no &apos;main&apos; branch. The pinned SHA (06adf37) is the current head of &apos;master&apos;. Update the ref so future SHA bumps target the correct branch.</description>
-    </item>
-    <item>
-      <title>Merge pull request #1820 from anthropics/morganl/code-modernization-plugin</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/573ecf32cd82a8ec997b0e92acbdd46d17b67bb1</link>
-      <guid isPermaLink="false">573ecf3</guid>
-      <pubDate>Tue, 12 May 2026 16:58:41 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>code-modernization: fix pipeline gaps, redesign harden, dry-run hardening</description>
     </item>
   </channel>
 </rss>
