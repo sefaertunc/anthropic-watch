@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-05-30T08:31:40.878Z",
+  "generated": "2026-05-31T08:50:30.245Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "3d368d2",
+      "title": "Merge pull request #2105 from anthropics/fix-2098-output-config-format",
+      "date": "2026-05-31T05:32:02Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/3d368d2972d9af8f52e96ae7d86d2686967af31f",
+      "snippet": "security-guidance: migrate _call_claude from deprecated output_format to output_config.format (#2098)",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "3d368d2|gh-commits-plugins-official"
+    },
+    {
+      "id": "84011d4",
+      "title": "security-guidance: migrate from deprecated output_format to output_config.format (#2098)",
+      "date": "2026-05-31T03:11:41Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/84011d43b1de3303592d566a01b9466d5f7be191",
+      "snippet": "Fixes #2098. The Anthropic Messages API moved structured-output schema specification from a top-level `output_format` field to a nested `output_config.format` field, per https://platform.claude.com/docs/en/build-with-claude/structured-outputs.  Per docs the old form \"will continue working for a tran",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "84011d4|gh-commits-plugins-official"
+    },
+    {
+      "id": "2a822c0",
+      "title": "Merge pull request #2101 from anthropics/fix-2099-quotepath-global",
+      "date": "2026-05-31T03:07:06Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/2a822c0787435b7924377c26b7d02be171df7814",
+      "snippet": "security-guidance: move core.quotePath=false to GIT_CMD globally (#2099 followup)",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "2a822c0|gh-commits-plugins-official"
+    },
+    {
+      "id": "a40c9f1",
+      "title": "security-guidance: move core.quotePath=false to GIT_CMD globally (#2099 followup)",
+      "date": "2026-05-30T19:19:38Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/a40c9f1e834a50651236584b22a09894cdcad431",
+      "snippet": "Followup to PR #2086 (which added the flag to 4 specific git call sites) and PR #2100 (text=True purge for #2099).  The Windows reporter for #2099 noticed more git invocations still lacked the flag — rev-parse path queries (--show-toplevel, --git-dir, --git-common-dir), reflog %gs subjects, and `git",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "a40c9f1|gh-commits-plugins-official"
+    },
+    {
+      "id": "c7a3e2f",
+      "title": "Merge pull request #2100 from anthropics/fix-2099-text-true-pythonutf8",
+      "date": "2026-05-30T19:14:03Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/c7a3e2ffa047de2da799c2237475f024c83f4c4b",
+      "snippet": "security-guidance: purge text=True from subprocess.run + bake PYTHONUTF8=1 (#2099)",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "c7a3e2f|gh-commits-plugins-official"
+    },
+    {
+      "id": "1ecf3d1",
+      "title": "security-guidance: purge text=True from subprocess.run + bake PYTHONUTF8=1 (#2099)",
+      "date": "2026-05-30T18:29:07Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/1ecf3d1bac6ca2be1fbedef9500ca1457da8d42d",
+      "snippet": "URGENT WINDOWS FIX. Sibling of #2056 / PR #2075 but covering 14 more sites that PR #2075 missed.  The bug class: on Windows with cp1252 default encoding (typical en-US locale), `subprocess.run(..., text=True)` decodes child stdout AND stderr via `locale.getpreferredencoding()`. When git emits a UTF-",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "1ecf3d1|gh-commits-plugins-official"
+    },
     {
       "id": "c40770a",
       "title": "Merge pull request #2078 from anthropics/fix-1868-claude-config-dir",
@@ -491,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "de2bcc9|gh-commits-plugins-official"
-    },
-    {
-      "id": "e98784f",
-      "title": "Run plugin SHA bump nightly instead of weekly (#1909)",
-      "date": "2026-05-18T18:53:59Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/e98784f00e72cf9dff04a4444f776364320d23ea",
-      "snippet": "Upstream plugins move daily; a weekly sweep with a 20-bump cap can fall behind. Each run force-resets the bump branch, so stale unmerged PRs are replaced rather than piling up.",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "e98784f|gh-commits-plugins-official"
-    },
-    {
-      "id": "237a6b9",
-      "title": "Add CI check for HTTP MCP server URL liveness (#1910)",
-      "date": "2026-05-18T18:24:31Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/237a6b9707eecf4472e71ccbabf21b5befabc73c",
-      "snippet": "Walks marketplace.json for vendored plugins, extracts http/sse MCP server URLs from .mcp.json / mcp.json / plugin.json, and probes each with HEAD then a JSON-RPC POST fallback. Fails on 404/410 and connection errors; passes on auth/method errors (expected without credentials). Runs on PR, daily sche",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "237a6b9|gh-commits-plugins-official"
-    },
-    {
-      "id": "61b760a",
-      "title": "Add save-to-spotify plugin (#1905)",
-      "date": "2026-05-18T15:59:59Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/61b760aafc986e7eb2577a86163407b7d83b5471",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "61b760a|gh-commits-plugins-official"
-    },
-    {
-      "id": "f475d3c",
-      "title": "Add zoominfo plugin (#1885)",
-      "date": "2026-05-18T00:49:38Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/f475d3ce5806c7edf9fc204ee276e7f45e24c798",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "f475d3c|gh-commits-plugins-official"
-    },
-    {
-      "id": "d7b273d",
-      "title": "Bump crowdstrike-falcon-foundry SHA to v1.0.0 (#1842)",
-      "date": "2026-05-18T00:49:15Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/d7b273d2b4c5b01cf938dace461e3ebb7a07b4d5",
-      "snippet": "Pins to the v1.0.0 tag (a6a500c) instead of pre-release HEAD (e7fa026).",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "d7b273d|gh-commits-plugins-official"
-    },
-    {
-      "id": "b5a156b",
-      "title": "Add carta-cap-table plugin (#1876)",
-      "date": "2026-05-16T12:55:29Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/b5a156b6ecd2f69c418184b7c093930ddabaf9c0",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "b5a156b|gh-commits-plugins-official"
     }
   ]
 }

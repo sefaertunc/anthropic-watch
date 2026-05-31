@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 30 May 2026 08:31:40 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 08:50:30 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2105 from anthropics/fix-2098-output-config-format</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/3d368d2972d9af8f52e96ae7d86d2686967af31f</link>
+      <guid isPermaLink="false">3d368d2</guid>
+      <pubDate>Sun, 31 May 2026 05:32:02 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: migrate _call_claude from deprecated output_format to output_config.format (#2098)</description>
+    </item>
+    <item>
+      <title>security-guidance: migrate from deprecated output_format to output_config.format (#2098)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/84011d43b1de3303592d566a01b9466d5f7be191</link>
+      <guid isPermaLink="false">84011d4</guid>
+      <pubDate>Sun, 31 May 2026 03:11:41 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes #2098. The Anthropic Messages API moved structured-output schema specification from a top-level `output_format` field to a nested `output_config.format` field, per https://platform.claude.com/docs/en/build-with-claude/structured-outputs.  Per docs the old form &quot;will continue working for a tran</description>
+    </item>
+    <item>
+      <title>Merge pull request #2101 from anthropics/fix-2099-quotepath-global</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/2a822c0787435b7924377c26b7d02be171df7814</link>
+      <guid isPermaLink="false">2a822c0</guid>
+      <pubDate>Sun, 31 May 2026 03:07:06 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: move core.quotePath=false to GIT_CMD globally (#2099 followup)</description>
+    </item>
+    <item>
+      <title>security-guidance: move core.quotePath=false to GIT_CMD globally (#2099 followup)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a40c9f1e834a50651236584b22a09894cdcad431</link>
+      <guid isPermaLink="false">a40c9f1</guid>
+      <pubDate>Sat, 30 May 2026 19:19:38 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Followup to PR #2086 (which added the flag to 4 specific git call sites) and PR #2100 (text=True purge for #2099).  The Windows reporter for #2099 noticed more git invocations still lacked the flag — rev-parse path queries (--show-toplevel, --git-dir, --git-common-dir), reflog %gs subjects, and `git</description>
+    </item>
+    <item>
+      <title>Merge pull request #2100 from anthropics/fix-2099-text-true-pythonutf8</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c7a3e2ffa047de2da799c2237475f024c83f4c4b</link>
+      <guid isPermaLink="false">c7a3e2f</guid>
+      <pubDate>Sat, 30 May 2026 19:14:03 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: purge text=True from subprocess.run + bake PYTHONUTF8=1 (#2099)</description>
+    </item>
+    <item>
+      <title>security-guidance: purge text=True from subprocess.run + bake PYTHONUTF8=1 (#2099)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1ecf3d1bac6ca2be1fbedef9500ca1457da8d42d</link>
+      <guid isPermaLink="false">1ecf3d1</guid>
+      <pubDate>Sat, 30 May 2026 18:29:07 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>URGENT WINDOWS FIX. Sibling of #2056 / PR #2075 but covering 14 more sites that PR #2075 missed.  The bug class: on Windows with cp1252 default encoding (typical en-US locale), `subprocess.run(..., text=True)` decodes child stdout AND stderr via `locale.getpreferredencoding()`. When git emits a UTF-</description>
+    </item>
     <item>
       <title>Merge pull request #2078 from anthropics/fix-1868-claude-config-dir</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/c40770ae5a1d6855fce096c5b747e709ec946b2b</link>
@@ -356,54 +404,6 @@
       <link>https://github.com/anthropics/claude-plugins-official/commit/de2bcc941128f37fc9dc7c84dd5efc19dd97c2e2</link>
       <guid isPermaLink="false">de2bcc9</guid>
       <pubDate>Mon, 18 May 2026 19:52:54 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Run plugin SHA bump nightly instead of weekly (#1909)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e98784f00e72cf9dff04a4444f776364320d23ea</link>
-      <guid isPermaLink="false">e98784f</guid>
-      <pubDate>Mon, 18 May 2026 18:53:59 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Upstream plugins move daily; a weekly sweep with a 20-bump cap can fall behind. Each run force-resets the bump branch, so stale unmerged PRs are replaced rather than piling up.</description>
-    </item>
-    <item>
-      <title>Add CI check for HTTP MCP server URL liveness (#1910)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/237a6b9707eecf4472e71ccbabf21b5befabc73c</link>
-      <guid isPermaLink="false">237a6b9</guid>
-      <pubDate>Mon, 18 May 2026 18:24:31 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Walks marketplace.json for vendored plugins, extracts http/sse MCP server URLs from .mcp.json / mcp.json / plugin.json, and probes each with HEAD then a JSON-RPC POST fallback. Fails on 404/410 and connection errors; passes on auth/method errors (expected without credentials). Runs on PR, daily sche</description>
-    </item>
-    <item>
-      <title>Add save-to-spotify plugin (#1905)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/61b760aafc986e7eb2577a86163407b7d83b5471</link>
-      <guid isPermaLink="false">61b760a</guid>
-      <pubDate>Mon, 18 May 2026 15:59:59 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add zoominfo plugin (#1885)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f475d3ce5806c7edf9fc204ee276e7f45e24c798</link>
-      <guid isPermaLink="false">f475d3c</guid>
-      <pubDate>Mon, 18 May 2026 00:49:38 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Bump crowdstrike-falcon-foundry SHA to v1.0.0 (#1842)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/d7b273d2b4c5b01cf938dace461e3ebb7a07b4d5</link>
-      <guid isPermaLink="false">d7b273d</guid>
-      <pubDate>Mon, 18 May 2026 00:49:15 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Pins to the v1.0.0 tag (a6a500c) instead of pre-release HEAD (e7fa026).</description>
-    </item>
-    <item>
-      <title>Add carta-cap-table plugin (#1876)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b5a156b6ecd2f69c418184b7c093930ddabaf9c0</link>
-      <guid isPermaLink="false">b5a156b</guid>
-      <pubDate>Sat, 16 May 2026 12:55:29 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
     </item>
