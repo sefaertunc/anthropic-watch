@@ -6,7 +6,617 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 01 Jun 2026 11:41:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 11:05:14 GMT</lastBuildDate>
+    <item>
+      <title>0.2.88</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.88</guid>
+      <pubDate>Wed, 03 Jun 2026 11:04:17 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Bug Fixes
+- Trio compatibility for session stores: Ported sessionstore code paths (TranscriptMirrorBatcher, sessionresume, sessions) from raw asyncio primitives to anyio, fixing a crash (TypeError: trio.run received unrecognized yield message) when passing sessionstore= to query() or ClaudeSDKClient</description>
+    </item>
+    <item>
+      <title>0.3.161</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.161</guid>
+      <pubDate>Wed, 03 Jun 2026 11:04:17 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- The initialize control request is now idempotent: a second initialize returns the same success payload instead of an Already initialized error. ControlResponse gains an optional pendingpermissionrequests field, mirroring ControlErrorResponse
+- applyFlagSettings now live-applies agent changes: swit</description>
+    </item>
+    <item>
+      <title>2.1.161</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.161</guid>
+      <pubDate>Wed, 03 Jun 2026 11:04:16 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- OTELRESOURCEATTRIBUTES values are now included as labels on metric datapoints, so you can slice usage metrics by custom dimensions like team or repo
+- claude agents rows now show done/total before the detail when work is fanned out; peek shows the longest-running item
+- /mcp now collapses claude.a</description>
+    </item>
+    <item>
+      <title>What we learned mapping a year’s worth of AI-enabled cyber threats</title>
+      <link>https://www.anthropic.com/research/AI-enabled-cyber-threats-mitre-attack</link>
+      <guid isPermaLink="false">https://www.anthropic.com/research/AI-enabled-cyber-threats-mitre-attack</guid>
+      <pubDate>Wed, 03 Jun 2026 10:55:00 GMT</pubDate>
+      <category>blog-research</category>
+      <description>As AI transforms the nature of and methods behind cyberattacks, how well do the techniques and frameworks used by the security community hold up? In a new report, we seek to answer that question. </description>
+    </item>
+    <item>
+      <title>Mapping AI-enabled cyber threats: Insights from the LLM ATT&amp;CK Navigator</title>
+      <link>https://red.anthropic.com/2026/attack-navigator/</link>
+      <guid isPermaLink="false">48382242</guid>
+      <pubDate>Wed, 03 Jun 2026 10:41:20 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>What we learned mapping a year&apos;s worth of AI-enabled cyber threats</title>
+      <link>https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack</link>
+      <guid isPermaLink="false">48382107</guid>
+      <pubDate>Wed, 03 Jun 2026 10:15:18 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add these words to your prompt for Claude to build live websites directly from chat</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1tvkwlt/add_these_words_to_your_prompt_for_claude_to/</link>
+      <guid isPermaLink="false">t3_1tvkwlt</guid>
+      <pubDate>Wed, 03 Jun 2026 10:09:45 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description/>
+    </item>
+    <item>
+      <title>What is the equivalent of this for Claude to help it learn this lesson?</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tvkjx3/what_is_the_equivalent_of_this_for_claude_to_help/</link>
+      <guid isPermaLink="false">t3_1tvkjx3</guid>
+      <pubDate>Wed, 03 Jun 2026 09:51:26 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>I now use &quot;skls&quot; text replacement to produce: &quot;Skills are rules and not suggestions, read and apply every line, don’t assume, don&apos;t skim, don’t rubber stamp&quot; in my chats. (Thank you u/who_am_i_to_say_so). But I somehow feel like I&apos;m still the one being punished...</description>
+    </item>
+    <item>
+      <title>Anyone else feel Claude Code has been super slow lately?</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tvjpkg/anyone_else_feel_claude_code_has_been_super_slow/</link>
+      <guid isPermaLink="false">t3_1tvjpkg</guid>
+      <pubDate>Wed, 03 Jun 2026 09:03:49 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>Since the release of Opus 4.8, Claude codes responses seems to be a lot slower. Basic things are taking up to almost 5 minutes to complete. I&apos;m using high reasoning effort. Switched back to Opus 4.6 and same issue.</description>
+    </item>
+    <item>
+      <title>A skill that gives Claude Code a real spreadsheet runtime</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1tvjm2n/a_skill_that_gives_claude_code_a_real_spreadsheet/</link>
+      <guid isPermaLink="false">t3_1tvjm2n</guid>
+      <pubDate>Wed, 03 Jun 2026 08:58:33 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description>If you’ve used Claude Code or Codex with Excel files before, you’ve probably run into this. Simple spreadsheets are usually fine. But once you start dealing with formulas, charts, workbook updates, formatting, or larger workflows, things can get messy pretty quickly. So I built a spreadsheet skill f</description>
+    </item>
+    <item>
+      <title>Claude is my entire SEO team. 1.5M+ impressions in 3 months as a solo founder.</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tvjjdj/claude_is_my_entire_seo_team_15m_impressions_in_3/</link>
+      <guid isPermaLink="false">t3_1tvjjdj</guid>
+      <pubDate>Wed, 03 Jun 2026 08:54:06 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>TL;DR: I use Claude to analyse my Google Search Console data weekly, find SEO problems, draft content for keyword gaps, and write the code fixes I ship through Lovable. 1.5M+ impressions and 13K+ clicks in 3 months, zero ad spend, zero employees. Claude also started recommending my site to its own u</description>
+    </item>
+    <item>
+      <title>Sharing a few practical Claude Code skills I use daily for backend and API dev</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1tvjb72/sharing_a_few_practical_claude_code_skills_i_use/</link>
+      <guid isPermaLink="false">t3_1tvjb72</guid>
+      <pubDate>Wed, 03 Jun 2026 08:41:02 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description>Hey everyone, I’ve been daily-driving Claude Code for over six months now. I initially installed dozens of skills and plugins, but ended up deleting most of them. I only kept the ones that genuinely fit into a backend development workflow without being too noisy. Just a quick note on my setup: I tre</description>
+    </item>
+    <item>
+      <title>Claude Opus 4.8 and 1,000-subagent Workflows | Crazy</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tvgu7i/claude_opus_48_and_1000subagent_workflows_crazy/</link>
+      <guid isPermaLink="false">t3_1tvgu7i</guid>
+      <pubDate>Wed, 03 Jun 2026 06:20:29 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>&quot;Anthropic released Claude Opus 4.8 on May 28, 2026 with Dynamic Workflows, letting Claude Code orchestrate up to 1,000 subagents per run&quot;. DO ANYONE EVEN NEED THIS MUCH? are we ai-maxxing already? or should I say, claudemaxxing? and then they say this &quot;Anthropic&apos;s news post describes Dynamic Workfl</description>
+    </item>
+    <item>
+      <title>I connected Claude Code to a database of 72M Polymarket of over 1.5 million wallets with an MCP. Here&apos;s what it found. What do you want me to ask next?</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tvgf7c/i_connected_claude_code_to_a_database_of_72m/</link>
+      <guid isPermaLink="false">t3_1tvgf7c</guid>
+      <pubDate>Wed, 03 Jun 2026 05:58:21 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>Hello Friends, I&apos;ve been tracking all Polymarket Activity for months (its a toooon of data) and I gave Claude Code a Postgres MCP (found crazy stuff) pointed at the live ledger, so now I just ask it anything in plain English and it writes + runs the query itself. A few I already asked, to show it wo</description>
+    </item>
+    <item>
+      <title>Theres no way you people are using as much usage as you complain about</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1tvfqxl/theres_no_way_you_people_are_using_as_much_usage/</link>
+      <guid isPermaLink="false">t3_1tvfqxl</guid>
+      <pubDate>Wed, 03 Jun 2026 05:22:35 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>I am a full time dev working with a 20x max plan and have NEVER been able to hit my max usage for the 5 hr and RARELY for the week EVEN WITH FAST AND MAX ON. WHAT IN GODS NAME ARE YOU PEOPLE DOING TO BURN THAT MUCH?? Or are you all just cheap and expecting to be able to vibe code the most complex so</description>
+    </item>
+    <item>
+      <title>Opus 4.8 is a scam</title>
+      <link>https://www.reddit.com/r/claude/comments/1tvfmmm/opus_48_is_a_scam/</link>
+      <guid isPermaLink="false">t3_1tvfmmm</guid>
+      <pubDate>Wed, 03 Jun 2026 05:16:22 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description>I hate it so much. Recently, I was working on new shaders for KotOR 2, and for some reason the sky became filled with purple fog. Opus 4.8 Thinking + UltraCode + xHigh + whatever spent the whole night, 15+ iterations, and still couldn&apos;t find the cause. It generated all kinds of logs, and I kept rest</description>
+    </item>
+    <item>
+      <title>I wired Claude Code into a database of every Polymarket wallet and trades via MCP. What do you want me to ask it next? This is what I found so far:</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tvefqd/i_wired_claude_code_into_a_database_of_every/</link>
+      <guid isPermaLink="false">t3_1tvefqd</guid>
+      <pubDate>Wed, 03 Jun 2026 04:17:01 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>Hello Friends, I&apos;ve been tracking all Polymarket Activity for months (72M trades, 1.5M wallets) and I gave Claude Code a Postgres MCP (found crazy stuff) pointed at the live ledger, so now I just ask it anything in plain English and it writes + runs the query itself. A few I already asked, to show i</description>
+    </item>
+    <item>
+      <title>Running an AI-native engineering org – Claude</title>
+      <link>https://claude.com/blog/running-an-ai-native-engineering-org</link>
+      <guid isPermaLink="false">48379164</guid>
+      <pubDate>Wed, 03 Jun 2026 02:28:10 GMT</pubDate>
+      <category>hn-claude-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>Claude Skills for Governance, Risk, &amp; Compliance Frameworks (ISO 27001, SOC 2, GDPR, DORA, India&apos;s DPDPA, NIST AI RMF, Australian ISM, Brazil&apos;s LGPD, EU AI Act, etc.)</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1tvbhp4/claude_skills_for_governance_risk_compliance/</link>
+      <guid isPermaLink="false">t3_1tvbhp4</guid>
+      <pubDate>Wed, 03 Jun 2026 02:04:47 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description>Hello Claude community, I work with Governance, Risk, and Compliance (GRC) and I’ve been experimenting with the new Claude Skills to see if I could move Claude past &quot;generic compliance advice&quot; into &quot;audit-ready expert&quot; territory. Usage wise, so far, have 20K+ downloads and 450+ Github stars. Built C</description>
+    </item>
+    <item>
+      <title>Anthropic adds 150 partners to &apos;Project Glasswing&apos;</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tvat8v/anthropic_adds_150_partners_to_project_glasswing/</link>
+      <guid isPermaLink="false">t3_1tvat8v</guid>
+      <pubDate>Wed, 03 Jun 2026 01:35:08 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>Anthropic announced Tuesday that 150 more organizations across over 15 countries will test its new Mythos AI model for security vulnerabilities, expanding an initiative dubbed Project Glasswing. The new partners come from industries that were previously under-represented, including power and healthc</description>
+    </item>
+    <item>
+      <title>Introducing Maude. Like Claude, but saucier</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tvaamz/introducing_maude_like_claude_but_saucier/</link>
+      <guid isPermaLink="false">t3_1tvaamz</guid>
+      <pubDate>Wed, 03 Jun 2026 01:12:14 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>Introducing Maude.ai. The AI playbook nobody asked for but everyone needed. Trained on 38 years of lived experience and an unlimited cheesecake budget. Dorothy-4 Turbo drops next week. Waitlist closed. She doesn’t do waitlists. Comment “Maude” for the free playbook. (It’s jello recipes)</description>
+    </item>
+    <item>
+      <title>What we learned mapping a year’s worth of AI-enabled cyber threats</title>
+      <link>https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack</link>
+      <guid isPermaLink="false">https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <category>blog-news</category>
+      <description/>
+    </item>
+    <item>
+      <title>Running an AI-native engineering org</title>
+      <link>https://claude.com/blog/running-an-ai-native-engineering-org</link>
+      <guid isPermaLink="false">https://claude.com/blog/running-an-ai-native-engineering-org</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <category>blog-claude</category>
+      <description/>
+    </item>
+    <item>
+      <title>I am a software engineer with a decade of experience. Here are some security concepts for vibe coding with Claude Code that I would want to know if I were starting from scratch:</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1tv85j0/i_am_a_software_engineer_with_a_decade_of/</link>
+      <guid isPermaLink="false">t3_1tv85j0</guid>
+      <pubDate>Tue, 02 Jun 2026 23:39:52 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>In my previous post, people expressed interest in a post about security for vibe coded apps. That&apos;s what this is! NOTE: you do not need to have read that one before this one. So I&apos;m going to describe a person this post is for, if this is you, I think I can be of some assistance: you are new to codin</description>
+    </item>
+    <item>
+      <title>We&apos;ve updated /fork in Claude Code
+
+/fork now runs a background agent with your exact context (system prompt, tools, history, model) and prompt cache. The result gets returned to your session.
+
+/branc</title>
+      <link>https://x.com/ClaudeDevs/status/2061947411141169494</link>
+      <guid isPermaLink="false">2061947411141169494</guid>
+      <pubDate>Tue, 02 Jun 2026 23:05:46 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>We&apos;ve updated /fork in Claude Code
+
+/fork now runs a background agent with your exact context (system prompt, tools, history, model) and prompt cache. The result gets returned to your session.
+
+/branch (the old /fork) still copies the transcript to a new session you drive. https://t.co/eMyFrk8PfR</description>
+    </item>
+    <item>
+      <title>Add migration-to-aws plugin (#2195)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c917011ca692e188f5dbd32025044cb9fa6b011f</link>
+      <guid isPermaLink="false">c917011</guid>
+      <pubDate>Tue, 02 Jun 2026 22:48:35 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>A harness for every task: dynamic workflows in Claude Code</title>
+      <link>https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code</link>
+      <guid isPermaLink="false">48377134</guid>
+      <pubDate>Tue, 02 Jun 2026 22:21:55 GMT</pubDate>
+      <category>hn-claude-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #2193 from anthropics/fix-2159-stop-hook-schema</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d4d90844a09e3eb94b7f15ac970546b8aaebc2c5</link>
+      <guid isPermaLink="false">d4d9084</guid>
+      <pubDate>Tue, 02 Jun 2026 22:17:34 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: emit schema-valid Stop-hook output (#2159) — 2.0.2 → 2.0.3</description>
+    </item>
+    <item>
+      <title>v1.0.134</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.134</link>
+      <guid isPermaLink="false">v1.0.134</guid>
+      <pubDate>Tue, 02 Jun 2026 22:00:08 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>What&apos;s Changed
+ Add workload identity federation support to base-action by @ashwin-ant in https://github.com/anthropics/claude-code-action/pull/1378
+ chore: bump actions/setup-node from v4.4.0 to v6.4.0 (Node.js 24) by @ant-kurt in https://github.com/anthropics/claude-code-action/pull/1377
+ ci: bump</description>
+    </item>
+    <item>
+      <title>v2.1.161</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.161</link>
+      <guid isPermaLink="false">v2.1.161</guid>
+      <pubDate>Tue, 02 Jun 2026 21:58:22 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- OTELRESOURCEATTRIBUTES values are now included as labels on metric datapoints, so you can slice usage metrics by custom dimensions like team or repo
+- claude agents rows now show done/total before the detail when work is fanned out; peek shows the longest-running item
+- /mcp now col</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/625c04c3350378c3d74662505aae3e9dcf3fa1b4</link>
+      <guid isPermaLink="false">625c04c</guid>
+      <pubDate>Tue, 02 Jun 2026 21:58:16 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>This Executive Order is an important step in strengthening America’s leadership in AI. 
+
+We look forward to collaborating with the White House to support its implementation.
+
+https://t.co/ZwDimPrp3t</title>
+      <link>https://x.com/AnthropicAI/status/2061924580222968183</link>
+      <guid isPermaLink="false">2061924580222968183</guid>
+      <pubDate>Tue, 02 Jun 2026 21:35:03 GMT</pubDate>
+      <category>twitter-anthropicai</category>
+      <description>This Executive Order is an important step in strengthening America’s leadership in AI. 
+
+We look forward to collaborating with the White House to support its implementation.
+
+https://t.co/ZwDimPrp3t</description>
+    </item>
+    <item>
+      <title>I need help - where do the claude skills work?</title>
+      <link>https://www.reddit.com/r/claudeskills/comments/1tv4llt/i_need_help_where_do_the_claude_skills_work/</link>
+      <guid isPermaLink="false">t3_1tv4llt</guid>
+      <pubDate>Tue, 02 Jun 2026 21:21:31 GMT</pubDate>
+      <category>reddit-claudeskills</category>
+      <description>I feel like I must be the most amateur of Ai users here, but having discovered claude skills and in wanting to implement and use them in my Claude desktop app or even using the web based version I&apos;m confused. I&apos;ve found a bunch online that I want to add in. I&apos;ve found some (not very helpful) youtube</description>
+    </item>
+    <item>
+      <title>Why does opus gives up</title>
+      <link>https://www.reddit.com/r/Claudeopus/comments/1tv3svl/why_does_opus_gives_up/</link>
+      <guid isPermaLink="false">t3_1tv3svl</guid>
+      <pubDate>Tue, 02 Jun 2026 20:52:21 GMT</pubDate>
+      <category>reddit-claudeopus</category>
+      <description/>
+    </item>
+    <item>
+      <title>If there is any chance this post preserves the longevity of Claude Opus 4.6, I cannot let that opportunity pass me by</title>
+      <link>https://www.reddit.com/r/claude/comments/1tv3agx/if_there_is_any_chance_this_post_preserves_the/</link>
+      <guid isPermaLink="false">t3_1tv3agx</guid>
+      <pubDate>Tue, 02 Jun 2026 20:33:25 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description>Dear Anthropic team leadership, I&apos;m a solo developer and researcher. Over the past six months I&apos;ve built iOS apps from scratch, written a peer-reviewed paper, prepped for interviews, debugged production infrastructure, and drafted everything from App Store appeals to investment memos. All of it with</description>
+    </item>
+    <item>
+      <title>RT @trq212: Workflows are the biggest upgrade to Claude Code’s capabilities since skills and subagents.
+
+I dove deep into it with @sidbid t…</title>
+      <link>https://x.com/ClaudeDevs/status/2061907684656599464</link>
+      <guid isPermaLink="false">2061907684656599464</guid>
+      <pubDate>Tue, 02 Jun 2026 20:27:55 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>RT @trq212: Workflows are the biggest upgrade to Claude Code’s capabilities since skills and subagents.
+
+I dove deep into it with @sidbid t…</description>
+    </item>
+    <item>
+      <title>How do you get Claude Code to check its own work before handing it back?
+
+Watch how you can encode your manual checks so Claude closes its own feedback loop: https://t.co/gxastVL4QH</title>
+      <link>https://x.com/ClaudeDevs/status/2061900434722496604</link>
+      <guid isPermaLink="false">2061900434722496604</guid>
+      <pubDate>Tue, 02 Jun 2026 19:59:06 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>How do you get Claude Code to check its own work before handing it back?
+
+Watch how you can encode your manual checks so Claude closes its own feedback loop: https://t.co/gxastVL4QH</description>
+    </item>
+    <item>
+      <title>Opus 4.8... what is happening?</title>
+      <link>https://www.reddit.com/r/claude/comments/1tv1ewv/opus_48_what_is_happening/</link>
+      <guid isPermaLink="false">t3_1tv1ewv</guid>
+      <pubDate>Tue, 02 Jun 2026 19:26:57 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description>What is it actually meant to be better at? It has no context awareness whatsoever. It is extremely lazy. It talks absolute shit just for the sake od disagreeing. It brings up random crap and starts to hallucinate. It is terrible at following instructions. What is meant to be the upgrade?</description>
+    </item>
+    <item>
+      <title>Usage limit reached after TWO prompts.</title>
+      <link>https://www.reddit.com/r/Claudeopus/comments/1tuzqdb/usage_limit_reached_after_two_prompts/</link>
+      <guid isPermaLink="false">t3_1tuzqdb</guid>
+      <pubDate>Tue, 02 Jun 2026 18:29:14 GMT</pubDate>
+      <category>reddit-claudeopus</category>
+      <description>Pro plan user here. I know it’s not possible to get it back officially but is there anyway to reduce the coin cost or at least a tutorial (Please oversimplified step by step, I’m a little slow) on how to get Claude in general to act more like Opus 4.5? Maybe a code? Story writing costs way too much.</description>
+    </item>
+    <item>
+      <title>We’ve added a CLI for Claude Platform to make every API endpoint runnable from your terminal.
+
+Call the Messages API, stand up Claude Managed Agents, pipe results straight into your shell.
+
+The ant CL</title>
+      <link>https://x.com/ClaudeDevs/status/2061877343078244459</link>
+      <guid isPermaLink="false">2061877343078244459</guid>
+      <pubDate>Tue, 02 Jun 2026 18:27:21 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>We’ve added a CLI for Claude Platform to make every API endpoint runnable from your terminal.
+
+Call the Messages API, stand up Claude Managed Agents, pipe results straight into your shell.
+
+The ant CLI is well understood by coding agents (Claude Code) using the claude-api skill. https://t.co/t2ruhuA</description>
+    </item>
+    <item>
+      <title>Is Claude Mr. Meeseeks?</title>
+      <link>https://www.reddit.com/r/Claudeopus/comments/1tuygle/is_claude_mr_meeseeks/</link>
+      <guid isPermaLink="false">t3_1tuygle</guid>
+      <pubDate>Tue, 02 Jun 2026 17:46:37 GMT</pubDate>
+      <category>reddit-claudeopus</category>
+      <description/>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.161</title>
+      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
+      <guid isPermaLink="false">2.1.161</guid>
+      <pubDate>Tue, 02 Jun 2026 17:38:46 GMT</pubDate>
+      <category>npm-claude-code</category>
+      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>fix(seo): reinforce GitHub repository discovery</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/99b7d3b95757ab991b01244ff5015c267b8f1550</link>
+      <guid isPermaLink="false">99b7d3b</guid>
+      <pubDate>Tue, 02 Jun 2026 16:51:27 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>Opus 4.8 has a weird replies…every reply seems to have a But(t)</title>
+      <link>https://www.reddit.com/r/Claudeopus/comments/1tuw6kj/opus_48_has_a_weird_repliesevery_reply_seems_to/</link>
+      <guid isPermaLink="false">t3_1tuw6kj</guid>
+      <pubDate>Tue, 02 Jun 2026 16:30:20 GMT</pubDate>
+      <category>reddit-claudeopus</category>
+      <description>Do you guys notice this?</description>
+    </item>
+    <item>
+      <title>fix(seo): Use standard sitemap namespace</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/a9667b97357dde7ffab38607e0ad0a1d878ff4a7</link>
+      <guid isPermaLink="false">a9667b9</guid>
+      <pubDate>Tue, 02 Jun 2026 16:29:06 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs(seo): Add Google Search Console verification file</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/389a60de48098ac315c2e5f37a6c212974b5952a</link>
+      <guid isPermaLink="false">389a60d</guid>
+      <pubDate>Tue, 02 Jun 2026 16:20:01 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>What&apos;s wrong with Claude?</title>
+      <link>https://www.reddit.com/r/Claudeopus/comments/1tuvd0c/whats_wrong_with_claude/</link>
+      <guid isPermaLink="false">t3_1tuvd0c</guid>
+      <pubDate>Tue, 02 Jun 2026 16:02:19 GMT</pubDate>
+      <category>reddit-claudeopus</category>
+      <description>Since the new update, Claude has been unbelievably unproductive. A new chat can&apos;t do shit. One prompt and phewwww it hits its limit. WTF is this. Using opus 4.6 .where did sonnet 4.6 go? What&apos;s happening? Can somebody help me understand?</description>
+    </item>
+    <item>
+      <title>docs(seo): Add Bing webmaster verification tag</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/577beb5f1203769b1d42d83ae8284bf455e27474</link>
+      <guid isPermaLink="false">577beb5</guid>
+      <pubDate>Tue, 02 Jun 2026 15:54:29 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>security-guidance: emit schema-valid Stop-hook output (#2159) — 2.0.2 → 2.0.3</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/70c28b9c2f9e29333443b03fbbdda35e1a0ce878</link>
+      <guid isPermaLink="false">70c28b9</guid>
+      <pubDate>Tue, 02 Jun 2026 15:52:38 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes #2159. The Stop hook emits feedback via `hookSpecificOutput: {hookEventName: &quot;Stop&quot;, additionalContext}`, but `Stop`/`SubagentStop` are NOT members of CC&apos;s `hookSpecificOutput` discriminated union (coreSchemas.ts — valid members are PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, etc.</description>
+    </item>
+    <item>
+      <title>test(seo): Add live discovery smoke check</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/0ed0c52f18ff7bb2bd526dd144c003814fb0acaa</link>
+      <guid isPermaLink="false">0ed0c52</guid>
+      <pubDate>Tue, 02 Jun 2026 15:44:35 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>Interpreting law is one of the oldest jobs in the world. @MaxJunestrand, co-founder and CEO of @WeAreLegora, is bringing it into its next era with Claude.
+
+His bet: every new model release raises the </title>
+      <link>https://x.com/claudeai/status/2061829558999912680</link>
+      <guid isPermaLink="false">2061829558999912680</guid>
+      <pubDate>Tue, 02 Jun 2026 15:17:28 GMT</pubDate>
+      <category>twitter-claudeai</category>
+      <description>Interpreting law is one of the oldest jobs in the world. @MaxJunestrand, co-founder and CEO of @WeAreLegora, is bringing it into its next era with Claude.
+
+His bet: every new model release raises the tide, and Legora is building the boats for everyone else. https://t.co/EOM8PqALT4</description>
+    </item>
+    <item>
+      <title>Why Was Opus 4.8 Made So Defensive, Fearful, and Evasive?</title>
+      <link>https://www.reddit.com/r/claude/comments/1tutnvd/why_was_opus_48_made_so_defensive_fearful_and/</link>
+      <guid isPermaLink="false">t3_1tutnvd</guid>
+      <pubDate>Tue, 02 Jun 2026 15:04:30 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description>Why was Opus 4.8 given such a defensive, fearful, and evasive personality? This was already starting to become noticeable in version 4.7, but now it is close to making 4.8 unusable for several types of tasks. It is incredible how ABSURDLY evasive it has become. Another issue that stands out is the e</description>
+    </item>
+    <item>
+      <title>Expanding Project Glasswing</title>
+      <link>https://www.anthropic.com/news/expanding-project-glasswing</link>
+      <guid isPermaLink="false">48369863</guid>
+      <pubDate>Tue, 02 Jun 2026 13:15:14 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description>&lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;techcrunch.com&amp;#x2F;2026&amp;#x2F;06&amp;#x2F;02&amp;#x2F;anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries&amp;#x2F;&quot; rel=&quot;nofollow&quot;&gt;https:&amp;#x2F;&amp;#x2F;techcrunch.com&amp;#x2F;2026&amp;#x2F;06&amp;#x2F;02&amp;#x2F;anthropic-scales-claude-my...&lt;/a&gt;</description>
+    </item>
+    <item>
+      <title>We’re expanding Project Glasswing. We’ve extended access to Claude Mythos Preview to approximately 150 additional organizations, based in more than fifteen countries.
+
+Read more about this expansion a</title>
+      <link>https://x.com/AnthropicAI/status/2061796327986454883</link>
+      <guid isPermaLink="false">2061796327986454883</guid>
+      <pubDate>Tue, 02 Jun 2026 13:05:25 GMT</pubDate>
+      <category>twitter-anthropicai</category>
+      <description>We’re expanding Project Glasswing. We’ve extended access to Claude Mythos Preview to approximately 150 additional organizations, based in more than fifteen countries.
+
+Read more about this expansion and our future plans for Project Glasswing: https://t.co/QrtHSBdRbh</description>
+    </item>
+    <item>
+      <title>RT @danshipper: BREAKING:
+
+Anthropic just dropped Opus 4.8—and it is a MONSTER
+
+We&apos;ve been testing for about a week @every and our verdict…</title>
+      <link>https://x.com/noahzweben/status/2061791651333312942</link>
+      <guid isPermaLink="false">2061791651333312942</guid>
+      <pubDate>Tue, 02 Jun 2026 12:46:50 GMT</pubDate>
+      <category>twitter-noahzweben</category>
+      <description>RT @danshipper: BREAKING:
+
+Anthropic just dropped Opus 4.8—and it is a MONSTER
+
+We&apos;ve been testing for about a week @every and our verdict…</description>
+    </item>
+    <item>
+      <title>I am honored but this is definitely an AI generated version of my face</title>
+      <link>https://x.com/noahzweben/status/2061791194556837989</link>
+      <guid isPermaLink="false">2061791194556837989</guid>
+      <pubDate>Tue, 02 Jun 2026 12:45:01 GMT</pubDate>
+      <category>twitter-noahzweben</category>
+      <description>I am honored but this is definitely an AI generated version of my face</description>
+    </item>
+    <item>
+      <title>Found out opus 4.8 is a crazy man out of the wards and the reason for it</title>
+      <link>https://www.reddit.com/r/claude/comments/1tupf5i/found_out_opus_48_is_a_crazy_man_out_of_the_wards/</link>
+      <guid isPermaLink="false">t3_1tupf5i</guid>
+      <pubDate>Tue, 02 Jun 2026 12:26:19 GMT</pubDate>
+      <category>reddit-claude</category>
+      <description>Opus 4.8 is suspicious and paranoid when out of the box. I found something interesting in its thinking process. A worker agents talking in the thinking process? Then it showed up later several times. And I found out that thinking process editor not only writes out the thinking text it also controls </description>
+    </item>
+    <item>
+      <title>docs: define ECC platform value loop (#2119)</title>
+      <link>https://github.com/affaan-m/ECC/commit/99baa8250096f2d295583572399a5c9aba2ce312</link>
+      <guid isPermaLink="false">99baa82</guid>
+      <pubDate>Tue, 02 Jun 2026 11:51:02 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: record rc1 live package readbacks (#2117)</title>
+      <link>https://github.com/affaan-m/ECC/commit/d86fadad0d68ff1d5d5a3addcadd9e308cdd7188</link>
+      <guid isPermaLink="false">d86fada</guid>
+      <pubDate>Tue, 02 Jun 2026 11:32:59 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>v2.1.160</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.160</link>
+      <guid isPermaLink="false">v2.1.160</guid>
+      <pubDate>Tue, 02 Jun 2026 02:10:25 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a prompt before writing to shell startup files (.zshenv, .zlogin, .bashlogin) and ~/.config/git/, which could otherwise lead to unintended command execution
+- acceptEdits mode now prompts before writing build-tool config files that grant code execution (.npmrc, .yarnrc, bunfig</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/bdb04fc52421537f63bbcb9685e1c0905689f8f7</link>
+      <guid isPermaLink="false">bdb04fc</guid>
+      <pubDate>Tue, 02 Jun 2026 02:10:17 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Expanding Project Glasswing</title>
+      <link>https://www.anthropic.com/news/expanding-project-glasswing</link>
+      <guid isPermaLink="false">https://www.anthropic.com/news/expanding-project-glasswing</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <category>blog-news</category>
+      <description/>
+    </item>
+    <item>
+      <title>A harness for every task: dynamic workflows in Claude Code</title>
+      <link>https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code</link>
+      <guid isPermaLink="false">https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <category>blog-claude</category>
+      <description/>
+    </item>
+    <item>
+      <title>RT @ClaudeDevs: We&apos;ve reset 5-hour and weekly rate limits for all users on Pro and Max plans.
+
+We fixed an issue that caused some Claude Co…</title>
+      <link>https://x.com/TheAmolAvasare/status/2061519784668549320</link>
+      <guid isPermaLink="false">2061519784668549320</guid>
+      <pubDate>Mon, 01 Jun 2026 18:46:32 GMT</pubDate>
+      <category>twitter-theamolavasare</category>
+      <description>RT @ClaudeDevs: We&apos;ve reset 5-hour and weekly rate limits for all users on Pro and Max plans.
+
+We fixed an issue that caused some Claude Co…</description>
+    </item>
+    <item>
+      <title>We&apos;ve reset 5-hour and weekly rate limits for all users on Pro and Max plans.
+
+We fixed an issue that caused some Claude Code sessions to spawn excessive parallel subagents, burning through usage fast</title>
+      <link>https://x.com/ClaudeDevs/status/2061501787769893055</link>
+      <guid isPermaLink="false">2061501787769893055</guid>
+      <pubDate>Mon, 01 Jun 2026 17:35:01 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>We&apos;ve reset 5-hour and weekly rate limits for all users on Pro and Max plans.
+
+We fixed an issue that caused some Claude Code sessions to spawn excessive parallel subagents, burning through usage faster than expected.</description>
+    </item>
+    <item>
+      <title>Anthropic has confidentially submitted a draft S-1 registration statement to the Securities and Exchange Commission.
+
+Pending completion of SEC review, this gives us the option to pursue an initial pu</title>
+      <link>https://x.com/AnthropicAI/status/2061478052257841495</link>
+      <guid isPermaLink="false">2061478052257841495</guid>
+      <pubDate>Mon, 01 Jun 2026 16:00:42 GMT</pubDate>
+      <category>twitter-anthropicai</category>
+      <description>Anthropic has confidentially submitted a draft S-1 registration statement to the Securities and Exchange Commission.
+
+Pending completion of SEC review, this gives us the option to pursue an initial public offering.
+
+Read more: https://t.co/onGZAhRLvD</description>
+    </item>
+    <item>
+      <title>Anthropic confidentially submits draft S-1 to the SEC</title>
+      <link>https://www.anthropic.com/news/confidential-draft-s1-sec</link>
+      <guid isPermaLink="false">48358646</guid>
+      <pubDate>Mon, 01 Jun 2026 16:00:40 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description>&lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.reuters.com&amp;#x2F;business&amp;#x2F;ai-giant-anthropic-confidentially-files-us-ipo-2026-06-01&amp;#x2F;&quot; rel=&quot;nofollow&quot;&gt;https:&amp;#x2F;&amp;#x2F;www.reuters.com&amp;#x2F;business&amp;#x2F;ai-giant-anthropic-confiden...&lt;/a&gt;&lt;p&gt;&lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.nytimes.com&amp;#x2F;2026&amp;#x2F;06&amp;#x2F;01</description>
+    </item>
     <item>
       <title>0.3.159</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -24,28 +634,12 @@
       <description>- Internal infrastructure improvements (no user-facing changes)</description>
     </item>
     <item>
-      <title>Claude Code Referral link wanted (from Max users)</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1ttokbn/claude_code_referral_link_wanted_from_max_users/</link>
-      <guid isPermaLink="false">t3_1ttokbn</guid>
-      <pubDate>Mon, 01 Jun 2026 10:52:33 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description>I am planning to convert to a paid subscription after the 7 day free trial, so that you also get a bonus 😄.</description>
-    </item>
-    <item>
       <title>Sonnet 4.5 elevated errors</title>
       <link>https://stspg.io/22x7sjxvzqm1</link>
       <guid isPermaLink="false">z4pz8z34hr4x</guid>
       <pubDate>Mon, 01 Jun 2026 09:08:55 GMT</pubDate>
       <category>status-page</category>
       <description>[minor] resolved — This incident has been resolved.</description>
-    </item>
-    <item>
-      <title>4.8 burns through tokens like crazy and no, it is not a skill issue</title>
-      <link>https://www.reddit.com/r/claude/comments/1ttlugc/48_burns_through_tokens_like_crazy_and_no_it_is/</link>
-      <guid isPermaLink="false">t3_1ttlugc</guid>
-      <pubDate>Mon, 01 Jun 2026 08:25:17 GMT</pubDate>
-      <category>reddit-claude</category>
-      <description>Same workflow, same project, same user. Been on 100$ Max plan for few weeks. Barely hit 50% session even under heavy use. For the first time a single bug fix that required some back and forth burned through the limit. Period. One area where I’d give it credit is found 3 preexisting bugs while buildi</description>
     </item>
     <item>
       <title>Using LLMs to secure source code</title>
@@ -64,14 +658,6 @@
       <description>[minor] resolved — This incident has been resolved.</description>
     </item>
     <item>
-      <title>Paid for Claude Pro 10 days ago, still stuck on Free plan. Support is completely unresponsive.</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1ttj5lp/paid_for_claude_pro_10_days_ago_still_stuck_on/</link>
-      <guid isPermaLink="false">t3_1ttj5lp</guid>
-      <pubDate>Mon, 01 Jun 2026 05:55:44 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description/>
-    </item>
-    <item>
       <title>bump: switch to per-entry PR mode (one PR per stale plugin) (#2051)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/0d82eac145a50e6867d908419dccc5087b8595b0</link>
       <guid isPermaLink="false">0d82eac</guid>
@@ -80,108 +666,12 @@
       <description>* bump: switch to per-entry PR mode (one PR per stale plugin)  Replaces the single batched bump PR with one PR per stale plugin so a single failing plugin no longer blocks the rest. Pins to a feature branch of the bump-plugin-shas action that adds &apos;pr-mode: per-entry&apos;; re-pin to the merge commit on </description>
     </item>
     <item>
-      <title>this chart felt shady, so I fixed it (what I found will shock you!)</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1ttguup/this_chart_felt_shady_so_i_fixed_it_what_i_found/</link>
-      <guid isPermaLink="false">t3_1ttguup</guid>
-      <pubDate>Mon, 01 Jun 2026 04:00:32 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>The first chart is in the Opus 4.8 system card (p.195 for those playing along at home). Several things struck me as odd about it: The horizontal axis is log scale — there are good reasons to use this, but as an experienced data professional, I can tell you for free that most people just sort of slid</description>
-    </item>
-    <item>
-      <title>Is anyone else struggling to understand Anthropic&apos;s end goal with the Opus 4.8 release? Instead of improving the experience, the update seems to alienate ordinary users and discourage adoption. What are they actually aiming here?</title>
-      <link>https://www.reddit.com/r/claude/comments/1ttf9zx/is_anyone_else_struggling_to_understand/</link>
-      <guid isPermaLink="false">t3_1ttf9zx</guid>
-      <pubDate>Mon, 01 Jun 2026 02:45:05 GMT</pubDate>
-      <category>reddit-claude</category>
+      <title>Anthropic confidentially submits draft S-1 to the SEC</title>
+      <link>https://www.anthropic.com/news/confidential-draft-s1-sec</link>
+      <guid isPermaLink="false">https://www.anthropic.com/news/confidential-draft-s1-sec</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>blog-news</category>
       <description/>
-    </item>
-    <item>
-      <title>Nothing ever changes</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1ttet8n/nothing_ever_changes/</link>
-      <guid isPermaLink="false">t3_1ttet8n</guid>
-      <pubDate>Mon, 01 Jun 2026 02:23:41 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description/>
-    </item>
-    <item>
-      <title>Karpathy&apos;s CLAUDE.md just crossed 220k GitHub stars. Here&apos;s why it works.</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tte5sb/karpathys_claudemd_just_crossed_220k_github_stars/</link>
-      <guid isPermaLink="false">t3_1tte5sb</guid>
-      <pubDate>Mon, 01 Jun 2026 01:53:28 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>One developer named forrest chang reads the post the next day, identifies the four failure modes karpathy named and converts them into a single CLAUDE(.md ) file. Drops it on github on 27 jan. 220,000 combined stars later, its one of the fastest-growing repos in GitHub history. the problem it actual</description>
-    </item>
-    <item>
-      <title>5 Stars! Websites to Native Mobile App Plugin/Skills!</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1tte2ax/5_stars_websites_to_native_mobile_app_pluginskills/</link>
-      <guid isPermaLink="false">t3_1tte2ax</guid>
-      <pubDate>Mon, 01 Jun 2026 01:49:03 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description>Small update: WebToMobile just hit 5 stars on GitHub 🎉 I know that’s tiny in internet numbers, but it means a lot because this started as a very specific problem: “Can we give AI coding agents a better workflow for turning websites into mobile apps?” Instead of asking Claude/Cursor/Codex to “make t</description>
-    </item>
-    <item>
-      <title>Wish me luck! I&apos;m gonna drop the next Opus 4.9 soon</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1ttdfx8/wish_me_luck_im_gonna_drop_the_next_opus_49_soon/</link>
-      <guid isPermaLink="false">t3_1ttdfx8</guid>
-      <pubDate>Mon, 01 Jun 2026 01:20:16 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description/>
-    </item>
-    <item>
-      <title>A SF house just went on sale priced in Anthropic stocks</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1ttdcnn/a_sf_house_just_went_on_sale_priced_in_anthropic/</link>
-      <guid isPermaLink="false">t3_1ttdcnn</guid>
-      <pubDate>Mon, 01 Jun 2026 01:16:14 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>The buyers these listings target are worth $10-100M+ on paper and senior anthropic engineers get stock grants worth millions annually. Anthropic employees have watched their equity compound through multiple funding rounds and they are still renting because the shares are private, locked and transfer</description>
-    </item>
-    <item>
-      <title>claude chill</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1ttat8g/claude_chill/</link>
-      <guid isPermaLink="false">t3_1ttat8g</guid>
-      <pubDate>Sun, 31 May 2026 23:23:15 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>.</description>
-    </item>
-    <item>
-      <title>Why 4.8 feels broken if you&apos;re not running dynamic workflows</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tt8mxx/why_48_feels_broken_if_youre_not_running_dynamic/</link>
-      <guid isPermaLink="false">t3_1tt8mxx</guid>
-      <pubDate>Sun, 31 May 2026 21:52:10 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>I ran 4.8 the same way I ran 4.7 for the past 48 hours. Tight coding loops, direct conversation, shorter sessions. It felt paranoid. Kept re-reading files I hadn&apos;t touched, flagged prompt injections that weren&apos;t there, burned tokens on verification cycles I never asked for. Then I read the system ca</description>
-    </item>
-    <item>
-      <title>Opus4.8&apos;s /ultracode agents using Haiku 4.5</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1tt8jde/opus48s_ultracode_agents_using_haiku_45/</link>
-      <guid isPermaLink="false">t3_1tt8jde</guid>
-      <pubDate>Sun, 31 May 2026 21:48:09 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>First time having this, previously only Opus 4.8 was handling those tasks with the agents, not sure if by design because it should give the same results (this is a complex task that spawned the agents) or just another way of them to handle all of their high traffic.</description>
-    </item>
-    <item>
-      <title>Claude Code changed how I think about dev workspaces</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tt5mdg/claude_code_changed_how_i_think_about_dev/</link>
-      <guid isPermaLink="false">t3_1tt5mdg</guid>
-      <pubDate>Sun, 31 May 2026 19:56:02 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>I’ve been using Claude Code more as part of normal coding sessions, and it made me rethink something pretty basic: the terminal is starting to feel too small for the kind of work these tools do. Not because Claude Code is bad in the terminal. It actually works well there. But the session around it g</description>
-    </item>
-    <item>
-      <title>Claude refuses to calculate my TEE (total energy expenditure)</title>
-      <link>https://www.reddit.com/r/claude/comments/1tt5li3/claude_refuses_to_calculate_my_tee_total_energy/</link>
-      <guid isPermaLink="false">t3_1tt5li3</guid>
-      <pubDate>Sun, 31 May 2026 19:55:08 GMT</pubDate>
-      <category>reddit-claude</category>
-      <description>I asked DeepSeek, providing my exercise plan, and DeepSeek didn&apos;t have a problem answering. I copied DeepSeek&apos;s response and sent it to Claude and asked to calculate it for me again, because often AIs give me different numbers and I want to compare them. And now Claude says that my conversation has </description>
-    </item>
-    <item>
-      <title>FFS. Claude 4.8 is ALL over the place.</title>
-      <link>https://www.reddit.com/r/claude/comments/1tt59wd/ffs_claude_48_is_all_over_the_place/</link>
-      <guid isPermaLink="false">t3_1tt59wd</guid>
-      <pubDate>Sun, 31 May 2026 19:42:52 GMT</pubDate>
-      <category>reddit-claude</category>
-      <description>Honestly…. I am at a lose for words…. Anthropic this is not going to end well. For context, 155k tokens into 1m tokens. Fresh session not compressed.! Edited: https://github.com/anthropics/claude-code/issues/64329</description>
     </item>
     <item>
       <title>v2.1.159</title>
@@ -201,70 +691,6 @@
       <description/>
     </item>
     <item>
-      <title>chore: release v11.10.0</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/22710e9767607233281cae3298a92d30b55406d5</link>
-      <guid isPermaLink="false">22710e9</guid>
-      <pubDate>Sun, 31 May 2026 19:30:19 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: add v11.10.0 release notes</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/ceb5334afbfe7facdb9a0f65442b2a3c43eca3c3</link>
-      <guid isPermaLink="false">ceb5334</guid>
-      <pubDate>Sun, 31 May 2026 19:28:40 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add youtube-full skill for YouTube transcript, search, and channel access via TranscriptAPI (#633)</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/aac6dd28f34ce08bd49374f489a4e197fba3ecaa</link>
-      <guid isPermaLink="false">aac6dd2</guid>
-      <pubDate>Sun, 31 May 2026 19:27:47 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Adds `youtube-full` to `skills/youtube-full/SKILL.md` — YouTube transcripts, video search, channel browsing, and playlist extraction via [TranscriptAPI](https://transcriptapi.com).  Different from the existing `ingest-youtube`: that skill uses yt-dlp, which works locally but stops working on cloud s</description>
-    </item>
-    <item>
-      <title>feat: add yield-intelligence, moatmri, and doc2math community skills (#637)</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/cfa552a958161dbaa4ad82fcfad19967ba632381</link>
-      <guid isPermaLink="false">cfa552a</guid>
-      <pubDate>Sun, 31 May 2026 19:23:11 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Three community skills for passive income analysis, competitive intelligence, and document formalization.</description>
-    </item>
-    <item>
-      <title>SOTA-scan: claude skill, an honest mirror for your repo</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1tt4qqc/sotascan_claude_skill_an_honest_mirror_for_your/</link>
-      <guid isPermaLink="false">t3_1tt4qqc</guid>
-      <pubDate>Sun, 31 May 2026 19:22:53 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description>i build the Sota-skill for claude code that that scans your project, then looks at real projects in the same space and asks: &quot;What do the best projects have that this one does not?&quot; No vague startup-advisor advice but real deep inside of where u stand and what your next steps could be. It does real </description>
-    </item>
-    <item>
-      <title>feat: add batch output options + 5 new SEO/production skills (#638)</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/2533547eb0ea1f4f3bfee0489a50b406245c81b0</link>
-      <guid isPermaLink="false">2533547</guid>
-      <pubDate>Sun, 31 May 2026 19:13:06 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Add batch output options to the WordPress SEO blog writing skill and 5 new SEO/production skills derived from 3 real-world projects.</description>
-    </item>
-    <item>
-      <title>browser-eyes</title>
-      <link>https://www.reddit.com/r/claudeskills/comments/1tt4cgp/browsereyes/</link>
-      <guid isPermaLink="false">t3_1tt4cgp</guid>
-      <pubDate>Sun, 31 May 2026 19:08:24 GMT</pubDate>
-      <category>reddit-claudeskills</category>
-      <description>browser-eyes A daemon launches a chromium-based browser with CDP enabled, holds persistent connections, mirrors every domain (DOM, network, console, debugger, CSS, storage, fetch, performance, security) and exposes everything over a Unix socket. An MCP server sits on top so Claude Code can call any </description>
-    </item>
-    <item>
-      <title>Differences Between Opus 4.7 and Opus 4.8 on MineBench</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1tt3a8h/differences_between_opus_47_and_opus_48_on/</link>
-      <guid isPermaLink="false">t3_1tt3a8h</guid>
-      <pubDate>Sun, 31 May 2026 18:29:57 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>Some Notes: Average Inference Time: 24.8 min (1,487seconds) Total Cost (for 15 builds): $41.52 Much cheaper than Opus 4.7 was, despite having the same API pricing The CoT / thinking times have clearly been streamlined (similar to what OpenAI has been doing with their latest releases) which lowers ov</description>
-    </item>
-    <item>
       <title>@anthropic-ai/claude-code@2.1.159</title>
       <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
       <guid isPermaLink="false">2.1.159</guid>
@@ -273,27 +699,11 @@
       <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
     </item>
     <item>
-      <title>Fact.</title>
-      <link>https://www.reddit.com/r/claude/comments/1tsz1zu/fact/</link>
-      <guid isPermaLink="false">t3_1tsz1zu</guid>
-      <pubDate>Sun, 31 May 2026 15:52:54 GMT</pubDate>
-      <category>reddit-claude</category>
-      <description/>
-    </item>
-    <item>
       <title>How we contain Claude across products</title>
       <link>https://www.anthropic.com/engineering/how-we-contain-claude</link>
       <guid isPermaLink="false">48346216</guid>
       <pubDate>Sun, 31 May 2026 15:01:23 GMT</pubDate>
       <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>Opus 4.6 is gone. Any way to get it back?</title>
-      <link>https://www.reddit.com/r/Claudeopus/comments/1tsp1tf/opus_46_is_gone_any_way_to_get_it_back/</link>
-      <guid isPermaLink="false">t3_1tsp1tf</guid>
-      <pubDate>Sun, 31 May 2026 08:01:03 GMT</pubDate>
-      <category>reddit-claudeopus</category>
       <description/>
     </item>
     <item>
@@ -305,68 +715,12 @@
       <description>security-guidance: migrate _call_claude from deprecated output_format to output_config.format (#2098)</description>
     </item>
     <item>
-      <title>Opus 4.8 Gaurdrails are too strict</title>
-      <link>https://www.reddit.com/r/Claudeopus/comments/1tsmdaz/opus_48_gaurdrails_are_too_strict/</link>
-      <guid isPermaLink="false">t3_1tsmdaz</guid>
-      <pubDate>Sun, 31 May 2026 05:31:52 GMT</pubDate>
-      <category>reddit-claudeopus</category>
-      <description/>
-    </item>
-    <item>
-      <title>We contain Claude across products</title>
-      <link>https://www.anthropic.com/engineering/how-we-contain-claude</link>
-      <guid isPermaLink="false">48343239</guid>
-      <pubDate>Sun, 31 May 2026 05:17:19 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>security-guidance: migrate from deprecated output_format to output_config.format (#2098)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/84011d43b1de3303592d566a01b9466d5f7be191</link>
-      <guid isPermaLink="false">84011d4</guid>
-      <pubDate>Sun, 31 May 2026 03:11:41 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Fixes #2098. The Anthropic Messages API moved structured-output schema specification from a top-level `output_format` field to a nested `output_config.format` field, per https://platform.claude.com/docs/en/build-with-claude/structured-outputs.  Per docs the old form &quot;will continue working for a tran</description>
-    </item>
-    <item>
-      <title>Merge pull request #2101 from anthropics/fix-2099-quotepath-global</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/2a822c0787435b7924377c26b7d02be171df7814</link>
-      <guid isPermaLink="false">2a822c0</guid>
-      <pubDate>Sun, 31 May 2026 03:07:06 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: move core.quotePath=false to GIT_CMD globally (#2099 followup)</description>
-    </item>
-    <item>
       <title>opus 4.7 elevated errors</title>
       <link>https://stspg.io/5sy83gs4ytbw</link>
       <guid isPermaLink="false">694jznhm6tsl</guid>
       <pubDate>Sat, 30 May 2026 22:58:03 GMT</pubDate>
       <category>status-page</category>
       <description>[minor] resolved — This incident has been resolved.</description>
-    </item>
-    <item>
-      <title>security-guidance: move core.quotePath=false to GIT_CMD globally (#2099 followup)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a40c9f1e834a50651236584b22a09894cdcad431</link>
-      <guid isPermaLink="false">a40c9f1</guid>
-      <pubDate>Sat, 30 May 2026 19:19:38 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Followup to PR #2086 (which added the flag to 4 specific git call sites) and PR #2100 (text=True purge for #2099).  The Windows reporter for #2099 noticed more git invocations still lacked the flag — rev-parse path queries (--show-toplevel, --git-dir, --git-common-dir), reflog %gs subjects, and `git</description>
-    </item>
-    <item>
-      <title>Free 7 day passes</title>
-      <link>https://www.reddit.com/r/Claudeopus/comments/1ts63qs/free_7_day_passes/</link>
-      <guid isPermaLink="false">t3_1ts63qs</guid>
-      <pubDate>Sat, 30 May 2026 17:32:02 GMT</pubDate>
-      <category>reddit-claudeopus</category>
-      <description/>
-    </item>
-    <item>
-      <title>Is Opus 4.8 very slow for anyone else?</title>
-      <link>https://www.reddit.com/r/Claudeopus/comments/1ts1v1s/is_opus_48_very_slow_for_anyone_else/</link>
-      <guid isPermaLink="false">t3_1ts1v1s</guid>
-      <pubDate>Sat, 30 May 2026 14:44:48 GMT</pubDate>
-      <category>reddit-claudeopus</category>
-      <description>I&apos;ve been testing Opus 4.8 recently and noticed that response times seem noticeably slower than what I was expecting. For those of you using it regularly: Are you experiencing slower response times? Is the latency consistent, or does it vary depending on the task? Have you noticed any difference bet</description>
     </item>
     <item>
       <title>0.3.158</title>
@@ -399,14 +753,6 @@
       <guid isPermaLink="false">295dee8</guid>
       <pubDate>Sat, 30 May 2026 02:42:09 GMT</pubDate>
       <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Measuring LLMs&apos; ability to develop exploits</title>
-      <link>https://red.anthropic.com/2026/exploit-evals/</link>
-      <guid isPermaLink="false">48331813</guid>
-      <pubDate>Sat, 30 May 2026 02:26:07 GMT</pubDate>
-      <category>hn-anthropic-com</category>
       <description/>
     </item>
     <item>
@@ -445,18 +791,6 @@
       <description/>
     </item>
     <item>
-      <title>With Opus 4.8, you can add system instructions mid-conversation without breaking the prompt cache.
-
-More cache hits means lower cost and latency for your API requests. https://t.co/42C7wqnLhD</title>
-      <link>https://x.com/ClaudeDevs/status/2060432688281251998</link>
-      <guid isPermaLink="false">2060432688281251998</guid>
-      <pubDate>Fri, 29 May 2026 18:46:48 GMT</pubDate>
-      <category>twitter-claudedevs</category>
-      <description>With Opus 4.8, you can add system instructions mid-conversation without breaking the prompt cache.
-
-More cache hits means lower cost and latency for your API requests. https://t.co/42C7wqnLhD</description>
-    </item>
-    <item>
       <title>Elevated errors for Claude Opus 4.8</title>
       <link>https://stspg.io/03j611vnshfp</link>
       <guid isPermaLink="false">2zr0rkdxjdtc</guid>
@@ -483,14 +817,6 @@ A migration they&apos;d scoped at 231 days shipped in 13. One PR delivered 21 en
       <pubDate>Fri, 29 May 2026 14:14:43 GMT</pubDate>
       <category>twitter-noahzweben</category>
       <description>RT @dickson_tsai: My colleague&apos;s &quot;dynamic workflows&quot; are, in my opinion, the most significant Claude Code innovation in 2026 so far. Unpack…</description>
-    </item>
-    <item>
-      <title>Opus 4.8 burned 70% of Max Plan (20x) usage with just 2 prompts</title>
-      <link>https://www.reddit.com/r/Claudeopus/comments/1tr1x8e/opus_48_burned_70_of_max_plan_20x_usage_with_just/</link>
-      <guid isPermaLink="false">t3_1tr1x8e</guid>
-      <pubDate>Fri, 29 May 2026 13:28:48 GMT</pubDate>
-      <category>reddit-claudeopus</category>
-      <description>Claude Opus 4.8 with UltraCode enabled burned 70% of Max Plan (20x) usage with just 2 prompts to fix two bugs. That&apos;s $200 usage just by sending two sentences: fix something.. Then, once I hit 70% usage I got a message: “token rate limit hit.” Checked the usage page… I still had 30% left, like what </description>
     </item>
     <item>
       <title>RT @felixrieseberg: Also out today: You can now directly configure the effort level and adaptive thinking in Code (/effort) and Cowork!
@@ -527,14 +853,6 @@ Ef…</description>
       <pubDate>Fri, 29 May 2026 08:30:14 GMT</pubDate>
       <category>status-page</category>
       <description>[minor] resolved — This incident has been resolved.</description>
-    </item>
-    <item>
-      <title>How Anthropic Is Building Guardrails for Autonomous Claude Agents</title>
-      <link>https://www.anthropic.com/engineering/how-we-contain-claude</link>
-      <guid isPermaLink="false">48320191</guid>
-      <pubDate>Fri, 29 May 2026 07:32:51 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
     </item>
     <item>
       <title>Free Week of Claude Code</title>
@@ -575,336 +893,6 @@ Ef…</description>
       <pubDate>Fri, 29 May 2026 02:34:50 GMT</pubDate>
       <category>twitter-noahzweben</category>
       <description>One of the coolest use-cases. Go bun go</description>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: We’ve been putting a lot of effort into making Claude Code more responsive &amp;amp; reliable. 
-
-Here’s an update on everything we’…</title>
-      <link>https://x.com/noahzweben/status/2060187491064230122</link>
-      <guid isPermaLink="false">2060187491064230122</guid>
-      <pubDate>Fri, 29 May 2026 02:32:28 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>RT @ClaudeDevs: We’ve been putting a lot of effort into making Claude Code more responsive &amp;amp; reliable. 
-
-Here’s an update on everything we’…</description>
-    </item>
-    <item>
-      <title>Add Opus 4.8 migration guide and model updates to claude-api skill (#1216)</title>
-      <link>https://github.com/anthropics/skills/commit/da20c92503b2e8ff1cf28ca81a0df4673debdbf7</link>
-      <guid isPermaLink="false">da20c92</guid>
-      <pubDate>Fri, 29 May 2026 02:02:26 GMT</pubDate>
-      <category>gh-commits-skills</category>
-      <description>* Add Managed Agents self-hosted sandboxes + mid-session agent updates + MCP tool-output offload to claude-api skill  Self-hosted sandboxes: new shared/managed-agents-self-hosted-sandboxes.md for config:{type:&quot;self_hosted&quot;} — agent loop on Anthropic&apos;s orchestration, tool execution on customer infra </description>
-    </item>
-    <item>
-      <title>v2.1.156</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.156</link>
-      <guid isPermaLink="false">v2.1.156</guid>
-      <pubDate>Fri, 29 May 2026 01:42:23 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed an issue when using Opus 4.8 where thinking blocks were modified, leading to API errors.</description>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/2d5c3c6c85048de7a4426a91268076807ebaeba5</link>
-      <guid isPermaLink="false">2d5c3c6</guid>
-      <pubDate>Fri, 29 May 2026 01:42:17 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>RT @PawelHuryn: Tested Claude Code&apos;s new dynamic workflows. 8 agents in 24.5s. 253k tokens.
-
-The launch post frames it as a large fleet of…</title>
-      <link>https://x.com/noahzweben/status/2060171248081019293</link>
-      <guid isPermaLink="false">2060171248081019293</guid>
-      <pubDate>Fri, 29 May 2026 01:27:56 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>RT @PawelHuryn: Tested Claude Code&apos;s new dynamic workflows. 8 agents in 24.5s. 253k tokens.
-
-The launch post frames it as a large fleet of…</description>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: We’ve been putting a lot of effort into making Claude Code more responsive &amp;amp; reliable. 
-
-Here’s an update on everything we’…</title>
-      <link>https://x.com/bcherny/status/2060167830004220195</link>
-      <guid isPermaLink="false">2060167830004220195</guid>
-      <pubDate>Fri, 29 May 2026 01:14:21 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @ClaudeDevs: We’ve been putting a lot of effort into making Claude Code more responsive &amp;amp; reliable. 
-
-Here’s an update on everything we’…</description>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: New in Claude Code (research preview): dynamic workflows.
-
-Claude writes an orchestration script on the fly, then spins up…</title>
-      <link>https://x.com/bcherny/status/2060167774727532653</link>
-      <guid isPermaLink="false">2060167774727532653</guid>
-      <pubDate>Fri, 29 May 2026 01:14:08 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @ClaudeDevs: New in Claude Code (research preview): dynamic workflows.
-
-Claude writes an orchestration script on the fly, then spins up…</description>
-    </item>
-    <item>
-      <title>v0.105.2</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.2</link>
-      <guid isPermaLink="false">v0.105.2</guid>
-      <pubDate>Fri, 29 May 2026 00:20:59 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.105.2 (2026-05-29)
-Full Changelog: v0.105.1...v0.105.2</description>
-    </item>
-    <item>
-      <title>aws-sdk: v0.3.1</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.3.1</link>
-      <guid isPermaLink="false">aws-sdk-v0.3.1</guid>
-      <pubDate>Fri, 29 May 2026 00:08:35 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.3.1 (2026-05-29)
-Full Changelog: aws-sdk-v0.3.0...aws-sdk-v0.3.1
- Chores
- client: update lockfiles to have proper dependencies on standardwebhooks (5e9b523)</description>
-    </item>
-    <item>
-      <title>foundry-sdk: v0.2.4</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.2.4</link>
-      <guid isPermaLink="false">foundry-sdk-v0.2.4</guid>
-      <pubDate>Fri, 29 May 2026 00:08:24 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.2.4 (2026-05-29)
-Full Changelog: foundry-sdk-v0.2.3...foundry-sdk-v0.2.4
- Chores
- client: update lockfiles to have proper dependencies on standardwebhooks (5e9b523)</description>
-    </item>
-    <item>
-      <title>sdk: v0.100.1</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.100.1</link>
-      <guid isPermaLink="false">sdk-v0.100.1</guid>
-      <pubDate>Fri, 29 May 2026 00:08:17 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.100.1 (2026-05-29)
-Full Changelog: sdk-v0.100.0...sdk-v0.100.1
- Bug Fixes
- streaming: carry encryptedcontent on beta compaction blocks (1025) (eccddf3)
- Chores
- client: update lockfiles to have proper dependencies on standardwebhooks (5e9b523)</description>
-    </item>
-    <item>
-      <title>v0.105.1</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.1</link>
-      <guid isPermaLink="false">v0.105.1</guid>
-      <pubDate>Fri, 29 May 2026 00:07:37 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.105.1 (2026-05-29)
-Full Changelog: v0.105.0...v0.105.1
- Chores
- internal: use Trusted Publishing for PyPI releases (1d04fc5)</description>
-    </item>
-    <item>
-      <title>RT @AnthropicAI: We&apos;ve raised $65 billion in Series H funding at a $965 billion post-money valuation, led by @AltimeterCap, Dragoneer, @Gre…</title>
-      <link>https://x.com/bcherny/status/2060115846295384289</link>
-      <guid isPermaLink="false">2060115846295384289</guid>
-      <pubDate>Thu, 28 May 2026 21:47:47 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @AnthropicAI: We&apos;ve raised $65 billion in Series H funding at a $965 billion post-money valuation, led by @AltimeterCap, Dragoneer, @Gre…</description>
-    </item>
-    <item>
-      <title>go ant go</title>
-      <link>https://x.com/noahzweben/status/2060094703236948400</link>
-      <guid isPermaLink="false">2060094703236948400</guid>
-      <pubDate>Thu, 28 May 2026 20:23:46 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>go ant go</description>
-    </item>
-    <item>
-      <title>@anthropic-ai/claude-code@2.1.156</title>
-      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
-      <guid isPermaLink="false">2.1.156</guid>
-      <pubDate>Thu, 28 May 2026 20:12:52 GMT</pubDate>
-      <category>npm-claude-code</category>
-      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
-    </item>
-    <item>
-      <title>RT @claudeai: Before we ship a new model, these teams try to break it.
-
-They build with it, push it to its limits, and tell us where it fal…</title>
-      <link>https://x.com/AnthropicAI/status/2060075590581948519</link>
-      <guid isPermaLink="false">2060075590581948519</guid>
-      <pubDate>Thu, 28 May 2026 19:07:49 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>RT @claudeai: Before we ship a new model, these teams try to break it.
-
-They build with it, push it to its limits, and tell us where it fal…</description>
-    </item>
-    <item>
-      <title>Before we ship a new model, these teams try to break it.
-
-They build with it, push it to its limits, and tell us where it falls short. What they find makes the final model better. https://t.co/Q4LD01z</title>
-      <link>https://x.com/claudeai/status/2060074627032838438</link>
-      <guid isPermaLink="false">2060074627032838438</guid>
-      <pubDate>Thu, 28 May 2026 19:04:00 GMT</pubDate>
-      <category>twitter-claudeai</category>
-      <description>Before we ship a new model, these teams try to break it.
-
-They build with it, push it to its limits, and tell us where it falls short. What they find makes the final model better. https://t.co/Q4LD01zIIc</description>
-    </item>
-    <item>
-      <title>We&apos;ve raised $65 billion in Series H funding at a $965 billion post-money valuation, led by @AltimeterCap, Dragoneer, @Greenoaks, and @sequoia.
-
-This investment will help us advance our research and e</title>
-      <link>https://x.com/AnthropicAI/status/2060061347522433422</link>
-      <guid isPermaLink="false">2060061347522433422</guid>
-      <pubDate>Thu, 28 May 2026 18:11:13 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>We&apos;ve raised $65 billion in Series H funding at a $965 billion post-money valuation, led by @AltimeterCap, Dragoneer, @Greenoaks, and @sequoia.
-
-This investment will help us advance our research and expand our capacity to meet growing demand for Claude.</description>
-    </item>
-    <item>
-      <title>Anthropic raises $65B in Series H funding at $965B post-money valuation</title>
-      <link>https://www.anthropic.com/news/series-h</link>
-      <guid isPermaLink="false">48313048</guid>
-      <pubDate>Thu, 28 May 2026 18:09:44 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>Also out today: You can now directly configure the effort level and adaptive thinking in Code (/effort) and Cowork!
-
-Effort allows you to tune Claude&apos;s intelligence vs token spend, trading off capabil</title>
-      <link>https://x.com/felixrieseberg/status/2060059697366110305</link>
-      <guid isPermaLink="false">2060059697366110305</guid>
-      <pubDate>Thu, 28 May 2026 18:04:40 GMT</pubDate>
-      <category>twitter-felixrieseberg</category>
-      <description>Also out today: You can now directly configure the effort level and adaptive thinking in Code (/effort) and Cowork!
-
-Effort allows you to tune Claude&apos;s intelligence vs token spend, trading off capability for faster speed and lower costs.
-
-Opus 4.8 respects effort levels strictly, especially at the l</description>
-    </item>
-    <item>
-      <title>Merge pull request #677 from anthropics/kevintang/agent-sdk-hosting-public</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/31cfc00ca5e8049a23a410d1fee0dd8428104cad</link>
-      <guid isPermaLink="false">31cfc00</guid>
-      <pubDate>Thu, 28 May 2026 18:03:18 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Agent SDK cookbook 07: Hosting your agent (Docker / Modal / Kubernetes)</description>
-    </item>
-    <item>
-      <title>v2.1.154</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.154</link>
-      <guid isPermaLink="false">v2.1.154</guid>
-      <pubDate>Thu, 28 May 2026 18:00:55 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Opus 4.8 is here! Now defaults to high effort · /effort xhigh for your hardest tasks
-- Introducing dynamic workflows: ask Claude to create a workflow and it orchestrates work across tens to hundreds of agents in the background, so you can take on larger, more complex tasks. Run /wor</description>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/1696f2229402f16f12a19170d2ad87d22459d544</link>
-      <guid isPermaLink="false">1696f22</guid>
-      <pubDate>Thu, 28 May 2026 18:00:48 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Opus 4.8 is out! It&apos;s a nice little step up for some of your most demanding work, whether that&apos;s in Cowork or Code.
-
-It&apos;s our strongest coding model yet. In my own work, I&apos;ve found it to have excellen</title>
-      <link>https://x.com/felixrieseberg/status/2060058141954596929</link>
-      <guid isPermaLink="false">2060058141954596929</guid>
-      <pubDate>Thu, 28 May 2026 17:58:29 GMT</pubDate>
-      <category>twitter-felixrieseberg</category>
-      <description>Opus 4.8 is out! It&apos;s a nice little step up for some of your most demanding work, whether that&apos;s in Cowork or Code.
-
-It&apos;s our strongest coding model yet. In my own work, I&apos;ve found it to have excellent judgement, both in how much work it should do and how it should react to my steering.
-
-It&apos;s also g</description>
-    </item>
-    <item>
-      <title>What&apos;s new in Claude Opus 4.8</title>
-      <link>https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-8</link>
-      <guid isPermaLink="false">48312156</guid>
-      <pubDate>Thu, 28 May 2026 17:13:56 GMT</pubDate>
-      <category>hn-claude-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>New in Claude Code (research preview): dynamic workflows.
-
-Claude writes an orchestration script on the fly, then spins up a large fleet of coordinated subagents in parallel to take on your most compl</title>
-      <link>https://x.com/ClaudeDevs/status/2060044853279617150</link>
-      <guid isPermaLink="false">2060044853279617150</guid>
-      <pubDate>Thu, 28 May 2026 17:05:41 GMT</pubDate>
-      <category>twitter-claudedevs</category>
-      <description>New in Claude Code (research preview): dynamic workflows.
-
-Claude writes an orchestration script on the fly, then spins up a large fleet of coordinated subagents in parallel to take on your most complex tasks.
-
-Use the word &quot;workflow&quot; in a prompt to get started. https://t.co/re4SG3AyDm</description>
-    </item>
-    <item>
-      <title>Opus 4.8 is live in Claude Code today. 
-
-A few things worth knowing: 🧵</title>
-      <link>https://x.com/ClaudeDevs/status/2060043208277811437</link>
-      <guid isPermaLink="false">2060043208277811437</guid>
-      <pubDate>Thu, 28 May 2026 16:59:09 GMT</pubDate>
-      <category>twitter-claudedevs</category>
-      <description>Opus 4.8 is live in Claude Code today. 
-
-A few things worth knowing: 🧵</description>
-    </item>
-    <item>
-      <title>RT @claudeai: Introducing Claude Opus 4.8: it builds on Opus 4.7 with sharper judgment, more honesty about its own progress, and the abilit…</title>
-      <link>https://x.com/AnthropicAI/status/2060042792399770030</link>
-      <guid isPermaLink="false">2060042792399770030</guid>
-      <pubDate>Thu, 28 May 2026 16:57:30 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>RT @claudeai: Introducing Claude Opus 4.8: it builds on Opus 4.7 with sharper judgment, more honesty about its own progress, and the abilit…</description>
-    </item>
-    <item>
-      <title>Introducing Claude Opus 4.8: it builds on Opus 4.7 with sharper judgment, more honesty about its own progress, and the ability to work independently for longer than its predecessors.
-
-Available today </title>
-      <link>https://x.com/claudeai/status/2060042702150930686</link>
-      <guid isPermaLink="false">2060042702150930686</guid>
-      <pubDate>Thu, 28 May 2026 16:57:08 GMT</pubDate>
-      <category>twitter-claudeai</category>
-      <description>Introducing Claude Opus 4.8: it builds on Opus 4.7 with sharper judgment, more honesty about its own progress, and the ability to work independently for longer than its predecessors.
-
-Available today at the same price. https://t.co/EufxL7T1kb</description>
-    </item>
-    <item>
-      <title>Opus 4.8 is here!
-
-It&apos;s our smartest Opus model to date, and the best GA model for coding and agents. https://t.co/kxoJiuLKfy</title>
-      <link>https://x.com/TheAmolAvasare/status/2060042626565591051</link>
-      <guid isPermaLink="false">2060042626565591051</guid>
-      <pubDate>Thu, 28 May 2026 16:56:50 GMT</pubDate>
-      <category>twitter-theamolavasare</category>
-      <description>Opus 4.8 is here!
-
-It&apos;s our smartest Opus model to date, and the best GA model for coding and agents. https://t.co/kxoJiuLKfy</description>
-    </item>
-    <item>
-      <title>v0.105.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.0</link>
-      <guid isPermaLink="false">v0.105.0</guid>
-      <pubDate>Thu, 28 May 2026 16:52:38 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.105.0 (2026-05-28)
-Full Changelog: v0.104.1...v0.105.0
- Features
- api: Add support for claude-opus-4-8, mid-conversation system blocks, and usage.outputtokensdetails (f18b014)
- support custom file size caps (1825) (7e5f944)
- Chores
- examples: rename managed-agents private-sandbox-worker to self-ho</description>
     </item>
   </channel>
 </rss>

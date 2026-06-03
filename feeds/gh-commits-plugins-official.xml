@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 01 Jun 2026 11:41:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 11:05:14 GMT</lastBuildDate>
+    <item>
+      <title>Add migration-to-aws plugin (#2195)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c917011ca692e188f5dbd32025044cb9fa6b011f</link>
+      <guid isPermaLink="false">c917011</guid>
+      <pubDate>Tue, 02 Jun 2026 22:48:35 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #2193 from anthropics/fix-2159-stop-hook-schema</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d4d90844a09e3eb94b7f15ac970546b8aaebc2c5</link>
+      <guid isPermaLink="false">d4d9084</guid>
+      <pubDate>Tue, 02 Jun 2026 22:17:34 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: emit schema-valid Stop-hook output (#2159) — 2.0.2 → 2.0.3</description>
+    </item>
+    <item>
+      <title>security-guidance: emit schema-valid Stop-hook output (#2159) — 2.0.2 → 2.0.3</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/70c28b9c2f9e29333443b03fbbdda35e1a0ce878</link>
+      <guid isPermaLink="false">70c28b9</guid>
+      <pubDate>Tue, 02 Jun 2026 15:52:38 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Fixes #2159. The Stop hook emits feedback via `hookSpecificOutput: {hookEventName: &quot;Stop&quot;, additionalContext}`, but `Stop`/`SubagentStop` are NOT members of CC&apos;s `hookSpecificOutput` discriminated union (coreSchemas.ts — valid members are PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, etc.</description>
+    </item>
     <item>
       <title>bump: switch to per-entry PR mode (one PR per stale plugin) (#2051)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/0d82eac145a50e6867d908419dccc5087b8595b0</link>
@@ -380,30 +404,6 @@
       <link>https://github.com/anthropics/claude-plugins-official/commit/9f0275ae445cc605c3f5d83615fa0abf189cd90f</link>
       <guid isPermaLink="false">9f0275a</guid>
       <pubDate>Mon, 18 May 2026 23:56:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Fix broken plugin source configs and bump their SHAs (#1915)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0b9a622ecb4a924372fef3226489718a09c7ec28</link>
-      <guid isPermaLink="false">0b9a622</guid>
-      <pubDate>Mon, 18 May 2026 22:33:38 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Fix broken plugin source configs and bump their SHAs  Several external plugins had source configs that no longer matched the upstream layout, so the automated SHA bump skipped them indefinitely. Add the missing path field where the manifest moved into a subdirectory, correct stale ref/commit metad</description>
-    </item>
-    <item>
-      <title>Raise bump cap with verdict cache and skip-and-revert (#1913)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b7c0654137cdc5f2c9d668de15563ffe3d7e2a2d</link>
-      <guid isPermaLink="false">b7c0654</guid>
-      <pubDate>Mon, 18 May 2026 19:55:20 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Cache scan verdicts and drop policy-failing entries from bump PRs  Three changes that together let the nightly bump clear any backlog in a single run without blocking on a single bad upstream or re-burning Claude time on already-scanned SHAs:  - bump-plugin-shas.yml: raise max-bumps default 20 -&gt; </description>
-    </item>
-    <item>
-      <title>Bump 21 plugin SHA pins to upstream HEAD (#1911)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/af4e1ad69ec55a027c5273d65b15a7b2e7e09c19</link>
-      <guid isPermaLink="false">af4e1ad</guid>
-      <pubDate>Mon, 18 May 2026 19:55:03 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
     </item>

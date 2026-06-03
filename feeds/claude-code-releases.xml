@@ -6,7 +6,28 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 01 Jun 2026 11:41:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 11:05:14 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.161</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.161</link>
+      <guid isPermaLink="false">v2.1.161</guid>
+      <pubDate>Tue, 02 Jun 2026 21:58:22 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- OTELRESOURCEATTRIBUTES values are now included as labels on metric datapoints, so you can slice usage metrics by custom dimensions like team or repo
+- claude agents rows now show done/total before the detail when work is fanned out; peek shows the longest-running item
+- /mcp now col</description>
+    </item>
+    <item>
+      <title>v2.1.160</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.160</link>
+      <guid isPermaLink="false">v2.1.160</guid>
+      <pubDate>Tue, 02 Jun 2026 02:10:25 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a prompt before writing to shell startup files (.zshenv, .zlogin, .bashlogin) and ~/.config/git/, which could otherwise lead to unintended command execution
+- acceptEdits mode now prompts before writing build-tool config files that grant code execution (.npmrc, .yarnrc, bunfig</description>
+    </item>
     <item>
       <title>v2.1.159</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.159</link>

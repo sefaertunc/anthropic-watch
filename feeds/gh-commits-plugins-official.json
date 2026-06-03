@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-01T11:41:43.782Z",
+  "generated": "2026-06-03T11:05:14.290Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "c917011",
+      "title": "Add migration-to-aws plugin (#2195)",
+      "date": "2026-06-02T22:48:35Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/c917011ca692e188f5dbd32025044cb9fa6b011f",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "c917011|gh-commits-plugins-official"
+    },
+    {
+      "id": "d4d9084",
+      "title": "Merge pull request #2193 from anthropics/fix-2159-stop-hook-schema",
+      "date": "2026-06-02T22:17:34Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/d4d90844a09e3eb94b7f15ac970546b8aaebc2c5",
+      "snippet": "security-guidance: emit schema-valid Stop-hook output (#2159) — 2.0.2 → 2.0.3",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "d4d9084|gh-commits-plugins-official"
+    },
+    {
+      "id": "70c28b9",
+      "title": "security-guidance: emit schema-valid Stop-hook output (#2159) — 2.0.2 → 2.0.3",
+      "date": "2026-06-02T15:52:38Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/70c28b9c2f9e29333443b03fbbdda35e1a0ce878",
+      "snippet": "Fixes #2159. The Stop hook emits feedback via `hookSpecificOutput: {hookEventName: \"Stop\", additionalContext}`, but `Stop`/`SubagentStop` are NOT members of CC's `hookSpecificOutput` discriminated union (coreSchemas.ts — valid members are PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, etc.",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "70c28b9|gh-commits-plugins-official"
+    },
     {
       "id": "0d82eac",
       "title": "bump: switch to per-entry PR mode (one PR per stale plugin) (#2051)",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "9f0275a|gh-commits-plugins-official"
-    },
-    {
-      "id": "0b9a622",
-      "title": "Fix broken plugin source configs and bump their SHAs (#1915)",
-      "date": "2026-05-18T22:33:38Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/0b9a622ecb4a924372fef3226489718a09c7ec28",
-      "snippet": "* Fix broken plugin source configs and bump their SHAs  Several external plugins had source configs that no longer matched the upstream layout, so the automated SHA bump skipped them indefinitely. Add the missing path field where the manifest moved into a subdirectory, correct stale ref/commit metad",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "0b9a622|gh-commits-plugins-official"
-    },
-    {
-      "id": "b7c0654",
-      "title": "Raise bump cap with verdict cache and skip-and-revert (#1913)",
-      "date": "2026-05-18T19:55:20Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/b7c0654137cdc5f2c9d668de15563ffe3d7e2a2d",
-      "snippet": "* Cache scan verdicts and drop policy-failing entries from bump PRs  Three changes that together let the nightly bump clear any backlog in a single run without blocking on a single bad upstream or re-burning Claude time on already-scanned SHAs:  - bump-plugin-shas.yml: raise max-bumps default 20 -> ",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "b7c0654|gh-commits-plugins-official"
-    },
-    {
-      "id": "af4e1ad",
-      "title": "Bump 21 plugin SHA pins to upstream HEAD (#1911)",
-      "date": "2026-05-18T19:55:03Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/af4e1ad69ec55a027c5273d65b15a7b2e7e09c19",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "af4e1ad|gh-commits-plugins-official"
     }
   ]
 }

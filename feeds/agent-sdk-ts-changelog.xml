@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 01 Jun 2026 11:41:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 11:05:14 GMT</lastBuildDate>
+    <item>
+      <title>0.3.161</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.161</guid>
+      <pubDate>Wed, 03 Jun 2026 11:04:17 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- The initialize control request is now idempotent: a second initialize returns the same success payload instead of an Already initialized error. ControlResponse gains an optional pendingpermissionrequests field, mirroring ControlErrorResponse
+- applyFlagSettings now live-applies agent changes: swit</description>
+    </item>
     <item>
       <title>0.3.159</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
