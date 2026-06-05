@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 04 Jun 2026 10:00:21 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 09:56:48 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2311 from anthropics/readd-valtown</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/bd7cf41fc8a468b136a9266633303ff4a011c7b4</link>
+      <guid isPermaLink="false">bd7cf41</guid>
+      <pubDate>Thu, 04 Jun 2026 19:13:14 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Re-add valtown plugin entry</description>
+    </item>
+    <item>
+      <title>Re-add valtown plugin entry</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/52e0a89d75a5e1e9dded91e9b2a504b4a8c84986</link>
+      <guid isPermaLink="false">52e0a89</guid>
+      <pubDate>Thu, 04 Jun 2026 18:56:55 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Remove valtown plugin entry (#2310)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e4afd8274a87bd6a8ac405c241a2ef0fa03975fe</link>
+      <guid isPermaLink="false">e4afd82</guid>
+      <pubDate>Thu, 04 Jun 2026 18:48:58 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Rename vals plugin to valtown (#2309)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/056ed579e148523f39f947101338e04afa325865</link>
+      <guid isPermaLink="false">056ed57</guid>
+      <pubDate>Thu, 04 Jun 2026 17:59:59 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #2306 from anthropics/add-vals</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/9b3f5842ebf59b79d87acfb3c66aa1e4b20837c1</link>
+      <guid isPermaLink="false">9b3f584</guid>
+      <pubDate>Thu, 04 Jun 2026 16:48:26 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Add vals plugin</description>
+    </item>
+    <item>
+      <title>Add vals plugin</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/971bf7f77b359725b709143e0d3cf1a1630c948d</link>
+      <guid isPermaLink="false">971bf7f</guid>
+      <pubDate>Thu, 04 Jun 2026 14:41:51 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Update aws-startup-advisor listing description (#2305)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/84a0cba9995100aac9c65cfb3a07d492de4c1fc5</link>
+      <guid isPermaLink="false">84a0cba</guid>
+      <pubDate>Thu, 04 Jun 2026 14:39:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Refreshes the marketplace listing description for the AWS Startup Advisor plugin at the maintainer&apos;s request.  Co-authored-by: Claude Opus 4.8 (1M context) &lt;noreply@anthropic.com&gt;</description>
+    </item>
     <item>
       <title>Add migration-to-aws plugin (#2195)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/c917011ca692e188f5dbd32025044cb9fa6b011f</link>
@@ -350,62 +406,6 @@
       <pubDate>Thu, 21 May 2026 05:24:44 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Adds the /create-docker-mcp-tunnel command, which drives the MCP tunnels Docker Compose quickstart end to end: preflight checks, certificate generation, proxy config, cloudflared, an optional sample FastMCP server, and verification from Managed Agents and the Messages API.  Migrated from anthropic-e</description>
-    </item>
-    <item>
-      <title>Merge pull request #1935 from anthropics/fix/quote-claude-plugin-root-paths</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/bef2b9b246e2072d167a71b7a8d65718ec55d2ef</link>
-      <guid isPermaLink="false">bef2b9b</guid>
-      <pubDate>Wed, 20 May 2026 00:54:18 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>fix: quote ${CLAUDE_PLUGIN_ROOT} in hookify and security-guidance hook commands</description>
-    </item>
-    <item>
-      <title>fix: quote \${CLAUDE_PLUGIN_ROOT} in hookify and security-guidance hook commands</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b58bdbf5512a8c4f03c24057fe7bd756ce4db962</link>
-      <guid isPermaLink="false">b58bdbf</guid>
-      <pubDate>Tue, 19 May 2026 22:37:56 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Paths containing spaces (common on Windows, e.g. C:\Users\Some User\...) cause shell word-splitting when CLAUDE_PLUGIN_ROOT is unquoted, resulting in hooks erroring with &quot;No such file or directory&quot; on every tool call.  Wraps the path in double quotes for all five affected hook commands. Fixes the pa</description>
-    </item>
-    <item>
-      <title>Bump snowflake-cortex-code to v3.1.0 (#1932)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ae21a9367949f92df4e31231d7efe43eaa08207c</link>
-      <guid isPermaLink="false">ae21a93</guid>
-      <pubDate>Tue, 19 May 2026 17:55:48 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add 24 first-party plugins from major-brand orgs (#1919)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/6a05dc286dcfa0f524d5c1f94fd513d2956fa494</link>
-      <guid isPermaLink="false">6a05dc2</guid>
-      <pubDate>Tue, 19 May 2026 13:20:20 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Promote first-party plugins from recognizable companies that publish deep, actively-maintained Claude Code plugins from their official GitHub orgs. All entries are SHA-pinned to current default-branch HEAD.  Development: - apollo-skills (Apollo GraphQL): 14 GraphQL skills + Apollo MCP server - appwr</description>
-    </item>
-    <item>
-      <title>Bump 25 plugin SHA pins to upstream HEAD (huggingface–railway) (#1914)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/d42e163958b98eeb578591954d89f4de6b87e86b</link>
-      <guid isPermaLink="false">d42e163</guid>
-      <pubDate>Tue, 19 May 2026 13:19:35 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Bump 26 plugin SHA pins to upstream HEAD  * Revert mercadopago SHA bump  The new upstream SHA adds a PreToolUse hook that fires on every Bash/Edit/Write/Read in all sessions and globally blocks reading .env files, regardless of project relevance. The policy scan flags this as out of scope for what</description>
-    </item>
-    <item>
-      <title>Add carta-crm and carta-investors plugins (#1877)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/4bf08583c37e04f764806ea7a96ca74fb80ced1d</link>
-      <guid isPermaLink="false">4bf0858</guid>
-      <pubDate>Tue, 19 May 2026 04:04:40 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add convex-backend plugin (#1918)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/9f0275ae445cc605c3f5d83615fa0abf189cd90f</link>
-      <guid isPermaLink="false">9f0275a</guid>
-      <pubDate>Mon, 18 May 2026 23:56:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
     </item>
   </channel>
 </rss>
