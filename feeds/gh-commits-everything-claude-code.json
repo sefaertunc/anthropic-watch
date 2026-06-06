@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-05T09:56:48.420Z",
+  "generated": "2026-06-06T08:37:39.440Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "7113b5b",
+      "title": "feat: MCP inventory (ecc.mcp.v1) — unified cross-harness MCP config view (#2146)",
+      "date": "2026-06-05T19:55:17Z",
+      "url": "https://github.com/affaan-m/ECC/commit/7113b5bf63694b716f8b2413c5919824a82fc095",
+      "snippet": "* feat: add MCP inventory (ecc.mcp.v1) across harnesses  Read-only MCP-gateway groundwork: discover MCP server configs across every installed harness, normalize to a canonical ecc.mcp.v1 inventory, redact secrets, and report which servers are configured in 2+ harnesses (the configure-N-times pain). ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "7113b5b|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "ab5e17f",
+      "title": "feat: extend session-adapter layer with codex-worktree + opencode adapters (#2145)",
+      "date": "2026-06-05T19:55:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ab5e17fea9bb63e863b0b9a42d774d0b5a7d8182",
+      "snippet": "* feat: add codex-worktree session adapter  Adds the third session adapter (after dmux-tmux and claude-history), normalizing Codex rollout sessions into the harness-neutral ecc.session.v1 snapshot. Reads ~/.codex/sessions rollout JSONL, derives objective (skipping the AGENTS.md preamble + leading me",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ab5e17f|gh-commits-everything-claude-code"
+    },
     {
       "id": "bc8e12b",
       "title": "feat: add dynamic workflow team orchestration surface",
@@ -535,28 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "bf1ccb0|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "0dd7838",
-      "title": "docs: refresh rc1 preview pack pointers",
-      "date": "2026-05-17T07:02:46Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/0dd78387c6e592e2be63d5f81235d64744498dee",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "0dd7838|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a9edd20",
-      "title": "docs: sync May 17 roadmap evidence",
-      "date": "2026-05-17T06:59:21Z",
-      "url": "https://github.com/affaan-m/everything-claude-code/commit/a9edd204622f7fd027d20ab8ba511aae73615358",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a9edd20|gh-commits-everything-claude-code"
     }
   ]
 }

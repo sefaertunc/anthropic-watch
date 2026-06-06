@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 05 Jun 2026 09:56:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 08:37:39 GMT</lastBuildDate>
+    <item>
+      <title>feat: MCP inventory (ecc.mcp.v1) — unified cross-harness MCP config view (#2146)</title>
+      <link>https://github.com/affaan-m/ECC/commit/7113b5bf63694b716f8b2413c5919824a82fc095</link>
+      <guid isPermaLink="false">7113b5b</guid>
+      <pubDate>Fri, 05 Jun 2026 19:55:17 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat: add MCP inventory (ecc.mcp.v1) across harnesses  Read-only MCP-gateway groundwork: discover MCP server configs across every installed harness, normalize to a canonical ecc.mcp.v1 inventory, redact secrets, and report which servers are configured in 2+ harnesses (the configure-N-times pain). </description>
+    </item>
+    <item>
+      <title>feat: extend session-adapter layer with codex-worktree + opencode adapters (#2145)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ab5e17fea9bb63e863b0b9a42d774d0b5a7d8182</link>
+      <guid isPermaLink="false">ab5e17f</guid>
+      <pubDate>Fri, 05 Jun 2026 19:55:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat: add codex-worktree session adapter  Adds the third session adapter (after dmux-tmux and claude-history), normalizing Codex rollout sessions into the harness-neutral ecc.session.v1 snapshot. Reads ~/.codex/sessions rollout JSONL, derives objective (skipping the AGENTS.md preamble + leading me</description>
+    </item>
     <item>
       <title>feat: add dynamic workflow team orchestration surface</title>
       <link>https://github.com/affaan-m/ECC/commit/bc8e12bb80c904a5a9864797ef1fd1212aa82f3d</link>
@@ -388,22 +404,6 @@
       <link>https://github.com/affaan-m/everything-claude-code/commit/bf1ccb0a65415b612ea98a3ebc5413ece90e381f</link>
       <guid isPermaLink="false">bf1ccb0</guid>
       <pubDate>Sun, 17 May 2026 07:58:31 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: refresh rc1 preview pack pointers</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/0dd78387c6e592e2be63d5f81235d64744498dee</link>
-      <guid isPermaLink="false">0dd7838</guid>
-      <pubDate>Sun, 17 May 2026 07:02:46 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync May 17 roadmap evidence</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/a9edd204622f7fd027d20ab8ba511aae73615358</link>
-      <guid isPermaLink="false">a9edd20</guid>
-      <pubDate>Sun, 17 May 2026 06:59:21 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
     </item>
