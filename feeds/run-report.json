@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "runId": "2026-06-07T09:17:42.884Z",
-  "timestamp": "2026-06-07T09:17:42.884Z",
-  "duration_ms": 47347,
+  "runId": "2026-06-08T11:02:01.709Z",
+  "timestamp": "2026-06-08T11:02:01.709Z",
+  "duration_ms": 49361,
   "summary": {
-    "totalNewItems": 76,
+    "totalNewItems": 45,
     "sourcesChecked": 39,
-    "sourcesWithErrors": 0,
-    "healthySources": 39
+    "sourcesWithErrors": 1,
+    "healthySources": 38
   },
   "sources": [
     {
@@ -16,7 +16,7 @@
       "category": "core",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 2250,
+      "durationMs": 13708,
       "error": null
     },
     {
@@ -25,25 +25,25 @@
       "category": "core",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 4536,
+      "durationMs": 7495,
       "error": null
     },
     {
       "key": "docs-release-notes",
       "name": "Anthropic Docs Release Notes",
       "category": "core",
-      "status": "ok",
+      "status": "error",
       "newItemCount": 0,
-      "durationMs": 707,
-      "error": null
+      "durationMs": 833,
+      "error": "model-table: \"Claude API ID\" row missing or incomplete"
     },
     {
       "key": "claude-code-changelog",
       "name": "Claude Code Changelog",
       "category": "core",
       "status": "ok",
-      "newItemCount": 1,
-      "durationMs": 132,
+      "newItemCount": 0,
+      "durationMs": 252,
       "error": null
     },
     {
@@ -52,7 +52,7 @@
       "category": "core",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 416,
+      "durationMs": 401,
       "error": null
     },
     {
@@ -60,8 +60,8 @@
       "name": "Claude Code Releases",
       "category": "core",
       "status": "ok",
-      "newItemCount": 1,
-      "durationMs": 422,
+      "newItemCount": 0,
+      "durationMs": 498,
       "error": null
     },
     {
@@ -69,8 +69,8 @@
       "name": "Claude Code npm Package",
       "category": "core",
       "status": "ok",
-      "newItemCount": 1,
-      "durationMs": 208,
+      "newItemCount": 0,
+      "durationMs": 304,
       "error": null
     },
     {
@@ -78,8 +78,8 @@
       "name": "Agent SDK TypeScript Changelog",
       "category": "core",
       "status": "ok",
-      "newItemCount": 1,
-      "durationMs": 93,
+      "newItemCount": 0,
+      "durationMs": 200,
       "error": null
     },
     {
@@ -88,7 +88,7 @@
       "category": "core",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 74,
+      "durationMs": 112,
       "error": null
     },
     {
@@ -96,8 +96,8 @@
       "name": "Anthropic SDK TypeScript Releases",
       "category": "core",
       "status": "ok",
-      "newItemCount": 3,
-      "durationMs": 360,
+      "newItemCount": 0,
+      "durationMs": 349,
       "error": null
     },
     {
@@ -106,7 +106,7 @@
       "category": "core",
       "status": "ok",
       "newItemCount": 1,
-      "durationMs": 264,
+      "durationMs": 361,
       "error": null
     },
     {
@@ -114,8 +114,8 @@
       "name": "Claude Code Action Releases",
       "category": "extended",
       "status": "ok",
-      "newItemCount": 1,
-      "durationMs": 300,
+      "newItemCount": 0,
+      "durationMs": 353,
       "error": null
     },
     {
@@ -124,7 +124,7 @@
       "category": "extended",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 84,
+      "durationMs": 111,
       "error": null
     },
     {
@@ -133,7 +133,7 @@
       "category": "extended",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 77,
+      "durationMs": 75,
       "error": null
     },
     {
@@ -142,7 +142,7 @@
       "category": "extended",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 4126,
+      "durationMs": 13883,
       "error": null
     },
     {
@@ -151,7 +151,7 @@
       "category": "extended",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 170,
+      "durationMs": 196,
       "error": null
     },
     {
@@ -159,8 +159,8 @@
       "name": "Anthropic Status Page",
       "category": "extended",
       "status": "ok",
-      "newItemCount": 3,
-      "durationMs": 343,
+      "newItemCount": 1,
+      "durationMs": 249,
       "error": null
     },
     {
@@ -169,7 +169,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 194,
+      "durationMs": 255,
       "error": null
     },
     {
@@ -177,8 +177,8 @@
       "name": "anthropics/skills (main commits)",
       "category": "community",
       "status": "ok",
-      "newItemCount": 0,
-      "durationMs": 186,
+      "newItemCount": 1,
+      "durationMs": 327,
       "error": null
     },
     {
@@ -187,7 +187,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 196,
+      "durationMs": 252,
       "error": null
     },
     {
@@ -195,8 +195,8 @@
       "name": "anthropics/claude-code (main commits, pre-release signal)",
       "category": "community",
       "status": "ok",
-      "newItemCount": 1,
-      "durationMs": 204,
+      "newItemCount": 0,
+      "durationMs": 186,
       "error": null
     },
     {
@@ -204,8 +204,8 @@
       "name": "affaan-m/everything-claude-code (community resource list)",
       "category": "community",
       "status": "ok",
-      "newItemCount": 10,
-      "durationMs": 373,
+      "newItemCount": 0,
+      "durationMs": 394,
       "error": null
     },
     {
@@ -213,8 +213,8 @@
       "name": "sickn33/antigravity-awesome-skills (community skills list)",
       "category": "community",
       "status": "ok",
-      "newItemCount": 9,
-      "durationMs": 184,
+      "newItemCount": 0,
+      "durationMs": 222,
       "error": null
     },
     {
@@ -223,7 +223,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 15,
-      "durationMs": 303,
+      "durationMs": 339,
       "error": null
     },
     {
@@ -232,7 +232,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 10,
-      "durationMs": 217,
+      "durationMs": 289,
       "error": null
     },
     {
@@ -241,7 +241,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 5,
-      "durationMs": 145,
+      "durationMs": 122,
       "error": null
     },
     {
@@ -250,7 +250,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 10,
-      "durationMs": 295,
+      "durationMs": 212,
       "error": null
     },
     {
@@ -258,8 +258,8 @@
       "name": "r/Claudeopus (top/week)",
       "category": "community",
       "status": "ok",
-      "newItemCount": 2,
-      "durationMs": 312,
+      "newItemCount": 0,
+      "durationMs": 341,
       "error": null
     },
     {
@@ -268,7 +268,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 299,
+      "durationMs": 319,
       "error": null
     },
     {
@@ -277,7 +277,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 600,
+      "durationMs": 248,
       "error": null
     },
     {
@@ -285,8 +285,8 @@
       "name": "Hacker News — claude.com",
       "category": "community",
       "status": "ok",
-      "newItemCount": 0,
-      "durationMs": 267,
+      "newItemCount": 1,
+      "durationMs": 216,
       "error": null
     },
     {
@@ -295,7 +295,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 1507,
+      "durationMs": 1123,
       "error": null
     },
     {
@@ -304,7 +304,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 7217,
+      "durationMs": 6330,
       "error": null
     },
     {
@@ -313,7 +313,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 12686,
+      "durationMs": 11798,
       "error": null
     },
     {
@@ -321,8 +321,8 @@
       "name": "@bcherny (Boris Cherny, Anthropic)",
       "category": "community",
       "status": "ok",
-      "newItemCount": 2,
-      "durationMs": 17669,
+      "newItemCount": 1,
+      "durationMs": 11747,
       "error": null
     },
     {
@@ -331,7 +331,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 23745,
+      "durationMs": 18123,
       "error": null
     },
     {
@@ -340,7 +340,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 24058,
+      "durationMs": 21753,
       "error": null
     },
     {
@@ -349,7 +349,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 24335,
+      "durationMs": 24549,
       "error": null
     },
     {
@@ -358,7 +358,7 @@
       "category": "community",
       "status": "ok",
       "newItemCount": 0,
-      "durationMs": 24076,
+      "durationMs": 23894,
       "error": null
     }
   ]
