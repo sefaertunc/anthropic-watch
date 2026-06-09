@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 08 Jun 2026 11:02:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 09:51:30 GMT</lastBuildDate>
+    <item>
+      <title>feat(discord): release -&gt; #announcements auto-post + pin + GitHub Discussions (#2201)</title>
+      <link>https://github.com/affaan-m/ECC/commit/edebcc89efa09dc2705748151d98286ff3bb6023</link>
+      <guid isPermaLink="false">edebcc8</guid>
+      <pubDate>Tue, 09 Jun 2026 02:38:03 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>On a published GitHub release, post the notes to the ECC Discord #announcements channel (via bot), pin it, and cross-post to GitHub Discussions (Announcements category). Release data flows through env vars (no shell interpolation of untrusted input). Secrets: DISCORD_BOT_TOKEN, DISCORD_ANNOUNCE_CHAN</description>
+    </item>
     <item>
       <title>feat: add orch-* orchestrator skill family (#2153)</title>
       <link>https://github.com/affaan-m/ECC/commit/90dfd9505dc860714cf3cc8216ad7bbb96d93365</link>
@@ -398,14 +406,6 @@
       <pubDate>Tue, 19 May 2026 00:30:07 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>Mirror the previous commit&apos;s `writeBridgeAtomic` fix on the companion `writeWarnState` in `ecc-context-monitor.js`. Same shape: fixed `${target}.tmp` → `${target}.${process.pid}.${randomNonce}.tmp`, plus best-effort cleanup of the tmp file on `renameSync` failure (throws original error after cleanup</description>
-    </item>
-    <item>
-      <title>docs: regenerate operator readiness dashboard</title>
-      <link>https://github.com/affaan-m/everything-claude-code/commit/feeaa97511afc274675374fba2f40631a4a099a7</link>
-      <guid isPermaLink="false">feeaa97</guid>
-      <pubDate>Mon, 18 May 2026 09:38:44 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>
