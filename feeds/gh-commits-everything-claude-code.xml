@@ -6,7 +6,79 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 09 Jun 2026 09:51:30 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 10:06:46 GMT</lastBuildDate>
+    <item>
+      <title>docs: update Greptile sponsor placement</title>
+      <link>https://github.com/affaan-m/ECC/commit/c888d2b73f26d605ff6c172b433d4cad2200206f</link>
+      <guid isPermaLink="false">c888d2b</guid>
+      <pubDate>Wed, 10 Jun 2026 03:53:13 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat(mcp): single-connector default set + connector policy (#2219)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ff768db363017376f82f70c1e6566e0be35b65d2</link>
+      <guid isPermaLink="false">ff768db</guid>
+      <pubDate>Wed, 10 Jun 2026 03:28:35 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Reduce the default .mcp.json to one connector (chrome-devtools) per the new policy in docs/MCP-CONNECTOR-POLICY.md: a default earns its slot only if it is universal AND MCP beats a CLI/API wrapped in a skill. June 2026 audit verdicts: github -&gt; gh via github-ops skill; context7 -&gt; REST via documenta</description>
+    </item>
+    <item>
+      <title>ci: remove copilot code-review surface</title>
+      <link>https://github.com/affaan-m/ECC/commit/8ad4151095e453301ce0e50374103bcd8f50ded2</link>
+      <guid isPermaLink="false">8ad4151</guid>
+      <pubDate>Wed, 10 Jun 2026 01:42:38 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>release: 2.0.0 — the agent harness operating system</title>
+      <link>https://github.com/affaan-m/ECC/commit/29edd57708bee26f16363c16a28fec7f6b09f53f</link>
+      <guid isPermaLink="false">29edd57</guid>
+      <pubDate>Wed, 10 Jun 2026 01:20:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Graduate 2.0.0-rc.1 to stable. Bump version across package, plugin, marketplace, OpenCode, agent metadata, VERSION, and all localized docs. Add 2.0.0 release notes + README sections (en/zh/pt-BR/tr), CHANGELOG entry, and the ECC community Discord bot (dependency-free gateway client + guild command r</description>
+    </item>
+    <item>
+      <title>ci: harden workflows and sponsor code review config</title>
+      <link>https://github.com/affaan-m/ECC/commit/3e30f1a56a91f46ba7981bf594c1f4f4821279ba</link>
+      <guid isPermaLink="false">3e30f1a</guid>
+      <pubDate>Wed, 10 Jun 2026 01:20:17 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>ci: harden release announce checkout</title>
+      <link>https://github.com/affaan-m/ECC/commit/10c303e609a6769c565de9cc7ec288b7afdefb6c</link>
+      <guid isPermaLink="false">10c303e</guid>
+      <pubDate>Wed, 10 Jun 2026 01:03:22 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: fix README markdownlint spacing</title>
+      <link>https://github.com/affaan-m/ECC/commit/4f69955f881303a8c623349781ba15d6020aa731</link>
+      <guid isPermaLink="false">4f69955</guid>
+      <pubDate>Wed, 10 Jun 2026 00:47:15 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>security: harden advisory intake and dependency coverage</title>
+      <link>https://github.com/affaan-m/ECC/commit/3c5bcc2b66a5ffd9d5e12051a0167bda71e92751</link>
+      <guid isPermaLink="false">3c5bcc2</guid>
+      <pubDate>Wed, 10 Jun 2026 00:46:14 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: refresh sponsor and readme surface</title>
+      <link>https://github.com/affaan-m/ECC/commit/8ee59467121d0f59ade431ebc7d59d3a67cfdbfe</link>
+      <guid isPermaLink="false">8ee5946</guid>
+      <pubDate>Wed, 10 Jun 2026 00:26:31 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>feat(discord): release -&gt; #announcements auto-post + pin + GitHub Discussions (#2201)</title>
       <link>https://github.com/affaan-m/ECC/commit/edebcc89efa09dc2705748151d98286ff3bb6023</link>
@@ -334,78 +406,6 @@
       <pubDate>Tue, 19 May 2026 09:27:19 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>Refresh the active 2.0 release surface for the affaan-m/ECC repo identity, update package/plugin/workflow launch metadata, and add an operator command center for release video, partner, sponsor, consulting, and social launch execution.</description>
-    </item>
-    <item>
-      <title>docs: keep renamed README install paths usable</title>
-      <link>https://github.com/affaan-m/ECC/commit/2199b223510aeadb8f8adf95e6939676488cfc50</link>
-      <guid isPermaLink="false">2199b22</guid>
-      <pubDate>Tue, 19 May 2026 09:18:28 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adjust README manual-install snippets after the affaan-m/ECC repo rename so cloned paths use the new ECC checkout or relative paths.</description>
-    </item>
-    <item>
-      <title>Apply suggestion from @karnavpargi</title>
-      <link>https://github.com/affaan-m/ECC/commit/b66fa78fe8c700deec24eab6b86a862fc200099b</link>
-      <guid isPermaLink="false">b66fa78</guid>
-      <pubDate>Tue, 19 May 2026 09:08:34 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(hooks): avoid escaped quotes in plugin bootstrap</title>
-      <link>https://github.com/affaan-m/ECC/commit/6cb194a3c633beced9381b767700af8764dc45da</link>
-      <guid isPermaLink="false">6cb194a</guid>
-      <pubDate>Tue, 19 May 2026 09:05:26 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Generate the inline hook root resolver with single-quoted JavaScript literals so Windows Git Bash does not choke on nested escaped double quotes before Node starts. Refresh hooks.json and add regression coverage for parsed hook commands and installed hook manifests.</description>
-    </item>
-    <item>
-      <title>Update README links to new repository name &apos;ECC&apos;</title>
-      <link>https://github.com/affaan-m/ECC/commit/673dff977f6a6d0f88b70dcf20472764215d3fd4</link>
-      <guid isPermaLink="false">673dff9</guid>
-      <pubDate>Tue, 19 May 2026 08:58:25 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Changed `everything-claude-code` to `ECC`</description>
-    </item>
-    <item>
-      <title>fix(hooks): use shared renameWithRetry in writeWarnState (ecc-context-monitor)</title>
-      <link>https://github.com/affaan-m/ECC/commit/f93e8f6869d4575fa51cc6c8da614e5806302f69</link>
-      <guid isPermaLink="false">f93e8f6</guid>
-      <pubDate>Tue, 19 May 2026 02:01:28 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Mirror the previous commit&apos;s Windows-EPERM retry on the companion `writeWarnState` in `scripts/hooks/ecc-context-monitor.js`. Same race: two PostToolUse subprocesses writing concurrent debounce state racing on `MoveFileExW`, target-in-use throwing EPERM on Windows even though each writer&apos;s tmp path </description>
-    </item>
-    <item>
-      <title>fix(lib): retry rename on Windows EPERM/EACCES/EBUSY in writeBridgeAtomic</title>
-      <link>https://github.com/affaan-m/ECC/commit/116e61d8cbf214d15c22f867ff6b69c585a86098</link>
-      <guid isPermaLink="false">116e61d</guid>
-      <pubDate>Tue, 19 May 2026 02:01:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>PR #1983 round 1 introduced unique-suffix tmp paths so two concurrent writers no longer share a single `.tmp` file. That fix is correct under POSIX semantics — `rename(2)` is atomic between source and destination, so each writer renames onto the same target without conflict.  Windows `MoveFileExW` i</description>
-    </item>
-    <item>
-      <title>test(lib): make concurrent-write test actually concurrent + use regex matcher for assert.throws</title>
-      <link>https://github.com/affaan-m/ECC/commit/d904edc6156bc056f39efc0d8be967995a10bc10</link>
-      <guid isPermaLink="false">d904edc</guid>
-      <pubDate>Tue, 19 May 2026 00:44:53 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Two round-1 review findings in `tests/lib/session-bridge.test.js`, both about test correctness rather than the underlying fix:  1. **greptile P1 + coderabbitai Major + cubic P2 (all three): concurrent-write test ran sequentially.**     The test spawned two child processes with two consecutive    `sp</description>
-    </item>
-    <item>
-      <title>test(lib): concurrent writeBridgeAtomic + tmp-cleanup regression</title>
-      <link>https://github.com/affaan-m/ECC/commit/5acb01a276b7fe61b0cdbef8015dee556b3a2621</link>
-      <guid isPermaLink="false">5acb01a</guid>
-      <pubDate>Tue, 19 May 2026 00:31:35 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Two regression tests pin down the previous two commits&apos; atomic-rename fixes:  1. **concurrent writes don&apos;t throw ENOENT or corrupt the file** —    spawns two child Node processes (`tests/__tmp_bridge_writer.js`    created in-test, cleaned up in finally) that each call    `writeBridgeAtomic(sid, …)` </description>
-    </item>
-    <item>
-      <title>fix(hooks): use unique tmp suffix in writeWarnState (ecc-context-monitor)</title>
-      <link>https://github.com/affaan-m/ECC/commit/7c2f71315b826a3fd27fb89ef70fe02459635d44</link>
-      <guid isPermaLink="false">7c2f713</guid>
-      <pubDate>Tue, 19 May 2026 00:30:07 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Mirror the previous commit&apos;s `writeBridgeAtomic` fix on the companion `writeWarnState` in `ecc-context-monitor.js`. Same shape: fixed `${target}.tmp` → `${target}.${process.pid}.${randomNonce}.tmp`, plus best-effort cleanup of the tmp file on `renameSync` failure (throws original error after cleanup</description>
     </item>
   </channel>
 </rss>
