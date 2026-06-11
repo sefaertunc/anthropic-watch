@@ -6,7 +6,28 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 10 Jun 2026 10:06:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 10:41:15 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.173</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.173</link>
+      <guid isPermaLink="false">v2.1.173</guid>
+      <pubDate>Thu, 11 Jun 2026 05:41:54 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed Fable 5 model names with a [1m] suffix not being normalized — Fable 5 includes 1M context by default, so the suffix is now stripped automatically
+- Fixed a spurious &quot;sandbox dependencies missing&quot; startup warning on Windows when sandbox was enabled in settings</description>
+    </item>
+    <item>
+      <title>v2.1.172</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.172</link>
+      <guid isPermaLink="false">v2.1.172</guid>
+      <pubDate>Wed, 10 Jun 2026 20:44:15 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Sub-agents can now spawn their own sub-agents (up to 5 levels deep)
+- Amazon Bedrock now reads the AWS region from ~/.aws config files when AWSREGION isn&apos;t set, matching AWS SDK precedence; /status shows where the region came from
+- Added a search bar when browsing a marketplace&apos;s p</description>
+    </item>
     <item>
       <title>v2.1.170</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.170</link>

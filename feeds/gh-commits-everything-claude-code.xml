@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 10 Jun 2026 10:06:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 10:41:15 GMT</lastBuildDate>
+    <item>
+      <title>fix(assets): replace hero brand mark with website coral circuit mark (#2232)</title>
+      <link>https://github.com/affaan-m/ECC/commit/6c39cdecd30de45d0e0ce5bc02064a5dbe72b12a</link>
+      <guid isPermaLink="false">6c39cde</guid>
+      <pubDate>Thu, 11 Jun 2026 05:28:30 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(assets): replace hero brand mark with website coral circuit mark  The top-left mark in the hero banner was the assets/ecc-icon.svg double-E lettermark, not the actual brand logo. Swap in the coral vector circuit mark from the ECC-website header (src/styles/brandMarks.ts), keeping the ~70px foo</description>
+    </item>
+    <item>
+      <title>fix(ecc2): port webhook sender to ureq 3 Agent API (#2231)</title>
+      <link>https://github.com/affaan-m/ECC/commit/42fe8c30838862193e63bae6643c6c82e62704b7</link>
+      <guid isPermaLink="false">42fe8c3</guid>
+      <pubDate>Thu, 11 Jun 2026 05:26:59 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>#2209 bumped ureq to 3.x but the AgentBuilder-based webhook sender was not ported (branch update raced the merge). ureq 3 replaces AgentBuilder with Agent::config_builder(); timeouts are Option-wrapped and status() returns http::StatusCode.</description>
+    </item>
+    <item>
+      <title>docs: sync skill count to 262 after config-gc skill landed (#2230)</title>
+      <link>https://github.com/affaan-m/ECC/commit/75b5d64fc3ccb3743acde21b141f6860034b34ce</link>
+      <guid isPermaLink="false">75b5d64</guid>
+      <pubDate>Thu, 11 Jun 2026 05:22:34 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>npm run catalog:sync — #2216 added skills/config-gc without bumping documented counts, leaving catalog:check (and npm test) red on main.</description>
+    </item>
+    <item>
+      <title>docs: restore hero banner with ECC wordmark, v2.0.0 badge, and brand lettermark (#2229)</title>
+      <link>https://github.com/affaan-m/ECC/commit/967940f43e9b51ea5709f527fc78124e2921d23e</link>
+      <guid isPermaLink="false">967940f</guid>
+      <pubDate>Thu, 11 Jun 2026 05:15:38 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Recreates the v1.10 hero banner design (sourced from commit 602894ef) that PR #2225 replaced with a plain HTML header:  - Wordmark and breadcrumb now read ECC / affaan-m/ECC - Version badge reads v2.0.0 · Jun 2026, eyebrow updated to V2.0 - Top-left mark is the actual assets/ecc-icon.svg lettermark </description>
+    </item>
+    <item>
+      <title>docs(zh-CN): translate ecc-guide and parallel-execution-optimizer skills (#2217)</title>
+      <link>https://github.com/affaan-m/ECC/commit/e4a0062d9b5806a7053a70c35116c9f371f4b5ce</link>
+      <guid isPermaLink="false">e4a0062</guid>
+      <pubDate>Thu, 11 Jun 2026 05:01:28 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* docs(zh-CN): translate ecc-guide and parallel-execution-optimizer skills  Adds Simplified Chinese translations for two untranslated skills, following the existing docs/zh-CN/skills/ conventions (frontmatter name/origin preserved, code blocks and output templates kept in English, prose fully transl</description>
+    </item>
+    <item>
+      <title>feat(skills): add config-gc skill (#2216)</title>
+      <link>https://github.com/affaan-m/ECC/commit/66ad878e686bf6aee05599c547fd72da206c8ba5</link>
+      <guid isPermaLink="false">66ad878</guid>
+      <pubDate>Thu, 11 Jun 2026 05:01:18 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat(skills): add config-gc skill  Garbage collection for Claude Code configuration sprawl: 8 scan channels (skills, memory, hooks, permissions, MCP, reminders, project history, caches), confirm-each-deletion human-in-the-loop, soft-delete with undo log. Subtractive counterpart to workspace-surfac</description>
+    </item>
     <item>
       <title>docs: update Greptile sponsor placement</title>
       <link>https://github.com/affaan-m/ECC/commit/c888d2b73f26d605ff6c172b433d4cad2200206f</link>
@@ -358,54 +406,6 @@
       <pubDate>Wed, 20 May 2026 01:13:36 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>docs: sync AgentShield adapter evidence</title>
-      <link>https://github.com/affaan-m/ECC/commit/906e06406e95742944ccb05065f95a7e4dd4a036</link>
-      <guid isPermaLink="false">906e064</guid>
-      <pubDate>Wed, 20 May 2026 00:44:51 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync May 20 ECC Tools evidence</title>
-      <link>https://github.com/affaan-m/ECC/commit/3cb8c48e74d7ee9883fd2e6d94d8e5aea7421d8c</link>
-      <guid isPermaLink="false">3cb8c48</guid>
-      <pubDate>Wed, 20 May 2026 00:23:53 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync late May 19 release roadmap state</title>
-      <link>https://github.com/affaan-m/ECC/commit/b3c015c7443c6617f897654613c21eddc3d25764</link>
-      <guid isPermaLink="false">b3c015c</guid>
-      <pubDate>Tue, 19 May 2026 22:51:25 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add release approval gate</title>
-      <link>https://github.com/affaan-m/ECC/commit/9819626459a662773be7d0b1c18d82c1316b8c36</link>
-      <guid isPermaLink="false">9819626</guid>
-      <pubDate>Tue, 19 May 2026 22:05:46 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs(release): record post-gateguard evidence</title>
-      <link>https://github.com/affaan-m/ECC/commit/2c0d226439ec14c60f509561386caba2a9ac7619</link>
-      <guid isPermaLink="false">2c0d226</guid>
-      <pubDate>Tue, 19 May 2026 17:39:43 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: define ECC 2.0 hypergrowth release lane</title>
-      <link>https://github.com/affaan-m/ECC/commit/9ee1e15564eef515875dc7511d23deded4265b7d</link>
-      <guid isPermaLink="false">9ee1e15</guid>
-      <pubDate>Tue, 19 May 2026 09:27:19 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Refresh the active 2.0 release surface for the affaan-m/ECC repo identity, update package/plugin/workflow launch metadata, and add an operator command center for release video, partner, sponsor, consulting, and social launch execution.</description>
     </item>
   </channel>
 </rss>
