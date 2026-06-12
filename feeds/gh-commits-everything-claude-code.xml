@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 11 Jun 2026 10:41:15 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 10:18:40 GMT</lastBuildDate>
+    <item>
+      <title>chore: sync package-lock with package.json (CI drift)</title>
+      <link>https://github.com/affaan-m/ECC/commit/5b173d2e6c11b976a0f13b2f59125e08956c1d47</link>
+      <guid isPermaLink="false">5b173d2</guid>
+      <pubDate>Thu, 11 Jun 2026 20:22:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: context-size /compact trigger, Codex marketplace plugin path, live README badges (#2237)</title>
+      <link>https://github.com/affaan-m/ECC/commit/7777656bf5c2c1b6971409bb0d28cb95d822dab9</link>
+      <guid isPermaLink="false">7777656</guid>
+      <pubDate>Thu, 11 Jun 2026 20:21:53 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>- suggest-compact hook now reads the latest usage record from the session   transcript and suggests /compact at a window-scaled token threshold   (160k/200k window, 250k/1M window; COMPACT_CONTEXT_THRESHOLD and   COMPACT_CONTEXT_INTERVAL overridable), re-firing per 60k-token growth   bucket; tool-ca</description>
+    </item>
     <item>
       <title>fix(assets): replace hero brand mark with website coral circuit mark (#2232)</title>
       <link>https://github.com/affaan-m/ECC/commit/6c39cdecd30de45d0e0ce5bc02064a5dbe72b12a</link>
@@ -388,22 +404,6 @@
       <link>https://github.com/affaan-m/ECC/commit/c2471fe5c535310f8a8008c9ed7ea9f6757b33f2</link>
       <guid isPermaLink="false">c2471fe</guid>
       <pubDate>Wed, 20 May 2026 02:09:45 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Sync Marketplace Pro readback release gate (#2019)</title>
-      <link>https://github.com/affaan-m/ECC/commit/30f60710d4e0424fc70d9bbdc105009db141d9d8</link>
-      <guid isPermaLink="false">30f6071</guid>
-      <pubDate>Wed, 20 May 2026 01:39:03 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* docs: sync marketplace pro readback gate  * docs: refresh operator dashboard after readback sync  * docs: sanitize marketplace readback summary  * docs: refresh operator dashboard after marketplace readback</description>
-    </item>
-    <item>
-      <title>docs: sync AgentShield dependabot evidence (#2018)</title>
-      <link>https://github.com/affaan-m/ECC/commit/68b4e45145968acd52e68d900f8422061ed7f4a2</link>
-      <guid isPermaLink="false">68b4e45</guid>
-      <pubDate>Wed, 20 May 2026 01:13:36 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
     </item>

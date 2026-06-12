@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 11 Jun 2026 10:41:15 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 10:18:40 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2696 from anthropics/venv-target-fallback</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/96468b2393c9af3b5e6215c2f3f9df80abb9270d</link>
+      <guid isPermaLink="false">96468b2</guid>
+      <pubDate>Fri, 12 Jun 2026 07:17:17 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: pip --target fallback when venv can&apos;t bootstrap pip (Option A, #2154) — 2.0.4 → 2.0.5</description>
+    </item>
+    <item>
+      <title>security-guidance: pip --target fallback when venv can&apos;t bootstrap pip (2.0.4 → 2.0.5)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e7fe15d9ba8bc02a40cdccdb184f6d61a58b33cc</link>
+      <guid isPermaLink="false">e7fe15d</guid>
+      <pubDate>Fri, 12 Jun 2026 06:31:55 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Option A, the data-gated fix for venv_ensurepip_fail (#2154 follow-up).  v2.0.4 telemetry made the call: of the venv_ensurepip_fail cohort, ~95% HAVE pip (sdk_has_pip=true) and run Python 3.11–3.14 — so it&apos;s not the Apple-3.9 problem; it&apos;s modern interpreters where `python -m venv` can&apos;t bootstrap p</description>
+    </item>
     <item>
       <title>Merge pull request #2311 from anthropics/readd-valtown</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/bd7cf41fc8a468b136a9266633303ff4a011c7b4</link>
@@ -390,22 +406,6 @@
       <pubDate>Thu, 21 May 2026 06:06:15 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Aligns the compose service name, local config filename, and all log/restart commands with the image and binary name. Adds an explicit -config arg since the image CMD still defaults to the legacy /etc/mcp-gateway path.  :house: Remote-Dev: homespace</description>
-    </item>
-    <item>
-      <title>Link to public MCP tunnels docs and use public mcp-proxy image</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/12482fd9e2deccf76d17ab05c17a06c260d884f7</link>
-      <guid isPermaLink="false">12482fd</guid>
-      <pubDate>Thu, 21 May 2026 05:39:34 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>- Replace doc references with platform.claude.com URLs (overview,   quickstart, security, deploy-compose, deploy-helm, console,   troubleshooting, reference, WIF) - Swap the POC mcp-proxy image for the public registry digest used in   the published quickstart  :house: Remote-Dev: homespace</description>
-    </item>
-    <item>
-      <title>Add mcp-tunnels plugin</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0a6ff879090ac8b9e0df9412a198f677a494c4fb</link>
-      <guid isPermaLink="false">0a6ff87</guid>
-      <pubDate>Thu, 21 May 2026 05:24:44 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Adds the /create-docker-mcp-tunnel command, which drives the MCP tunnels Docker Compose quickstart end to end: preflight checks, certificate generation, proxy config, cloudflared, an optional sample FastMCP server, and verification from Managed Agents and the Messages API.  Migrated from anthropic-e</description>
     </item>
   </channel>
 </rss>

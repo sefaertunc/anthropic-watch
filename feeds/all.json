@@ -5,9 +5,295 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-11T10:41:15.595Z",
+  "generated": "2026-06-12T10:18:40.203Z",
   "itemCount": 100,
   "items": [
+    {
+      "id": "0.2.99",
+      "title": "0.2.99",
+      "date": "2026-06-12T10:17:49.779Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.175",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.99|agent-sdk-py-changelog"
+    },
+    {
+      "id": "0.3.175",
+      "title": "0.3.175",
+      "date": "2026-06-12T10:17:49.738Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Updated to parity with Claude Code v2.1.175",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.175|agent-sdk-ts-changelog"
+    },
+    {
+      "id": "2.1.175",
+      "title": "2.1.175",
+      "date": "2026-06-12T10:17:48.892Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added enforceAvailableModels managed setting — when enabled, the availableModels allowlist also constrains the Default model (a Default that would resolve to a disallowed model now falls back to the first allowed model), and user or project settings can no longer widen a managed availableModels li",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.175|claude-code-changelog"
+    },
+    {
+      "id": "96468b2",
+      "title": "Merge pull request #2696 from anthropics/venv-target-fallback",
+      "date": "2026-06-12T07:17:17Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/96468b2393c9af3b5e6215c2f3f9df80abb9270d",
+      "snippet": "security-guidance: pip --target fallback when venv can't bootstrap pip (Option A, #2154) — 2.0.4 → 2.0.5",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "96468b2|gh-commits-plugins-official"
+    },
+    {
+      "id": "e7fe15d",
+      "title": "security-guidance: pip --target fallback when venv can't bootstrap pip (2.0.4 → 2.0.5)",
+      "date": "2026-06-12T06:31:55Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/e7fe15d9ba8bc02a40cdccdb184f6d61a58b33cc",
+      "snippet": "Option A, the data-gated fix for venv_ensurepip_fail (#2154 follow-up).  v2.0.4 telemetry made the call: of the venv_ensurepip_fail cohort, ~95% HAVE pip (sdk_has_pip=true) and run Python 3.11–3.14 — so it's not the Apple-3.9 problem; it's modern interpreters where `python -m venv` can't bootstrap p",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "e7fe15d|gh-commits-plugins-official"
+    },
+    {
+      "id": "v1.0.146",
+      "title": "v1.0.146",
+      "date": "2026-06-12T04:25:51Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.146",
+      "snippet": "What's Changed\n test: add unit tests for parseGitHubContext and context type guards by @mateuscmtropical in https://github.com/anthropics/claude-code-action/pull/1404\n docs(faq): correct rebase FAQ to match actual behavior by @bymle in https://github.com/anthropics/claude-code-action/pull/1370\n fix:",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.146|claude-code-action"
+    },
+    {
+      "id": "v2.1.175",
+      "title": "v2.1.175",
+      "date": "2026-06-12T04:23:51Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.175",
+      "snippet": "What's changed\n- Added enforceAvailableModels managed setting — when enabled, the availableModels allowlist also constrains the Default model (a Default that would resolve to a disallowed model now falls back to the first allowed model), and user or project settings can no longer widen a managed ava",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.175|claude-code-releases"
+    },
+    {
+      "id": "ee81682",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-06-12T04:23:45Z",
+      "url": "https://github.com/anthropics/claude-code/commit/ee81682a72b07705672332d1dc963927a998c177",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "ee81682|gh-commits-claude-code"
+    },
+    {
+      "id": "2.1.175",
+      "title": "@anthropic-ai/claude-code@2.1.175",
+      "date": "2026-06-12T02:10:22.132Z",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+      "source": "npm-claude-code",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.175|npm-claude-code"
+    },
+    {
+      "id": "v1.0.145",
+      "title": "v1.0.145",
+      "date": "2026-06-12T01:18:20Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.145",
+      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.145",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.145|claude-code-action"
+    },
+    {
+      "id": "v2.1.174",
+      "title": "v2.1.174",
+      "date": "2026-06-12T01:16:36Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.174",
+      "snippet": "What's changed\n- Added wheelScrollAccelerationEnabled setting to disable mouse-wheel scroll acceleration in fullscreen mode\n- Fixed the /model picker hiding the model family that Default resolves to — Opus now appears as its own row on Max/Team Premium/Enterprise plans, Sonnet on Pro/Team plans, and",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.174|claude-code-releases"
+    },
+    {
+      "id": "5754a8b",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-06-12T01:16:30Z",
+      "url": "https://github.com/anthropics/claude-code/commit/5754a8bd4fd286e798d9d29658b10f29832ad177",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "5754a8b|gh-commits-claude-code"
+    },
+    {
+      "id": "2065237242629759262",
+      "title": "RT @ClaudeDevs: /goooooal ⚽ https://t.co/JIHtCRog31",
+      "date": "2026-06-12T00:58:23.000Z",
+      "url": "https://x.com/bcherny/status/2065237242629759262",
+      "snippet": "RT @ClaudeDevs: /goooooal ⚽ https://t.co/JIHtCRog31",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2065237242629759262|twitter-bcherny"
+    },
+    {
+      "id": "48498345",
+      "title": "Fable 5 is nothing besides expensive loops",
+      "date": "2026-06-12T00:33:22Z",
+      "url": "https://www.anthropic.com",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "48498345|hn-anthropic-com"
+    },
+    {
+      "id": "2065192057535373473",
+      "title": "/goooooal ⚽ https://t.co/JIHtCRog31",
+      "date": "2026-06-11T21:58:50.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2065192057535373473",
+      "snippet": "/goooooal ⚽ https://t.co/JIHtCRog31",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2065192057535373473|twitter-claudedevs"
+    },
+    {
+      "id": "48496430",
+      "title": "So I ran Doom inside Claude.ai",
+      "date": "2026-06-11T21:08:13Z",
+      "url": "https://twitter.com/rthiago/status/2065176453042356511",
+      "snippet": null,
+      "source": "hn-claude-ai",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.ai",
+      "uniqueKey": "48496430|hn-claude-ai"
+    },
+    {
+      "id": "5b173d2",
+      "title": "chore: sync package-lock with package.json (CI drift)",
+      "date": "2026-06-11T20:22:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5b173d2e6c11b976a0f13b2f59125e08956c1d47",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5b173d2|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "7777656",
+      "title": "fix: context-size /compact trigger, Codex marketplace plugin path, live README badges (#2237)",
+      "date": "2026-06-11T20:21:53Z",
+      "url": "https://github.com/affaan-m/ECC/commit/7777656bf5c2c1b6971409bb0d28cb95d822dab9",
+      "snippet": "- suggest-compact hook now reads the latest usage record from the session   transcript and suggests /compact at a window-scaled token threshold   (160k/200k window, 250k/1M window; COMPACT_CONTEXT_THRESHOLD and   COMPACT_CONTEXT_INTERVAL overridable), re-firing per 60k-token growth   bucket; tool-ca",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "7777656|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "j8ghp7dk6lym",
+      "title": "Elevated errors across models",
+      "date": "2026-06-11T16:54:52.467Z",
+      "url": "https://stspg.io/7pwy7kxz7yzr",
+      "snippet": "[major] resolved — The issue affecting various models has been resolved. Impact occurred from 09:42am PT / 16:42 UTC to 10:03am PT / 17:03 UTC.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "j8ghp7dk6lym|status-page"
+    },
+    {
+      "id": "sp7cf0cghqsk",
+      "title": "Elevated errors on Claude Opus 4.6",
+      "date": "2026-06-11T14:37:07.546Z",
+      "url": "https://stspg.io/r2r8c96brb9n",
+      "snippet": "[minor] resolved — This incident has been resolved.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "sp7cf0cghqsk|status-page"
+    },
+    {
+      "id": "48490912",
+      "title": "Claude Corps",
+      "date": "2026-06-11T14:33:52Z",
+      "url": "https://www.anthropic.com/claude-corps",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "48490912|hn-anthropic-com"
+    },
+    {
+      "id": "2065080005328249086",
+      "title": "We've just added two new Claude Managed Agents features:\n\n1. Scheduled deployments - run tasks on a schedule\n \n2. Environment variables - expose vault credentials for CLIs as environment variables htt",
+      "date": "2026-06-11T14:33:35.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2065080005328249086",
+      "snippet": "We've just added two new Claude Managed Agents features:\n\n1. Scheduled deployments - run tasks on a schedule\n \n2. Environment variables - expose vault credentials for CLIs as environment variables https://t.co/exfhz4yylr",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2065080005328249086|twitter-claudedevs"
+    },
+    {
+      "id": "48490878",
+      "title": "Fiszki flashcards without an app: your AI quizzes you, FSRS keeps score",
+      "date": "2026-06-11T14:30:48Z",
+      "url": "https://claude.ai/share/9fd278a5-a2cf-4297-8e5f-e2a0ae787c8d",
+      "snippet": null,
+      "source": "hn-claude-ai",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.ai",
+      "uniqueKey": "48490878|hn-claude-ai"
+    },
+    {
+      "id": "2065057393927467084",
+      "title": "We’re launching Claude Corps, a national fellowship program matching people early in their careers with US nonprofits.\n\nWe'll teach 1,000 people to use Claude, and pay them to use AI to advance their ",
+      "date": "2026-06-11T13:03:44.000Z",
+      "url": "https://x.com/AnthropicAI/status/2065057393927467084",
+      "snippet": "We’re launching Claude Corps, a national fellowship program matching people early in their careers with US nonprofits.\n\nWe'll teach 1,000 people to use Claude, and pay them to use AI to advance their hosts’ missions.\n\nhttps://t.co/QI6JmlAdSr",
+      "source": "twitter-anthropicai",
+      "sourceCategory": "community",
+      "sourceName": "@AnthropicAI (official)",
+      "uniqueKey": "2065057393927467084|twitter-anthropicai"
+    },
+    {
+      "id": "48489767",
+      "title": "Claude Corps",
+      "date": "2026-06-11T13:00:43Z",
+      "url": "https://www.anthropic.com/news/claude-corps",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "48489767|hn-anthropic-com"
+    },
+    {
+      "id": "48488753",
+      "title": "Show HN: Claumon – forecasting Claude Code usage limits with a Gamma process",
+      "date": "2026-06-11T11:05:55Z",
+      "url": "https://github.com/fabioconcina/claumon",
+      "snippet": "Anthropic&#x27;s usage analytics dashboard is only available to Team and Enterprise org admins. On a Pro or Max plan all you get is &#x2F;usage and the claude.ai usage page, which show where you stand right now but not where you&#x27;re heading. I looked at various open-source projects but none quit",
+      "source": "hn-claude-ai",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.ai",
+      "uniqueKey": "48488753|hn-claude-ai"
+    },
     {
       "id": "0.3.173",
       "title": "0.3.173",
@@ -141,28 +427,6 @@
       "uniqueKey": "75b5d64|gh-commits-everything-claude-code"
     },
     {
-      "id": "967940f",
-      "title": "docs: restore hero banner with ECC wordmark, v2.0.0 badge, and brand lettermark (#2229)",
-      "date": "2026-06-11T05:15:38Z",
-      "url": "https://github.com/affaan-m/ECC/commit/967940f43e9b51ea5709f527fc78124e2921d23e",
-      "snippet": "Recreates the v1.10 hero banner design (sourced from commit 602894ef) that PR #2225 replaced with a plain HTML header:  - Wordmark and breadcrumb now read ECC / affaan-m/ECC - Version badge reads v2.0.0 · Jun 2026, eyebrow updated to V2.0 - Top-left mark is the actual assets/ecc-icon.svg lettermark ",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "967940f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e4a0062",
-      "title": "docs(zh-CN): translate ecc-guide and parallel-execution-optimizer skills (#2217)",
-      "date": "2026-06-11T05:01:28Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e4a0062d9b5806a7053a70c35116c9f371f4b5ce",
-      "snippet": "* docs(zh-CN): translate ecc-guide and parallel-execution-optimizer skills  Adds Simplified Chinese translations for two untranslated skills, following the existing docs/zh-CN/skills/ conventions (frontmatter name/origin preserved, code blocks and output templates kept in English, prose fully transl",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e4a0062|gh-commits-everything-claude-code"
-    },
-    {
       "id": "48486134",
       "title": "Anthropic being a good citizen or pushing ideology?",
       "date": "2026-06-11T04:16:40Z",
@@ -205,6 +469,28 @@
       "sourceCategory": "community",
       "sourceName": "Hacker News — claude.com",
       "uniqueKey": "48485195|hn-claude-com"
+    },
+    {
+      "id": "https://www.anthropic.com/news/claude-corps",
+      "title": "Introducing Claude Corps",
+      "date": "2026-06-11T00:00:00.000Z",
+      "url": "https://www.anthropic.com/news/claude-corps",
+      "snippet": "We’re launching Claude Corps, a national fellowship program for people early in their careers who are passionate about extending the benefits of AI to communities across America.",
+      "source": "blog-news",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic News Blog",
+      "uniqueKey": "https://www.anthropic.com/news/claude-corps|blog-news"
+    },
+    {
+      "id": "https://www.anthropic.com/news/dxc-anthropic-alliance",
+      "title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
+      "date": "2026-06-11T00:00:00.000Z",
+      "url": "https://www.anthropic.com/news/dxc-anthropic-alliance",
+      "snippet": "",
+      "source": "blog-news",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic News Blog",
+      "uniqueKey": "https://www.anthropic.com/news/dxc-anthropic-alliance|blog-news"
     },
     {
       "id": "2064859581298401646",
@@ -359,17 +645,6 @@
       "sourceCategory": "extended",
       "sourceName": "Anthropic Status Page",
       "uniqueKey": "32lyxmplb5wz|status-page"
-    },
-    {
-      "id": "48474826",
-      "title": "Measuring LLMs' impact on N-day exploits",
-      "date": "2026-06-10T11:40:54Z",
-      "url": "https://red.anthropic.com/2026/n-days/",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "48474826|hn-anthropic-com"
     },
     {
       "id": "0.2.95",
@@ -680,17 +955,6 @@
       "uniqueKey": "t3_1u1jn4h|reddit-claudeai"
     },
     {
-      "id": "2064469227499929651",
-      "title": "Enjoy!",
-      "date": "2026-06-09T22:06:34.000Z",
-      "url": "https://x.com/bcherny/status/2064469227499929651",
-      "snippet": "Enjoy!",
-      "source": "twitter-bcherny",
-      "sourceCategory": "community",
-      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
-      "uniqueKey": "2064469227499929651|twitter-bcherny"
-    },
-    {
       "id": "2064464557951852643",
       "title": "We've reset 5-hour and weekly rate limits for all users. Enjoy Fable 5!",
       "date": "2026-06-09T21:48:01.000Z",
@@ -722,17 +986,6 @@
       "sourceCategory": "community",
       "sourceName": "r/claudeskills (top/day)",
       "uniqueKey": "t3_1u1hw0x|reddit-claudeskills"
-    },
-    {
-      "id": "2064453497005978031",
-      "title": "We're hosting Claude Fable 5 Build Day in San Francisco on June 13.\n\nPoint Fable 5 at a problem worth solving and build a solution with Claude Code.\n\nThe Anthropic team will be in the room, with a cha",
-      "date": "2026-06-09T21:04:04.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2064453497005978031",
-      "snippet": "We're hosting Claude Fable 5 Build Day in San Francisco on June 13.\n\nPoint Fable 5 at a problem worth solving and build a solution with Claude Code.\n\nThe Anthropic team will be in the room, with a chance to win from a prize pool of $150K in Claude credits across 3 finalists. https://t.co/V3Y8yGsjtx",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2064453497005978031|twitter-claudedevs"
     },
     {
       "id": "34022c5",
@@ -823,17 +1076,6 @@
       "uniqueKey": "2235be7|gh-commits-skills"
     },
     {
-      "id": "2064428347678220691",
-      "title": "Claude Fable 5 is our first generally available Mythos-class model. \n\nIt ships with new safety classifiers that may flag certain prompts in dual-use domains like cyber and bio.\n\nWe've added fallbacks:",
-      "date": "2026-06-09T19:24:07.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2064428347678220691",
-      "snippet": "Claude Fable 5 is our first generally available Mythos-class model. \n\nIt ships with new safety classifiers that may flag certain prompts in dual-use domains like cyber and bio.\n\nWe've added fallbacks: a refused request retries on Claude Opus 4.8 instead of dead-ending. https://t.co/iL1Rd6H5pJ",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2064428347678220691|twitter-claudedevs"
-    },
-    {
       "id": "t3_1u1emyg",
       "title": "Mythos is out and its amazing (fable 5)",
       "date": "2026-06-09T19:09:49+00:00",
@@ -865,248 +1107,6 @@
       "sourceCategory": "extended",
       "sourceName": "Anthropic Status Page",
       "uniqueKey": "wtcn4knnnfzc|status-page"
-    },
-    {
-      "id": "t3_1u1d6c0",
-      "title": "Fable feels like a mature, calm, and down to earth programmer - Very impressive",
-      "date": "2026-06-09T18:18:01+00:00",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1u1d6c0/fable_feels_like_a_mature_calm_and_down_to_earth/",
-      "snippet": "I just got Fable 5 to solve a bug on a platform I am working on, one that Opus has been struggling with, and I am so impressed. I gave it the same, clear, short and to the point prompt as I always do and there is a noticable difference in how it goes to work. A few observations: Fable doesnt talk mu",
-      "source": "reddit-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeAI (top/day)",
-      "uniqueKey": "t3_1u1d6c0|reddit-claudeai"
-    },
-    {
-      "id": "t3_1u1cwkl",
-      "title": "Fable 5 is eating my Max 20x plan at ~2% per minute, and the API pricing math is wild",
-      "date": "2026-06-09T18:08:27+00:00",
-      "url": "https://www.reddit.com/r/claude/comments/1u1cwkl/fable_5_is_eating_my_max_20x_plan_at_2_per_minute/",
-      "snippet": "Been playing with Fable 5 since it dropped this morning and the model is genuinely a step up. But holy hell, the burn rate. I'm on the Max 20x plan and during a heavier session I was watching my usage tick up roughly 2% per minute. Not per hour. Per minute. A long agentic session would chew through ",
-      "source": "reddit-claude",
-      "sourceCategory": "community",
-      "sourceName": "r/claude (top/day)",
-      "uniqueKey": "t3_1u1cwkl|reddit-claude"
-    },
-    {
-      "id": "2064406418686620137",
-      "title": "RT @cursor_ai: Claude Fable 5 is now available in Cursor.\n\nIt sets a new state of the art on CursorBench at 72.9%, 8 points above the previ…",
-      "date": "2026-06-09T17:56:59.000Z",
-      "url": "https://x.com/noahzweben/status/2064406418686620137",
-      "snippet": "RT @cursor_ai: Claude Fable 5 is now available in Cursor.\n\nIt sets a new state of the art on CursorBench at 72.9%, 8 points above the previ…",
-      "source": "twitter-noahzweben",
-      "sourceCategory": "community",
-      "sourceName": "@noahzweben (Noah Zweben)",
-      "uniqueKey": "2064406418686620137|twitter-noahzweben"
-    },
-    {
-      "id": "t3_1u1ccfu",
-      "title": "Thank God we're being secure.",
-      "date": "2026-06-09T17:48:55+00:00",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1u1ccfu/thank_god_were_being_secure/",
-      "snippet": "Claude: Don't tell me your API keys, it's dangerous to give that to an AI agent. Put it in a file instead. Me: Ok, I'll add it to this .env file. Claude: Great. I'm reviewing the API key now and it looks right. Me: Ok, great. ... Wait.",
-      "source": "reddit-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeAI (top/day)",
-      "uniqueKey": "t3_1u1ccfu|reddit-claudeai"
-    },
-    {
-      "id": "5d25128",
-      "title": "Update claude-api skill: Claude Fable 5 and Claude Mythos 5 (#1294)",
-      "date": "2026-06-09T17:34:55Z",
-      "url": "https://github.com/anthropics/skills/commit/5d25128289ff72bc9c7839ac3d245f4d57515447",
-      "snippet": "- Add Claude Fable 5 and Claude Mythos 5 to the model tables with pricing,   context window, and model-selection guidance - Document Fable-specific API behavior: always-on adaptive thinking (explicit   disabled returns 400), protected-thinking display and replay rules, new   tokenizer (~30% more tok",
-      "source": "gh-commits-skills",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/skills (main commits)",
-      "uniqueKey": "5d25128|gh-commits-skills"
-    },
-    {
-      "id": "v1.0.142",
-      "title": "v1.0.142",
-      "date": "2026-06-09T17:29:19Z",
-      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.142",
-      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.142",
-      "source": "claude-code-action",
-      "sourceCategory": "extended",
-      "sourceName": "Claude Code Action Releases",
-      "uniqueKey": "v1.0.142|claude-code-action"
-    },
-    {
-      "id": "t3_1u1bs59",
-      "title": "Asking Fable the important questions",
-      "date": "2026-06-09T17:29:04+00:00",
-      "url": "https://www.reddit.com/r/claude/comments/1u1bs59/asking_fable_the_important_questions/",
-      "snippet": null,
-      "source": "reddit-claude",
-      "sourceCategory": "community",
-      "sourceName": "r/claude (top/day)",
-      "uniqueKey": "t3_1u1bs59|reddit-claude"
-    },
-    {
-      "id": "t3_1u1bp38",
-      "title": "Got nuked for hitting $5k in a single day of using claude code",
-      "date": "2026-06-09T17:26:04+00:00",
-      "url": "https://www.reddit.com/r/claude/comments/1u1bp38/got_nuked_for_hitting_5k_in_a_single_day_of_using/",
-      "snippet": "I was really liking the workflow feature of claude code wherein 1000s of subagents could be reliabily spawned and managed for a complex long running task. I used the workflow in ultracode mode to find security vulnerabilities similar to a Mythos scan a Rust and C repo function by function rather tha",
-      "source": "reddit-claude",
-      "sourceCategory": "community",
-      "sourceName": "r/claude (top/day)",
-      "uniqueKey": "t3_1u1bp38|reddit-claude"
-    },
-    {
-      "id": "48464258",
-      "title": "Anthropic requires 30 day data retention for Fable and Mythos",
-      "date": "2026-06-09T17:23:40Z",
-      "url": "https://support.claude.com/en/articles/15425996-data-retention-practices-for-mythos-class-models",
-      "snippet": null,
-      "source": "hn-claude-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — claude.com",
-      "uniqueKey": "48464258|hn-claude-com"
-    },
-    {
-      "id": "v2.1.170",
-      "title": "v2.1.170",
-      "date": "2026-06-09T17:23:09Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.170",
-      "snippet": "What's changed\n- Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use. Fable’s capabilities exceed those of any model we’ve ever made generally available. Update to version 2.1.170 for access. https://www.anthropic.com/news/claude-fable-5-mythos-5\n- Fixed sessions no",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.170|claude-code-releases"
-    },
-    {
-      "id": "6a9c2db",
-      "title": "chore: Update CHANGELOG.md and feed.xml",
-      "date": "2026-06-09T17:23:03Z",
-      "url": "https://github.com/anthropics/claude-code/commit/6a9c2dbe450466738526c9fa889d989ad48d1300",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "6a9c2db|gh-commits-claude-code"
-    },
-    {
-      "id": "fe65adf",
-      "title": "Merge pull request #696 from anthropics/paulchen-go/async-multi-agent-orchestration",
-      "date": "2026-06-09T17:16:51Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/fe65adf87147207e733b11ea3f52862b35bd6823",
-      "snippet": "Add async multi-agent orchestration cookbook",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "fe65adf|gh-commits-cookbooks"
-    },
-    {
-      "id": "48464023",
-      "title": "Claude Mythos 5 / Fable 5",
-      "date": "2026-06-09T17:10:39Z",
-      "url": "https://www.anthropic.com/claude/fable",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "48464023|hn-anthropic-com"
-    },
-    {
-      "id": "t3_1u1b8fs",
-      "title": "Claude Fable 5 (Mythos) just launched",
-      "date": "2026-06-09T17:10:09+00:00",
-      "url": "https://www.reddit.com/r/claude/comments/1u1b8fs/claude_fable_5_mythos_just_launched/",
-      "snippet": "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
-      "source": "reddit-claude",
-      "sourceCategory": "community",
-      "sourceName": "r/claude (top/day)",
-      "uniqueKey": "t3_1u1b8fs|reddit-claude"
-    },
-    {
-      "id": "2064394443856232582",
-      "title": "RT @claudeai: Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use.\n\nIts capabilities exceed those of any…",
-      "date": "2026-06-09T17:09:24.000Z",
-      "url": "https://x.com/AnthropicAI/status/2064394443856232582",
-      "snippet": "RT @claudeai: Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use.\n\nIts capabilities exceed those of any…",
-      "source": "twitter-anthropicai",
-      "sourceCategory": "community",
-      "sourceName": "@AnthropicAI (official)",
-      "uniqueKey": "2064394443856232582|twitter-anthropicai"
-    },
-    {
-      "id": "2064394146916229443",
-      "title": "Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use.\n\nIts capabilities exceed those of any model we’ve ever made generally available. https://t.co/2AvmEjHIX8",
-      "date": "2026-06-09T17:08:13.000Z",
-      "url": "https://x.com/claudeai/status/2064394146916229443",
-      "snippet": "Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use.\n\nIts capabilities exceed those of any model we’ve ever made generally available. https://t.co/2AvmEjHIX8",
-      "source": "twitter-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "@claudeai (official)",
-      "uniqueKey": "2064394146916229443|twitter-claudeai"
-    },
-    {
-      "id": "2064393567360160237",
-      "title": "Say hello to Fable 5, a Mythos-class model we've made safe for general use 🔥\n\nThis one's a doozy. So glad we can finally share with the world the ridiculous capabilities we've been relying on so heav",
-      "date": "2026-06-09T17:05:55.000Z",
-      "url": "https://x.com/TheAmolAvasare/status/2064393567360160237",
-      "snippet": "Say hello to Fable 5, a Mythos-class model we've made safe for general use 🔥\n\nThis one's a doozy. So glad we can finally share with the world the ridiculous capabilities we've been relying on so heavily inside Ant the last few months. https://t.co/VrMvZQVvUZ",
-      "source": "twitter-theamolavasare",
-      "sourceCategory": "community",
-      "sourceName": "@TheAmolAvasare (Amol Avasare)",
-      "uniqueKey": "2064393567360160237|twitter-theamolavasare"
-    },
-    {
-      "id": "107294d",
-      "title": "Merge pull request #695 from anthropics/anthropic/alexander/fable-5-classifier-billing-cookbook",
-      "date": "2026-06-09T17:02:55Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/107294d495a6bf99d6f45ccb656c786801c13499",
-      "snippet": "Fable 5 classifier and billing cookbook",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "107294d|gh-commits-cookbooks"
-    },
-    {
-      "id": "3139ce8",
-      "title": "Adjust directory",
-      "date": "2026-06-09T17:00:47Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/3139ce8ba1993c86f612b60f25da2fb182b410fd",
-      "snippet": null,
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "3139ce8|gh-commits-cookbooks"
-    },
-    {
-      "id": "2064392202504310900",
-      "title": "Today, we're introducing Claude Fable 5 and Mythos 5, two configurations of our next major language model.\n\nI'd normally highlight the numbers: It's SOTA on nearly all benchmarks. I want to talk about",
-      "date": "2026-06-09T17:00:30.000Z",
-      "url": "https://x.com/felixrieseberg/status/2064392202504310900",
-      "snippet": "Today, we're introducing Claude Fable 5 and Mythos 5, two configurations of our next major language model.\n\nI'd normally highlight the numbers: It's SOTA on nearly all benchmarks. I want to talk about something else, because with Fable 5 out in the world, I think a third era quietly started today.\n\n",
-      "source": "twitter-felixrieseberg",
-      "sourceCategory": "community",
-      "sourceName": "@felixrieseberg (Felix Rieseberg)",
-      "uniqueKey": "2064392202504310900|twitter-felixrieseberg"
-    },
-    {
-      "id": "48463811",
-      "title": "System Card: Claude Fable 5 and Claude Mythos 5 [pdf]",
-      "date": "2026-06-09T16:58:13Z",
-      "url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "48463811|hn-anthropic-com"
-    },
-    {
-      "id": "v0.108.0",
-      "title": "v0.108.0",
-      "date": "2026-06-09T16:37:30Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.108.0",
-      "snippet": "0.108.0 (2026-06-09)\nFull Changelog: v0.107.1...v0.108.0\n Features\n api: add support for claude-mythos-5 and claude-fable-5, with support for server-side fallbacks on refusal (6b76649)\n client: adds client-side fallbacks middleware for API providers that do not support server-side fallbacks (6b76649",
-      "source": "api-sdk-py-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK Python Releases",
-      "uniqueKey": "v0.108.0|api-sdk-py-releases"
     }
   ]
 }
