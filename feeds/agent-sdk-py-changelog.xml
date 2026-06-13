@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 12 Jun 2026 10:18:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 09:20:52 GMT</lastBuildDate>
+    <item>
+      <title>0.2.101</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.101</guid>
+      <pubDate>Sat, 13 Jun 2026 09:20:03 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Bug Fixes
+- Typed taskupdated lifecycle events: Exposed terminal system/taskupdated events as typed TaskUpdatedMessage with taskid, patch, status, sessionid, and uuid fields. Consumers tracking active background tasks no longer hang when a task finishes via a taskupdated message without a correspond</description>
+    </item>
     <item>
       <title>0.2.99</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
