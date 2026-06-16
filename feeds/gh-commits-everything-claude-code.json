@@ -5,9 +5,86 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-15T12:21:07.766Z",
+  "generated": "2026-06-16T11:17:17.900Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "e25f2d4",
+      "title": "fix(skills): shorten flox-environments description for Codex metadata surface (#2271)",
+      "date": "2026-06-16T06:15:43Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e25f2d463383a98ab40e627288dd123e005fd8e0",
+      "snippet": "Trimmed the description from ~1216 to ~620 chars while keeping trigger coverage (reproducible cross-platform envs, system deps, local services, .flox/manifest.toml/flox activate/FloxHub).",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e25f2d4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9444ff4",
+      "title": "Merge pull request #2118 from Seekers2001/add-generating-python-installer",
+      "date": "2026-06-16T06:14:48Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9444ff49784fa29aee6ad99005b046e17cc47ec0",
+      "snippet": "Add generating-python-installer skill (Nuitka commercial-grade Windows packaging). Catalog counts reconciled.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9444ff4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "351ccc5",
+      "title": "docs+chore: add README Security section; fix lint regressions on main",
+      "date": "2026-06-16T06:08:14Z",
+      "url": "https://github.com/affaan-m/ECC/commit/351ccc5a3c4f5c22e00aa0973156eccf7cc2517d",
+      "snippet": "- README: add a visible ## Security section (official sources, vuln reporting via SECURITY.md, GateGuard/IOC/AgentShield guardrails, security guide); make stats line a plain paragraph to clear MD028 - eslint: empty catch comment in run-with-flags.js; drop unneeded escape in github-coordination/parsi",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "351ccc5|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "d90d921",
+      "title": "fix: allow additional read-only git introspection commands (#2268)",
+      "date": "2026-06-16T05:59:23Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d90d921137bdf5fc74ba828b6bd0b214363ebf25",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d90d921|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a6ac027",
+      "title": "fix: detect destructive find -exec commands in gateguard (#2267)",
+      "date": "2026-06-16T05:58:50Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a6ac0273e27f730cee3cc9fb257dff1ad7210b63",
+      "snippet": "* fix: detect destructive find exec commands in gateguard  * chore: ignore aider local files",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a6ac027|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "26e12f3",
+      "title": "fix(skill): surface ps1 delete errors + replace removed wmic CPU detection",
+      "date": "2026-06-16T01:17:18Z",
+      "url": "https://github.com/affaan-m/ECC/commit/26e12f33fa07a88250190b672705f100823a9c54",
+      "snippet": "Greptile review: - slim_dist.ps1: ErrorActionPreference SilentlyContinue -> Continue so failed   deletes are reported instead of showing a false success banner - build_optimized.bat: wmic is removed on Windows 11 22H2+; use the built-in   %NUMBER_OF_PROCESSORS% env var (with a fallback) so --jobs is",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "26e12f3|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "20aaf84",
+      "title": "chore(catalog): sync skill counts after rebase on main",
+      "date": "2026-06-16T01:05:48Z",
+      "url": "https://github.com/affaan-m/ECC/commit/20aaf8423528d600bc6a68c60a0f6cfeaa853c0c",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "20aaf84|gh-commits-everything-claude-code"
+    },
     {
       "id": "5b173d2",
       "title": "chore: sync package-lock with package.json (CI drift)",
@@ -207,6 +284,28 @@
       "uniqueKey": "edebcc8|gh-commits-everything-claude-code"
     },
     {
+      "id": "b9e5924",
+      "title": "fix(skill): remove broken routing reference to non-existent python-installer-packaging",
+      "date": "2026-06-07T10:05:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b9e5924e5ecefb0d1f81a3014f5c589eaef955c9",
+      "snippet": "cubic P2: the fallback skill `python-installer-packaging` does not exist in the repo, creating a broken routing dependency. Replace both references (description + When to Activate) with self-contained scoping language that keeps the \"advanced optimization only\" gating without pointing at a missing s",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b9e5924|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "24dff3a",
+      "title": "fix(skill): English description, clean placeholders, green CI for generating-python-installer",
+      "date": "2026-06-07T09:57:38Z",
+      "url": "https://github.com/affaan-m/ECC/commit/24dff3a1e317fcd690e54a2ecdcdd83a3923b60d",
+      "snippet": "Addresses PR review feedback (English description + cleaned placeholders + CI green) and the inline bot findings.  - Add English description and canonical \"When to Activate\" / \"How It Works\" /   \"Examples\" sections for auto-activation; keep the existing Chinese content - Replace the \"某商业级桌面应用\" place",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "24dff3a|gh-commits-everything-claude-code"
+    },
+    {
       "id": "90dfd95",
       "title": "feat: add orch-* orchestrator skill family (#2153)",
       "date": "2026-06-07T08:15:31Z",
@@ -383,6 +482,17 @@
       "uniqueKey": "d86fada|gh-commits-everything-claude-code"
     },
     {
+      "id": "d1c454a",
+      "title": "Add generating-python-installer skill (Nuitka commercial packaging)",
+      "date": "2026-06-02T10:29:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d1c454ac44afeb9effe6aeabcc7297be948b7fe1",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d1c454a|gh-commits-everything-claude-code"
+    },
+    {
       "id": "64cd1ba",
       "title": "fix: surface warn-only PreToolUse hooks (#2084)",
       "date": "2026-05-28T11:45:46Z",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "3add394|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7fef1dd",
-      "title": "docs(i18n): add German localization scout (#2029)",
-      "date": "2026-05-25T18:12:01Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7fef1ddbebec2acb5d3bd78bb2a405affe47f672",
-      "snippet": "Adds de-DE docs, installer wiring, and locale tests. Pre-validated on current main with install manifest checks, markdownlint, locale-install tests, and ECC 2.0 release-surface tests.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7fef1dd|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5b4c4bd",
-      "title": "fix(docs): wrap integration reference links",
-      "date": "2026-05-25T18:11:05Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5b4c4bda978d1d2a1f68dc560d91c1757b2e89c0",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5b4c4bd|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "1d72dfb",
-      "title": "feat(integrations): add opt-in AURA trust adapter (#2026)",
-      "date": "2026-05-25T18:10:42Z",
-      "url": "https://github.com/affaan-m/ECC/commit/1d72dfb2d54f26c1477a77fbec0650b1c0b5094e",
-      "snippet": "Adds a read-only opt-in AURA trust-check adapter. Synthetic merge passed validators and 22 AURA offline tests via uvx pytest.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "1d72dfb|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "c2b3899",
-      "title": "feat(mcp): add Squish Memory server catalog entry (#2039)",
-      "date": "2026-05-25T18:10:39Z",
-      "url": "https://github.com/affaan-m/ECC/commit/c2b3899685b3b22094965ef7cc85bf5b26fdf1b5",
-      "snippet": "Adds Squish Memory to the MCP server catalog. Pre-validated in a synthetic current-main merge.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "c2b3899|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d29dad1",
-      "title": "feat: add marketing campaign agent skill and command (#2031)",
-      "date": "2026-05-25T18:10:35Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d29dad1688bc21c23abfc35cff879eddb8c4c232",
-      "snippet": "Adds marketing-agent, marketing-campaign skill, and marketing-campaign command. Pre-validated in a synthetic current-main merge.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d29dad1|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "61dd569",
-      "title": "feat(skills): add social publisher skill (#2052)",
-      "date": "2026-05-25T18:10:32Z",
-      "url": "https://github.com/affaan-m/ECC/commit/61dd56901b198efeb2e766f29cc6892861c4a364",
-      "snippet": "Adds a SocialClaw-backed social-publisher skill. Pre-validated in a synthetic current-main merge.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "61dd569|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8fb728d",
-      "title": "feat(skills): add frontend accessibility skill (#2048)",
-      "date": "2026-05-25T18:09:14Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8fb728d7eb48e0524b6fc46affae1dd1e0cd09ad",
-      "snippet": "Adds the frontend-a11y skill for React and Next.js accessibility patterns. Pre-validated against current main with validate-skills and markdownlint.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8fb728d|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "1e8c7e7",
-      "title": "docs: sync live native payments gate evidence",
-      "date": "2026-05-20T03:09:39Z",
-      "url": "https://github.com/affaan-m/ECC/commit/1e8c7e7994223e0ff337d1626cd08e04a1ae67ed",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "1e8c7e7|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "6e25458",
-      "title": "Sync billing gate env-file evidence (#2021)",
-      "date": "2026-05-20T02:43:19Z",
-      "url": "https://github.com/affaan-m/ECC/commit/6e25458dbc15cd07cfb7a4e1f0b06f3eda41a043",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "6e25458|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "c2471fe",
-      "title": "docs: sync selected-target announcement gate (#2020)",
-      "date": "2026-05-20T02:09:45Z",
-      "url": "https://github.com/affaan-m/ECC/commit/c2471fe5c535310f8a8008c9ed7ea9f6757b33f2",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "c2471fe|gh-commits-everything-claude-code"
     }
   ]
 }

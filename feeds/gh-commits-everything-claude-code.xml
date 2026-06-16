@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 15 Jun 2026 12:21:07 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 11:17:17 GMT</lastBuildDate>
+    <item>
+      <title>fix(skills): shorten flox-environments description for Codex metadata surface (#2271)</title>
+      <link>https://github.com/affaan-m/ECC/commit/e25f2d463383a98ab40e627288dd123e005fd8e0</link>
+      <guid isPermaLink="false">e25f2d4</guid>
+      <pubDate>Tue, 16 Jun 2026 06:15:43 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Trimmed the description from ~1216 to ~620 chars while keeping trigger coverage (reproducible cross-platform envs, system deps, local services, .flox/manifest.toml/flox activate/FloxHub).</description>
+    </item>
+    <item>
+      <title>Merge pull request #2118 from Seekers2001/add-generating-python-installer</title>
+      <link>https://github.com/affaan-m/ECC/commit/9444ff49784fa29aee6ad99005b046e17cc47ec0</link>
+      <guid isPermaLink="false">9444ff4</guid>
+      <pubDate>Tue, 16 Jun 2026 06:14:48 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Add generating-python-installer skill (Nuitka commercial-grade Windows packaging). Catalog counts reconciled.</description>
+    </item>
+    <item>
+      <title>docs+chore: add README Security section; fix lint regressions on main</title>
+      <link>https://github.com/affaan-m/ECC/commit/351ccc5a3c4f5c22e00aa0973156eccf7cc2517d</link>
+      <guid isPermaLink="false">351ccc5</guid>
+      <pubDate>Tue, 16 Jun 2026 06:08:14 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>- README: add a visible ## Security section (official sources, vuln reporting via SECURITY.md, GateGuard/IOC/AgentShield guardrails, security guide); make stats line a plain paragraph to clear MD028 - eslint: empty catch comment in run-with-flags.js; drop unneeded escape in github-coordination/parsi</description>
+    </item>
+    <item>
+      <title>fix: allow additional read-only git introspection commands (#2268)</title>
+      <link>https://github.com/affaan-m/ECC/commit/d90d921137bdf5fc74ba828b6bd0b214363ebf25</link>
+      <guid isPermaLink="false">d90d921</guid>
+      <pubDate>Tue, 16 Jun 2026 05:59:23 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: detect destructive find -exec commands in gateguard (#2267)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a6ac0273e27f730cee3cc9fb257dff1ad7210b63</link>
+      <guid isPermaLink="false">a6ac027</guid>
+      <pubDate>Tue, 16 Jun 2026 05:58:50 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: detect destructive find exec commands in gateguard  * chore: ignore aider local files</description>
+    </item>
+    <item>
+      <title>fix(skill): surface ps1 delete errors + replace removed wmic CPU detection</title>
+      <link>https://github.com/affaan-m/ECC/commit/26e12f33fa07a88250190b672705f100823a9c54</link>
+      <guid isPermaLink="false">26e12f3</guid>
+      <pubDate>Tue, 16 Jun 2026 01:17:18 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Greptile review: - slim_dist.ps1: ErrorActionPreference SilentlyContinue -&gt; Continue so failed   deletes are reported instead of showing a false success banner - build_optimized.bat: wmic is removed on Windows 11 22H2+; use the built-in   %NUMBER_OF_PROCESSORS% env var (with a fallback) so --jobs is</description>
+    </item>
+    <item>
+      <title>chore(catalog): sync skill counts after rebase on main</title>
+      <link>https://github.com/affaan-m/ECC/commit/20aaf8423528d600bc6a68c60a0f6cfeaa853c0c</link>
+      <guid isPermaLink="false">20aaf84</guid>
+      <pubDate>Tue, 16 Jun 2026 01:05:48 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>chore: sync package-lock with package.json (CI drift)</title>
       <link>https://github.com/affaan-m/ECC/commit/5b173d2e6c11b976a0f13b2f59125e08956c1d47</link>
@@ -152,6 +208,22 @@
       <description>On a published GitHub release, post the notes to the ECC Discord #announcements channel (via bot), pin it, and cross-post to GitHub Discussions (Announcements category). Release data flows through env vars (no shell interpolation of untrusted input). Secrets: DISCORD_BOT_TOKEN, DISCORD_ANNOUNCE_CHAN</description>
     </item>
     <item>
+      <title>fix(skill): remove broken routing reference to non-existent python-installer-packaging</title>
+      <link>https://github.com/affaan-m/ECC/commit/b9e5924e5ecefb0d1f81a3014f5c589eaef955c9</link>
+      <guid isPermaLink="false">b9e5924</guid>
+      <pubDate>Sun, 07 Jun 2026 10:05:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>cubic P2: the fallback skill `python-installer-packaging` does not exist in the repo, creating a broken routing dependency. Replace both references (description + When to Activate) with self-contained scoping language that keeps the &quot;advanced optimization only&quot; gating without pointing at a missing s</description>
+    </item>
+    <item>
+      <title>fix(skill): English description, clean placeholders, green CI for generating-python-installer</title>
+      <link>https://github.com/affaan-m/ECC/commit/24dff3a1e317fcd690e54a2ecdcdd83a3923b60d</link>
+      <guid isPermaLink="false">24dff3a</guid>
+      <pubDate>Sun, 07 Jun 2026 09:57:38 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Addresses PR review feedback (English description + cleaned placeholders + CI green) and the inline bot findings.  - Add English description and canonical &quot;When to Activate&quot; / &quot;How It Works&quot; /   &quot;Examples&quot; sections for auto-activation; keep the existing Chinese content - Replace the &quot;某商业级桌面应用&quot; place</description>
+    </item>
+    <item>
       <title>feat: add orch-* orchestrator skill family (#2153)</title>
       <link>https://github.com/affaan-m/ECC/commit/90dfd9505dc860714cf3cc8216ad7bbb96d93365</link>
       <guid isPermaLink="false">90dfd95</guid>
@@ -280,6 +352,14 @@
       <description/>
     </item>
     <item>
+      <title>Add generating-python-installer skill (Nuitka commercial packaging)</title>
+      <link>https://github.com/affaan-m/ECC/commit/d1c454ac44afeb9effe6aeabcc7297be948b7fe1</link>
+      <guid isPermaLink="false">d1c454a</guid>
+      <pubDate>Tue, 02 Jun 2026 10:29:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
       <title>fix: surface warn-only PreToolUse hooks (#2084)</title>
       <link>https://github.com/affaan-m/ECC/commit/64cd1ba248e77e377e76f70fc4e6434bfdddd511</link>
       <guid isPermaLink="false">64cd1ba</guid>
@@ -324,86 +404,6 @@
       <link>https://github.com/affaan-m/ECC/commit/3add394cca759c6cdc826b4810775a14ce5d9ff2</link>
       <guid isPermaLink="false">3add394</guid>
       <pubDate>Mon, 25 May 2026 18:13:36 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs(i18n): add German localization scout (#2029)</title>
-      <link>https://github.com/affaan-m/ECC/commit/7fef1ddbebec2acb5d3bd78bb2a405affe47f672</link>
-      <guid isPermaLink="false">7fef1dd</guid>
-      <pubDate>Mon, 25 May 2026 18:12:01 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds de-DE docs, installer wiring, and locale tests. Pre-validated on current main with install manifest checks, markdownlint, locale-install tests, and ECC 2.0 release-surface tests.</description>
-    </item>
-    <item>
-      <title>fix(docs): wrap integration reference links</title>
-      <link>https://github.com/affaan-m/ECC/commit/5b4c4bda978d1d2a1f68dc560d91c1757b2e89c0</link>
-      <guid isPermaLink="false">5b4c4bd</guid>
-      <pubDate>Mon, 25 May 2026 18:11:05 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat(integrations): add opt-in AURA trust adapter (#2026)</title>
-      <link>https://github.com/affaan-m/ECC/commit/1d72dfb2d54f26c1477a77fbec0650b1c0b5094e</link>
-      <guid isPermaLink="false">1d72dfb</guid>
-      <pubDate>Mon, 25 May 2026 18:10:42 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds a read-only opt-in AURA trust-check adapter. Synthetic merge passed validators and 22 AURA offline tests via uvx pytest.</description>
-    </item>
-    <item>
-      <title>feat(mcp): add Squish Memory server catalog entry (#2039)</title>
-      <link>https://github.com/affaan-m/ECC/commit/c2b3899685b3b22094965ef7cc85bf5b26fdf1b5</link>
-      <guid isPermaLink="false">c2b3899</guid>
-      <pubDate>Mon, 25 May 2026 18:10:39 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds Squish Memory to the MCP server catalog. Pre-validated in a synthetic current-main merge.</description>
-    </item>
-    <item>
-      <title>feat: add marketing campaign agent skill and command (#2031)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d29dad1688bc21c23abfc35cff879eddb8c4c232</link>
-      <guid isPermaLink="false">d29dad1</guid>
-      <pubDate>Mon, 25 May 2026 18:10:35 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds marketing-agent, marketing-campaign skill, and marketing-campaign command. Pre-validated in a synthetic current-main merge.</description>
-    </item>
-    <item>
-      <title>feat(skills): add social publisher skill (#2052)</title>
-      <link>https://github.com/affaan-m/ECC/commit/61dd56901b198efeb2e766f29cc6892861c4a364</link>
-      <guid isPermaLink="false">61dd569</guid>
-      <pubDate>Mon, 25 May 2026 18:10:32 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds a SocialClaw-backed social-publisher skill. Pre-validated in a synthetic current-main merge.</description>
-    </item>
-    <item>
-      <title>feat(skills): add frontend accessibility skill (#2048)</title>
-      <link>https://github.com/affaan-m/ECC/commit/8fb728d7eb48e0524b6fc46affae1dd1e0cd09ad</link>
-      <guid isPermaLink="false">8fb728d</guid>
-      <pubDate>Mon, 25 May 2026 18:09:14 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds the frontend-a11y skill for React and Next.js accessibility patterns. Pre-validated against current main with validate-skills and markdownlint.</description>
-    </item>
-    <item>
-      <title>docs: sync live native payments gate evidence</title>
-      <link>https://github.com/affaan-m/ECC/commit/1e8c7e7994223e0ff337d1626cd08e04a1ae67ed</link>
-      <guid isPermaLink="false">1e8c7e7</guid>
-      <pubDate>Wed, 20 May 2026 03:09:39 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Sync billing gate env-file evidence (#2021)</title>
-      <link>https://github.com/affaan-m/ECC/commit/6e25458dbc15cd07cfb7a4e1f0b06f3eda41a043</link>
-      <guid isPermaLink="false">6e25458</guid>
-      <pubDate>Wed, 20 May 2026 02:43:19 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: sync selected-target announcement gate (#2020)</title>
-      <link>https://github.com/affaan-m/ECC/commit/c2471fe5c535310f8a8008c9ed7ea9f6757b33f2</link>
-      <guid isPermaLink="false">c2471fe</guid>
-      <pubDate>Wed, 20 May 2026 02:09:45 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
     </item>

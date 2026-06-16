@@ -5,9 +5,284 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-15T12:21:07.718Z",
+  "generated": "2026-06-16T11:17:17.860Z",
   "itemCount": 100,
   "items": [
+    {
+      "id": "0.3.178",
+      "title": "0.3.178",
+      "date": "2026-06-16T11:16:27.036Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Spawn failures on an existing native binary now explain the likely libc mismatch (musl binary on a glibc host) and suggest options.pathToClaudeCodeExecutable\n- Permission-denied advisory messages now carry typed denial reasons (safetyCheck, asyncAgent), enabling SDK consumers to programmatically m",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.178|agent-sdk-ts-changelog"
+    },
+    {
+      "id": "0.2.102",
+      "title": "0.2.102",
+      "date": "2026-06-16T11:16:27.008Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.178",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.102|agent-sdk-py-changelog"
+    },
+    {
+      "id": "2.1.178",
+      "title": "2.1.178",
+      "date": "2026-06-16T11:16:25.893Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added Tool(param:value) syntax for permission rules to match a tool's input parameters (with  wildcard), e.g. Agent(model:opus) to block Opus subagents\n- Skills in nested .claude/skills directories now load when working on files there; on a name clash, the nested skill appears as <dir>:<name> so b",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.178|claude-code-changelog"
+    },
+    {
+      "id": "t3_1u78t5z",
+      "title": "Anthropic Is Still at Odds With the White House Over Claude Fable 5",
+      "date": "2026-06-16T09:39:13+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u78t5z/anthropic_is_still_at_odds_with_the_white_house/",
+      "snippet": null,
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1u78t5z|reddit-claudecode"
+    },
+    {
+      "id": "94e1d41",
+      "title": "fix: add homepage h1 for seo",
+      "date": "2026-06-16T07:32:56Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/94e1d41b2b0d7499454de4c2cab0c22df78dfb01",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "94e1d41|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "e25f2d4",
+      "title": "fix(skills): shorten flox-environments description for Codex metadata surface (#2271)",
+      "date": "2026-06-16T06:15:43Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e25f2d463383a98ab40e627288dd123e005fd8e0",
+      "snippet": "Trimmed the description from ~1216 to ~620 chars while keeping trigger coverage (reproducible cross-platform envs, system deps, local services, .flox/manifest.toml/flox activate/FloxHub).",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e25f2d4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9444ff4",
+      "title": "Merge pull request #2118 from Seekers2001/add-generating-python-installer",
+      "date": "2026-06-16T06:14:48Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9444ff49784fa29aee6ad99005b046e17cc47ec0",
+      "snippet": "Add generating-python-installer skill (Nuitka commercial-grade Windows packaging). Catalog counts reconciled.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9444ff4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "351ccc5",
+      "title": "docs+chore: add README Security section; fix lint regressions on main",
+      "date": "2026-06-16T06:08:14Z",
+      "url": "https://github.com/affaan-m/ECC/commit/351ccc5a3c4f5c22e00aa0973156eccf7cc2517d",
+      "snippet": "- README: add a visible ## Security section (official sources, vuln reporting via SECURITY.md, GateGuard/IOC/AgentShield guardrails, security guide); make stats line a plain paragraph to clear MD028 - eslint: empty catch comment in run-with-flags.js; drop unneeded escape in github-coordination/parsi",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "351ccc5|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "d90d921",
+      "title": "fix: allow additional read-only git introspection commands (#2268)",
+      "date": "2026-06-16T05:59:23Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d90d921137bdf5fc74ba828b6bd0b214363ebf25",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d90d921|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a6ac027",
+      "title": "fix: detect destructive find -exec commands in gateguard (#2267)",
+      "date": "2026-06-16T05:58:50Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a6ac0273e27f730cee3cc9fb257dff1ad7210b63",
+      "snippet": "* fix: detect destructive find exec commands in gateguard  * chore: ignore aider local files",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a6ac027|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "t3_1u73tu2",
+      "title": "I asked chatGPT to make a sketch for ai users… anddd I think it’s a little biased 😂😂",
+      "date": "2026-06-16T04:50:03+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u73tu2/i_asked_chatgpt_to_make_a_sketch_for_ai_users/",
+      "snippet": null,
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1u73tu2|reddit-claudecode"
+    },
+    {
+      "id": "t3_1u71tfc",
+      "title": "Dario Amodei but it's 2036 and he's had a Jeff Bezos-style glow up",
+      "date": "2026-06-16T03:07:51+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u71tfc/dario_amodei_but_its_2036_and_hes_had_a_jeff/",
+      "snippet": null,
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1u71tfc|reddit-claudecode"
+    },
+    {
+      "id": "t3_1u711o0",
+      "title": "Coders with Fable Withdrawl",
+      "date": "2026-06-16T02:30:56+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u711o0/coders_with_fable_withdrawl/",
+      "snippet": null,
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1u711o0|reddit-claudecode"
+    },
+    {
+      "id": "t3_1u6w93x",
+      "title": "A corporate shakedown?",
+      "date": "2026-06-15T22:58:03+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u6w93x/a_corporate_shakedown/",
+      "snippet": "Amazon’s goal appears to be forcing a scenario where Fable 5 can only run inside Amazon bedrock, using a specific set of security justifications. Amazon is now using the government crackdown to argue that Fable 5 is too dangerous to let data leave the AWS perimeter, aiming to strip Anthropic of its ",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1u6w93x|reddit-claudecode"
+    },
+    {
+      "id": "v1.0.149",
+      "title": "v1.0.149",
+      "date": "2026-06-15T21:39:00Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.149",
+      "snippet": "What's Changed\n fix(parse-sdk-options): prevent shell-quote from collapsing unquoted Bash(X:) rules to bare Bash by @alexglynn in https://github.com/anthropics/claude-code-action/pull/1350\n fix(mcp): align allowed-tools parser with SDK option parser by @bymle in https://github.com/anthropics/claude-",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.149|claude-code-action"
+    },
+    {
+      "id": "v2.1.178",
+      "title": "v2.1.178",
+      "date": "2026-06-15T21:35:55Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.178",
+      "snippet": "What's changed\n- Added Tool(param:value) syntax for permission rules to match a tool's input parameters (with  wildcard), e.g. Agent(model:opus) to block Opus subagents\n- Skills in nested .claude/skills directories now load when working on files there; on a name clash, the nested skill appears as <d",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.178|claude-code-releases"
+    },
+    {
+      "id": "64ceb97",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-06-15T21:35:48Z",
+      "url": "https://github.com/anthropics/claude-code/commit/64ceb97caab3fb898ece9a1b61e337470f805550",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "64ceb97|gh-commits-claude-code"
+    },
+    {
+      "id": "2.1.178",
+      "title": "@anthropic-ai/claude-code@2.1.178",
+      "date": "2026-06-15T19:03:37.553Z",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+      "source": "npm-claude-code",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.178|npm-claude-code"
+    },
+    {
+      "id": "39660b6",
+      "title": "chore: release v12.6.0",
+      "date": "2026-06-15T17:49:49Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/39660b6b4b9eee6dc2accbc4a22b89605d995662",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "39660b6|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "6f4abb1",
+      "title": "docs: add changelog for v12.6.0",
+      "date": "2026-06-15T17:48:19Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/6f4abb12f27ec3f7a5db3e47e68935d7981aae2b",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "6f4abb1|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "9c12c94",
+      "title": "fix(web): refresh vulnerable transitive deps",
+      "date": "2026-06-15T17:44:26Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/9c12c94b179cba90161dc7fac30c71ab945421a9",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "9c12c94|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "48544637",
+      "title": "Claude Corps",
+      "date": "2026-06-15T17:41:24Z",
+      "url": "https://www.anthropic.com/news/claude-corps",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "48544637|hn-anthropic-com"
+    },
+    {
+      "id": "bebeca8",
+      "title": "fix(web): refresh llms skill count",
+      "date": "2026-06-15T17:34:53Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/bebeca87f554050a8298dc2080d25e45a5176c9a",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "bebeca8|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "v0.109.2",
+      "title": "v0.109.2",
+      "date": "2026-06-15T17:30:11Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.2",
+      "snippet": "0.109.2 (2026-06-15)\nFull Changelog: v0.109.1...v0.109.2\n Chores\n api: remove retired models from API and SDKs (d4bcfcc)",
+      "source": "api-sdk-py-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK Python Releases",
+      "uniqueKey": "v0.109.2|api-sdk-py-releases"
+    },
+    {
+      "id": "sdk-v0.104.2",
+      "title": "sdk: v0.104.2",
+      "date": "2026-06-15T16:49:40Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.104.2",
+      "snippet": "0.104.2 (2026-06-15)\nFull Changelog: sdk-v0.104.1...sdk-v0.104.2\n Chores\n api: remove retired models from API and SDKs (a942876)",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "sdk-v0.104.2|api-sdk-ts-releases"
+    },
     {
       "id": "slm0mhv6r1pf",
       "title": "Elevated errors on Claude Opus 4.8",
@@ -53,6 +328,17 @@
       "uniqueKey": "d029127|gh-commits-plugins-official"
     },
     {
+      "id": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+      "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon",
+      "date": "2026-06-15T00:00:00.000Z",
+      "url": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+      "snippet": "",
+      "source": "blog-claude",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Claude Blog",
+      "uniqueKey": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon|blog-claude"
+    },
+    {
       "id": "48528204",
       "title": "Measuring LLMs' impact on N-day exploits",
       "date": "2026-06-14T15:24:07Z",
@@ -73,83 +359,6 @@
       "sourceCategory": "community",
       "sourceName": "Hacker News — claude.com",
       "uniqueKey": "48527164|hn-claude-com"
-    },
-    {
-      "id": "9431b67",
-      "title": "fix(web): refresh SEO skill count for 12.5.0",
-      "date": "2026-06-14T09:00:40Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/9431b67e893f82197ec845a2d945cfe178e70477",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "9431b67|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "f8c4a77",
-      "title": "chore: release v12.5.0",
-      "date": "2026-06-14T08:56:12Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/f8c4a776296ead61046b6e6177174cd5164e74e9",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "f8c4a77|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "fddfc16",
-      "title": "docs: update changelog for v12.5.0",
-      "date": "2026-06-14T08:51:06Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/fddfc16a4e40f5a1a2964b1c87bd9af70e8ddcf1",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "fddfc16|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "6313372",
-      "title": "feat: add ecl-harness-engineer skill (#678)",
-      "date": "2026-06-14T08:43:01Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/631337284fcf0fa4632c571e18e3634b2319161c",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "6313372|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "976e95f",
-      "title": "feat: add monopoly skill (#684)",
-      "date": "2026-06-14T08:40:02Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/976e95fbb9db8fac59fb4e8801e8c2cb5b4d479b",
-      "snippet": "# Pull Request Description  Adds the new `monopoly` skill. This skill acts as a Senior System Design Engineer that architects, reviews, and scales systems, and includes deep-dive reference documents (patterns, scale benchmarks, security checklist, and tech matrix) as nested sub-skills.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "976e95f|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "t3_1u5dq2y",
-      "title": "I analyzed 26 sessions (9K+ messages) of Fable 5 and 145 sessions (27K messages) of Opus 4.8 from my own logs and then built Fable's behavior into Opus",
-      "date": "2026-06-14T06:34:48+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u5dq2y/i_analyzed_26_sessions_9k_messages_of_fable_5_and/",
-      "snippet": "When Fable got suspended last Friday, a bunch of my work snapped back to Opus 4.8, and it immediately felt different - wordier, more hedge, more \"let me think about whether I should think about this.\" So I went through my own Claude Code transcripts and tried to measure the behavioral differences an",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1u5dq2y|reddit-claudecode"
-    },
-    {
-      "id": "t3_1u5b7ds",
-      "title": "This is how it feels to use Opus now after Fable was banned",
-      "date": "2026-06-14T04:18:48+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u5b7ds/this_is_how_it_feels_to_use_opus_now_after_fable/",
-      "snippet": null,
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1u5b7ds|reddit-claudecode"
     },
     {
       "id": "48523752",
@@ -185,39 +394,6 @@
       "uniqueKey": "48523122|hn-anthropic-com"
     },
     {
-      "id": "t3_1u4z26x",
-      "title": "Did not last a single week",
-      "date": "2026-06-13T18:56:41+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u4z26x/did_not_last_a_single_week/",
-      "snippet": null,
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1u4z26x|reddit-claudecode"
-    },
-    {
-      "id": "t3_1u4xeeu",
-      "title": "It was short but it mattered",
-      "date": "2026-06-13T17:50:52+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u4xeeu/it_was_short_but_it_mattered/",
-      "snippet": null,
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1u4xeeu|reddit-claudecode"
-    },
-    {
-      "id": "t3_1u4x3je",
-      "title": "Amazon CEO’s Talks With U.S. Officials, Triggered Crackdown on Anthropic Model Fable 5",
-      "date": "2026-06-13T17:38:51+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1u4x3je/amazon_ceos_talks_with_us_officials_triggered/",
-      "snippet": "Conversations between Amazon CEO Andy Jassy and Treasury Secretary Scott Bessent led to the decision by the White House last night to control the use of Fable 5 and Mythos 5. Amazon CEO Andy held talks with senior Trump administration officials this week regarding security risks in Anthropic's advan",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1u4x3je|reddit-claudecode"
-    },
-    {
       "id": "48517921",
       "title": "\"Remaining: Szabo, Le Roux, Kleiman, Musk.\"",
       "date": "2026-06-13T14:53:07Z",
@@ -227,17 +403,6 @@
       "sourceCategory": "community",
       "sourceName": "Hacker News — claude.ai",
       "uniqueKey": "48517921|hn-claude-ai"
-    },
-    {
-      "id": "48516516",
-      "title": "Claude Corps",
-      "date": "2026-06-13T12:12:37Z",
-      "url": "https://www.anthropic.com/claude-corps",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "48516516|hn-anthropic-com"
     },
     {
       "id": "0.2.101",
@@ -691,28 +856,6 @@
       "uniqueKey": "48496430|hn-claude-ai"
     },
     {
-      "id": "5b173d2",
-      "title": "chore: sync package-lock with package.json (CI drift)",
-      "date": "2026-06-11T20:22:55Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5b173d2e6c11b976a0f13b2f59125e08956c1d47",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5b173d2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7777656",
-      "title": "fix: context-size /compact trigger, Codex marketplace plugin path, live README badges (#2237)",
-      "date": "2026-06-11T20:21:53Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7777656bf5c2c1b6971409bb0d28cb95d822dab9",
-      "snippet": "- suggest-compact hook now reads the latest usage record from the session   transcript and suggests /compact at a window-scaled token threshold   (160k/200k window, 250k/1M window; COMPACT_CONTEXT_THRESHOLD and   COMPACT_CONTEXT_INTERVAL overridable), re-firing per 60k-token growth   bucket; tool-ca",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7777656|gh-commits-everything-claude-code"
-    },
-    {
       "id": "j8ghp7dk6lym",
       "title": "Elevated errors across models",
       "date": "2026-06-11T16:54:52.467Z",
@@ -834,28 +977,6 @@
       "uniqueKey": "2064970759408079333|twitter-bcherny"
     },
     {
-      "id": "v1.0.144",
-      "title": "v1.0.144",
-      "date": "2026-06-11T05:44:00Z",
-      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.144",
-      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.144",
-      "source": "claude-code-action",
-      "sourceCategory": "extended",
-      "sourceName": "Claude Code Action Releases",
-      "uniqueKey": "v1.0.144|claude-code-action"
-    },
-    {
-      "id": "v2.1.173",
-      "title": "v2.1.173",
-      "date": "2026-06-11T05:41:54Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.173",
-      "snippet": "What's changed\n- Fixed Fable 5 model names with a [1m] suffix not being normalized — Fable 5 includes 1M context by default, so the suffix is now stripped automatically\n- Fixed a spurious \"sandbox dependencies missing\" startup warning on Windows when sandbox was enabled in settings",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.173|claude-code-releases"
-    },
-    {
       "id": "3a7c736",
       "title": "chore: Update CHANGELOG.md and feed.xml",
       "date": "2026-06-11T05:41:48Z",
@@ -865,39 +986,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
       "uniqueKey": "3a7c736|gh-commits-claude-code"
-    },
-    {
-      "id": "6c39cde",
-      "title": "fix(assets): replace hero brand mark with website coral circuit mark (#2232)",
-      "date": "2026-06-11T05:28:30Z",
-      "url": "https://github.com/affaan-m/ECC/commit/6c39cdecd30de45d0e0ce5bc02064a5dbe72b12a",
-      "snippet": "* fix(assets): replace hero brand mark with website coral circuit mark  The top-left mark in the hero banner was the assets/ecc-icon.svg double-E lettermark, not the actual brand logo. Swap in the coral vector circuit mark from the ECC-website header (src/styles/brandMarks.ts), keeping the ~70px foo",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "6c39cde|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "42fe8c3",
-      "title": "fix(ecc2): port webhook sender to ureq 3 Agent API (#2231)",
-      "date": "2026-06-11T05:26:59Z",
-      "url": "https://github.com/affaan-m/ECC/commit/42fe8c30838862193e63bae6643c6c82e62704b7",
-      "snippet": "#2209 bumped ureq to 3.x but the AgentBuilder-based webhook sender was not ported (branch update raced the merge). ureq 3 replaces AgentBuilder with Agent::config_builder(); timeouts are Option-wrapped and status() returns http::StatusCode.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "42fe8c3|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "75b5d64",
-      "title": "docs: sync skill count to 262 after config-gc skill landed (#2230)",
-      "date": "2026-06-11T05:22:34Z",
-      "url": "https://github.com/affaan-m/ECC/commit/75b5d64fc3ccb3743acde21b141f6860034b34ce",
-      "snippet": "npm run catalog:sync — #2216 added skills/config-gc without bumping documented counts, leaving catalog:check (and npm test) red on main.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "75b5d64|gh-commits-everything-claude-code"
     },
     {
       "id": "2.1.173",
@@ -977,17 +1065,6 @@
       "uniqueKey": "2064832132334407970|twitter-bcherny"
     },
     {
-      "id": "ca34f27",
-      "title": "chore: Update CHANGELOG.md and feed.xml",
-      "date": "2026-06-10T20:44:09Z",
-      "url": "https://github.com/anthropics/claude-code/commit/ca34f27543215fa4212872401dff00ba0ff0a034",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "ca34f27|gh-commits-claude-code"
-    },
-    {
       "id": "2064783418844762489",
       "title": "AI is advancing at a pace our policymaking institutions were never built for—and the gap between the two is becoming the central challenge of the technology. In his latest essay, our CEO Dario Amodei ",
       "date": "2026-06-10T18:55:03.000Z",
@@ -1030,83 +1107,6 @@
       "sourceCategory": "community",
       "sourceName": "@felixrieseberg (Felix Rieseberg)",
       "uniqueKey": "2064737015988662458|twitter-felixrieseberg"
-    },
-    {
-      "id": "2064735688927646100",
-      "title": "Fable has changed how I work as a PM. Previously I would help out around the edges of our products — copy changes, visual re-skins, prototypes...\n\nFable lets me contribute real significant features, t",
-      "date": "2026-06-10T15:45:23.000Z",
-      "url": "https://x.com/noahzweben/status/2064735688927646100",
-      "snippet": "Fable has changed how I work as a PM. Previously I would help out around the edges of our products — copy changes, visual re-skins, prototypes...\n\nFable lets me contribute real significant features, that combined with Code Review, are able to quickly ship to production.",
-      "source": "twitter-noahzweben",
-      "sourceCategory": "community",
-      "sourceName": "@noahzweben (Noah Zweben)",
-      "uniqueKey": "2064735688927646100|twitter-noahzweben"
-    },
-    {
-      "id": "0.2.95",
-      "title": "0.2.95",
-      "date": "2026-06-10T10:06:01.061Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
-      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.170",
-      "source": "agent-sdk-py-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK Python Changelog",
-      "uniqueKey": "0.2.95|agent-sdk-py-changelog"
-    },
-    {
-      "id": "0.3.170",
-      "title": "0.3.170",
-      "date": "2026-06-10T10:06:00.874Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added claude-fable-5 model and the fable alias to SDK model types. https://www.anthropic.com/news/claude-fable-5-mythos-5\n- Updated to parity with Claude Code v2.1.170",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.170|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "2.1.170",
-      "title": "2.1.170",
-      "date": "2026-06-10T10:06:00.184Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use. Fable’s capabilities exceed those of any model we’ve ever made generally available. Update to version 2.1.170 for access. https://www.anthropic.com/news/claude-fable-5-mythos-5\n- Fixed sessions not saving transc",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.170|claude-code-changelog"
-    },
-    {
-      "id": "t3_1u1wrra",
-      "title": "Knives for sale that only cut bananas.",
-      "date": "2026-06-10T09:01:12+00:00",
-      "url": "https://www.reddit.com/r/claudeskills/comments/1u1wrra/knives_for_sale_that_only_cut_bananas/",
-      "snippet": null,
-      "source": "reddit-claudeskills",
-      "sourceCategory": "community",
-      "sourceName": "r/claudeskills (top/day)",
-      "uniqueKey": "t3_1u1wrra|reddit-claudeskills"
-    },
-    {
-      "id": "t3_1u1us8y",
-      "title": "Using Fable to get me a wife in 6 Months ✨️ (AMA)",
-      "date": "2026-06-10T07:03:41+00:00",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1u1us8y/using_fable_to_get_me_a_wife_in_6_months_ama/",
-      "snippet": "Yes you heard that right, I will be using fable to get me a partner in 6 months or less, i am on a max subscription and I don't even meet my hourly limits, with this in mind, and fables extraordinary capabilities, We will be looking to use fable to get me a wife in six months or less, LIVE, SAVE THI",
-      "source": "reddit-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeAI (top/day)",
-      "uniqueKey": "t3_1u1us8y|reddit-claudeai"
-    },
-    {
-      "id": "t3_1u1suxd",
-      "title": "I built a Claude Code skill from Naur's Programming as Theory Building",
-      "date": "2026-06-10T05:17:43+00:00",
-      "url": "https://www.reddit.com/r/claudeskills/comments/1u1suxd/i_built_a_claude_code_skill_from_naurs/",
-      "snippet": null,
-      "source": "reddit-claudeskills",
-      "sourceCategory": "community",
-      "sourceName": "r/claudeskills (top/day)",
-      "uniqueKey": "t3_1u1suxd|reddit-claudeskills"
     }
   ]
 }
