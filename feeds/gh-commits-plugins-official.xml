@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 16 Jun 2026 11:17:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 11:02:26 GMT</lastBuildDate>
+    <item>
+      <title>Add airwallex-agentos plugin (#2940)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ccdc03c56532519760df6363a6eef87324470fc8</link>
+      <guid isPermaLink="false">ccdc03c</guid>
+      <pubDate>Wed, 17 Jun 2026 01:57:24 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add rill plugin (#2858)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a82892129f820566f57b9a3606050fc74db2665a</link>
+      <guid isPermaLink="false">a828921</guid>
+      <pubDate>Wed, 17 Jun 2026 01:07:58 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Update frontend-design skill (#2540)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/d029127f7d29bdb8fd8902ac34dd7d5c8ba92b6e</link>
@@ -390,22 +406,6 @@
       <pubDate>Fri, 22 May 2026 15:48:25 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Updates ui5 and ui5-typescript-conversion to the renamed upstream repo UI5/plugins-coding-agents (formerly UI5/plugins-claude) and bumps both SHA pins to current upstream main.  Co-authored-by: Claude Opus 4.7 (1M context) &lt;noreply@anthropic.com&gt;</description>
-    </item>
-    <item>
-      <title>Fix MCP URL probe: connection failure was reported as PASS (#1922)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/cb8424c0997bd26effb85fc182ae8737ace3b06f</link>
-      <guid isPermaLink="false">cb8424c</guid>
-      <pubDate>Fri, 22 May 2026 14:57:14 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>curl writes &quot;000&quot; to -w &apos;%{http_code}&apos; on a connection failure AND exits nonzero. The previous fallback put the echo inside the command substitution — both wrote, the captured value was &quot;000000&quot;, and the case statement&apos;s 000) arm didn&apos;t match, so dead hosts fell through to PASS. Move the fallback as</description>
-    </item>
-    <item>
-      <title>Merge pull request #1953 from anthropics/add-plugin/mcp-tunnels</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/6cc16f4b16e80893695da60b8b82a236be9f9546</link>
-      <guid isPermaLink="false">6cc16f4</guid>
-      <pubDate>Thu, 21 May 2026 06:16:43 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Add mcp-tunnels plugin</description>
     </item>
   </channel>
 </rss>

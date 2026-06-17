@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-16T11:17:17.896Z",
+  "generated": "2026-06-17T11:02:26.647Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "ccdc03c",
+      "title": "Add airwallex-agentos plugin (#2940)",
+      "date": "2026-06-17T01:57:24Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/ccdc03c56532519760df6363a6eef87324470fc8",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "ccdc03c|gh-commits-plugins-official"
+    },
+    {
+      "id": "a828921",
+      "title": "Add rill plugin (#2858)",
+      "date": "2026-06-17T01:07:58Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/a82892129f820566f57b9a3606050fc74db2665a",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "a828921|gh-commits-plugins-official"
+    },
     {
       "id": "d029127",
       "title": "Update frontend-design skill (#2540)",
@@ -535,28 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "3449c10|gh-commits-plugins-official"
-    },
-    {
-      "id": "cb8424c",
-      "title": "Fix MCP URL probe: connection failure was reported as PASS (#1922)",
-      "date": "2026-05-22T14:57:14Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/cb8424c0997bd26effb85fc182ae8737ace3b06f",
-      "snippet": "curl writes \"000\" to -w '%{http_code}' on a connection failure AND exits nonzero. The previous fallback put the echo inside the command substitution — both wrote, the captured value was \"000000\", and the case statement's 000) arm didn't match, so dead hosts fell through to PASS. Move the fallback as",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "cb8424c|gh-commits-plugins-official"
-    },
-    {
-      "id": "6cc16f4",
-      "title": "Merge pull request #1953 from anthropics/add-plugin/mcp-tunnels",
-      "date": "2026-05-21T06:16:43Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/6cc16f4b16e80893695da60b8b82a236be9f9546",
-      "snippet": "Add mcp-tunnels plugin",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "6cc16f4|gh-commits-plugins-official"
     }
   ]
 }

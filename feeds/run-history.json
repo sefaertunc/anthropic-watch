@@ -1,6 +1,36 @@
 [
   {
     "version": "1.0",
+    "timestamp": "2026-06-17T11:02:26.686Z",
+    "durationMs": 50064,
+    "totalNewItems": 33,
+    "sourcesChecked": 39,
+    "sourcesWithErrors": 5,
+    "errors": [
+      {
+        "key": "reddit-claudecode",
+        "error": "HTTP 403 for https://www.reddit.com/r/ClaudeCode/top.rss?t=day&limit=15"
+      },
+      {
+        "key": "reddit-claudeai",
+        "error": "HTTP 429 for https://www.reddit.com/r/ClaudeAI/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claude",
+        "error": "HTTP 429 for https://www.reddit.com/r/claude/top.rss?t=day&limit=5"
+      },
+      {
+        "key": "reddit-claudeskills",
+        "error": "HTTP 429 for https://www.reddit.com/r/claudeskills/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claudeopus",
+        "error": "HTTP 429 for https://www.reddit.com/r/Claudeopus/top.rss?t=week&limit=10"
+      }
+    ]
+  },
+  {
+    "version": "1.0",
     "timestamp": "2026-06-16T11:17:17.975Z",
     "durationMs": 52717,
     "totalNewItems": 44,
