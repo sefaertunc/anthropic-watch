@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 18 Jun 2026 10:28:38 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 10:42:12 GMT</lastBuildDate>
+    <item>
+      <title>ci: pin validate-plugins + scan-plugins + bump-plugin-shas to self-healing CLI install (#3095)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/94258c5913c482462e8c242ef3060a011a4e186d</link>
+      <guid isPermaLink="false">94258c5</guid>
+      <pubDate>Fri, 19 Jun 2026 02:50:51 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* ci: bump validate-plugins action pin to self-healing CLI install  Bumps the pinned validate-plugins action SHA (f846a0bc -&gt; 5d75f99) to pick up two fixes already merged in claude-plugins-community:  1. Self-healing claude CLI install (community#233): the prior pin&apos;s install step    was a bare `npm</description>
+    </item>
+    <item>
+      <title>Merge pull request #3094 from anthropics/dickson/add-project-artifact-plugin</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/46a038ad2de18a8bb4699ef970d8677eb935ee0a</link>
+      <guid isPermaLink="false">46a038a</guid>
+      <pubDate>Fri, 19 Jun 2026 02:03:54 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Add project-artifact plugin</description>
+    </item>
+    <item>
+      <title>Trim project-artifact README to usage essentials</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/bd6d2a4054ce2af5c8445121cdeac1eaa5510b6e</link>
+      <guid isPermaLink="false">bd6d2a4</guid>
+      <pubDate>Fri, 19 Jun 2026 00:46:00 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add project-artifact plugin: living project status pages published as artifacts</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/3c00b46a83c3e64f95d355655ff987feb2906496</link>
+      <guid isPermaLink="false">3c00b46</guid>
+      <pubDate>Fri, 19 Jun 2026 00:24:35 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Add logrocket plugin (#3020)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/518259c1c3449a4f396505d4840c2163420bfb6c</link>
@@ -374,38 +406,6 @@
       <pubDate>Wed, 27 May 2026 21:50:51 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>The agentic reviewer is silently no-op on Windows today. SessionStart bootstrap (ensure_agent_sdk.py) short-circuits with SKIP_WIN32 because the consumer glob in llm.py only matches POSIX venv layout (lib/pythonX.Y/site-packages). On Windows, venvs use Lib/site-packages (capital L, no pythonX.Y subd</description>
-    </item>
-    <item>
-      <title>Merge pull request #2054 from anthropics/fix-2043-windows-posix-path</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e77ff913adf42724268d1fa22f8f241b51ae7d61</link>
-      <guid isPermaLink="false">e77ff91</guid>
-      <pubDate>Wed, 27 May 2026 21:49:38 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: convert POSIX script paths to Windows form on Git Bash</description>
-    </item>
-    <item>
-      <title>Convert POSIX script paths to Windows form before exec on Git Bash</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/390c2fe785f6d67e1279dbcb7f6b38f852bf7a87</link>
-      <guid isPermaLink="false">390c2fe</guid>
-      <pubDate>Wed, 27 May 2026 21:04:09 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Fixes #2043. On Git Bash for Windows, Claude Code hands script paths to the shim in POSIX form (`/c/Users/...`). We exec a Windows `python.exe` (the `python3` Microsoft Store stub fails the probe), and Windows Python interprets the leading `/` as the root of the current drive — `/c/...` becomes `C:\</description>
-    </item>
-    <item>
-      <title>ci: validate Apache 2.0 LICENSE file exists in every plugin (#2028)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/4c4b3009e067493def95aabd0ce34a59d45eb18d</link>
-      <guid isPermaLink="false">4c4b300</guid>
-      <pubDate>Wed, 27 May 2026 16:25:23 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
-    </item>
-    <item>
-      <title>Bump carta-* SHA pins (3 plugins) to upstream HEAD (#2052)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/fd06e9957e6b178fd1e0979c2ac37f68fa7bfd47</link>
-      <guid isPermaLink="false">fd06e99</guid>
-      <pubDate>Wed, 27 May 2026 16:23:47 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
     </item>
   </channel>
 </rss>

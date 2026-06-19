@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 18 Jun 2026 10:28:38 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 10:42:12 GMT</lastBuildDate>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/c487902a53fc25aea01ddfdf2bf002e82d0cad45</link>
+      <guid isPermaLink="false">c487902</guid>
+      <pubDate>Fri, 19 Jun 2026 01:20:44 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Fix lock-closed-issues workflow: use search API instead of offset pagination (#69470)</title>
+      <link>https://github.com/anthropics/claude-code/commit/baf38ddaaa030ce9a7a63acde82ca95e90cd95f6</link>
+      <guid isPermaLink="false">baf38dd</guid>
+      <pubDate>Fri, 19 Jun 2026 00:15:49 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>The workflow has been failing daily since 2026-04-27 with HTTP 422 &quot;Pagination with the page parameter is not supported for large datasets&quot; at page=100. The repo now has ~58k closed issues and the script was paging past ~10k already-locked ones every run before reaching any candidates.  Replace list</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/4fa369b5b38811dbef7274433131b11d2276bc37</link>
+      <guid isPermaLink="false">4fa369b</guid>
+      <pubDate>Thu, 18 Jun 2026 22:03:35 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>Update frontend-design skill, bump plugin to 1.1.0 (#69226)</title>
       <link>https://github.com/anthropics/claude-code/commit/423563cfe38c90fdf3b428cff0ee7f51cfec3ca7</link>
@@ -380,30 +404,6 @@
       <link>https://github.com/anthropics/claude-code/commit/d61bfb5b562eea5091b11ad1858a9ae429b6bd23</link>
       <guid isPermaLink="false">d61bfb5</guid>
       <pubDate>Thu, 14 May 2026 22:55:04 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md</title>
-      <link>https://github.com/anthropics/claude-code/commit/c5712671c87f8ec283ecf1c5024a4952ba5bfbcd</link>
-      <guid isPermaLink="false">c571267</guid>
-      <pubDate>Wed, 13 May 2026 23:19:09 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md</title>
-      <link>https://github.com/anthropics/claude-code/commit/6b070c31bc625dfd70d88352e7cfbdc505f55c6d</link>
-      <guid isPermaLink="false">6b070c3</guid>
-      <pubDate>Tue, 12 May 2026 21:09:38 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md</title>
-      <link>https://github.com/anthropics/claude-code/commit/fdfbc06c7a6d9ace49c55b3761b1be05d276da6d</link>
-      <guid isPermaLink="false">fdfbc06</guid>
-      <pubDate>Mon, 11 May 2026 18:43:36 GMT</pubDate>
       <category>gh-commits-claude-code</category>
       <description/>
     </item>

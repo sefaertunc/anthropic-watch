@@ -5,9 +5,53 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-18T10:28:38.260Z",
+  "generated": "2026-06-19T10:42:12.800Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "94258c5",
+      "title": "ci: pin validate-plugins + scan-plugins + bump-plugin-shas to self-healing CLI install (#3095)",
+      "date": "2026-06-19T02:50:51Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/94258c5913c482462e8c242ef3060a011a4e186d",
+      "snippet": "* ci: bump validate-plugins action pin to self-healing CLI install  Bumps the pinned validate-plugins action SHA (f846a0bc -> 5d75f99) to pick up two fixes already merged in claude-plugins-community:  1. Self-healing claude CLI install (community#233): the prior pin's install step    was a bare `npm",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "94258c5|gh-commits-plugins-official"
+    },
+    {
+      "id": "46a038a",
+      "title": "Merge pull request #3094 from anthropics/dickson/add-project-artifact-plugin",
+      "date": "2026-06-19T02:03:54Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/46a038ad2de18a8bb4699ef970d8677eb935ee0a",
+      "snippet": "Add project-artifact plugin",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "46a038a|gh-commits-plugins-official"
+    },
+    {
+      "id": "bd6d2a4",
+      "title": "Trim project-artifact README to usage essentials",
+      "date": "2026-06-19T00:46:00Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/bd6d2a4054ce2af5c8445121cdeac1eaa5510b6e",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "bd6d2a4|gh-commits-plugins-official"
+    },
+    {
+      "id": "3c00b46",
+      "title": "Add project-artifact plugin: living project status pages published as artifacts",
+      "date": "2026-06-19T00:24:35Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/3c00b46a83c3e64f95d355655ff987feb2906496",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "3c00b46|gh-commits-plugins-official"
+    },
     {
       "id": "518259c",
       "title": "Add logrocket plugin (#3020)",
@@ -513,50 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "4decd2e|gh-commits-plugins-official"
-    },
-    {
-      "id": "e77ff91",
-      "title": "Merge pull request #2054 from anthropics/fix-2043-windows-posix-path",
-      "date": "2026-05-27T21:49:38Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/e77ff913adf42724268d1fa22f8f241b51ae7d61",
-      "snippet": "security-guidance: convert POSIX script paths to Windows form on Git Bash",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "e77ff91|gh-commits-plugins-official"
-    },
-    {
-      "id": "390c2fe",
-      "title": "Convert POSIX script paths to Windows form before exec on Git Bash",
-      "date": "2026-05-27T21:04:09Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/390c2fe785f6d67e1279dbcb7f6b38f852bf7a87",
-      "snippet": "Fixes #2043. On Git Bash for Windows, Claude Code hands script paths to the shim in POSIX form (`/c/Users/...`). We exec a Windows `python.exe` (the `python3` Microsoft Store stub fails the probe), and Windows Python interprets the leading `/` as the root of the current drive — `/c/...` becomes `C:\\",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "390c2fe|gh-commits-plugins-official"
-    },
-    {
-      "id": "4c4b300",
-      "title": "ci: validate Apache 2.0 LICENSE file exists in every plugin (#2028)",
-      "date": "2026-05-27T16:25:23Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/4c4b3009e067493def95aabd0ce34a59d45eb18d",
-      "snippet": "Co-authored-by: Claude <noreply@anthropic.com>",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "4c4b300|gh-commits-plugins-official"
-    },
-    {
-      "id": "fd06e99",
-      "title": "Bump carta-* SHA pins (3 plugins) to upstream HEAD (#2052)",
-      "date": "2026-05-27T16:23:47Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/fd06e9957e6b178fd1e0979c2ac37f68fa7bfd47",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "fd06e99|gh-commits-plugins-official"
     }
   ]
 }

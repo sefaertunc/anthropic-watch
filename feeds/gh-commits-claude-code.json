@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-18T10:28:38.262Z",
+  "generated": "2026-06-19T10:42:12.802Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "c487902",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-06-19T01:20:44Z",
+      "url": "https://github.com/anthropics/claude-code/commit/c487902a53fc25aea01ddfdf2bf002e82d0cad45",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "c487902|gh-commits-claude-code"
+    },
+    {
+      "id": "baf38dd",
+      "title": "Fix lock-closed-issues workflow: use search API instead of offset pagination (#69470)",
+      "date": "2026-06-19T00:15:49Z",
+      "url": "https://github.com/anthropics/claude-code/commit/baf38ddaaa030ce9a7a63acde82ca95e90cd95f6",
+      "snippet": "The workflow has been failing daily since 2026-04-27 with HTTP 422 \"Pagination with the page parameter is not supported for large datasets\" at page=100. The repo now has ~58k closed issues and the script was paging past ~10k already-locked ones every run before reaching any candidates.  Replace list",
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "baf38dd|gh-commits-claude-code"
+    },
+    {
+      "id": "4fa369b",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-06-18T22:03:35Z",
+      "url": "https://github.com/anthropics/claude-code/commit/4fa369b5b38811dbef7274433131b11d2276bc37",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "4fa369b|gh-commits-claude-code"
+    },
     {
       "id": "423563c",
       "title": "Update frontend-design skill, bump plugin to 1.1.0 (#69226)",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
       "uniqueKey": "d61bfb5|gh-commits-claude-code"
-    },
-    {
-      "id": "c571267",
-      "title": "chore: Update CHANGELOG.md",
-      "date": "2026-05-13T23:19:09Z",
-      "url": "https://github.com/anthropics/claude-code/commit/c5712671c87f8ec283ecf1c5024a4952ba5bfbcd",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "c571267|gh-commits-claude-code"
-    },
-    {
-      "id": "6b070c3",
-      "title": "chore: Update CHANGELOG.md",
-      "date": "2026-05-12T21:09:38Z",
-      "url": "https://github.com/anthropics/claude-code/commit/6b070c31bc625dfd70d88352e7cfbdc505f55c6d",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "6b070c3|gh-commits-claude-code"
-    },
-    {
-      "id": "fdfbc06",
-      "title": "chore: Update CHANGELOG.md",
-      "date": "2026-05-11T18:43:36Z",
-      "url": "https://github.com/anthropics/claude-code/commit/fdfbc06c7a6d9ace49c55b3761b1be05d276da6d",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "fdfbc06|gh-commits-claude-code"
     }
   ]
 }

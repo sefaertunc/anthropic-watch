@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 18 Jun 2026 10:28:38 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 10:42:12 GMT</lastBuildDate>
+    <item>
+      <title>docs(security): use the monitored affaan@ecc.tools contact in SECURITY.md</title>
+      <link>https://github.com/affaan-m/ECC/commit/34faa39bd3cd496a0aece0245f2b7e38b7923abc</link>
+      <guid isPermaLink="false">34faa39</guid>
+      <pubDate>Fri, 19 Jun 2026 02:16:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(ci+security): unblock coverage gate + fix dead security contact</title>
+      <link>https://github.com/affaan-m/ECC/commit/e8e5793bdf1f07d95860e731cdd3633ee3cdec0a</link>
+      <guid isPermaLink="false">e8e5793</guid>
+      <pubDate>Fri, 19 Jun 2026 00:46:23 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>- coverage: branch threshold 80 -&gt; 79 (current is 79.52%; lines/functions/   statements remain 88/94/88). The 80% branch gate has been red on every main   run; this unblocks CI while keeping a meaningful floor just below current. - SECURITY.md: remove the bouncing security@ecc.tools mailbox (flagged</description>
+    </item>
+    <item>
+      <title>style: apply repo formatter to the security-fix files (no behavior change)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ed251f958ab24682d3af9e8edbe5357065086655</link>
+      <guid isPermaLink="false">ed251f9</guid>
+      <pubDate>Fri, 19 Jun 2026 00:03:24 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(security): gateguard classifier bypasses (GHSA-4v57) + Windows CI + claw ReDoS</title>
+      <link>https://github.com/affaan-m/ECC/commit/bd9083ca1e9f6d9c243531abef663dd2217553c7</link>
+      <guid isPermaLink="false">bd9083c</guid>
+      <pubDate>Fri, 19 Jun 2026 00:02:30 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>- gateguard (GHSA-4v57-ph3x-gf55): add a quote-aware detection pass that   dequotes command words and splits on UNQUOTED separators incl. newlines, so   newline-separated commands, quoted command words (&apos;rm&apos;/&quot;rm&quot;), quoted   find -exec, and sh/bash -c wrappers are all classified destructive. Additive</description>
+    </item>
+    <item>
+      <title>fix(security): contain install-state file ops to trusted root — RCE fix (GHSA-hfpv-w6mp-5g95)</title>
+      <link>https://github.com/affaan-m/ECC/commit/5994d3fac158b4c290cb0918004b82e2f155f1c7</link>
+      <guid isPermaLink="false">5994d3f</guid>
+      <pubDate>Thu, 18 Jun 2026 23:54:22 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Critical: project-local install-state (e.g. a cloned repo&apos;s .cursor/ecc-install-state.json) is attacker-controllable, and repair/uninstall/auto-update replayed its operations with destinationPath validated only for non-emptiness — confirmed arbitrary file write/delete and chained RCE (write ~/.bashr</description>
+    </item>
+    <item>
+      <title>fix(security): discord bot SSRF/log-injection/DoS hardening + bump markdown-it/js-yaml</title>
+      <link>https://github.com/affaan-m/ECC/commit/5e4f5533d73cc2553f393686a0f81fd194f2f45d</link>
+      <guid isPermaLink="false">5e4f553</guid>
+      <pubDate>Thu, 18 Jun 2026 23:50:15 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>- ecc-bot.mjs: validate interaction id (snowflake) and token before building the   callback fetch URL (clears CodeQL js/request-forgery #239/#240/#241); clamp the   remote heartbeat_interval to [1s,10m] (js/resource-exhaustion #242); strip CR/LF   from log args (js/log-injection #246). - Bump transi</description>
+    </item>
+    <item>
+      <title>fix(security): close XSS in control-pane board controls</title>
+      <link>https://github.com/affaan-m/ECC/commit/a03d63cba0896a834405ebf4becbf6646b47009e</link>
+      <guid isPermaLink="false">a03d63c</guid>
+      <pubDate>Thu, 18 Jun 2026 22:25:28 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The interactive claim/move buttons concatenated work-item ids into inline onclick JS with only single-quote escaping — a crafted id (ids/titles come from GitHub sync and manual upserts, not a strict allowlist) could break out and inject script, even on the localhost-only server.  Fix: emit the id/la</description>
+    </item>
+    <item>
+      <title>feat(control-pane): interactive JIT board — claim/move cards from the webapp</title>
+      <link>https://github.com/affaan-m/ECC/commit/607ab02b1f724dddb61e5f183fe02dc42a99c55a</link>
+      <guid isPermaLink="false">607ab02</guid>
+      <pubDate>Thu, 18 Jun 2026 22:16:46 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The board was read-only; you can now drive the agent+human JIT workflow from the local control pane.  - New shared scripts/lib/control-pane/work-item-mutations.js (claimWorkItem,   moveWorkItem) so the CLI and server never diverge; work-items.js claim now   delegates to it. - server.js: gated POST /</description>
+    </item>
+    <item>
+      <title>feat(work-items): add &apos;claim&apos; command for JIT work pickup</title>
+      <link>https://github.com/affaan-m/ECC/commit/7fd4ba95ae57ea3f29ab06109736208b74f0a54b</link>
+      <guid isPermaLink="false">7fd4ba9</guid>
+      <pubDate>Thu, 18 Jun 2026 21:07:24 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Closes the agent+human JIT loop the control-pane board surfaces: the board shows the unassigned (needs-owner) queue; &apos;claim&apos; lets an agent or human pick up work.    node scripts/work-items.js claim [&lt;id&gt;] --owner &lt;name&gt; [--as agent|human]  - No id: claims the highest-priority unassigned open item. -</description>
+    </item>
+    <item>
+      <title>feat(control-pane): add agent+human JIT assignment view to the work-items board</title>
+      <link>https://github.com/affaan-m/ECC/commit/1efc399ab4840b92c431bb62dc859c6b212f60c9</link>
+      <guid isPermaLink="false">1efc399</guid>
+      <pubDate>Thu, 18 Jun 2026 20:59:30 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The kanban board tracked lanes (ready/running/blocked/done) but not WHO owns each card, which is the missing piece for agent+human just-in-time team workflows.  - state.js: classifyAssignee() labels each work item agent | human | unassigned   (session-linked or agent-pattern owners = agent; named ow</description>
+    </item>
     <item>
       <title>docs: update Atlas Cloud sponsor link</title>
       <link>https://github.com/affaan-m/ECC/commit/ceca28852e5b31edbbf66ebccc8fd163dd14208e</link>
@@ -326,86 +406,6 @@
       <pubDate>Sun, 07 Jun 2026 05:27:00 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* feat: auto-isolate ECC memory data for Cursor via ECC_AGENT_DATA_HOME  Add ECC_AGENT_DATA_HOME (defaults to ~/.claude) with Cursor-aware resolution, sessionStart env injection, install scaffolds, and hook bootstrap so memory hooks do not collide with Claude Code when both harnesses are used.  Clos</description>
-    </item>
-    <item>
-      <title>fix(docs): sync marketplace add URL across translated READMEs (#2050) (#2068)</title>
-      <link>https://github.com/affaan-m/ECC/commit/81c915051241eb8a9b36879966d3cc6ecb941b16</link>
-      <guid isPermaLink="false">81c9150</guid>
-      <pubDate>Sun, 07 Jun 2026 05:26:58 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>PR #2050 updated the root README.zh-CN.md install commands after the everything-claude-code → ECC rename, but the same stale marketplace URL remained in nine docs/&lt;locale&gt;/README.md copies. Align those quick-start and self-hosted install blocks so /plugin install ecc@ecc resolves the ecc marketplace</description>
-    </item>
-    <item>
-      <title>feat: MCP inventory (ecc.mcp.v1) — unified cross-harness MCP config view (#2146)</title>
-      <link>https://github.com/affaan-m/ECC/commit/7113b5bf63694b716f8b2413c5919824a82fc095</link>
-      <guid isPermaLink="false">7113b5b</guid>
-      <pubDate>Fri, 05 Jun 2026 19:55:17 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat: add MCP inventory (ecc.mcp.v1) across harnesses  Read-only MCP-gateway groundwork: discover MCP server configs across every installed harness, normalize to a canonical ecc.mcp.v1 inventory, redact secrets, and report which servers are configured in 2+ harnesses (the configure-N-times pain). </description>
-    </item>
-    <item>
-      <title>feat: extend session-adapter layer with codex-worktree + opencode adapters (#2145)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ab5e17fea9bb63e863b0b9a42d774d0b5a7d8182</link>
-      <guid isPermaLink="false">ab5e17f</guid>
-      <pubDate>Fri, 05 Jun 2026 19:55:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat: add codex-worktree session adapter  Adds the third session adapter (after dmux-tmux and claude-history), normalizing Codex rollout sessions into the harness-neutral ecc.session.v1 snapshot. Reads ~/.codex/sessions rollout JSONL, derives objective (skipping the AGENTS.md preamble + leading me</description>
-    </item>
-    <item>
-      <title>feat: add dynamic workflow team orchestration surface</title>
-      <link>https://github.com/affaan-m/ECC/commit/bc8e12bb80c904a5a9864797ef1fd1212aa82f3d</link>
-      <guid isPermaLink="false">bc8e12b</guid>
-      <pubDate>Thu, 04 Jun 2026 13:45:13 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds dynamic workflow/team orchestration skills, the content pack, and control-pane work-item/Kanban state DB support. Includes reviewer hardening for state-db CLI validation, optional state DB failure handling, and mergeStateStatus projection.</description>
-    </item>
-    <item>
-      <title>feat: add ECC2 local control pane (#2131)</title>
-      <link>https://github.com/affaan-m/ECC/commit/0f84c0e2796703fbda87d577b2636351418c7442</link>
-      <guid isPermaLink="false">0f84c0e</guid>
-      <pubDate>Wed, 03 Jun 2026 13:54:30 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat: add ECC2 local control pane  * fix: refresh control pane package locks  * test: harden control pane coverage  * test: allow portable control pane shutdown  * test: retry local control pane fetches  * fix: harden control pane error handling  * fix: wrap control pane metadata</description>
-    </item>
-    <item>
-      <title>docs: define ECC platform value loop (#2119)</title>
-      <link>https://github.com/affaan-m/ECC/commit/99baa8250096f2d295583572399a5c9aba2ce312</link>
-      <guid isPermaLink="false">99baa82</guid>
-      <pubDate>Tue, 02 Jun 2026 11:51:02 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: record rc1 live package readbacks (#2117)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d86fadad0d68ff1d5d5a3addcadd9e308cdd7188</link>
-      <guid isPermaLink="false">d86fada</guid>
-      <pubDate>Tue, 02 Jun 2026 11:32:59 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add generating-python-installer skill (Nuitka commercial packaging)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d1c454ac44afeb9effe6aeabcc7297be948b7fe1</link>
-      <guid isPermaLink="false">d1c454a</guid>
-      <pubDate>Tue, 02 Jun 2026 10:29:55 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: surface warn-only PreToolUse hooks (#2084)</title>
-      <link>https://github.com/affaan-m/ECC/commit/64cd1ba248e77e377e76f70fc4e6434bfdddd511</link>
-      <guid isPermaLink="false">64cd1ba</guid>
-      <pubDate>Thu, 28 May 2026 11:45:46 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add React language track with agents, skills, rules, and commands (#2024)</title>
-      <link>https://github.com/affaan-m/ECC/commit/04c68e483af8c2cc2717ad4b8013c3673124836c</link>
-      <guid isPermaLink="false">04c68e4</guid>
-      <pubDate>Thu, 28 May 2026 11:32:52 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat(rules): add rules/react/ track  Five rule files mirroring per-language convention (coding-style, hooks, patterns, security, testing). Each has `paths:` glob frontmatter for auto-activation when editing matching files.  - coding-style.md: file extensions, naming, JSX, RSC boundary - hooks.md: </description>
     </item>
   </channel>
 </rss>

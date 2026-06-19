@@ -5,9 +5,119 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-18T10:28:38.264Z",
+  "generated": "2026-06-19T10:42:12.804Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "34faa39",
+      "title": "docs(security): use the monitored affaan@ecc.tools contact in SECURITY.md",
+      "date": "2026-06-19T02:16:06Z",
+      "url": "https://github.com/affaan-m/ECC/commit/34faa39bd3cd496a0aece0245f2b7e38b7923abc",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "34faa39|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e8e5793",
+      "title": "fix(ci+security): unblock coverage gate + fix dead security contact",
+      "date": "2026-06-19T00:46:23Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e8e5793bdf1f07d95860e731cdd3633ee3cdec0a",
+      "snippet": "- coverage: branch threshold 80 -> 79 (current is 79.52%; lines/functions/   statements remain 88/94/88). The 80% branch gate has been red on every main   run; this unblocks CI while keeping a meaningful floor just below current. - SECURITY.md: remove the bouncing security@ecc.tools mailbox (flagged",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e8e5793|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "ed251f9",
+      "title": "style: apply repo formatter to the security-fix files (no behavior change)",
+      "date": "2026-06-19T00:03:24Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ed251f958ab24682d3af9e8edbe5357065086655",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ed251f9|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "bd9083c",
+      "title": "fix(security): gateguard classifier bypasses (GHSA-4v57) + Windows CI + claw ReDoS",
+      "date": "2026-06-19T00:02:30Z",
+      "url": "https://github.com/affaan-m/ECC/commit/bd9083ca1e9f6d9c243531abef663dd2217553c7",
+      "snippet": "- gateguard (GHSA-4v57-ph3x-gf55): add a quote-aware detection pass that   dequotes command words and splits on UNQUOTED separators incl. newlines, so   newline-separated commands, quoted command words ('rm'/\"rm\"), quoted   find -exec, and sh/bash -c wrappers are all classified destructive. Additive",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "bd9083c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5994d3f",
+      "title": "fix(security): contain install-state file ops to trusted root — RCE fix (GHSA-hfpv-w6mp-5g95)",
+      "date": "2026-06-18T23:54:22Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5994d3fac158b4c290cb0918004b82e2f155f1c7",
+      "snippet": "Critical: project-local install-state (e.g. a cloned repo's .cursor/ecc-install-state.json) is attacker-controllable, and repair/uninstall/auto-update replayed its operations with destinationPath validated only for non-emptiness — confirmed arbitrary file write/delete and chained RCE (write ~/.bashr",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5994d3f|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5e4f553",
+      "title": "fix(security): discord bot SSRF/log-injection/DoS hardening + bump markdown-it/js-yaml",
+      "date": "2026-06-18T23:50:15Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5e4f5533d73cc2553f393686a0f81fd194f2f45d",
+      "snippet": "- ecc-bot.mjs: validate interaction id (snowflake) and token before building the   callback fetch URL (clears CodeQL js/request-forgery #239/#240/#241); clamp the   remote heartbeat_interval to [1s,10m] (js/resource-exhaustion #242); strip CR/LF   from log args (js/log-injection #246). - Bump transi",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5e4f553|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a03d63c",
+      "title": "fix(security): close XSS in control-pane board controls",
+      "date": "2026-06-18T22:25:28Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a03d63cba0896a834405ebf4becbf6646b47009e",
+      "snippet": "The interactive claim/move buttons concatenated work-item ids into inline onclick JS with only single-quote escaping — a crafted id (ids/titles come from GitHub sync and manual upserts, not a strict allowlist) could break out and inject script, even on the localhost-only server.  Fix: emit the id/la",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a03d63c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "607ab02",
+      "title": "feat(control-pane): interactive JIT board — claim/move cards from the webapp",
+      "date": "2026-06-18T22:16:46Z",
+      "url": "https://github.com/affaan-m/ECC/commit/607ab02b1f724dddb61e5f183fe02dc42a99c55a",
+      "snippet": "The board was read-only; you can now drive the agent+human JIT workflow from the local control pane.  - New shared scripts/lib/control-pane/work-item-mutations.js (claimWorkItem,   moveWorkItem) so the CLI and server never diverge; work-items.js claim now   delegates to it. - server.js: gated POST /",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "607ab02|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "7fd4ba9",
+      "title": "feat(work-items): add 'claim' command for JIT work pickup",
+      "date": "2026-06-18T21:07:24Z",
+      "url": "https://github.com/affaan-m/ECC/commit/7fd4ba95ae57ea3f29ab06109736208b74f0a54b",
+      "snippet": "Closes the agent+human JIT loop the control-pane board surfaces: the board shows the unassigned (needs-owner) queue; 'claim' lets an agent or human pick up work.    node scripts/work-items.js claim [<id>] --owner <name> [--as agent|human]  - No id: claims the highest-priority unassigned open item. -",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "7fd4ba9|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "1efc399",
+      "title": "feat(control-pane): add agent+human JIT assignment view to the work-items board",
+      "date": "2026-06-18T20:59:30Z",
+      "url": "https://github.com/affaan-m/ECC/commit/1efc399ab4840b92c431bb62dc859c6b212f60c9",
+      "snippet": "The kanban board tracked lanes (ready/running/blocked/done) but not WHO owns each card, which is the missing piece for agent+human just-in-time team workflows.  - state.js: classifyAssignee() labels each work item agent | human | unassigned   (session-linked or agent-pattern owners = agent; named ow",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "1efc399|gh-commits-everything-claude-code"
+    },
     {
       "id": "ceca288",
       "title": "docs: update Atlas Cloud sponsor link",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "6a40469|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "81c9150",
-      "title": "fix(docs): sync marketplace add URL across translated READMEs (#2050) (#2068)",
-      "date": "2026-06-07T05:26:58Z",
-      "url": "https://github.com/affaan-m/ECC/commit/81c915051241eb8a9b36879966d3cc6ecb941b16",
-      "snippet": "PR #2050 updated the root README.zh-CN.md install commands after the everything-claude-code → ECC rename, but the same stale marketplace URL remained in nine docs/<locale>/README.md copies. Align those quick-start and self-hosted install blocks so /plugin install ecc@ecc resolves the ecc marketplace",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "81c9150|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7113b5b",
-      "title": "feat: MCP inventory (ecc.mcp.v1) — unified cross-harness MCP config view (#2146)",
-      "date": "2026-06-05T19:55:17Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7113b5bf63694b716f8b2413c5919824a82fc095",
-      "snippet": "* feat: add MCP inventory (ecc.mcp.v1) across harnesses  Read-only MCP-gateway groundwork: discover MCP server configs across every installed harness, normalize to a canonical ecc.mcp.v1 inventory, redact secrets, and report which servers are configured in 2+ harnesses (the configure-N-times pain). ",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7113b5b|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ab5e17f",
-      "title": "feat: extend session-adapter layer with codex-worktree + opencode adapters (#2145)",
-      "date": "2026-06-05T19:55:00Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ab5e17fea9bb63e863b0b9a42d774d0b5a7d8182",
-      "snippet": "* feat: add codex-worktree session adapter  Adds the third session adapter (after dmux-tmux and claude-history), normalizing Codex rollout sessions into the harness-neutral ecc.session.v1 snapshot. Reads ~/.codex/sessions rollout JSONL, derives objective (skipping the AGENTS.md preamble + leading me",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ab5e17f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "bc8e12b",
-      "title": "feat: add dynamic workflow team orchestration surface",
-      "date": "2026-06-04T13:45:13Z",
-      "url": "https://github.com/affaan-m/ECC/commit/bc8e12bb80c904a5a9864797ef1fd1212aa82f3d",
-      "snippet": "Adds dynamic workflow/team orchestration skills, the content pack, and control-pane work-item/Kanban state DB support. Includes reviewer hardening for state-db CLI validation, optional state DB failure handling, and mergeStateStatus projection.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "bc8e12b|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "0f84c0e",
-      "title": "feat: add ECC2 local control pane (#2131)",
-      "date": "2026-06-03T13:54:30Z",
-      "url": "https://github.com/affaan-m/ECC/commit/0f84c0e2796703fbda87d577b2636351418c7442",
-      "snippet": "* feat: add ECC2 local control pane  * fix: refresh control pane package locks  * test: harden control pane coverage  * test: allow portable control pane shutdown  * test: retry local control pane fetches  * fix: harden control pane error handling  * fix: wrap control pane metadata",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "0f84c0e|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "99baa82",
-      "title": "docs: define ECC platform value loop (#2119)",
-      "date": "2026-06-02T11:51:02Z",
-      "url": "https://github.com/affaan-m/ECC/commit/99baa8250096f2d295583572399a5c9aba2ce312",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "99baa82|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d86fada",
-      "title": "docs: record rc1 live package readbacks (#2117)",
-      "date": "2026-06-02T11:32:59Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d86fadad0d68ff1d5d5a3addcadd9e308cdd7188",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d86fada|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d1c454a",
-      "title": "Add generating-python-installer skill (Nuitka commercial packaging)",
-      "date": "2026-06-02T10:29:55Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d1c454ac44afeb9effe6aeabcc7297be948b7fe1",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d1c454a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "64cd1ba",
-      "title": "fix: surface warn-only PreToolUse hooks (#2084)",
-      "date": "2026-05-28T11:45:46Z",
-      "url": "https://github.com/affaan-m/ECC/commit/64cd1ba248e77e377e76f70fc4e6434bfdddd511",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "64cd1ba|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "04c68e4",
-      "title": "Add React language track with agents, skills, rules, and commands (#2024)",
-      "date": "2026-05-28T11:32:52Z",
-      "url": "https://github.com/affaan-m/ECC/commit/04c68e483af8c2cc2717ad4b8013c3673124836c",
-      "snippet": "* feat(rules): add rules/react/ track  Five rule files mirroring per-language convention (coding-style, hooks, patterns, security, testing). Each has `paths:` glob frontmatter for auto-activation when editing matching files.  - coding-style.md: file extensions, naming, JSX, RSC boundary - hooks.md: ",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "04c68e4|gh-commits-everything-claude-code"
     }
   ]
 }
