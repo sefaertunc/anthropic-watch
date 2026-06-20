@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-19T10:42:12.800Z",
+  "generated": "2026-06-20T09:20:28.450Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "81500db",
+      "title": "chore(ci): re-pin validate-plugins + scan-plugins + bump-plugin-shas to community 426e469f (#3132)",
+      "date": "2026-06-19T19:34:56Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/81500db67345a66d99f8330eafff911553475217",
+      "snippet": "* chore(bump-plugin-shas): re-pin to community 426e469f (subdir-existence guard #267)  Picks up anthropics/claude-plugins-community#267 — guards subdir existence before manifest synthesis, so a strict:false external whose source.path subdir vanished at the new SHA is a clean \"subdir not found\" skip ",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "81500db|gh-commits-plugins-official"
+    },
     {
       "id": "94258c5",
       "title": "ci: pin validate-plugins + scan-plugins + bump-plugin-shas to self-healing CLI install (#3095)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "c112447|gh-commits-plugins-official"
-    },
-    {
-      "id": "4decd2e",
-      "title": "Enable agentic commit reviewer on Windows",
-      "date": "2026-05-27T21:50:51Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/4decd2e3b26f6c17e458fcdcf2dd60aef8566f3e",
-      "snippet": "The agentic reviewer is silently no-op on Windows today. SessionStart bootstrap (ensure_agent_sdk.py) short-circuits with SKIP_WIN32 because the consumer glob in llm.py only matches POSIX venv layout (lib/pythonX.Y/site-packages). On Windows, venvs use Lib/site-packages (capital L, no pythonX.Y subd",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "4decd2e|gh-commits-plugins-official"
     }
   ]
 }

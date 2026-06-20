@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 19 Jun 2026 10:42:12 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 09:20:28 GMT</lastBuildDate>
+    <item>
+      <title>chore(ci): re-pin validate-plugins + scan-plugins + bump-plugin-shas to community 426e469f (#3132)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/81500db67345a66d99f8330eafff911553475217</link>
+      <guid isPermaLink="false">81500db</guid>
+      <pubDate>Fri, 19 Jun 2026 19:34:56 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* chore(bump-plugin-shas): re-pin to community 426e469f (subdir-existence guard #267)  Picks up anthropics/claude-plugins-community#267 — guards subdir existence before manifest synthesis, so a strict:false external whose source.path subdir vanished at the new SHA is a clean &quot;subdir not found&quot; skip </description>
+    </item>
     <item>
       <title>ci: pin validate-plugins + scan-plugins + bump-plugin-shas to self-healing CLI install (#3095)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/94258c5913c482462e8c242ef3060a011a4e186d</link>
@@ -398,14 +406,6 @@
       <pubDate>Wed, 27 May 2026 22:07:33 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>The first round of this PR removed SKIP_WIN32, fixed venv_py to use Scripts/python.exe, and added Lib/site-packages to the consumer glob — all necessary. Windows verification (Win11 ARM64, Py 3.13, Git Bash) showed two more blockers, both addressed here.  1. Pip dependency resolver picks unbuildable</description>
-    </item>
-    <item>
-      <title>Enable agentic commit reviewer on Windows</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/4decd2e3b26f6c17e458fcdcf2dd60aef8566f3e</link>
-      <guid isPermaLink="false">4decd2e</guid>
-      <pubDate>Wed, 27 May 2026 21:50:51 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>The agentic reviewer is silently no-op on Windows today. SessionStart bootstrap (ensure_agent_sdk.py) short-circuits with SKIP_WIN32 because the consumer glob in llm.py only matches POSIX venv layout (lib/pythonX.Y/site-packages). On Windows, venvs use Lib/site-packages (capital L, no pythonX.Y subd</description>
     </item>
   </channel>
 </rss>
