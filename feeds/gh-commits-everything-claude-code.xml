@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 20 Jun 2026 09:20:28 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 09:54:12 GMT</lastBuildDate>
+    <item>
+      <title>feat(layer4): live messages-table wiring for proximity triggers</title>
+      <link>https://github.com/affaan-m/ECC/commit/71d22d0a77b7e0684f4e51cba03749b788993cdb</link>
+      <guid isPermaLink="false">71d22d0</guid>
+      <pubDate>Sun, 21 Jun 2026 00:49:17 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Finishes the steer/transmit loop — advisories now reach the agents&apos; sessions.  - message-sink.js: createEccMessageSink() delivers via the canonical writer   &apos;ecc-tui messages send&apos; (maps steer/hold -&gt; conflict kind, transmit -&gt; query),   resolving the binary from override/env/built target/PATH. Inje</description>
+    </item>
+    <item>
+      <title>feat(layer4): line-range channel + trigger firing</title>
+      <link>https://github.com/affaan-m/ECC/commit/bd1be0c1ce38ed3dda065c3a21574b58445c54f9</link>
+      <guid isPermaLink="false">bd1be0c</guid>
+      <pubDate>Sat, 20 Jun 2026 21:30:52 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>- Line precision: parse git diff --unified=0 into per-file changed line ranges   (defaultWorkingSetFor), so two agents in the SAME file but DIFFERENT functions   no longer false-collide. Overlap channel now uses the overlap coefficient   (|A∩B|/min(|A|,|B|)) — high when one edit sits inside the othe</description>
+    </item>
+    <item>
+      <title>docs(readme): add official-channel icons (Discord/Website/App/Guides) up top</title>
+      <link>https://github.com/affaan-m/ECC/commit/e2b8a51cea2228e515e1c3653effbeb62a2800fa</link>
+      <guid isPermaLink="false">e2b8a51</guid>
+      <pubDate>Sat, 20 Jun 2026 21:20:02 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds a clean badge row right under the hero linking the official destinations, led by a live Discord member-count badge (server widget enabled) to drive the community from a few hundred toward a few thousand. Gives the official ECC links the icons the readme was missing.</description>
+    </item>
+    <item>
+      <title>feat(control-pane): wire agent-proximity into the snapshot (opt-in, live)</title>
+      <link>https://github.com/affaan-m/ECC/commit/7df803935ac8f63adfd158d99e7adf548fa80103</link>
+      <guid isPermaLink="false">7df8039</guid>
+      <pubDate>Sat, 20 Jun 2026 19:46:19 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Turns live sessions into the airspace scan: each worktree session&apos;s git diff becomes its working set, the dependency graph is built over the touched files, and scanAirspace() produces the TCAS advisories + 3D positions.  - scripts/lib/control-pane/proximity.js: sessionsToAgents() + buildProximitySna</description>
+    </item>
+    <item>
+      <title>feat(layer4): agent-space distance metric + TCAS-style collision avoidance (v0)</title>
+      <link>https://github.com/affaan-m/ECC/commit/726972d73557a2870abe8d136c0d5ac6a6b58ae0</link>
+      <guid isPermaLink="false">726972d</guid>
+      <pubDate>Sat, 20 Jun 2026 19:40:40 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The moat layer: spatial deconfliction for multiple agents (and humans) on one codebase, modeled on aircraft TCAS — measure how close two agents are in code-space, then transmit-intent (Traffic Advisory) and steer-away (Resolution Advisory) before they collide at the git layer.  scripts/lib/agent-pro</description>
+    </item>
     <item>
       <title>docs(security): use the monitored affaan@ecc.tools contact in SECURITY.md</title>
       <link>https://github.com/affaan-m/ECC/commit/34faa39bd3cd496a0aece0245f2b7e38b7923abc</link>
@@ -366,46 +406,6 @@
       <pubDate>Sun, 07 Jun 2026 05:29:12 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* feat(skills): add laravel-security, laravel-tdd, and php-reviewer agent  * fix: resolve code review findings across laravel-security, laravel-tdd, and php-reviewer  - laravel-security: replace env() with config() in runtime code,   replace wildcard trusted proxies with CIDR ranges, remove blanket </description>
-    </item>
-    <item>
-      <title>feat(skills): add fastapi-patterns skill (#2129)</title>
-      <link>https://github.com/affaan-m/ECC/commit/66e28b5fb1abd242d1c5e69cf7b6b22f8e88f3e5</link>
-      <guid isPermaLink="false">66e28b5</guid>
-      <pubDate>Sun, 07 Jun 2026 05:29:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: fix renamed-repo links, drop stale assessment artifacts (#2058)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d2dfca21a43a8a2faa7f759e8e86ffb82a3a806d</link>
-      <guid isPermaLink="false">d2dfca2</guid>
-      <pubDate>Sun, 07 Jun 2026 05:27:08 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>CONTRIBUTING.md still pointed at the old `affaan-m/everything-claude-code` repo URL in the Quick Start fork instructions and in the Issues link at the bottom. Both relied on GitHub&apos;s silent rename-redirect, but the literal `cd everything-claude-code` after `gh repo fork` would land in the wrong dire</description>
-    </item>
-    <item>
-      <title>fix(commands): resolve active plugin root in /instinct-status (#2037) (#2059)</title>
-      <link>https://github.com/affaan-m/ECC/commit/8eedcff5acaa8f7f29247e58c609934edc57963d</link>
-      <guid isPermaLink="false">8eedcff</guid>
-      <pubDate>Sun, 07 Jun 2026 05:27:05 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The `/instinct-status` slash command template expanded `${CLAUDE_PLUGIN_ROOT}` directly and documented a manual-install fallback to `~/.claude/skills/continuous-learning-v2/scripts/instinct-cli.py`. When users had both an active plugin install (under `~/.claude/plugins/cache/&lt;slug&gt;/&lt;org&gt;/&lt;version&gt;/`</description>
-    </item>
-    <item>
-      <title>docs: add Urdu (ur) README translation (#2061)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d7dcd10c8a9e553544e24382e8fc5ddb4637fded</link>
-      <guid isPermaLink="false">d7dcd10</guid>
-      <pubDate>Sun, 07 Jun 2026 05:27:03 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* docs: add Urdu (ur) README translation  Adds docs/ur/README.md — a full Urdu translation of the main README. Urdu is spoken by 230M+ people globally, with a large developer community in Pakistan. This follows the same structure as existing translations (de-DE, ja-JP, ko-KR, etc.).  * docs(ur): syn</description>
-    </item>
-    <item>
-      <title>feat: Cursor-independent ECC memory via ECC_AGENT_DATA_HOME (#2066)</title>
-      <link>https://github.com/affaan-m/ECC/commit/6a40469408c65caba3e6179b6cbe99337500c6ca</link>
-      <guid isPermaLink="false">6a40469</guid>
-      <pubDate>Sun, 07 Jun 2026 05:27:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat: auto-isolate ECC memory data for Cursor via ECC_AGENT_DATA_HOME  Add ECC_AGENT_DATA_HOME (defaults to ~/.claude) with Cursor-aware resolution, sessionStart env injection, install scaffolds, and hook bootstrap so memory hooks do not collide with Claude Code when both harnesses are used.  Clos</description>
     </item>
   </channel>
 </rss>

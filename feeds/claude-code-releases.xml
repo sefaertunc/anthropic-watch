@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 20 Jun 2026 09:20:28 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 09:54:12 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.185</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.185</link>
+      <guid isPermaLink="false">v2.1.185</guid>
+      <pubDate>Sat, 20 Jun 2026 20:59:19 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- The stream-stall hint now reads &quot;Waiting for API response · will retry in …&quot; instead of &quot;No response from API · Retrying in …&quot;, and triggers after 20s of silence instead of 10s</description>
+    </item>
     <item>
       <title>v2.1.183</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.183</link>
@@ -499,16 +508,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Fixed OAuth authentication failing with a 401 retry loop when CLAUDECODEDISABLEEXPERIMENTALBETAS=1 is set</description>
-    </item>
-    <item>
-      <title>v2.1.122</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.122</link>
-      <guid isPermaLink="false">v2.1.122</guid>
-      <pubDate>Tue, 28 Apr 2026 22:05:15 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added ANTHROPICBEDROCKSERVICETIER environment variable to select a Bedrock service tier (default, flex, or priority), sent as the X-Amzn-Bedrock-Service-Tier header
-- Pasting a PR URL into the /resume search box now finds the session that created that PR (GitHub, GitHub Enterprise, </description>
     </item>
   </channel>
 </rss>
