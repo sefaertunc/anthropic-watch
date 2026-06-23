@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 22 Jun 2026 12:10:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 09:46:23 GMT</lastBuildDate>
+    <item>
+      <title>Update sentry plugin source to getsentry/plugin-claude (#3201)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f57f28050818b8ee4558996d16cb925e47661a5c</link>
+      <guid isPermaLink="false">f57f280</guid>
+      <pubDate>Tue, 23 Jun 2026 01:22:12 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>chore(ci): re-pin validate-plugins + scan-plugins + bump-plugin-shas to community 426e469f (#3132)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/81500db67345a66d99f8330eafff911553475217</link>
@@ -398,14 +406,6 @@
       <pubDate>Wed, 27 May 2026 22:43:11 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: enable agentic commit reviewer on Windows</description>
-    </item>
-    <item>
-      <title>Address Windows verification: --prefer-binary + pywin32 bootstrap</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/c11244778df46ce0cf8192377637b09f8c323351</link>
-      <guid isPermaLink="false">c112447</guid>
-      <pubDate>Wed, 27 May 2026 22:07:33 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>The first round of this PR removed SKIP_WIN32, fixed venv_py to use Scripts/python.exe, and added Lib/site-packages to the consumer glob — all necessary. Windows verification (Win11 ARM64, Py 3.13, Git Bash) showed two more blockers, both addressed here.  1. Pip dependency resolver picks unbuildable</description>
     </item>
   </channel>
 </rss>

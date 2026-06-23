@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-22T12:10:03.715Z",
+  "generated": "2026-06-23T09:46:23.359Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "f57f280",
+      "title": "Update sentry plugin source to getsentry/plugin-claude (#3201)",
+      "date": "2026-06-23T01:22:12Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/f57f28050818b8ee4558996d16cb925e47661a5c",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "f57f280|gh-commits-plugins-official"
+    },
     {
       "id": "81500db",
       "title": "chore(ci): re-pin validate-plugins + scan-plugins + bump-plugin-shas to community 426e469f (#3132)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "2a3dd81|gh-commits-plugins-official"
-    },
-    {
-      "id": "c112447",
-      "title": "Address Windows verification: --prefer-binary + pywin32 bootstrap",
-      "date": "2026-05-27T22:07:33Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/c11244778df46ce0cf8192377637b09f8c323351",
-      "snippet": "The first round of this PR removed SKIP_WIN32, fixed venv_py to use Scripts/python.exe, and added Lib/site-packages to the consumer glob — all necessary. Windows verification (Win11 ARM64, Py 3.13, Git Bash) showed two more blockers, both addressed here.  1. Pip dependency resolver picks unbuildable",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "c112447|gh-commits-plugins-official"
     }
   ]
 }

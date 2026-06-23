@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 22 Jun 2026 12:10:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 09:46:23 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.186</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.186</link>
+      <guid isPermaLink="false">v2.1.186</guid>
+      <pubDate>Mon, 22 Jun 2026 20:37:34 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added claude mcp login &lt;name&gt; and claude mcp logout &lt;name&gt; to authenticate MCP servers from the CLI without opening the interactive /mcp menu, with --no-browser stdin redirect support for completing over SSH
+- Added status filtering (press f) to the /workflows agent detail view
+- Ad</description>
+    </item>
     <item>
       <title>v2.1.185</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.185</link>
@@ -499,15 +510,6 @@
       <description>What&apos;s changed
 - The /model picker now lists models from your gateway&apos;s /v1/models endpoint when ANTHROPICBASEURL points at an Anthropic-compatible gateway
 - - Added claude project purge [path] to delete all Claude Code state for a project (transcripts, tasks, file history, config entry) — supports </description>
-    </item>
-    <item>
-      <title>v2.1.123</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.123</link>
-      <guid isPermaLink="false">v2.1.123</guid>
-      <pubDate>Wed, 29 Apr 2026 03:29:13 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed OAuth authentication failing with a 401 retry loop when CLAUDECODEDISABLEEXPERIMENTALBETAS=1 is set</description>
     </item>
   </channel>
 </rss>
