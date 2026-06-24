@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 23 Jun 2026 09:46:23 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 09:35:39 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.187</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.187</link>
+      <guid isPermaLink="false">v2.1.187</guid>
+      <pubDate>Tue, 23 Jun 2026 21:03:48 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added sandbox.credentials setting to block sandboxed commands from reading credential files and secret environment variables
+- Added org-configured model restrictions to the model picker, --model, /model, and ANTHROPICMODEL, with a &quot;restricted by your organization&apos;s settings&quot; messag</description>
+    </item>
     <item>
       <title>v2.1.186</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.186</link>
@@ -500,16 +510,6 @@
 - /mcp now shows the tool count for connected servers and flags servers that connected with 0 tools
 - --plugin-dir now accepts .zip plugin archives in addition to directories
 - --channels now works with console (API key) authent</description>
-    </item>
-    <item>
-      <title>v2.1.126</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.126</link>
-      <guid isPermaLink="false">v2.1.126</guid>
-      <pubDate>Fri, 01 May 2026 02:05:23 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- The /model picker now lists models from your gateway&apos;s /v1/models endpoint when ANTHROPICBASEURL points at an Anthropic-compatible gateway
-- - Added claude project purge [path] to delete all Claude Code state for a project (transcripts, tasks, file history, config entry) — supports </description>
     </item>
   </channel>
 </rss>
