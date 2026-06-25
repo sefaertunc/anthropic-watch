@@ -6,7 +6,27 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 24 Jun 2026 09:35:39 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 09:27:33 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.191</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.191</link>
+      <guid isPermaLink="false">v2.1.191</guid>
+      <pubDate>Wed, 24 Jun 2026 21:58:12 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added /rewind support for resuming a conversation from before /clear was run
+- Fixed scroll position jumping to the bottom while reading earlier output during a streaming response
+- Fixed background agents resurrecting after being stopped — stopping an agent from the tasks panel is </description>
+    </item>
+    <item>
+      <title>v2.1.190</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.190</link>
+      <guid isPermaLink="false">v2.1.190</guid>
+      <pubDate>Wed, 24 Jun 2026 15:53:56 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Bug fixes and reliability improvements</description>
+    </item>
     <item>
       <title>v2.1.187</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.187</link>
@@ -487,29 +507,6 @@
       <description>What&apos;s changed
 - Fixed VS Code extension failing to activate on Windows due to a hardcoded build path in the bundled SDK (createRequire polyfill bug)
 - Fixed Mantle endpoint authentication failing with missing x-api-key header</description>
-    </item>
-    <item>
-      <title>v2.1.129</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.129</link>
-      <guid isPermaLink="false">v2.1.129</guid>
-      <pubDate>Wed, 06 May 2026 01:40:18 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added --plugin-url &lt;url&gt; flag to fetch a plugin .zip archive from a URL for the current session
-- Added CLAUDECODEFORCESYNCOUTPUT=1 env var to force-enable synchronized output on terminals that auto-detection misses (e.g. Emacs eat)
-- Added CLAUDECODEPACKAGEMANAGERAUTOUPDATE: when s</description>
-    </item>
-    <item>
-      <title>v2.1.128</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.128</link>
-      <guid isPermaLink="false">v2.1.128</guid>
-      <pubDate>Mon, 04 May 2026 23:01:47 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Bare /color (no args) now picks a random session color
-- /mcp now shows the tool count for connected servers and flags servers that connected with 0 tools
-- --plugin-dir now accepts .zip plugin archives in addition to directories
-- --channels now works with console (API key) authent</description>
     </item>
   </channel>
 </rss>
