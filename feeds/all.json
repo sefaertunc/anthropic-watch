@@ -5,9 +5,251 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-25T09:27:33.232Z",
+  "generated": "2026-06-26T09:32:33.401Z",
   "itemCount": 100,
   "items": [
+    {
+      "id": "0.3.193",
+      "title": "0.3.193",
+      "date": "2026-06-26T09:31:44.870Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added promptSuggestions option to Browser SDK query() to opt the remote CLI into emitting follow-up suggestions\n- Fixed brief console window flashes on Windows when spawning CLI subprocesses",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.193|agent-sdk-ts-changelog"
+    },
+    {
+      "id": "2.1.193",
+      "title": "2.1.193",
+      "date": "2026-06-26T09:31:43.760Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added autoMode.classifyAllShell setting to route all Bash/PowerShell commands through the auto-mode classifier instead of only arbitrary-code-execution patterns\n- Added auto-mode denial reasons to the transcript, the denial toast, and /permissions recent denials\n- Added claudecode.assistantrespons",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.193|claude-code-changelog"
+    },
+    {
+      "id": "9c96b6e",
+      "title": "fix: sync v13.3.0 release surfaces",
+      "date": "2026-06-26T06:46:43Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/9c96b6e1590fce1906c3fd7b3589b19f2131fcf2",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "9c96b6e|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "df0175d",
+      "title": "chore: release v13.3.0",
+      "date": "2026-06-26T06:38:25Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/df0175dfaa39255edd9916829f92afdb23f453f7",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "df0175d|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "1e1782d",
+      "title": "chore: sync 13.3.0 maintainer batch",
+      "date": "2026-06-26T06:35:54Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/1e1782d8c6396a9921acf67e56afea895ee4d740",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "1e1782d|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "2250aa7",
+      "title": "feat: add gh-image skill (#753)",
+      "date": "2026-06-26T06:28:48Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/2250aa723438b93e989c265bab25c56ff541edad",
+      "snippet": "# Pull Request Description  This PR adds the `gh-image` skill, which uploads local images to GitHub and returns canonical `user-attachments` embed URLs for PRs, issues, comments, and README screenshots through the `drogers0/gh-image` GitHub CLI extension.",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "2250aa7|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "142d3cd",
+      "title": "feat: add arrowspace spectral vector search skill (#752)",
+      "date": "2026-06-26T06:24:27Z",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/142d3cdde607bfc82a62c0ea716c86850ffafad5",
+      "snippet": "# Pull Request Description  This PR adds the `arrowspace` skill for spectral vector search using graph Laplacian eigenstructure for lambda-tau indexed retrieval.",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "142d3cd|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "48682270",
+      "title": "You can never replace your understanding",
+      "date": "2026-06-26T04:19:12Z",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "48682270|hn-anthropic-com"
+    },
+    {
+      "id": "2bc924f",
+      "title": "fix(clv2): harden registry writes and project deletion (#2294, #2297) (#2323)",
+      "date": "2026-06-25T23:47:35Z",
+      "url": "https://github.com/affaan-m/ECC/commit/2bc924faf2f8e893bfe0af86b1931283693c30ae",
+      "snippet": "Two security-priority fixes in continuous-learning-v2/scripts/instinct-cli.py:  - #2294: _write_registry wrote projects.json without the advisory lock that   _update_registry holds, so concurrent 'projects delete/gc/merge' could race an   observe-time update and corrupt the registry. Extract the loc",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "2bc924f|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e3f4679",
+      "title": "fix(clv2): escape $HOME before pgrep -f in migrate-homunculus.sh (#2339)",
+      "date": "2026-06-25T23:47:32Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e3f467989a2c446cd8d0137893215e1249689c77",
+      "snippet": "* fix(clv2): escape $HOME before pgrep -f in migrate-homunculus.sh  pgrep -f treats its argument as an extended regular expression, but the running-observer guard interpolated $HOME unescaped. Paths containing regex metacharacters (e.g. /home/user.name, /home/c++dev, /home/user (work)) made the matc",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e3f4679|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e8244d9",
+      "title": "feat(control-pane): serve 3D agent-airspace viz + /api/proximity feed (#2320)",
+      "date": "2026-06-25T23:45:53Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e8244d9ced25e150659f8685293804c65200e449",
+      "snippet": "Adds the Layer 4 observability view to the control pane: a self-contained, dependency-free 3D point-cloud of the agent airspace (positions from the proximity embedding, sized by working set, colored by collision risk, links for converging pairs) plus an XSS-safe advisory panel that polls every 5s.  ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e8244d9|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "48680164",
+      "title": "Export Claude.ai chats, artifacts, and visible thinking",
+      "date": "2026-06-25T22:46:01Z",
+      "url": "https://github.com/lekandigital/claude-export-hub",
+      "snippet": null,
+      "source": "hn-claude-ai",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.ai",
+      "uniqueKey": "48680164|hn-claude-ai"
+    },
+    {
+      "id": "2070270332674658814",
+      "title": "With the launch of Claude Tag, we're sharing the future of work with the world. Working with agents means working in some new forward-looking ways. We're excited to share some best practices below\n\nht",
+      "date": "2026-06-25T22:18:05.000Z",
+      "url": "https://x.com/noahzweben/status/2070270332674658814",
+      "snippet": "With the launch of Claude Tag, we're sharing the future of work with the world. Working with agents means working in some new forward-looking ways. We're excited to share some best practices below\n\nhttps://t.co/cpNeQgvwZl",
+      "source": "twitter-noahzweben",
+      "sourceCategory": "community",
+      "sourceName": "@noahzweben (Noah Zweben)",
+      "uniqueKey": "2070270332674658814|twitter-noahzweben"
+    },
+    {
+      "id": "2070265825437855760",
+      "title": "🧵Claude Tag without the Tag (aka Ambient Claude)\n\nOne of my favorite ways to use Claude Tag is as an ambient partner -- one you don't need to explicitly tag.\n\nHow to get this set up?",
+      "date": "2026-06-25T22:00:11.000Z",
+      "url": "https://x.com/noahzweben/status/2070265825437855760",
+      "snippet": "🧵Claude Tag without the Tag (aka Ambient Claude)\n\nOne of my favorite ways to use Claude Tag is as an ambient partner -- one you don't need to explicitly tag.\n\nHow to get this set up?",
+      "source": "twitter-noahzweben",
+      "sourceCategory": "community",
+      "sourceName": "@noahzweben (Noah Zweben)",
+      "uniqueKey": "2070265825437855760|twitter-noahzweben"
+    },
+    {
+      "id": "v1.0.158",
+      "title": "v1.0.158",
+      "date": "2026-06-25T21:47:33Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.158",
+      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.158",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.158|claude-code-action"
+    },
+    {
+      "id": "v2.1.193",
+      "title": "v2.1.193",
+      "date": "2026-06-25T21:45:57Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.193",
+      "snippet": "What's changed\n- Added autoMode.classifyAllShell setting to route all Bash/PowerShell commands through the auto-mode classifier instead of only arbitrary-code-execution patterns\n- Added auto-mode denial reasons to the transcript, the denial toast, and /permissions recent denials\n- Added claudecode.a",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.193|claude-code-releases"
+    },
+    {
+      "id": "f0919a1",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-06-25T21:45:51Z",
+      "url": "https://github.com/anthropics/claude-code/commit/f0919a1a7277bf0a1d39374a49dfa0065247f72e",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "f0919a1|gh-commits-claude-code"
+    },
+    {
+      "id": "2070242082669940908",
+      "title": "From the 🐐",
+      "date": "2026-06-25T20:25:50.000Z",
+      "url": "https://x.com/noahzweben/status/2070242082669940908",
+      "snippet": "From the 🐐",
+      "source": "twitter-noahzweben",
+      "sourceCategory": "community",
+      "sourceName": "@noahzweben (Noah Zweben)",
+      "uniqueKey": "2070242082669940908|twitter-noahzweben"
+    },
+    {
+      "id": "2070235730295865661",
+      "title": "Claude Tag is the next evolution of agents.\n\nIt's a proactive, multiplayer agent with memory and identity, built on top of Claude Code.\n\nLearn more about how Claude Tag works and best practices for us",
+      "date": "2026-06-25T20:00:35.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2070235730295865661",
+      "snippet": "Claude Tag is the next evolution of agents.\n\nIt's a proactive, multiplayer agent with memory and identity, built on top of Claude Code.\n\nLearn more about how Claude Tag works and best practices for using it in this deep dive. https://t.co/1C5eotdIgM",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2070235730295865661|twitter-claudedevs"
+    },
+    {
+      "id": "2.1.193",
+      "title": "@anthropic-ai/claude-code@2.1.193",
+      "date": "2026-06-25T19:05:08.367Z",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+      "source": "npm-claude-code",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.193|npm-claude-code"
+    },
+    {
+      "id": "2070183531612172697",
+      "title": "We're joining @raiseus_ai as a founding partner.\n\nRAISE US is a nonprofit coalition working to strengthen the American workforce through employer-led action, AI-enabled training, and policy innovation",
+      "date": "2026-06-25T16:33:10.000Z",
+      "url": "https://x.com/AnthropicAI/status/2070183531612172697",
+      "snippet": "We're joining @raiseus_ai as a founding partner.\n\nRAISE US is a nonprofit coalition working to strengthen the American workforce through employer-led action, AI-enabled training, and policy innovation to support the transition to transformative AI.",
+      "source": "twitter-anthropicai",
+      "sourceCategory": "community",
+      "sourceName": "@AnthropicAI (official)",
+      "uniqueKey": "2070183531612172697|twitter-anthropicai"
+    },
+    {
+      "id": "2070132115497476372",
+      "title": "Seeing chatter about Fable 5 being accessible - can say categorically this is false, we are not serving any Fable / Mythos traffic\n\nLooking into possibility of UI bug on front-end (e.g. based on histo",
+      "date": "2026-06-25T13:08:52.000Z",
+      "url": "https://x.com/TheAmolAvasare/status/2070132115497476372",
+      "snippet": "Seeing chatter about Fable 5 being accessible - can say categorically this is false, we are not serving any Fable / Mythos traffic\n\nLooking into possibility of UI bug on front-end (e.g. based on historical context), but also very real chance it’s just people shitposting…",
+      "source": "twitter-theamolavasare",
+      "sourceCategory": "community",
+      "sourceName": "@TheAmolAvasare (Amol Avasare)",
+      "uniqueKey": "2070132115497476372|twitter-theamolavasare"
+    },
     {
       "id": "0.2.110",
       "title": "0.2.110",
@@ -42,61 +284,6 @@
       "uniqueKey": "2.1.191|claude-code-changelog"
     },
     {
-      "id": "4792340",
-      "title": "docs: refresh repo consistency guidance",
-      "date": "2026-06-25T08:50:52Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/4792340672bd57c1ef82f8840b5e5a8348d77dbb",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "4792340|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "4aa3a18",
-      "title": "docs: fix catalog documentation inconsistencies",
-      "date": "2026-06-25T08:22:32Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/4aa3a185462ac1b3661dccf1b2f8361f3645eb5b",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "4aa3a18|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "0b99bba",
-      "title": "chore: release v13.2.0",
-      "date": "2026-06-25T06:37:46Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/0b99bbab7f5a39d0ab0ba3b2d68c4ca5f4a17825",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "0b99bba|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "f66ddea",
-      "title": "feat: add Emil design engineering skills",
-      "date": "2026-06-25T06:34:13Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/f66ddea6aa0807eb6a15987d8e49163a7f25b2e5",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "f66ddea|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "47a5f3d",
-      "title": "[Snyk] Upgrade react from 19.2.4 to 19.2.7 (#742)",
-      "date": "2026-06-25T06:24:05Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/47a5f3df4aee48babc593834e30001d987cdde4b",
-      "snippet": "* fix: upgrade react from 19.2.4 to 19.2.7  Snyk has created this PR to upgrade react from 19.2.4 to 19.2.7.  See this package in npm: react  See this project in Snyk: https://app.eu.snyk.io/org/antigravity-awesome-skills-default/project/e1f199d3-0a16-4ac7-a9a1-528e774fc41f?utm_source=github&utm_med",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "47a5f3d|gh-commits-antigravity-awesome-skills"
-    },
-    {
       "id": "2070023082811773402",
       "title": "RT @seema_amble: The Claude Tag is a nice unlock for headless software - you can operate right in Slack. The conversation layer &gt;&gt; software…",
       "date": "2026-06-25T05:55:36.000Z",
@@ -119,28 +306,6 @@
       "uniqueKey": "2070006971798114424|twitter-noahzweben"
     },
     {
-      "id": "2069998695769354271",
-      "title": "RT @levie: There are some subtleties in this launch that are very important in practice. This isn’t just you interacting with Claude in a 1…",
-      "date": "2026-06-25T04:18:42.000Z",
-      "url": "https://x.com/noahzweben/status/2069998695769354271",
-      "snippet": "RT @levie: There are some subtleties in this launch that are very important in practice. This isn’t just you interacting with Claude in a 1…",
-      "source": "twitter-noahzweben",
-      "sourceCategory": "community",
-      "sourceName": "@noahzweben (Noah Zweben)",
-      "uniqueKey": "2069998695769354271|twitter-noahzweben"
-    },
-    {
-      "id": "2069997292967592185",
-      "title": "RT @seconds_0: Claude Tag is probably the best executed in chat bot partner i have ever seen. It is unfathomably good not because of basic…",
-      "date": "2026-06-25T04:13:07.000Z",
-      "url": "https://x.com/noahzweben/status/2069997292967592185",
-      "snippet": "RT @seconds_0: Claude Tag is probably the best executed in chat bot partner i have ever seen. It is unfathomably good not because of basic…",
-      "source": "twitter-noahzweben",
-      "sourceCategory": "community",
-      "sourceName": "@noahzweben (Noah Zweben)",
-      "uniqueKey": "2069997292967592185|twitter-noahzweben"
-    },
-    {
       "id": "f7b3123",
       "title": "Add oracle-ai-data-platform-workbench-databricks-migrator plugin (#3319)",
       "date": "2026-06-25T03:43:33Z",
@@ -152,15 +317,15 @@
       "uniqueKey": "f7b3123|gh-commits-plugins-official"
     },
     {
-      "id": "2069938413206417614",
-      "title": "Galaxy Brain!",
-      "date": "2026-06-25T00:19:09.000Z",
-      "url": "https://x.com/noahzweben/status/2069938413206417614",
-      "snippet": "Galaxy Brain!",
-      "source": "twitter-noahzweben",
-      "sourceCategory": "community",
-      "sourceName": "@noahzweben (Noah Zweben)",
-      "uniqueKey": "2069938413206417614|twitter-noahzweben"
+      "id": "https://support.claude.com/en/articles/12138966-release-notes#h_d99d99e61a",
+      "title": "June 25, 2026",
+      "date": "2026-06-25T00:00:00.000Z",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes#h_d99d99e61a",
+      "snippet": "",
+      "source": "support-release-notes",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic Support Release Notes",
+      "uniqueKey": "https://support.claude.com/en/articles/12138966-release-notes#h_d99d99e61a|support-release-notes"
     },
     {
       "id": "v1.0.157",
@@ -614,6 +779,17 @@
       "uniqueKey": "f57f280|gh-commits-plugins-official"
     },
     {
+      "id": "https://support.claude.com/en/articles/12138966-release-notes#h_f8b9fefd18",
+      "title": "June 23, 2026",
+      "date": "2026-06-23T00:00:00.000Z",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes#h_f8b9fefd18",
+      "snippet": "",
+      "source": "support-release-notes",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic Support Release Notes",
+      "uniqueKey": "https://support.claude.com/en/articles/12138966-release-notes#h_f8b9fefd18|support-release-notes"
+    },
+    {
       "id": "https://www.anthropic.com/news/introducing-claude-tag",
       "title": "Introducing Claude Tag",
       "date": "2026-06-23T00:00:00.000Z",
@@ -812,72 +988,6 @@
       "uniqueKey": "bd1be0c|gh-commits-everything-claude-code"
     },
     {
-      "id": "e2b8a51",
-      "title": "docs(readme): add official-channel icons (Discord/Website/App/Guides) up top",
-      "date": "2026-06-20T21:20:02Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e2b8a51cea2228e515e1c3653effbeb62a2800fa",
-      "snippet": "Adds a clean badge row right under the hero linking the official destinations, led by a live Discord member-count badge (server widget enabled) to drive the community from a few hundred toward a few thousand. Gives the official ECC links the icons the readme was missing.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e2b8a51|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "v1.0.153",
-      "title": "v1.0.153",
-      "date": "2026-06-20T21:01:12Z",
-      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.153",
-      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.153",
-      "source": "claude-code-action",
-      "sourceCategory": "extended",
-      "sourceName": "Claude Code Action Releases",
-      "uniqueKey": "v1.0.153|claude-code-action"
-    },
-    {
-      "id": "v2.1.185",
-      "title": "v2.1.185",
-      "date": "2026-06-20T20:59:19Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.185",
-      "snippet": "What's changed\n- The stream-stall hint now reads \"Waiting for API response · will retry in …\" instead of \"No response from API · Retrying in …\", and triggers after 20s of silence instead of 10s",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.185|claude-code-releases"
-    },
-    {
-      "id": "b407389",
-      "title": "chore: Update CHANGELOG.md and feed.xml",
-      "date": "2026-06-20T20:59:12Z",
-      "url": "https://github.com/anthropics/claude-code/commit/b4073894cdef365c6061f036098ce0875bbdbc86",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "b407389|gh-commits-claude-code"
-    },
-    {
-      "id": "7df8039",
-      "title": "feat(control-pane): wire agent-proximity into the snapshot (opt-in, live)",
-      "date": "2026-06-20T19:46:19Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7df803935ac8f63adfd158d99e7adf548fa80103",
-      "snippet": "Turns live sessions into the airspace scan: each worktree session's git diff becomes its working set, the dependency graph is built over the touched files, and scanAirspace() produces the TCAS advisories + 3D positions.  - scripts/lib/control-pane/proximity.js: sessionsToAgents() + buildProximitySna",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7df8039|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "726972d",
-      "title": "feat(layer4): agent-space distance metric + TCAS-style collision avoidance (v0)",
-      "date": "2026-06-20T19:40:40Z",
-      "url": "https://github.com/affaan-m/ECC/commit/726972d73557a2870abe8d136c0d5ac6a6b58ae0",
-      "snippet": "The moat layer: spatial deconfliction for multiple agents (and humans) on one codebase, modeled on aircraft TCAS — measure how close two agents are in code-space, then transmit-intent (Traffic Advisory) and steer-away (Resolution Advisory) before they collide at the git layer.  scripts/lib/agent-pro",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "726972d|gh-commits-everything-claude-code"
-    },
-    {
       "id": "2.1.185",
       "title": "@anthropic-ai/claude-code@2.1.185",
       "date": "2026-06-20T16:54:36.327Z",
@@ -944,28 +1054,6 @@
       "uniqueKey": "0.2.105|agent-sdk-py-changelog"
     },
     {
-      "id": "0.3.183",
-      "title": "0.3.183",
-      "date": "2026-06-19T10:41:24.472Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Updated to parity with Claude Code v2.1.183",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.183|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "2.1.183",
-      "title": "2.1.183",
-      "date": "2026-06-19T10:41:23.496Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Improved auto mode safety: destructive git commands (git reset --hard, git checkout -- ., git clean -fd, git stash drop) are now blocked when you didn't ask to discard local work, git commit --amend is blocked when the commit wasn't made by the agent this session, and terraform destroy/pulumi dest",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.183|claude-code-changelog"
-    },
-    {
       "id": "94258c5",
       "title": "ci: pin validate-plugins + scan-plugins + bump-plugin-shas to self-healing CLI install (#3095)",
       "date": "2026-06-19T02:50:51Z",
@@ -977,17 +1065,6 @@
       "uniqueKey": "94258c5|gh-commits-plugins-official"
     },
     {
-      "id": "2067802163498352929",
-      "title": "Earlier today, ~3% of Claude Code Max and Pro users hit a bug that showed an incorrect weekly usage limit, and in some cases blocked them from sending messages. \n\nThis is fixed, and we're resetting 5-",
-      "date": "2026-06-19T02:50:28.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2067802163498352929",
-      "snippet": "Earlier today, ~3% of Claude Code Max and Pro users hit a bug that showed an incorrect weekly usage limit, and in some cases blocked them from sending messages. \n\nThis is fixed, and we're resetting 5-hour and weekly limits for everyone affected. Apologies for the disruption.",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2067802163498352929|twitter-claudedevs"
-    },
-    {
       "id": "46a038a",
       "title": "Merge pull request #3094 from anthropics/dickson/add-project-artifact-plugin",
       "date": "2026-06-19T02:03:54Z",
@@ -997,17 +1074,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "46a038a|gh-commits-plugins-official"
-    },
-    {
-      "id": "2.1.183",
-      "title": "@anthropic-ai/claude-code@2.1.183",
-      "date": "2026-06-19T00:02:37.935Z",
-      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
-      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
-      "source": "npm-claude-code",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code npm Package",
-      "uniqueKey": "2.1.183|npm-claude-code"
     },
     {
       "id": "2067700226669060207",
@@ -1041,72 +1107,6 @@
       "sourceCategory": "extended",
       "sourceName": "Anthropic Research Blog",
       "uniqueKey": "https://www.anthropic.com/research/project-fetch-phase-two|blog-research"
-    },
-    {
-      "id": "v0.111.0",
-      "title": "v0.111.0",
-      "date": "2026-06-18T17:31:32Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.111.0",
-      "snippet": "0.111.0 (2026-06-18)\nFull Changelog: v0.110.0...v0.111.0\n Features\n helpers: tag refusal-fallback middleware requests with fallback-refusal-middleware (96) (2f8ac78)",
-      "source": "api-sdk-py-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK Python Releases",
-      "uniqueKey": "v0.111.0|api-sdk-py-releases"
-    },
-    {
-      "id": "aws-sdk-v0.5.0",
-      "title": "aws-sdk: v0.5.0",
-      "date": "2026-06-18T17:19:04Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.5.0",
-      "snippet": "0.5.0 (2026-06-18)\nFull Changelog: aws-sdk-v0.4.2...aws-sdk-v0.5.0\n Features\n stream: lazily parse partial tool json input (99) (e55ceee)\n Chores\n tests: stop using deprecated models (98) (65ae1af)",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "aws-sdk-v0.5.0|api-sdk-ts-releases"
-    },
-    {
-      "id": "foundry-sdk-v0.4.0",
-      "title": "foundry-sdk: v0.4.0",
-      "date": "2026-06-18T17:18:55Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.0",
-      "snippet": "0.4.0 (2026-06-18)\nFull Changelog: foundry-sdk-v0.3.1...foundry-sdk-v0.4.0\n Features\n stream: lazily parse partial tool json input (99) (e55ceee)",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "foundry-sdk-v0.4.0|api-sdk-ts-releases"
-    },
-    {
-      "id": "bedrock-sdk-v0.31.0",
-      "title": "bedrock-sdk: v0.31.0",
-      "date": "2026-06-18T17:18:46Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.31.0",
-      "snippet": "0.31.0 (2026-06-18)\nFull Changelog: bedrock-sdk-v0.30.2...bedrock-sdk-v0.31.0\n Features\n stream: lazily parse partial tool json input (99) (e55ceee)\n Chores\n tests: stop using deprecated models (98) (65ae1af)",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "bedrock-sdk-v0.31.0|api-sdk-ts-releases"
-    },
-    {
-      "id": "vertex-sdk-v0.18.0",
-      "title": "vertex-sdk: v0.18.0",
-      "date": "2026-06-18T17:18:40Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.18.0",
-      "snippet": "0.18.0 (2026-06-18)\nFull Changelog: vertex-sdk-v0.17.1...vertex-sdk-v0.18.0\n Features\n stream: lazily parse partial tool json input (99) (e55ceee)\n Chores\n tests: stop using deprecated models (98) (65ae1af)",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "vertex-sdk-v0.18.0|api-sdk-ts-releases"
-    },
-    {
-      "id": "v0.110.0",
-      "title": "v0.110.0",
-      "date": "2026-06-18T17:18:34Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0",
-      "snippet": "0.110.0 (2026-06-18)\nFull Changelog: v0.109.2...v0.110.0\n Features\n api: add support for new codeexecution20260120 tool (5e23212)\n Bug Fixes\n append x-stainless-helper across header merges instead of clobbering (105) (922558e)\n bedrock: preserve stream event type (1682) (b27e343)\n helpers: single so",
-      "source": "api-sdk-py-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK Python Releases",
-      "uniqueKey": "v0.110.0|api-sdk-py-releases"
     }
   ]
 }

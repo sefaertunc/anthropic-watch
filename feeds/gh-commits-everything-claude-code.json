@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-25T09:27:33.284Z",
+  "generated": "2026-06-26T09:32:33.457Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2bc924f",
+      "title": "fix(clv2): harden registry writes and project deletion (#2294, #2297) (#2323)",
+      "date": "2026-06-25T23:47:35Z",
+      "url": "https://github.com/affaan-m/ECC/commit/2bc924faf2f8e893bfe0af86b1931283693c30ae",
+      "snippet": "Two security-priority fixes in continuous-learning-v2/scripts/instinct-cli.py:  - #2294: _write_registry wrote projects.json without the advisory lock that   _update_registry holds, so concurrent 'projects delete/gc/merge' could race an   observe-time update and corrupt the registry. Extract the loc",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "2bc924f|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e3f4679",
+      "title": "fix(clv2): escape $HOME before pgrep -f in migrate-homunculus.sh (#2339)",
+      "date": "2026-06-25T23:47:32Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e3f467989a2c446cd8d0137893215e1249689c77",
+      "snippet": "* fix(clv2): escape $HOME before pgrep -f in migrate-homunculus.sh  pgrep -f treats its argument as an extended regular expression, but the running-observer guard interpolated $HOME unescaped. Paths containing regex metacharacters (e.g. /home/user.name, /home/c++dev, /home/user (work)) made the matc",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e3f4679|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e8244d9",
+      "title": "feat(control-pane): serve 3D agent-airspace viz + /api/proximity feed (#2320)",
+      "date": "2026-06-25T23:45:53Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e8244d9ced25e150659f8685293804c65200e449",
+      "snippet": "Adds the Layer 4 observability view to the control pane: a self-contained, dependency-free 3D point-cloud of the agent airspace (positions from the proximity embedding, sized by working set, colored by collision risk, links for converging pairs) plus an XSS-safe advisory panel that polls every 5s.  ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e8244d9|gh-commits-everything-claude-code"
+    },
     {
       "id": "71d22d0",
       "title": "feat(layer4): live messages-table wiring for proximity triggers",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "90dfd95|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e755c5f",
-      "title": "fix: make plugin hooks run on Node 21+ and green the suite under modern Node (#2184)",
-      "date": "2026-06-07T08:05:28Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e755c5f72b9ce6011766b68d03cb02457668004b",
-      "snippet": "ROOT CAUSE: hooks load plugin-hook-bootstrap.js via `node -e \"...; process.argv.splice(1,0,s); require(s)\"`. On Node 21+, require.main is `undefined` under --eval, so the `if (require.main === module)` guard was false and main() never ran — every plugin hook silently no-op'd (e.g. the MCP-health Pre",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e755c5f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "eef31ad",
-      "title": "fix(codex): update bundled defaults to GPT 5.5 (#2132)",
-      "date": "2026-06-07T05:37:46Z",
-      "url": "https://github.com/affaan-m/ECC/commit/eef31ad39ce92f437339c2b26edb1b71d3075666",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "eef31ad|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "06c376a",
-      "title": "feat(skills): add laravel-security, laravel-tdd, and php-reviewer agent (#2122)",
-      "date": "2026-06-07T05:29:12Z",
-      "url": "https://github.com/affaan-m/ECC/commit/06c376ae8b3a11bdafcb56c642b81480622740fc",
-      "snippet": "* feat(skills): add laravel-security, laravel-tdd, and php-reviewer agent  * fix: resolve code review findings across laravel-security, laravel-tdd, and php-reviewer  - laravel-security: replace env() with config() in runtime code,   replace wildcard trusted proxies with CIDR ranges, remove blanket ",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "06c376a|gh-commits-everything-claude-code"
     }
   ]
 }

@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 25 Jun 2026 09:27:33 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 09:32:33 GMT</lastBuildDate>
+    <item>
+      <title>fix(clv2): harden registry writes and project deletion (#2294, #2297) (#2323)</title>
+      <link>https://github.com/affaan-m/ECC/commit/2bc924faf2f8e893bfe0af86b1931283693c30ae</link>
+      <guid isPermaLink="false">2bc924f</guid>
+      <pubDate>Thu, 25 Jun 2026 23:47:35 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Two security-priority fixes in continuous-learning-v2/scripts/instinct-cli.py:  - #2294: _write_registry wrote projects.json without the advisory lock that   _update_registry holds, so concurrent &apos;projects delete/gc/merge&apos; could race an   observe-time update and corrupt the registry. Extract the loc</description>
+    </item>
+    <item>
+      <title>fix(clv2): escape $HOME before pgrep -f in migrate-homunculus.sh (#2339)</title>
+      <link>https://github.com/affaan-m/ECC/commit/e3f467989a2c446cd8d0137893215e1249689c77</link>
+      <guid isPermaLink="false">e3f4679</guid>
+      <pubDate>Thu, 25 Jun 2026 23:47:32 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(clv2): escape $HOME before pgrep -f in migrate-homunculus.sh  pgrep -f treats its argument as an extended regular expression, but the running-observer guard interpolated $HOME unescaped. Paths containing regex metacharacters (e.g. /home/user.name, /home/c++dev, /home/user (work)) made the matc</description>
+    </item>
+    <item>
+      <title>feat(control-pane): serve 3D agent-airspace viz + /api/proximity feed (#2320)</title>
+      <link>https://github.com/affaan-m/ECC/commit/e8244d9ced25e150659f8685293804c65200e449</link>
+      <guid isPermaLink="false">e8244d9</guid>
+      <pubDate>Thu, 25 Jun 2026 23:45:53 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds the Layer 4 observability view to the control pane: a self-contained, dependency-free 3D point-cloud of the agent airspace (positions from the proximity embedding, sized by working set, colored by collision risk, links for converging pairs) plus an XSS-safe advisory panel that polls every 5s.  </description>
+    </item>
     <item>
       <title>feat(layer4): live messages-table wiring for proximity triggers</title>
       <link>https://github.com/affaan-m/ECC/commit/71d22d0a77b7e0684f4e51cba03749b788993cdb</link>
@@ -382,30 +406,6 @@
       <pubDate>Sun, 07 Jun 2026 08:15:31 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* feat: add orch-* orchestrator skill family  Lightweight wrappers that orchestrate existing ECC agents through a gated Research -&gt; Plan -&gt; TDD -&gt; Review -&gt; Commit pipeline, right-sized per task.  - orch-pipeline: shared engine (phases, size classifier, two gates, agent map) - orch-add-feature/chang</description>
-    </item>
-    <item>
-      <title>fix: make plugin hooks run on Node 21+ and green the suite under modern Node (#2184)</title>
-      <link>https://github.com/affaan-m/ECC/commit/e755c5f72b9ce6011766b68d03cb02457668004b</link>
-      <guid isPermaLink="false">e755c5f</guid>
-      <pubDate>Sun, 07 Jun 2026 08:05:28 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>ROOT CAUSE: hooks load plugin-hook-bootstrap.js via `node -e &quot;...; process.argv.splice(1,0,s); require(s)&quot;`. On Node 21+, require.main is `undefined` under --eval, so the `if (require.main === module)` guard was false and main() never ran — every plugin hook silently no-op&apos;d (e.g. the MCP-health Pre</description>
-    </item>
-    <item>
-      <title>fix(codex): update bundled defaults to GPT 5.5 (#2132)</title>
-      <link>https://github.com/affaan-m/ECC/commit/eef31ad39ce92f437339c2b26edb1b71d3075666</link>
-      <guid isPermaLink="false">eef31ad</guid>
-      <pubDate>Sun, 07 Jun 2026 05:37:46 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat(skills): add laravel-security, laravel-tdd, and php-reviewer agent (#2122)</title>
-      <link>https://github.com/affaan-m/ECC/commit/06c376ae8b3a11bdafcb56c642b81480622740fc</link>
-      <guid isPermaLink="false">06c376a</guid>
-      <pubDate>Sun, 07 Jun 2026 05:29:12 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat(skills): add laravel-security, laravel-tdd, and php-reviewer agent  * fix: resolve code review findings across laravel-security, laravel-tdd, and php-reviewer  - laravel-security: replace env() with config() in runtime code,   replace wildcard trusted proxies with CIDR ranges, remove blanket </description>
     </item>
   </channel>
 </rss>
