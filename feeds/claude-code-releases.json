@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-26T09:32:33.418Z",
+  "generated": "2026-06-27T08:39:56.346Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.195",
+      "title": "v2.1.195",
+      "date": "2026-06-26T21:29:42Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.195",
+      "snippet": "What's changed\n- Added CLAUDECODEDISABLEMOUSECLICKS to disable mouse click/drag/hover in fullscreen mode while keeping wheel scroll\n- Fixed hook matchers with hyphenated identifiers (e.g. code-reviewer, mcpbrave-search) accidentally substring-matching — they now exact-match. Use mcpbrave-search. to ",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.195|claude-code-releases"
+    },
     {
       "id": "v2.1.193",
       "title": "v2.1.193",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.133|claude-code-releases"
-    },
-    {
-      "id": "v2.1.132",
-      "title": "v2.1.132",
-      "date": "2026-05-06T22:08:13Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.132",
-      "snippet": "What's changed\n- Added CLAUDECODESESSIONID environment variable to the Bash tool subprocess environment, matching the sessionid passed to hooks\n- Added CLAUDECODEDISABLEALTERNATESCREEN=1 env var to opt out of the fullscreen alternate-screen renderer and keep the conversation in the terminal's native",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.132|claude-code-releases"
     }
   ]
 }

@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 26 Jun 2026 09:32:33 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 08:39:56 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.195</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.195</link>
+      <guid isPermaLink="false">v2.1.195</guid>
+      <pubDate>Fri, 26 Jun 2026 21:29:42 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added CLAUDECODEDISABLEMOUSECLICKS to disable mouse click/drag/hover in fullscreen mode while keeping wheel scroll
+- Fixed hook matchers with hyphenated identifiers (e.g. code-reviewer, mcpbrave-search) accidentally substring-matching — they now exact-match. Use mcpbrave-search. to </description>
+    </item>
     <item>
       <title>v2.1.193</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.193</link>
@@ -498,16 +508,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Added worktree.baseRef setting (fresh | head) to choose whether --worktree, EnterWorktree, and agent-isolation worktrees branch from origin/&lt;default&gt; or local HEAD. Note: the default fresh changes EnterWorktree&apos;s base back to origin/&lt;default&gt; (it has been local HEAD since 2.1.128) —</description>
-    </item>
-    <item>
-      <title>v2.1.132</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.132</link>
-      <guid isPermaLink="false">v2.1.132</guid>
-      <pubDate>Wed, 06 May 2026 22:08:13 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added CLAUDECODESESSIONID environment variable to the Bash tool subprocess environment, matching the sessionid passed to hooks
-- Added CLAUDECODEDISABLEALTERNATESCREEN=1 env var to opt out of the fullscreen alternate-screen renderer and keep the conversation in the terminal&apos;s native</description>
     </item>
   </channel>
 </rss>
