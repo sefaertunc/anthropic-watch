@@ -52,10 +52,14 @@ describe("twitter-account: waitForSlot spacing gate", () => {
 describe("scrapeTwitterAccount", () => {
   let tmpDir;
   let savedKey;
+  let savedProvider;
+  let savedXquikKey;
 
   beforeEach(async () => {
     tmpDir = await mkdtemp(join(tmpdir(), "aw-test-"));
     savedKey = process.env.TWITTERAPI_IO_KEY;
+    savedProvider = process.env.TWITTER_PROVIDER;
+    savedXquikKey = process.env.XQUIK_API_KEY;
     _resetGateForTests();
   });
 
@@ -63,6 +67,10 @@ describe("scrapeTwitterAccount", () => {
     await rm(tmpDir, { recursive: true, force: true });
     if (savedKey === undefined) delete process.env.TWITTERAPI_IO_KEY;
     else process.env.TWITTERAPI_IO_KEY = savedKey;
+    if (savedProvider === undefined) delete process.env.TWITTER_PROVIDER;
+    else process.env.TWITTER_PROVIDER = savedProvider;
+    if (savedXquikKey === undefined) delete process.env.XQUIK_API_KEY;
+    else process.env.XQUIK_API_KEY = savedXquikKey;
   });
 
   function makeSource(fixturePath, overrides = {}) {
@@ -87,7 +95,7 @@ describe("scrapeTwitterAccount", () => {
 
   it("should return [] without fetching when TWITTERAPI_IO_KEY is unset (Rule 4 graceful-skip carve-out)", async () => {
     delete process.env.TWITTERAPI_IO_KEY;
-    // No fixtureFile — if the scraper ever reaches fetchSource, it would try
+    // No fixtureFile - if the scraper ever reaches fetchSource, it would try
     // to hit the live API. Returning [] immediately is the contract.
     const logSpy = vi.spyOn(console, "log").mockImplementation(() => {});
     const items = await scrapeTwitterAccount(
@@ -169,7 +177,7 @@ describe("scrapeTwitterAccount", () => {
         sourceName: "@AnthropicAI (official)",
       }),
     );
-    // Date conversion: Twitter legacy → ISO-8601.
+    // Date conversion: Twitter legacy to ISO-8601.
     expect(items[0].date).toBe("2026-04-22T17:36:07.000Z");
   });
 
@@ -179,7 +187,7 @@ describe("scrapeTwitterAccount", () => {
       data: {
         tweets: [
           {
-            // Number literals like this lose precision in JSON.parse — but
+            // Number literals like this lose precision in JSON.parse - but
             // we test the code path where the JSON-parsed id is coerced to
             // string via String() so consumers always see a string.
             id: "2047006548149289017",
@@ -238,5 +246,66 @@ describe("scrapeTwitterAccount", () => {
     });
     const items = await scrapeTwitterAccount(makeSource(fixturePath));
     expect(items[0].snippet).toBeNull();
+  });
+
+  it("should return [] without fetching when Xquik is selected and XQUIK_API_KEY is unset", async () => {
+    process.env.TWITTER_PROVIDER = "xquik";
+    delete process.env.XQUIK_API_KEY;
+    const logSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+    const items = await scrapeTwitterAccount(
+      makeSource(null, { fixtureFile: null }),
+    );
+    expect(items).toEqual([]);
+    const combined = logSpy.mock.calls.map((c) => c[0]).join("\n");
+    expect(combined).toContain("XQUIK_API_KEY not set");
+    expect(combined).toContain("AnthropicAI");
+    logSpy.mockRestore();
+  });
+
+  it("should parse Xquik search results when TWITTER_PROVIDER is xquik", async () => {
+    process.env.TWITTER_PROVIDER = "xquik";
+    process.env.XQUIK_API_KEY = "test-key";
+    const fixturePath = await writeFixture({
+      tweets: [
+        {
+          id: "2047006548149289017",
+          text: "Hello from Xquik",
+          url: "https://x.com/AnthropicAI/status/2047006548149289017",
+          createdAt: "2026-04-22T17:36:07.000Z",
+        },
+        {
+          id: "2047006548149289018",
+          text: "",
+          createdAt: "2026-04-22T17:37:07.000Z",
+        },
+      ],
+      has_next_page: false,
+      next_cursor: "",
+    });
+
+    const items = await scrapeTwitterAccount(
+      makeSource(fixturePath, { limit: 1 }),
+    );
+
+    expect(items).toHaveLength(1);
+    expect(items[0]).toEqual(
+      expect.objectContaining({
+        id: "2047006548149289017",
+        title: "Hello from Xquik",
+        date: "2026-04-22T17:36:07.000Z",
+        url: "https://x.com/AnthropicAI/status/2047006548149289017",
+        snippet: "Hello from Xquik",
+        source: "twitter-anthropicai",
+        sourceCategory: "community",
+        sourceName: "@AnthropicAI (official)",
+      }),
+    );
+  });
+
+  it("should reject unsupported TWITTER_PROVIDER values", async () => {
+    process.env.TWITTER_PROVIDER = "unknown";
+    await expect(
+      scrapeTwitterAccount(makeSource(null, { fixtureFile: null })),
+    ).rejects.toThrow('Unsupported TWITTER_PROVIDER "unknown"');
   });
 });
