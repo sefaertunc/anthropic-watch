@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 29 Jun 2026 11:05:34 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 09:41:49 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.196</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.196</link>
+      <guid isPermaLink="false">v2.1.196</guid>
+      <pubDate>Mon, 29 Jun 2026 23:27:32 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added support for organization default models — admins set it in the org console; it shows as &quot;Org default&quot; (or &quot;Role default&quot;) in /model when you haven&apos;t picked one yourself
+- Added readable default names for sessions at start, making them easier to identify and message
+- Added cli</description>
+    </item>
     <item>
       <title>v2.1.195</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.195</link>
@@ -499,15 +510,6 @@
 - Added CLAUDECODEENABLEFEEDBACKSURVEYFOROTEL to re-enable the session quality survey for enterprises capturing responses through OpenTelemetry
 - Added settings.autoMode.harddeny for auto mode classifier rules that block unconditionally regardless of user intent or allow exceptions
 - </description>
-    </item>
-    <item>
-      <title>v2.1.133</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.133</link>
-      <guid isPermaLink="false">v2.1.133</guid>
-      <pubDate>Thu, 07 May 2026 23:49:04 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added worktree.baseRef setting (fresh | head) to choose whether --worktree, EnterWorktree, and agent-isolation worktrees branch from origin/&lt;default&gt; or local HEAD. Note: the default fresh changes EnterWorktree&apos;s base back to origin/&lt;default&gt; (it has been local HEAD since 2.1.128) —</description>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,119 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-29T11:05:34.282Z",
+  "generated": "2026-06-30T09:41:49.143Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "81af407",
+      "title": "chore(catalog): sync manifests + fix skill emoji (wave 2) (#2395)",
+      "date": "2026-06-30T02:44:51Z",
+      "url": "https://github.com/affaan-m/ECC/commit/81af40761939056ab3dc54732fd4f562a27309d0",
+      "snippet": "* chore(catalog): sync manifests after skill batch (#2275 #2377 #2378 #2381)  Update skill counts (273 -> 277) across catalog docs after the verified skill batch.  * fix(skills): replace emoji with ASCII in growth-log + loop-design-check  check-unicode-safety (pre-push gate) bans emoji in SKILL.md; ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "81af407|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0bd2b2c",
+      "title": "feat: add loop-design-check skill (design + review goal-oriented agent loops) (#2381)",
+      "date": "2026-06-30T02:22:58Z",
+      "url": "https://github.com/affaan-m/ECC/commit/0bd2b2cdfbf234a1cf91a2b36b1e4fbe97a76869",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0bd2b2c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "51bced9",
+      "title": "Stop hook: verify thinking quality at session end — task completeness, assumptions, stale logs, disk space (delivery-gate) (#2378)",
+      "date": "2026-06-30T02:22:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/51bced9a1fb23606e5d68ef28181e266055048f6",
+      "snippet": "* Restore delivery-gate: Stop hook with learning capture enforcement (auto-closed by fork sync, now on clean branch)  * Fix bot findings: log level→INFO (DISK_REMIND dead code), count_edits full transcript (not truncated), memory-dir-absent warning (not silent pass), SKILL.md description accuracy  *",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "51bced9|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b5806b3",
+      "title": "Add growth-log skill: methodology for effective learning capture (#2377)",
+      "date": "2026-06-30T02:22:51Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b5806b3d1c351a1b53eb44dc718cbcaac7ada006",
+      "snippet": "* Add growth-log skill: methodology for writing effective, transferable growth log entries  * Add metadata.origin: ECC frontmatter per repo convention (Greptile feedback)  * Re-sign: apply GPG-verified commit to growth-log branch (rebase artifact, content unchanged)  * docs(growth-log): v1.1.0 — rem",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b5806b3|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a141db3",
+      "title": "feat(rules,skills): add React Native / Expo rules pack and react-native-patterns skill (#2275)",
+      "date": "2026-06-30T02:22:48Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a141db3ad2c52190271b7784c291f03be6bf6f76",
+      "snippet": "* feat(rules,skills): add React Native / Expo rules pack and react-native-patterns skill  * fix(rules,skills): address review feedback — safeParse nav example, drop deprecated sentry-expo, memoize list renderItem, clarify New Architecture SDK support  * fix(rules,skills): drop deprecated Flipper, su",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a141db3|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "c2bcc4e",
+      "title": "feat(continuous-learning-v2): make observer model configurable via ECC_OBSERVER_MODEL (#2390)",
+      "date": "2026-06-30T01:43:42Z",
+      "url": "https://github.com/affaan-m/ECC/commit/c2bcc4ec2f783c59a62a590d571e88aa23904c72",
+      "snippet": "* feat(continuous-learning-v2): make observer model configurable via ECC_OBSERVER_MODEL  The observer hardcoded `--model haiku`. Parameterize as \"${ECC_OBSERVER_MODEL:-haiku}\": the haiku default is preserved (no behavior change for existing users), but users can opt into a stronger model — e.g. `ECC",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "c2bcc4e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f720885",
+      "title": "fix(clv2): archive observations only after successful analysis in observer-loop (#2386)",
+      "date": "2026-06-30T01:43:37Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f720885cea7aba6afc033b72a2becde48d1d819e",
+      "snippet": "analyze_observations moved observations.jsonl into observations.archive/ unconditionally, even when the Claude analysis failed (timeout, non-zero exit, rate limit). Because the analyzer only reads the live file, a failed batch was archived and never re-analyzed, silently dropping the instincts it wo",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f720885|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a36148f",
+      "title": "test(clv2): add coverage for instinct-cli prune, projects ops, promote dry-run, normalize-url (#2374)",
+      "date": "2026-06-30T01:43:32Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a36148fff97293c8cecc142ddda71e56fa072c76",
+      "snippet": "* test(clv2): cover instinct-cli prune, projects ops, promote dry-run, normalize-url  Add pytest coverage for previously-untested functions in skills/continuous-learning-v2/scripts/instinct-cli.py:  - _normalize_remote_url: scp/https/file forms, credential + .git   stripping, network lowercasing, ca",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a36148f|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a6d12ec",
+      "title": "fix(clv2): surface SIGALRM timeout drops in observe.sh (#2373)",
+      "date": "2026-06-30T01:43:28Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a6d12ec21e39b45d3b463febac97441279f8c6d7",
+      "snippet": "* fix(clv2): surface SIGALRM timeout drops in observe.sh  The inline-Python observation writers in observe.sh arm a signal.SIGALRM alarm (8s) so they self-terminate before the async hook's 10s timeout can orphan them (#2278). The handler _ecc_bail called sys.exit(0) with no logging, so when the alar",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a6d12ec|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a89b32c",
+      "title": "fix(clv2): serialize observer signal-counter to stop dropped increments (#2372)",
+      "date": "2026-06-30T01:43:23Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a89b32c2b55a9511aec2c72539aeb7ab35f47c41",
+      "snippet": "observe.sh bumps the SIGUSR1 throttle counter in ${PROJECT_DIR}/.observer-signal-counter with an unlocked read-modify-write. The hook runs on every tool call, so concurrent invocations read the same value, both increment, and lose a write, signaling the observer at unpredictable intervals and defeat",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a89b32c|gh-commits-everything-claude-code"
+    },
     {
       "id": "2bc924f",
       "title": "fix(clv2): harden registry writes and project deletion (#2294, #2297) (#2323)",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "8ad4151|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "29edd57",
-      "title": "release: 2.0.0 — the agent harness operating system",
-      "date": "2026-06-10T01:20:33Z",
-      "url": "https://github.com/affaan-m/ECC/commit/29edd57708bee26f16363c16a28fec7f6b09f53f",
-      "snippet": "Graduate 2.0.0-rc.1 to stable. Bump version across package, plugin, marketplace, OpenCode, agent metadata, VERSION, and all localized docs. Add 2.0.0 release notes + README sections (en/zh/pt-BR/tr), CHANGELOG entry, and the ECC community Discord bot (dependency-free gateway client + guild command r",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "29edd57|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "3e30f1a",
-      "title": "ci: harden workflows and sponsor code review config",
-      "date": "2026-06-10T01:20:17Z",
-      "url": "https://github.com/affaan-m/ECC/commit/3e30f1a56a91f46ba7981bf594c1f4f4821279ba",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "3e30f1a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "10c303e",
-      "title": "ci: harden release announce checkout",
-      "date": "2026-06-10T01:03:22Z",
-      "url": "https://github.com/affaan-m/ECC/commit/10c303e609a6769c565de9cc7ec288b7afdefb6c",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "10c303e|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4f69955",
-      "title": "docs: fix README markdownlint spacing",
-      "date": "2026-06-10T00:47:15Z",
-      "url": "https://github.com/affaan-m/ECC/commit/4f69955f881303a8c623349781ba15d6020aa731",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4f69955|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "3c5bcc2",
-      "title": "security: harden advisory intake and dependency coverage",
-      "date": "2026-06-10T00:46:14Z",
-      "url": "https://github.com/affaan-m/ECC/commit/3c5bcc2b66a5ffd9d5e12051a0167bda71e92751",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "3c5bcc2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8ee5946",
-      "title": "docs: refresh sponsor and readme surface",
-      "date": "2026-06-10T00:26:31Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8ee59467121d0f59ade431ebc7d59d3a67cfdbfe",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8ee5946|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "edebcc8",
-      "title": "feat(discord): release -> #announcements auto-post + pin + GitHub Discussions (#2201)",
-      "date": "2026-06-09T02:38:03Z",
-      "url": "https://github.com/affaan-m/ECC/commit/edebcc89efa09dc2705748151d98286ff3bb6023",
-      "snippet": "On a published GitHub release, post the notes to the ECC Discord #announcements channel (via bot), pin it, and cross-post to GitHub Discussions (Announcements category). Release data flows through env vars (no shell interpolation of untrusted input). Secrets: DISCORD_BOT_TOKEN, DISCORD_ANNOUNCE_CHAN",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "edebcc8|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "b9e5924",
-      "title": "fix(skill): remove broken routing reference to non-existent python-installer-packaging",
-      "date": "2026-06-07T10:05:55Z",
-      "url": "https://github.com/affaan-m/ECC/commit/b9e5924e5ecefb0d1f81a3014f5c589eaef955c9",
-      "snippet": "cubic P2: the fallback skill `python-installer-packaging` does not exist in the repo, creating a broken routing dependency. Replace both references (description + When to Activate) with self-contained scoping language that keeps the \"advanced optimization only\" gating without pointing at a missing s",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "b9e5924|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "24dff3a",
-      "title": "fix(skill): English description, clean placeholders, green CI for generating-python-installer",
-      "date": "2026-06-07T09:57:38Z",
-      "url": "https://github.com/affaan-m/ECC/commit/24dff3a1e317fcd690e54a2ecdcdd83a3923b60d",
-      "snippet": "Addresses PR review feedback (English description + cleaned placeholders + CI green) and the inline bot findings.  - Add English description and canonical \"When to Activate\" / \"How It Works\" /   \"Examples\" sections for auto-activation; keep the existing Chinese content - Replace the \"某商业级桌面应用\" place",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "24dff3a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "90dfd95",
-      "title": "feat: add orch-* orchestrator skill family (#2153)",
-      "date": "2026-06-07T08:15:31Z",
-      "url": "https://github.com/affaan-m/ECC/commit/90dfd9505dc860714cf3cc8216ad7bbb96d93365",
-      "snippet": "* feat: add orch-* orchestrator skill family  Lightweight wrappers that orchestrate existing ECC agents through a gated Research -> Plan -> TDD -> Review -> Commit pipeline, right-sized per task.  - orch-pipeline: shared engine (phases, size classifier, two gates, agent map) - orch-add-feature/chang",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "90dfd95|gh-commits-everything-claude-code"
     }
   ]
 }

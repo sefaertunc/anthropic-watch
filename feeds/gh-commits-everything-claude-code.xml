@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 29 Jun 2026 11:05:34 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 09:41:49 GMT</lastBuildDate>
+    <item>
+      <title>chore(catalog): sync manifests + fix skill emoji (wave 2) (#2395)</title>
+      <link>https://github.com/affaan-m/ECC/commit/81af40761939056ab3dc54732fd4f562a27309d0</link>
+      <guid isPermaLink="false">81af407</guid>
+      <pubDate>Tue, 30 Jun 2026 02:44:51 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* chore(catalog): sync manifests after skill batch (#2275 #2377 #2378 #2381)  Update skill counts (273 -&gt; 277) across catalog docs after the verified skill batch.  * fix(skills): replace emoji with ASCII in growth-log + loop-design-check  check-unicode-safety (pre-push gate) bans emoji in SKILL.md; </description>
+    </item>
+    <item>
+      <title>feat: add loop-design-check skill (design + review goal-oriented agent loops) (#2381)</title>
+      <link>https://github.com/affaan-m/ECC/commit/0bd2b2cdfbf234a1cf91a2b36b1e4fbe97a76869</link>
+      <guid isPermaLink="false">0bd2b2c</guid>
+      <pubDate>Tue, 30 Jun 2026 02:22:58 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Stop hook: verify thinking quality at session end — task completeness, assumptions, stale logs, disk space (delivery-gate) (#2378)</title>
+      <link>https://github.com/affaan-m/ECC/commit/51bced9a1fb23606e5d68ef28181e266055048f6</link>
+      <guid isPermaLink="false">51bced9</guid>
+      <pubDate>Tue, 30 Jun 2026 02:22:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* Restore delivery-gate: Stop hook with learning capture enforcement (auto-closed by fork sync, now on clean branch)  * Fix bot findings: log level→INFO (DISK_REMIND dead code), count_edits full transcript (not truncated), memory-dir-absent warning (not silent pass), SKILL.md description accuracy  *</description>
+    </item>
+    <item>
+      <title>Add growth-log skill: methodology for effective learning capture (#2377)</title>
+      <link>https://github.com/affaan-m/ECC/commit/b5806b3d1c351a1b53eb44dc718cbcaac7ada006</link>
+      <guid isPermaLink="false">b5806b3</guid>
+      <pubDate>Tue, 30 Jun 2026 02:22:51 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* Add growth-log skill: methodology for writing effective, transferable growth log entries  * Add metadata.origin: ECC frontmatter per repo convention (Greptile feedback)  * Re-sign: apply GPG-verified commit to growth-log branch (rebase artifact, content unchanged)  * docs(growth-log): v1.1.0 — rem</description>
+    </item>
+    <item>
+      <title>feat(rules,skills): add React Native / Expo rules pack and react-native-patterns skill (#2275)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a141db3ad2c52190271b7784c291f03be6bf6f76</link>
+      <guid isPermaLink="false">a141db3</guid>
+      <pubDate>Tue, 30 Jun 2026 02:22:48 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat(rules,skills): add React Native / Expo rules pack and react-native-patterns skill  * fix(rules,skills): address review feedback — safeParse nav example, drop deprecated sentry-expo, memoize list renderItem, clarify New Architecture SDK support  * fix(rules,skills): drop deprecated Flipper, su</description>
+    </item>
+    <item>
+      <title>feat(continuous-learning-v2): make observer model configurable via ECC_OBSERVER_MODEL (#2390)</title>
+      <link>https://github.com/affaan-m/ECC/commit/c2bcc4ec2f783c59a62a590d571e88aa23904c72</link>
+      <guid isPermaLink="false">c2bcc4e</guid>
+      <pubDate>Tue, 30 Jun 2026 01:43:42 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat(continuous-learning-v2): make observer model configurable via ECC_OBSERVER_MODEL  The observer hardcoded `--model haiku`. Parameterize as &quot;${ECC_OBSERVER_MODEL:-haiku}&quot;: the haiku default is preserved (no behavior change for existing users), but users can opt into a stronger model — e.g. `ECC</description>
+    </item>
+    <item>
+      <title>fix(clv2): archive observations only after successful analysis in observer-loop (#2386)</title>
+      <link>https://github.com/affaan-m/ECC/commit/f720885cea7aba6afc033b72a2becde48d1d819e</link>
+      <guid isPermaLink="false">f720885</guid>
+      <pubDate>Tue, 30 Jun 2026 01:43:37 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>analyze_observations moved observations.jsonl into observations.archive/ unconditionally, even when the Claude analysis failed (timeout, non-zero exit, rate limit). Because the analyzer only reads the live file, a failed batch was archived and never re-analyzed, silently dropping the instincts it wo</description>
+    </item>
+    <item>
+      <title>test(clv2): add coverage for instinct-cli prune, projects ops, promote dry-run, normalize-url (#2374)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a36148fff97293c8cecc142ddda71e56fa072c76</link>
+      <guid isPermaLink="false">a36148f</guid>
+      <pubDate>Tue, 30 Jun 2026 01:43:32 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* test(clv2): cover instinct-cli prune, projects ops, promote dry-run, normalize-url  Add pytest coverage for previously-untested functions in skills/continuous-learning-v2/scripts/instinct-cli.py:  - _normalize_remote_url: scp/https/file forms, credential + .git   stripping, network lowercasing, ca</description>
+    </item>
+    <item>
+      <title>fix(clv2): surface SIGALRM timeout drops in observe.sh (#2373)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a6d12ec21e39b45d3b463febac97441279f8c6d7</link>
+      <guid isPermaLink="false">a6d12ec</guid>
+      <pubDate>Tue, 30 Jun 2026 01:43:28 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(clv2): surface SIGALRM timeout drops in observe.sh  The inline-Python observation writers in observe.sh arm a signal.SIGALRM alarm (8s) so they self-terminate before the async hook&apos;s 10s timeout can orphan them (#2278). The handler _ecc_bail called sys.exit(0) with no logging, so when the alar</description>
+    </item>
+    <item>
+      <title>fix(clv2): serialize observer signal-counter to stop dropped increments (#2372)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a89b32c2b55a9511aec2c72539aeb7ab35f47c41</link>
+      <guid isPermaLink="false">a89b32c</guid>
+      <pubDate>Tue, 30 Jun 2026 01:43:23 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>observe.sh bumps the SIGUSR1 throttle counter in ${PROJECT_DIR}/.observer-signal-counter with an unlocked read-modify-write. The hook runs on every tool call, so concurrent invocations read the same value, both increment, and lose a write, signaling the observer at unpredictable intervals and defeat</description>
+    </item>
     <item>
       <title>fix(clv2): harden registry writes and project deletion (#2294, #2297) (#2323)</title>
       <link>https://github.com/affaan-m/ECC/commit/2bc924faf2f8e893bfe0af86b1931283693c30ae</link>
@@ -326,86 +406,6 @@
       <pubDate>Wed, 10 Jun 2026 01:42:38 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>release: 2.0.0 — the agent harness operating system</title>
-      <link>https://github.com/affaan-m/ECC/commit/29edd57708bee26f16363c16a28fec7f6b09f53f</link>
-      <guid isPermaLink="false">29edd57</guid>
-      <pubDate>Wed, 10 Jun 2026 01:20:33 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Graduate 2.0.0-rc.1 to stable. Bump version across package, plugin, marketplace, OpenCode, agent metadata, VERSION, and all localized docs. Add 2.0.0 release notes + README sections (en/zh/pt-BR/tr), CHANGELOG entry, and the ECC community Discord bot (dependency-free gateway client + guild command r</description>
-    </item>
-    <item>
-      <title>ci: harden workflows and sponsor code review config</title>
-      <link>https://github.com/affaan-m/ECC/commit/3e30f1a56a91f46ba7981bf594c1f4f4821279ba</link>
-      <guid isPermaLink="false">3e30f1a</guid>
-      <pubDate>Wed, 10 Jun 2026 01:20:17 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>ci: harden release announce checkout</title>
-      <link>https://github.com/affaan-m/ECC/commit/10c303e609a6769c565de9cc7ec288b7afdefb6c</link>
-      <guid isPermaLink="false">10c303e</guid>
-      <pubDate>Wed, 10 Jun 2026 01:03:22 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: fix README markdownlint spacing</title>
-      <link>https://github.com/affaan-m/ECC/commit/4f69955f881303a8c623349781ba15d6020aa731</link>
-      <guid isPermaLink="false">4f69955</guid>
-      <pubDate>Wed, 10 Jun 2026 00:47:15 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>security: harden advisory intake and dependency coverage</title>
-      <link>https://github.com/affaan-m/ECC/commit/3c5bcc2b66a5ffd9d5e12051a0167bda71e92751</link>
-      <guid isPermaLink="false">3c5bcc2</guid>
-      <pubDate>Wed, 10 Jun 2026 00:46:14 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: refresh sponsor and readme surface</title>
-      <link>https://github.com/affaan-m/ECC/commit/8ee59467121d0f59ade431ebc7d59d3a67cfdbfe</link>
-      <guid isPermaLink="false">8ee5946</guid>
-      <pubDate>Wed, 10 Jun 2026 00:26:31 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat(discord): release -&gt; #announcements auto-post + pin + GitHub Discussions (#2201)</title>
-      <link>https://github.com/affaan-m/ECC/commit/edebcc89efa09dc2705748151d98286ff3bb6023</link>
-      <guid isPermaLink="false">edebcc8</guid>
-      <pubDate>Tue, 09 Jun 2026 02:38:03 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>On a published GitHub release, post the notes to the ECC Discord #announcements channel (via bot), pin it, and cross-post to GitHub Discussions (Announcements category). Release data flows through env vars (no shell interpolation of untrusted input). Secrets: DISCORD_BOT_TOKEN, DISCORD_ANNOUNCE_CHAN</description>
-    </item>
-    <item>
-      <title>fix(skill): remove broken routing reference to non-existent python-installer-packaging</title>
-      <link>https://github.com/affaan-m/ECC/commit/b9e5924e5ecefb0d1f81a3014f5c589eaef955c9</link>
-      <guid isPermaLink="false">b9e5924</guid>
-      <pubDate>Sun, 07 Jun 2026 10:05:55 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>cubic P2: the fallback skill `python-installer-packaging` does not exist in the repo, creating a broken routing dependency. Replace both references (description + When to Activate) with self-contained scoping language that keeps the &quot;advanced optimization only&quot; gating without pointing at a missing s</description>
-    </item>
-    <item>
-      <title>fix(skill): English description, clean placeholders, green CI for generating-python-installer</title>
-      <link>https://github.com/affaan-m/ECC/commit/24dff3a1e317fcd690e54a2ecdcdd83a3923b60d</link>
-      <guid isPermaLink="false">24dff3a</guid>
-      <pubDate>Sun, 07 Jun 2026 09:57:38 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Addresses PR review feedback (English description + cleaned placeholders + CI green) and the inline bot findings.  - Add English description and canonical &quot;When to Activate&quot; / &quot;How It Works&quot; /   &quot;Examples&quot; sections for auto-activation; keep the existing Chinese content - Replace the &quot;某商业级桌面应用&quot; place</description>
-    </item>
-    <item>
-      <title>feat: add orch-* orchestrator skill family (#2153)</title>
-      <link>https://github.com/affaan-m/ECC/commit/90dfd9505dc860714cf3cc8216ad7bbb96d93365</link>
-      <guid isPermaLink="false">90dfd95</guid>
-      <pubDate>Sun, 07 Jun 2026 08:15:31 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat: add orch-* orchestrator skill family  Lightweight wrappers that orchestrate existing ECC agents through a gated Research -&gt; Plan -&gt; TDD -&gt; Review -&gt; Commit pipeline, right-sized per task.  - orch-pipeline: shared engine (phases, size classifier, two gates, agent map) - orch-add-feature/chang</description>
     </item>
   </channel>
 </rss>
