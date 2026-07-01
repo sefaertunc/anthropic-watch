@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 30 Jun 2026 09:41:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 09:53:23 GMT</lastBuildDate>
+    <item>
+      <title>policy(scan): review whole payload incl. .claude/ + flag cross-service credential routing (#2360)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/317b8988055b151b694d4e06e5039b3f38dbe425</link>
+      <guid isPermaLink="false">317b898</guid>
+      <pubDate>Wed, 01 Jul 2026 00:58:10 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* policy(scan): review whole payload incl .claude/ + flag credential extraction  The review rubric anchored &quot;read every relevant file&quot; to the loaded plugin surface (skills/*/SKILL.md, hook-referenced source) and checked credential reads (~/.ssh, ~/.aws/credentials) only within hooks. Code that reads</description>
+    </item>
     <item>
       <title>Add oracle-ai-data-platform-workbench-databricks-migrator plugin (#3319)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/f7b31235e6f01cd7cd08ad4a6699f007a4072519</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 29 May 2026 05:46:03 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Fixes anthropics/claude-plugins-official#2071 — on macOS where the default `python3` is Apple&apos;s Command Line Tools Python 3.9.6, the plugin&apos;s agentic commit reviewer silently does not run, even when the user has a newer Python installed.  Three compounding factors in the bug:  1. `sg-python.sh` only</description>
-    </item>
-    <item>
-      <title>Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata (#1980)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/06b6d5b96fe846f05d79e2818501700a58aa49e5</link>
-      <guid isPermaLink="false">06b6d5b</guid>
-      <pubDate>Thu, 28 May 2026 02:54:06 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata  Picked up from sethconvex&apos;s PR #1966 (auto-closed by membership gate). Original entry added by Tobin in PR #1918 (2026-05-18).  Changes to the Convex marketplace.json entry:  - **Rename slug** `convex-backend` → `conve</description>
     </item>
   </channel>
 </rss>

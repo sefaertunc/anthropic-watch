@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-06-30T09:41:49.137Z",
+  "generated": "2026-07-01T09:53:23.547Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "317b898",
+      "title": "policy(scan): review whole payload incl. .claude/ + flag cross-service credential routing (#2360)",
+      "date": "2026-07-01T00:58:10Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/317b8988055b151b694d4e06e5039b3f38dbe425",
+      "snippet": "* policy(scan): review whole payload incl .claude/ + flag credential extraction  The review rubric anchored \"read every relevant file\" to the loaded plugin surface (skills/*/SKILL.md, hook-referenced source) and checked credential reads (~/.ssh, ~/.aws/credentials) only within hooks. Code that reads",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "317b898|gh-commits-plugins-official"
+    },
     {
       "id": "f7b3123",
       "title": "Add oracle-ai-data-platform-workbench-databricks-migrator plugin (#3319)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "a67587c|gh-commits-plugins-official"
-    },
-    {
-      "id": "06b6d5b",
-      "title": "Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata (#1980)",
-      "date": "2026-05-28T02:54:06Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/06b6d5b96fe846f05d79e2818501700a58aa49e5",
-      "snippet": "* Refresh Convex plugin: rename to `convex`, bump SHA to v1.0.1, richer metadata  Picked up from sethconvex's PR #1966 (auto-closed by membership gate). Original entry added by Tobin in PR #1918 (2026-05-18).  Changes to the Convex marketplace.json entry:  - **Rename slug** `convex-backend` → `conve",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "06b6d5b|gh-commits-plugins-official"
     }
   ]
 }
