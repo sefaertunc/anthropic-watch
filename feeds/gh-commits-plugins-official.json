@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-01T09:53:23.547Z",
+  "generated": "2026-07-02T09:17:21.570Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "6d57831",
+      "title": "Add idmp-plugin official plugin (#3389)",
+      "date": "2026-07-02T02:13:06Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/6d578313aa15e37f0562afb7535f6d0d5e612040",
+      "snippet": "* Add 1 plugin(s) to the official marketplace  * idmp: real description + author (was slug-description, no author)  Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>  ---------  Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "6d57831|gh-commits-plugins-official"
+    },
     {
       "id": "317b898",
       "title": "policy(scan): review whole payload incl. .claude/ + flag cross-service credential routing (#2360)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "04127de|gh-commits-plugins-official"
-    },
-    {
-      "id": "a67587c",
-      "title": "security-guidance: enable LLM review on default macOS Python 3.9",
-      "date": "2026-05-29T05:46:03Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/a67587c81615b0cb92f17ea7dba2ff1b34a9050d",
-      "snippet": "Fixes anthropics/claude-plugins-official#2071 — on macOS where the default `python3` is Apple's Command Line Tools Python 3.9.6, the plugin's agentic commit reviewer silently does not run, even when the user has a newer Python installed.  Three compounding factors in the bug:  1. `sg-python.sh` only",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "a67587c|gh-commits-plugins-official"
     }
   ]
 }

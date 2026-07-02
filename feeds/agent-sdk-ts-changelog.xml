@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 01 Jul 2026 09:53:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 09:17:21 GMT</lastBuildDate>
+    <item>
+      <title>0.3.198</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.198</guid>
+      <pubDate>Thu, 02 Jul 2026 09:16:31 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added a runtime warning when canUseTool is configured alongside allowedTools or bypassPermissions, which shadow the callback
+- Added per-server requesttimeoutms option to mcpsetservers control request
+- Fixed SDKUserMessage.isSynthetic not being mapped to isMeta on ingestion, which could cause syn</description>
+    </item>
     <item>
       <title>0.3.197</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>

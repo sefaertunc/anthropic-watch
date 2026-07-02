@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 01 Jul 2026 09:53:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 09:17:21 GMT</lastBuildDate>
+    <item>
+      <title>Add idmp-plugin official plugin (#3389)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6d578313aa15e37f0562afb7535f6d0d5e612040</link>
+      <guid isPermaLink="false">6d57831</guid>
+      <pubDate>Thu, 02 Jul 2026 02:13:06 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* Add 1 plugin(s) to the official marketplace  * idmp: real description + author (was slug-description, no author)  Co-Authored-By: Claude Opus 4.8 (1M context) &lt;noreply@anthropic.com&gt;  ---------  Co-authored-by: Claude Opus 4.8 (1M context) &lt;noreply@anthropic.com&gt;</description>
+    </item>
     <item>
       <title>policy(scan): review whole payload incl. .claude/ + flag cross-service credential routing (#2360)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/317b8988055b151b694d4e06e5039b3f38dbe425</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 29 May 2026 05:59:23 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: enable LLM review on default macOS Python 3.9 (#2071)</description>
-    </item>
-    <item>
-      <title>security-guidance: enable LLM review on default macOS Python 3.9</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a67587c81615b0cb92f17ea7dba2ff1b34a9050d</link>
-      <guid isPermaLink="false">a67587c</guid>
-      <pubDate>Fri, 29 May 2026 05:46:03 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Fixes anthropics/claude-plugins-official#2071 — on macOS where the default `python3` is Apple&apos;s Command Line Tools Python 3.9.6, the plugin&apos;s agentic commit reviewer silently does not run, even when the user has a newer Python installed.  Three compounding factors in the bug:  1. `sg-python.sh` only</description>
     </item>
   </channel>
 </rss>
