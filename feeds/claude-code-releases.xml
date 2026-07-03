@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 02 Jul 2026 09:17:21 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 09:22:49 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.199</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.199</link>
+      <guid isPermaLink="false">v2.1.199</guid>
+      <pubDate>Thu, 02 Jul 2026 23:35:18 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Stacked slash-skill invocations like /skill-a /skill-b do XYZ now load all leading skills (up to 5), not just the first
+- Fixed SSL certificate errors (TLS-inspecting proxies, missing NODEEXTRACACERTS, expired certs) burning retries before showing actionable guidance — they now fail</description>
+    </item>
     <item>
       <title>v2.1.198</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.198</link>
@@ -501,15 +511,6 @@
       <description>What&apos;s changed
 - Added agent view (Research Preview): a single list of every Claude Code session — running, blocked on you, or done. Run claude agents to get started. See https://code.claude.com/docs/en/agent-view
 - Added /goal command: set a completion condition and Claude keeps working across turn</description>
-    </item>
-    <item>
-      <title>v2.1.138</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.138</link>
-      <guid isPermaLink="false">v2.1.138</guid>
-      <pubDate>Sat, 09 May 2026 06:33:25 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Internal fixes</description>
     </item>
   </channel>
 </rss>
