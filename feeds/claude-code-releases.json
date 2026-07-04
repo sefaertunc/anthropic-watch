@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-03T09:22:49.176Z",
+  "generated": "2026-07-04T08:41:15.254Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.201",
+      "title": "v2.1.201",
+      "date": "2026-07-03T23:50:35Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.201",
+      "snippet": "What's changed\n- Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.201|claude-code-releases"
+    },
+    {
+      "id": "v2.1.200",
+      "title": "v2.1.200",
+      "date": "2026-07-03T16:52:33Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.200",
+      "snippet": "What's changed\n- Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config\n- Changed the \"default\" permission mode to \"Manual\" across the CLI, --help, VS Code, and JetBrains; --permission-mode manual and \"defaultMode\": \"manual\" are accepted alongside",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.200|claude-code-releases"
+    },
     {
       "id": "v2.1.199",
       "title": "v2.1.199",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.141|claude-code-releases"
-    },
-    {
-      "id": "v2.1.140",
-      "title": "v2.1.140",
-      "date": "2026-05-12T21:09:45Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.140",
-      "snippet": "What's changed\n- Improved Agent tool subagenttype matching to accept case- and separator-insensitive values (e.g. \"Code Reviewer\" resolves to code-reviewer)\n- Updated agent color palette\n- Fixed /goal silently hanging when disableAllHooks or allowManagedHooksOnly is set — now shows a clear message i",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.140|claude-code-releases"
-    },
-    {
-      "id": "v2.1.139",
-      "title": "v2.1.139",
-      "date": "2026-05-11T18:43:42Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
-      "snippet": "What's changed\n- Added agent view (Research Preview): a single list of every Claude Code session — running, blocked on you, or done. Run claude agents to get started. See https://code.claude.com/docs/en/agent-view\n- Added /goal command: set a completion condition and Claude keeps working across turn",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.139|claude-code-releases"
     }
   ]
 }

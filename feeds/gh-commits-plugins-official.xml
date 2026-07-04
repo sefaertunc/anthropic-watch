@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 03 Jul 2026 09:22:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 08:41:15 GMT</lastBuildDate>
+    <item>
+      <title>validate-licenses: also verify LICENSE content is Apache 2.0 (#3633)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8326199c6ec61fdcece33199b61bdaa4f9ae1570</link>
+      <guid isPermaLink="false">8326199</guid>
+      <pubDate>Sat, 04 Jul 2026 00:19:31 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The existing check only verified that a LICENSE file exists in each plugins/ directory. Extend it to also grep for &apos;Apache License&apos; and &apos;Version 2.0&apos; so that a placeholder or wrong-license file is caught at PR time rather than silently passing.  Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>feat: add renames map for auto-migration of renamed plugins (#3176)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/b01a789953570a420688033e8518dff3af35bb8d</link>
+      <guid isPermaLink="false">b01a789</guid>
+      <pubDate>Sat, 04 Jul 2026 00:17:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Adds a top-level &quot;renames&quot; map to marketplace.json with the four historical renames (adlc, airwallex, convex-backend, vals) so that users who installed under the old slug auto-migrate to the new one once the loader-side support in cci#43997 ships.  Also documents in README.md that plugin `name` is a</description>
+    </item>
     <item>
       <title>Add idmp-plugin official plugin (#3389)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/6d578313aa15e37f0562afb7535f6d0d5e612040</link>
@@ -390,22 +406,6 @@
       <pubDate>Fri, 29 May 2026 06:15:16 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Fixes anthropics/claude-plugins-official#2056 — on Windows, when the worktree contains an untracked file whose name has a character undefined in cp1252 (accented capitals like Á Í Ï Ð Ý, most CJK, emoji), the UserPromptSubmit hook crashes:    Exception in thread Thread-5 (_readerthread):     Unicode</description>
-    </item>
-    <item>
-      <title>security-guidance: gate XSS pattern rules to JS-family files</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/12a5376e205c8c519a53ee06115bd279a1e121d1</link>
-      <guid isPermaLink="false">12a5376</guid>
-      <pubDate>Fri, 29 May 2026 06:07:53 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Closes #410, #2037, #2045, #1640, #1280, #1329, #1341, #255, anthropics/claude-code#46720 (partial closes on overlap with other rules).  The plugin&apos;s substring-only XSS / browser-DOM rules (new_function_injection, react_dangerously_set_html, document_write_xss, innerHTML_xss, outerHTML_xss, insertAd</description>
-    </item>
-    <item>
-      <title>Merge pull request #2073 from anthropics/fix-2071-macos-python-39</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/04127de5d1e4ebadfa3190c55693e972b4c03acd</link>
-      <guid isPermaLink="false">04127de</guid>
-      <pubDate>Fri, 29 May 2026 05:59:23 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: enable LLM review on default macOS Python 3.9 (#2071)</description>
     </item>
   </channel>
 </rss>

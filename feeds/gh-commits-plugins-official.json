@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-03T09:22:49.211Z",
+  "generated": "2026-07-04T08:41:15.286Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "8326199",
+      "title": "validate-licenses: also verify LICENSE content is Apache 2.0 (#3633)",
+      "date": "2026-07-04T00:19:31Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/8326199c6ec61fdcece33199b61bdaa4f9ae1570",
+      "snippet": "The existing check only verified that a LICENSE file exists in each plugins/ directory. Extend it to also grep for 'Apache License' and 'Version 2.0' so that a placeholder or wrong-license file is caught at PR time rather than silently passing.  Co-authored-by: Claude <noreply@anthropic.com>",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "8326199|gh-commits-plugins-official"
+    },
+    {
+      "id": "b01a789",
+      "title": "feat: add renames map for auto-migration of renamed plugins (#3176)",
+      "date": "2026-07-04T00:17:44Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/b01a789953570a420688033e8518dff3af35bb8d",
+      "snippet": "Adds a top-level \"renames\" map to marketplace.json with the four historical renames (adlc, airwallex, convex-backend, vals) so that users who installed under the old slug auto-migrate to the new one once the loader-side support in cci#43997 ships.  Also documents in README.md that plugin `name` is a",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "b01a789|gh-commits-plugins-official"
+    },
     {
       "id": "6d57831",
       "title": "Add idmp-plugin official plugin (#3389)",
@@ -535,28 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "6a63e35|gh-commits-plugins-official"
-    },
-    {
-      "id": "12a5376",
-      "title": "security-guidance: gate XSS pattern rules to JS-family files",
-      "date": "2026-05-29T06:07:53Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/12a5376e205c8c519a53ee06115bd279a1e121d1",
-      "snippet": "Closes #410, #2037, #2045, #1640, #1280, #1329, #1341, #255, anthropics/claude-code#46720 (partial closes on overlap with other rules).  The plugin's substring-only XSS / browser-DOM rules (new_function_injection, react_dangerously_set_html, document_write_xss, innerHTML_xss, outerHTML_xss, insertAd",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "12a5376|gh-commits-plugins-official"
-    },
-    {
-      "id": "04127de",
-      "title": "Merge pull request #2073 from anthropics/fix-2071-macos-python-39",
-      "date": "2026-05-29T05:59:23Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/04127de5d1e4ebadfa3190c55693e972b4c03acd",
-      "snippet": "security-guidance: enable LLM review on default macOS Python 3.9 (#2071)",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "04127de|gh-commits-plugins-official"
     }
   ]
 }

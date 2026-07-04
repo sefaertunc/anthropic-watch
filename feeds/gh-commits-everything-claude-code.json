@@ -5,9 +5,108 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-03T09:22:49.217Z",
+  "generated": "2026-07-04T08:41:15.291Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "49128b5",
+      "title": "feat(install): add Kimi Code CLI install target (kimi-project adapter) (#2441)",
+      "date": "2026-07-04T05:24:13Z",
+      "url": "https://github.com/affaan-m/ECC/commit/49128b5763b7ac0b50acef35ac0bcca08d1576af",
+      "snippet": "Rebuild of #2154 on current main, following the hermes/openclaw (#2433) adapter recipe: 10-line kimi-project adapter (project kind, ./.kimi root), registry + helpers ownership, SUPPORTED_INSTALL_TARGETS + legacy-compat modules, kimi target on the 5 shared modules + .kimi in platform-configs paths, b",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "49128b5|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "c837139",
+      "title": "feat: add Hermes and OpenClaw harness install targets (#2433)",
+      "date": "2026-07-04T05:20:17Z",
+      "url": "https://github.com/affaan-m/ECC/commit/c837139e6cf3dff7bbbd3c847a56da119490612f",
+      "snippet": "* feat: add Hermes and OpenClaw harness install targets  - Add scripts/lib/install-targets/hermes-home.js and openclaw-home.js - Register new adapters in registry.js and helpers.js - Add hermes/openclaw to SUPPORTED_INSTALL_TARGETS, schema enum, and install help text - Add .hermes/ and .openclaw/ pl",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "c837139|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "3167852",
+      "title": "fix(gateguard): drop \\x00 placeholder in glob-to-regex (eslint no-control-regex) (#2439)",
+      "date": "2026-07-04T03:51:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/31678527538d9c41b6ef2a52e10e38b9c5d8a590",
+      "snippet": "Replace the NUL-byte '**' placeholder trick with split('**')/join('.*'), which is semantically identical and lint-clean under eslint 10.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "3167852|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0a35a02",
+      "title": "feat(gateguard): add GATEGUARD_EXEMPT_GLOBS path exemptions (#2432)",
+      "date": "2026-07-04T03:41:11Z",
+      "url": "https://github.com/affaan-m/ECC/commit/0a35a0216bbf5306c34771cc7c3f8cd286fa077f",
+      "snippet": "The fact-forcing gate fires once per first-touched file per session. In build-heavy sessions this costs a deny->retry round-trip on every new file, including trees where the gate's questions (\"who imports this? what schema?\") carry no signal: test files, generated artifacts, scratch dirs.  Add an op",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0a35a02|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "8b65439",
+      "title": "chore(continuous-learning-v2): standardize shell shebangs to env bash (#2401)",
+      "date": "2026-07-04T03:40:44Z",
+      "url": "https://github.com/affaan-m/ECC/commit/8b6543929e8e7ec80c851b8a0d4e04eebcbf1026",
+      "snippet": "* chore(continuous-learning-v2): standardize shell shebangs to env bash  Three scripts under skills/continuous-learning-v2/ used the hardcoded `#!/bin/bash` shebang while the other four already used the portable `#!/usr/bin/env bash`:  - hooks/observe.sh (runs on every hook invocation) - scripts/det",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "8b65439|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "ff4a06d",
+      "title": "feat(session-start): make instinct injection count and confidence threshold configurable (#2413)",
+      "date": "2026-07-04T03:40:17Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ff4a06dd91ec4e10b3a18dac6a8008b90152dea4",
+      "snippet": "* feat(session-start): make instinct injection count and confidence threshold configurable  Expose ECC_MAX_INJECTED_INSTINCTS and ECC_INSTINCT_CONFIDENCE_THRESHOLD so operators can tune SessionStart instinct injection without editing source. Defaults are unchanged (6 instincts, 0.7 confidence floor)",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ff4a06d|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "4159906",
+      "title": "fix(steering): add missing name attribute to auto-inclusion steering files (#2416)",
+      "date": "2026-07-04T03:39:50Z",
+      "url": "https://github.com/affaan-m/ECC/commit/41599069c381b9c7997abeeaeb1a5c6bce42901f",
+      "snippet": "* fix(steering): add missing name attribute to auto-inclusion steering files  * docs: include name attribute on steering file example  ---------  Co-authored-by: Jucelio Brandao Goncalves Junior <jbgjunior@simpress.com.br>",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4159906|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0a926b4",
+      "title": "fix(install): rewrite relative skill links for injected ecc namespace (#2399)",
+      "date": "2026-07-04T03:39:24Z",
+      "url": "https://github.com/affaan-m/ECC/commit/0a926b45ba171fdd843f30f6cc7cd87b5ccfff69",
+      "snippet": "* fix(install): rewrite relative skill links for injected ecc namespace  Skill and rule markdown is byte-copied during a claude install, but the home/project adapters inject an `ecc/` namespace segment (skills/<id> -> skills/ecc/<id>, rules/<x> -> rules/ecc/<x>). Source-relative links such as `../..",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0a926b4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "90f82d3",
+      "title": "fix(observer): replace hardcoded sleep 2 with PID file poll in start-observer.sh (#2356)",
+      "date": "2026-07-04T03:38:37Z",
+      "url": "https://github.com/affaan-m/ECC/commit/90f82d360b5a483926998a71ec10d87a3e5e59a0",
+      "snippet": "* fix(observer): replace hardcoded sleep 2 with PID file poll in start-observer.sh  Fixes #2295  The previous `sleep 2` after launching the observer loop has two problems: on slow filesystems or loaded systems 2 seconds may not be enough, producing a false-negative on the subsequent PID file check; ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "90f82d3|gh-commits-everything-claude-code"
+    },
     {
       "id": "81af407",
       "title": "chore(catalog): sync manifests + fix skill emoji (wave 2) (#2395)",
@@ -458,105 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "7777656|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "6c39cde",
-      "title": "fix(assets): replace hero brand mark with website coral circuit mark (#2232)",
-      "date": "2026-06-11T05:28:30Z",
-      "url": "https://github.com/affaan-m/ECC/commit/6c39cdecd30de45d0e0ce5bc02064a5dbe72b12a",
-      "snippet": "* fix(assets): replace hero brand mark with website coral circuit mark  The top-left mark in the hero banner was the assets/ecc-icon.svg double-E lettermark, not the actual brand logo. Swap in the coral vector circuit mark from the ECC-website header (src/styles/brandMarks.ts), keeping the ~70px foo",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "6c39cde|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "42fe8c3",
-      "title": "fix(ecc2): port webhook sender to ureq 3 Agent API (#2231)",
-      "date": "2026-06-11T05:26:59Z",
-      "url": "https://github.com/affaan-m/ECC/commit/42fe8c30838862193e63bae6643c6c82e62704b7",
-      "snippet": "#2209 bumped ureq to 3.x but the AgentBuilder-based webhook sender was not ported (branch update raced the merge). ureq 3 replaces AgentBuilder with Agent::config_builder(); timeouts are Option-wrapped and status() returns http::StatusCode.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "42fe8c3|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "75b5d64",
-      "title": "docs: sync skill count to 262 after config-gc skill landed (#2230)",
-      "date": "2026-06-11T05:22:34Z",
-      "url": "https://github.com/affaan-m/ECC/commit/75b5d64fc3ccb3743acde21b141f6860034b34ce",
-      "snippet": "npm run catalog:sync — #2216 added skills/config-gc without bumping documented counts, leaving catalog:check (and npm test) red on main.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "75b5d64|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "967940f",
-      "title": "docs: restore hero banner with ECC wordmark, v2.0.0 badge, and brand lettermark (#2229)",
-      "date": "2026-06-11T05:15:38Z",
-      "url": "https://github.com/affaan-m/ECC/commit/967940f43e9b51ea5709f527fc78124e2921d23e",
-      "snippet": "Recreates the v1.10 hero banner design (sourced from commit 602894ef) that PR #2225 replaced with a plain HTML header:  - Wordmark and breadcrumb now read ECC / affaan-m/ECC - Version badge reads v2.0.0 · Jun 2026, eyebrow updated to V2.0 - Top-left mark is the actual assets/ecc-icon.svg lettermark ",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "967940f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e4a0062",
-      "title": "docs(zh-CN): translate ecc-guide and parallel-execution-optimizer skills (#2217)",
-      "date": "2026-06-11T05:01:28Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e4a0062d9b5806a7053a70c35116c9f371f4b5ce",
-      "snippet": "* docs(zh-CN): translate ecc-guide and parallel-execution-optimizer skills  Adds Simplified Chinese translations for two untranslated skills, following the existing docs/zh-CN/skills/ conventions (frontmatter name/origin preserved, code blocks and output templates kept in English, prose fully transl",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e4a0062|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "66ad878",
-      "title": "feat(skills): add config-gc skill (#2216)",
-      "date": "2026-06-11T05:01:18Z",
-      "url": "https://github.com/affaan-m/ECC/commit/66ad878e686bf6aee05599c547fd72da206c8ba5",
-      "snippet": "* feat(skills): add config-gc skill  Garbage collection for Claude Code configuration sprawl: 8 scan channels (skills, memory, hooks, permissions, MCP, reminders, project history, caches), confirm-each-deletion human-in-the-loop, soft-delete with undo log. Subtractive counterpart to workspace-surfac",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "66ad878|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "c888d2b",
-      "title": "docs: update Greptile sponsor placement",
-      "date": "2026-06-10T03:53:13Z",
-      "url": "https://github.com/affaan-m/ECC/commit/c888d2b73f26d605ff6c172b433d4cad2200206f",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "c888d2b|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ff768db",
-      "title": "feat(mcp): single-connector default set + connector policy (#2219)",
-      "date": "2026-06-10T03:28:35Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ff768db363017376f82f70c1e6566e0be35b65d2",
-      "snippet": "Reduce the default .mcp.json to one connector (chrome-devtools) per the new policy in docs/MCP-CONNECTOR-POLICY.md: a default earns its slot only if it is universal AND MCP beats a CLI/API wrapped in a skill. June 2026 audit verdicts: github -> gh via github-ops skill; context7 -> REST via documenta",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ff768db|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8ad4151",
-      "title": "ci: remove copilot code-review surface",
-      "date": "2026-06-10T01:42:38Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8ad4151095e453301ce0e50374103bcd8f50ded2",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8ad4151|gh-commits-everything-claude-code"
     }
   ]
 }

@@ -6,7 +6,26 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 03 Jul 2026 09:22:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 08:41:15 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.201</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.201</link>
+      <guid isPermaLink="false">v2.1.201</guid>
+      <pubDate>Fri, 03 Jul 2026 23:50:35 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders</description>
+    </item>
+    <item>
+      <title>v2.1.200</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.200</link>
+      <guid isPermaLink="false">v2.1.200</guid>
+      <pubDate>Fri, 03 Jul 2026 16:52:33 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config
+- Changed the &quot;default&quot; permission mode to &quot;Manual&quot; across the CLI, --help, VS Code, and JetBrains; --permission-mode manual and &quot;defaultMode&quot;: &quot;manual&quot; are accepted alongside</description>
+    </item>
     <item>
       <title>v2.1.199</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.199</link>
@@ -490,27 +509,6 @@
 - Added terminalSequence field to hook JSON output so hooks can emit desktop notifications, window titles, and bells without a controlling terminal
 - Added CLAUDECODEPLUGINPREFERHTTPS to clone GitHub plugin sources over HTTPS instead of SSH, for environments without a GitHub SSH key
 -</description>
-    </item>
-    <item>
-      <title>v2.1.140</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.140</link>
-      <guid isPermaLink="false">v2.1.140</guid>
-      <pubDate>Tue, 12 May 2026 21:09:45 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Improved Agent tool subagenttype matching to accept case- and separator-insensitive values (e.g. &quot;Code Reviewer&quot; resolves to code-reviewer)
-- Updated agent color palette
-- Fixed /goal silently hanging when disableAllHooks or allowManagedHooksOnly is set — now shows a clear message i</description>
-    </item>
-    <item>
-      <title>v2.1.139</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.139</link>
-      <guid isPermaLink="false">v2.1.139</guid>
-      <pubDate>Mon, 11 May 2026 18:43:42 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added agent view (Research Preview): a single list of every Claude Code session — running, blocked on you, or done. Run claude agents to get started. See https://code.claude.com/docs/en/agent-view
-- Added /goal command: set a completion condition and Claude keeps working across turn</description>
     </item>
   </channel>
 </rss>

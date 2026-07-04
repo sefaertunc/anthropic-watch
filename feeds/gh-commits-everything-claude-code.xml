@@ -6,7 +6,79 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 03 Jul 2026 09:22:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 08:41:15 GMT</lastBuildDate>
+    <item>
+      <title>feat(install): add Kimi Code CLI install target (kimi-project adapter) (#2441)</title>
+      <link>https://github.com/affaan-m/ECC/commit/49128b5763b7ac0b50acef35ac0bcca08d1576af</link>
+      <guid isPermaLink="false">49128b5</guid>
+      <pubDate>Sat, 04 Jul 2026 05:24:13 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Rebuild of #2154 on current main, following the hermes/openclaw (#2433) adapter recipe: 10-line kimi-project adapter (project kind, ./.kimi root), registry + helpers ownership, SUPPORTED_INSTALL_TARGETS + legacy-compat modules, kimi target on the 5 shared modules + .kimi in platform-configs paths, b</description>
+    </item>
+    <item>
+      <title>feat: add Hermes and OpenClaw harness install targets (#2433)</title>
+      <link>https://github.com/affaan-m/ECC/commit/c837139e6cf3dff7bbbd3c847a56da119490612f</link>
+      <guid isPermaLink="false">c837139</guid>
+      <pubDate>Sat, 04 Jul 2026 05:20:17 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat: add Hermes and OpenClaw harness install targets  - Add scripts/lib/install-targets/hermes-home.js and openclaw-home.js - Register new adapters in registry.js and helpers.js - Add hermes/openclaw to SUPPORTED_INSTALL_TARGETS, schema enum, and install help text - Add .hermes/ and .openclaw/ pl</description>
+    </item>
+    <item>
+      <title>fix(gateguard): drop \x00 placeholder in glob-to-regex (eslint no-control-regex) (#2439)</title>
+      <link>https://github.com/affaan-m/ECC/commit/31678527538d9c41b6ef2a52e10e38b9c5d8a590</link>
+      <guid isPermaLink="false">3167852</guid>
+      <pubDate>Sat, 04 Jul 2026 03:51:49 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Replace the NUL-byte &apos;**&apos; placeholder trick with split(&apos;**&apos;)/join(&apos;.*&apos;), which is semantically identical and lint-clean under eslint 10.</description>
+    </item>
+    <item>
+      <title>feat(gateguard): add GATEGUARD_EXEMPT_GLOBS path exemptions (#2432)</title>
+      <link>https://github.com/affaan-m/ECC/commit/0a35a0216bbf5306c34771cc7c3f8cd286fa077f</link>
+      <guid isPermaLink="false">0a35a02</guid>
+      <pubDate>Sat, 04 Jul 2026 03:41:11 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The fact-forcing gate fires once per first-touched file per session. In build-heavy sessions this costs a deny-&gt;retry round-trip on every new file, including trees where the gate&apos;s questions (&quot;who imports this? what schema?&quot;) carry no signal: test files, generated artifacts, scratch dirs.  Add an op</description>
+    </item>
+    <item>
+      <title>chore(continuous-learning-v2): standardize shell shebangs to env bash (#2401)</title>
+      <link>https://github.com/affaan-m/ECC/commit/8b6543929e8e7ec80c851b8a0d4e04eebcbf1026</link>
+      <guid isPermaLink="false">8b65439</guid>
+      <pubDate>Sat, 04 Jul 2026 03:40:44 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* chore(continuous-learning-v2): standardize shell shebangs to env bash  Three scripts under skills/continuous-learning-v2/ used the hardcoded `#!/bin/bash` shebang while the other four already used the portable `#!/usr/bin/env bash`:  - hooks/observe.sh (runs on every hook invocation) - scripts/det</description>
+    </item>
+    <item>
+      <title>feat(session-start): make instinct injection count and confidence threshold configurable (#2413)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ff4a06dd91ec4e10b3a18dac6a8008b90152dea4</link>
+      <guid isPermaLink="false">ff4a06d</guid>
+      <pubDate>Sat, 04 Jul 2026 03:40:17 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat(session-start): make instinct injection count and confidence threshold configurable  Expose ECC_MAX_INJECTED_INSTINCTS and ECC_INSTINCT_CONFIDENCE_THRESHOLD so operators can tune SessionStart instinct injection without editing source. Defaults are unchanged (6 instincts, 0.7 confidence floor)</description>
+    </item>
+    <item>
+      <title>fix(steering): add missing name attribute to auto-inclusion steering files (#2416)</title>
+      <link>https://github.com/affaan-m/ECC/commit/41599069c381b9c7997abeeaeb1a5c6bce42901f</link>
+      <guid isPermaLink="false">4159906</guid>
+      <pubDate>Sat, 04 Jul 2026 03:39:50 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(steering): add missing name attribute to auto-inclusion steering files  * docs: include name attribute on steering file example  ---------  Co-authored-by: Jucelio Brandao Goncalves Junior &lt;jbgjunior@simpress.com.br&gt;</description>
+    </item>
+    <item>
+      <title>fix(install): rewrite relative skill links for injected ecc namespace (#2399)</title>
+      <link>https://github.com/affaan-m/ECC/commit/0a926b45ba171fdd843f30f6cc7cd87b5ccfff69</link>
+      <guid isPermaLink="false">0a926b4</guid>
+      <pubDate>Sat, 04 Jul 2026 03:39:24 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(install): rewrite relative skill links for injected ecc namespace  Skill and rule markdown is byte-copied during a claude install, but the home/project adapters inject an `ecc/` namespace segment (skills/&lt;id&gt; -&gt; skills/ecc/&lt;id&gt;, rules/&lt;x&gt; -&gt; rules/ecc/&lt;x&gt;). Source-relative links such as `../..</description>
+    </item>
+    <item>
+      <title>fix(observer): replace hardcoded sleep 2 with PID file poll in start-observer.sh (#2356)</title>
+      <link>https://github.com/affaan-m/ECC/commit/90f82d360b5a483926998a71ec10d87a3e5e59a0</link>
+      <guid isPermaLink="false">90f82d3</guid>
+      <pubDate>Sat, 04 Jul 2026 03:38:37 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(observer): replace hardcoded sleep 2 with PID file poll in start-observer.sh  Fixes #2295  The previous `sleep 2` after launching the observer loop has two problems: on slow filesystems or loaded systems 2 seconds may not be enough, producing a false-negative on the subsequent PID file check; </description>
+    </item>
     <item>
       <title>chore(catalog): sync manifests + fix skill emoji (wave 2) (#2395)</title>
       <link>https://github.com/affaan-m/ECC/commit/81af40761939056ab3dc54732fd4f562a27309d0</link>
@@ -334,78 +406,6 @@
       <pubDate>Thu, 11 Jun 2026 20:21:53 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>- suggest-compact hook now reads the latest usage record from the session   transcript and suggests /compact at a window-scaled token threshold   (160k/200k window, 250k/1M window; COMPACT_CONTEXT_THRESHOLD and   COMPACT_CONTEXT_INTERVAL overridable), re-firing per 60k-token growth   bucket; tool-ca</description>
-    </item>
-    <item>
-      <title>fix(assets): replace hero brand mark with website coral circuit mark (#2232)</title>
-      <link>https://github.com/affaan-m/ECC/commit/6c39cdecd30de45d0e0ce5bc02064a5dbe72b12a</link>
-      <guid isPermaLink="false">6c39cde</guid>
-      <pubDate>Thu, 11 Jun 2026 05:28:30 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(assets): replace hero brand mark with website coral circuit mark  The top-left mark in the hero banner was the assets/ecc-icon.svg double-E lettermark, not the actual brand logo. Swap in the coral vector circuit mark from the ECC-website header (src/styles/brandMarks.ts), keeping the ~70px foo</description>
-    </item>
-    <item>
-      <title>fix(ecc2): port webhook sender to ureq 3 Agent API (#2231)</title>
-      <link>https://github.com/affaan-m/ECC/commit/42fe8c30838862193e63bae6643c6c82e62704b7</link>
-      <guid isPermaLink="false">42fe8c3</guid>
-      <pubDate>Thu, 11 Jun 2026 05:26:59 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>#2209 bumped ureq to 3.x but the AgentBuilder-based webhook sender was not ported (branch update raced the merge). ureq 3 replaces AgentBuilder with Agent::config_builder(); timeouts are Option-wrapped and status() returns http::StatusCode.</description>
-    </item>
-    <item>
-      <title>docs: sync skill count to 262 after config-gc skill landed (#2230)</title>
-      <link>https://github.com/affaan-m/ECC/commit/75b5d64fc3ccb3743acde21b141f6860034b34ce</link>
-      <guid isPermaLink="false">75b5d64</guid>
-      <pubDate>Thu, 11 Jun 2026 05:22:34 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>npm run catalog:sync — #2216 added skills/config-gc without bumping documented counts, leaving catalog:check (and npm test) red on main.</description>
-    </item>
-    <item>
-      <title>docs: restore hero banner with ECC wordmark, v2.0.0 badge, and brand lettermark (#2229)</title>
-      <link>https://github.com/affaan-m/ECC/commit/967940f43e9b51ea5709f527fc78124e2921d23e</link>
-      <guid isPermaLink="false">967940f</guid>
-      <pubDate>Thu, 11 Jun 2026 05:15:38 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Recreates the v1.10 hero banner design (sourced from commit 602894ef) that PR #2225 replaced with a plain HTML header:  - Wordmark and breadcrumb now read ECC / affaan-m/ECC - Version badge reads v2.0.0 · Jun 2026, eyebrow updated to V2.0 - Top-left mark is the actual assets/ecc-icon.svg lettermark </description>
-    </item>
-    <item>
-      <title>docs(zh-CN): translate ecc-guide and parallel-execution-optimizer skills (#2217)</title>
-      <link>https://github.com/affaan-m/ECC/commit/e4a0062d9b5806a7053a70c35116c9f371f4b5ce</link>
-      <guid isPermaLink="false">e4a0062</guid>
-      <pubDate>Thu, 11 Jun 2026 05:01:28 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* docs(zh-CN): translate ecc-guide and parallel-execution-optimizer skills  Adds Simplified Chinese translations for two untranslated skills, following the existing docs/zh-CN/skills/ conventions (frontmatter name/origin preserved, code blocks and output templates kept in English, prose fully transl</description>
-    </item>
-    <item>
-      <title>feat(skills): add config-gc skill (#2216)</title>
-      <link>https://github.com/affaan-m/ECC/commit/66ad878e686bf6aee05599c547fd72da206c8ba5</link>
-      <guid isPermaLink="false">66ad878</guid>
-      <pubDate>Thu, 11 Jun 2026 05:01:18 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat(skills): add config-gc skill  Garbage collection for Claude Code configuration sprawl: 8 scan channels (skills, memory, hooks, permissions, MCP, reminders, project history, caches), confirm-each-deletion human-in-the-loop, soft-delete with undo log. Subtractive counterpart to workspace-surfac</description>
-    </item>
-    <item>
-      <title>docs: update Greptile sponsor placement</title>
-      <link>https://github.com/affaan-m/ECC/commit/c888d2b73f26d605ff6c172b433d4cad2200206f</link>
-      <guid isPermaLink="false">c888d2b</guid>
-      <pubDate>Wed, 10 Jun 2026 03:53:13 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat(mcp): single-connector default set + connector policy (#2219)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ff768db363017376f82f70c1e6566e0be35b65d2</link>
-      <guid isPermaLink="false">ff768db</guid>
-      <pubDate>Wed, 10 Jun 2026 03:28:35 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Reduce the default .mcp.json to one connector (chrome-devtools) per the new policy in docs/MCP-CONNECTOR-POLICY.md: a default earns its slot only if it is universal AND MCP beats a CLI/API wrapped in a skill. June 2026 audit verdicts: github -&gt; gh via github-ops skill; context7 -&gt; REST via documenta</description>
-    </item>
-    <item>
-      <title>ci: remove copilot code-review surface</title>
-      <link>https://github.com/affaan-m/ECC/commit/8ad4151095e453301ce0e50374103bcd8f50ded2</link>
-      <guid isPermaLink="false">8ad4151</guid>
-      <pubDate>Wed, 10 Jun 2026 01:42:38 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>
