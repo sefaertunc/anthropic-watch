@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 04 Jul 2026 08:41:15 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 08:56:09 GMT</lastBuildDate>
+    <item>
+      <title>Show HN: Local MCP – Claude/ChatGPT read your iMessage, Teams, files on-device</title>
+      <link>https://www.local-mcp.com/en</link>
+      <guid isPermaLink="false">48790887</guid>
+      <pubDate>Sun, 05 Jul 2026 02:49:58 GMT</pubDate>
+      <category>hn-claude-ai</category>
+      <description>I kept hitting the same wall: AI assistants are great until they need &lt;i&gt;my&lt;/i&gt; context — the email thread, the calendar, the iMessage, the file on my disk. Cloud connectors can only reach things with a public API, so they physically can&amp;#x27;t touch the stuff that lives only on my machine.&lt;p&gt;So I b</description>
+    </item>
+    <item>
+      <title>Deterministic AI Auditing</title>
+      <link>https://claude.ai/new</link>
+      <guid isPermaLink="false">48790577</guid>
+      <pubDate>Sun, 05 Jul 2026 01:38:34 GMT</pubDate>
+      <category>hn-claude-ai</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(tests): use mkdtempSync for test scratch dirs (CodeQL js/insecure-temporary-file) (#2443)</title>
+      <link>https://github.com/affaan-m/ECC/commit/4130457d674d2180c5af2c5f634f3cae4cbc6c4f</link>
+      <guid isPermaLink="false">4130457</guid>
+      <pubDate>Sat, 04 Jul 2026 20:44:27 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Replaces 54 predictable os.tmpdir()+Date.now() test-home paths in tests/hooks/hooks.test.js and the pid-based transcript files in tests/lib/llm-summary.test.js with fs.mkdtempSync. The 22 claude-tool-count-* sites are left as-is: they intentionally mirror the path the production hook computes. Clear</description>
+    </item>
+    <item>
+      <title>fix: refresh release SEO surfaces</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/7595cdf403884c25112f8b06450b5f846244a845</link>
+      <guid isPermaLink="false">7595cdf</guid>
+      <pubDate>Sat, 04 Jul 2026 15:04:53 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: release v13.10.0</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/18555d1cf828747ed8ab7309a63979a6bf3a76c5</link>
+      <guid isPermaLink="false">18555d1</guid>
+      <pubDate>Sat, 04 Jul 2026 15:00:30 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: sync repo state for v13.10.0</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/e128a8f9ca5230210a15a588c61d1f3a2bdb3972</link>
+      <guid isPermaLink="false">e128a8f</guid>
+      <pubDate>Sat, 04 Jul 2026 14:58:53 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add Context Kit — Personal Context Artifacts + Claude Code skills (#776)</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/fdd0ea94c3dc59d5866935be605696944b152a06</link>
+      <guid isPermaLink="false">fdd0ea9</guid>
+      <pubDate>Sat, 04 Jul 2026 14:57:07 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: add wp-site-health-auditor skill (#775)</title>
+      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/ac8764e7ba9cb5d4492f0c6eecfeea0a8cd99a38</link>
+      <guid isPermaLink="false">ac8764e</guid>
+      <pubDate>Sat, 04 Jul 2026 14:53:07 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
     <item>
       <title>0.3.201</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -70,14 +134,6 @@
       <pubDate>Sat, 04 Jul 2026 03:41:11 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>The fact-forcing gate fires once per first-touched file per session. In build-heavy sessions this costs a deny-&gt;retry round-trip on every new file, including trees where the gate&apos;s questions (&quot;who imports this? what schema?&quot;) carry no signal: test files, generated artifacts, scratch dirs.  Add an op</description>
-    </item>
-    <item>
-      <title>chore(continuous-learning-v2): standardize shell shebangs to env bash (#2401)</title>
-      <link>https://github.com/affaan-m/ECC/commit/8b6543929e8e7ec80c851b8a0d4e04eebcbf1026</link>
-      <guid isPermaLink="false">8b65439</guid>
-      <pubDate>Sat, 04 Jul 2026 03:40:44 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* chore(continuous-learning-v2): standardize shell shebangs to env bash  Three scripts under skills/continuous-learning-v2/ used the hardcoded `#!/bin/bash` shebang while the other four already used the portable `#!/usr/bin/env bash`:  - hooks/observe.sh (runs on every hook invocation) - scripts/det</description>
     </item>
     <item>
       <title>Took full advantage of these limits</title>
@@ -185,14 +241,6 @@
       <description>Max 20x plan.. The included tokens on the personal plans is in absolute insane, and I don’t understand how people complain about usage limits. At work, my company has to actually pay for tokens</description>
     </item>
     <item>
-      <title>fix: canonicalize catalog routes with trailing slashes</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/5e71bbadce5202e95c5427bcf966c122414bcb76</link>
-      <guid isPermaLink="false">5e71bba</guid>
-      <pubDate>Fri, 03 Jul 2026 16:58:54 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
       <title>v1.0.164</title>
       <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.164</link>
       <guid isPermaLink="false">v1.0.164</guid>
@@ -255,38 +303,6 @@ We caught up with them before one of their largest projects to date: a live perf
       <category>claude-code-changelog</category>
       <description>- Stacked slash-skill invocations like /skill-a /skill-b do XYZ now load all leading skills (up to 5), not just the first
 - Fixed SSL certificate errors (TLS-inspecting proxies, missing NODEEXTRACACERTS, expired certs) burning retries before showing actionable guidance — they now fail immediately wi</description>
-    </item>
-    <item>
-      <title>chore: release v13.9.0</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/f827d0ae65b605b065c66020ac1e429111f66ad4</link>
-      <guid isPermaLink="false">f827d0a</guid>
-      <pubDate>Fri, 03 Jul 2026 08:28:22 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: complete maintenance batch for workorai</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/98d4bceb9bb01dda83bc4a486815fb5ee5fbfb94</link>
-      <guid isPermaLink="false">98d4bce</guid>
-      <pubDate>Fri, 03 Jul 2026 08:26:09 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add workorai skill</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/0beeadd595225cd049bd9ecf339abc1b8ac77983</link>
-      <guid isPermaLink="false">0beeadd</guid>
-      <pubDate>Fri, 03 Jul 2026 08:21:01 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>* feat: add workorai skill for talent-marketplace job search and hiring workflows  * fix: address review feedback on workorai skill  - raise risk to critical: the skill drives state-mutating networked   actions (apply/withdraw, publish/close/delete jobs, invitations) - use canonical dotted tool name</description>
-    </item>
-    <item>
-      <title>chore: release v13.8.0</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/469b161ea827aa981cd2ae3b2c9df3fc1d7f17c1</link>
-      <guid isPermaLink="false">469b161</guid>
-      <pubDate>Fri, 03 Jul 2026 08:10:08 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
     </item>
     <item>
       <title>Giving admins more visibility and control over Claude spend</title>
@@ -882,22 +898,6 @@ It makes plans, uses tools like browsers and terminals, and runs a…</title>
       <description>RT @claudeai: Introducing Claude Sonnet 5, our most agentic Sonnet yet.
 
 It makes plans, uses tools like browsers and terminals, and runs a…</description>
-    </item>
-    <item>
-      <title>Claude Sonnet 5</title>
-      <link>https://www.anthropic.com/news/claude-sonnet-5</link>
-      <guid isPermaLink="false">48736605</guid>
-      <pubDate>Tue, 30 Jun 2026 17:59:52 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>v1.0.161</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.161</link>
-      <guid isPermaLink="false">v1.0.161</guid>
-      <pubDate>Tue, 30 Jun 2026 17:58:31 GMT</pubDate>
-      <category>claude-code-action</category>
-      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.161</description>
     </item>
   </channel>
 </rss>

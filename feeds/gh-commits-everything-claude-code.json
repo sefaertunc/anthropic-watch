@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-04T08:41:15.291Z",
+  "generated": "2026-07-05T08:56:09.550Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "4130457",
+      "title": "fix(tests): use mkdtempSync for test scratch dirs (CodeQL js/insecure-temporary-file) (#2443)",
+      "date": "2026-07-04T20:44:27Z",
+      "url": "https://github.com/affaan-m/ECC/commit/4130457d674d2180c5af2c5f634f3cae4cbc6c4f",
+      "snippet": "Replaces 54 predictable os.tmpdir()+Date.now() test-home paths in tests/hooks/hooks.test.js and the pid-based transcript files in tests/lib/llm-summary.test.js with fs.mkdtempSync. The 22 claude-tool-count-* sites are left as-is: they intentionally mirror the path the production hook computes. Clear",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4130457|gh-commits-everything-claude-code"
+    },
     {
       "id": "49128b5",
       "title": "feat(install): add Kimi Code CLI install target (kimi-project adapter) (#2441)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "5b173d2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7777656",
-      "title": "fix: context-size /compact trigger, Codex marketplace plugin path, live README badges (#2237)",
-      "date": "2026-06-11T20:21:53Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7777656bf5c2c1b6971409bb0d28cb95d822dab9",
-      "snippet": "- suggest-compact hook now reads the latest usage record from the session   transcript and suggests /compact at a window-scaled token threshold   (160k/200k window, 250k/1M window; COMPACT_CONTEXT_THRESHOLD and   COMPACT_CONTEXT_INTERVAL overridable), re-firing per 60k-token growth   bucket; tool-ca",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7777656|gh-commits-everything-claude-code"
     }
   ]
 }

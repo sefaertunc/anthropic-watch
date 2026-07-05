@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 04 Jul 2026 08:41:15 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 08:56:09 GMT</lastBuildDate>
+    <item>
+      <title>fix(tests): use mkdtempSync for test scratch dirs (CodeQL js/insecure-temporary-file) (#2443)</title>
+      <link>https://github.com/affaan-m/ECC/commit/4130457d674d2180c5af2c5f634f3cae4cbc6c4f</link>
+      <guid isPermaLink="false">4130457</guid>
+      <pubDate>Sat, 04 Jul 2026 20:44:27 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Replaces 54 predictable os.tmpdir()+Date.now() test-home paths in tests/hooks/hooks.test.js and the pid-based transcript files in tests/lib/llm-summary.test.js with fs.mkdtempSync. The 22 claude-tool-count-* sites are left as-is: they intentionally mirror the path the production hook computes. Clear</description>
+    </item>
     <item>
       <title>feat(install): add Kimi Code CLI install target (kimi-project adapter) (#2441)</title>
       <link>https://github.com/affaan-m/ECC/commit/49128b5763b7ac0b50acef35ac0bcca08d1576af</link>
@@ -398,14 +406,6 @@
       <pubDate>Thu, 11 Jun 2026 20:22:55 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>fix: context-size /compact trigger, Codex marketplace plugin path, live README badges (#2237)</title>
-      <link>https://github.com/affaan-m/ECC/commit/7777656bf5c2c1b6971409bb0d28cb95d822dab9</link>
-      <guid isPermaLink="false">7777656</guid>
-      <pubDate>Thu, 11 Jun 2026 20:21:53 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>- suggest-compact hook now reads the latest usage record from the session   transcript and suggests /compact at a window-scaled token threshold   (160k/200k window, 250k/1M window; COMPACT_CONTEXT_THRESHOLD and   COMPACT_CONTEXT_INTERVAL overridable), re-firing per 60k-token growth   bucket; tool-ca</description>
     </item>
   </channel>
 </rss>
