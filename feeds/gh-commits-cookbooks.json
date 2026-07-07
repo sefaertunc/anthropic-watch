@@ -5,9 +5,97 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-06T10:28:32.826Z",
-  "itemCount": 48,
+  "generated": "2026-07-07T09:47:06.522Z",
+  "itemCount": 50,
   "items": [
+    {
+      "id": "7aaa17f",
+      "title": "Merge pull request #754 from bradabrams/add-plan-big-execute-small-cookbook",
+      "date": "2026-07-06T19:51:59Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/7aaa17fa217f27ff4b7d97fcfaba1ba75f328523",
+      "snippet": "Add coordinator-pattern cost cookbook: big models plan, small models execute",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "7aaa17f|gh-commits-cookbooks"
+    },
+    {
+      "id": "7dbfa37",
+      "title": "lychee.toml: list 2xx/3xx codes in accept explicitly",
+      "date": "2026-07-06T19:43:00Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/7dbfa37e547267ddafdf8c51b8649b762c445c85",
+      "snippet": "The accept option replaces lychee's default accepted set rather than extending it, so [403, 429] alone rejects every 200. This was masked until now because the config failed to parse and lychee silently ran with defaults.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "7dbfa37|gh-commits-cookbooks"
+    },
+    {
+      "id": "5d5b014",
+      "title": "Make notebook cross-links checkable; document the temp_md artifact",
+      "date": "2026-07-06T19:36:36Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/5d5b01402b1782712b6cf34220e2ceb22e6f2af5",
+      "snippet": "The check-links workflow converts changed notebooks into a flat temp_md/ dir, which breaks resolution of every relative file link - this is why existing notebooks use absolute GitHub URLs. Follow the convention for the sibling-notebook links (they exist on main, so they now get genuinely checked ove",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "5d5b014|gh-commits-cookbooks"
+    },
+    {
+      "id": "dfc4861",
+      "title": "lychee.toml: drop skip_code_blocks, also removed in lychee 0.23",
+      "date": "2026-07-06T19:24:48Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/dfc4861e531e29f362d0d5c9b32ca6c3fc972d64",
+      "snippet": "Code blocks are already skipped by default (include_verbatim defaults to false), so the field just goes.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "dfc4861|gh-commits-cookbooks"
+    },
+    {
+      "id": "f9c8ca5",
+      "title": "Fix lychee.toml for lychee 0.23: headers field was renamed",
+      "date": "2026-07-06T19:20:20Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/f9c8ca52613cee0cdceb76a760d8102234e05c40",
+      "snippet": "The check-links workflow has been failing to parse the config (unknown field 'headers'), so links were never actually checked. The only header set was the user agent, which has a dedicated option.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "f9c8ca5|gh-commits-cookbooks"
+    },
+    {
+      "id": "e02f031",
+      "title": "Fix pre-existing verify-urls failures",
+      "date": "2026-07-06T19:16:49Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/e02f0311fe4b34eaa46179599e749ea761aac582",
+      "snippet": "registry.yaml: the fable_5_fallback_billing entry used 'Safeguards' and 'Billing', neither of which is in the registry schema's category enum - trimmed to 'Responses'. authors.yaml: benlehrburger-ant's website no longer resolves; point it at the GitHub profile instead.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "e02f031|gh-commits-cookbooks"
+    },
+    {
+      "id": "5d6d633",
+      "title": "Apply internal review fixes and add architecture diagram",
+      "date": "2026-07-06T18:57:44Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/5d6d633b6a746e9302946d3ef5b82b99e99a1966",
+      "snippet": "Review fixes (comments and prose only, recorded outputs untouched): a fourth honest caveat documenting that the committed run's own park list is wrong at #10 (facts were verified; question decomposition was not - which is the sharpest lesson in the notebook), the PRICES comment now names Sonnet 5's ",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "5d6d633|gh-commits-cookbooks"
+    },
+    {
+      "id": "a485090",
+      "title": "Add coordinator-pattern cost cookbook: big models plan, small models execute",
+      "date": "2026-07-02T21:30:05Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/a485090d4c3af1a59f6071aa13d388d48e0c9bf3",
+      "snippet": "New managed_agents notebook on the economics of the multiagent coordinator config: a frontier coordinator (Fable 5) plans and synthesizes while cheap workers (Sonnet 5, scoped to web_search + web_fetch) do the token-hungry reading in parallel threads. The comparison is rigor-matched: the control is ",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "a485090|gh-commits-cookbooks"
+    },
     {
       "id": "3393bda",
       "title": "fix(rag,classification): update rate-limit tier references to usage-tier naming (#752)",
@@ -469,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "293bd2a|gh-commits-cookbooks"
-    },
-    {
-      "id": "fd673f8",
-      "title": "fix(managed_agents): pin agent version in combine-stores snippet too",
-      "date": "2026-04-25T01:50:16Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/fd673f83bb8b0d293e8f3aed6f2e95de55349b33",
-      "snippet": "The illustrative markdown snippet under \"Combine per-customer and shared stores\" still passed agent=agent.id while the runnable cells were already using the pinned dict form. Align the snippet so readers copying the production pattern get the same version-pinned shape.  https://claude.ai/code/sessio",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "fd673f8|gh-commits-cookbooks"
-    },
-    {
-      "id": "5343894",
-      "title": "fix(managed_agents): pin agent version on sessions.create in memory cookbook",
-      "date": "2026-04-25T01:22:03Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/534389445fbac11079b2336929bd8eb4cf811350",
-      "snippet": "Pass agent={\"type\": \"agent\", \"id\": agent.id, \"version\": agent.version} instead of the bare agent.id, matching every other notebook in the managed_agents series.  https://claude.ai/code/session_01VkfVPdiJTWVh6Vj5owqRXH",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "5343894|gh-commits-cookbooks"
-    },
-    {
-      "id": "6c32b29",
-      "title": "fix(managed_agents): round 3 of memory cookbook review feedback",
-      "date": "2026-04-25T01:16:18Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/6c32b29f7453a25835029d786962466789dd15e3",
-      "snippet": "- run_turn: handle session.status_terminated and call   wait_for_idle_status before returning, mirroring   utilities.stream_until_end_turn; drop the now-redundant   wait_for_idle_status calls from the cleanup cell - environments.create: pass an explicit cloud/limited config - agent_toolset_20260401:",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "6c32b29|gh-commits-cookbooks"
-    },
-    {
-      "id": "892f846",
-      "title": "fix(managed_agents): align memory cookbook with CMA series conventions",
-      "date": "2026-04-25T01:10:44Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/892f846d1a5e6034e3c1db5075e0837e193b955b",
-      "snippet": "- Guard the session.status_idle break on stop_reason.type == \"end_turn\"   so the pattern is safe to copy into custom-tool agents - Import wait_for_idle_status from utilities and call it before each   sessions.archive() to absorb the SSE-vs-status race - Use environments.archive instead of environmen",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "892f846|gh-commits-cookbooks"
-    },
-    {
-      "id": "1016f8f",
-      "title": "docs(managed_agents): address review feedback on memory cookbook",
-      "date": "2026-04-25T00:41:28Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/1016f8f3527b8170e68a21c8396a7adfaf88cab2",
-      "snippet": "- Prefer uv add over pip in the prerequisites - Clarify that the agent_toolset_20260401 type string identifies the   toolset, not a model, and does not need bumping - Drop unused reply variable from the second run_turn call  Intentionally skip the dotenv suggestion: the other managed_agents notebook",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "1016f8f|gh-commits-cookbooks"
-    },
-    {
-      "id": "3e44f8d",
-      "title": "feat(managed_agents): add memory store cookbook",
-      "date": "2026-04-25T00:08:56Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/3e44f8d442bb0ec5ceda082408cebaa5b94d4155",
-      "snippet": "A guided tutorial showing how to give a Managed Agent a memory store so it learns and recalls a customer's shopping preferences across separate sessions. Covers store creation, the resources attachment with per-attachment instructions, inspecting and seeding memories from your own application, and c",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "3e44f8d|gh-commits-cookbooks"
     }
   ]
 }

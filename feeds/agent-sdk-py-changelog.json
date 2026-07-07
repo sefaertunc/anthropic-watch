@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-06T10:28:32.801Z",
-  "itemCount": 30,
+  "generated": "2026-07-07T09:47:06.500Z",
+  "itemCount": 31,
   "items": [
+    {
+      "id": "0.2.111",
+      "title": "0.2.111",
+      "date": "2026-07-07T09:46:15.455Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "Bug Fixes\n- Zombie CLI subprocess prevention: Shielded subprocess cleanup from asyncio cancellation so SIGTERM/SIGKILL teardown always runs, preventing orphaned claude child processes when the parent task is cancelled (1082)\n- Silent whitespace loss on large NDJSON lines: Fixed the NDJSON parser sil",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.111|agent-sdk-py-changelog"
+    },
     {
       "id": "0.2.110",
       "title": "0.2.110",

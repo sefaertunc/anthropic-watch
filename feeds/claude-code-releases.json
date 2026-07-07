@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-06T10:28:32.793Z",
+  "generated": "2026-07-07T09:47:06.491Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.202",
+      "title": "v2.1.202",
+      "date": "2026-07-06T22:51:16Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.202",
+      "snippet": "What's changed\n- Added a \"Dynamic workflow size\" setting in /config for controlling how large Claude generally makes dynamic workflows (small/medium/large agent counts) — an advisory guideline, not an enforced cap\n- Added workflow.runid and workflow.name OpenTelemetry attributes to telemetry emitted",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.202|claude-code-releases"
+    },
     {
       "id": "v2.1.201",
       "title": "v2.1.201",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.142|claude-code-releases"
-    },
-    {
-      "id": "v2.1.141",
-      "title": "v2.1.141",
-      "date": "2026-05-13T23:19:16Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.141",
-      "snippet": "What's changed\n- Added terminalSequence field to hook JSON output so hooks can emit desktop notifications, window titles, and bells without a controlling terminal\n- Added CLAUDECODEPLUGINPREFERHTTPS to clone GitHub plugin sources over HTTPS instead of SSH, for environments without a GitHub SSH key\n-",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.141|claude-code-releases"
     }
   ]
 }

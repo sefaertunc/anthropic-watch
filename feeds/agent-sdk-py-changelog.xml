@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 06 Jul 2026 10:28:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 09:47:06 GMT</lastBuildDate>
+    <item>
+      <title>0.2.111</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.111</guid>
+      <pubDate>Tue, 07 Jul 2026 09:46:15 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Bug Fixes
+- Zombie CLI subprocess prevention: Shielded subprocess cleanup from asyncio cancellation so SIGTERM/SIGKILL teardown always runs, preventing orphaned claude child processes when the parent task is cancelled (1082)
+- Silent whitespace loss on large NDJSON lines: Fixed the NDJSON parser sil</description>
+    </item>
     <item>
       <title>0.2.110</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
