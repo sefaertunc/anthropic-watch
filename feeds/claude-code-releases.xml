@@ -6,7 +6,27 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 07 Jul 2026 09:47:06 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 08:33:19 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.204</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.204</link>
+      <guid isPermaLink="false">v2.1.204</guid>
+      <pubDate>Wed, 08 Jul 2026 00:27:50 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook</description>
+    </item>
+    <item>
+      <title>v2.1.203</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.203</link>
+      <guid isPermaLink="false">v2.1.203</guid>
+      <pubDate>Tue, 07 Jul 2026 21:06:12 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted
+- Added a grey ⏸ badge to the footer when in manual permission mode, making the active mode always visible
+- Added the session&apos;s additional working directories t</description>
+    </item>
     <item>
       <title>v2.1.202</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.202</link>
@@ -488,26 +508,6 @@
 - Added /resume support for background sessions — sessions started via claude --bg or agent view now appear alongside interactive ones, marked with bg
 - Added elapsed duration to background subagent completion notifications (e.g. &quot;Agent completed · 3h 2m 5s&quot;)
 - The /plugin browse and </description>
-    </item>
-    <item>
-      <title>v2.1.143</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.143</link>
-      <guid isPermaLink="false">v2.1.143</guid>
-      <pubDate>Fri, 15 May 2026 22:28:22 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added plugin dependency enforcement: claude plugin disable now refuses when another enabled plugin depends on the target (with a copy-pasteable disable-chain hint), and claude plugin enable force-enables transitive dependencies
-- Added projected context cost (per-turn and per-invoca</description>
-    </item>
-    <item>
-      <title>v2.1.142</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.142</link>
-      <guid isPermaLink="false">v2.1.142</guid>
-      <pubDate>Thu, 14 May 2026 22:55:10 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added new claude agents flags: --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, and --dangerously-skip-permissions to configure dispatched background sessions
-- Fast mode now uses Opus 4.7 by default (previously Opus 4.6). Set CLAUDECODEOPUS46</description>
     </item>
   </channel>
 </rss>

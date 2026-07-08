@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-07T09:47:06.526Z",
+  "generated": "2026-07-08T08:33:19.703Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "72a63d5",
+      "title": "Update langfuse-observability listing description (#3802)",
+      "date": "2026-07-08T00:24:01Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/72a63d5d082937f3af121354e0c168bee1be4b56",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "72a63d5|gh-commits-plugins-official"
+    },
     {
       "id": "8326199",
       "title": "validate-licenses: also verify LICENSE content is Apache 2.0 (#3633)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "3d349d4|gh-commits-plugins-official"
-    },
-    {
-      "id": "6a63e35",
-      "title": "security-guidance: lenient UTF-8 decode in 6 git-subprocess helpers (#2056)",
-      "date": "2026-05-29T06:15:16Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/6a63e35e75f1888ed981614ca518b2f257a7cfc7",
-      "snippet": "Fixes anthropics/claude-plugins-official#2056 — on Windows, when the worktree contains an untracked file whose name has a character undefined in cp1252 (accented capitals like Á Í Ï Ð Ý, most CJK, emoji), the UserPromptSubmit hook crashes:    Exception in thread Thread-5 (_readerthread):     Unicode",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "6a63e35|gh-commits-plugins-official"
     }
   ]
 }

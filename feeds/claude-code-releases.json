@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-07T09:47:06.491Z",
+  "generated": "2026-07-08T08:33:19.665Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.204",
+      "title": "v2.1.204",
+      "date": "2026-07-08T00:27:50Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.204",
+      "snippet": "What's changed\n- Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.204|claude-code-releases"
+    },
+    {
+      "id": "v2.1.203",
+      "title": "v2.1.203",
+      "date": "2026-07-07T21:06:12Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.203",
+      "snippet": "What's changed\n- Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted\n- Added a grey ⏸ badge to the footer when in manual permission mode, making the active mode always visible\n- Added the session's additional working directories t",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.203|claude-code-releases"
+    },
     {
       "id": "v2.1.202",
       "title": "v2.1.202",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.144|claude-code-releases"
-    },
-    {
-      "id": "v2.1.143",
-      "title": "v2.1.143",
-      "date": "2026-05-15T22:28:22Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.143",
-      "snippet": "What's changed\n- Added plugin dependency enforcement: claude plugin disable now refuses when another enabled plugin depends on the target (with a copy-pasteable disable-chain hint), and claude plugin enable force-enables transitive dependencies\n- Added projected context cost (per-turn and per-invoca",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.143|claude-code-releases"
-    },
-    {
-      "id": "v2.1.142",
-      "title": "v2.1.142",
-      "date": "2026-05-14T22:55:10Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.142",
-      "snippet": "What's changed\n- Added new claude agents flags: --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, and --dangerously-skip-permissions to configure dispatched background sessions\n- Fast mode now uses Opus 4.7 by default (previously Opus 4.6). Set CLAUDECODEOPUS46",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.142|claude-code-releases"
     }
   ]
 }

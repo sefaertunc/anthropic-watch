@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 07 Jul 2026 09:47:06 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 08:33:19 GMT</lastBuildDate>
+    <item>
+      <title>Update langfuse-observability listing description (#3802)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/72a63d5d082937f3af121354e0c168bee1be4b56</link>
+      <guid isPermaLink="false">72a63d5</guid>
+      <pubDate>Wed, 08 Jul 2026 00:24:01 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>validate-licenses: also verify LICENSE content is Apache 2.0 (#3633)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/8326199c6ec61fdcece33199b61bdaa4f9ae1570</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 29 May 2026 06:18:17 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: gate XSS pattern rules to JS-family files</description>
-    </item>
-    <item>
-      <title>security-guidance: lenient UTF-8 decode in 6 git-subprocess helpers (#2056)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/6a63e35e75f1888ed981614ca518b2f257a7cfc7</link>
-      <guid isPermaLink="false">6a63e35</guid>
-      <pubDate>Fri, 29 May 2026 06:15:16 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Fixes anthropics/claude-plugins-official#2056 — on Windows, when the worktree contains an untracked file whose name has a character undefined in cp1252 (accented capitals like Á Í Ï Ð Ý, most CJK, emoji), the UserPromptSubmit hook crashes:    Exception in thread Thread-5 (_readerthread):     Unicode</description>
     </item>
   </channel>
 </rss>
