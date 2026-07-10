@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 08 Jul 2026 08:33:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 09:39:59 GMT</lastBuildDate>
+    <item>
+      <title>fix: community-reported issues — pyproject URLs, dashboard Tkinter error, 1.x→2.0 migration guide, cyber-safeguards docs (#2481)</title>
+      <link>https://github.com/affaan-m/ECC/commit/40927950c49f6e742d341e20ff7b9b7e1e7bfff5</link>
+      <guid isPermaLink="false">4092795</guid>
+      <pubDate>Thu, 09 Jul 2026 07:53:51 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: repo URLs in pyproject, graceful dashboard tkinter error, 1.x-&gt;2.0 migration guide, cyber-safeguards troubleshooting  Co-Authored-By: Devin AI &lt;158243242+devin-ai-integration[bot]@users.noreply.github.com&gt;  * fix: catch ImportError for broken tkinter installs and update About panel repo URL  </description>
+    </item>
+    <item>
+      <title>fix(agents): read-only reviewer contract + model re-tiering (#2442) + soften data-scraper prose (#2428) (#2480)</title>
+      <link>https://github.com/affaan-m/ECC/commit/f6e18e0835e40145acddd32a6cecad9b4fbbf35d</link>
+      <guid isPermaLink="false">f6e18e0</guid>
+      <pubDate>Thu, 09 Jul 2026 07:02:40 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(agents): retier reviewer frontmatter (#2442)  Co-Authored-By: Devin AI &lt;158243242+devin-ai-integration[bot]@users.noreply.github.com&gt;  * docs(skills): soften data scraper prose (#2428)  Co-Authored-By: Devin AI &lt;158243242+devin-ai-integration[bot]@users.noreply.github.com&gt;  ---------  Co-autho</description>
+    </item>
+    <item>
+      <title>feat: Plan Canvas, a browser review canvas for plans (#2467)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a511395613641b85a50354faa371a0df083b7b97</link>
+      <guid isPermaLink="false">a511395</guid>
+      <pubDate>Wed, 08 Jul 2026 21:12:48 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat: add Plan Canvas - browser annotate-and-approve review for plan artifacts  - scripts/plan-canvas.js CLI (open/await/end/stop/server; bin ecc-plan-canvas) - loopback server + ECC-styled chrome + annotation SDK + zero-dep markdown renderer - Approve/Request-changes verdicts wired to the /plan c</description>
+    </item>
     <item>
       <title>fix(tests): use mkdtempSync for test scratch dirs (CodeQL js/insecure-temporary-file) (#2443)</title>
       <link>https://github.com/affaan-m/ECC/commit/4130457d674d2180c5af2c5f634f3cae4cbc6c4f</link>
@@ -382,30 +406,6 @@
       <pubDate>Tue, 16 Jun 2026 05:58:50 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* fix: detect destructive find exec commands in gateguard  * chore: ignore aider local files</description>
-    </item>
-    <item>
-      <title>fix(skill): surface ps1 delete errors + replace removed wmic CPU detection</title>
-      <link>https://github.com/affaan-m/ECC/commit/26e12f33fa07a88250190b672705f100823a9c54</link>
-      <guid isPermaLink="false">26e12f3</guid>
-      <pubDate>Tue, 16 Jun 2026 01:17:18 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Greptile review: - slim_dist.ps1: ErrorActionPreference SilentlyContinue -&gt; Continue so failed   deletes are reported instead of showing a false success banner - build_optimized.bat: wmic is removed on Windows 11 22H2+; use the built-in   %NUMBER_OF_PROCESSORS% env var (with a fallback) so --jobs is</description>
-    </item>
-    <item>
-      <title>chore(catalog): sync skill counts after rebase on main</title>
-      <link>https://github.com/affaan-m/ECC/commit/20aaf8423528d600bc6a68c60a0f6cfeaa853c0c</link>
-      <guid isPermaLink="false">20aaf84</guid>
-      <pubDate>Tue, 16 Jun 2026 01:05:48 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: sync package-lock with package.json (CI drift)</title>
-      <link>https://github.com/affaan-m/ECC/commit/5b173d2e6c11b976a0f13b2f59125e08956c1d47</link>
-      <guid isPermaLink="false">5b173d2</guid>
-      <pubDate>Thu, 11 Jun 2026 20:22:55 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>

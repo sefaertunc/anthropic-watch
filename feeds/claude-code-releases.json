@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-08T08:33:19.665Z",
+  "generated": "2026-07-10T09:39:59.356Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.206",
+      "title": "v2.1.206",
+      "date": "2026-07-10T01:45:26Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.206",
+      "snippet": "What's changed\n- Added directory path suggestions to /cd, matching /add-dir behavior\n- Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase\n- /commit-push-pr now auto-allows git push to the repo's configured push remote (rem",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.206|claude-code-releases"
+    },
+    {
+      "id": "v2.1.205",
+      "title": "v2.1.205",
+      "date": "2026-07-08T21:22:06Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205",
+      "snippet": "What's changed\n- Added an auto mode rule that blocks tampering with session transcript files\n- Fixed --json-schema silently producing unstructured output when the schema was invalid, and schemas using the format keyword being rejected\n- Fixed a message sent while Claude was working being silently lo",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.205|claude-code-releases"
+    },
     {
       "id": "v2.1.204",
       "title": "v2.1.204",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.146|claude-code-releases"
-    },
-    {
-      "id": "v2.1.145",
-      "title": "v2.1.145",
-      "date": "2026-05-19T21:31:07Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.145",
-      "snippet": "What's changed\n- Added claude agents --json to list live Claude sessions as JSON for scripting (tmux-resurrect, status bars, session pickers)\n- Added agentid and parentagentid attributes to claudecode.tool OTEL spans, and fixed trace parenting so background subagent spans nest under the dispatching ",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.145|claude-code-releases"
-    },
-    {
-      "id": "v2.1.144",
-      "title": "v2.1.144",
-      "date": "2026-05-19T00:48:51Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
-      "snippet": "What's changed\n- Added /resume support for background sessions — sessions started via claude --bg or agent view now appear alongside interactive ones, marked with bg\n- Added elapsed duration to background subagent completion notifications (e.g. \"Agent completed · 3h 2m 5s\")\n- The /plugin browse and ",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.144|claude-code-releases"
     }
   ]
 }

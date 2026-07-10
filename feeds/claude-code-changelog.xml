@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 08 Jul 2026 08:33:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 09:39:59 GMT</lastBuildDate>
+    <item>
+      <title>2.1.206</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.206</guid>
+      <pubDate>Fri, 10 Jul 2026 09:39:09 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added directory path suggestions to /cd, matching /add-dir behavior
+- Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase
+- /commit-push-pr now auto-allows git push to the repo&apos;s configured push remote (remote.pushDefault</description>
+    </item>
     <item>
       <title>2.1.204</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -450,16 +460,6 @@
       <pubDate>Wed, 29 Apr 2026 08:23:30 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- Fixed OAuth authentication failing with a 401 retry loop when CLAUDECODEDISABLEEXPERIMENTALBETAS=1 is set</description>
-    </item>
-    <item>
-      <title>2.1.121</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.121</guid>
-      <pubDate>Tue, 28 Apr 2026 08:29:15 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added alwaysLoad option to MCP server config — when true, all tools from that server skip tool-search deferral and are always available
-- Added claude plugin prune to remove orphaned auto-installed plugin dependencies; plugin uninstall --prune cascades
-- Added a type-to-filter search box to /skill</description>
     </item>
   </channel>
 </rss>

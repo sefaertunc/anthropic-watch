@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-08T08:33:19.661Z",
+  "generated": "2026-07-10T09:39:59.352Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.206",
+      "title": "2.1.206",
+      "date": "2026-07-10T09:39:09.779Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added directory path suggestions to /cd, matching /add-dir behavior\n- Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase\n- /commit-push-pr now auto-allows git push to the repo's configured push remote (remote.pushDefault",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.206|claude-code-changelog"
+    },
     {
       "id": "2.1.204",
       "title": "2.1.204",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.123|claude-code-changelog"
-    },
-    {
-      "id": "2.1.121",
-      "title": "2.1.121",
-      "date": "2026-04-28T08:29:15.682Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Added alwaysLoad option to MCP server config — when true, all tools from that server skip tool-search deferral and are always available\n- Added claude plugin prune to remove orphaned auto-installed plugin dependencies; plugin uninstall --prune cascades\n- Added a type-to-filter search box to /skill",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.121|claude-code-changelog"
     }
   ]
 }

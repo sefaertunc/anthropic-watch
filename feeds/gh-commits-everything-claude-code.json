@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-08T08:33:19.709Z",
+  "generated": "2026-07-10T09:39:59.400Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "4092795",
+      "title": "fix: community-reported issues — pyproject URLs, dashboard Tkinter error, 1.x→2.0 migration guide, cyber-safeguards docs (#2481)",
+      "date": "2026-07-09T07:53:51Z",
+      "url": "https://github.com/affaan-m/ECC/commit/40927950c49f6e742d341e20ff7b9b7e1e7bfff5",
+      "snippet": "* fix: repo URLs in pyproject, graceful dashboard tkinter error, 1.x->2.0 migration guide, cyber-safeguards troubleshooting  Co-Authored-By: Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>  * fix: catch ImportError for broken tkinter installs and update About panel repo URL  ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4092795|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f6e18e0",
+      "title": "fix(agents): read-only reviewer contract + model re-tiering (#2442) + soften data-scraper prose (#2428) (#2480)",
+      "date": "2026-07-09T07:02:40Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f6e18e0835e40145acddd32a6cecad9b4fbbf35d",
+      "snippet": "* fix(agents): retier reviewer frontmatter (#2442)  Co-Authored-By: Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>  * docs(skills): soften data scraper prose (#2428)  Co-Authored-By: Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>  ---------  Co-autho",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f6e18e0|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a511395",
+      "title": "feat: Plan Canvas, a browser review canvas for plans (#2467)",
+      "date": "2026-07-08T21:12:48Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a511395613641b85a50354faa371a0df083b7b97",
+      "snippet": "* feat: add Plan Canvas - browser annotate-and-approve review for plan artifacts  - scripts/plan-canvas.js CLI (open/await/end/stop/server; bin ecc-plan-canvas) - loopback server + ECC-styled chrome + annotation SDK + zero-dep markdown renderer - Approve/Request-changes verdicts wired to the /plan c",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a511395|gh-commits-everything-claude-code"
+    },
     {
       "id": "4130457",
       "title": "fix(tests): use mkdtempSync for test scratch dirs (CodeQL js/insecure-temporary-file) (#2443)",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "a6ac027|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "26e12f3",
-      "title": "fix(skill): surface ps1 delete errors + replace removed wmic CPU detection",
-      "date": "2026-06-16T01:17:18Z",
-      "url": "https://github.com/affaan-m/ECC/commit/26e12f33fa07a88250190b672705f100823a9c54",
-      "snippet": "Greptile review: - slim_dist.ps1: ErrorActionPreference SilentlyContinue -> Continue so failed   deletes are reported instead of showing a false success banner - build_optimized.bat: wmic is removed on Windows 11 22H2+; use the built-in   %NUMBER_OF_PROCESSORS% env var (with a fallback) so --jobs is",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "26e12f3|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "20aaf84",
-      "title": "chore(catalog): sync skill counts after rebase on main",
-      "date": "2026-06-16T01:05:48Z",
-      "url": "https://github.com/affaan-m/ECC/commit/20aaf8423528d600bc6a68c60a0f6cfeaa853c0c",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "20aaf84|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5b173d2",
-      "title": "chore: sync package-lock with package.json (CI drift)",
-      "date": "2026-06-11T20:22:55Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5b173d2e6c11b976a0f13b2f59125e08956c1d47",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5b173d2|gh-commits-everything-claude-code"
     }
   ]
 }
