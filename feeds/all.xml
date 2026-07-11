@@ -6,7 +6,145 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 10 Jul 2026 09:39:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 08:00:06 GMT</lastBuildDate>
+    <item>
+      <title>0.2.116</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.116</guid>
+      <pubDate>Sat, 11 Jul 2026 07:59:18 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Internal/Other Changes
+- Updated bundled Claude CLI to version 2.1.207
+- Fixed CI workspace trust so Claude Code honors project-scoped permission grants in checkout directories (1085)</description>
+    </item>
+    <item>
+      <title>0.3.207</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.207</guid>
+      <pubDate>Sat, 11 Jul 2026 07:59:18 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Fixed canUseTool returning {behavior: &apos;allow&apos;} without updatedInput being rejected as a deny with a raw ZodError message; the tool now runs with the original input per the documented contract
+- The Agent tool&apos;s structured result now has a published SDK type (AgentToolCompletedOutput) that matches </description>
+    </item>
+    <item>
+      <title>2.1.207</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.207</guid>
+      <pubDate>Sat, 11 Jul 2026 07:59:17 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Auto mode is now available without CLAUDECODEENABLEAUTOMODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings
+- Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks
+- Fixed remot</description>
+    </item>
+    <item>
+      <title>v1.0.171</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.171</link>
+      <guid isPermaLink="false">v1.0.171</guid>
+      <pubDate>Sat, 11 Jul 2026 00:53:36 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.171</description>
+    </item>
+    <item>
+      <title>v2.1.207</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.207</link>
+      <guid isPermaLink="false">v2.1.207</guid>
+      <pubDate>Sat, 11 Jul 2026 00:52:10 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Auto mode is now available without CLAUDECODEENABLEAUTOMODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings
+- Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code block</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/d4d8fbbb333c627d8fe2c1c583a5ccc26fdb1aed</link>
+      <guid isPermaLink="false">d4d8fbb</guid>
+      <pubDate>Sat, 11 Jul 2026 00:52:04 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>RT @ClaudeDevs: Claude Code on desktop now has an in-app browser.
+
+Claude can pull up docs, designs, or any other site. It can read, click…</title>
+      <link>https://x.com/bcherny/status/2075742647075877249</link>
+      <guid isPermaLink="false">2075742647075877249</guid>
+      <pubDate>Sat, 11 Jul 2026 00:43:07 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @ClaudeDevs: Claude Code on desktop now has an in-app browser.
+
+Claude can pull up docs, designs, or any other site. It can read, click…</description>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.207</title>
+      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
+      <guid isPermaLink="false">2.1.207</guid>
+      <pubDate>Fri, 10 Jul 2026 22:25:09 GMT</pubDate>
+      <category>npm-claude-code</category>
+      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>Inviting Hard Questions</title>
+      <link>https://www.anthropic.com/news/hard-questions</link>
+      <guid isPermaLink="false">48863822</guid>
+      <pubDate>Fri, 10 Jul 2026 19:00:30 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>Claude Code on desktop now has an in-app browser.
+
+Claude can pull up docs, designs, or any other site. It can read, click through, and interact the same way it does with your local dev servers.
+
+It&apos;s</title>
+      <link>https://x.com/ClaudeDevs/status/2075635283211772279</link>
+      <guid isPermaLink="false">2075635283211772279</guid>
+      <pubDate>Fri, 10 Jul 2026 17:36:29 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>Claude Code on desktop now has an in-app browser.
+
+Claude can pull up docs, designs, or any other site. It can read, click through, and interact the same way it does with your local dev servers.
+
+It&apos;s sandboxed and configurable: you choose whether sessions persist. https://t.co/Jbc21OP0vJ</description>
+    </item>
+    <item>
+      <title>sdk: v0.111.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.111.0</link>
+      <guid isPermaLink="false">sdk-v0.111.0</guid>
+      <pubDate>Fri, 10 Jul 2026 17:12:15 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>0.111.0 (2026-07-10)
+Full Changelog: sdk-v0.110.0...sdk-v0.111.0
+ Features
+ api: add support for dreaming (77b28a6)
+ tools: gate session tool calls on evaluatedpermission; bound idle by server stopreason (68a6d7b)
+ Chores
+ docs: small updates to field descriptions (e25b885)
+ docs: update model examp</description>
+    </item>
+    <item>
+      <title>CI: fail the notebook-tests job when a changed notebook fails to execute (#772)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/5772b37e8c6aaade3747d9028d3afc74a3a8c61a</link>
+      <guid isPermaLink="false">5772b37</guid>
+      <pubDate>Fri, 10 Jul 2026 15:32:47 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>The maintainer-gated execution step in notebook-tests.yml runs each CHANGED notebook against the live API and counts failures, but nothing ever read that count: the step never exits non-zero (each per-notebook failure is absorbed by its if/else), it carries continue-on-error, and the &quot;Final status c</description>
+    </item>
+    <item>
+      <title>Elevated errors for Claude Opus 4.8</title>
+      <link>https://stspg.io/brlg5wqc1jjr</link>
+      <guid isPermaLink="false">mpn4d4xt44dm</guid>
+      <pubDate>Fri, 10 Jul 2026 14:36:37 GMT</pubDate>
+      <category>status-page</category>
+      <description>[minor] resolved — This incident has been resolved.</description>
+    </item>
+    <item>
+      <title>Elevated errors for Claude Opus 4.5 and Claude Sonnet 4.5</title>
+      <link>https://stspg.io/hr64lwmmpjtl</link>
+      <guid isPermaLink="false">6djcn2k6v8kp</guid>
+      <pubDate>Fri, 10 Jul 2026 13:00:00 GMT</pubDate>
+      <category>status-page</category>
+      <description>[none] resolved — Elevated errors for Claude Opus 4.5 and Claude Sonnet 4.5 between 6:00am PT / 1:00pm UTC and 8:15am PT / 3:15pm UTC.</description>
+    </item>
     <item>
       <title>0.3.206</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -102,6 +240,14 @@
       <description/>
     </item>
     <item>
+      <title>Working at the frontier: How Cognition trusts Claude Fable 5 to work through the night</title>
+      <link>https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night</link>
+      <guid isPermaLink="false">https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <category>blog-claude</category>
+      <description/>
+    </item>
+    <item>
       <title>v1.0.170</title>
       <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.170</link>
       <guid isPermaLink="false">v1.0.170</guid>
@@ -141,14 +287,6 @@
       <category>hn-claude-com</category>
       <description>The message:&lt;p&gt;&amp;gt; Extended: Fable 5 is included in your weekly limit
 &amp;gt; Through July 12, you can use up to 50% of your weekly usage limit on Fable 5. If you hit your limit, you can continue on Fable 5 with usage credits. Fable 5 draws down usage faster than Opus 4.8. Run &amp;#x2F;model and select F</description>
-    </item>
-    <item>
-      <title>Modular Pretraining Enables Access Control</title>
-      <link>https://alignment.anthropic.com/2026/modular-pretraining/</link>
-      <guid isPermaLink="false">48851438</guid>
-      <pubDate>Thu, 09 Jul 2026 19:46:09 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
     </item>
     <item>
       <title>RT @ClaudeDevs: We&apos;ve reset 5-hour and weekly rate limits for all users.</title>
@@ -421,14 +559,6 @@ Run /checkup to:
       <description>https://t.co/dxoI9Nna86</description>
     </item>
     <item>
-      <title>Issues authorizing to MCP Servers</title>
-      <link>https://stspg.io/scs5bf95ysv0</link>
-      <guid isPermaLink="false">4y9nybhbljfc</guid>
-      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
-      <category>status-page</category>
-      <description>[minor] resolved — Users are unable to send authorized requests to MCP servers.</description>
-    </item>
-    <item>
       <title>0.3.204</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
       <guid isPermaLink="false">0.3.204</guid>
@@ -452,14 +582,6 @@ Run /checkup to:
       <pubDate>Wed, 08 Jul 2026 08:32:27 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook</description>
-    </item>
-    <item>
-      <title>Elevated errors on Claude Sonnet 5</title>
-      <link>https://stspg.io/vsdzgydjjt1j</link>
-      <guid isPermaLink="false">n3v83qmtlbqm</guid>
-      <pubDate>Wed, 08 Jul 2026 06:26:16 GMT</pubDate>
-      <category>status-page</category>
-      <description>[minor] resolved — This incident has been resolved.</description>
     </item>
     <item>
       <title>5.6 finally good at frontend?</title>
@@ -654,14 +776,6 @@ If you&apos;re a maintainer, a core contributor, someone landing PRs across the 
       <description>If you build something cool, send it to me?</description>
     </item>
     <item>
-      <title>RT @claudeai: We&apos;re extending access to Claude Fable 5 on all paid plans through July 12.</title>
-      <link>https://x.com/ClaudeDevs/status/2074548543562678310</link>
-      <guid isPermaLink="false">2074548543562678310</guid>
-      <pubDate>Tue, 07 Jul 2026 17:38:10 GMT</pubDate>
-      <category>twitter-claudedevs</category>
-      <description>RT @claudeai: We&apos;re extending access to Claude Fable 5 on all paid plans through July 12.</description>
-    </item>
-    <item>
       <title>We&apos;re extending access to Claude Fable 5 on all paid plans through July 12.</title>
       <link>https://x.com/claudeai/status/2074548242386178258</link>
       <guid isPermaLink="false">2074548242386178258</guid>
@@ -734,14 +848,6 @@ Beta is rolling out over the next several weeks starting with the Max plan, with
       <description/>
     </item>
     <item>
-      <title>July 7, 2026</title>
-      <link>https://support.claude.com/en/articles/12138966-release-notes#h_06f5924d74</link>
-      <guid isPermaLink="false">https://support.claude.com/en/articles/12138966-release-notes#h_06f5924d74</guid>
-      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
-      <category>support-release-notes</category>
-      <description/>
-    </item>
-    <item>
       <title>Bringing Claude Code and Claude Cowork to government</title>
       <link>https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government</link>
       <guid isPermaLink="false">https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government</guid>
@@ -758,40 +864,11 @@ Beta is rolling out over the next several weeks starting with the Max plan, with
       <description/>
     </item>
     <item>
-      <title>Claude Cowork is coming to mobile and web</title>
-      <link>https://claude.com/blog/cowork-web-mobile</link>
-      <guid isPermaLink="false">https://claude.com/blog/cowork-web-mobile</guid>
+      <title>July 7, 2026</title>
+      <link>https://support.claude.com/en/articles/12138966-release-notes#h_06f5924d74</link>
+      <guid isPermaLink="false">https://support.claude.com/en/articles/12138966-release-notes#h_06f5924d74</guid>
       <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
-      <category>blog-claude</category>
-      <description/>
-    </item>
-    <item>
-      <title>v1.0.166</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.166</link>
-      <guid isPermaLink="false">v1.0.166</guid>
-      <pubDate>Mon, 06 Jul 2026 22:53:13 GMT</pubDate>
-      <category>claude-code-action</category>
-      <description>What&apos;s Changed
- Drop buffered inline comment when it is posted live (1405) by @archievi in https://github.com/anthropics/claude-code-action/pull/1412
- Use modern noreply email for co-author trailers by @tarunag10 in https://github.com/anthropics/claude-code-action/pull/1369
- fix(restore): handle sym</description>
-    </item>
-    <item>
-      <title>v2.1.202</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.202</link>
-      <guid isPermaLink="false">v2.1.202</guid>
-      <pubDate>Mon, 06 Jul 2026 22:51:16 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added a &quot;Dynamic workflow size&quot; setting in /config for controlling how large Claude generally makes dynamic workflows (small/medium/large agent counts) — an advisory guideline, not an enforced cap
-- Added workflow.runid and workflow.name OpenTelemetry attributes to telemetry emitted</description>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/7930e1c82d997b013af28673501f3b95569a71cb</link>
-      <guid isPermaLink="false">7930e1c</guid>
-      <pubDate>Mon, 06 Jul 2026 22:51:11 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
+      <category>support-release-notes</category>
       <description/>
     </item>
     <item>
@@ -809,18 +886,6 @@ Beta is rolling out over the next several weeks starting with the Max plan, with
       <pubDate>Mon, 06 Jul 2026 21:54:38 GMT</pubDate>
       <category>twitter-bcherny</category>
       <description>RT @ClaudeDevs: https://t.co/v694m8Eaj6</description>
-    </item>
-    <item>
-      <title>This is our first time telling the story of how we first built and launched Claude Code, starting with its origins in Anthropic safety research.
-
-So much more to do. We are 1% done.</title>
-      <link>https://x.com/bcherny/status/2074247226038063316</link>
-      <guid isPermaLink="false">2074247226038063316</guid>
-      <pubDate>Mon, 06 Jul 2026 21:40:50 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>This is our first time telling the story of how we first built and launched Claude Code, starting with its origins in Anthropic safety research.
-
-So much more to do. We are 1% done.</description>
     </item>
     <item>
       <title>We&apos;ve put together a short history of how Claude Code came to be, told by the people who built it and the early users who helped make it what it is today.
@@ -849,60 +914,6 @@ https://t.co/0gXEPID8lh https://t.co/2qeCVrD6Ep</description>
       <pubDate>Mon, 06 Jul 2026 19:51:59 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>Add coordinator-pattern cost cookbook: big models plan, small models execute</description>
-    </item>
-    <item>
-      <title>lychee.toml: list 2xx/3xx codes in accept explicitly</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/7dbfa37e547267ddafdf8c51b8649b762c445c85</link>
-      <guid isPermaLink="false">7dbfa37</guid>
-      <pubDate>Mon, 06 Jul 2026 19:43:00 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>The accept option replaces lychee&apos;s default accepted set rather than extending it, so [403, 429] alone rejects every 200. This was masked until now because the config failed to parse and lychee silently ran with defaults.</description>
-    </item>
-    <item>
-      <title>Make notebook cross-links checkable; document the temp_md artifact</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/5d5b01402b1782712b6cf34220e2ceb22e6f2af5</link>
-      <guid isPermaLink="false">5d5b014</guid>
-      <pubDate>Mon, 06 Jul 2026 19:36:36 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>The check-links workflow converts changed notebooks into a flat temp_md/ dir, which breaks resolution of every relative file link - this is why existing notebooks use absolute GitHub URLs. Follow the convention for the sibling-notebook links (they exist on main, so they now get genuinely checked ove</description>
-    </item>
-    <item>
-      <title>lychee.toml: drop skip_code_blocks, also removed in lychee 0.23</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/dfc4861e531e29f362d0d5c9b32ca6c3fc972d64</link>
-      <guid isPermaLink="false">dfc4861</guid>
-      <pubDate>Mon, 06 Jul 2026 19:24:48 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Code blocks are already skipped by default (include_verbatim defaults to false), so the field just goes.</description>
-    </item>
-    <item>
-      <title>Fix lychee.toml for lychee 0.23: headers field was renamed</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/f9c8ca52613cee0cdceb76a760d8102234e05c40</link>
-      <guid isPermaLink="false">f9c8ca5</guid>
-      <pubDate>Mon, 06 Jul 2026 19:20:20 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>The check-links workflow has been failing to parse the config (unknown field &apos;headers&apos;), so links were never actually checked. The only header set was the user agent, which has a dedicated option.</description>
-    </item>
-    <item>
-      <title>New Anthropic research: A global workspace in language models.
-
-Of everything happening in your brain right now, only a tiny fraction is consciously accessible—thoughts you can describe, hold in mind,</title>
-      <link>https://x.com/AnthropicAI/status/2074185348142280912</link>
-      <guid isPermaLink="false">2074185348142280912</guid>
-      <pubDate>Mon, 06 Jul 2026 17:34:58 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>New Anthropic research: A global workspace in language models.
-
-Of everything happening in your brain right now, only a tiny fraction is consciously accessible—thoughts you can describe, hold in mind, and reason with.
-
-We found a strikingly similar divide inside Claude. https://t.co/aLUPBifxth</description>
-    </item>
-    <item>
-      <title>A global workspace in language models</title>
-      <link>https://www.anthropic.com/research/global-workspace</link>
-      <guid isPermaLink="false">https://www.anthropic.com/research/global-workspace</guid>
-      <pubDate>Mon, 06 Jul 2026 14:12:00 GMT</pubDate>
-      <category>blog-research</category>
-      <description>New interpretability research reveals an emergent mental workspace in Claude that holds internal thoughts that don’t appear in the model’s output.</description>
     </item>
   </channel>
 </rss>

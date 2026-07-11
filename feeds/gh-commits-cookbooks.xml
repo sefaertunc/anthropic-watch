@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 10 Jul 2026 09:39:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 08:00:06 GMT</lastBuildDate>
+    <item>
+      <title>CI: fail the notebook-tests job when a changed notebook fails to execute (#772)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/5772b37e8c6aaade3747d9028d3afc74a3a8c61a</link>
+      <guid isPermaLink="false">5772b37</guid>
+      <pubDate>Fri, 10 Jul 2026 15:32:47 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>The maintainer-gated execution step in notebook-tests.yml runs each CHANGED notebook against the live API and counts failures, but nothing ever read that count: the step never exits non-zero (each per-notebook failure is absorbed by its if/else), it carries continue-on-error, and the &quot;Final status c</description>
+    </item>
     <item>
       <title>Merge pull request #754 from bradabrams/add-plan-big-execute-small-cookbook</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/7aaa17fa217f27ff4b7d97fcfaba1ba75f328523</link>
@@ -398,14 +406,6 @@
       <pubDate>Sat, 25 Apr 2026 22:49:49 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>- Simplify status_idle handler to a single unconditional break - Document run_turn return value in the docstring - Restore inline &apos;Optional: run before cleanup&apos; hint in the seeding cell - Add catalog store cleanup reminder to the combine-stores snippet - Tighten registry description and intro phrasi</description>
-    </item>
-    <item>
-      <title>fix(managed_agents): address remaining memory cookbook review items</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/293bd2a7734aa69f693e826a9268d96838577c02</link>
-      <guid isPermaLink="false">293bd2a</guid>
-      <pubDate>Sat, 25 Apr 2026 22:03:06 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>- Add wait_for_idle_status calls before session archive in cleanup - Break out of run_turn on any status_idle, not just end_turn - Guard event.input against None in tool_use handler - Move seeding-order warning to a markdown Note callout - Add %pip install cell for minimum SDK version - Link to sibl</description>
     </item>
   </channel>
 </rss>

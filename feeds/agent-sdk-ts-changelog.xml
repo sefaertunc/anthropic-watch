@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 10 Jul 2026 09:39:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 08:00:06 GMT</lastBuildDate>
+    <item>
+      <title>0.3.207</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.207</guid>
+      <pubDate>Sat, 11 Jul 2026 07:59:18 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Fixed canUseTool returning {behavior: &apos;allow&apos;} without updatedInput being rejected as a deny with a raw ZodError message; the tool now runs with the original input per the documented contract
+- The Agent tool&apos;s structured result now has a published SDK type (AgentToolCompletedOutput) that matches </description>
+    </item>
     <item>
       <title>0.3.206</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -423,14 +432,6 @@
       <pubDate>Fri, 01 May 2026 08:16:04 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Added origin to result messages (SDKResultSuccess / SDKResultError) — forwards the triggering message&apos;s SDKMessageOrigin so consumers can distinguish user-prompted results from task-notification followups</description>
-    </item>
-    <item>
-      <title>0.2.123</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.123</guid>
-      <pubDate>Wed, 29 Apr 2026 08:23:31 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.123</description>
     </item>
   </channel>
 </rss>

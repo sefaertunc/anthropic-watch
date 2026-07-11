@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-10T09:39:59.389Z",
+  "generated": "2026-07-11T08:00:06.942Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "5772b37",
+      "title": "CI: fail the notebook-tests job when a changed notebook fails to execute (#772)",
+      "date": "2026-07-10T15:32:47Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/5772b37e8c6aaade3747d9028d3afc74a3a8c61a",
+      "snippet": "The maintainer-gated execution step in notebook-tests.yml runs each CHANGED notebook against the live API and counts failures, but nothing ever read that count: the step never exits non-zero (each per-notebook failure is absorbed by its if/else), it carries continue-on-error, and the \"Final status c",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "5772b37|gh-commits-cookbooks"
+    },
     {
       "id": "7aaa17f",
       "title": "Merge pull request #754 from bradabrams/add-plan-big-execute-small-cookbook",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "869f7e7|gh-commits-cookbooks"
-    },
-    {
-      "id": "293bd2a",
-      "title": "fix(managed_agents): address remaining memory cookbook review items",
-      "date": "2026-04-25T22:03:06Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/293bd2a7734aa69f693e826a9268d96838577c02",
-      "snippet": "- Add wait_for_idle_status calls before session archive in cleanup - Break out of run_turn on any status_idle, not just end_turn - Guard event.input against None in tool_use handler - Move seeding-order warning to a markdown Note callout - Add %pip install cell for minimum SDK version - Link to sibl",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "293bd2a|gh-commits-cookbooks"
     }
   ]
 }
