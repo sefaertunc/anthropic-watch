@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 13 Jul 2026 09:32:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 08:10:38 GMT</lastBuildDate>
+    <item>
+      <title>2.1.209</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.209</guid>
+      <pubDate>Tue, 14 Jul 2026 08:09:49 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)</description>
+    </item>
     <item>
       <title>2.1.207</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -453,15 +461,6 @@
 - /mcp now shows the tool count for connected servers and flags servers that connected with 0 tools
 - --plugin-dir now accepts .zip plugin archives in addition to directories
 - --channels now works with console (API key) authentication — conso</description>
-    </item>
-    <item>
-      <title>2.1.126</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.126</guid>
-      <pubDate>Fri, 01 May 2026 08:16:03 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- The /model picker now lists models from your gateway&apos;s /v1/models endpoint when ANTHROPICBASEURL points at an Anthropic-compatible gateway
-- - Added claude project purge [path] to delete all Claude Code state for a project (transcripts, tasks, file history, config entry) — supports --dry-run, -y/-</description>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-13T09:32:16.529Z",
+  "generated": "2026-07-14T08:10:38.246Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.209",
+      "title": "v2.1.209",
+      "date": "2026-07-14T06:36:28Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.209",
+      "snippet": "What's changed\n- Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.209|claude-code-releases"
+    },
+    {
+      "id": "v2.1.208",
+      "title": "v2.1.208",
+      "date": "2026-07-14T01:10:42Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.208",
+      "snippet": "What's changed\n- Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDEAXSCREENREADER=1, or add \"axScreenReader\": true to settings.\n- Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode\n-",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.208|claude-code-releases"
+    },
     {
       "id": "v2.1.207",
       "title": "v2.1.207",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.149|claude-code-releases"
-    },
-    {
-      "id": "v2.1.148",
-      "title": "v2.1.148",
-      "date": "2026-05-22T01:16:52Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.148",
-      "snippet": "What's changed\n- Fixed the Bash tool returning exit code 127 on every command for some users (a regression introduced in 2.1.147)",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.148|claude-code-releases"
-    },
-    {
-      "id": "v2.1.147",
-      "title": "v2.1.147",
-      "date": "2026-05-21T20:39:22Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.147",
-      "snippet": "What's changed\n- Pinned background sessions (Ctrl+T in claude agents) now stay alive when idle, are restarted in place to apply Claude Code updates, and are shed under memory pressure only after non-pinned sessions\n- Renamed /simplify to /code-review. It now reports correctness bugs at a chosen effo",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.147|claude-code-releases"
     }
   ]
 }

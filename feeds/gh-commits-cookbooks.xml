@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 13 Jul 2026 09:32:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 08:10:38 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #771 from anthropics/nikblanchet/fix-metaprompt-prefill</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/67ce644d33e5933f0bcc0b6eb4113df41bbf3a8f</link>
+      <guid isPermaLink="false">67ce644</guid>
+      <pubDate>Mon, 13 Jul 2026 17:54:29 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Fix metaprompt notebook: remove assistant prefill (400 on current models)</description>
+    </item>
+    <item>
+      <title>Clean up metaprompt notebook: clear outputs, rename CLIENT to client</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/470dd66397222de71c1a9b8c7fb672edb0ca23af</link>
+      <guid isPermaLink="false">470dd66</guid>
+      <pubDate>Mon, 13 Jul 2026 17:29:43 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Clear all cell outputs and execution metadata so the notebook ships clean, and rename CLIENT to client to follow Python naming convention. Read the API key from the environment instead of a hardcoded variable, and re-enable the pretty_print(message) call so the generated prompt is shown when run.  T</description>
+    </item>
+    <item>
+      <title>Address review findings: docs, robustness, and Colab fixes</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/218ccc7572e7f5b9b257d0b51a7b98332e0c1620</link>
+      <guid isPermaLink="false">218ccc7</guid>
+      <pubDate>Fri, 10 Jul 2026 16:08:34 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Follow-up to the prefill removal, applying findings from a multi-reviewer pass over the notebook and a live re-execution.  Tutorial text and outputs: - The intro steps now cover installing the SDK, where the generated   prompt appears, and the VARIABLE_VALUES step for custom tasks. - New prose expla</description>
+    </item>
     <item>
       <title>CI: fail the notebook-tests job when a changed notebook fails to execute (#772)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/5772b37e8c6aaade3747d9028d3afc74a3a8c61a</link>
@@ -14,6 +38,14 @@
       <pubDate>Fri, 10 Jul 2026 15:32:47 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>The maintainer-gated execution step in notebook-tests.yml runs each CHANGED notebook against the live API and counts failures, but nothing ever read that count: the step never exits non-zero (each per-notebook failure is absorbed by its if/else), it carries continue-on-error, and the &quot;Final status c</description>
+    </item>
+    <item>
+      <title>Fix metaprompt notebook: remove assistant prefill (400 on current models)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/5d5e2f481fe2a72f9a8f285a442a8135bc6f3d28</link>
+      <guid isPermaLink="false">5d5e2f4</guid>
+      <pubDate>Fri, 10 Jul 2026 04:44:54 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>The metaprompt (prompt generator) notebook has been broken for every user since #375 bumped its model from claude-sonnet-4-5 to claude-sonnet-4-6. The prompt-writing call ended its messages array with an assistant prefill turn, and claude-sonnet-4-6 (like every model since the 4.6 generation) reject</description>
     </item>
     <item>
       <title>Merge pull request #754 from bradabrams/add-plan-big-execute-small-cookbook</title>
@@ -374,38 +406,6 @@
       <pubDate>Wed, 06 May 2026 16:00:32 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>feat(managed_agents): add multiagent and outcomes cookbooks</description>
-    </item>
-    <item>
-      <title>feat(managed_agents): add multiagent and outcomes cookbooks</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/0c0645a7439d3d426dc51a5e47a70258aa8afe04</link>
-      <guid isPermaLink="false">0c0645a</guid>
-      <pubDate>Wed, 06 May 2026 15:11:32 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>- CMA_coordinate_specialist_team.ipynb: heterogeneous team via the   multiagent coordinator config — coordinator runs three specialists   with scoped toolsets to assemble a sales proposal - CMA_verify_with_outcome_grader.ipynb: grade-and-revise loop with   Outcomes — writer drafts a cited brief, gra</description>
-    </item>
-    <item>
-      <title>feat(claude_agent_sdk): add vulnerability detection agent cookbook (#595)</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/876d099d2d11abadc6d02cb486946f5160c7ff36</link>
-      <guid isPermaLink="false">876d099</guid>
-      <pubDate>Tue, 05 May 2026 05:01:57 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>* feat(claude_agent_sdk): add vulnerability detection agent cookbook  06_The_vulnerability_detection_agent.ipynb runs threat-model -&gt; find -&gt; triage -&gt; report on a self-contained 45-line canary C target using claude-agent-sdk: ClaudeSDKClient for the multi-turn bootstrap-then- interview threat model</description>
-    </item>
-    <item>
-      <title>Merge pull request #573 from anthropics/claude/copy-memory-cookbook-pr-ZRx6N</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/33424c3eb476cd56379435be086ccc228af1050d</link>
-      <guid isPermaLink="false">33424c3</guid>
-      <pubDate>Mon, 27 Apr 2026 21:00:00 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>feat(managed_agents): add Managed Agents Memory Cookbook</description>
-    </item>
-    <item>
-      <title>fix(managed_agents): round 5 of memory cookbook review feedback</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/869f7e76d9c2539a0831cf610fc85fbed41a88bb</link>
-      <guid isPermaLink="false">869f7e7</guid>
-      <pubDate>Sat, 25 Apr 2026 22:49:49 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>- Simplify status_idle handler to a single unconditional break - Document run_turn return value in the docstring - Restore inline &apos;Optional: run before cleanup&apos; hint in the seeding cell - Add catalog store cleanup reminder to the combine-stores snippet - Tighten registry description and intro phrasi</description>
     </item>
   </channel>
 </rss>

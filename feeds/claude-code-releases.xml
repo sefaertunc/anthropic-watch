@@ -6,7 +6,27 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 13 Jul 2026 09:32:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 08:10:38 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.209</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.209</link>
+      <guid isPermaLink="false">v2.1.209</guid>
+      <pubDate>Tue, 14 Jul 2026 06:36:28 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)</description>
+    </item>
+    <item>
+      <title>v2.1.208</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.208</link>
+      <guid isPermaLink="false">v2.1.208</guid>
+      <pubDate>Tue, 14 Jul 2026 01:10:42 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDEAXSCREENREADER=1, or add &quot;axScreenReader&quot;: true to settings.
+- Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode
+-</description>
+    </item>
     <item>
       <title>v2.1.207</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.207</link>
@@ -489,25 +509,6 @@
 - /usage now shows a per-category breakdown of what&apos;s driving your limits usage — skills, subagents, plugins, and per-MCP-server cost
 - /diff detail view can now be scrolled with the keyboard (arrows, j/k, PgUp/PgDn, Space, Home/End)
 - Markdown output now renders GFM task list checkbo</description>
-    </item>
-    <item>
-      <title>v2.1.148</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.148</link>
-      <guid isPermaLink="false">v2.1.148</guid>
-      <pubDate>Fri, 22 May 2026 01:16:52 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed the Bash tool returning exit code 127 on every command for some users (a regression introduced in 2.1.147)</description>
-    </item>
-    <item>
-      <title>v2.1.147</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.147</link>
-      <guid isPermaLink="false">v2.1.147</guid>
-      <pubDate>Thu, 21 May 2026 20:39:22 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Pinned background sessions (Ctrl+T in claude agents) now stay alive when idle, are restarted in place to apply Claude Code updates, and are shed under memory pressure only after non-pinned sessions
-- Renamed /simplify to /code-review. It now reports correctness bugs at a chosen effo</description>
     </item>
   </channel>
 </rss>
