@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 14 Jul 2026 08:10:38 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 08:16:53 GMT</lastBuildDate>
+    <item>
+      <title>Remove deprecated shopify plugin (replaced by shopify-ai-toolkit) (#4070)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d2e56c767a483271ff2bb87230ebe7c218c8dc57</link>
+      <guid isPermaLink="false">d2e56c7</guid>
+      <pubDate>Tue, 14 Jul 2026 19:34:27 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>No-Verification-Needed: manifest data-entry removal, JSON-validated</description>
+    </item>
     <item>
       <title>Update langfuse-observability listing description (#3802)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/72a63d5d082937f3af121354e0c168bee1be4b56</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 29 May 2026 06:33:14 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Fixes anthropics/claude-plugins-official#2048 — teams using Graphite for stacked PRs (`gt create` / `gt modify` / `gt submit`) never get the commit/push agentic review because the hook matcher only catches literal `git commit` / `git push` Bash calls. gt shells out to git as a subprocess, but the ho</description>
-    </item>
-    <item>
-      <title>Merge pull request #2074 from anthropics/fix-xss-rules-non-js-false-positives</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/3d349d40b9f25044568a4bee48e73eb635135fb9</link>
-      <guid isPermaLink="false">3d349d4</guid>
-      <pubDate>Fri, 29 May 2026 06:18:17 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: gate XSS pattern rules to JS-family files</description>
     </item>
   </channel>
 </rss>

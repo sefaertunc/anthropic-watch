@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 14 Jul 2026 08:10:38 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 08:16:53 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.210</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.210</link>
+      <guid isPermaLink="false">v2.1.210</guid>
+      <pubDate>Tue, 14 Jul 2026 23:45:25 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck
+- Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead
+- Fixed isolati</description>
+    </item>
     <item>
       <title>v2.1.209</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.209</link>
@@ -498,17 +509,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Internal infrastructure improvements (no user-facing changes)</description>
-    </item>
-    <item>
-      <title>v2.1.149</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.149</link>
-      <guid isPermaLink="false">v2.1.149</guid>
-      <pubDate>Fri, 22 May 2026 22:09:29 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- /usage now shows a per-category breakdown of what&apos;s driving your limits usage — skills, subagents, plugins, and per-MCP-server cost
-- /diff detail view can now be scrolled with the keyboard (arrows, j/k, PgUp/PgDn, Space, Home/End)
-- Markdown output now renders GFM task list checkbo</description>
     </item>
   </channel>
 </rss>

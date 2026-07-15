@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-14T08:10:38.241Z",
+  "generated": "2026-07-15T08:16:53.005Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.210",
+      "title": "2.1.210",
+      "date": "2026-07-15T08:16:01.977Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck\n- Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead\n- Fixed isolation: 'worktree' ",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.210|claude-code-changelog"
+    },
     {
       "id": "2.1.209",
       "title": "2.1.209",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.131|claude-code-changelog"
-    },
-    {
-      "id": "2.1.128",
-      "title": "2.1.128",
-      "date": "2026-05-05T08:14:30.248Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Bare /color (no args) now picks a random session color\n- /mcp now shows the tool count for connected servers and flags servers that connected with 0 tools\n- --plugin-dir now accepts .zip plugin archives in addition to directories\n- --channels now works with console (API key) authentication — conso",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.128|claude-code-changelog"
     }
   ]
 }
