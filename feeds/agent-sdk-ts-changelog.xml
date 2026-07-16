@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 15 Jul 2026 08:16:53 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 08:17:57 GMT</lastBuildDate>
+    <item>
+      <title>0.3.211</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.211</guid>
+      <pubDate>Thu, 16 Jul 2026 08:17:07 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Fixed --replay-user-messages with --include-partial-messages emitting the turn-start user replay after the first content block instead of before the turn&apos;s content events
+- Added SDKAssistantMessage.timestamp (ISO-8601) to the live stream, matching SDKUserMessage; older emitters omit it, consumers</description>
+    </item>
     <item>
       <title>0.3.210</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -424,14 +433,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Documented applyFlagSettings() in the TypeScript Agent SDK reference and added support for null on top-level keys to clear flag-settings overrides
 - Updated to parity with Claude Code v2.1.132</description>
-    </item>
-    <item>
-      <title>0.2.131</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.131</guid>
-      <pubDate>Wed, 06 May 2026 09:17:58 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.131</description>
     </item>
   </channel>
 </rss>

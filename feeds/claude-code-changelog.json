@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-15T08:16:53.005Z",
+  "generated": "2026-07-16T08:17:57.379Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.211",
+      "title": "2.1.211",
+      "date": "2026-07-16T08:17:06.694Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added --forward-subagent-text flag and CLAUDECODEFORWARDSUBAGENTTEXT environment variable to include subagent text and thinking in stream-json output\n- Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool i",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.211|claude-code-changelog"
+    },
     {
       "id": "2.1.210",
       "title": "2.1.210",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.132|claude-code-changelog"
-    },
-    {
-      "id": "2.1.131",
-      "title": "2.1.131",
-      "date": "2026-05-06T09:17:57.663Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Fixed VS Code extension failing to activate on Windows due to a hardcoded build path in the bundled SDK (createRequire polyfill bug)\n- Fixed Mantle endpoint authentication failing with missing x-api-key header",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.131|claude-code-changelog"
     }
   ]
 }

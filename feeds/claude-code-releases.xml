@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 15 Jul 2026 08:16:53 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 08:17:57 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.211</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.211</link>
+      <guid isPermaLink="false">v2.1.211</guid>
+      <pubDate>Wed, 15 Jul 2026 23:02:35 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added --forward-subagent-text flag and CLAUDECODEFORWARDSUBAGENTTEXT environment variable to include subagent text and thinking in stream-json output
+- Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote charac</description>
+    </item>
     <item>
       <title>v2.1.210</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.210</link>
@@ -500,15 +510,6 @@
       <description>What&apos;s changed
 - /code-review --fix now applies review findings to your working tree after the review, surfacing reuse, simplification, and efficiency suggestions; /simplify now invokes /code-review --fix
 - Skills and slash commands can now set disallowed-tools in frontmatter to remove tools from th</description>
-    </item>
-    <item>
-      <title>v2.1.150</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.150</link>
-      <guid isPermaLink="false">v2.1.150</guid>
-      <pubDate>Sat, 23 May 2026 04:03:51 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Internal infrastructure improvements (no user-facing changes)</description>
     </item>
   </channel>
 </rss>
