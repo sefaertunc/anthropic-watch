@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 16 Jul 2026 08:17:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <item>
+      <title>2.1.212</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.212</guid>
+      <pubDate>Fri, 17 Jul 2026 08:12:39 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- /fork now copies your conversation into a new background session (its own row in claude agents) while you keep working; the in-session subagent it used to launch is now /subtask
+- Added claude auto-mode reset to restore the default auto-mode configuration, with a confirmation prompt (pass --yes to</description>
+    </item>
     <item>
       <title>2.1.211</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -450,16 +459,6 @@
       <pubDate>Fri, 08 May 2026 07:46:00 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- Added worktree.baseRef setting (fresh | head) to choose whether --worktree, EnterWorktree, and agent-isolation worktrees branch from origin/&lt;default&gt; or local HEAD. Note: the default fresh changes EnterWorktree&apos;s base back to origin/&lt;default&gt; (it has been local HEAD since 2.1.128) — set worktree.b</description>
-    </item>
-    <item>
-      <title>2.1.132</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.132</guid>
-      <pubDate>Thu, 07 May 2026 08:38:14 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added CLAUDECODESESSIONID environment variable to the Bash tool subprocess environment, matching the sessionid passed to hooks
-- Added CLAUDECODEDISABLEALTERNATESCREEN=1 env var to opt out of the fullscreen alternate-screen renderer and keep the conversation in the terminal&apos;s native scrollback
-- A</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 16 Jul 2026 08:17:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <item>
+      <title>Add amd-skills plugin (#4044)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/4587d153de1d3f75469e9b73df995a5383658d2c</link>
+      <guid isPermaLink="false">4587d15</guid>
+      <pubDate>Thu, 16 Jul 2026 22:37:28 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Remove deprecated shopify plugin (replaced by shopify-ai-toolkit) (#4070)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/d2e56c767a483271ff2bb87230ebe7c218c8dc57</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 29 May 2026 06:36:36 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: lenient UTF-8 decode in 6 git-subprocess helpers (#2056)</description>
-    </item>
-    <item>
-      <title>security-guidance: detect Graphite (gt) commands as commit/push events (#2048)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/521230897980f10f503f41e2cecc81af98fe8dcb</link>
-      <guid isPermaLink="false">5212308</guid>
-      <pubDate>Fri, 29 May 2026 06:33:14 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Fixes anthropics/claude-plugins-official#2048 — teams using Graphite for stacked PRs (`gt create` / `gt modify` / `gt submit`) never get the commit/push agentic review because the hook matcher only catches literal `git commit` / `git push` Bash calls. gt shells out to git as a subprocess, but the ho</description>
     </item>
   </channel>
 </rss>

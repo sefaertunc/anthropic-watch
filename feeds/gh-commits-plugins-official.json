@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-16T08:17:57.598Z",
+  "generated": "2026-07-17T08:13:33.640Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "4587d15",
+      "title": "Add amd-skills plugin (#4044)",
+      "date": "2026-07-16T22:37:28Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/4587d153de1d3f75469e9b73df995a5383658d2c",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "4587d15|gh-commits-plugins-official"
+    },
     {
       "id": "d2e56c7",
       "title": "Remove deprecated shopify plugin (replaced by shopify-ai-toolkit) (#4070)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "68a7008|gh-commits-plugins-official"
-    },
-    {
-      "id": "5212308",
-      "title": "security-guidance: detect Graphite (gt) commands as commit/push events (#2048)",
-      "date": "2026-05-29T06:33:14Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/521230897980f10f503f41e2cecc81af98fe8dcb",
-      "snippet": "Fixes anthropics/claude-plugins-official#2048 — teams using Graphite for stacked PRs (`gt create` / `gt modify` / `gt submit`) never get the commit/push agentic review because the hook matcher only catches literal `git commit` / `git push` Bash calls. gt shells out to git as a subprocess, but the ho",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "5212308|gh-commits-plugins-official"
     }
   ]
 }

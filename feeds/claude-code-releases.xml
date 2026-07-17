@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 16 Jul 2026 08:17:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.212</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.212</link>
+      <guid isPermaLink="false">v2.1.212</guid>
+      <pubDate>Fri, 17 Jul 2026 00:26:27 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- /fork now copies your conversation into a new background session (its own row in claude agents) while you keep working; the in-session subagent it used to launch is now /subtask
+- Added claude auto-mode reset to restore the default auto-mode configuration, with a confirmation prompt</description>
+    </item>
     <item>
       <title>v2.1.211</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.211</link>
@@ -500,16 +510,6 @@
 - Added skipLfs option to github/git plugin marketplace sources to skip Git LFS downloads during clone and update
 - Claude Code now shows a one-time notice when your npm global install can&apos;t auto-update; /doctor lists the fixes
 - Status line commands now receive COLUMNS and LINES envi</description>
-    </item>
-    <item>
-      <title>v2.1.152</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.152</link>
-      <guid isPermaLink="false">v2.1.152</guid>
-      <pubDate>Wed, 27 May 2026 01:30:59 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- /code-review --fix now applies review findings to your working tree after the review, surfacing reuse, simplification, and efficiency suggestions; /simplify now invokes /code-review --fix
-- Skills and slash commands can now set disallowed-tools in frontmatter to remove tools from th</description>
     </item>
   </channel>
 </rss>

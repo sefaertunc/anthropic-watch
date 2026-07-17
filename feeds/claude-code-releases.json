@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-16T08:17:57.383Z",
+  "generated": "2026-07-17T08:13:33.602Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.212",
+      "title": "v2.1.212",
+      "date": "2026-07-17T00:26:27Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.212",
+      "snippet": "What's changed\n- /fork now copies your conversation into a new background session (its own row in claude agents) while you keep working; the in-session subagent it used to launch is now /subtask\n- Added claude auto-mode reset to restore the default auto-mode configuration, with a confirmation prompt",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.212|claude-code-releases"
+    },
     {
       "id": "v2.1.211",
       "title": "v2.1.211",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.153|claude-code-releases"
-    },
-    {
-      "id": "v2.1.152",
-      "title": "v2.1.152",
-      "date": "2026-05-27T01:30:59Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.152",
-      "snippet": "What's changed\n- /code-review --fix now applies review findings to your working tree after the review, surfacing reuse, simplification, and efficiency suggestions; /simplify now invokes /code-review --fix\n- Skills and slash commands can now set disallowed-tools in frontmatter to remove tools from th",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.152|claude-code-releases"
     }
   ]
 }

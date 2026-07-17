@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 16 Jul 2026 08:17:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <item>
+      <title>0.2.121</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.121</guid>
+      <pubDate>Fri, 17 Jul 2026 08:12:40 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Bug Fixes
+- Fixed argv flag injection via resume and sessionid options: --resume and --session-id are now passed as single =-joined argv tokens (e.g. --resume=&lt;value&gt;) so that a dash-prefixed value is never misinterpreted as an independent CLI flag (1123)
+ Internal/Other Changes
+- Hardened build scr</description>
+    </item>
     <item>
       <title>0.2.120</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>

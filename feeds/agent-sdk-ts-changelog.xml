@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 16 Jul 2026 08:17:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <item>
+      <title>0.3.212</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.212</guid>
+      <pubDate>Fri, 17 Jul 2026 08:12:39 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Fixed dash-leading resumeSessionAt and sessionId values being passed to the CLI as separate argv tokens; both now use equals-form (--flag=value)
+- Agent tool output now includes the resolved model when a mid-turn model swap changed the subagent&apos;s model</description>
+    </item>
     <item>
       <title>0.3.211</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -424,15 +433,6 @@
       <description>- Deprecated the unstable V2 session API (unstablev2createSession / unstablev2resumeSession / unstablev2prompt) — use query() instead
 - Deprecated passing &apos;Skill&apos; in allowedTools — use the skills option instead
 - Updated to parity with Claude Code v2.1.133</description>
-    </item>
-    <item>
-      <title>0.2.132</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.132</guid>
-      <pubDate>Thu, 07 May 2026 08:38:15 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Documented applyFlagSettings() in the TypeScript Agent SDK reference and added support for null on top-level keys to clear flag-settings overrides
-- Updated to parity with Claude Code v2.1.132</description>
     </item>
   </channel>
 </rss>

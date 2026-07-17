@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-16T08:17:57.387Z",
+  "generated": "2026-07-17T08:13:33.609Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.212",
+      "title": "0.3.212",
+      "date": "2026-07-17T08:12:39.999Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed dash-leading resumeSessionAt and sessionId values being passed to the CLI as separate argv tokens; both now use equals-form (--flag=value)\n- Agent tool output now includes the resolved model when a mid-turn model swap changed the subagent's model",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.212|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.211",
       "title": "0.3.211",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.2.133|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.2.132",
-      "title": "0.2.132",
-      "date": "2026-05-07T08:38:15.633Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Documented applyFlagSettings() in the TypeScript Agent SDK reference and added support for null on top-level keys to clear flag-settings overrides\n- Updated to parity with Claude Code v2.1.132",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.2.132|agent-sdk-ts-changelog"
     }
   ]
 }
