@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 07:55:47 GMT</lastBuildDate>
+    <item>
+      <title>0.3.214</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.214</guid>
+      <pubDate>Sat, 18 Jul 2026 07:54:54 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- setpermissionmode now rejects unrecognized permission modes with an error instead of silently adopting them; the &apos;manual&apos; alias is accepted at every ingress
+- Added optional subkind: &apos;scheduled-trigger&apos; to the task-notification member of SDKMessageOrigin, marking deliveries that are the fired prom</description>
+    </item>
     <item>
       <title>0.3.212</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -423,16 +432,6 @@
       <pubDate>Sat, 09 May 2026 08:00:19 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Updated to parity with Claude Code v2.1.138</description>
-    </item>
-    <item>
-      <title>0.2.133</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.133</guid>
-      <pubDate>Fri, 08 May 2026 07:46:00 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Deprecated the unstable V2 session API (unstablev2createSession / unstablev2resumeSession / unstablev2prompt) — use query() instead
-- Deprecated passing &apos;Skill&apos; in allowedTools — use the skills option instead
-- Updated to parity with Claude Code v2.1.133</description>
     </item>
   </channel>
 </rss>

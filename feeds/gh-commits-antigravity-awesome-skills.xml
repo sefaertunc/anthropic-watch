@@ -6,7 +6,79 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 07:55:47 GMT</lastBuildDate>
+    <item>
+      <title>fix: derive AAS catalog skill count dynamically (#903)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/444e5a706561e7d74a35f1b8a64f6c7a8809913e</link>
+      <guid isPermaLink="false">444e5a7</guid>
+      <pubDate>Sat, 18 Jul 2026 07:44:17 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Fixes the source-validation blocker exposed by new skill PRs: the offline catalog builder correctly emits a larger manifest, but the runtime and updater still rejected every count except the historical 1965. The loader now binds manifest skillCount to the content index, the updater accepts a positiv</description>
+    </item>
+    <item>
+      <title>docs: clarify the AAS Core first screen (#901)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6b737a83057363d547024d30d8e79a699864129f</link>
+      <guid isPermaLink="false">6b737a8</guid>
+      <pubDate>Sat, 18 Jul 2026 07:37:58 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Clarifies AAS Core within the first 30 seconds of the canonical README while preserving the existing contributor, governance, community, credits, license, catalog, compatibility, and historical sections.  - makes AAS Core the single product in the title; - places the 14.6</description>
+    </item>
+    <item>
+      <title>ci: retire unreliable AAS v1 baseline gate (#900)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f6671c343ad50d07af0831682ac48f7378bd2c0d</link>
+      <guid isPermaLink="false">f6671c3</guid>
+      <pubDate>Sat, 18 Jul 2026 07:21:44 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Retires the standalone unreliable aas-v1-baseline workflow and removes its canonical-sync dependency after the required status was removed from main protection. Keeps pr-policy, pr-evidence, source-validation, and artifact-preview required, documents the decision, and aligns the canonical repo-maint</description>
+    </item>
+    <item>
+      <title>fix: make Core npm onboarding release-safe (#898)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9878e1add2dd63709dc7432c025b6712f4dcaaeb</link>
+      <guid isPermaLink="false">9878e1a</guid>
+      <pubDate>Sat, 18 Jul 2026 07:10:50 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Fixes release-blocking onboarding gaps discovered by installing the exact `npm pack --ignore-scripts` tarball in an empty consumer directory:  - link the published README directly to the canonical online Core guide instead of an unpackaged relative path; - make bootstrap </description>
+    </item>
+    <item>
+      <title>fix: keep AAS v1 catalog aligned with skill PRs (#899)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a4c685e870b7c780d6897f5e2b59c899d3978dd2</link>
+      <guid isPermaLink="false">a4c685e</guid>
+      <pubDate>Sat, 18 Jul 2026 07:01:44 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: center repository narrative on AAS Core (#897)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1a0329bc32bb128d6837ddd1a8fce376510a968a</link>
+      <guid isPermaLink="false">1a0329b</guid>
+      <pubDate>Sat, 18 Jul 2026 06:26:30 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Reframes the repository around AAS Core as the primary agent-first product while preserving the existing skill library, direct installers, plugins, bundles, workflows, contributor guidance, governance, community, credits, and compatibility surfaces.  Adds a canonical AAS </description>
+    </item>
+    <item>
+      <title>fix: accept Codex MCP request metadata (#896)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3dfb633b153dbf118cd95fea0a6112d99c4f6d05</link>
+      <guid isPermaLink="false">3dfb633</guid>
+      <pubDate>Sat, 18 Jul 2026 04:36:09 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: make transaction evidence deterministic (#895)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/46148072281398de969405bf66c5e5f68f531039</link>
+      <guid isPermaLink="false">4614807</guid>
+      <pubDate>Sat, 18 Jul 2026 03:02:29 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>test: distinguish macOS process streams (#893)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ff206f42c0bdb33c6d65d0c18220ff15dd4782f3</link>
+      <guid isPermaLink="false">ff206f4</guid>
+      <pubDate>Sat, 18 Jul 2026 01:46:24 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
     <item>
       <title>ci: update Pages actions to Node 24 (#877)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/4101f32402448f4fdd96b3cf166a81b8cee8b557</link>
@@ -332,78 +404,6 @@
       <link>https://github.com/sickn33/antigravity-awesome-skills/commit/f3bd1bbb821c9e226fbbef40db1346aa2d523bdf</link>
       <guid isPermaLink="false">f3bd1bb</guid>
       <pubDate>Wed, 08 Jul 2026 05:44:09 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: prepare public metadata for v13.13.0</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/79021b7619f29d4c57bb0aff881fe1c0d37fd7ec</link>
-      <guid isPermaLink="false">79021b7</guid>
-      <pubDate>Wed, 08 Jul 2026 05:41:26 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add codex-profiles skill</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/efb5f9b65e62052b70b1fba89127c70c4becdc0c</link>
-      <guid isPermaLink="false">efb5f9b</guid>
-      <pubDate>Wed, 08 Jul 2026 05:24:59 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add tree-ring-memory skill (#791)</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/93a0d30ee0dfe1e2863e1c3b1b2b54937548911b</link>
-      <guid isPermaLink="false">93a0d30</guid>
-      <pubDate>Wed, 08 Jul 2026 05:20:14 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>* feat: add tree-ring-memory skill  * docs: credit tree-ring-memory skill source  ---------  Co-authored-by: Nick &lt;184072420+sickn33@users.noreply.github.com&gt;</description>
-    </item>
-    <item>
-      <title>feat: add pilot-protocol skill for agent networking (#790)</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/38d189bd8ca7ad13d475a8cb0f4dd5409e393dd7</link>
-      <guid isPermaLink="false">38d189b</guid>
-      <pubDate>Wed, 08 Jul 2026 05:19:48 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>* feat: add pilot-protocol skill for agent networking  * fix: address codex review on pilot-protocol skill  - remove pipe-to-shell install, use download-inspect-run instead - add pilot-protocol/pilotprotocol under README Official Sources - raise risk from safe to critical (daemon + app installs muta</description>
-    </item>
-    <item>
-      <title>Add pre-ship-gate skill (#788)</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/26051971f166b06915e6b3f2156cf6a4b6d63378</link>
-      <guid isPermaLink="false">2605197</guid>
-      <pubDate>Wed, 08 Jul 2026 05:19:36 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>A pre-deploy gate that walks the silent failure modes that make a deploy &apos;succeed&apos; while production stays broken (migrations, feature flags, stale build cache, release pointer, staged rollout, missing env), then verifies the live revision instead of trusting deploy output.  Source: Sharrmavishal/ope</description>
-    </item>
-    <item>
-      <title>feat: add RouterBase model gateway skill (#787)</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/e863da2336a1e0f8603344cfd7aea57254bad1c8</link>
-      <guid isPermaLink="false">e863da2</guid>
-      <pubDate>Wed, 08 Jul 2026 05:19:24 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>* feat: add routerbase model gateway skill  * docs: credit routerbase skill source  ---------  Co-authored-by: Nick &lt;184072420+sickn33@users.noreply.github.com&gt;</description>
-    </item>
-    <item>
-      <title>fix: refresh web app release metadata</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/2aaaf593965554e379b8da9d97c8ea76902284e4</link>
-      <guid isPermaLink="false">2aaaf59</guid>
-      <pubDate>Tue, 07 Jul 2026 07:14:01 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: release v13.12.0</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/929551fcdc5de542b21968650320dee3f6d52de8</link>
-      <guid isPermaLink="false">929551f</guid>
-      <pubDate>Tue, 07 Jul 2026 07:02:06 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add agent workflow skill batch</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/c9c83ba0aa88ca2941eed704e30ba9f5c931ceb5</link>
-      <guid isPermaLink="false">c9c83ba</guid>
-      <pubDate>Tue, 07 Jul 2026 06:55:08 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
     </item>

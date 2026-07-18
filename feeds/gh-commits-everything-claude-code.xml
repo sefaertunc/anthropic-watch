@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 07:55:47 GMT</lastBuildDate>
+    <item>
+      <title>fix: make the installer runtime pass strict supply-chain vetting (#2503)</title>
+      <link>https://github.com/affaan-m/ECC/commit/754b8dd76ca885b764ec22f476664377aa46b6cd</link>
+      <guid isPermaLink="false">754b8dd</guid>
+      <pubDate>Fri, 17 Jul 2026 21:13:49 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: make the installer runtime pass strict supply-chain vetting  Remediate the four enterprise supply-chain vetting blockers from affaan-m/ECC#2502 so the installer runtime (package.json + manifests + scripts/lib/**) passes strict exact-pin evidence policy:  1. Remove the package.json `postinstal</description>
+    </item>
+    <item>
+      <title>fix(project-detect): parse Python deps pinned with `~` and `@` (was losing framework detection on compatible-release pins) (#2498)</title>
+      <link>https://github.com/affaan-m/ECC/commit/5da21c2b661d1c8aee653b97973913ad883171d8</link>
+      <guid isPermaLink="false">5da21c2</guid>
+      <pubDate>Fri, 17 Jul 2026 21:11:09 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(project-detect): parse Python deps pinned with ~= and @ direct references  * test(project-detect): cover ~= compatible-release and @ direct-reference parsing  * test(project-detect): cover direct references  * fix(project-detect): skip bare VCS/URL requirement lines in getPythonDeps  A require</description>
+    </item>
+    <item>
+      <title>fix(plan-canvas): stop dropping list items when a block&apos;s first item is over-indented (#2501)</title>
+      <link>https://github.com/affaan-m/ECC/commit/5d68ef361770463f6f5985986b5297b94dd63f1b</link>
+      <guid isPermaLink="false">5d68ef3</guid>
+      <pubDate>Fri, 17 Jul 2026 21:10:58 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(plan-canvas): stop dropping list items when a block&apos;s first item is over-indented  * fix: address greptile findings for PR #2501 - list-type detection and outdent nesting  - plan-canvas markdown: fix nested list rendering where outdented runs (indent   6→4) create duplicate sibling UL blocks i</description>
+    </item>
+    <item>
+      <title>fix(llm/providers/claude): attach cache_control to system block, not top-level (#2515)</title>
+      <link>https://github.com/affaan-m/ECC/commit/fb98726d0a35d5c978f4f9451c57a39d06d6729a</link>
+      <guid isPermaLink="false">fb98726</guid>
+      <pubDate>Fri, 17 Jul 2026 20:04:32 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(llm/providers/claude): attach cache_control to system block, not top-level  The Anthropic Messages API does not accept `cache_control` as a top-level request parameter — it is a per-content-block field. Passing it at the top level raises `TypeError` in the Python SDK (which validates kwargs ag</description>
+    </item>
     <item>
       <title>fix(hooks): require successful shell probe in observe runner (#2403)</title>
       <link>https://github.com/affaan-m/ECC/commit/ed387446052dfbc6b52de149406b70efa65edc59</link>
@@ -372,38 +404,6 @@
       <link>https://github.com/affaan-m/ECC/commit/a993989125a95de83fa0761a52d7a5a62047e562</link>
       <guid isPermaLink="false">a993989</guid>
       <pubDate>Tue, 16 Jun 2026 20:21:13 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(skills): shorten flox-environments description for Codex metadata surface (#2271)</title>
-      <link>https://github.com/affaan-m/ECC/commit/e25f2d463383a98ab40e627288dd123e005fd8e0</link>
-      <guid isPermaLink="false">e25f2d4</guid>
-      <pubDate>Tue, 16 Jun 2026 06:15:43 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Trimmed the description from ~1216 to ~620 chars while keeping trigger coverage (reproducible cross-platform envs, system deps, local services, .flox/manifest.toml/flox activate/FloxHub).</description>
-    </item>
-    <item>
-      <title>Merge pull request #2118 from Seekers2001/add-generating-python-installer</title>
-      <link>https://github.com/affaan-m/ECC/commit/9444ff49784fa29aee6ad99005b046e17cc47ec0</link>
-      <guid isPermaLink="false">9444ff4</guid>
-      <pubDate>Tue, 16 Jun 2026 06:14:48 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Add generating-python-installer skill (Nuitka commercial-grade Windows packaging). Catalog counts reconciled.</description>
-    </item>
-    <item>
-      <title>docs+chore: add README Security section; fix lint regressions on main</title>
-      <link>https://github.com/affaan-m/ECC/commit/351ccc5a3c4f5c22e00aa0973156eccf7cc2517d</link>
-      <guid isPermaLink="false">351ccc5</guid>
-      <pubDate>Tue, 16 Jun 2026 06:08:14 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>- README: add a visible ## Security section (official sources, vuln reporting via SECURITY.md, GateGuard/IOC/AgentShield guardrails, security guide); make stats line a plain paragraph to clear MD028 - eslint: empty catch comment in run-with-flags.js; drop unneeded escape in github-coordination/parsi</description>
-    </item>
-    <item>
-      <title>fix: allow additional read-only git introspection commands (#2268)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d90d921137bdf5fc74ba828b6bd0b214363ebf25</link>
-      <guid isPermaLink="false">d90d921</guid>
-      <pubDate>Tue, 16 Jun 2026 05:59:23 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
     </item>

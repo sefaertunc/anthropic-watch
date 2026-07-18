@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-17T08:13:33.602Z",
+  "generated": "2026-07-18T07:55:47.628Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.214",
+      "title": "v2.1.214",
+      "date": "2026-07-18T01:20:30Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+      "snippet": "What's changed\n- Fixed single-segment dir/ allow rules like Edit(src/) auto-approving writes to nested dir/ directories anywhere in the tree instead of only <cwd>/dir\n- Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions\n- Fixed Bash permission checks to fail cl",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.214|claude-code-releases"
+    },
     {
       "id": "v2.1.212",
       "title": "v2.1.212",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.154|claude-code-releases"
-    },
-    {
-      "id": "v2.1.153",
-      "title": "v2.1.153",
-      "date": "2026-05-28T00:52:08Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.153",
-      "snippet": "What's changed\n- Added skipLfs option to github/git plugin marketplace sources to skip Git LFS downloads during clone and update\n- Claude Code now shows a one-time notice when your npm global install can't auto-update; /doctor lists the fixes\n- Status line commands now receive COLUMNS and LINES envi",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.153|claude-code-releases"
     }
   ]
 }

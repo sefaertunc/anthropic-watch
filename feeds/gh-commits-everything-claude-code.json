@@ -5,9 +5,53 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-17T08:13:33.644Z",
+  "generated": "2026-07-18T07:55:47.666Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "754b8dd",
+      "title": "fix: make the installer runtime pass strict supply-chain vetting (#2503)",
+      "date": "2026-07-17T21:13:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/754b8dd76ca885b764ec22f476664377aa46b6cd",
+      "snippet": "* fix: make the installer runtime pass strict supply-chain vetting  Remediate the four enterprise supply-chain vetting blockers from affaan-m/ECC#2502 so the installer runtime (package.json + manifests + scripts/lib/**) passes strict exact-pin evidence policy:  1. Remove the package.json `postinstal",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "754b8dd|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5da21c2",
+      "title": "fix(project-detect): parse Python deps pinned with `~` and `@` (was losing framework detection on compatible-release pins) (#2498)",
+      "date": "2026-07-17T21:11:09Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5da21c2b661d1c8aee653b97973913ad883171d8",
+      "snippet": "* fix(project-detect): parse Python deps pinned with ~= and @ direct references  * test(project-detect): cover ~= compatible-release and @ direct-reference parsing  * test(project-detect): cover direct references  * fix(project-detect): skip bare VCS/URL requirement lines in getPythonDeps  A require",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5da21c2|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5d68ef3",
+      "title": "fix(plan-canvas): stop dropping list items when a block's first item is over-indented (#2501)",
+      "date": "2026-07-17T21:10:58Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5d68ef361770463f6f5985986b5297b94dd63f1b",
+      "snippet": "* fix(plan-canvas): stop dropping list items when a block's first item is over-indented  * fix: address greptile findings for PR #2501 - list-type detection and outdent nesting  - plan-canvas markdown: fix nested list rendering where outdented runs (indent   6→4) create duplicate sibling UL blocks i",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5d68ef3|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "fb98726",
+      "title": "fix(llm/providers/claude): attach cache_control to system block, not top-level (#2515)",
+      "date": "2026-07-17T20:04:32Z",
+      "url": "https://github.com/affaan-m/ECC/commit/fb98726d0a35d5c978f4f9451c57a39d06d6729a",
+      "snippet": "* fix(llm/providers/claude): attach cache_control to system block, not top-level  The Anthropic Messages API does not accept `cache_control` as a top-level request parameter — it is a per-content-block field. Passing it at the top level raises `TypeError` in the Python SDK (which validates kwargs ag",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "fb98726|gh-commits-everything-claude-code"
+    },
     {
       "id": "ed38744",
       "title": "fix(hooks): require successful shell probe in observe runner (#2403)",
@@ -513,50 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "a993989|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e25f2d4",
-      "title": "fix(skills): shorten flox-environments description for Codex metadata surface (#2271)",
-      "date": "2026-06-16T06:15:43Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e25f2d463383a98ab40e627288dd123e005fd8e0",
-      "snippet": "Trimmed the description from ~1216 to ~620 chars while keeping trigger coverage (reproducible cross-platform envs, system deps, local services, .flox/manifest.toml/flox activate/FloxHub).",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e25f2d4|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "9444ff4",
-      "title": "Merge pull request #2118 from Seekers2001/add-generating-python-installer",
-      "date": "2026-06-16T06:14:48Z",
-      "url": "https://github.com/affaan-m/ECC/commit/9444ff49784fa29aee6ad99005b046e17cc47ec0",
-      "snippet": "Add generating-python-installer skill (Nuitka commercial-grade Windows packaging). Catalog counts reconciled.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "9444ff4|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "351ccc5",
-      "title": "docs+chore: add README Security section; fix lint regressions on main",
-      "date": "2026-06-16T06:08:14Z",
-      "url": "https://github.com/affaan-m/ECC/commit/351ccc5a3c4f5c22e00aa0973156eccf7cc2517d",
-      "snippet": "- README: add a visible ## Security section (official sources, vuln reporting via SECURITY.md, GateGuard/IOC/AgentShield guardrails, security guide); make stats line a plain paragraph to clear MD028 - eslint: empty catch comment in run-with-flags.js; drop unneeded escape in github-coordination/parsi",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "351ccc5|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d90d921",
-      "title": "fix: allow additional read-only git introspection commands (#2268)",
-      "date": "2026-06-16T05:59:23Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d90d921137bdf5fc74ba828b6bd0b214363ebf25",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d90d921|gh-commits-everything-claude-code"
     }
   ]
 }

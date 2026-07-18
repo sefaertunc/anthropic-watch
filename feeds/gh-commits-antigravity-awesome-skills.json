@@ -5,9 +5,108 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-17T08:13:33.647Z",
+  "generated": "2026-07-18T07:55:47.668Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "444e5a7",
+      "title": "fix: derive AAS catalog skill count dynamically (#903)",
+      "date": "2026-07-18T07:44:17Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/444e5a706561e7d74a35f1b8a64f6c7a8809913e",
+      "snippet": "Fixes the source-validation blocker exposed by new skill PRs: the offline catalog builder correctly emits a larger manifest, but the runtime and updater still rejected every count except the historical 1965. The loader now binds manifest skillCount to the content index, the updater accepts a positiv",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "444e5a7|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "6b737a8",
+      "title": "docs: clarify the AAS Core first screen (#901)",
+      "date": "2026-07-18T07:37:58Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/6b737a83057363d547024d30d8e79a699864129f",
+      "snippet": "# Pull Request Description  Clarifies AAS Core within the first 30 seconds of the canonical README while preserving the existing contributor, governance, community, credits, license, catalog, compatibility, and historical sections.  - makes AAS Core the single product in the title; - places the 14.6",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "6b737a8|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "f6671c3",
+      "title": "ci: retire unreliable AAS v1 baseline gate (#900)",
+      "date": "2026-07-18T07:21:44Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/f6671c343ad50d07af0831682ac48f7378bd2c0d",
+      "snippet": "Retires the standalone unreliable aas-v1-baseline workflow and removes its canonical-sync dependency after the required status was removed from main protection. Keeps pr-policy, pr-evidence, source-validation, and artifact-preview required, documents the decision, and aligns the canonical repo-maint",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "f6671c3|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "9878e1a",
+      "title": "fix: make Core npm onboarding release-safe (#898)",
+      "date": "2026-07-18T07:10:50Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/9878e1add2dd63709dc7432c025b6712f4dcaaeb",
+      "snippet": "# Pull Request Description  Fixes release-blocking onboarding gaps discovered by installing the exact `npm pack --ignore-scripts` tarball in an empty consumer directory:  - link the published README directly to the canonical online Core guide instead of an unpackaged relative path; - make bootstrap ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "9878e1a|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "a4c685e",
+      "title": "fix: keep AAS v1 catalog aligned with skill PRs (#899)",
+      "date": "2026-07-18T07:01:44Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/a4c685e870b7c780d6897f5e2b59c899d3978dd2",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "a4c685e|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "1a0329b",
+      "title": "docs: center repository narrative on AAS Core (#897)",
+      "date": "2026-07-18T06:26:30Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/1a0329bc32bb128d6837ddd1a8fce376510a968a",
+      "snippet": "# Pull Request Description  Reframes the repository around AAS Core as the primary agent-first product while preserving the existing skill library, direct installers, plugins, bundles, workflows, contributor guidance, governance, community, credits, and compatibility surfaces.  Adds a canonical AAS ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "1a0329b|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "3dfb633",
+      "title": "fix: accept Codex MCP request metadata (#896)",
+      "date": "2026-07-18T04:36:09Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/3dfb633b153dbf118cd95fea0a6112d99c4f6d05",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "3dfb633|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "4614807",
+      "title": "fix: make transaction evidence deterministic (#895)",
+      "date": "2026-07-18T03:02:29Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/46148072281398de969405bf66c5e5f68f531039",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "4614807|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "ff206f4",
+      "title": "test: distinguish macOS process streams (#893)",
+      "date": "2026-07-18T01:46:24Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/ff206f42c0bdb33c6d65d0c18220ff15dd4782f3",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "ff206f4|gh-commits-antigravity-awesome-skills"
+    },
     {
       "id": "4101f32",
       "title": "ci: update Pages actions to Node 24 (#877)",
@@ -458,105 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
       "uniqueKey": "f3bd1bb|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "79021b7",
-      "title": "chore: prepare public metadata for v13.13.0",
-      "date": "2026-07-08T05:41:26Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/79021b7619f29d4c57bb0aff881fe1c0d37fd7ec",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "79021b7|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "efb5f9b",
-      "title": "feat: add codex-profiles skill",
-      "date": "2026-07-08T05:24:59Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/efb5f9b65e62052b70b1fba89127c70c4becdc0c",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "efb5f9b|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "93a0d30",
-      "title": "feat: add tree-ring-memory skill (#791)",
-      "date": "2026-07-08T05:20:14Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/93a0d30ee0dfe1e2863e1c3b1b2b54937548911b",
-      "snippet": "* feat: add tree-ring-memory skill  * docs: credit tree-ring-memory skill source  ---------  Co-authored-by: Nick <184072420+sickn33@users.noreply.github.com>",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "93a0d30|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "38d189b",
-      "title": "feat: add pilot-protocol skill for agent networking (#790)",
-      "date": "2026-07-08T05:19:48Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/38d189bd8ca7ad13d475a8cb0f4dd5409e393dd7",
-      "snippet": "* feat: add pilot-protocol skill for agent networking  * fix: address codex review on pilot-protocol skill  - remove pipe-to-shell install, use download-inspect-run instead - add pilot-protocol/pilotprotocol under README Official Sources - raise risk from safe to critical (daemon + app installs muta",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "38d189b|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "2605197",
-      "title": "Add pre-ship-gate skill (#788)",
-      "date": "2026-07-08T05:19:36Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/26051971f166b06915e6b3f2156cf6a4b6d63378",
-      "snippet": "A pre-deploy gate that walks the silent failure modes that make a deploy 'succeed' while production stays broken (migrations, feature flags, stale build cache, release pointer, staged rollout, missing env), then verifies the live revision instead of trusting deploy output.  Source: Sharrmavishal/ope",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "2605197|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "e863da2",
-      "title": "feat: add RouterBase model gateway skill (#787)",
-      "date": "2026-07-08T05:19:24Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/e863da2336a1e0f8603344cfd7aea57254bad1c8",
-      "snippet": "* feat: add routerbase model gateway skill  * docs: credit routerbase skill source  ---------  Co-authored-by: Nick <184072420+sickn33@users.noreply.github.com>",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "e863da2|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "2aaaf59",
-      "title": "fix: refresh web app release metadata",
-      "date": "2026-07-07T07:14:01Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/2aaaf593965554e379b8da9d97c8ea76902284e4",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "2aaaf59|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "929551f",
-      "title": "chore: release v13.12.0",
-      "date": "2026-07-07T07:02:06Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/929551fcdc5de542b21968650320dee3f6d52de8",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "929551f|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "c9c83ba",
-      "title": "feat: add agent workflow skill batch",
-      "date": "2026-07-07T06:55:08Z",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills/commit/c9c83ba0aa88ca2941eed704e30ba9f5c931ceb5",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "c9c83ba|gh-commits-antigravity-awesome-skills"
     }
   ]
 }

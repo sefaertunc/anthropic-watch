@@ -5,9 +5,383 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-17T08:13:33.586Z",
+  "generated": "2026-07-18T07:55:47.610Z",
   "itemCount": 100,
   "items": [
+    {
+      "id": "0.2.122",
+      "title": "0.2.122",
+      "date": "2026-07-18T07:54:54.692Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.214",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.122|agent-sdk-py-changelog"
+    },
+    {
+      "id": "0.3.214",
+      "title": "0.3.214",
+      "date": "2026-07-18T07:54:54.664Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- setpermissionmode now rejects unrecognized permission modes with an error instead of silently adopting them; the 'manual' alias is accepted at every ingress\n- Added optional subkind: 'scheduled-trigger' to the task-notification member of SDKMessageOrigin, marking deliveries that are the fired prom",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.214|agent-sdk-ts-changelog"
+    },
+    {
+      "id": "2.1.214",
+      "title": "2.1.214",
+      "date": "2026-07-18T07:54:53.864Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed single-segment dir/ allow rules like Edit(src/) auto-approving writes to nested dir/ directories anywhere in the tree instead of only <cwd>/dir\n- Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions\n- Fixed Bash permission checks to fail closed on file-de",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.214|claude-code-changelog"
+    },
+    {
+      "id": "48956038",
+      "title": "External Commentary on LLM Global Workspace Representations [pdf]",
+      "date": "2026-07-18T07:50:28Z",
+      "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/cc4be2488d65e54a6ed06492f8968398ddc18ebe.pdf",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "48956038|hn-anthropic-com"
+    },
+    {
+      "id": "444e5a7",
+      "title": "fix: derive AAS catalog skill count dynamically (#903)",
+      "date": "2026-07-18T07:44:17Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/444e5a706561e7d74a35f1b8a64f6c7a8809913e",
+      "snippet": "Fixes the source-validation blocker exposed by new skill PRs: the offline catalog builder correctly emits a larger manifest, but the runtime and updater still rejected every count except the historical 1965. The loader now binds manifest skillCount to the content index, the updater accepts a positiv",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "444e5a7|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "6b737a8",
+      "title": "docs: clarify the AAS Core first screen (#901)",
+      "date": "2026-07-18T07:37:58Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/6b737a83057363d547024d30d8e79a699864129f",
+      "snippet": "# Pull Request Description  Clarifies AAS Core within the first 30 seconds of the canonical README while preserving the existing contributor, governance, community, credits, license, catalog, compatibility, and historical sections.  - makes AAS Core the single product in the title; - places the 14.6",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "6b737a8|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "f6671c3",
+      "title": "ci: retire unreliable AAS v1 baseline gate (#900)",
+      "date": "2026-07-18T07:21:44Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/f6671c343ad50d07af0831682ac48f7378bd2c0d",
+      "snippet": "Retires the standalone unreliable aas-v1-baseline workflow and removes its canonical-sync dependency after the required status was removed from main protection. Keeps pr-policy, pr-evidence, source-validation, and artifact-preview required, documents the decision, and aligns the canonical repo-maint",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "f6671c3|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "9878e1a",
+      "title": "fix: make Core npm onboarding release-safe (#898)",
+      "date": "2026-07-18T07:10:50Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/9878e1add2dd63709dc7432c025b6712f4dcaaeb",
+      "snippet": "# Pull Request Description  Fixes release-blocking onboarding gaps discovered by installing the exact `npm pack --ignore-scripts` tarball in an empty consumer directory:  - link the published README directly to the canonical online Core guide instead of an unpackaged relative path; - make bootstrap ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "9878e1a|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "a4c685e",
+      "title": "fix: keep AAS v1 catalog aligned with skill PRs (#899)",
+      "date": "2026-07-18T07:01:44Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/a4c685e870b7c780d6897f5e2b59c899d3978dd2",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "a4c685e|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "t3_1uzjgc5",
+      "title": "Claude on X: \"Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits. Pro and Team Standard users will continue to have access to Fable via usage credits, and will receive a one-time $100 credit. Demand for Fable has been challenging to\" / X",
+      "date": "2026-07-18T02:23:54+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uzjgc5/claude_on_x_beginning_july_20_claude_fable_5_will/",
+      "snippet": null,
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1uzjgc5|reddit-claudecode"
+    },
+    {
+      "id": "t3_1uzjdrv",
+      "title": "congrats to max users",
+      "date": "2026-07-18T02:20:21+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uzjdrv/congrats_to_max_users/",
+      "snippet": null,
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1uzjdrv|reddit-claudecode"
+    },
+    {
+      "id": "t3_1uzjbeh",
+      "title": "As predicted",
+      "date": "2026-07-18T02:17:12+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uzjbeh/as_predicted/",
+      "snippet": null,
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1uzjbeh|reddit-claudecode"
+    },
+    {
+      "id": "2078302415804379218",
+      "title": "Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits.\n\nPro and Team Standard users will continue to have access to Fable via usage credits, and will r",
+      "date": "2026-07-18T02:14:43.000Z",
+      "url": "https://x.com/claudeai/status/2078302415804379218",
+      "snippet": "Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits.\n\nPro and Team Standard users will continue to have access to Fable via usage credits, and will receive a one-time $100 credit.\n\nDemand for Fable has been challenging to predict, which is why we ro",
+      "source": "twitter-claudeai",
+      "sourceCategory": "community",
+      "sourceName": "@claudeai (official)",
+      "uniqueKey": "2078302415804379218|twitter-claudeai"
+    },
+    {
+      "id": "v1.0.177",
+      "title": "v1.0.177",
+      "date": "2026-07-18T01:21:54Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.177",
+      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.177",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.177|claude-code-action"
+    },
+    {
+      "id": "v2.1.214",
+      "title": "v2.1.214",
+      "date": "2026-07-18T01:20:30Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+      "snippet": "What's changed\n- Fixed single-segment dir/ allow rules like Edit(src/) auto-approving writes to nested dir/ directories anywhere in the tree instead of only <cwd>/dir\n- Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions\n- Fixed Bash permission checks to fail cl",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.214|claude-code-releases"
+    },
+    {
+      "id": "07dcb0e",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-07-18T01:20:23Z",
+      "url": "https://github.com/anthropics/claude-code/commit/07dcb0e13580b21174ff1bf6a7e1d5ead3b61d60",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "07dcb0e|gh-commits-claude-code"
+    },
+    {
+      "id": "2.1.214",
+      "title": "@anthropic-ai/claude-code@2.1.214",
+      "date": "2026-07-18T00:13:41.661Z",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+      "source": "npm-claude-code",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.214|npm-claude-code"
+    },
+    {
+      "id": "t3_1uzeyaw",
+      "title": "It's honestly insane that Anthropic STILL has not added steer to Claude Desktop. Codex added the steer feature in January and I've used it countless times every day since. The fact that you cannot steer an agent in Claude Code and have to stop and interrupt the session is such terrible UX.",
+      "date": "2026-07-17T22:58:35+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uzeyaw/its_honestly_insane_that_anthropic_still_has_not/",
+      "snippet": "Steer was one of the most useful features that was ever added to agent harnesses, and such a massive UX improvement. It reduces friction, increases productivity, and avoids wasting tokens on interrupting sessions every time you need to steer an agent. What are they even doing at Anthropic?!?",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1uzeyaw|reddit-claudecode"
+    },
+    {
+      "id": "2078251675308240973",
+      "title": "Over the past 6 months, Claude Platform has added new APIs to help developers quickly build and deploy agents.\n\nPlatform leads Katelyn Lesse, Angela Jiang, and Jess Yan sat down to talk about what has",
+      "date": "2026-07-17T22:53:06.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2078251675308240973",
+      "snippet": "Over the past 6 months, Claude Platform has added new APIs to help developers quickly build and deploy agents.\n\nPlatform leads Katelyn Lesse, Angela Jiang, and Jess Yan sat down to talk about what has shipped and the patterns we're seeing in production. https://t.co/wCWzYqBZQ9",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2078251675308240973|twitter-claudedevs"
+    },
+    {
+      "id": "2476d52",
+      "title": "Add receipts plugin (#4176)",
+      "date": "2026-07-17T22:05:24Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/2476d52abc961e2544c1b663f0541171aef2d3e1",
+      "snippet": "First-party skills-only plugin (author: Anthropic). MCP Directory audit: combined 89 PASS (static 82 / AI 96). Privacy verified local-only, aggregate-JSON output, no network egress.",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "2476d52|gh-commits-plugins-official"
+    },
+    {
+      "id": "t3_1uzdh79",
+      "title": "Can we have another one-week extension for using Fable 5?",
+      "date": "2026-07-17T21:56:57+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uzdh79/can_we_have_another_oneweek_extension_for_using/",
+      "snippet": "Hey Anthropic, I know you read our reddit posts. Can we please have another one-week extension? I don't like comparing you to OpenAI, but I know you can do better. Thanks.",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1uzdh79|reddit-claudecode"
+    },
+    {
+      "id": "754b8dd",
+      "title": "fix: make the installer runtime pass strict supply-chain vetting (#2503)",
+      "date": "2026-07-17T21:13:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/754b8dd76ca885b764ec22f476664377aa46b6cd",
+      "snippet": "* fix: make the installer runtime pass strict supply-chain vetting  Remediate the four enterprise supply-chain vetting blockers from affaan-m/ECC#2502 so the installer runtime (package.json + manifests + scripts/lib/**) passes strict exact-pin evidence policy:  1. Remove the package.json `postinstal",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "754b8dd|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5da21c2",
+      "title": "fix(project-detect): parse Python deps pinned with `~` and `@` (was losing framework detection on compatible-release pins) (#2498)",
+      "date": "2026-07-17T21:11:09Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5da21c2b661d1c8aee653b97973913ad883171d8",
+      "snippet": "* fix(project-detect): parse Python deps pinned with ~= and @ direct references  * test(project-detect): cover ~= compatible-release and @ direct-reference parsing  * test(project-detect): cover direct references  * fix(project-detect): skip bare VCS/URL requirement lines in getPythonDeps  A require",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5da21c2|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5d68ef3",
+      "title": "fix(plan-canvas): stop dropping list items when a block's first item is over-indented (#2501)",
+      "date": "2026-07-17T21:10:58Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5d68ef361770463f6f5985986b5297b94dd63f1b",
+      "snippet": "* fix(plan-canvas): stop dropping list items when a block's first item is over-indented  * fix: address greptile findings for PR #2501 - list-type detection and outdent nesting  - plan-canvas markdown: fix nested list rendering where outdented runs (indent   6→4) create duplicate sibling UL blocks i",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5d68ef3|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2078211065868091768",
+      "title": "We've resolved an issue where Fable was not selectable as a model within https://t.co/FiDD5WA3ik or Claude Code for a 30 minute period.\n\nYou may need to restart Claude Code. If Fable is not your defau",
+      "date": "2026-07-17T20:11:44.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2078211065868091768",
+      "snippet": "We've resolved an issue where Fable was not selectable as a model within https://t.co/FiDD5WA3ik or Claude Code for a 30 minute period.\n\nYou may need to restart Claude Code. If Fable is not your default model afterwards, you should reselect it with /model.",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2078211065868091768|twitter-claudedevs"
+    },
+    {
+      "id": "google-cloud-sdk-v0.0.6",
+      "title": "google-cloud-sdk: v0.0.6",
+      "date": "2026-07-17T20:06:00Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.6",
+      "snippet": "0.0.6 (2026-07-17)\nFull Changelog: google-cloud-sdk-v0.0.5...google-cloud-sdk-v0.0.6\n Bug Fixes\n google-cloud: bump google-auth-library to ^10.2.0 (230) (01e74ee)\n Chores\n internal: tidy changelog (4d3022d)\n internal: version bump (eb97e85)",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "google-cloud-sdk-v0.0.6|api-sdk-ts-releases"
+    },
+    {
+      "id": "sdk-v0.112.3",
+      "title": "sdk: v0.112.3",
+      "date": "2026-07-17T20:05:52Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.112.3",
+      "snippet": "0.112.3 (2026-07-17)\nFull Changelog: sdk-v0.112.2...sdk-v0.112.3\n Chores\n docs: small updates (79fd6c7)",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "sdk-v0.112.3|api-sdk-ts-releases"
+    },
+    {
+      "id": "fb98726",
+      "title": "fix(llm/providers/claude): attach cache_control to system block, not top-level (#2515)",
+      "date": "2026-07-17T20:04:32Z",
+      "url": "https://github.com/affaan-m/ECC/commit/fb98726d0a35d5c978f4f9451c57a39d06d6729a",
+      "snippet": "* fix(llm/providers/claude): attach cache_control to system block, not top-level  The Anthropic Messages API does not accept `cache_control` as a top-level request parameter — it is a per-content-block field. Passing it at the top level raises `TypeError` in the Python SDK (which validates kwargs ag",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "fb98726|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2078189433992495429",
+      "title": "The Built with Claude: Life Sciences hackathon comes to an end.\n\nThank you to everyone who spent a week building with Claude Science and Claude Code, and to @gladstoneinst and @cerebral_valley for co-",
+      "date": "2026-07-17T18:45:46.000Z",
+      "url": "https://x.com/claudeai/status/2078189433992495429",
+      "snippet": "The Built with Claude: Life Sciences hackathon comes to an end.\n\nThank you to everyone who spent a week building with Claude Science and Claude Code, and to @gladstoneinst and @cerebral_valley for co-hosting.\n\nIntroducing the winners: https://t.co/VTDup1yz9Z",
+      "source": "twitter-claudeai",
+      "sourceCategory": "community",
+      "sourceName": "@claudeai (official)",
+      "uniqueKey": "2078189433992495429|twitter-claudeai"
+    },
+    {
+      "id": "g613ntyj2pwf",
+      "title": "Elevated errors across Fable 5",
+      "date": "2026-07-17T18:32:32.629Z",
+      "url": "https://stspg.io/rxyp2wg9jxcw",
+      "snippet": "[major] resolved — This issue has been resolved, and Claude Fable 5 is available once again without usage credits, as expected.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "g613ntyj2pwf|status-page"
+    },
+    {
+      "id": "48950477",
+      "title": "Ask HN: Did Fable disappear from your Claude usage and requires credits now?",
+      "date": "2026-07-17T18:18:23Z",
+      "url": "https://news.ycombinator.com/item?id=48950477",
+      "snippet": "Looks like it happened. I actually assumed they would just enable it for all today, considering the Sol and Kimmi releases this past week. They doubled down instead.<p>EDIT: Was an outage, they just fixed it (https:&#x2F;&#x2F;status.claude.com&#x2F;)",
+      "source": "hn-claude-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.com",
+      "uniqueKey": "48950477|hn-claude-com"
+    },
+    {
+      "id": "lj0khk5vd7v7",
+      "title": "Elevated error rates for Sonnet 5",
+      "date": "2026-07-17T18:12:57.891Z",
+      "url": "https://stspg.io/jrrvwd0jbtmz",
+      "snippet": "[major] resolved — This incident has been resolved.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "lj0khk5vd7v7|status-page"
+    },
+    {
+      "id": "sdk-v0.112.2",
+      "title": "sdk: v0.112.2",
+      "date": "2026-07-17T16:36:12Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.112.2",
+      "snippet": "0.112.2 (2026-07-17)\nFull Changelog: sdk-v0.112.1...sdk-v0.112.2\n Chores\n client: docs updates (fdb3a65)",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "sdk-v0.112.2|api-sdk-ts-releases"
+    },
+    {
+      "id": "bwz7ld34gcxt",
+      "title": "Elevated errors for Claude Opus 4.8",
+      "date": "2026-07-17T14:57:42.454Z",
+      "url": "https://stspg.io/7sn47qvhg7b5",
+      "snippet": "[minor] resolved — This incident has been resolved.",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "bwz7ld34gcxt|status-page"
+    },
     {
       "id": "0.2.121",
       "title": "0.2.121",
@@ -42,50 +416,6 @@
       "uniqueKey": "2.1.212|claude-code-changelog"
     },
     {
-      "id": "4101f32",
-      "title": "ci: update Pages actions to Node 24 (#877)",
-      "date": "2026-07-17T08:02:59Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/4101f32402448f4fdd96b3cf166a81b8cee8b557",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "4101f32|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "323d5b0",
-      "title": "chore: record redirect manifest provenance (#876)",
-      "date": "2026-07-17T07:42:56Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/323d5b098bcefa934e93a74527464882ee1a853a",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "323d5b0|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "703eede",
-      "title": "chore: version redirect manifest contract (#875)",
-      "date": "2026-07-17T07:35:33Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/703eede1f78d8cd4d520fd3d3e99ebe0d3b02e6e",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "703eede|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "389f1e8",
-      "title": "fix: harden legacy redirect infrastructure (#874)",
-      "date": "2026-07-17T07:24:40Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/389f1e84ed3cfda3245f282b7cf04b362778d0b4",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "389f1e8|gh-commits-antigravity-awesome-skills"
-    },
-    {
       "id": "7gpjd8n56rlq",
       "title": "Elevated errors on Sonnet 5 and Haiku 4.5",
       "date": "2026-07-17T06:47:54.909Z",
@@ -95,17 +425,6 @@
       "sourceCategory": "extended",
       "sourceName": "Anthropic Status Page",
       "uniqueKey": "7gpjd8n56rlq|status-page"
-    },
-    {
-      "id": "0a33580",
-      "title": "fix: cover every current skill in legacy bridge (#872)",
-      "date": "2026-07-17T06:31:44Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/0a33580aebc39a850600c183c6145f1ed3cae828",
-      "snippet": "# Pull Request Description  Expands the separate legacy GitHub Pages bridge from the curated 187-route sitemap subset to exact one-to-one coverage for every current catalog skill. The generator now combines all 1,965 current skill IDs with the seven structural sitemap routes, producing 1,972 redirec",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "0a33580|gh-commits-antigravity-awesome-skills"
     },
     {
       "id": "fa0fa64",
@@ -172,6 +491,28 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
       "uniqueKey": "67f390c|gh-commits-claude-code"
+    },
+    {
+      "id": "https://claude.com/blog/working-at-the-frontier-cursor",
+      "title": "Working at the frontier: How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems",
+      "date": "2026-07-17T00:00:00.000Z",
+      "url": "https://claude.com/blog/working-at-the-frontier-cursor",
+      "snippet": "",
+      "source": "blog-claude",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Claude Blog",
+      "uniqueKey": "https://claude.com/blog/working-at-the-frontier-cursor|blog-claude"
+    },
+    {
+      "id": "https://claude.com/blog/ciso-guide-to-agentic-ai",
+      "title": "Zero risk isn't the job: a CISO's guide to agentic AI",
+      "date": "2026-07-17T00:00:00.000Z",
+      "url": "https://claude.com/blog/ciso-guide-to-agentic-ai",
+      "snippet": "",
+      "source": "blog-claude",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Claude Blog",
+      "uniqueKey": "https://claude.com/blog/ciso-guide-to-agentic-ai|blog-claude"
     },
     {
       "id": "4587d15",
@@ -273,39 +614,6 @@
       "uniqueKey": "kqbd7wm6hnnr|status-page"
     },
     {
-      "id": "0hzwq1ylg80g",
-      "title": "Enterprise SSO sign-in failures",
-      "date": "2026-07-16T09:23:54.462Z",
-      "url": "https://stspg.io/s3dpk67ywshw",
-      "snippet": "[major] resolved — This incident has been resolved.",
-      "source": "status-page",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Status Page",
-      "uniqueKey": "0hzwq1ylg80g|status-page"
-    },
-    {
-      "id": "vjfp60ngq2zj",
-      "title": "Elevated errors for Claude Opus 4.7",
-      "date": "2026-07-16T08:58:05.865Z",
-      "url": "https://stspg.io/3vvl4w8559r5",
-      "snippet": "[minor] resolved — This incident has been resolved.",
-      "source": "status-page",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Status Page",
-      "uniqueKey": "vjfp60ngq2zj|status-page"
-    },
-    {
-      "id": "30x7lsq713tl",
-      "title": "Elevated errors on Claude Sonnet 5",
-      "date": "2026-07-16T08:39:14.307Z",
-      "url": "https://stspg.io/mx5x9z0vlpyw",
-      "snippet": "[minor] resolved — This incident has been resolved.",
-      "source": "status-page",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Status Page",
-      "uniqueKey": "30x7lsq713tl|status-page"
-    },
-    {
       "id": "0.2.120",
       "title": "0.2.120",
       "date": "2026-07-16T08:17:07.380Z",
@@ -339,50 +647,6 @@
       "uniqueKey": "2.1.211|claude-code-changelog"
     },
     {
-      "id": "t3_1uxvium",
-      "title": "Is there a variant of this subreddit where you can discuss Claude Code without every post being whiny?",
-      "date": "2026-07-16T07:10:08+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uxvium/is_there_a_variant_of_this_subreddit_where_you/",
-      "snippet": "“Oh no, my stochastic slot machine app-generator didn’t do what I wanted it to do in one try. They made it dumb today, specifically for me.” “Oh no, the millions in free compute they give away daily isn’t enough, I want more free slot machine app-generator.” “That’s it, enough is enough. After years",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1uxvium|reddit-claudecode"
-    },
-    {
-      "id": "t3_1uxs0ql",
-      "title": "Lesgooo!!! i told yall",
-      "date": "2026-07-16T04:02:20+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uxs0ql/lesgooo_i_told_yall/",
-      "snippet": null,
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1uxs0ql|reddit-claudecode"
-    },
-    {
-      "id": "t3_1uxrz44",
-      "title": "We gotta reset boys and girls. Let’s go!",
-      "date": "2026-07-16T04:00:19+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uxrz44/we_gotta_reset_boys_and_girls_lets_go/",
-      "snippet": null,
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1uxrz44|reddit-claudecode"
-    },
-    {
-      "id": "t3_1uxryoc",
-      "title": "Limits appear to be reset!",
-      "date": "2026-07-16T03:59:46+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uxryoc/limits_appear_to_be_reset/",
-      "snippet": "My /usage is showing bars reset, and the https://claude.ai/new#settings/usage site shows empty bars as well LET'S GO!",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1uxryoc|reddit-claudecode"
-    },
-    {
       "id": "2077603998685958457",
       "title": "RT @ClaudeDevs: We've reset 5-hour and weekly rate limits for all users.",
       "date": "2026-07-16T03:59:27.000Z",
@@ -403,17 +667,6 @@
       "sourceCategory": "community",
       "sourceName": "@ClaudeDevs",
       "uniqueKey": "2077603834453770467|twitter-claudedevs"
-    },
-    {
-      "id": "t3_1uxp2t2",
-      "title": "Built a self-hosted radio station with an AI DJ that plays my own music library",
-      "date": "2026-07-16T01:41:12+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1uxp2t2/built_a_selfhosted_radio_station_with_an_ai_dj/",
-      "snippet": "SUB/WAVE is a radio station you self-host. It plays your own music library (Navidrome) and an AI DJ picks the tracks and talks between them. Reads the time, the weather, takes plain-language requests. Radio, not a playlist, so one shared stream and no skip button. 65 days of day-and-night coding wit",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1uxp2t2|reddit-claudecode"
     },
     {
       "id": "48928918",
@@ -823,17 +1076,6 @@
       "uniqueKey": "v2.1.209|claude-code-releases"
     },
     {
-      "id": "988b3e5",
-      "title": "chore: Update CHANGELOG.md and feed.xml",
-      "date": "2026-07-14T06:36:21Z",
-      "url": "https://github.com/anthropics/claude-code/commit/988b3e56432775c09bba903ba22522b97cd0f2fb",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "988b3e5|gh-commits-claude-code"
-    },
-    {
       "id": "2.1.209",
       "title": "@anthropic-ai/claude-code@2.1.209",
       "date": "2026-07-14T04:45:37.792Z",
@@ -843,17 +1085,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code npm Package",
       "uniqueKey": "2.1.209|npm-claude-code"
-    },
-    {
-      "id": "48901923",
-      "title": "Claude Science, an AI workbench for scientists",
-      "date": "2026-07-14T03:27:01Z",
-      "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "48901923|hn-anthropic-com"
     },
     {
       "id": "ed38744",
@@ -867,28 +1098,6 @@
       "uniqueKey": "ed38744|gh-commits-everything-claude-code"
     },
     {
-      "id": "v1.0.172",
-      "title": "v1.0.172",
-      "date": "2026-07-14T01:12:24Z",
-      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.172",
-      "snippet": "What's Changed\n fix(sdk): fail step when result has iserror:true despite success subtype by @syf2211 in https://github.com/anthropics/claude-code-action/pull/1496\nFull Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.172",
-      "source": "claude-code-action",
-      "sourceCategory": "extended",
-      "sourceName": "Claude Code Action Releases",
-      "uniqueKey": "v1.0.172|claude-code-action"
-    },
-    {
-      "id": "v2.1.208",
-      "title": "v2.1.208",
-      "date": "2026-07-14T01:10:42Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.208",
-      "snippet": "What's changed\n- Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDEAXSCREENREADER=1, or add \"axScreenReader\": true to settings.\n- Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode\n-",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.208|claude-code-releases"
-    },
-    {
       "id": "https://support.claude.com/en/articles/12138966-release-notes#h_a90c8544e7",
       "title": "July 14, 2026",
       "date": "2026-07-14T00:00:00.000Z",
@@ -898,215 +1107,6 @@
       "sourceCategory": "core",
       "sourceName": "Anthropic Support Release Notes",
       "uniqueKey": "https://support.claude.com/en/articles/12138966-release-notes#h_a90c8544e7|support-release-notes"
-    },
-    {
-      "id": "https://www.anthropic.com/news/claude-for-teachers",
-      "title": "Introducing Claude for Teachers",
-      "date": "2026-07-14T00:00:00.000Z",
-      "url": "https://www.anthropic.com/news/claude-for-teachers",
-      "snippet": "",
-      "source": "blog-news",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic News Blog",
-      "uniqueKey": "https://www.anthropic.com/news/claude-for-teachers|blog-news"
-    },
-    {
-      "id": "https://www.anthropic.com/news/canadian-ai-research",
-      "title": "Anthropic commits $10 million to Canadian AI research",
-      "date": "2026-07-14T00:00:00.000Z",
-      "url": "https://www.anthropic.com/news/canadian-ai-research",
-      "snippet": "",
-      "source": "blog-news",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic News Blog",
-      "uniqueKey": "https://www.anthropic.com/news/canadian-ai-research|blog-news"
-    },
-    {
-      "id": "2076789349145092230",
-      "title": "Artifacts now support public sharing and multiplayer editing in Claude Code, and can be created with Claude Tag. https://t.co/XEhkN3qHAC",
-      "date": "2026-07-13T22:02:20.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2076789349145092230",
-      "snippet": "Artifacts now support public sharing and multiplayer editing in Claude Code, and can be created with Claude Tag. https://t.co/XEhkN3qHAC",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2076789349145092230|twitter-claudedevs"
-    },
-    {
-      "id": "67ce644",
-      "title": "Merge pull request #771 from anthropics/nikblanchet/fix-metaprompt-prefill",
-      "date": "2026-07-13T17:54:29Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/67ce644d33e5933f0bcc0b6eb4113df41bbf3a8f",
-      "snippet": "Fix metaprompt notebook: remove assistant prefill (400 on current models)",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "67ce644|gh-commits-cookbooks"
-    },
-    {
-      "id": "470dd66",
-      "title": "Clean up metaprompt notebook: clear outputs, rename CLIENT to client",
-      "date": "2026-07-13T17:29:43Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/470dd66397222de71c1a9b8c7fb672edb0ca23af",
-      "snippet": "Clear all cell outputs and execution metadata so the notebook ships clean, and rename CLIENT to client to follow Python naming convention. Read the API key from the environment instead of a hardcoded variable, and re-enable the pretty_print(message) call so the generated prompt is shown when run.  T",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "470dd66|gh-commits-cookbooks"
-    },
-    {
-      "id": "2076719540785012872",
-      "title": "In previous research, we found that Claude expresses over 3,000 values, like honesty and warmth. In new work, we asked how the values Claude expresses vary between Claude models and across languages.\n",
-      "date": "2026-07-13T17:24:56.000Z",
-      "url": "https://x.com/AnthropicAI/status/2076719540785012872",
-      "snippet": "In previous research, we found that Claude expresses over 3,000 values, like honesty and warmth. In new work, we asked how the values Claude expresses vary between Claude models and across languages.\n\nWe analyzed 300K+ anonymized conversations to find out.https://t.co/PgxsMXipt5",
-      "source": "twitter-anthropicai",
-      "sourceCategory": "community",
-      "sourceName": "@AnthropicAI (official)",
-      "uniqueKey": "2076719540785012872|twitter-anthropicai"
-    },
-    {
-      "id": "https://www.anthropic.com/research/claude-values-models-languages",
-      "title": "Claude’s values across models and languages",
-      "date": "2026-07-13T17:08:00.000Z",
-      "url": "https://www.anthropic.com/research/claude-values-models-languages",
-      "snippet": "",
-      "source": "blog-research",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Research Blog",
-      "uniqueKey": "https://www.anthropic.com/research/claude-values-models-languages|blog-research"
-    },
-    {
-      "id": "48894772",
-      "title": "Show HN: Claude Organizer, folders and search for Claude.ai, all local",
-      "date": "2026-07-13T16:08:10Z",
-      "url": "https://chromewebstore.google.com/detail/claude-organizer-folders/pnbhfiebkknicpbljchmgibnpmlgebif",
-      "snippet": null,
-      "source": "hn-claude-ai",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — claude.ai",
-      "uniqueKey": "48894772|hn-claude-ai"
-    },
-    {
-      "id": "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail",
-      "title": "Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail",
-      "date": "2026-07-13T00:00:00.000Z",
-      "url": "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail",
-      "snippet": "",
-      "source": "blog-claude",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Claude Blog",
-      "uniqueKey": "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail|blog-claude"
-    },
-    {
-      "id": "t3_1uuuhj8",
-      "title": "Did not expext Fable 5 to be this good!✨",
-      "date": "2026-07-12T23:07:17+00:00",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuuhj8/did_not_expext_fable_5_to_be_this_good/",
-      "snippet": "Created with Fable 5 in three afternoons. Dropped a low poly city assets folder and he handeled maps creation entirely. Three.js FPS shooter Multi/single player FFA/TDM. Quake3 meets Flying Cars. Rocket Launchers and Rail Guns. (Desktop/VR) Try it here: https://sky-cruiser-9065b31330ea.herokuapp.com",
-      "source": "reddit-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeAI (top/day)",
-      "uniqueKey": "t3_1uuuhj8|reddit-claudeai"
-    },
-    {
-      "id": "t3_1uuscvt",
-      "title": "Anthropic just poached Google DeepMind's Nobel laureate and University of California, Berkeley's CS division chair in two weeks.",
-      "date": "2026-07-12T21:39:03+00:00",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuscvt/anthropic_just_poached_google_deepminds_nobel/",
-      "snippet": "John Jumper, Nobel laureate in Chemistry and the man behind AlphaFold, just left Google DeepMind for Anthropic. So did Jelani Nelson, whose advanced algorithms lectures have 21 million views on YouTube. This is the pattern Anthropic has been running all year. Look at who else they've hired: - Mike K",
-      "source": "reddit-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeAI (top/day)",
-      "uniqueKey": "t3_1uuscvt|reddit-claudeai"
-    },
-    {
-      "id": "t3_1uuovs4",
-      "title": "fAiR pUsHbAcK",
-      "date": "2026-07-12T19:23:24+00:00",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1uuovs4/fair_pushback/",
-      "snippet": null,
-      "source": "reddit-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeAI (top/day)",
-      "uniqueKey": "t3_1uuovs4|reddit-claudeai"
-    },
-    {
-      "id": "48883064",
-      "title": "Claude Code May–July 2026 weekly limits promotion",
-      "date": "2026-07-12T18:01:29Z",
-      "url": "https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion",
-      "snippet": null,
-      "source": "hn-claude-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — claude.com",
-      "uniqueKey": "48883064|hn-claude-com"
-    },
-    {
-      "id": "t3_1uulu1c",
-      "title": "Sussy usage",
-      "date": "2026-07-12T17:31:09+00:00",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1uulu1c/sussy_usage/",
-      "snippet": null,
-      "source": "reddit-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeAI (top/day)",
-      "uniqueKey": "t3_1uulu1c|reddit-claudeai"
-    },
-    {
-      "id": "2076352750498238639",
-      "title": "Fable extended another week :)",
-      "date": "2026-07-12T17:07:27.000Z",
-      "url": "https://x.com/TheAmolAvasare/status/2076352750498238639",
-      "snippet": "Fable extended another week :)",
-      "source": "twitter-theamolavasare",
-      "sourceCategory": "community",
-      "sourceName": "@TheAmolAvasare (Amol Avasare)",
-      "uniqueKey": "2076352750498238639|twitter-theamolavasare"
-    },
-    {
-      "id": "t3_1uul693",
-      "title": "Access has been extended!",
-      "date": "2026-07-12T17:07:26+00:00",
-      "url": "https://www.reddit.com/r/ClaudeAI/comments/1uul693/access_has_been_extended/",
-      "snippet": null,
-      "source": "reddit-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeAI (top/day)",
-      "uniqueKey": "t3_1uul693|reddit-claudeai"
-    },
-    {
-      "id": "2076351530199114224",
-      "title": "RT @claudeai: We're extending Claude Fable 5 access on all paid plans, as well as keeping Claude Code’s weekly rate limits 50% higher, thro…",
-      "date": "2026-07-12T17:02:36.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2076351530199114224",
-      "snippet": "RT @claudeai: We're extending Claude Fable 5 access on all paid plans, as well as keeping Claude Code’s weekly rate limits 50% higher, thro…",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2076351530199114224|twitter-claudedevs"
-    },
-    {
-      "id": "2076351399999557669",
-      "title": "We're extending Claude Fable 5 access on all paid plans, as well as keeping Claude Code’s weekly rate limits 50% higher, through July 19.",
-      "date": "2026-07-12T17:02:05.000Z",
-      "url": "https://x.com/claudeai/status/2076351399999557669",
-      "snippet": "We're extending Claude Fable 5 access on all paid plans, as well as keeping Claude Code’s weekly rate limits 50% higher, through July 19.",
-      "source": "twitter-claudeai",
-      "sourceCategory": "community",
-      "sourceName": "@claudeai (official)",
-      "uniqueKey": "2076351399999557669|twitter-claudeai"
-    },
-    {
-      "id": "0.2.116",
-      "title": "0.2.116",
-      "date": "2026-07-11T07:59:18.713Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
-      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.207\n- Fixed CI workspace trust so Claude Code honors project-scoped permission grants in checkout directories (1085)",
-      "source": "agent-sdk-py-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK Python Changelog",
-      "uniqueKey": "0.2.116|agent-sdk-py-changelog"
     }
   ]
 }

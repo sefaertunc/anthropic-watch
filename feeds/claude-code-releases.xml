@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 17 Jul 2026 08:13:33 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 07:55:47 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.214</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.214</link>
+      <guid isPermaLink="false">v2.1.214</guid>
+      <pubDate>Sat, 18 Jul 2026 01:20:30 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed single-segment dir/ allow rules like Edit(src/) auto-approving writes to nested dir/ directories anywhere in the tree instead of only &lt;cwd&gt;/dir
+- Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions
+- Fixed Bash permission checks to fail cl</description>
+    </item>
     <item>
       <title>v2.1.212</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.212</link>
@@ -499,17 +510,6 @@
       <description>What&apos;s changed
 - Opus 4.8 is here! Now defaults to high effort · /effort xhigh for your hardest tasks
 - Introducing dynamic workflows: ask Claude to create a workflow and it orchestrates work across tens to hundreds of agents in the background, so you can take on larger, more complex tasks. Run /wor</description>
-    </item>
-    <item>
-      <title>v2.1.153</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.153</link>
-      <guid isPermaLink="false">v2.1.153</guid>
-      <pubDate>Thu, 28 May 2026 00:52:08 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added skipLfs option to github/git plugin marketplace sources to skip Git LFS downloads during clone and update
-- Claude Code now shows a one-time notice when your npm global install can&apos;t auto-update; /doctor lists the fixes
-- Status line commands now receive COLUMNS and LINES envi</description>
     </item>
   </channel>
 </rss>
