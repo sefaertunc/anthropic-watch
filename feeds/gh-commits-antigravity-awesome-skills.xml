@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 18 Jul 2026 07:55:47 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 08:23:20 GMT</lastBuildDate>
+    <item>
+      <title>fix: make AAS recommendations domain-first (#932)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a98b4583dbe7967ec95cbd9d8143a52384d0c35b</link>
+      <guid isPermaLink="false">a98b458</guid>
+      <pubDate>Sat, 18 Jul 2026 17:27:00 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: expand natural AAS recommendation goals (#930)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0ab5de8ccb8bdeab9755205de4269a6a95bf85c6</link>
+      <guid isPermaLink="false">0ab5de8</guid>
+      <pubDate>Sat, 18 Jul 2026 16:58:08 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: release v15.0.0 (#928)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/16afa71355455a9fccfcc5ed285b60848223844e</link>
+      <guid isPermaLink="false">16afa71</guid>
+      <pubDate>Sat, 18 Jul 2026 14:37:00 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v15.0.0.</description>
+    </item>
+    <item>
+      <title>docs: finalize AAS Core 15.0.0 changelog (#927)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4f2919196901fbb264fd8f75fbbc1ed77f12b7cf</link>
+      <guid isPermaLink="false">4f29191</guid>
+      <pubDate>Sat, 18 Jul 2026 14:27:28 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: release v15.0.0-rc.3 (#926)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/57b8ea8e22f5d41e98a9ac2673a060351971a96b</link>
+      <guid isPermaLink="false">57b8ea8</guid>
+      <pubDate>Sat, 18 Jul 2026 14:10:25 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v15.0.0-rc.3.</description>
+    </item>
+    <item>
+      <title>fix: harden AAS Core onboarding contracts (#925)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/465d792918e15241978a3296f565d473ca529654</link>
+      <guid isPermaLink="false">465d792</guid>
+      <pubDate>Sat, 18 Jul 2026 13:52:47 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: release v15.0.0-rc.2 (#923)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3a902a8de85012ebdad36ff8e2921f727e9e2e76</link>
+      <guid isPermaLink="false">3a902a8</guid>
+      <pubDate>Sat, 18 Jul 2026 13:17:16 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Co-authored-by: sck_0 &lt;samujackson1337@gmail.com&gt;</description>
+    </item>
+    <item>
+      <title>docs: prepare AAS Core rc.2 validation gate (#921)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e82c5b753138fa85d67c9dd3397f23c1f1e277ad</link>
+      <guid isPermaLink="false">e82c5b7</guid>
+      <pubDate>Sat, 18 Jul 2026 13:05:46 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare the second AAS Core release-candidate identity after the prerelease metadata synchronization fix landed. No package release occurs in this PR.\n\n## Quality Bar Checklist\n\n- [x] Changelog distinguishes the unpublished rc.1 from rc.2.\n- [x] Stable 15.0.0 remains gated on real Codex MCP plu</description>
+    </item>
     <item>
       <title>fix: derive AAS catalog skill count dynamically (#903)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/444e5a706561e7d74a35f1b8a64f6c7a8809913e</link>
@@ -342,70 +406,6 @@
       <pubDate>Sun, 12 Jul 2026 05:10:40 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description>Adds the **nika** skill — delegate repeatable AI work to a deterministic workflow runner: the agent captures a repeated task as a `.nika.yaml` file, `nika check` audits it (schema, permits, honest cost floor) **before a single token is spent**, `nika run` executes budget-capped with a tamper-evident</description>
-    </item>
-    <item>
-      <title>feat: add idea-autopsy — business-idea validation skill (#805)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ab3fa7682a61e011180ba05c3c70406e7608b6f0</link>
-      <guid isPermaLink="false">ab3fa76</guid>
-      <pubDate>Sun, 12 Jul 2026 05:00:06 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: release v14.1.0</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1e7fd2a679dcea5cb0e78242ce547936d1f9de05</link>
-      <guid isPermaLink="false">1e7fd2a</guid>
-      <pubDate>Fri, 10 Jul 2026 03:53:15 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: harden skill security boundaries</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3070a3a2e4102f1497ab92c78966466f7a6812d7</link>
-      <guid isPermaLink="false">3070a3a</guid>
-      <pubDate>Fri, 10 Jul 2026 03:44:28 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add Chinese product-decision-agent skill (#802)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/56d5259814bf03d55af6dd457ede8dec7b4339f9</link>
-      <guid isPermaLink="false">56d5259</guid>
-      <pubDate>Fri, 10 Jul 2026 03:33:12 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>* feat: add product-decision-agent for Chinese product decisions  * fix: keep product agent metadata source-neutral  ---------  Co-authored-by: 许幸 &lt;xuxing@xuxingdeMacBook-Pro.local&gt;</description>
-    </item>
-    <item>
-      <title>Add 5 skills: telegram-bot-messaging, apple-container, grok-build, postgres-readonly-queries, gemini-deep-research (#801)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a93175e1b7de144ab7838537d0a71863f7fd4257</link>
-      <guid isPermaLink="false">a93175e</guid>
-      <pubDate>Fri, 10 Jul 2026 03:32:45 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>* Add 5 skills from sanjay3290/ai-skills: telegram, apple-container, grok-build, postgres, gemini-deep-research  * fix: harden imported skill safety guidance  ---------  Co-authored-by: Nick &lt;184072420+sickn33@users.noreply.github.com&gt;</description>
-    </item>
-    <item>
-      <title>feat: add auto-research skill (#800)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/bc5b3566fcfbe006d04cc87f0d97994a408189c4</link>
-      <guid isPermaLink="false">bc5b356</guid>
-      <pubDate>Fri, 10 Jul 2026 03:29:27 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Please include a summary of the change and which skill is added or fixed.</description>
-    </item>
-    <item>
-      <title>Feat/flutter expert playbook (#799)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/669adc95503849dd195b81b2863a786d6e51465f</link>
-      <guid isPermaLink="false">669adc9</guid>
-      <pubDate>Fri, 10 Jul 2026 03:24:26 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Please include a summary of the change and which skill is added or fixed.</description>
-    </item>
-    <item>
-      <title>chore: release v13.13.0</title>
-      <link>https://github.com/sickn33/antigravity-awesome-skills/commit/f3bd1bbb821c9e226fbbef40db1346aa2d523bdf</link>
-      <guid isPermaLink="false">f3bd1bb</guid>
-      <pubDate>Wed, 08 Jul 2026 05:44:09 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
     </item>
   </channel>
 </rss>

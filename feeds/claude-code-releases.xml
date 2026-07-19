@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 18 Jul 2026 07:55:47 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 08:23:20 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.215</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.215</link>
+      <guid isPermaLink="false">v2.1.215</guid>
+      <pubDate>Sun, 19 Jul 2026 02:56:01 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Claude no longer runs the /verify and /code-review skills on its own; invoke them with /verify or /code-review when you want them</description>
+    </item>
     <item>
       <title>v2.1.214</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.214</link>
@@ -500,16 +509,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Fixed an issue when using Opus 4.8 where thinking blocks were modified, leading to API errors.</description>
-    </item>
-    <item>
-      <title>v2.1.154</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.154</link>
-      <guid isPermaLink="false">v2.1.154</guid>
-      <pubDate>Thu, 28 May 2026 18:00:55 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Opus 4.8 is here! Now defaults to high effort · /effort xhigh for your hardest tasks
-- Introducing dynamic workflows: ask Claude to create a workflow and it orchestrates work across tens to hundreds of agents in the background, so you can take on larger, more complex tasks. Run /wor</description>
     </item>
   </channel>
 </rss>
