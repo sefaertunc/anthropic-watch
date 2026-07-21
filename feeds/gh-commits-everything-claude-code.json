@@ -5,9 +5,64 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-20T09:18:59.392Z",
+  "generated": "2026-07-21T08:33:21.934Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "5deee34",
+      "title": "fix(hooks): remove stray '?' that made every 'yarn <anything>' fire tmux reminder (#2517)",
+      "date": "2026-07-20T20:21:03Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5deee34c93395045b985e3baf91550e5f1ab7204",
+      "snippet": "* fix(hooks): remove stray '?' that made every 'yarn <anything>' trigger tmux reminder  The tmux-reminder matcher uses one alternation per package manager. Each branch requires a subcommand (install|test) — except yarn, whose subcommand group carried a trailing `?`:      yarn (install|test)?  That m",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5deee34|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "ee7dded",
+      "title": "fix(observer): use _clv2_resolve_homunculus_dir (matches lib export) (#2511)",
+      "date": "2026-07-20T19:42:14Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ee7dded8e9a514b2b884e3fadc49eeff235fecfc",
+      "snippet": "Commit 2d40baac (PR #2304) renamed `_ecc_*` -> `_clv2_*` but missed this single call site. The launcher sources `scripts/lib/homunculus-dir.sh` which only exports `_clv2_resolve_homunculus_dir`, so any user enabling the observer (`observer.enabled: true`) gets:    start-observer.sh: line 40: _ecc_re",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ee7dded|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "faff560",
+      "title": "docs(strategic-compact): document context-window override env vars (#2487)",
+      "date": "2026-07-20T19:41:06Z",
+      "url": "https://github.com/affaan-m/ECC/commit/faff56015f8f7165c8e071ee180ba3e31b450280",
+      "snippet": "* docs(strategic-compact): document context-window override env vars  * docs(strategic-compact): mirror context-window override env vars for Codex",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "faff560|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "4a4fa90",
+      "title": "docs(rules): add Delegation Completion Contract to agent orchestration rules (#2471)",
+      "date": "2026-07-20T19:39:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/4a4fa907f5f1ba51845e404e295a34f92516a773",
+      "snippet": "The 'Parallel Task Execution' rule encourages agents to spawn subagents, but defines no completion contract. Observed failure mode: subagents followed the rule, spawned their own children, and returned 'waiting for background agents' as their final answer. All children completed successfully, but th",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4a4fa90|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "56d2913",
+      "title": "docs(skills): fix typo in remotion charts rule (#2460)",
+      "date": "2026-07-20T19:35:06Z",
+      "url": "https://github.com/affaan-m/ECC/commit/56d2913f38fff83b0c51abe44cc47a6102210db6",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "56d2913|gh-commits-everything-claude-code"
+    },
     {
       "id": "0071fa5",
       "title": "refactor(hooks): consolidate PostToolUse hooks into sync/async dispatchers (#2494)",
@@ -502,61 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "607ab02|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7fd4ba9",
-      "title": "feat(work-items): add 'claim' command for JIT work pickup",
-      "date": "2026-06-18T21:07:24Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7fd4ba95ae57ea3f29ab06109736208b74f0a54b",
-      "snippet": "Closes the agent+human JIT loop the control-pane board surfaces: the board shows the unassigned (needs-owner) queue; 'claim' lets an agent or human pick up work.    node scripts/work-items.js claim [<id>] --owner <name> [--as agent|human]  - No id: claims the highest-priority unassigned open item. -",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7fd4ba9|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "1efc399",
-      "title": "feat(control-pane): add agent+human JIT assignment view to the work-items board",
-      "date": "2026-06-18T20:59:30Z",
-      "url": "https://github.com/affaan-m/ECC/commit/1efc399ab4840b92c431bb62dc859c6b212f60c9",
-      "snippet": "The kanban board tracked lanes (ready/running/blocked/done) but not WHO owns each card, which is the missing piece for agent+human just-in-time team workflows.  - state.js: classifyAssignee() labels each work item agent | human | unassigned   (session-linked or agent-pattern owners = agent; named ow",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "1efc399|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ceca288",
-      "title": "docs: update Atlas Cloud sponsor link",
-      "date": "2026-06-17T17:04:17Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ceca28852e5b31edbbf66ebccc8fd163dd14208e",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ceca288|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ec92b52",
-      "title": "docs: use Atlas Cloud GitHub sponsor avatar",
-      "date": "2026-06-16T21:30:48Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ec92b528471df708c2384ebbcc82b390b60f535a",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ec92b52|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "76faf6e",
-      "title": "docs: use Atlas Cloud site logo",
-      "date": "2026-06-16T21:11:42Z",
-      "url": "https://github.com/affaan-m/ECC/commit/76faf6ede6e58c43d212fab36f4a77233c662031",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "76faf6e|gh-commits-everything-claude-code"
     }
   ]
 }

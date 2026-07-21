@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 20 Jul 2026 09:18:59 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 08:33:21 GMT</lastBuildDate>
+    <item>
+      <title>0.2.124</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.124</guid>
+      <pubDate>Tue, 21 Jul 2026 08:32:33 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Bug Fixes
+- Refused batch script CLI spawning on Windows: Blocked spawning .bat/.cmd CLI scripts (including npm&apos;s claude.cmd shim) on Windows to prevent command injection via cmd.exe metacharacter re-parsing (BatBadBut / CVE-2024-27980 class). Windows users relying on the npm shim should switch to t</description>
+    </item>
     <item>
       <title>0.2.123</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>

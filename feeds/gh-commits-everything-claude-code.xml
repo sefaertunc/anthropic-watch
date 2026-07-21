@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 20 Jul 2026 09:18:59 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 08:33:21 GMT</lastBuildDate>
+    <item>
+      <title>fix(hooks): remove stray &apos;?&apos; that made every &apos;yarn &lt;anything&gt;&apos; fire tmux reminder (#2517)</title>
+      <link>https://github.com/affaan-m/ECC/commit/5deee34c93395045b985e3baf91550e5f1ab7204</link>
+      <guid isPermaLink="false">5deee34</guid>
+      <pubDate>Mon, 20 Jul 2026 20:21:03 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(hooks): remove stray &apos;?&apos; that made every &apos;yarn &lt;anything&gt;&apos; trigger tmux reminder  The tmux-reminder matcher uses one alternation per package manager. Each branch requires a subcommand (install|test) — except yarn, whose subcommand group carried a trailing `?`:      yarn (install|test)?  That m</description>
+    </item>
+    <item>
+      <title>fix(observer): use _clv2_resolve_homunculus_dir (matches lib export) (#2511)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ee7dded8e9a514b2b884e3fadc49eeff235fecfc</link>
+      <guid isPermaLink="false">ee7dded</guid>
+      <pubDate>Mon, 20 Jul 2026 19:42:14 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Commit 2d40baac (PR #2304) renamed `_ecc_*` -&gt; `_clv2_*` but missed this single call site. The launcher sources `scripts/lib/homunculus-dir.sh` which only exports `_clv2_resolve_homunculus_dir`, so any user enabling the observer (`observer.enabled: true`) gets:    start-observer.sh: line 40: _ecc_re</description>
+    </item>
+    <item>
+      <title>docs(strategic-compact): document context-window override env vars (#2487)</title>
+      <link>https://github.com/affaan-m/ECC/commit/faff56015f8f7165c8e071ee180ba3e31b450280</link>
+      <guid isPermaLink="false">faff560</guid>
+      <pubDate>Mon, 20 Jul 2026 19:41:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* docs(strategic-compact): document context-window override env vars  * docs(strategic-compact): mirror context-window override env vars for Codex</description>
+    </item>
+    <item>
+      <title>docs(rules): add Delegation Completion Contract to agent orchestration rules (#2471)</title>
+      <link>https://github.com/affaan-m/ECC/commit/4a4fa907f5f1ba51845e404e295a34f92516a773</link>
+      <guid isPermaLink="false">4a4fa90</guid>
+      <pubDate>Mon, 20 Jul 2026 19:39:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The &apos;Parallel Task Execution&apos; rule encourages agents to spawn subagents, but defines no completion contract. Observed failure mode: subagents followed the rule, spawned their own children, and returned &apos;waiting for background agents&apos; as their final answer. All children completed successfully, but th</description>
+    </item>
+    <item>
+      <title>docs(skills): fix typo in remotion charts rule (#2460)</title>
+      <link>https://github.com/affaan-m/ECC/commit/56d2913f38fff83b0c51abe44cc47a6102210db6</link>
+      <guid isPermaLink="false">56d2913</guid>
+      <pubDate>Mon, 20 Jul 2026 19:35:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>refactor(hooks): consolidate PostToolUse hooks into sync/async dispatchers (#2494)</title>
       <link>https://github.com/affaan-m/ECC/commit/0071fa5c3c389d2b4b235a39402c891e146cdef3</link>
@@ -366,46 +406,6 @@
       <pubDate>Thu, 18 Jun 2026 22:16:46 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>The board was read-only; you can now drive the agent+human JIT workflow from the local control pane.  - New shared scripts/lib/control-pane/work-item-mutations.js (claimWorkItem,   moveWorkItem) so the CLI and server never diverge; work-items.js claim now   delegates to it. - server.js: gated POST /</description>
-    </item>
-    <item>
-      <title>feat(work-items): add &apos;claim&apos; command for JIT work pickup</title>
-      <link>https://github.com/affaan-m/ECC/commit/7fd4ba95ae57ea3f29ab06109736208b74f0a54b</link>
-      <guid isPermaLink="false">7fd4ba9</guid>
-      <pubDate>Thu, 18 Jun 2026 21:07:24 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Closes the agent+human JIT loop the control-pane board surfaces: the board shows the unassigned (needs-owner) queue; &apos;claim&apos; lets an agent or human pick up work.    node scripts/work-items.js claim [&lt;id&gt;] --owner &lt;name&gt; [--as agent|human]  - No id: claims the highest-priority unassigned open item. -</description>
-    </item>
-    <item>
-      <title>feat(control-pane): add agent+human JIT assignment view to the work-items board</title>
-      <link>https://github.com/affaan-m/ECC/commit/1efc399ab4840b92c431bb62dc859c6b212f60c9</link>
-      <guid isPermaLink="false">1efc399</guid>
-      <pubDate>Thu, 18 Jun 2026 20:59:30 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The kanban board tracked lanes (ready/running/blocked/done) but not WHO owns each card, which is the missing piece for agent+human just-in-time team workflows.  - state.js: classifyAssignee() labels each work item agent | human | unassigned   (session-linked or agent-pattern owners = agent; named ow</description>
-    </item>
-    <item>
-      <title>docs: update Atlas Cloud sponsor link</title>
-      <link>https://github.com/affaan-m/ECC/commit/ceca28852e5b31edbbf66ebccc8fd163dd14208e</link>
-      <guid isPermaLink="false">ceca288</guid>
-      <pubDate>Wed, 17 Jun 2026 17:04:17 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: use Atlas Cloud GitHub sponsor avatar</title>
-      <link>https://github.com/affaan-m/ECC/commit/ec92b528471df708c2384ebbcc82b390b60f535a</link>
-      <guid isPermaLink="false">ec92b52</guid>
-      <pubDate>Tue, 16 Jun 2026 21:30:48 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: use Atlas Cloud site logo</title>
-      <link>https://github.com/affaan-m/ECC/commit/76faf6ede6e58c43d212fab36f4a77233c662031</link>
-      <guid isPermaLink="false">76faf6e</guid>
-      <pubDate>Tue, 16 Jun 2026 21:11:42 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>
