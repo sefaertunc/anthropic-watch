@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 21 Jul 2026 08:33:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 08:32:55 GMT</lastBuildDate>
+    <item>
+      <title>0.3.217</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.217</guid>
+      <pubDate>Wed, 22 Jul 2026 08:32:04 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Changed subagents to no longer spawn nested subagents by default (depth cap lowered from 5 to 1); set CLAUDECODEMAXSUBAGENTSPAWNDEPTH to allow deeper nesting
+- Added a cap on concurrently-running subagents (default 20, override with CLAUDECODEMAXCONCURRENTSUBAGENTS)
+- Fixed Remote Control sessions</description>
+    </item>
     <item>
       <title>0.3.216</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -425,14 +435,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- TaskCreateInput, TaskCreateOutput, TaskGetInput, TaskGetOutput, TaskUpdateInput, TaskUpdateOutput, TaskListInput, and TaskListOutput types are now exported from @anthropic-ai/claude-agent-sdk/sdk-tools and included in the ToolInputSchemas/ToolOutputSchemas unions
 - Aligned @anthropic-ai/sdk depend</description>
-    </item>
-    <item>
-      <title>0.2.140</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.140</guid>
-      <pubDate>Wed, 13 May 2026 08:47:58 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.140</description>
     </item>
   </channel>
 </rss>

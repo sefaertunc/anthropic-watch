@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 21 Jul 2026 08:33:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 08:32:55 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.217</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.217</link>
+      <guid isPermaLink="false">v2.1.217</guid>
+      <pubDate>Tue, 21 Jul 2026 21:35:10 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added emoji shortcode autocomplete in the prompt input: type :heart: to insert ❤️, or :hea for suggestions — disable with the emojiCompletionEnabled setting
+- Added warnings when transcript writes are failing (e.g. disk full) or when session saving is off due to an inherited environ</description>
+    </item>
     <item>
       <title>v2.1.216</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.216</link>
@@ -500,17 +510,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Auto mode is now available on Bedrock, Vertex, and Foundry for Opus 4.7 and Opus 4.8. Opt in by setting CLAUDECODEENABLEAUTOMODE=1</description>
-    </item>
-    <item>
-      <title>v2.1.157</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.157</link>
-      <guid isPermaLink="false">v2.1.157</guid>
-      <pubDate>Fri, 29 May 2026 20:20:38 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Plugins in .claude/skills directories are now automatically loaded, no marketplace required
-- Added claude plugin init &lt;name&gt; to scaffold a new plugin in .claude/skills
-- Added autocomplete for /plugin arguments: subcommands, installed plugin names, and plugins from known marketplac</description>
     </item>
   </channel>
 </rss>

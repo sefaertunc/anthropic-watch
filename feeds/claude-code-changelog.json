@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-21T08:33:21.892Z",
+  "generated": "2026-07-22T08:32:55.333Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.217",
+      "title": "2.1.217",
+      "date": "2026-07-22T08:32:03.371Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added emoji shortcode autocomplete in the prompt input: type :heart: to insert ❤️, or :hea for suggestions — disable with the emojiCompletionEnabled setting\n- Added warnings when transcript writes are failing (e.g. disk full) or when session saving is off due to an inherited environment variable, ",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.217|claude-code-changelog"
+    },
     {
       "id": "2.1.216",
       "title": "2.1.216",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.141|claude-code-changelog"
-    },
-    {
-      "id": "2.1.140",
-      "title": "2.1.140",
-      "date": "2026-05-13T08:47:57.756Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Improved Agent tool subagenttype matching to accept case- and separator-insensitive values (e.g. \"Code Reviewer\" resolves to code-reviewer)\n- Updated agent color palette\n- Fixed /goal silently hanging when disableAllHooks or allowManagedHooksOnly is set — now shows a clear message instead of an in",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.140|claude-code-changelog"
     }
   ]
 }

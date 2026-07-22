@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 21 Jul 2026 08:33:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 08:32:55 GMT</lastBuildDate>
+    <item>
+      <title>feat: add Itô compute sponsor routing and Phase 2 plan (#2546)</title>
+      <link>https://github.com/affaan-m/ECC/commit/96789caaf90501ff9b55bf1b00f1c28cf3fccbeb</link>
+      <guid isPermaLink="false">96789ca</guid>
+      <pubDate>Wed, 22 Jul 2026 07:07:45 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat: add Ito compute sponsor routing  * fix: harden Ito integration CI and framing</description>
+    </item>
     <item>
       <title>fix(hooks): remove stray &apos;?&apos; that made every &apos;yarn &lt;anything&gt;&apos; fire tmux reminder (#2517)</title>
       <link>https://github.com/affaan-m/ECC/commit/5deee34c93395045b985e3baf91550e5f1ab7204</link>
@@ -398,14 +406,6 @@
       <pubDate>Thu, 18 Jun 2026 22:25:28 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>The interactive claim/move buttons concatenated work-item ids into inline onclick JS with only single-quote escaping — a crafted id (ids/titles come from GitHub sync and manual upserts, not a strict allowlist) could break out and inject script, even on the localhost-only server.  Fix: emit the id/la</description>
-    </item>
-    <item>
-      <title>feat(control-pane): interactive JIT board — claim/move cards from the webapp</title>
-      <link>https://github.com/affaan-m/ECC/commit/607ab02b1f724dddb61e5f183fe02dc42a99c55a</link>
-      <guid isPermaLink="false">607ab02</guid>
-      <pubDate>Thu, 18 Jun 2026 22:16:46 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The board was read-only; you can now drive the agent+human JIT workflow from the local control pane.  - New shared scripts/lib/control-pane/work-item-mutations.js (claimWorkItem,   moveWorkItem) so the CLI and server never diverge; work-items.js claim now   delegates to it. - server.js: gated POST /</description>
     </item>
   </channel>
 </rss>
