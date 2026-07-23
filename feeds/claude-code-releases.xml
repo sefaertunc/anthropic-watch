@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 22 Jul 2026 08:32:55 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 08:34:19 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.218</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.218</link>
+      <guid isPermaLink="false">v2.1.218</guid>
+      <pubDate>Wed, 22 Jul 2026 21:24:56 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Changed /code-review to run as a background subagent, so review work no longer fills your conversation and keeps stacked slash commands as its review target
+- Added screen-reader announcements of deleted text for word and line deletions (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U,</description>
+    </item>
     <item>
       <title>v2.1.217</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.217</link>
@@ -501,15 +511,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Internal infrastructure improvements (no user-facing changes)</description>
-    </item>
-    <item>
-      <title>v2.1.158</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.158</link>
-      <guid isPermaLink="false">v2.1.158</guid>
-      <pubDate>Sat, 30 May 2026 02:42:16 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Auto mode is now available on Bedrock, Vertex, and Foundry for Opus 4.7 and Opus 4.8. Opt in by setting CLAUDECODEENABLEAUTOMODE=1</description>
     </item>
   </channel>
 </rss>

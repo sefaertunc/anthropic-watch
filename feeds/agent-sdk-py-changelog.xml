@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 22 Jul 2026 08:32:55 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 08:34:19 GMT</lastBuildDate>
+    <item>
+      <title>0.2.126</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.126</guid>
+      <pubDate>Thu, 23 Jul 2026 08:33:28 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- terminalreason on ResultMessage: ResultMessage.terminalreason now surfaces why the query loop ended (&quot;completed&quot;, &quot;maxturns&quot;, &quot;abortedstreaming&quot;, &quot;abortedtools&quot;, etc.). A value of &quot;abortedstreaming&quot; or &quot;abortedtools&quot; means the turn was cancelled via ClaudeSDKClient.interrupt(). Mirror</description>
+    </item>
     <item>
       <title>0.2.125</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>

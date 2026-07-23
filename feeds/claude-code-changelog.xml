@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 22 Jul 2026 08:32:55 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 08:34:19 GMT</lastBuildDate>
+    <item>
+      <title>2.1.218</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.218</guid>
+      <pubDate>Thu, 23 Jul 2026 08:33:27 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Changed /code-review to run as a background subagent, so review work no longer fills your conversation and keeps stacked slash commands as its review target
+- Added screen-reader announcements of deleted text for word and line deletions (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U, Ctrl+K) in --a</description>
+    </item>
     <item>
       <title>2.1.217</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -451,16 +460,6 @@
       <category>claude-code-changelog</category>
       <description>- Added new claude agents flags: --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, and --dangerously-skip-permissions to configure dispatched background sessions
 - Fast mode now uses Opus 4.7 by default (previously Opus 4.6). Set CLAUDECODEOPUS46FASTMODEOVERRID</description>
-    </item>
-    <item>
-      <title>2.1.141</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.141</guid>
-      <pubDate>Thu, 14 May 2026 08:40:43 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added terminalSequence field to hook JSON output so hooks can emit desktop notifications, window titles, and bells without a controlling terminal
-- Added CLAUDECODEPLUGINPREFERHTTPS to clone GitHub plugin sources over HTTPS instead of SSH, for environments without a GitHub SSH key
-- Added ANTHROPI</description>
     </item>
   </channel>
 </rss>

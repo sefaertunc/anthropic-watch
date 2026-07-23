@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 22 Jul 2026 08:32:55 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 08:34:19 GMT</lastBuildDate>
+    <item>
+      <title>0.3.218</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.218</guid>
+      <pubDate>Thu, 23 Jul 2026 08:33:28 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- SkillToolOutput now reports background: true when a forked skill was dispatched as a detached background agent
+- Fixed the result event&apos;s apierrorstatus reporting null for rate-limit and overloaded errors delivered mid-stream; it now reports 429/529
+- Added canonicalModel and provider to each mode</description>
+    </item>
     <item>
       <title>0.3.217</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -426,15 +436,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Breaking: Removed the v2 session API (unstablev2createSession, unstablev2resumeSession, unstablev2prompt, SDKSession, SDKSessionOptions), deprecated since 0.2.133. Use query() — pass an AsyncIterable&lt;SDKUserMessage&gt; for multi-turn, or options.resume to continue a session.
 - Breaking: MCP servers n</description>
-    </item>
-    <item>
-      <title>0.2.141</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.141</guid>
-      <pubDate>Thu, 14 May 2026 08:40:45 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- TaskCreateInput, TaskCreateOutput, TaskGetInput, TaskGetOutput, TaskUpdateInput, TaskUpdateOutput, TaskListInput, and TaskListOutput types are now exported from @anthropic-ai/claude-agent-sdk/sdk-tools and included in the ToolInputSchemas/ToolOutputSchemas unions
-- Aligned @anthropic-ai/sdk depend</description>
     </item>
   </channel>
 </rss>

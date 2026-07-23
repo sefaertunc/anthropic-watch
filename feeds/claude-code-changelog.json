@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-22T08:32:55.333Z",
+  "generated": "2026-07-23T08:34:19.685Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.218",
+      "title": "2.1.218",
+      "date": "2026-07-23T08:33:27.634Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Changed /code-review to run as a background subagent, so review work no longer fills your conversation and keeps stacked slash commands as its review target\n- Added screen-reader announcements of deleted text for word and line deletions (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U, Ctrl+K) in --a",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.218|claude-code-changelog"
+    },
     {
       "id": "2.1.217",
       "title": "2.1.217",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.142|claude-code-changelog"
-    },
-    {
-      "id": "2.1.141",
-      "title": "2.1.141",
-      "date": "2026-05-14T08:40:43.910Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Added terminalSequence field to hook JSON output so hooks can emit desktop notifications, window titles, and bells without a controlling terminal\n- Added CLAUDECODEPLUGINPREFERHTTPS to clone GitHub plugin sources over HTTPS instead of SSH, for environments without a GitHub SSH key\n- Added ANTHROPI",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.141|claude-code-changelog"
     }
   ]
 }

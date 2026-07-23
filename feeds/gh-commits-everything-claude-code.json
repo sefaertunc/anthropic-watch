@@ -5,9 +5,86 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-22T08:32:55.379Z",
+  "generated": "2026-07-23T08:34:19.733Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "a3130f9",
+      "title": "feat(codex): add ECC navigation guide (#2525)",
+      "date": "2026-07-23T00:44:37Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a3130f9ebfaeed075df5d5b52538acb0ee4bcdf8",
+      "snippet": "* feat(codex): add ECC navigation guide  * fix(codex): ship navigation guide references  ---------  Co-authored-by: Haley Chen <2022hachen@gmail.com>",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a3130f9|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b6fe5a7",
+      "title": "fix: harden plan canvas code scanning alerts",
+      "date": "2026-07-22T20:28:07Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b6fe5a71e194d711d9aa8f56024ddf7ca53fad0c",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b6fe5a7|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b665233",
+      "title": "fix(hooks): bound plugin shell probe timeouts (#2547)",
+      "date": "2026-07-22T17:15:52Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b6652335d32d2f2a664e12a09af646bf644b6c86",
+      "snippet": "Co-authored-by: Haley Chen <2022hachen@gmail.com>",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b665233|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "8348fb5",
+      "title": "fix: detect Anthropic API keys (sk-ant-...) in pre-commit secret scan (#2529)",
+      "date": "2026-07-22T16:17:28Z",
+      "url": "https://github.com/affaan-m/ECC/commit/8348fb5387303060c1c2cfec37daf27e20a11df6",
+      "snippet": "The existing OpenAI pattern sk-[a-zA-Z0-9]{20,} never matches real Anthropic keys: their sk-ant-api03-... format contains hyphens, which break the character class before reaching the 20-char threshold. Keys from the fastest-growing Claude Code user base slipped through the scan.  Adds a dedicated sk",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "8348fb5|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a1bf029",
+      "title": "fix(observer): repair daemon boot (stale resolver name) and close analysis stdin (#2452) (#2464)",
+      "date": "2026-07-22T16:17:19Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a1bf029cbf270f7772ce088ebc65435ee51ca335",
+      "snippet": "Two continuous-learning-v2 observer regressions reported in #2452:  - start-observer.sh still called _ecc_resolve_homunculus_dir, but the   shared lib was renamed to _clv2_resolve_homunculus_dir (with observe.sh   and detect-project.sh updated, start-observer.sh missed). Under set -e   every launch ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a1bf029|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "cd39df1",
+      "title": "fix(suggest-compact): recognize large-window model families without a [1m] marker (#2468)",
+      "date": "2026-07-22T16:17:11Z",
+      "url": "https://github.com/affaan-m/ECC/commit/cd39df154c517ceb3d83d28771c626ae1ee551c8",
+      "snippet": "* fix(suggest-compact): recognize large-window model families without a [1m] marker  resolveContextWindowTokens() only detected a 1M window via the env override, the [1m] model-id marker, or observed tokens already above 200k. Large-window models whose ids carry none of these (e.g. claude-fable-5) w",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "cd39df1|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e7b3ba0",
+      "title": "fix(config-protection): match protected filenames case-insensitively (#2543)",
+      "date": "2026-07-22T16:17:04Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e7b3ba07bb424db91ffeb3b94b3c39b210c8b316",
+      "snippet": "On a case-insensitive filesystem (macOS APFS/HFS+, Windows NTFS) a write to `.ESLINTRC.JS` lands on the exact same inode as `.eslintrc.js`, but the guard looked the basename up in PROTECTED_FILES with a case-sensitive `Set.has`. Every entry in that Set is lowercase, so any case-variant path missed t",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e7b3ba0|gh-commits-everything-claude-code"
+    },
     {
       "id": "96789ca",
       "title": "feat: add Itô compute sponsor routing and Phase 2 plan (#2546)",
@@ -480,83 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "726972d|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "34faa39",
-      "title": "docs(security): use the monitored affaan@ecc.tools contact in SECURITY.md",
-      "date": "2026-06-19T02:16:06Z",
-      "url": "https://github.com/affaan-m/ECC/commit/34faa39bd3cd496a0aece0245f2b7e38b7923abc",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "34faa39|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e8e5793",
-      "title": "fix(ci+security): unblock coverage gate + fix dead security contact",
-      "date": "2026-06-19T00:46:23Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e8e5793bdf1f07d95860e731cdd3633ee3cdec0a",
-      "snippet": "- coverage: branch threshold 80 -> 79 (current is 79.52%; lines/functions/   statements remain 88/94/88). The 80% branch gate has been red on every main   run; this unblocks CI while keeping a meaningful floor just below current. - SECURITY.md: remove the bouncing security@ecc.tools mailbox (flagged",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e8e5793|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ed251f9",
-      "title": "style: apply repo formatter to the security-fix files (no behavior change)",
-      "date": "2026-06-19T00:03:24Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ed251f958ab24682d3af9e8edbe5357065086655",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ed251f9|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "bd9083c",
-      "title": "fix(security): gateguard classifier bypasses (GHSA-4v57) + Windows CI + claw ReDoS",
-      "date": "2026-06-19T00:02:30Z",
-      "url": "https://github.com/affaan-m/ECC/commit/bd9083ca1e9f6d9c243531abef663dd2217553c7",
-      "snippet": "- gateguard (GHSA-4v57-ph3x-gf55): add a quote-aware detection pass that   dequotes command words and splits on UNQUOTED separators incl. newlines, so   newline-separated commands, quoted command words ('rm'/\"rm\"), quoted   find -exec, and sh/bash -c wrappers are all classified destructive. Additive",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "bd9083c|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5994d3f",
-      "title": "fix(security): contain install-state file ops to trusted root — RCE fix (GHSA-hfpv-w6mp-5g95)",
-      "date": "2026-06-18T23:54:22Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5994d3fac158b4c290cb0918004b82e2f155f1c7",
-      "snippet": "Critical: project-local install-state (e.g. a cloned repo's .cursor/ecc-install-state.json) is attacker-controllable, and repair/uninstall/auto-update replayed its operations with destinationPath validated only for non-emptiness — confirmed arbitrary file write/delete and chained RCE (write ~/.bashr",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5994d3f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5e4f553",
-      "title": "fix(security): discord bot SSRF/log-injection/DoS hardening + bump markdown-it/js-yaml",
-      "date": "2026-06-18T23:50:15Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5e4f5533d73cc2553f393686a0f81fd194f2f45d",
-      "snippet": "- ecc-bot.mjs: validate interaction id (snowflake) and token before building the   callback fetch URL (clears CodeQL js/request-forgery #239/#240/#241); clamp the   remote heartbeat_interval to [1s,10m] (js/resource-exhaustion #242); strip CR/LF   from log args (js/log-injection #246). - Bump transi",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5e4f553|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a03d63c",
-      "title": "fix(security): close XSS in control-pane board controls",
-      "date": "2026-06-18T22:25:28Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a03d63cba0896a834405ebf4becbf6646b47009e",
-      "snippet": "The interactive claim/move buttons concatenated work-item ids into inline onclick JS with only single-quote escaping — a crafted id (ids/titles come from GitHub sync and manual upserts, not a strict allowlist) could break out and inject script, even on the localhost-only server.  Fix: emit the id/la",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a03d63c|gh-commits-everything-claude-code"
     }
   ]
 }

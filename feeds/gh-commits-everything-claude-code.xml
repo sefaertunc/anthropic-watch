@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 22 Jul 2026 08:32:55 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 08:34:19 GMT</lastBuildDate>
+    <item>
+      <title>feat(codex): add ECC navigation guide (#2525)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a3130f9ebfaeed075df5d5b52538acb0ee4bcdf8</link>
+      <guid isPermaLink="false">a3130f9</guid>
+      <pubDate>Thu, 23 Jul 2026 00:44:37 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat(codex): add ECC navigation guide  * fix(codex): ship navigation guide references  ---------  Co-authored-by: Haley Chen &lt;2022hachen@gmail.com&gt;</description>
+    </item>
+    <item>
+      <title>fix: harden plan canvas code scanning alerts</title>
+      <link>https://github.com/affaan-m/ECC/commit/b6fe5a71e194d711d9aa8f56024ddf7ca53fad0c</link>
+      <guid isPermaLink="false">b6fe5a7</guid>
+      <pubDate>Wed, 22 Jul 2026 20:28:07 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(hooks): bound plugin shell probe timeouts (#2547)</title>
+      <link>https://github.com/affaan-m/ECC/commit/b6652335d32d2f2a664e12a09af646bf644b6c86</link>
+      <guid isPermaLink="false">b665233</guid>
+      <pubDate>Wed, 22 Jul 2026 17:15:52 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Co-authored-by: Haley Chen &lt;2022hachen@gmail.com&gt;</description>
+    </item>
+    <item>
+      <title>fix: detect Anthropic API keys (sk-ant-...) in pre-commit secret scan (#2529)</title>
+      <link>https://github.com/affaan-m/ECC/commit/8348fb5387303060c1c2cfec37daf27e20a11df6</link>
+      <guid isPermaLink="false">8348fb5</guid>
+      <pubDate>Wed, 22 Jul 2026 16:17:28 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The existing OpenAI pattern sk-[a-zA-Z0-9]{20,} never matches real Anthropic keys: their sk-ant-api03-... format contains hyphens, which break the character class before reaching the 20-char threshold. Keys from the fastest-growing Claude Code user base slipped through the scan.  Adds a dedicated sk</description>
+    </item>
+    <item>
+      <title>fix(observer): repair daemon boot (stale resolver name) and close analysis stdin (#2452) (#2464)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a1bf029cbf270f7772ce088ebc65435ee51ca335</link>
+      <guid isPermaLink="false">a1bf029</guid>
+      <pubDate>Wed, 22 Jul 2026 16:17:19 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Two continuous-learning-v2 observer regressions reported in #2452:  - start-observer.sh still called _ecc_resolve_homunculus_dir, but the   shared lib was renamed to _clv2_resolve_homunculus_dir (with observe.sh   and detect-project.sh updated, start-observer.sh missed). Under set -e   every launch </description>
+    </item>
+    <item>
+      <title>fix(suggest-compact): recognize large-window model families without a [1m] marker (#2468)</title>
+      <link>https://github.com/affaan-m/ECC/commit/cd39df154c517ceb3d83d28771c626ae1ee551c8</link>
+      <guid isPermaLink="false">cd39df1</guid>
+      <pubDate>Wed, 22 Jul 2026 16:17:11 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(suggest-compact): recognize large-window model families without a [1m] marker  resolveContextWindowTokens() only detected a 1M window via the env override, the [1m] model-id marker, or observed tokens already above 200k. Large-window models whose ids carry none of these (e.g. claude-fable-5) w</description>
+    </item>
+    <item>
+      <title>fix(config-protection): match protected filenames case-insensitively (#2543)</title>
+      <link>https://github.com/affaan-m/ECC/commit/e7b3ba07bb424db91ffeb3b94b3c39b210c8b316</link>
+      <guid isPermaLink="false">e7b3ba0</guid>
+      <pubDate>Wed, 22 Jul 2026 16:17:04 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>On a case-insensitive filesystem (macOS APFS/HFS+, Windows NTFS) a write to `.ESLINTRC.JS` lands on the exact same inode as `.eslintrc.js`, but the guard looked the basename up in PROTECTED_FILES with a case-sensitive `Set.has`. Every entry in that Set is lowercase, so any case-variant path missed t</description>
+    </item>
     <item>
       <title>feat: add Itô compute sponsor routing and Phase 2 plan (#2546)</title>
       <link>https://github.com/affaan-m/ECC/commit/96789caaf90501ff9b55bf1b00f1c28cf3fccbeb</link>
@@ -350,62 +406,6 @@
       <pubDate>Sat, 20 Jun 2026 19:40:40 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>The moat layer: spatial deconfliction for multiple agents (and humans) on one codebase, modeled on aircraft TCAS — measure how close two agents are in code-space, then transmit-intent (Traffic Advisory) and steer-away (Resolution Advisory) before they collide at the git layer.  scripts/lib/agent-pro</description>
-    </item>
-    <item>
-      <title>docs(security): use the monitored affaan@ecc.tools contact in SECURITY.md</title>
-      <link>https://github.com/affaan-m/ECC/commit/34faa39bd3cd496a0aece0245f2b7e38b7923abc</link>
-      <guid isPermaLink="false">34faa39</guid>
-      <pubDate>Fri, 19 Jun 2026 02:16:06 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(ci+security): unblock coverage gate + fix dead security contact</title>
-      <link>https://github.com/affaan-m/ECC/commit/e8e5793bdf1f07d95860e731cdd3633ee3cdec0a</link>
-      <guid isPermaLink="false">e8e5793</guid>
-      <pubDate>Fri, 19 Jun 2026 00:46:23 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>- coverage: branch threshold 80 -&gt; 79 (current is 79.52%; lines/functions/   statements remain 88/94/88). The 80% branch gate has been red on every main   run; this unblocks CI while keeping a meaningful floor just below current. - SECURITY.md: remove the bouncing security@ecc.tools mailbox (flagged</description>
-    </item>
-    <item>
-      <title>style: apply repo formatter to the security-fix files (no behavior change)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ed251f958ab24682d3af9e8edbe5357065086655</link>
-      <guid isPermaLink="false">ed251f9</guid>
-      <pubDate>Fri, 19 Jun 2026 00:03:24 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(security): gateguard classifier bypasses (GHSA-4v57) + Windows CI + claw ReDoS</title>
-      <link>https://github.com/affaan-m/ECC/commit/bd9083ca1e9f6d9c243531abef663dd2217553c7</link>
-      <guid isPermaLink="false">bd9083c</guid>
-      <pubDate>Fri, 19 Jun 2026 00:02:30 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>- gateguard (GHSA-4v57-ph3x-gf55): add a quote-aware detection pass that   dequotes command words and splits on UNQUOTED separators incl. newlines, so   newline-separated commands, quoted command words (&apos;rm&apos;/&quot;rm&quot;), quoted   find -exec, and sh/bash -c wrappers are all classified destructive. Additive</description>
-    </item>
-    <item>
-      <title>fix(security): contain install-state file ops to trusted root — RCE fix (GHSA-hfpv-w6mp-5g95)</title>
-      <link>https://github.com/affaan-m/ECC/commit/5994d3fac158b4c290cb0918004b82e2f155f1c7</link>
-      <guid isPermaLink="false">5994d3f</guid>
-      <pubDate>Thu, 18 Jun 2026 23:54:22 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Critical: project-local install-state (e.g. a cloned repo&apos;s .cursor/ecc-install-state.json) is attacker-controllable, and repair/uninstall/auto-update replayed its operations with destinationPath validated only for non-emptiness — confirmed arbitrary file write/delete and chained RCE (write ~/.bashr</description>
-    </item>
-    <item>
-      <title>fix(security): discord bot SSRF/log-injection/DoS hardening + bump markdown-it/js-yaml</title>
-      <link>https://github.com/affaan-m/ECC/commit/5e4f5533d73cc2553f393686a0f81fd194f2f45d</link>
-      <guid isPermaLink="false">5e4f553</guid>
-      <pubDate>Thu, 18 Jun 2026 23:50:15 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>- ecc-bot.mjs: validate interaction id (snowflake) and token before building the   callback fetch URL (clears CodeQL js/request-forgery #239/#240/#241); clamp the   remote heartbeat_interval to [1s,10m] (js/resource-exhaustion #242); strip CR/LF   from log args (js/log-injection #246). - Bump transi</description>
-    </item>
-    <item>
-      <title>fix(security): close XSS in control-pane board controls</title>
-      <link>https://github.com/affaan-m/ECC/commit/a03d63cba0896a834405ebf4becbf6646b47009e</link>
-      <guid isPermaLink="false">a03d63c</guid>
-      <pubDate>Thu, 18 Jun 2026 22:25:28 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The interactive claim/move buttons concatenated work-item ids into inline onclick JS with only single-quote escaping — a crafted id (ids/titles come from GitHub sync and manual upserts, not a strict allowlist) could break out and inject script, even on the localhost-only server.  Fix: emit the id/la</description>
     </item>
   </channel>
 </rss>
