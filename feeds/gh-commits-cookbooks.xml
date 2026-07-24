@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 23 Jul 2026 08:34:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 08:31:08 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #793 from anthropics/cj-ant/crop-tool-zoom</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/85016cacf5b7923aa62aa2b514399325e9d159e9</link>
+      <guid isPermaLink="false">85016ca</guid>
+      <pubDate>Thu, 23 Jul 2026 17:32:40 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Rewrite the crop-tool cookbook around a measured zoom tool</description>
+    </item>
+    <item>
+      <title>Merge pull request #759 from mongodb-partners/cma_with_mongodb</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/90b3ebd6791cd3d2334b334061875d3dcea10dcc</link>
+      <guid isPermaLink="false">90b3ebd</guid>
+      <pubDate>Thu, 23 Jul 2026 13:39:40 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>feat(managed_agents): add Fraud Review Agent with MongoDB Atlas cookbook</description>
+    </item>
+    <item>
+      <title>Rewrite the crop-tool cookbook around a measured zoom tool</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/6c63a145b7136a610092dbd2c3ef412b055e003b</link>
+      <guid isPermaLink="false">6c63a14</guid>
+      <pubDate>Wed, 22 Jul 2026 22:03:17 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Replace the crop tool with a zoom tool that takes absolute pixel coordinates, crops from the full-resolution original, and returns the region magnified to the model&apos;s image budget. Adds the pre-resize step, multi-image support, benchmark results and figures, and a hand-written loop appendix.  :house</description>
+    </item>
     <item>
       <title>Merge pull request #792 from anthropics/cj-ant/watch-subagents-live</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/995c3c880a6e0cf7a2e137ac6a373d53c87a9c8a</link>
@@ -40,6 +64,14 @@
       <description>Clear all cell outputs and execution metadata so the notebook ships clean, and rename CLIENT to client to follow Python naming convention. Read the API key from the environment instead of a hardcoded variable, and re-enable the pretty_print(message) call so the generated prompt is shown when run.  T</description>
     </item>
     <item>
+      <title>fix(managed_agents): address review — Anthropic auth, Atlas setup link, rename outcome var</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/1f932a8c7c74b1e2d40041e684a5eedf2cb5474c</link>
+      <guid isPermaLink="false">1f932a8</guid>
+      <pubDate>Sun, 12 Jul 2026 13:55:02 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description/>
+    </item>
+    <item>
       <title>Address review findings: docs, robustness, and Colab fixes</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/218ccc7572e7f5b9b257d0b51a7b98332e0c1620</link>
       <guid isPermaLink="false">218ccc7</guid>
@@ -62,6 +94,14 @@
       <pubDate>Fri, 10 Jul 2026 04:44:54 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>The metaprompt (prompt generator) notebook has been broken for every user since #375 bumped its model from claude-sonnet-4-5 to claude-sonnet-4-6. The prompt-writing call ended its messages array with an assistant prefill turn, and claude-sonnet-4-6 (like every model since the 4.6 generation) reject</description>
+    </item>
+    <item>
+      <title>feat(managed_agents): add Fraud Review Agent with MongoDB Atlas cookbook</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/849918c65cdea068c144b481027dd18bcedb2c2c</link>
+      <guid isPermaLink="false">849918c</guid>
+      <pubDate>Tue, 07 Jul 2026 09:06:32 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description/>
     </item>
     <item>
       <title>Merge pull request #754 from bradabrams/add-plan-big-execute-small-cookbook</title>
@@ -366,46 +406,6 @@
       <pubDate>Wed, 13 May 2026 15:45:31 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>Minimal TypeScript/Bun bridge connecting Linear&apos;s Agent Platform to Managed Agents via CMA outbound webhooks — no held SSE streams, no session-map DB (session.metadata carries linear_session_id + org_id).  - setup/create-agent.ts: one-time agent + environment (claude-opus-4-7) - src/agent.ts: Linear</description>
-    </item>
-    <item>
-      <title>feat(managed_agents): CMA Sessions API as an MCP server (stdio + HTTP)</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/a0902061e41142ff203d80c1bd87fae3066af440</link>
-      <guid isPermaLink="false">a090206</guid>
-      <pubDate>Wed, 13 May 2026 15:45:31 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Thin MCP server wrapping Managed Agents sessions so Claude Desktop or claude.ai can drive hosted CMA agents via tool calls. DIY bridge until &apos;publish agent to claude.ai&apos; is first-class.  9 tools in shared src/tools.ts — 8 are 1:1 endpoint wrappers; wait_for_idle is the SSE→request/response shim. Two</description>
-    </item>
-    <item>
-      <title>Merge pull request #606 from anthropics/mnowicki/cma-category-tag</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/3f8bf356e779d366ae7fcc0e84be12019747e5e3</link>
-      <guid isPermaLink="false">3f8bf35</guid>
-      <pubDate>Fri, 08 May 2026 16:28:35 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>feat(registry): retag managed_agents notebooks with Claude Managed Agents category</description>
-    </item>
-    <item>
-      <title>feat(schema): add Claude Managed Agents to registry category enum</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/c8b30f3b3a1be8f21f46e40fd69e1f77c6f52687</link>
-      <guid isPermaLink="false">c8b30f3</guid>
-      <pubDate>Fri, 08 May 2026 16:16:43 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat(registry): retag managed_agents notebooks with Claude Managed Agents category</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/4f1bc38d9d58f641a6e07ca2941c9e10799009fe</link>
-      <guid isPermaLink="false">4f1bc38</guid>
-      <pubDate>Fri, 08 May 2026 15:10:34 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #600 from anthropics/mnowicki/managed-agents-render-fixes</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/93a262f1e00a9d48f58b4c6fe49241b612156452</link>
-      <guid isPermaLink="false">93a262f</guid>
-      <pubDate>Wed, 06 May 2026 18:34:45 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description/>
     </item>
   </channel>
 </rss>
