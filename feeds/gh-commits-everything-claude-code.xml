@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 24 Jul 2026 08:31:08 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 08:09:43 GMT</lastBuildDate>
+    <item>
+      <title>Use supplied Itō PNG logo (#2570)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ac30ff3ea249bf5f94dbc5e9b18ab681cc9af91d</link>
+      <guid isPermaLink="false">ac30ff3</guid>
+      <pubDate>Sat, 25 Jul 2026 00:40:49 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Replace the generated Itō SVG wordmark with the supplied transparent monogram assets, keep the exact white-and-gold mark for dark mode, add a same-geometry light-mode variant, and refresh the dependency lock entry flagged by CI.</description>
+    </item>
+    <item>
+      <title>Center README entry cards and correct sponsor tiers (#2569)</title>
+      <link>https://github.com/affaan-m/ECC/commit/abe185c6a46c312d526c215abfcafe98ed9e951b</link>
+      <guid isPermaLink="false">abe185c</guid>
+      <pubDate>Fri, 24 Jul 2026 20:40:53 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Center the three-card README group, remove stale $5 sponsor copy, and align sponsor docs to the current public tiers.</description>
+    </item>
+    <item>
+      <title>Center README entry cards</title>
+      <link>https://github.com/affaan-m/ECC/commit/751874fef9c85214cb08d1a0fb03af9b7c8a70c2</link>
+      <guid isPermaLink="false">751874f</guid>
+      <pubDate>Fri, 24 Jul 2026 20:26:50 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #2491 from gaurav0107/fix/2477-opencode-command-agent-scope</title>
+      <link>https://github.com/affaan-m/ECC/commit/8512dc6f4215c7171513c1f65ee446e77f844652</link>
+      <guid isPermaLink="false">8512dc6</guid>
+      <pubDate>Fri, 24 Jul 2026 16:53:30 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix(opencode): resolve command agent ids to registered opencode agents</description>
+    </item>
+    <item>
+      <title>Merge pull request #2536 from latreon/fix/bun-lockfile-detection</title>
+      <link>https://github.com/affaan-m/ECC/commit/374feb7f9c3ad0eb0aeed5ed1273169b17752c98</link>
+      <guid isPermaLink="false">374feb7</guid>
+      <pubDate>Fri, 24 Jul 2026 16:53:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix(scripts): detect modern bun.lock, ignore stray root lockfiles</description>
+    </item>
+    <item>
+      <title>Merge pull request #2516 from thejesh23/fix/dashboard-refresh-rules-commands</title>
+      <link>https://github.com/affaan-m/ECC/commit/fee94fb778fd44c6781b9bf15b463462b64a83bf</link>
+      <guid isPermaLink="false">fee94fb</guid>
+      <pubDate>Fri, 24 Jul 2026 16:52:36 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix(ecc_dashboard): repopulate Rules and Commands trees on Refresh Data</description>
+    </item>
+    <item>
+      <title>Merge pull request #2568 from affaan-m/agent/readme-asset-alignment-20260724</title>
+      <link>https://github.com/affaan-m/ECC/commit/ce226c94b2885b8a004b5dfcb5cc674967a772cc</link>
+      <guid isPermaLink="false">ce226c9</guid>
+      <pubDate>Fri, 24 Jul 2026 16:17:13 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Merge the official ECC Tools favicon mark, normalized Itō Drive lockup canvas, and equal 16:9 guide cards after full CI and GitHub-render visual verification.</description>
+    </item>
+    <item>
+      <title>Fix README asset alignment</title>
+      <link>https://github.com/affaan-m/ECC/commit/cf1fb0125ebf1e1cf2616011fe40c958a24b00a1</link>
+      <guid isPermaLink="false">cf1fb01</guid>
+      <pubDate>Fri, 24 Jul 2026 15:49:10 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #2566 from affaan-m/agent/readme-kimi-layout-20260724</title>
       <link>https://github.com/affaan-m/ECC/commit/fb401834e5b48679e1a6050e4bb86dce0824bbf5</link>
@@ -342,70 +406,6 @@
       <pubDate>Sat, 04 Jul 2026 03:38:37 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* fix(observer): replace hardcoded sleep 2 with PID file poll in start-observer.sh  Fixes #2295  The previous `sleep 2` after launching the observer loop has two problems: on slow filesystems or loaded systems 2 seconds may not be enough, producing a false-negative on the subsequent PID file check; </description>
-    </item>
-    <item>
-      <title>chore(catalog): sync manifests + fix skill emoji (wave 2) (#2395)</title>
-      <link>https://github.com/affaan-m/ECC/commit/81af40761939056ab3dc54732fd4f562a27309d0</link>
-      <guid isPermaLink="false">81af407</guid>
-      <pubDate>Tue, 30 Jun 2026 02:44:51 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* chore(catalog): sync manifests after skill batch (#2275 #2377 #2378 #2381)  Update skill counts (273 -&gt; 277) across catalog docs after the verified skill batch.  * fix(skills): replace emoji with ASCII in growth-log + loop-design-check  check-unicode-safety (pre-push gate) bans emoji in SKILL.md; </description>
-    </item>
-    <item>
-      <title>feat: add loop-design-check skill (design + review goal-oriented agent loops) (#2381)</title>
-      <link>https://github.com/affaan-m/ECC/commit/0bd2b2cdfbf234a1cf91a2b36b1e4fbe97a76869</link>
-      <guid isPermaLink="false">0bd2b2c</guid>
-      <pubDate>Tue, 30 Jun 2026 02:22:58 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Stop hook: verify thinking quality at session end — task completeness, assumptions, stale logs, disk space (delivery-gate) (#2378)</title>
-      <link>https://github.com/affaan-m/ECC/commit/51bced9a1fb23606e5d68ef28181e266055048f6</link>
-      <guid isPermaLink="false">51bced9</guid>
-      <pubDate>Tue, 30 Jun 2026 02:22:55 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* Restore delivery-gate: Stop hook with learning capture enforcement (auto-closed by fork sync, now on clean branch)  * Fix bot findings: log level→INFO (DISK_REMIND dead code), count_edits full transcript (not truncated), memory-dir-absent warning (not silent pass), SKILL.md description accuracy  *</description>
-    </item>
-    <item>
-      <title>Add growth-log skill: methodology for effective learning capture (#2377)</title>
-      <link>https://github.com/affaan-m/ECC/commit/b5806b3d1c351a1b53eb44dc718cbcaac7ada006</link>
-      <guid isPermaLink="false">b5806b3</guid>
-      <pubDate>Tue, 30 Jun 2026 02:22:51 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* Add growth-log skill: methodology for writing effective, transferable growth log entries  * Add metadata.origin: ECC frontmatter per repo convention (Greptile feedback)  * Re-sign: apply GPG-verified commit to growth-log branch (rebase artifact, content unchanged)  * docs(growth-log): v1.1.0 — rem</description>
-    </item>
-    <item>
-      <title>feat(rules,skills): add React Native / Expo rules pack and react-native-patterns skill (#2275)</title>
-      <link>https://github.com/affaan-m/ECC/commit/a141db3ad2c52190271b7784c291f03be6bf6f76</link>
-      <guid isPermaLink="false">a141db3</guid>
-      <pubDate>Tue, 30 Jun 2026 02:22:48 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat(rules,skills): add React Native / Expo rules pack and react-native-patterns skill  * fix(rules,skills): address review feedback — safeParse nav example, drop deprecated sentry-expo, memoize list renderItem, clarify New Architecture SDK support  * fix(rules,skills): drop deprecated Flipper, su</description>
-    </item>
-    <item>
-      <title>feat(continuous-learning-v2): make observer model configurable via ECC_OBSERVER_MODEL (#2390)</title>
-      <link>https://github.com/affaan-m/ECC/commit/c2bcc4ec2f783c59a62a590d571e88aa23904c72</link>
-      <guid isPermaLink="false">c2bcc4e</guid>
-      <pubDate>Tue, 30 Jun 2026 01:43:42 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat(continuous-learning-v2): make observer model configurable via ECC_OBSERVER_MODEL  The observer hardcoded `--model haiku`. Parameterize as &quot;${ECC_OBSERVER_MODEL:-haiku}&quot;: the haiku default is preserved (no behavior change for existing users), but users can opt into a stronger model — e.g. `ECC</description>
-    </item>
-    <item>
-      <title>fix(clv2): archive observations only after successful analysis in observer-loop (#2386)</title>
-      <link>https://github.com/affaan-m/ECC/commit/f720885cea7aba6afc033b72a2becde48d1d819e</link>
-      <guid isPermaLink="false">f720885</guid>
-      <pubDate>Tue, 30 Jun 2026 01:43:37 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>analyze_observations moved observations.jsonl into observations.archive/ unconditionally, even when the Claude analysis failed (timeout, non-zero exit, rate limit). Because the analyzer only reads the live file, a failed batch was archived and never re-analyzed, silently dropping the instincts it wo</description>
-    </item>
-    <item>
-      <title>test(clv2): add coverage for instinct-cli prune, projects ops, promote dry-run, normalize-url (#2374)</title>
-      <link>https://github.com/affaan-m/ECC/commit/a36148fff97293c8cecc142ddda71e56fa072c76</link>
-      <guid isPermaLink="false">a36148f</guid>
-      <pubDate>Tue, 30 Jun 2026 01:43:32 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* test(clv2): cover instinct-cli prune, projects ops, promote dry-run, normalize-url  Add pytest coverage for previously-untested functions in skills/continuous-learning-v2/scripts/instinct-cli.py:  - _normalize_remote_url: scp/https/file forms, credential + .git   stripping, network lowercasing, ca</description>
     </item>
   </channel>
 </rss>

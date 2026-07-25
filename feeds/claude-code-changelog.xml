@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 24 Jul 2026 08:31:08 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 08:09:43 GMT</lastBuildDate>
+    <item>
+      <title>2.1.220</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.220</guid>
+      <pubDate>Sat, 25 Jul 2026 08:08:54 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Bug fixes and reliability improvements</description>
+    </item>
     <item>
       <title>2.1.218</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -451,15 +459,6 @@
       <category>claude-code-changelog</category>
       <description>- Added plugin dependency enforcement: claude plugin disable now refuses when another enabled plugin depends on the target (with a copy-pasteable disable-chain hint), and claude plugin enable force-enables transitive dependencies
 - Added projected context cost (per-turn and per-invocation token esti</description>
-    </item>
-    <item>
-      <title>2.1.142</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.142</guid>
-      <pubDate>Fri, 15 May 2026 08:52:14 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added new claude agents flags: --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort, and --dangerously-skip-permissions to configure dispatched background sessions
-- Fast mode now uses Opus 4.7 by default (previously Opus 4.6). Set CLAUDECODEOPUS46FASTMODEOVERRID</description>
     </item>
   </channel>
 </rss>

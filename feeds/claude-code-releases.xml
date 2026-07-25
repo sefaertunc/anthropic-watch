@@ -6,7 +6,27 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 24 Jul 2026 08:31:08 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 08:09:43 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.220</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.220</link>
+      <guid isPermaLink="false">v2.1.220</guid>
+      <pubDate>Sat, 25 Jul 2026 01:35:55 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Bug fixes and reliability improvements</description>
+    </item>
+    <item>
+      <title>v2.1.219</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.219</link>
+      <guid isPermaLink="false">v2.1.219</guid>
+      <pubDate>Fri, 24 Jul 2026 17:14:23 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added Claude Opus 5 (claude-opus-5), now the default Opus model — 1M context, fast mode at $10/$50 per Mtok
+- Added sandbox.network.strictAllowlist setting to deny non-allowlisted hosts for sandboxed commands without prompting
+- Added DirectoryAdded hook that fires after /add-dir or</description>
+    </item>
     <item>
       <title>v2.1.218</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.218</link>
@@ -492,25 +512,6 @@
 - OTELRESOURCEATTRIBUTES values are now included as labels on metric datapoints, so you can slice usage metrics by custom dimensions like team or repo
 - claude agents rows now show done/total before the detail when work is fanned out; peek shows the longest-running item
 - /mcp now col</description>
-    </item>
-    <item>
-      <title>v2.1.160</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.160</link>
-      <guid isPermaLink="false">v2.1.160</guid>
-      <pubDate>Tue, 02 Jun 2026 02:10:25 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added a prompt before writing to shell startup files (.zshenv, .zlogin, .bashlogin) and ~/.config/git/, which could otherwise lead to unintended command execution
-- acceptEdits mode now prompts before writing build-tool config files that grant code execution (.npmrc, .yarnrc, bunfig</description>
-    </item>
-    <item>
-      <title>v2.1.159</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.159</link>
-      <guid isPermaLink="false">v2.1.159</guid>
-      <pubDate>Sun, 31 May 2026 19:42:49 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Internal infrastructure improvements (no user-facing changes)</description>
     </item>
   </channel>
 </rss>
