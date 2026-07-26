@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 25 Jul 2026 08:09:43 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 08:29:52 GMT</lastBuildDate>
+    <item>
+      <title>feat(skills): add contract-first collaboration workflow (#2567)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ad8db87780c393e6161dab8c40857496a0192842</link>
+      <guid isPermaLink="false">ad8db87</guid>
+      <pubDate>Sun, 26 Jul 2026 07:05:22 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Add a contract-first workflow for consumer/provider collaboration, including shared artifact authority, compatibility review, generated-type and runtime verification, and safe handling of contract-driven tooling.</description>
+    </item>
+    <item>
+      <title>fix(continuous-learning-v2): honor non-git CLAUDE_PROJECT_DIR (#2488)</title>
+      <link>https://github.com/affaan-m/ECC/commit/5debb798c8941beedfef3d01c3318e04c700872a</link>
+      <guid isPermaLink="false">5debb79</guid>
+      <pubDate>Sun, 26 Jul 2026 07:04:35 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Honor an explicit non-git CLAUDE_PROJECT_DIR as an isolated project scope, canonicalize and hash it consistently in the shell observer and Python CLI, and preserve the global fallback for arbitrary non-git working directories.</description>
+    </item>
+    <item>
+      <title>fix(hooks): preserve Stop output through lifecycle wrappers (#2493)</title>
+      <link>https://github.com/affaan-m/ECC/commit/28b922dee3383ea3ac45aaa2155c1e2558993d89</link>
+      <guid isPermaLink="false">28b922d</guid>
+      <pubDate>Sun, 26 Jul 2026 07:01:57 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Preserve complete Stop-hook stdout through lifecycle wrappers, wait for queued output to flush before exiting, bound child output with a larger explicit buffer, and add end-to-end regressions for large, multibyte, dry-run, and failure cases.</description>
+    </item>
+    <item>
+      <title>fix(resolve-ecc-root): require ECC skills, not just scripts, before accepting a root (#2544) (#2577)</title>
+      <link>https://github.com/affaan-m/ECC/commit/c714dc56540ec514271fc18820f228204cd2a3c1</link>
+      <guid isPermaLink="false">c714dc5</guid>
+      <pubDate>Sun, 26 Jul 2026 05:21:27 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(resolve-ecc-root): require ECC skills, not just scripts, before accepting a root (#2544)  resolveEccRoot() accepted a candidate root on script-only evidence (scripts/lib/utils.js). A partial install that lands ECC&apos;s scripts into ~/.claude but not ECC&apos;s skills short-circuited at the standard-in</description>
+    </item>
     <item>
       <title>Use supplied Itō PNG logo (#2570)</title>
       <link>https://github.com/affaan-m/ECC/commit/ac30ff3ea249bf5f94dbc5e9b18ab681cc9af91d</link>
@@ -374,38 +406,6 @@
       <pubDate>Sat, 04 Jul 2026 03:40:44 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* chore(continuous-learning-v2): standardize shell shebangs to env bash  Three scripts under skills/continuous-learning-v2/ used the hardcoded `#!/bin/bash` shebang while the other four already used the portable `#!/usr/bin/env bash`:  - hooks/observe.sh (runs on every hook invocation) - scripts/det</description>
-    </item>
-    <item>
-      <title>feat(session-start): make instinct injection count and confidence threshold configurable (#2413)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ff4a06dd91ec4e10b3a18dac6a8008b90152dea4</link>
-      <guid isPermaLink="false">ff4a06d</guid>
-      <pubDate>Sat, 04 Jul 2026 03:40:17 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat(session-start): make instinct injection count and confidence threshold configurable  Expose ECC_MAX_INJECTED_INSTINCTS and ECC_INSTINCT_CONFIDENCE_THRESHOLD so operators can tune SessionStart instinct injection without editing source. Defaults are unchanged (6 instincts, 0.7 confidence floor)</description>
-    </item>
-    <item>
-      <title>fix(steering): add missing name attribute to auto-inclusion steering files (#2416)</title>
-      <link>https://github.com/affaan-m/ECC/commit/41599069c381b9c7997abeeaeb1a5c6bce42901f</link>
-      <guid isPermaLink="false">4159906</guid>
-      <pubDate>Sat, 04 Jul 2026 03:39:50 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(steering): add missing name attribute to auto-inclusion steering files  * docs: include name attribute on steering file example  ---------  Co-authored-by: Jucelio Brandao Goncalves Junior &lt;jbgjunior@simpress.com.br&gt;</description>
-    </item>
-    <item>
-      <title>fix(install): rewrite relative skill links for injected ecc namespace (#2399)</title>
-      <link>https://github.com/affaan-m/ECC/commit/0a926b45ba171fdd843f30f6cc7cd87b5ccfff69</link>
-      <guid isPermaLink="false">0a926b4</guid>
-      <pubDate>Sat, 04 Jul 2026 03:39:24 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(install): rewrite relative skill links for injected ecc namespace  Skill and rule markdown is byte-copied during a claude install, but the home/project adapters inject an `ecc/` namespace segment (skills/&lt;id&gt; -&gt; skills/ecc/&lt;id&gt;, rules/&lt;x&gt; -&gt; rules/ecc/&lt;x&gt;). Source-relative links such as `../..</description>
-    </item>
-    <item>
-      <title>fix(observer): replace hardcoded sleep 2 with PID file poll in start-observer.sh (#2356)</title>
-      <link>https://github.com/affaan-m/ECC/commit/90f82d360b5a483926998a71ec10d87a3e5e59a0</link>
-      <guid isPermaLink="false">90f82d3</guid>
-      <pubDate>Sat, 04 Jul 2026 03:38:37 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(observer): replace hardcoded sleep 2 with PID file poll in start-observer.sh  Fixes #2295  The previous `sleep 2` after launching the observer loop has two problems: on slow filesystems or loaded systems 2 seconds may not be enough, producing a false-negative on the subsequent PID file check; </description>
     </item>
   </channel>
 </rss>
