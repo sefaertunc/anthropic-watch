@@ -5,9 +5,86 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-26T08:29:52.703Z",
+  "generated": "2026-07-27T09:56:14.495Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "6a9f075",
+      "title": "fix: use scalar Claude agent tools (#2583)",
+      "date": "2026-07-26T10:20:15Z",
+      "url": "https://github.com/affaan-m/ECC/commit/6a9f075cd97c139a5f7e84e1e3f2c9ab095adf64",
+      "snippet": "Normalize scalar Claude agent tool metadata across validators, adapters, dashboards, and generated surfaces with regression coverage.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "6a9f075|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f3afd59",
+      "title": "fix: flatten Claude skill installs (#2582)",
+      "date": "2026-07-26T10:20:06Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f3afd59045ff41e17d0a67b22ed2350ed35faafd",
+      "snippet": "Flatten managed Claude skill destinations, preserve user-owned conflicts, and migrate legacy nested installs through the lifecycle tooling.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f3afd59|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "7143839",
+      "title": "fix(opencode): normalize tool paths across platforms (#2459)",
+      "date": "2026-07-26T10:13:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/71438391e89bdcc446168805078eafcb2011f7d2",
+      "snippet": "Normalize backslash paths for OpenCode formatting and add branch coverage for GitHub coordination behavior.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "7143839|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "1435f54",
+      "title": "docs: refresh command quick reference (#2533)",
+      "date": "2026-07-26T10:04:21Z",
+      "url": "https://github.com/affaan-m/ECC/commit/1435f540ff5debe708d2fca2b231a993137c2bf6",
+      "snippet": "Align the command catalog and retired-command guidance with the current skills-first surface.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "1435f54|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "19df41d",
+      "title": "test: cover shell substitution parser (#2495)",
+      "date": "2026-07-26T10:00:57Z",
+      "url": "https://github.com/affaan-m/ECC/commit/19df41d681a26e73bc8bde8b7e9a78198740cd2a",
+      "snippet": "Add harness-compatible unit coverage for substitution parsing, escaped syntax, compound commands, and edge-case inputs.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "19df41d|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "4d0b501",
+      "title": "feat: add cross-harness memory vault (#2581)",
+      "date": "2026-07-26T09:46:59Z",
+      "url": "https://github.com/affaan-m/ECC/commit/4d0b501b0570a2ab7990ec662527f63cb7d6e86b",
+      "snippet": "Add a local-first, cross-harness memory vault with CLI and MCP surfaces, bounded search and storage, harness-scoped visibility, setup guidance, and comprehensive tests.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4d0b501|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "56d9302",
+      "title": "docs: map cross-harness control-plane roadmap (#2584)",
+      "date": "2026-07-26T08:46:56Z",
+      "url": "https://github.com/affaan-m/ECC/commit/56d9302f026b9fb0ea8920aba35db40cffcc774a",
+      "snippet": "Map the ECC Ultra report into ten dependency-ordered execution lanes with explicit security, consent, schema, lifecycle, testing, and distribution gates.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "56d9302|gh-commits-everything-claude-code"
+    },
     {
       "id": "ad8db87",
       "title": "feat(skills): add contract-first collaboration workflow (#2567)",
@@ -480,83 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "f6e18e0|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a511395",
-      "title": "feat: Plan Canvas, a browser review canvas for plans (#2467)",
-      "date": "2026-07-08T21:12:48Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a511395613641b85a50354faa371a0df083b7b97",
-      "snippet": "* feat: add Plan Canvas - browser annotate-and-approve review for plan artifacts  - scripts/plan-canvas.js CLI (open/await/end/stop/server; bin ecc-plan-canvas) - loopback server + ECC-styled chrome + annotation SDK + zero-dep markdown renderer - Approve/Request-changes verdicts wired to the /plan c",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a511395|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4130457",
-      "title": "fix(tests): use mkdtempSync for test scratch dirs (CodeQL js/insecure-temporary-file) (#2443)",
-      "date": "2026-07-04T20:44:27Z",
-      "url": "https://github.com/affaan-m/ECC/commit/4130457d674d2180c5af2c5f634f3cae4cbc6c4f",
-      "snippet": "Replaces 54 predictable os.tmpdir()+Date.now() test-home paths in tests/hooks/hooks.test.js and the pid-based transcript files in tests/lib/llm-summary.test.js with fs.mkdtempSync. The 22 claude-tool-count-* sites are left as-is: they intentionally mirror the path the production hook computes. Clear",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4130457|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "49128b5",
-      "title": "feat(install): add Kimi Code CLI install target (kimi-project adapter) (#2441)",
-      "date": "2026-07-04T05:24:13Z",
-      "url": "https://github.com/affaan-m/ECC/commit/49128b5763b7ac0b50acef35ac0bcca08d1576af",
-      "snippet": "Rebuild of #2154 on current main, following the hermes/openclaw (#2433) adapter recipe: 10-line kimi-project adapter (project kind, ./.kimi root), registry + helpers ownership, SUPPORTED_INSTALL_TARGETS + legacy-compat modules, kimi target on the 5 shared modules + .kimi in platform-configs paths, b",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "49128b5|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "c837139",
-      "title": "feat: add Hermes and OpenClaw harness install targets (#2433)",
-      "date": "2026-07-04T05:20:17Z",
-      "url": "https://github.com/affaan-m/ECC/commit/c837139e6cf3dff7bbbd3c847a56da119490612f",
-      "snippet": "* feat: add Hermes and OpenClaw harness install targets  - Add scripts/lib/install-targets/hermes-home.js and openclaw-home.js - Register new adapters in registry.js and helpers.js - Add hermes/openclaw to SUPPORTED_INSTALL_TARGETS, schema enum, and install help text - Add .hermes/ and .openclaw/ pl",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "c837139|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "3167852",
-      "title": "fix(gateguard): drop \\x00 placeholder in glob-to-regex (eslint no-control-regex) (#2439)",
-      "date": "2026-07-04T03:51:49Z",
-      "url": "https://github.com/affaan-m/ECC/commit/31678527538d9c41b6ef2a52e10e38b9c5d8a590",
-      "snippet": "Replace the NUL-byte '**' placeholder trick with split('**')/join('.*'), which is semantically identical and lint-clean under eslint 10.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "3167852|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "0a35a02",
-      "title": "feat(gateguard): add GATEGUARD_EXEMPT_GLOBS path exemptions (#2432)",
-      "date": "2026-07-04T03:41:11Z",
-      "url": "https://github.com/affaan-m/ECC/commit/0a35a0216bbf5306c34771cc7c3f8cd286fa077f",
-      "snippet": "The fact-forcing gate fires once per first-touched file per session. In build-heavy sessions this costs a deny->retry round-trip on every new file, including trees where the gate's questions (\"who imports this? what schema?\") carry no signal: test files, generated artifacts, scratch dirs.  Add an op",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "0a35a02|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8b65439",
-      "title": "chore(continuous-learning-v2): standardize shell shebangs to env bash (#2401)",
-      "date": "2026-07-04T03:40:44Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8b6543929e8e7ec80c851b8a0d4e04eebcbf1026",
-      "snippet": "* chore(continuous-learning-v2): standardize shell shebangs to env bash  Three scripts under skills/continuous-learning-v2/ used the hardcoded `#!/bin/bash` shebang while the other four already used the portable `#!/usr/bin/env bash`:  - hooks/observe.sh (runs on every hook invocation) - scripts/det",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8b65439|gh-commits-everything-claude-code"
     }
   ]
 }

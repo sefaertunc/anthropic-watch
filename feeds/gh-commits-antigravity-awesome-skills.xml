@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 26 Jul 2026 08:29:52 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 09:56:14 GMT</lastBuildDate>
+    <item>
+      <title>chore: release v15.5.1 (#1007)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f9073a13a65b0bd900068102843a3fd06c18834d</link>
+      <guid isPermaLink="false">f9073a1</guid>
+      <pubDate>Mon, 27 Jul 2026 05:10:22 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v15.5.1.</description>
+    </item>
+    <item>
+      <title>docs: add v15.5.1 release notes (#1006)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b00031773383f2954f97b94a97f474e477acdbfa</link>
+      <guid isPermaLink="false">b000317</guid>
+      <pubDate>Mon, 27 Jul 2026 04:51:36 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Promotes the MCP protocol-negotiation fix from Unreleased into the dated v15.5.1 patch release notes.\n\nCo-authored-by: sck_0 &lt;188885273+sck000@users.noreply.github.com&gt;\n\n## Quality Bar Checklist\n\n- [x] Scope is limited to release notes for the already-merged fix\n- [x] npm run validate\n- [x] </description>
+    </item>
+    <item>
+      <title>fix: negotiate MCP protocol versions (#1004)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3416b233f1f115619c4c9db98711a2faf10e01c9</link>
+      <guid isPermaLink="false">3416b23</guid>
+      <pubDate>Mon, 27 Jul 2026 04:21:29 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: release v15.5.0 (#1001)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d89bac541bd4d23b04d2392d6c860f6b93d5bd9b</link>
+      <guid isPermaLink="false">d89bac5</guid>
+      <pubDate>Sun, 26 Jul 2026 21:49:24 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v15.5.0.</description>
+    </item>
+    <item>
+      <title>fix: clear web audit before v15.5.0 (#1000)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/43880fcdf1ccac52dc638faebe7b1e033f7d4095</link>
+      <guid isPermaLink="false">43880fc</guid>
+      <pubDate>Sun, 26 Jul 2026 21:39:47 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Remove the high-severity brace-expansion/minimatch advisory chain that would block the release-only Pages gate for v15.5.0.\n\n## Quality Bar Checklist\n\n- [x] Web npm audit reports zero vulnerabilities.\n- [x] ESLint passes with zero warnings.\n- [x] Web coverage passes: 20 files, 152 tests.\n- [x</description>
+    </item>
+    <item>
+      <title>docs: add v15.5.0 release notes (#999)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/efa45a8be42153068ffbb947d0f4bebd95a95b56</link>
+      <guid isPermaLink="false">efa45a8</guid>
+      <pubDate>Sun, 26 Jul 2026 21:15:34 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Document the user-facing changes, validation, and credits for v15.5.0 before the protected release flow.\n\n## Quality Bar Checklist\n\n- [x] Release notes cover all changes since v15.4.0.\n- [x] Credits and source links are included.\n- [x] Validation, reference checks, and documentation security p</description>
+    </item>
+    <item>
+      <title>feat: add fedora-hyprland-installer skill (#994)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/17a0a9ac15b8a83a792fa52cdb020f97c6ea25f0</link>
+      <guid isPermaLink="false">17a0a9a</guid>
+      <pubDate>Sun, 26 Jul 2026 20:51:38 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Adds `fedora-hyprland-installer`, an Antigravity CLI Agent Skill for safely installing, configuring, verifying, repairing, and uninstalling Hyprland on Fedora Linux.  Features:  * GPU-aware support for NVIDIA, AMD, Intel, and hybrid graphics * Non-destructive setup that preserves existing GNOME/KDE </description>
+    </item>
     <item>
       <title>chore: release v15.4.0 (#982)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/e66fc833f2022c3534ba74af835db14c34f9a732</link>
@@ -350,62 +406,6 @@
       <pubDate>Fri, 17 Jul 2026 07:42:56 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
-    </item>
-    <item>
-      <title>chore: version redirect manifest contract (#875)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/703eede1f78d8cd4d520fd3d3e99ebe0d3b02e6e</link>
-      <guid isPermaLink="false">703eede</guid>
-      <pubDate>Fri, 17 Jul 2026 07:35:33 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: harden legacy redirect infrastructure (#874)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/389f1e84ed3cfda3245f282b7cf04b362778d0b4</link>
-      <guid isPermaLink="false">389f1e8</guid>
-      <pubDate>Fri, 17 Jul 2026 07:24:40 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: cover every current skill in legacy bridge (#872)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0a33580aebc39a850600c183c6145f1ed3cae828</link>
-      <guid isPermaLink="false">0a33580</guid>
-      <pubDate>Fri, 17 Jul 2026 06:31:44 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Expands the separate legacy GitHub Pages bridge from the curated 187-route sitemap subset to exact one-to-one coverage for every current catalog skill. The generator now combines all 1,965 current skill IDs with the seven structural sitemap routes, producing 1,972 redirec</description>
-    </item>
-    <item>
-      <title>fix(web): strengthen search discovery and migration (#869)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9f6cdb1173d85d7f62ed10f9b6a8bf3a567caccd</link>
-      <guid isPermaLink="false">9f6cdb1</guid>
-      <pubDate>Thu, 16 Jul 2026 20:49:30 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Strengthens organic discovery after the repository and Pages rename. The hosted catalog now exposes a descriptive home heading, crawlable home/topic fallbacks, curated real-skill links and structured data, and a 180-skill sitemap/prerender surface. It also adds the curren</description>
-    </item>
-    <item>
-      <title>chore: release v14.6.0 (#868)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ab5f6c205a548d2f4bec411728c79b9c156fc696</link>
-      <guid isPermaLink="false">ab5f6c2</guid>
-      <pubDate>Thu, 16 Jul 2026 14:34:03 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Co-authored-by: sck_0 &lt;samujackson1337@gmail.com&gt;</description>
-    </item>
-    <item>
-      <title>docs: add 14.6.0 release notes (#866)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/5eb18cfbdf05cde2a12e8251f0527127cbef762f</link>
-      <guid isPermaLink="false">5eb18cf</guid>
-      <pubDate>Thu, 16 Jul 2026 14:26:24 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(ci): conserve Tessl review credits (#860)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e7204dd622748735acb446d158945c9f4d77cd66</link>
-      <guid isPermaLink="false">e7204dd</guid>
-      <pubDate>Thu, 16 Jul 2026 07:03:44 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Co-authored-by: Nick &lt;184072420+sickn33@users.noreply.github.com&gt;</description>
     </item>
   </channel>
 </rss>
