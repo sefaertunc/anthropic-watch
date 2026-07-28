@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 27 Jul 2026 09:56:14 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 08:38:11 GMT</lastBuildDate>
+    <item>
+      <title>docs: drop badges whose api.ecc.tools endpoints do not exist yet</title>
+      <link>https://github.com/affaan-m/ECC/commit/4e973d3eaf92d97f8d2e2d8abb39d8bdc8711b38</link>
+      <guid isPermaLink="false">4e973d3</guid>
+      <pubDate>Mon, 27 Jul 2026 20:45:17 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>claude-plugin, codex-plugin, and clones return 404 and would render as broken shields on the repo homepage. Re-add when the endpoints ship.  Co-Authored-By: Claude &lt;noreply@anthropic.com&gt; Claude-Session: https://claude.ai/code/session_0149VwNuynam6rvEfcMmiHHa</description>
+    </item>
+    <item>
+      <title>docs: blend 2.1 README restructure with retained sections per Affaan x Haley thread</title>
+      <link>https://github.com/affaan-m/ECC/commit/19b05476fd9ec1bd8c4469570c1e7ac1887a3ead</link>
+      <guid isPermaLink="false">19b0547</guid>
+      <pubDate>Mon, 27 Jul 2026 20:41:57 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Co-Authored-By: Claude &lt;noreply@anthropic.com&gt; Claude-Session: https://claude.ai/code/session_01H1b2jD5gWaPTnHWQ51V7oj</description>
+    </item>
+    <item>
+      <title>fix old project name delimiter</title>
+      <link>https://github.com/affaan-m/ECC/commit/b40f11919a1007e578977edabfdf7f0490bd0a93</link>
+      <guid isPermaLink="false">b40f119</guid>
+      <pubDate>Mon, 27 Jul 2026 20:00:46 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Update section title from &apos;Why It Feels Different&apos; to &apos;Why Choose ECC?&apos;</title>
+      <link>https://github.com/affaan-m/ECC/commit/86c786e8bb3ff70e4d5ea6570ec3fcec0b6a93df</link>
+      <guid isPermaLink="false">86c786e</guid>
+      <pubDate>Mon, 27 Jul 2026 19:25:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: add README install jump link</title>
+      <link>https://github.com/affaan-m/ECC/commit/b6f461a3639e9b73ad5062b76114b847fec53914</link>
+      <guid isPermaLink="false">b6f461a</guid>
+      <pubDate>Mon, 27 Jul 2026 19:23:38 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Revise TDD section title and format</title>
+      <link>https://github.com/affaan-m/ECC/commit/55c343571b7abaeaa677db57b096d386098c8026</link>
+      <guid isPermaLink="false">55c3435</guid>
+      <pubDate>Mon, 27 Jul 2026 19:20:07 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Updated section title for clarity and corrected formatting.</description>
+    </item>
+    <item>
+      <title>docs: refresh README for ECC 2.1 (#2579)</title>
+      <link>https://github.com/affaan-m/ECC/commit/41441427b95eb94c3ac9e385b959f5dd7d89ce58</link>
+      <guid isPermaLink="false">4144142</guid>
+      <pubDate>Mon, 27 Jul 2026 19:17:36 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Refresh the main README for ECC 2.1, including the Plan Canvas demo, install paths, harness guidance, security, sponsors, and community sections.</description>
+    </item>
+    <item>
+      <title>fix(hooks): dedupe transcript usage by message.id in cost-tracker (~2.5-3x inflation) (#2483)</title>
+      <link>https://github.com/affaan-m/ECC/commit/536221cf7aba9d138edb5c120ccff6beb53d161d</link>
+      <guid isPermaLink="false">536221c</guid>
+      <pubDate>Mon, 27 Jul 2026 18:14:47 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Claude Code writes one transcript JSONL line per content block, so a single API response (one message.id) spans multiple assistant lines that each repeat the same message.usage. sumUsageFromTranscript summed every line, inflating token totals and estimated_cost_usd roughly 2.5-3x.  Verified on a rea</description>
+    </item>
     <item>
       <title>fix: use scalar Claude agent tools (#2583)</title>
       <link>https://github.com/affaan-m/ECC/commit/6a9f075cd97c139a5f7e84e1e3f2c9ab095adf64</link>
@@ -342,70 +406,6 @@
       <pubDate>Mon, 20 Jul 2026 19:35:06 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>refactor(hooks): consolidate PostToolUse hooks into sync/async dispatchers (#2494)</title>
-      <link>https://github.com/affaan-m/ECC/commit/0071fa5c3c389d2b4b235a39402c891e146cdef3</link>
-      <guid isPermaLink="false">0071fa5</guid>
-      <pubDate>Sun, 19 Jul 2026 19:47:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* refactor(hooks): consolidate PostToolUse hooks into sync/async dispatchers  Replace 10 individual PostToolUse entries in hooks.json with two consolidated dispatcher entries (post:dispatcher:sync / post:dispatcher:async). The dispatcher&apos;s internal registry preserves every hook ID, matcher, and prof</description>
-    </item>
-    <item>
-      <title>fix: make the installer runtime pass strict supply-chain vetting (#2503)</title>
-      <link>https://github.com/affaan-m/ECC/commit/754b8dd76ca885b764ec22f476664377aa46b6cd</link>
-      <guid isPermaLink="false">754b8dd</guid>
-      <pubDate>Fri, 17 Jul 2026 21:13:49 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix: make the installer runtime pass strict supply-chain vetting  Remediate the four enterprise supply-chain vetting blockers from affaan-m/ECC#2502 so the installer runtime (package.json + manifests + scripts/lib/**) passes strict exact-pin evidence policy:  1. Remove the package.json `postinstal</description>
-    </item>
-    <item>
-      <title>fix(project-detect): parse Python deps pinned with `~` and `@` (was losing framework detection on compatible-release pins) (#2498)</title>
-      <link>https://github.com/affaan-m/ECC/commit/5da21c2b661d1c8aee653b97973913ad883171d8</link>
-      <guid isPermaLink="false">5da21c2</guid>
-      <pubDate>Fri, 17 Jul 2026 21:11:09 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(project-detect): parse Python deps pinned with ~= and @ direct references  * test(project-detect): cover ~= compatible-release and @ direct-reference parsing  * test(project-detect): cover direct references  * fix(project-detect): skip bare VCS/URL requirement lines in getPythonDeps  A require</description>
-    </item>
-    <item>
-      <title>fix(plan-canvas): stop dropping list items when a block&apos;s first item is over-indented (#2501)</title>
-      <link>https://github.com/affaan-m/ECC/commit/5d68ef361770463f6f5985986b5297b94dd63f1b</link>
-      <guid isPermaLink="false">5d68ef3</guid>
-      <pubDate>Fri, 17 Jul 2026 21:10:58 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(plan-canvas): stop dropping list items when a block&apos;s first item is over-indented  * fix: address greptile findings for PR #2501 - list-type detection and outdent nesting  - plan-canvas markdown: fix nested list rendering where outdented runs (indent   6→4) create duplicate sibling UL blocks i</description>
-    </item>
-    <item>
-      <title>fix(llm/providers/claude): attach cache_control to system block, not top-level (#2515)</title>
-      <link>https://github.com/affaan-m/ECC/commit/fb98726d0a35d5c978f4f9451c57a39d06d6729a</link>
-      <guid isPermaLink="false">fb98726</guid>
-      <pubDate>Fri, 17 Jul 2026 20:04:32 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(llm/providers/claude): attach cache_control to system block, not top-level  The Anthropic Messages API does not accept `cache_control` as a top-level request parameter — it is a per-content-block field. Passing it at the top level raises `TypeError` in the Python SDK (which validates kwargs ag</description>
-    </item>
-    <item>
-      <title>fix(hooks): require successful shell probe in observe runner (#2403)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ed387446052dfbc6b52de149406b70efa65edc59</link>
-      <guid isPermaLink="false">ed38744</guid>
-      <pubDate>Tue, 14 Jul 2026 01:31:12 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Require observe-runner shell detection to accept only candidates whose probe exits successfully, avoiding Windows WSL launcher false positives.</description>
-    </item>
-    <item>
-      <title>fix: community-reported issues — pyproject URLs, dashboard Tkinter error, 1.x→2.0 migration guide, cyber-safeguards docs (#2481)</title>
-      <link>https://github.com/affaan-m/ECC/commit/40927950c49f6e742d341e20ff7b9b7e1e7bfff5</link>
-      <guid isPermaLink="false">4092795</guid>
-      <pubDate>Thu, 09 Jul 2026 07:53:51 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix: repo URLs in pyproject, graceful dashboard tkinter error, 1.x-&gt;2.0 migration guide, cyber-safeguards troubleshooting  Co-Authored-By: Devin AI &lt;158243242+devin-ai-integration[bot]@users.noreply.github.com&gt;  * fix: catch ImportError for broken tkinter installs and update About panel repo URL  </description>
-    </item>
-    <item>
-      <title>fix(agents): read-only reviewer contract + model re-tiering (#2442) + soften data-scraper prose (#2428) (#2480)</title>
-      <link>https://github.com/affaan-m/ECC/commit/f6e18e0835e40145acddd32a6cecad9b4fbbf35d</link>
-      <guid isPermaLink="false">f6e18e0</guid>
-      <pubDate>Thu, 09 Jul 2026 07:02:40 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(agents): retier reviewer frontmatter (#2442)  Co-Authored-By: Devin AI &lt;158243242+devin-ai-integration[bot]@users.noreply.github.com&gt;  * docs(skills): soften data scraper prose (#2428)  Co-Authored-By: Devin AI &lt;158243242+devin-ai-integration[bot]@users.noreply.github.com&gt;  ---------  Co-autho</description>
     </item>
   </channel>
 </rss>

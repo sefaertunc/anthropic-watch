@@ -1,18 +1,18 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-07-27T09:56:14.534Z",
-  "lastCronAttemptedAt": "2026-07-27T09:56:14.534Z",
+  "generatedAt": "2026-07-28T08:38:11.931Z",
+  "lastCronAttemptedAt": "2026-07-28T08:38:11.931Z",
   "indicators": {
     "runHistoryDepth": {
-      "state": "warning",
-      "current": 89,
+      "state": "ok",
+      "current": 90,
       "expected": 90,
-      "previous": 88,
+      "previous": 89,
       "threshold": {
         "warning": "<expected",
         "fired": "shrunk-from-previous-by->5"
       },
-      "summary": "89 of 90 expected entries (still seeding)"
+      "summary": "90 of 90 entries (steady state)"
     },
     "allJsonItemCount": {
       "state": "ok",
@@ -37,7 +37,7 @@
       "details": []
     },
     "cronFreshness": {
-      "lastCronAttemptedAt": "2026-07-27T09:56:14.534Z",
+      "lastCronAttemptedAt": "2026-07-28T08:38:11.931Z",
       "thresholdHours": {
         "warning": 24,
         "fired": 36
@@ -46,10 +46,9 @@
     }
   },
   "summary": {
-    "serverOverall": "warning",
+    "serverOverall": "ok",
     "byState": {
-      "warning": 1,
-      "ok": 2
+      "ok": 3
     }
   }
 }

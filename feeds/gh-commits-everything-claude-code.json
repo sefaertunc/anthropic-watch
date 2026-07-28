@@ -5,9 +5,97 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-27T09:56:14.495Z",
+  "generated": "2026-07-28T08:38:11.892Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "4e973d3",
+      "title": "docs: drop badges whose api.ecc.tools endpoints do not exist yet",
+      "date": "2026-07-27T20:45:17Z",
+      "url": "https://github.com/affaan-m/ECC/commit/4e973d3eaf92d97f8d2e2d8abb39d8bdc8711b38",
+      "snippet": "claude-plugin, codex-plugin, and clones return 404 and would render as broken shields on the repo homepage. Re-add when the endpoints ship.  Co-Authored-By: Claude <noreply@anthropic.com> Claude-Session: https://claude.ai/code/session_0149VwNuynam6rvEfcMmiHHa",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4e973d3|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "19b0547",
+      "title": "docs: blend 2.1 README restructure with retained sections per Affaan x Haley thread",
+      "date": "2026-07-27T20:41:57Z",
+      "url": "https://github.com/affaan-m/ECC/commit/19b05476fd9ec1bd8c4469570c1e7ac1887a3ead",
+      "snippet": "Co-Authored-By: Claude <noreply@anthropic.com> Claude-Session: https://claude.ai/code/session_01H1b2jD5gWaPTnHWQ51V7oj",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "19b0547|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b40f119",
+      "title": "fix old project name delimiter",
+      "date": "2026-07-27T20:00:46Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b40f11919a1007e578977edabfdf7f0490bd0a93",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b40f119|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "86c786e",
+      "title": "Update section title from 'Why It Feels Different' to 'Why Choose ECC?'",
+      "date": "2026-07-27T19:25:33Z",
+      "url": "https://github.com/affaan-m/ECC/commit/86c786e8bb3ff70e4d5ea6570ec3fcec0b6a93df",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "86c786e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b6f461a",
+      "title": "docs: add README install jump link",
+      "date": "2026-07-27T19:23:38Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b6f461a3639e9b73ad5062b76114b847fec53914",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b6f461a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "55c3435",
+      "title": "Revise TDD section title and format",
+      "date": "2026-07-27T19:20:07Z",
+      "url": "https://github.com/affaan-m/ECC/commit/55c343571b7abaeaa677db57b096d386098c8026",
+      "snippet": "Updated section title for clarity and corrected formatting.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "55c3435|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "4144142",
+      "title": "docs: refresh README for ECC 2.1 (#2579)",
+      "date": "2026-07-27T19:17:36Z",
+      "url": "https://github.com/affaan-m/ECC/commit/41441427b95eb94c3ac9e385b959f5dd7d89ce58",
+      "snippet": "Refresh the main README for ECC 2.1, including the Plan Canvas demo, install paths, harness guidance, security, sponsors, and community sections.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4144142|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "536221c",
+      "title": "fix(hooks): dedupe transcript usage by message.id in cost-tracker (~2.5-3x inflation) (#2483)",
+      "date": "2026-07-27T18:14:47Z",
+      "url": "https://github.com/affaan-m/ECC/commit/536221cf7aba9d138edb5c120ccff6beb53d161d",
+      "snippet": "Claude Code writes one transcript JSONL line per content block, so a single API response (one message.id) spans multiple assistant lines that each repeat the same message.usage. sumUsageFromTranscript summed every line, inflating token totals and estimated_cost_usd roughly 2.5-3x.  Verified on a rea",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "536221c|gh-commits-everything-claude-code"
+    },
     {
       "id": "6a9f075",
       "title": "fix: use scalar Claude agent tools (#2583)",
@@ -469,94 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "56d2913|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "0071fa5",
-      "title": "refactor(hooks): consolidate PostToolUse hooks into sync/async dispatchers (#2494)",
-      "date": "2026-07-19T19:47:10Z",
-      "url": "https://github.com/affaan-m/ECC/commit/0071fa5c3c389d2b4b235a39402c891e146cdef3",
-      "snippet": "* refactor(hooks): consolidate PostToolUse hooks into sync/async dispatchers  Replace 10 individual PostToolUse entries in hooks.json with two consolidated dispatcher entries (post:dispatcher:sync / post:dispatcher:async). The dispatcher's internal registry preserves every hook ID, matcher, and prof",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "0071fa5|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "754b8dd",
-      "title": "fix: make the installer runtime pass strict supply-chain vetting (#2503)",
-      "date": "2026-07-17T21:13:49Z",
-      "url": "https://github.com/affaan-m/ECC/commit/754b8dd76ca885b764ec22f476664377aa46b6cd",
-      "snippet": "* fix: make the installer runtime pass strict supply-chain vetting  Remediate the four enterprise supply-chain vetting blockers from affaan-m/ECC#2502 so the installer runtime (package.json + manifests + scripts/lib/**) passes strict exact-pin evidence policy:  1. Remove the package.json `postinstal",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "754b8dd|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5da21c2",
-      "title": "fix(project-detect): parse Python deps pinned with `~` and `@` (was losing framework detection on compatible-release pins) (#2498)",
-      "date": "2026-07-17T21:11:09Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5da21c2b661d1c8aee653b97973913ad883171d8",
-      "snippet": "* fix(project-detect): parse Python deps pinned with ~= and @ direct references  * test(project-detect): cover ~= compatible-release and @ direct-reference parsing  * test(project-detect): cover direct references  * fix(project-detect): skip bare VCS/URL requirement lines in getPythonDeps  A require",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5da21c2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5d68ef3",
-      "title": "fix(plan-canvas): stop dropping list items when a block's first item is over-indented (#2501)",
-      "date": "2026-07-17T21:10:58Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5d68ef361770463f6f5985986b5297b94dd63f1b",
-      "snippet": "* fix(plan-canvas): stop dropping list items when a block's first item is over-indented  * fix: address greptile findings for PR #2501 - list-type detection and outdent nesting  - plan-canvas markdown: fix nested list rendering where outdented runs (indent   6→4) create duplicate sibling UL blocks i",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5d68ef3|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "fb98726",
-      "title": "fix(llm/providers/claude): attach cache_control to system block, not top-level (#2515)",
-      "date": "2026-07-17T20:04:32Z",
-      "url": "https://github.com/affaan-m/ECC/commit/fb98726d0a35d5c978f4f9451c57a39d06d6729a",
-      "snippet": "* fix(llm/providers/claude): attach cache_control to system block, not top-level  The Anthropic Messages API does not accept `cache_control` as a top-level request parameter — it is a per-content-block field. Passing it at the top level raises `TypeError` in the Python SDK (which validates kwargs ag",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "fb98726|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ed38744",
-      "title": "fix(hooks): require successful shell probe in observe runner (#2403)",
-      "date": "2026-07-14T01:31:12Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ed387446052dfbc6b52de149406b70efa65edc59",
-      "snippet": "Require observe-runner shell detection to accept only candidates whose probe exits successfully, avoiding Windows WSL launcher false positives.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ed38744|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4092795",
-      "title": "fix: community-reported issues — pyproject URLs, dashboard Tkinter error, 1.x→2.0 migration guide, cyber-safeguards docs (#2481)",
-      "date": "2026-07-09T07:53:51Z",
-      "url": "https://github.com/affaan-m/ECC/commit/40927950c49f6e742d341e20ff7b9b7e1e7bfff5",
-      "snippet": "* fix: repo URLs in pyproject, graceful dashboard tkinter error, 1.x->2.0 migration guide, cyber-safeguards troubleshooting  Co-Authored-By: Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>  * fix: catch ImportError for broken tkinter installs and update About panel repo URL  ",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4092795|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "f6e18e0",
-      "title": "fix(agents): read-only reviewer contract + model re-tiering (#2442) + soften data-scraper prose (#2428) (#2480)",
-      "date": "2026-07-09T07:02:40Z",
-      "url": "https://github.com/affaan-m/ECC/commit/f6e18e0835e40145acddd32a6cecad9b4fbbf35d",
-      "snippet": "* fix(agents): retier reviewer frontmatter (#2442)  Co-Authored-By: Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>  * docs(skills): soften data scraper prose (#2428)  Co-Authored-By: Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>  ---------  Co-autho",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "f6e18e0|gh-commits-everything-claude-code"
     }
   ]
 }
