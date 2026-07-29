@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 28 Jul 2026 08:38:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 08:44:34 GMT</lastBuildDate>
+    <item>
+      <title>fix: close mutable security boundaries (#1028)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c4313115f22ca3dcd721b0fdac978d509e296819</link>
+      <guid isPermaLink="false">c431311</guid>
+      <pubDate>Wed, 29 Jul 2026 08:32:49 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Revalidates all 15 findings from the 2026-07-29 Codex security export. Two findings reproduced on the exact main base and are remediated here: BrowserAct no longer delegates operating policy to mutable provider guides, and FindMate accepts linked public profiles only when</description>
+    </item>
+    <item>
+      <title>fix: update Supabase client to 2.111.0 (#1026)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d737163c228391ff3159fa7e1eda94d50ed89f85</link>
+      <guid isPermaLink="false">d737163</guid>
+      <pubDate>Wed, 29 Jul 2026 07:56:57 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: refresh modellix vendored skill URLs and speech defaults (#1025)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/cf98a3b65a521b822be34afdada1d2b60bc7d2d0</link>
+      <guid isPermaLink="false">cf98a3b</guid>
+      <pubDate>Wed, 29 Jul 2026 07:52:49 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: normalize indexable route links (#1023)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f061e3b4bdeac5dfd64793404eddde91d7821ba2</link>
+      <guid isPermaLink="false">f061e3b</guid>
+      <pubDate>Tue, 28 Jul 2026 15:34:12 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description</description>
+    </item>
+    <item>
+      <title>chore: release v15.6.0 (#1022)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/dc70ecd44e3e238ccc406cfa3a7f7cf6a1b92885</link>
+      <guid isPermaLink="false">dc70ecd</guid>
+      <pubDate>Tue, 28 Jul 2026 15:30:14 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v15.6.0.</description>
+    </item>
+    <item>
+      <title>docs: add v15.6.0 release notes (#1021)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0bca8ab7383cfe7e0d05b2b20d59c713a6df98fa</link>
+      <guid isPermaLink="false">0bca8ab</guid>
+      <pubDate>Tue, 28 Jul 2026 15:15:08 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Document the exact changes shipped since v15.5.1 before the protected v15.6.0 release flow.</description>
+    </item>
+    <item>
+      <title>feat: add browser-act for agent browser automation (#1019)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8af927e7040e243de202b302ea37582f1284c167</link>
+      <guid isPermaLink="false">8af927e</guid>
+      <pubDate>Tue, 28 Jul 2026 14:58:12 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description</description>
+    </item>
     <item>
       <title>fix: update modellix upstream repo after rename (#1009)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/3e7cbb0c1811e5258e59312ab55eb63e5596ae3f</link>
@@ -350,62 +406,6 @@
       <pubDate>Sat, 18 Jul 2026 13:05:46 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description>Prepare the second AAS Core release-candidate identity after the prerelease metadata synchronization fix landed. No package release occurs in this PR.\n\n## Quality Bar Checklist\n\n- [x] Changelog distinguishes the unpublished rc.1 from rc.2.\n- [x] Stable 15.0.0 remains gated on real Codex MCP plu</description>
-    </item>
-    <item>
-      <title>fix: derive AAS catalog skill count dynamically (#903)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/444e5a706561e7d74a35f1b8a64f6c7a8809913e</link>
-      <guid isPermaLink="false">444e5a7</guid>
-      <pubDate>Sat, 18 Jul 2026 07:44:17 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Fixes the source-validation blocker exposed by new skill PRs: the offline catalog builder correctly emits a larger manifest, but the runtime and updater still rejected every count except the historical 1965. The loader now binds manifest skillCount to the content index, the updater accepts a positiv</description>
-    </item>
-    <item>
-      <title>docs: clarify the AAS Core first screen (#901)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6b737a83057363d547024d30d8e79a699864129f</link>
-      <guid isPermaLink="false">6b737a8</guid>
-      <pubDate>Sat, 18 Jul 2026 07:37:58 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Clarifies AAS Core within the first 30 seconds of the canonical README while preserving the existing contributor, governance, community, credits, license, catalog, compatibility, and historical sections.  - makes AAS Core the single product in the title; - places the 14.6</description>
-    </item>
-    <item>
-      <title>ci: retire unreliable AAS v1 baseline gate (#900)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f6671c343ad50d07af0831682ac48f7378bd2c0d</link>
-      <guid isPermaLink="false">f6671c3</guid>
-      <pubDate>Sat, 18 Jul 2026 07:21:44 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Retires the standalone unreliable aas-v1-baseline workflow and removes its canonical-sync dependency after the required status was removed from main protection. Keeps pr-policy, pr-evidence, source-validation, and artifact-preview required, documents the decision, and aligns the canonical repo-maint</description>
-    </item>
-    <item>
-      <title>fix: make Core npm onboarding release-safe (#898)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9878e1add2dd63709dc7432c025b6712f4dcaaeb</link>
-      <guid isPermaLink="false">9878e1a</guid>
-      <pubDate>Sat, 18 Jul 2026 07:10:50 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Fixes release-blocking onboarding gaps discovered by installing the exact `npm pack --ignore-scripts` tarball in an empty consumer directory:  - link the published README directly to the canonical online Core guide instead of an unpackaged relative path; - make bootstrap </description>
-    </item>
-    <item>
-      <title>fix: keep AAS v1 catalog aligned with skill PRs (#899)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a4c685e870b7c780d6897f5e2b59c899d3978dd2</link>
-      <guid isPermaLink="false">a4c685e</guid>
-      <pubDate>Sat, 18 Jul 2026 07:01:44 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: center repository narrative on AAS Core (#897)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1a0329bc32bb128d6837ddd1a8fce376510a968a</link>
-      <guid isPermaLink="false">1a0329b</guid>
-      <pubDate>Sat, 18 Jul 2026 06:26:30 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Reframes the repository around AAS Core as the primary agent-first product while preserving the existing skill library, direct installers, plugins, bundles, workflows, contributor guidance, governance, community, credits, and compatibility surfaces.  Adds a canonical AAS </description>
-    </item>
-    <item>
-      <title>fix: accept Codex MCP request metadata (#896)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3dfb633b153dbf118cd95fea0a6112d99c4f6d05</link>
-      <guid isPermaLink="false">3dfb633</guid>
-      <pubDate>Sat, 18 Jul 2026 04:36:09 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-28T08:38:11.892Z",
+  "generated": "2026-07-29T08:44:34.858Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "591ab5c",
+      "title": "fix(opencode): don't crash the whole session when plugins/lib is missing (#2538)",
+      "date": "2026-07-29T01:37:41Z",
+      "url": "https://github.com/affaan-m/ECC/commit/591ab5cbd3f2f65860ea91c226e410b1502c8e2e",
+      "snippet": "* fix(opencode): don't crash the whole session when plugins/lib is missing (#2530)  * fix: address review feedback (trailing newlines, symptom wording)  * fix(opencode): also lazy-load the store in ecc-hooks.ts plugin entrypoint  * test(opencode): add regression coverage for missing/present plugins/",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "591ab5c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "837acaf",
+      "title": "fix(hooks,lib): fix hook detection and parsing edge cases (#2405)",
+      "date": "2026-07-29T01:32:42Z",
+      "url": "https://github.com/affaan-m/ECC/commit/837acaf20b360302e49a9a05abf3d708f15e84db",
+      "snippet": "* fix(hooks,lib): fix hook detection and parsing edge cases  - auto-tmux-dev: dev\\b -> dev(?![\\w-]) so one-shot dev-build/dev-docs scripts   are not detached into tmux; align command shapes (yarn run dev, bun dev) with   pre-bash-dev-server-block.js DEV_PATTERN. - pre-bash-commit-quality: skip obvio",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "837acaf|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "6be87a5",
+      "title": "fix: clean promoted instinct sources (#2587)",
+      "date": "2026-07-29T01:31:12Z",
+      "url": "https://github.com/affaan-m/ECC/commit/6be87a56ae24dc2ddc9eba2fc71580cbc8a711f0",
+      "snippet": "* fix: clean promoted instinct sources  * test(instincts): normalize retained-content line endings  ---------  Co-authored-by: haelyra <49814733+haelyra@users.noreply.github.com>",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "6be87a5|gh-commits-everything-claude-code"
+    },
     {
       "id": "4e973d3",
       "title": "docs: drop badges whose api.ecc.tools endpoints do not exist yet",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "ee7dded|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "faff560",
-      "title": "docs(strategic-compact): document context-window override env vars (#2487)",
-      "date": "2026-07-20T19:41:06Z",
-      "url": "https://github.com/affaan-m/ECC/commit/faff56015f8f7165c8e071ee180ba3e31b450280",
-      "snippet": "* docs(strategic-compact): document context-window override env vars  * docs(strategic-compact): mirror context-window override env vars for Codex",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "faff560|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4a4fa90",
-      "title": "docs(rules): add Delegation Completion Contract to agent orchestration rules (#2471)",
-      "date": "2026-07-20T19:39:55Z",
-      "url": "https://github.com/affaan-m/ECC/commit/4a4fa907f5f1ba51845e404e295a34f92516a773",
-      "snippet": "The 'Parallel Task Execution' rule encourages agents to spawn subagents, but defines no completion contract. Observed failure mode: subagents followed the rule, spawned their own children, and returned 'waiting for background agents' as their final answer. All children completed successfully, but th",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4a4fa90|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "56d2913",
-      "title": "docs(skills): fix typo in remotion charts rule (#2460)",
-      "date": "2026-07-20T19:35:06Z",
-      "url": "https://github.com/affaan-m/ECC/commit/56d2913f38fff83b0c51abe44cc47a6102210db6",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "56d2913|gh-commits-everything-claude-code"
     }
   ]
 }
