@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 29 Jul 2026 08:44:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 08:30:38 GMT</lastBuildDate>
+    <item>
+      <title>fix(docs): restore main CI (#2623)</title>
+      <link>https://github.com/affaan-m/ECC/commit/e4e4163101f162881e628f300a9ca4e6a940bcea</link>
+      <guid isPermaLink="false">e4e4163</guid>
+      <pubDate>Wed, 29 Jul 2026 18:11:01 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>fix(opencode): don&apos;t crash the whole session when plugins/lib is missing (#2538)</title>
       <link>https://github.com/affaan-m/ECC/commit/591ab5cbd3f2f65860ea91c226e410b1502c8e2e</link>
@@ -398,14 +406,6 @@
       <pubDate>Mon, 20 Jul 2026 20:21:03 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* fix(hooks): remove stray &apos;?&apos; that made every &apos;yarn &lt;anything&gt;&apos; trigger tmux reminder  The tmux-reminder matcher uses one alternation per package manager. Each branch requires a subcommand (install|test) — except yarn, whose subcommand group carried a trailing `?`:      yarn (install|test)?  That m</description>
-    </item>
-    <item>
-      <title>fix(observer): use _clv2_resolve_homunculus_dir (matches lib export) (#2511)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ee7dded8e9a514b2b884e3fadc49eeff235fecfc</link>
-      <guid isPermaLink="false">ee7dded</guid>
-      <pubDate>Mon, 20 Jul 2026 19:42:14 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Commit 2d40baac (PR #2304) renamed `_ecc_*` -&gt; `_clv2_*` but missed this single call site. The launcher sources `scripts/lib/homunculus-dir.sh` which only exports `_clv2_resolve_homunculus_dir`, so any user enabling the observer (`observer.enabled: true`) gets:    start-observer.sh: line 40: _ecc_re</description>
     </item>
   </channel>
 </rss>

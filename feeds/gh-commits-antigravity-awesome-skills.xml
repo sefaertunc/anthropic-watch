@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 29 Jul 2026 08:44:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 08:30:38 GMT</lastBuildDate>
+    <item>
+      <title>chore: release v15.7.0 (#1043)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/88a189642daea448ae0ac545dfc1b79c5a86924d</link>
+      <guid isPermaLink="false">88a1896</guid>
+      <pubDate>Wed, 29 Jul 2026 17:34:34 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v15.7.0.</description>
+    </item>
+    <item>
+      <title>docs: add v15.7.0 release notes (#1042)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9cf9c82d4326eb7bc6b8679382bed213f6e0eed0</link>
+      <guid isPermaLink="false">9cf9c82</guid>
+      <pubDate>Wed, 29 Jul 2026 17:22:23 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare the protected v15.7.0 changelog section before the scripted release flow.\n\n## Quality Bar Checklist\n\n- [x] Release notes cover all changes since v15.6.0.\n- [x] Validation, reference validation, documentation security, and the full repository test suite passed locally.\n- [x] No generate</description>
+    </item>
+    <item>
+      <title>Add cohesivity skill for agent provisioned backends (#1032)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a4f3e1b7d8dae066bca6537286f901240aa6d8d6</link>
+      <guid isPermaLink="false">a4f3e1b</guid>
+      <pubDate>Wed, 29 Jul 2026 17:00:58 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Adds `skills/cohesivity/SKILL.md` and the matching credit in README Official Sources.  Cohesivity provisions backend infra for a project over one HTTP API: Postgres, Redis, object and vector storage, hosting, auth and social login, realtime, an agent-native email inbox, a managed browser, and AI mod</description>
+    </item>
+    <item>
+      <title>fix: classify all unknown skill risks (#1033)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/df08c3f9cad7dec3aff91914a3cf6fb1e810a52c</link>
+      <guid isPermaLink="false">df08c3f</guid>
+      <pubDate>Wed, 29 Jul 2026 16:24:34 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Classify every canonical skill that still declared `risk: unknown` on the frozen task base. Each of the 940 skills received an individual semantic review; the resulting distribution is 798 `critical`, 71 `none`, 60 `safe`, and 11 `offensive`.  The 11 offensive skills now </description>
+    </item>
+    <item>
+      <title>fix: compare legacy executable skill snapshots (#1038)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8479c654cedc4ecf2d6c4933bfc2bf67c3bda011</link>
+      <guid isPermaLink="false">8479c65</guid>
+      <pubDate>Wed, 29 Jul 2026 16:14:37 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description</description>
+    </item>
+    <item>
+      <title>fix: extend trusted evidence timeout (#1036)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/cb20e6527f04518e4321bd6d9eb98d31bbf39e15</link>
+      <guid isPermaLink="false">cb20e65</guid>
+      <pubDate>Wed, 29 Jul 2026 15:56:19 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Extend the trusted changed-skill evaluator budget from two to five minutes. A measured 940-skill evidence run completes in about 2m35s after the bounded path-lookup fix, so the previous 120-second limit still terminated valid repository-wide maintenance batches.  The eval</description>
+    </item>
     <item>
       <title>fix: close mutable security boundaries (#1028)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/c4313115f22ca3dcd721b0fdac978d509e296819</link>
@@ -358,54 +406,6 @@
       <pubDate>Sat, 18 Jul 2026 16:58:08 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
-    </item>
-    <item>
-      <title>chore: release v15.0.0 (#928)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/16afa71355455a9fccfcc5ed285b60848223844e</link>
-      <guid isPermaLink="false">16afa71</guid>
-      <pubDate>Sat, 18 Jul 2026 14:37:00 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v15.0.0.</description>
-    </item>
-    <item>
-      <title>docs: finalize AAS Core 15.0.0 changelog (#927)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4f2919196901fbb264fd8f75fbbc1ed77f12b7cf</link>
-      <guid isPermaLink="false">4f29191</guid>
-      <pubDate>Sat, 18 Jul 2026 14:27:28 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: release v15.0.0-rc.3 (#926)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/57b8ea8e22f5d41e98a9ac2673a060351971a96b</link>
-      <guid isPermaLink="false">57b8ea8</guid>
-      <pubDate>Sat, 18 Jul 2026 14:10:25 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v15.0.0-rc.3.</description>
-    </item>
-    <item>
-      <title>fix: harden AAS Core onboarding contracts (#925)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/465d792918e15241978a3296f565d473ca529654</link>
-      <guid isPermaLink="false">465d792</guid>
-      <pubDate>Sat, 18 Jul 2026 13:52:47 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: release v15.0.0-rc.2 (#923)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3a902a8de85012ebdad36ff8e2921f727e9e2e76</link>
-      <guid isPermaLink="false">3a902a8</guid>
-      <pubDate>Sat, 18 Jul 2026 13:17:16 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Co-authored-by: sck_0 &lt;samujackson1337@gmail.com&gt;</description>
-    </item>
-    <item>
-      <title>docs: prepare AAS Core rc.2 validation gate (#921)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e82c5b753138fa85d67c9dd3397f23c1f1e277ad</link>
-      <guid isPermaLink="false">e82c5b7</guid>
-      <pubDate>Sat, 18 Jul 2026 13:05:46 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare the second AAS Core release-candidate identity after the prerelease metadata synchronization fix landed. No package release occurs in this PR.\n\n## Quality Bar Checklist\n\n- [x] Changelog distinguishes the unpublished rc.1 from rc.2.\n- [x] Stable 15.0.0 remains gated on real Codex MCP plu</description>
     </item>
   </channel>
 </rss>

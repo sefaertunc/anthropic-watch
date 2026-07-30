@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-07-29T08:44:34.858Z",
+  "generated": "2026-07-30T08:30:38.577Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "e4e4163",
+      "title": "fix(docs): restore main CI (#2623)",
+      "date": "2026-07-29T18:11:01Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e4e4163101f162881e628f300a9ca4e6a940bcea",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e4e4163|gh-commits-everything-claude-code"
+    },
     {
       "id": "591ab5c",
       "title": "fix(opencode): don't crash the whole session when plugins/lib is missing (#2538)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "5deee34|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ee7dded",
-      "title": "fix(observer): use _clv2_resolve_homunculus_dir (matches lib export) (#2511)",
-      "date": "2026-07-20T19:42:14Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ee7dded8e9a514b2b884e3fadc49eeff235fecfc",
-      "snippet": "Commit 2d40baac (PR #2304) renamed `_ecc_*` -> `_clv2_*` but missed this single call site. The launcher sources `scripts/lib/homunculus-dir.sh` which only exports `_clv2_resolve_homunculus_dir`, so any user enabling the observer (`observer.enabled: true`) gets:    start-observer.sh: line 40: _ecc_re",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ee7dded|gh-commits-everything-claude-code"
     }
   ]
 }
