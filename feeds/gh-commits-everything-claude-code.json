@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-02T08:27:24.557Z",
+  "generated": "2026-08-03T09:50:31.075Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "85c7822",
+      "title": "fix(commands): generate discoverable skills from learning workflows (#2653)",
+      "date": "2026-08-02T18:39:29Z",
+      "url": "https://github.com/affaan-m/ECC/commit/85c7822c4a9e076aa7824b86dc5e24d65ce64a65",
+      "snippet": "Carry #2246 forward on current main with native SKILL.md discovery, guarded writes, portable metadata, and fail-closed validation.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "85c7822|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f782bd6",
+      "title": "fix(aura): reject history-free agents by default (#2652)",
+      "date": "2026-08-02T17:42:16Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f782bd616ecdf4ccb8d956319255e711725ba4ac",
+      "snippet": "* fix(aura): reject history-free agents by default  * fix(aura): keep invalid responses fail-closed",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f782bd6|gh-commits-everything-claude-code"
+    },
     {
       "id": "e4e4163",
       "title": "fix(docs): restore main CI (#2623)",
@@ -535,28 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "e7b3ba0|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "96789ca",
-      "title": "feat: add Itô compute sponsor routing and Phase 2 plan (#2546)",
-      "date": "2026-07-22T07:07:45Z",
-      "url": "https://github.com/affaan-m/ECC/commit/96789caaf90501ff9b55bf1b00f1c28cf3fccbeb",
-      "snippet": "* feat: add Ito compute sponsor routing  * fix: harden Ito integration CI and framing",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "96789ca|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5deee34",
-      "title": "fix(hooks): remove stray '?' that made every 'yarn <anything>' fire tmux reminder (#2517)",
-      "date": "2026-07-20T20:21:03Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5deee34c93395045b985e3baf91550e5f1ab7204",
-      "snippet": "* fix(hooks): remove stray '?' that made every 'yarn <anything>' trigger tmux reminder  The tmux-reminder matcher uses one alternation per package manager. Each branch requires a subcommand (install|test) — except yarn, whose subcommand group carried a trailing `?`:      yarn (install|test)?  That m",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5deee34|gh-commits-everything-claude-code"
     }
   ]
 }

@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 02 Aug 2026 08:27:24 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 09:50:31 GMT</lastBuildDate>
+    <item>
+      <title>fix(commands): generate discoverable skills from learning workflows (#2653)</title>
+      <link>https://github.com/affaan-m/ECC/commit/85c7822c4a9e076aa7824b86dc5e24d65ce64a65</link>
+      <guid isPermaLink="false">85c7822</guid>
+      <pubDate>Sun, 02 Aug 2026 18:39:29 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Carry #2246 forward on current main with native SKILL.md discovery, guarded writes, portable metadata, and fail-closed validation.</description>
+    </item>
+    <item>
+      <title>fix(aura): reject history-free agents by default (#2652)</title>
+      <link>https://github.com/affaan-m/ECC/commit/f782bd616ecdf4ccb8d956319255e711725ba4ac</link>
+      <guid isPermaLink="false">f782bd6</guid>
+      <pubDate>Sun, 02 Aug 2026 17:42:16 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(aura): reject history-free agents by default  * fix(aura): keep invalid responses fail-closed</description>
+    </item>
     <item>
       <title>fix(docs): restore main CI (#2623)</title>
       <link>https://github.com/affaan-m/ECC/commit/e4e4163101f162881e628f300a9ca4e6a940bcea</link>
@@ -390,22 +406,6 @@
       <pubDate>Wed, 22 Jul 2026 16:17:04 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>On a case-insensitive filesystem (macOS APFS/HFS+, Windows NTFS) a write to `.ESLINTRC.JS` lands on the exact same inode as `.eslintrc.js`, but the guard looked the basename up in PROTECTED_FILES with a case-sensitive `Set.has`. Every entry in that Set is lowercase, so any case-variant path missed t</description>
-    </item>
-    <item>
-      <title>feat: add Itô compute sponsor routing and Phase 2 plan (#2546)</title>
-      <link>https://github.com/affaan-m/ECC/commit/96789caaf90501ff9b55bf1b00f1c28cf3fccbeb</link>
-      <guid isPermaLink="false">96789ca</guid>
-      <pubDate>Wed, 22 Jul 2026 07:07:45 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat: add Ito compute sponsor routing  * fix: harden Ito integration CI and framing</description>
-    </item>
-    <item>
-      <title>fix(hooks): remove stray &apos;?&apos; that made every &apos;yarn &lt;anything&gt;&apos; fire tmux reminder (#2517)</title>
-      <link>https://github.com/affaan-m/ECC/commit/5deee34c93395045b985e3baf91550e5f1ab7204</link>
-      <guid isPermaLink="false">5deee34</guid>
-      <pubDate>Mon, 20 Jul 2026 20:21:03 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(hooks): remove stray &apos;?&apos; that made every &apos;yarn &lt;anything&gt;&apos; trigger tmux reminder  The tmux-reminder matcher uses one alternation per package manager. Each branch requires a subcommand (install|test) — except yarn, whose subcommand group carried a trailing `?`:      yarn (install|test)?  That m</description>
     </item>
   </channel>
 </rss>
