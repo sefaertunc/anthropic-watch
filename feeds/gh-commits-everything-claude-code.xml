@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 03 Aug 2026 09:50:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <item>
+      <title>test(lib): extract shared mini test runner for coordination tests (#2663)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ff15079b9f9852c385ac3a506f8ec3a26be4f563</link>
+      <guid isPermaLink="false">ff15079</guid>
+      <pubDate>Tue, 04 Aug 2026 04:29:31 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Address CodeRabbit review on #2311: dedupe the local test(name, fn) harness and route all reporter output through a shared helper (tests/lib/helpers/mini-test-runner.js) instead of direct console.log.</description>
+    </item>
+    <item>
+      <title>fix(commands): probe for auto-update.js in auto-update ECC_ROOT resolver (#2462)</title>
+      <link>https://github.com/affaan-m/ECC/commit/203aac77100672914419a885cecae0f10b4ab016</link>
+      <guid isPermaLink="false">203aac7</guid>
+      <pubDate>Tue, 04 Aug 2026 04:28:59 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The auto-update command&apos;s inline ECC_ROOT resolver delegates to resolveEccRoot() with the default probe (scripts/lib/utils.js). A hooks-runtime-only install copies scripts/lib/ into ~/.claude, so the partial install satisfies the probe and shadows the full plugin root under ~/.claude/plugins/marketp</description>
+    </item>
+    <item>
+      <title>fix(mcp): accept reserved _meta field in tools/call params (#2670)</title>
+      <link>https://github.com/affaan-m/ECC/commit/7b76082b13278d8b449a39fef25aafed6d4fee28</link>
+      <guid isPermaLink="false">7b76082</guid>
+      <pubDate>Tue, 04 Aug 2026 04:28:09 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(mcp): accept reserved _meta field in tools/call params  The memory MCP server rejected any tools/call whose params contained a key other than name/arguments, returning -32602 &quot;Unknown or missing memory tool.&quot;  MCP clients (e.g. Claude Code) attach the spec-reserved `_meta` field (such as progr</description>
+    </item>
+    <item>
+      <title>fix: add claude-opus-5 to KNOWN_MODEL_WINDOW_TOKENS (#2609)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ab373716e7c996084fd8383fca210063a87773e7</link>
+      <guid isPermaLink="false">ab37371</guid>
+      <pubDate>Tue, 04 Aug 2026 04:27:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: add claude-opus-5 to KNOWN_MODEL_WINDOW_TOKENS  claude-opus-5 has a 1M context window (verified: 250k tokens at 25% usage = ~1M), but was missing from the model table. This caused resolveContextWindowTokens() to fall back to the 200k default when tokens &lt; 200k, incorrectly triggering compact </description>
+    </item>
     <item>
       <title>fix(commands): generate discoverable skills from learning workflows (#2653)</title>
       <link>https://github.com/affaan-m/ECC/commit/85c7822c4a9e076aa7824b86dc5e24d65ce64a65</link>
@@ -374,38 +406,6 @@
       <pubDate>Wed, 22 Jul 2026 17:15:52 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>Co-authored-by: Haley Chen &lt;2022hachen@gmail.com&gt;</description>
-    </item>
-    <item>
-      <title>fix: detect Anthropic API keys (sk-ant-...) in pre-commit secret scan (#2529)</title>
-      <link>https://github.com/affaan-m/ECC/commit/8348fb5387303060c1c2cfec37daf27e20a11df6</link>
-      <guid isPermaLink="false">8348fb5</guid>
-      <pubDate>Wed, 22 Jul 2026 16:17:28 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The existing OpenAI pattern sk-[a-zA-Z0-9]{20,} never matches real Anthropic keys: their sk-ant-api03-... format contains hyphens, which break the character class before reaching the 20-char threshold. Keys from the fastest-growing Claude Code user base slipped through the scan.  Adds a dedicated sk</description>
-    </item>
-    <item>
-      <title>fix(observer): repair daemon boot (stale resolver name) and close analysis stdin (#2452) (#2464)</title>
-      <link>https://github.com/affaan-m/ECC/commit/a1bf029cbf270f7772ce088ebc65435ee51ca335</link>
-      <guid isPermaLink="false">a1bf029</guid>
-      <pubDate>Wed, 22 Jul 2026 16:17:19 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Two continuous-learning-v2 observer regressions reported in #2452:  - start-observer.sh still called _ecc_resolve_homunculus_dir, but the   shared lib was renamed to _clv2_resolve_homunculus_dir (with observe.sh   and detect-project.sh updated, start-observer.sh missed). Under set -e   every launch </description>
-    </item>
-    <item>
-      <title>fix(suggest-compact): recognize large-window model families without a [1m] marker (#2468)</title>
-      <link>https://github.com/affaan-m/ECC/commit/cd39df154c517ceb3d83d28771c626ae1ee551c8</link>
-      <guid isPermaLink="false">cd39df1</guid>
-      <pubDate>Wed, 22 Jul 2026 16:17:11 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(suggest-compact): recognize large-window model families without a [1m] marker  resolveContextWindowTokens() only detected a 1M window via the env override, the [1m] model-id marker, or observed tokens already above 200k. Large-window models whose ids carry none of these (e.g. claude-fable-5) w</description>
-    </item>
-    <item>
-      <title>fix(config-protection): match protected filenames case-insensitively (#2543)</title>
-      <link>https://github.com/affaan-m/ECC/commit/e7b3ba07bb424db91ffeb3b94b3c39b210c8b316</link>
-      <guid isPermaLink="false">e7b3ba0</guid>
-      <pubDate>Wed, 22 Jul 2026 16:17:04 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>On a case-insensitive filesystem (macOS APFS/HFS+, Windows NTFS) a write to `.ESLINTRC.JS` lands on the exact same inode as `.eslintrc.js`, but the guard looked the basename up in PROTECTED_FILES with a case-sensitive `Set.has`. Every entry in that Set is lowercase, so any case-variant path missed t</description>
     </item>
   </channel>
 </rss>

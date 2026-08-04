@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 03 Aug 2026 09:50:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <item>
+      <title>0.3.221</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.221</guid>
+      <pubDate>Tue, 04 Aug 2026 08:39:54 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Improved skills option validation: malformed names (delimiters or control characters) and wildcard-form names are rejected with a clear error; use skills: &apos;all&apos; to enable every skill
+- Fixed external MCP servers passed via the mcpServers option not being connected before the first turn, which caus</description>
+    </item>
     <item>
       <title>0.3.220</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -427,14 +436,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Assistant messages and StopFailure hooks now report error: &apos;modelnotfound&apos; when the selected model doesn&apos;t exist or isn&apos;t available, instead of the generic &apos;invalidrequest&apos;. The apierrorstatus field on result messages is now documented.
 - Added @anthropic-ai/claude-agent-sdk/extract export for bun</description>
-    </item>
-    <item>
-      <title>0.3.143</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.143</guid>
-      <pubDate>Sat, 16 May 2026 08:07:55 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- @anthropic-ai/sdk and @modelcontextprotocol/sdk are now peerDependencies instead of dependencies. Runtime is unaffected (both are bundled); npm/bun/pnpm auto-install them. yarn classic users should add them explicitly for full TypeScript type resolution</description>
     </item>
   </channel>
 </rss>

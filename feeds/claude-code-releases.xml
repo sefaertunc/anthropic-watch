@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 03 Aug 2026 09:50:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.221</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.221</link>
+      <guid isPermaLink="false">v2.1.221</guid>
+      <pubDate>Tue, 04 Aug 2026 00:14:23 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- [VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the &quot;Claude Code: Toggle Focus view&quot; command
+- Added mode: &quot;mask&quot; for sandbox credential files on Linux and WSL</description>
+    </item>
     <item>
       <title>v2.1.220</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.220</link>
@@ -501,17 +511,6 @@
 - claude agents --json now includes waitingFor showing what a waiting session is blocked on (e.g. permission prompt)
 - --tools: explicitly listing Grep/Glob now provides the dedicated search tools on native builds with embedded search (previously these names were silently ignored)
 - /</description>
-    </item>
-    <item>
-      <title>v2.1.161</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.161</link>
-      <guid isPermaLink="false">v2.1.161</guid>
-      <pubDate>Tue, 02 Jun 2026 21:58:22 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- OTELRESOURCEATTRIBUTES values are now included as labels on metric datapoints, so you can slice usage metrics by custom dimensions like team or repo
-- claude agents rows now show done/total before the detail when work is fanned out; peek shows the longest-running item
-- /mcp now col</description>
     </item>
   </channel>
 </rss>

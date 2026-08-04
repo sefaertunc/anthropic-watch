@@ -6,7 +6,140 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 03 Aug 2026 09:50:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <item>
+      <title>0.2.129</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.129</guid>
+      <pubDate>Tue, 04 Aug 2026 08:39:54 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Breaking Changes
+- Skill name validation in ClaudeAgentOptions.skills: Skill names containing parentheses, commas, control characters, wildcards (, :), leading /, surrounding whitespace, or surrogate code points now raise ValueError at connect time. skills=[&quot;plugin:&quot;] and skills=[&quot;&quot;] should be repla</description>
+    </item>
+    <item>
+      <title>0.3.221</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.221</guid>
+      <pubDate>Tue, 04 Aug 2026 08:39:54 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Improved skills option validation: malformed names (delimiters or control characters) and wildcard-form names are rejected with a clear error; use skills: &apos;all&apos; to enable every skill
+- Fixed external MCP servers passed via the mcpServers option not being connected before the first turn, which caus</description>
+    </item>
+    <item>
+      <title>2.1.221</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.221</guid>
+      <pubDate>Tue, 04 Aug 2026 08:39:53 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- [VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the &quot;Claude Code: Toggle Focus view&quot; command
+- Added mode: &quot;mask&quot; for sandbox credential files on Linux and WSL — sandboxed co</description>
+    </item>
+    <item>
+      <title>Elevated errors on Claude Sonnet 5</title>
+      <link>https://stspg.io/f0lj38zvb6qm</link>
+      <guid isPermaLink="false">8k9mjhq7wmv3</guid>
+      <pubDate>Tue, 04 Aug 2026 06:16:33 GMT</pubDate>
+      <category>status-page</category>
+      <description>[minor] resolved — This incident has been resolved.</description>
+    </item>
+    <item>
+      <title>test(lib): extract shared mini test runner for coordination tests (#2663)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ff15079b9f9852c385ac3a506f8ec3a26be4f563</link>
+      <guid isPermaLink="false">ff15079</guid>
+      <pubDate>Tue, 04 Aug 2026 04:29:31 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Address CodeRabbit review on #2311: dedupe the local test(name, fn) harness and route all reporter output through a shared helper (tests/lib/helpers/mini-test-runner.js) instead of direct console.log.</description>
+    </item>
+    <item>
+      <title>fix(commands): probe for auto-update.js in auto-update ECC_ROOT resolver (#2462)</title>
+      <link>https://github.com/affaan-m/ECC/commit/203aac77100672914419a885cecae0f10b4ab016</link>
+      <guid isPermaLink="false">203aac7</guid>
+      <pubDate>Tue, 04 Aug 2026 04:28:59 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The auto-update command&apos;s inline ECC_ROOT resolver delegates to resolveEccRoot() with the default probe (scripts/lib/utils.js). A hooks-runtime-only install copies scripts/lib/ into ~/.claude, so the partial install satisfies the probe and shadows the full plugin root under ~/.claude/plugins/marketp</description>
+    </item>
+    <item>
+      <title>fix(mcp): accept reserved _meta field in tools/call params (#2670)</title>
+      <link>https://github.com/affaan-m/ECC/commit/7b76082b13278d8b449a39fef25aafed6d4fee28</link>
+      <guid isPermaLink="false">7b76082</guid>
+      <pubDate>Tue, 04 Aug 2026 04:28:09 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(mcp): accept reserved _meta field in tools/call params  The memory MCP server rejected any tools/call whose params contained a key other than name/arguments, returning -32602 &quot;Unknown or missing memory tool.&quot;  MCP clients (e.g. Claude Code) attach the spec-reserved `_meta` field (such as progr</description>
+    </item>
+    <item>
+      <title>fix: add claude-opus-5 to KNOWN_MODEL_WINDOW_TOKENS (#2609)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ab373716e7c996084fd8383fca210063a87773e7</link>
+      <guid isPermaLink="false">ab37371</guid>
+      <pubDate>Tue, 04 Aug 2026 04:27:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: add claude-opus-5 to KNOWN_MODEL_WINDOW_TOKENS  claude-opus-5 has a 1M context window (verified: 250k tokens at 25% usage = ~1M), but was missing from the model table. This caused resolveContextWindowTokens() to fall back to the 200k default when tokens &lt; 200k, incorrectly triggering compact </description>
+    </item>
+    <item>
+      <title>v1.0.184</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.184</link>
+      <guid isPermaLink="false">v1.0.184</guid>
+      <pubDate>Tue, 04 Aug 2026 00:16:20 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.184</description>
+    </item>
+    <item>
+      <title>v2.1.221</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.221</link>
+      <guid isPermaLink="false">v2.1.221</guid>
+      <pubDate>Tue, 04 Aug 2026 00:14:23 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- [VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the &quot;Claude Code: Toggle Focus view&quot; command
+- Added mode: &quot;mask&quot; for sandbox credential files on Linux and WSL</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/dd796139237c9c105ffed1e2a40ea3a1faae9108</link>
+      <guid isPermaLink="false">dd79613</guid>
+      <pubDate>Tue, 04 Aug 2026 00:14:17 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.221</title>
+      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
+      <guid isPermaLink="false">2.1.221</guid>
+      <pubDate>Mon, 03 Aug 2026 22:16:25 GMT</pubDate>
+      <category>npm-claude-code</category>
+      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>RT @mhutter42: After 25+ years, I thought I try something new. I find the public and professional discussion about the future of Jobs in li…</title>
+      <link>https://x.com/janleike/status/2084354431194394629</link>
+      <guid isPermaLink="false">2084354431194394629</guid>
+      <pubDate>Mon, 03 Aug 2026 19:03:16 GMT</pubDate>
+      <category>twitter-janleike</category>
+      <description>RT @mhutter42: After 25+ years, I thought I try something new. I find the public and professional discussion about the future of Jobs in li…</description>
+    </item>
+    <item>
+      <title>Add the dynamic workflows cookbook to the Agent SDK series (#806)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/3291e01531b44bcf730ffe5ed62df60088087316</link>
+      <guid isPermaLink="false">3291e01</guid>
+      <pubDate>Mon, 03 Aug 2026 18:30:31 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>Degraded performance on Claude Sonnet 5</title>
+      <link>https://stspg.io/w306lggygcyp</link>
+      <guid isPermaLink="false">dnl3q35xkn3s</guid>
+      <pubDate>Mon, 03 Aug 2026 15:13:45 GMT</pubDate>
+      <category>status-page</category>
+      <description>[minor] resolved — As of 15:20 UTC (8:20am PT), error rates on Claude Sonnet 5 have returned to baseline. This incident is resolved.</description>
+    </item>
+    <item>
+      <title>Error rates across multiple models</title>
+      <link>https://stspg.io/l9rvh5brt8f3</link>
+      <guid isPermaLink="false">ch7k4vh9fr1y</guid>
+      <pubDate>Mon, 03 Aug 2026 12:52:52 GMT</pubDate>
+      <category>status-page</category>
+      <description>[minor] resolved — This incident has been resolved.</description>
+    </item>
     <item>
       <title>Resets are done, sure we aren&apos;t &quot;entitled&quot; to it. But Fable still only being allowed 50% of weekly usage is just ridiculous.</title>
       <link>https://www.reddit.com/r/ClaudeCode/comments/1ve7ee0/resets_are_done_sure_we_arent_entitled_to_it_but/</link>
@@ -54,14 +187,6 @@
       <pubDate>Sun, 02 Aug 2026 18:39:29 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>Carry #2246 forward on current main with native SKILL.md discovery, guarded writes, portable metadata, and fail-closed validation.</description>
-    </item>
-    <item>
-      <title>fix(aura): reject history-free agents by default (#2652)</title>
-      <link>https://github.com/affaan-m/ECC/commit/f782bd616ecdf4ccb8d956319255e711725ba4ac</link>
-      <guid isPermaLink="false">f782bd6</guid>
-      <pubDate>Sun, 02 Aug 2026 17:42:16 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(aura): reject history-free agents by default  * fix(aura): keep invalid responses fail-closed</description>
     </item>
     <item>
       <title>chore: release v15.8.0 (#1072)</title>
@@ -210,14 +335,6 @@ Our post describe</description>
       <description/>
     </item>
     <item>
-      <title>Elevated errors across many models</title>
-      <link>https://stspg.io/c0fmy7628y3w</link>
-      <guid isPermaLink="false">fsh2zzzl2c4l</guid>
-      <pubDate>Thu, 30 Jul 2026 05:57:43 GMT</pubDate>
-      <category>status-page</category>
-      <description>[major] identified — As of 8:05 UTC / 1:05 PT, Sonnet 5 errors are back to baseline, but we&apos;re seeing an increased error rate on Fable 5.</description>
-    </item>
-    <item>
       <title>New MCP Protocol: Bringing MCP 2026-07-28 to Claude</title>
       <link>https://claude.com/blog/bringing-mcp-2026-07-28-to-claude</link>
       <guid isPermaLink="false">49105807</guid>
@@ -239,22 +356,6 @@ Our post describe</description>
       <guid isPermaLink="false">49102150</guid>
       <pubDate>Wed, 29 Jul 2026 19:50:42 GMT</pubDate>
       <category>hn-claude-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>Elevated errors across all models</title>
-      <link>https://stspg.io/p7pqqb00414c</link>
-      <guid isPermaLink="false">q2kg8n613kr3</guid>
-      <pubDate>Wed, 29 Jul 2026 19:49:45 GMT</pubDate>
-      <category>status-page</category>
-      <description>[critical] resolved — This issue has been resolved.</description>
-    </item>
-    <item>
-      <title>fix(docs): restore main CI (#2623)</title>
-      <link>https://github.com/affaan-m/ECC/commit/e4e4163101f162881e628f300a9ca4e6a940bcea</link>
-      <guid isPermaLink="false">e4e4163</guid>
-      <pubDate>Wed, 29 Jul 2026 18:11:01 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
       <description/>
     </item>
     <item>
@@ -280,22 +381,6 @@ Our post describe</description>
       <pubDate>Wed, 29 Jul 2026 05:43:02 GMT</pubDate>
       <category>hn-claude-ai</category>
       <description/>
-    </item>
-    <item>
-      <title>fix(opencode): don&apos;t crash the whole session when plugins/lib is missing (#2538)</title>
-      <link>https://github.com/affaan-m/ECC/commit/591ab5cbd3f2f65860ea91c226e410b1502c8e2e</link>
-      <guid isPermaLink="false">591ab5c</guid>
-      <pubDate>Wed, 29 Jul 2026 01:37:41 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(opencode): don&apos;t crash the whole session when plugins/lib is missing (#2530)  * fix: address review feedback (trailing newlines, symptom wording)  * fix(opencode): also lazy-load the store in ecc-hooks.ts plugin entrypoint  * test(opencode): add regression coverage for missing/present plugins/</description>
-    </item>
-    <item>
-      <title>fix(hooks,lib): fix hook detection and parsing edge cases (#2405)</title>
-      <link>https://github.com/affaan-m/ECC/commit/837acaf20b360302e49a9a05abf3d708f15e84db</link>
-      <guid isPermaLink="false">837acaf</guid>
-      <pubDate>Wed, 29 Jul 2026 01:32:42 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(hooks,lib): fix hook detection and parsing edge cases  - auto-tmux-dev: dev\b -&gt; dev(?![\w-]) so one-shot dev-build/dev-docs scripts   are not detached into tmux; align command shapes (yarn run dev, bun dev) with   pre-bash-dev-server-block.js DEV_PATTERN. - pre-bash-commit-quality: skip obvio</description>
     </item>
     <item>
       <title>We support this petition, signed by our CEO, several co-founders, and senior staff. 
@@ -448,14 +533,6 @@ Full Changelog: v0.120.0...v0.120.1
       <pubDate>Mon, 27 Jul 2026 15:45:39 GMT</pubDate>
       <category>hn-anthropic-com</category>
       <description/>
-    </item>
-    <item>
-      <title>Elevated errors on Claude Opus 5 and Haiku 4.5</title>
-      <link>https://stspg.io/n0k1648rmm55</link>
-      <guid isPermaLink="false">rkk5x44tndw9</guid>
-      <pubDate>Mon, 27 Jul 2026 13:39:52 GMT</pubDate>
-      <category>status-page</category>
-      <description>[minor] resolved — As of 7:34 PST / 14:34 UTC the errors have returned to baseline.</description>
     </item>
     <item>
       <title>Show HN: Aitori, see and govern the AI traffic leaving your machine</title>
@@ -822,94 +899,6 @@ Talk through the hard problems out loud, in many more languages. https://t.co/k0
       <description>Voice mode now runs on Claude&apos;s more capable models and reaches the tools you&apos;ve connected mid-conversation.
 
 Talk through the hard problems out loud, in many more languages. https://t.co/k0CWAGjLdK</description>
-    </item>
-    <item>
-      <title>sdk: v0.114.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.114.0</link>
-      <guid isPermaLink="false">sdk-v0.114.0</guid>
-      <pubDate>Thu, 23 Jul 2026 17:34:26 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.114.0 (2026-07-23)
-Full Changelog: sdk-v0.113.0...sdk-v0.114.0
- Features
- api: add new stop reason &apos;modelcontextwindowexceeded&apos; (1ec71c1)</description>
-    </item>
-    <item>
-      <title>v0.119.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0</link>
-      <guid isPermaLink="false">v0.119.0</guid>
-      <pubDate>Thu, 23 Jul 2026 17:34:23 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.119.0 (2026-07-23)
-Full Changelog: v0.118.0...v0.119.0
- Features
- api: add new stop reason &apos;modelcontextwindowexceeded&apos; (d983cde)
- Bug Fixes
- tools: handle binary files in agent toolset read/edit (283) (417b76b)</description>
-    </item>
-    <item>
-      <title>Merge pull request #793 from anthropics/cj-ant/crop-tool-zoom</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/85016cacf5b7923aa62aa2b514399325e9d159e9</link>
-      <guid isPermaLink="false">85016ca</guid>
-      <pubDate>Thu, 23 Jul 2026 17:32:40 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Rewrite the crop-tool cookbook around a measured zoom tool</description>
-    </item>
-    <item>
-      <title>Merge pull request #759 from mongodb-partners/cma_with_mongodb</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/90b3ebd6791cd3d2334b334061875d3dcea10dcc</link>
-      <guid isPermaLink="false">90b3ebd</guid>
-      <pubDate>Thu, 23 Jul 2026 13:39:40 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>feat(managed_agents): add Fraud Review Agent with MongoDB Atlas cookbook</description>
-    </item>
-    <item>
-      <title>0.3.218</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.218</guid>
-      <pubDate>Thu, 23 Jul 2026 08:33:28 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- SkillToolOutput now reports background: true when a forked skill was dispatched as a detached background agent
-- Fixed the result event&apos;s apierrorstatus reporting null for rate-limit and overloaded errors delivered mid-stream; it now reports 429/529
-- Added canonicalModel and provider to each mode</description>
-    </item>
-    <item>
-      <title>0.2.126</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.126</guid>
-      <pubDate>Thu, 23 Jul 2026 08:33:28 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>New Features
-- terminalreason on ResultMessage: ResultMessage.terminalreason now surfaces why the query loop ended (&quot;completed&quot;, &quot;maxturns&quot;, &quot;abortedstreaming&quot;, &quot;abortedtools&quot;, etc.). A value of &quot;abortedstreaming&quot; or &quot;abortedtools&quot; means the turn was cancelled via ClaudeSDKClient.interrupt(). Mirror</description>
-    </item>
-    <item>
-      <title>2.1.218</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.218</guid>
-      <pubDate>Thu, 23 Jul 2026 08:33:27 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Changed /code-review to run as a background subagent, so review work no longer fills your conversation and keeps stacked slash commands as its review target
-- Added screen-reader announcements of deleted text for word and line deletions (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U, Ctrl+K) in --a</description>
-    </item>
-    <item>
-      <title>RT @claudeai: The Claude Security plugin for Claude Code is now available in beta. 
-
-Scan your changes for vulnerabilities before you commi…</title>
-      <link>https://x.com/bcherny/status/2080172000446910837</link>
-      <guid isPermaLink="false">2080172000446910837</guid>
-      <pubDate>Thu, 23 Jul 2026 06:03:47 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @claudeai: The Claude Security plugin for Claude Code is now available in beta. 
-
-Scan your changes for vulnerabilities before you commi…</description>
-    </item>
-    <item>
-      <title>Four role-based certifications for the people who put Claude to work for customers</title>
-      <link>https://claude.com/blog/four-role-based-claude-certifications</link>
-      <guid isPermaLink="false">https://claude.com/blog/four-role-based-claude-certifications</guid>
-      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
-      <category>blog-claude</category>
-      <description/>
     </item>
   </channel>
 </rss>

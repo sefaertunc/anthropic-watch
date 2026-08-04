@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 03 Aug 2026 09:50:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <item>
+      <title>0.2.129</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.129</guid>
+      <pubDate>Tue, 04 Aug 2026 08:39:54 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Breaking Changes
+- Skill name validation in ClaudeAgentOptions.skills: Skill names containing parentheses, commas, control characters, wildcards (, :), leading /, surrounding whitespace, or surrogate code points now raise ValueError at connect time. skills=[&quot;plugin:&quot;] and skills=[&quot;&quot;] should be repla</description>
+    </item>
     <item>
       <title>0.2.128</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>

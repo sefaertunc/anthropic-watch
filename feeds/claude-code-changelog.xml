@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 03 Aug 2026 09:50:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <item>
+      <title>2.1.221</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.221</guid>
+      <pubDate>Tue, 04 Aug 2026 08:39:53 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- [VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the &quot;Claude Code: Toggle Focus view&quot; command
+- Added mode: &quot;mask&quot; for sandbox credential files on Linux and WSL — sandboxed co</description>
+    </item>
     <item>
       <title>2.1.220</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -450,15 +459,6 @@
       <description>- Added /resume support for background sessions — sessions started via claude --bg or agent view now appear alongside interactive ones, marked with bg
 - Added elapsed duration to background subagent completion notifications (e.g. &quot;Agent completed · 3h 2m 5s&quot;)
 - The /plugin browse and discover panes </description>
-    </item>
-    <item>
-      <title>2.1.143</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.143</guid>
-      <pubDate>Sat, 16 May 2026 08:07:54 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added plugin dependency enforcement: claude plugin disable now refuses when another enabled plugin depends on the target (with a copy-pasteable disable-chain hint), and claude plugin enable force-enables transitive dependencies
-- Added projected context cost (per-turn and per-invocation token esti</description>
     </item>
   </channel>
 </rss>
