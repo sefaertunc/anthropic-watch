@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-04T08:40:42.332Z",
+  "generated": "2026-08-05T08:39:44.335Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.222",
+      "title": "0.3.222",
+      "date": "2026-08-05T08:38:56.727Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed query({ sessionStore, resume }) not carrying user settings.json (apiKeyHelper, env, hooks, permissions) into the resumed subprocess",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.222|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.221",
       "title": "0.3.221",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.145|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.144",
-      "title": "0.3.144",
-      "date": "2026-05-19T09:51:04.325Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Assistant messages and StopFailure hooks now report error: 'modelnotfound' when the selected model doesn't exist or isn't available, instead of the generic 'invalidrequest'. The apierrorstatus field on result messages is now documented.\n- Added @anthropic-ai/claude-agent-sdk/extract export for bun",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.144|agent-sdk-ts-changelog"
     }
   ]
 }

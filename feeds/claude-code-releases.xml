@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 08:39:44 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.222</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.222</link>
+      <guid isPermaLink="false">v2.1.222</guid>
+      <pubDate>Tue, 04 Aug 2026 22:39:55 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type
+- Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (su</description>
+    </item>
     <item>
       <title>v2.1.221</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.221</link>
@@ -500,17 +510,6 @@
 - Added requiredMinimumVersion and requiredMaximumVersion managed settings — Claude Code refuses to start if its version is outside the allowed range and directs the user to an approved version
 - Added /plugin list command to list installed plugins, with --enabled/--disabled filters
 -</description>
-    </item>
-    <item>
-      <title>v2.1.162</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.162</link>
-      <guid isPermaLink="false">v2.1.162</guid>
-      <pubDate>Wed, 03 Jun 2026 21:31:35 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- claude agents --json now includes waitingFor showing what a waiting session is blocked on (e.g. permission prompt)
-- --tools: explicitly listing Grep/Glob now provides the dedicated search tools on native builds with embedded search (previously these names were silently ignored)
-- /</description>
     </item>
   </channel>
 </rss>

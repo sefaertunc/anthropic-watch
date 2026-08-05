@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-04T08:40:42.324Z",
+  "generated": "2026-08-05T08:39:44.327Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.222",
+      "title": "v2.1.222",
+      "date": "2026-08-04T22:39:55Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.222",
+      "snippet": "What's changed\n- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type\n- Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (su",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.222|claude-code-releases"
+    },
     {
       "id": "v2.1.221",
       "title": "v2.1.221",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.163|claude-code-releases"
-    },
-    {
-      "id": "v2.1.162",
-      "title": "v2.1.162",
-      "date": "2026-06-03T21:31:35Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.162",
-      "snippet": "What's changed\n- claude agents --json now includes waitingFor showing what a waiting session is blocked on (e.g. permission prompt)\n- --tools: explicitly listing Grep/Glob now provides the dedicated search tools on native builds with embedded search (previously these names were silently ignored)\n- /",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.162|claude-code-releases"
     }
   ]
 }

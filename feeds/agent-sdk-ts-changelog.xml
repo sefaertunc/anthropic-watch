@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 08:39:44 GMT</lastBuildDate>
+    <item>
+      <title>0.3.222</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.222</guid>
+      <pubDate>Wed, 05 Aug 2026 08:38:56 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Fixed query({ sessionStore, resume }) not carrying user settings.json (apiKeyHelper, env, hooks, permissions) into the resumed subprocess</description>
+    </item>
     <item>
       <title>0.3.221</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -427,15 +435,6 @@
       <pubDate>Wed, 20 May 2026 09:39:24 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Updated to parity with Claude Code v2.1.145</description>
-    </item>
-    <item>
-      <title>0.3.144</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.144</guid>
-      <pubDate>Tue, 19 May 2026 09:51:04 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Assistant messages and StopFailure hooks now report error: &apos;modelnotfound&apos; when the selected model doesn&apos;t exist or isn&apos;t available, instead of the generic &apos;invalidrequest&apos;. The apierrorstatus field on result messages is now documented.
-- Added @anthropic-ai/claude-agent-sdk/extract export for bun</description>
     </item>
   </channel>
 </rss>

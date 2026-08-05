@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 04 Aug 2026 08:40:42 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 08:39:44 GMT</lastBuildDate>
+    <item>
+      <title>2.1.222</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.222</guid>
+      <pubDate>Wed, 05 Aug 2026 08:38:56 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type
+- Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (summaries, compac</description>
+    </item>
     <item>
       <title>2.1.221</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -449,16 +458,6 @@
       <category>claude-code-changelog</category>
       <description>- Added claude agents --json to list live Claude sessions as JSON for scripting (tmux-resurrect, status bars, session pickers)
 - Added agentid and parentagentid attributes to claudecode.tool OTEL spans, and fixed trace parenting so background subagent spans nest under the dispatching Agent tool span</description>
-    </item>
-    <item>
-      <title>2.1.144</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.144</guid>
-      <pubDate>Tue, 19 May 2026 09:51:03 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added /resume support for background sessions — sessions started via claude --bg or agent view now appear alongside interactive ones, marked with bg
-- Added elapsed duration to background subagent completion notifications (e.g. &quot;Agent completed · 3h 2m 5s&quot;)
-- The /plugin browse and discover panes </description>
     </item>
   </channel>
 </rss>

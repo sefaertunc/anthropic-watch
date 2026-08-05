@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-04T08:40:42.361Z",
+  "generated": "2026-08-05T08:39:44.370Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "f1fec0e",
+      "title": "feat: add retention feedback loop and honest support matrix (#2681)",
+      "date": "2026-08-05T01:42:25Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f1fec0e53934737d3b3b8388b0fd1651e8b62f4f",
+      "snippet": "* feat: add retention feedback loop  * test: retire obsolete README parity row guard  * fix: harden public feedback guidance  * fix: let feedback CLI output flush  * test: keep feedback help coverage focused",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f1fec0e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "7a5757e",
+      "title": "fix(hooks): never format installed plugin and marketplace clones (#2667)",
+      "date": "2026-08-04T21:14:37Z",
+      "url": "https://github.com/affaan-m/ECC/commit/7a5757e6c0d7e8e1080d30169b4b044d76e0f7fc",
+      "snippet": "The Stop hook formats every JS/TS file edited during a response, grouped by the project root each file happens to sit in. That includes trees under .claude/plugins, which are third-party checkouts we only read.  Formatting them writes to code the user does not own. It also does real damage when a re",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "7a5757e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a8c6da4",
+      "title": "fix(hooks): catch the bypass short flag anywhere in a cluster (#2668)",
+      "date": "2026-08-04T21:08:56Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a8c6da485d144f44d31b74c4a8d4e78b8f04d572",
+      "snippet": "isCommitNoVerifyShortFlag anchored on the first character, so it only recognised the flag when it led the cluster. Git clusters short options, which means git commit -an is -a plus the bypass flag and skips the hooks. -sn and -vn slip through the same way, while -na and -nm are caught — the differen",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a8c6da4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f235549",
+      "title": "fix(install): exclude ECC skills from antigravity install target (#2680)",
+      "date": "2026-08-04T20:57:27Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f235549cb8370f7ab475700a786b3d0b98bfda29",
+      "snippet": "* fix: exclude ECC skills from antigravity install target  * test(install): cover antigravity skills exclusion  Two tests encoded the collision the parent commit fixes.  install-manifests used skills/example as its example of a supported antigravity path; it now asserts skills are filtered and uses ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f235549|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "8a97868",
+      "title": "fix(continuous-learning): /evolve never produces skill or agent candidates (#2664)",
+      "date": "2026-08-04T20:57:24Z",
+      "url": "https://github.com/affaan-m/ECC/commit/8a97868b5b7d2d39e9d02bed26b425baa9cd3afa",
+      "snippet": "* fix(continuous-learning): cluster instincts by keyword overlap in /evolve  `cmd_evolve` grouped instincts by exact string equality of the whole normalized trigger sentence. Triggers are free-form sentences, so every instinct landed in its own bucket and `skill_candidates` was always empty. `agent_",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "8a97868|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2665d48",
+      "title": "fix(deps): bump fast-uri to 3.1.5 and brace-expansion to 5.0.9 (#2672)",
+      "date": "2026-08-04T16:36:54Z",
+      "url": "https://github.com/affaan-m/ECC/commit/2665d48ae604b585d0bafb69c3a8e8dca9a15be5",
+      "snippet": "npm audit --audit-level=high fails CI on two new high-severity advisories:  - fast-uri GHSA-7p8r-x3mc-p8w7 (host confusion via backslash   authority introducer) — pinned at 3.1.4 via overrides/resolutions;   bump pins to the patched 3.1.5 (still within ajv's ^3.0.1 range) - brace-expansion GHSA-rgw5",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "2665d48|gh-commits-everything-claude-code"
+    },
     {
       "id": "ff15079",
       "title": "test(lib): extract shared mini test runner for coordination tests (#2663)",
@@ -491,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "6a2e091|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "bc77428",
-      "title": "feat: connect ECC to canonical Ito compute CLI (#2558)",
-      "date": "2026-07-24T02:28:55Z",
-      "url": "https://github.com/affaan-m/ECC/commit/bc774282e63a15ea58cde00bada7517aab2696e7",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "bc77428|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "9d54ee2",
-      "title": "Correct README formatting and update sponsor information",
-      "date": "2026-07-24T01:27:19Z",
-      "url": "https://github.com/affaan-m/ECC/commit/9d54ee222d0ad21f6812ffd5e77a2c7429538863",
-      "snippet": "Fixed formatting issue in the language section and removed redundant text",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "9d54ee2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7b03a83",
-      "title": "feat: add read-only Itō compute handoff (#2554)",
-      "date": "2026-07-23T21:35:57Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7b03a834b3cab5ac4e40dc2332f6033252cbd29e",
-      "snippet": "* feat: add read-only Itō compute handoff  * fix(ito): keep handoff portable under CI  * test(ito): run npm welcome through Windows shell",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7b03a83|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a3130f9",
-      "title": "feat(codex): add ECC navigation guide (#2525)",
-      "date": "2026-07-23T00:44:37Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a3130f9ebfaeed075df5d5b52538acb0ee4bcdf8",
-      "snippet": "* feat(codex): add ECC navigation guide  * fix(codex): ship navigation guide references  ---------  Co-authored-by: Haley Chen <2022hachen@gmail.com>",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a3130f9|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "b6fe5a7",
-      "title": "fix: harden plan canvas code scanning alerts",
-      "date": "2026-07-22T20:28:07Z",
-      "url": "https://github.com/affaan-m/ECC/commit/b6fe5a71e194d711d9aa8f56024ddf7ca53fad0c",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "b6fe5a7|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "b665233",
-      "title": "fix(hooks): bound plugin shell probe timeouts (#2547)",
-      "date": "2026-07-22T17:15:52Z",
-      "url": "https://github.com/affaan-m/ECC/commit/b6652335d32d2f2a664e12a09af646bf644b6c86",
-      "snippet": "Co-authored-by: Haley Chen <2022hachen@gmail.com>",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "b665233|gh-commits-everything-claude-code"
     }
   ]
 }
