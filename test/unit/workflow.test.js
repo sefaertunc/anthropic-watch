@@ -48,6 +48,20 @@ describe("scrape.yml workflow", () => {
     expect(content).toContain("GITHUB_TOKEN");
   });
 
+  it("passes configured Twitter provider credentials to the scraper", async () => {
+    const content = await readFile(workflowPath, "utf-8");
+    workflow = parse(content);
+    const scraperStep = workflow.jobs.scrape.steps.find(
+      (step) => step.name === "Run scraper",
+    );
+
+    expect(scraperStep.env.TWITTER_PROVIDER).toBe("${{ vars.TWITTER_PROVIDER }}");
+    expect(scraperStep.env.TWITTERAPI_IO_KEY).toBe(
+      "${{ secrets.TWITTERAPI_IO_KEY }}",
+    );
+    expect(scraperStep.env.XQUIK_API_KEY).toBe("${{ secrets.XQUIK_API_KEY }}");
+  });
+
   it("has if: always() on summary step", async () => {
     const content = await readFile(workflowPath, "utf-8");
     expect(content).toContain("if: always()");
