@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 06 Aug 2026 08:40:07 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 07:19:34 GMT</lastBuildDate>
+    <item>
+      <title>2.1.224</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.224</guid>
+      <pubDate>Fri, 07 Aug 2026 07:18:46 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added self-hosted environments: claude self-hosted-runner turns your own machines or containers into a place Claude Code web, mobile, and desktop sessions can run, on Team and Enterprise plans
+- Added archive plugin source: install plugins from a zip over HTTPS without git or npm, with optional SH</description>
+    </item>
     <item>
       <title>2.1.223</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -448,16 +457,6 @@
       <pubDate>Fri, 22 May 2026 09:31:22 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- Fixed the Bash tool returning exit code 127 on every command for some users (a regression introduced in 2.1.147)</description>
-    </item>
-    <item>
-      <title>2.1.146</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.146</guid>
-      <pubDate>Thu, 21 May 2026 09:46:44 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Renamed /simplify to /code-review with an optional effort level (e.g. /code-review high)
-- Auto mode no longer suppresses AskUserQuestion when the user or a skill explicitly relies on it
-- Fixed Windows PowerShell tool failing with &quot;command line is invalid&quot; when pwsh is installed via winget or the</description>
     </item>
   </channel>
 </rss>

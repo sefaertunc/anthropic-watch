@@ -5,9 +5,64 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-06T08:40:07.961Z",
+  "generated": "2026-08-07T07:19:34.369Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "9aac858",
+      "title": "fix(skills): default GAN harness models to sonnet (#2442) (#2695)",
+      "date": "2026-08-06T21:42:22Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9aac8585ab887d9c51252730240b25d9cca180da",
+      "snippet": "Completes the model re-tiering from #2442: the gan-planner, gan-generator, and gan-evaluator agents were already re-pinned to sonnet, but the gan-style-harness script and docs still defaulted GAN_PLANNER_MODEL, GAN_GENERATOR_MODEL, and GAN_EVALUATOR_MODEL to opus. Align the script defaults, skill do",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9aac858|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "52a3bab",
+      "title": "feat(skills): add secure terminal opener (#2650)",
+      "date": "2026-08-06T21:24:34Z",
+      "url": "https://github.com/affaan-m/ECC/commit/52a3babd5d7f82c4330d7befba7aeac362ed5951",
+      "snippet": "* test(skills): define terminal opener contract  * feat(skills): add secure terminal opener  * fix(skills): report detached terminal errors  * docs: sync terminal opener skill count  * fix(security): require explicit terminal launch  * test(skills): cover terminal opener review findings  * fix(skill",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "52a3bab|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b3c6796",
+      "title": "test(release): add executable missing-heading regression (#2685)",
+      "date": "2026-08-06T20:53:59Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b3c679684b0bbc40fc71569331d6c02c3e3d667f",
+      "snippet": "release.test.js only greps release.sh for one of the five update_latest_release_heading call sites, and plugin-manifest.test.js only checks the headings committed today. Neither executes the rewrite, so a helper that silently no-ops on a missing heading would ship green.  Extract the embedded node p",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b3c6796|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "d791457",
+      "title": "feat(docker): add hardened CLI test harness (#2625)",
+      "date": "2026-08-06T20:52:39Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d791457aca159f862358f05aef3a7f588416a2dc",
+      "snippet": "* feat(install): add hardened Docker test harness  * feat(docker): complete isolated CLI session lifecycle  * fix(docker): exercise packed public CLI offline  * fix(docker): close hardened harness review gaps  * test(docker): bound harness subprocesses",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d791457|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "28e53a0",
+      "title": "feat(install): add guided multi-harness installer (#2649)",
+      "date": "2026-08-06T19:39:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/28e53a0bc10e286f68b53bb1e3b3f049021e57b9",
+      "snippet": "* feat(install): add guided Claude plugin setup  * fix: support Claude command shims on Windows  * feat: support safe Claude plugin scope migration  * fix(install): preserve interactive setup terminal  * fix(install): auto-migrate setup scope changes  * feat(install): add guided multi-harness instal",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "28e53a0|gh-commits-everything-claude-code"
+    },
     {
       "id": "623f2c0",
       "title": "Add bounded harness evaluation and rollback loop (#2686)",
@@ -502,61 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "fb40183|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "05a7695",
-      "title": "docs: align ECC entrypoints and Kimi setup",
-      "date": "2026-07-24T07:52:12Z",
-      "url": "https://github.com/affaan-m/ECC/commit/05a7695bc0defdc016c7d0554f784cc5e369470d",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "05a7695|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e625a07",
-      "title": "docs: compact the sponsor logo row (#2565)",
-      "date": "2026-07-24T06:44:42Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e625a0773651ce10a4d99051c279a22fe9c52800",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e625a07|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "33c7dbb",
-      "title": "feat(ito): expose guarded live node qualification",
-      "date": "2026-07-24T05:10:57Z",
-      "url": "https://github.com/affaan-m/ECC/commit/33c7dbb7d68df240e51d57d448589b6f41df907b",
-      "snippet": "Expose the canonical Itō CLI's pinned sixtytwo node-qualification path through ECC with double opt-in, explicit node/config gates, credential isolation, and no new MCP or execution authority.  Validated across the full Linux, macOS, and Windows Node/package-manager matrix, hosted coverage, CodeQL, s",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "33c7dbb|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "34fbe00",
-      "title": "fix: reject credential-bearing Itō CLI shims (#2559)",
-      "date": "2026-07-24T04:07:59Z",
-      "url": "https://github.com/affaan-m/ECC/commit/34fbe007f099c8a1c419d7b90f825f5d3a743810",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "34fbe00|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7dc2c11",
-      "title": "docs: restore sponsor contract after mainline merge (#2560)",
-      "date": "2026-07-24T03:44:09Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7dc2c116e7fc2a2096865f6a32d4dd2b81050c5d",
-      "snippet": "* fix sponsor contract after mainline merge  * refine sponsor assets and placement  * tighten sponsor asset contract",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7dc2c11|gh-commits-everything-claude-code"
     }
   ]
 }
