@@ -5,9 +5,108 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-07T07:19:34.369Z",
+  "generated": "2026-08-08T06:57:10.659Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "59a99d6",
+      "title": "fix(ci): restore green main for the Itô skill test suite (#2720)",
+      "date": "2026-08-07T23:47:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/59a99d669f5466d99d5be8b6fce8c5f2677766d0",
+      "snippet": "main has been red since the Itô skill series landed. Two independent problems, both in test files rather than shipped behavior:  - tests/ci/ito-inference-skill.test.js asserted a stale copy of the   capability:ito-compute description. #2706 added device revocation to   the lifecycle and updated mani",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "59a99d6|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "d451f51",
+      "title": "fix(skill): harden ito basket comparison lifecycle (#2712)",
+      "date": "2026-08-07T19:08:52Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d451f5100af57e33a73400b14b03e126ff49a3f9",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d451f51|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a73deb2",
+      "title": "docs: formalize Itô inference serving contract (#2708)",
+      "date": "2026-08-07T18:55:22Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a73deb211e7864c00edc86ce641373b132f66187",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a73deb2|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b844a9e",
+      "title": "Harden Itô market intelligence skill (#2711)",
+      "date": "2026-08-07T18:54:37Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b844a9edb85b5adf440f202c725588de279ecba6",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b844a9e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "d13a070",
+      "title": "fix ito trade planner safety contract (#2709)",
+      "date": "2026-08-07T18:53:41Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d13a0706b95965f88a695c8f33fd11e7c6456fe5",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d13a070|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9de1314",
+      "title": "fix(ito-compute): complete device auth lifecycle (#2706)",
+      "date": "2026-08-07T18:53:13Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9de131420b683717cfed6d4168f20e1a43030a3a",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9de1314|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "4162cc1",
+      "title": "fix Data Atlas skill live read contract (#2707)",
+      "date": "2026-08-07T18:51:06Z",
+      "url": "https://github.com/affaan-m/ECC/commit/4162cc1fc22621363b0156df57efa32c2df4efa0",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4162cc1|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f16a6ff",
+      "title": "fix: ship new Itô skills through install manifests (#2704)",
+      "date": "2026-08-07T18:14:21Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+      "snippet": "* fix: ship new Ito skills through install manifests  * ci: audit shipped dependencies separately from tooling  * test(release): pass previous version to heading helper",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f16a6ff|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "fd27a0e",
+      "title": "Add ito-inference and ito-training skills (delegate to canonical Itô backend) (#2700)",
+      "date": "2026-08-07T16:46:06Z",
+      "url": "https://github.com/affaan-m/ECC/commit/fd27a0ec9f7fd02f5c35552038463b1b084c0cf4",
+      "snippet": "Two ECC skills chaining off an ito-compute booking, per the Full-Stack Harness Engineering Plan (2026-08-06):  - ito-inference: serve a model on booked GPUs via ecc ito serve (Layer 0.2). - ito-training: run a staged, eval-gated training pipeline via ecc ito train   (Layer 0.3).  Both match the exis",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "fd27a0e|gh-commits-everything-claude-code"
+    },
     {
       "id": "9aac858",
       "title": "fix(skills): default GAN harness models to sonnet (#2442) (#2695)",
@@ -458,105 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "c714dc5|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ac30ff3",
-      "title": "Use supplied Itō PNG logo (#2570)",
-      "date": "2026-07-25T00:40:49Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ac30ff3ea249bf5f94dbc5e9b18ab681cc9af91d",
-      "snippet": "Replace the generated Itō SVG wordmark with the supplied transparent monogram assets, keep the exact white-and-gold mark for dark mode, add a same-geometry light-mode variant, and refresh the dependency lock entry flagged by CI.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ac30ff3|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "abe185c",
-      "title": "Center README entry cards and correct sponsor tiers (#2569)",
-      "date": "2026-07-24T20:40:53Z",
-      "url": "https://github.com/affaan-m/ECC/commit/abe185c6a46c312d526c215abfcafe98ed9e951b",
-      "snippet": "Center the three-card README group, remove stale $5 sponsor copy, and align sponsor docs to the current public tiers.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "abe185c|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "751874f",
-      "title": "Center README entry cards",
-      "date": "2026-07-24T20:26:50Z",
-      "url": "https://github.com/affaan-m/ECC/commit/751874fef9c85214cb08d1a0fb03af9b7c8a70c2",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "751874f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8512dc6",
-      "title": "Merge pull request #2491 from gaurav0107/fix/2477-opencode-command-agent-scope",
-      "date": "2026-07-24T16:53:30Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8512dc6f4215c7171513c1f65ee446e77f844652",
-      "snippet": "fix(opencode): resolve command agent ids to registered opencode agents",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8512dc6|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "374feb7",
-      "title": "Merge pull request #2536 from latreon/fix/bun-lockfile-detection",
-      "date": "2026-07-24T16:53:06Z",
-      "url": "https://github.com/affaan-m/ECC/commit/374feb7f9c3ad0eb0aeed5ed1273169b17752c98",
-      "snippet": "fix(scripts): detect modern bun.lock, ignore stray root lockfiles",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "374feb7|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "fee94fb",
-      "title": "Merge pull request #2516 from thejesh23/fix/dashboard-refresh-rules-commands",
-      "date": "2026-07-24T16:52:36Z",
-      "url": "https://github.com/affaan-m/ECC/commit/fee94fb778fd44c6781b9bf15b463462b64a83bf",
-      "snippet": "fix(ecc_dashboard): repopulate Rules and Commands trees on Refresh Data",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "fee94fb|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ce226c9",
-      "title": "Merge pull request #2568 from affaan-m/agent/readme-asset-alignment-20260724",
-      "date": "2026-07-24T16:17:13Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ce226c94b2885b8a004b5dfcb5cc674967a772cc",
-      "snippet": "Merge the official ECC Tools favicon mark, normalized Itō Drive lockup canvas, and equal 16:9 guide cards after full CI and GitHub-render visual verification.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ce226c9|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "cf1fb01",
-      "title": "Fix README asset alignment",
-      "date": "2026-07-24T15:49:10Z",
-      "url": "https://github.com/affaan-m/ECC/commit/cf1fb0125ebf1e1cf2616011fe40c958a24b00a1",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "cf1fb01|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "fb40183",
-      "title": "Merge pull request #2566 from affaan-m/agent/readme-kimi-layout-20260724",
-      "date": "2026-07-24T08:13:12Z",
-      "url": "https://github.com/affaan-m/ECC/commit/fb401834e5b48679e1a6050e4bb86dce0824bbf5",
-      "snippet": "Merge the aligned ECC entry cards, inline guide row, and documented Kimi/Itō self-hosting path after full CI and visual verification.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "fb40183|gh-commits-everything-claude-code"
     }
   ]
 }

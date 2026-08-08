@@ -6,7 +6,79 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 07 Aug 2026 07:19:34 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 06:57:10 GMT</lastBuildDate>
+    <item>
+      <title>fix(ci): restore green main for the Itô skill test suite (#2720)</title>
+      <link>https://github.com/affaan-m/ECC/commit/59a99d669f5466d99d5be8b6fce8c5f2677766d0</link>
+      <guid isPermaLink="false">59a99d6</guid>
+      <pubDate>Fri, 07 Aug 2026 23:47:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>main has been red since the Itô skill series landed. Two independent problems, both in test files rather than shipped behavior:  - tests/ci/ito-inference-skill.test.js asserted a stale copy of the   capability:ito-compute description. #2706 added device revocation to   the lifecycle and updated mani</description>
+    </item>
+    <item>
+      <title>fix(skill): harden ito basket comparison lifecycle (#2712)</title>
+      <link>https://github.com/affaan-m/ECC/commit/d451f5100af57e33a73400b14b03e126ff49a3f9</link>
+      <guid isPermaLink="false">d451f51</guid>
+      <pubDate>Fri, 07 Aug 2026 19:08:52 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: formalize Itô inference serving contract (#2708)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a73deb211e7864c00edc86ce641373b132f66187</link>
+      <guid isPermaLink="false">a73deb2</guid>
+      <pubDate>Fri, 07 Aug 2026 18:55:22 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Harden Itô market intelligence skill (#2711)</title>
+      <link>https://github.com/affaan-m/ECC/commit/b844a9edb85b5adf440f202c725588de279ecba6</link>
+      <guid isPermaLink="false">b844a9e</guid>
+      <pubDate>Fri, 07 Aug 2026 18:54:37 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix ito trade planner safety contract (#2709)</title>
+      <link>https://github.com/affaan-m/ECC/commit/d13a0706b95965f88a695c8f33fd11e7c6456fe5</link>
+      <guid isPermaLink="false">d13a070</guid>
+      <pubDate>Fri, 07 Aug 2026 18:53:41 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(ito-compute): complete device auth lifecycle (#2706)</title>
+      <link>https://github.com/affaan-m/ECC/commit/9de131420b683717cfed6d4168f20e1a43030a3a</link>
+      <guid isPermaLink="false">9de1314</guid>
+      <pubDate>Fri, 07 Aug 2026 18:53:13 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix Data Atlas skill live read contract (#2707)</title>
+      <link>https://github.com/affaan-m/ECC/commit/4162cc1fc22621363b0156df57efa32c2df4efa0</link>
+      <guid isPermaLink="false">4162cc1</guid>
+      <pubDate>Fri, 07 Aug 2026 18:51:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: ship new Itô skills through install manifests (#2704)</title>
+      <link>https://github.com/affaan-m/ECC/commit/f16a6ff2a684cbdc455695c6681e5fd7d8199b3e</link>
+      <guid isPermaLink="false">f16a6ff</guid>
+      <pubDate>Fri, 07 Aug 2026 18:14:21 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: ship new Ito skills through install manifests  * ci: audit shipped dependencies separately from tooling  * test(release): pass previous version to heading helper</description>
+    </item>
+    <item>
+      <title>Add ito-inference and ito-training skills (delegate to canonical Itô backend) (#2700)</title>
+      <link>https://github.com/affaan-m/ECC/commit/fd27a0ec9f7fd02f5c35552038463b1b084c0cf4</link>
+      <guid isPermaLink="false">fd27a0e</guid>
+      <pubDate>Fri, 07 Aug 2026 16:46:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Two ECC skills chaining off an ito-compute booking, per the Full-Stack Harness Engineering Plan (2026-08-06):  - ito-inference: serve a model on booked GPUs via ecc ito serve (Layer 0.2). - ito-training: run a staged, eval-gated training pipeline via ecc ito train   (Layer 0.3).  Both match the exis</description>
+    </item>
     <item>
       <title>fix(skills): default GAN harness models to sonnet (#2442) (#2695)</title>
       <link>https://github.com/affaan-m/ECC/commit/9aac8585ab887d9c51252730240b25d9cca180da</link>
@@ -334,78 +406,6 @@
       <pubDate>Sun, 26 Jul 2026 05:21:27 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* fix(resolve-ecc-root): require ECC skills, not just scripts, before accepting a root (#2544)  resolveEccRoot() accepted a candidate root on script-only evidence (scripts/lib/utils.js). A partial install that lands ECC&apos;s scripts into ~/.claude but not ECC&apos;s skills short-circuited at the standard-in</description>
-    </item>
-    <item>
-      <title>Use supplied Itō PNG logo (#2570)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ac30ff3ea249bf5f94dbc5e9b18ab681cc9af91d</link>
-      <guid isPermaLink="false">ac30ff3</guid>
-      <pubDate>Sat, 25 Jul 2026 00:40:49 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Replace the generated Itō SVG wordmark with the supplied transparent monogram assets, keep the exact white-and-gold mark for dark mode, add a same-geometry light-mode variant, and refresh the dependency lock entry flagged by CI.</description>
-    </item>
-    <item>
-      <title>Center README entry cards and correct sponsor tiers (#2569)</title>
-      <link>https://github.com/affaan-m/ECC/commit/abe185c6a46c312d526c215abfcafe98ed9e951b</link>
-      <guid isPermaLink="false">abe185c</guid>
-      <pubDate>Fri, 24 Jul 2026 20:40:53 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Center the three-card README group, remove stale $5 sponsor copy, and align sponsor docs to the current public tiers.</description>
-    </item>
-    <item>
-      <title>Center README entry cards</title>
-      <link>https://github.com/affaan-m/ECC/commit/751874fef9c85214cb08d1a0fb03af9b7c8a70c2</link>
-      <guid isPermaLink="false">751874f</guid>
-      <pubDate>Fri, 24 Jul 2026 20:26:50 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #2491 from gaurav0107/fix/2477-opencode-command-agent-scope</title>
-      <link>https://github.com/affaan-m/ECC/commit/8512dc6f4215c7171513c1f65ee446e77f844652</link>
-      <guid isPermaLink="false">8512dc6</guid>
-      <pubDate>Fri, 24 Jul 2026 16:53:30 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix(opencode): resolve command agent ids to registered opencode agents</description>
-    </item>
-    <item>
-      <title>Merge pull request #2536 from latreon/fix/bun-lockfile-detection</title>
-      <link>https://github.com/affaan-m/ECC/commit/374feb7f9c3ad0eb0aeed5ed1273169b17752c98</link>
-      <guid isPermaLink="false">374feb7</guid>
-      <pubDate>Fri, 24 Jul 2026 16:53:06 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix(scripts): detect modern bun.lock, ignore stray root lockfiles</description>
-    </item>
-    <item>
-      <title>Merge pull request #2516 from thejesh23/fix/dashboard-refresh-rules-commands</title>
-      <link>https://github.com/affaan-m/ECC/commit/fee94fb778fd44c6781b9bf15b463462b64a83bf</link>
-      <guid isPermaLink="false">fee94fb</guid>
-      <pubDate>Fri, 24 Jul 2026 16:52:36 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix(ecc_dashboard): repopulate Rules and Commands trees on Refresh Data</description>
-    </item>
-    <item>
-      <title>Merge pull request #2568 from affaan-m/agent/readme-asset-alignment-20260724</title>
-      <link>https://github.com/affaan-m/ECC/commit/ce226c94b2885b8a004b5dfcb5cc674967a772cc</link>
-      <guid isPermaLink="false">ce226c9</guid>
-      <pubDate>Fri, 24 Jul 2026 16:17:13 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Merge the official ECC Tools favicon mark, normalized Itō Drive lockup canvas, and equal 16:9 guide cards after full CI and GitHub-render visual verification.</description>
-    </item>
-    <item>
-      <title>Fix README asset alignment</title>
-      <link>https://github.com/affaan-m/ECC/commit/cf1fb0125ebf1e1cf2616011fe40c958a24b00a1</link>
-      <guid isPermaLink="false">cf1fb01</guid>
-      <pubDate>Fri, 24 Jul 2026 15:49:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #2566 from affaan-m/agent/readme-kimi-layout-20260724</title>
-      <link>https://github.com/affaan-m/ECC/commit/fb401834e5b48679e1a6050e4bb86dce0824bbf5</link>
-      <guid isPermaLink="false">fb40183</guid>
-      <pubDate>Fri, 24 Jul 2026 08:13:12 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Merge the aligned ECC entry cards, inline guide row, and documented Kimi/Itō self-hosting path after full CI and visual verification.</description>
     </item>
   </channel>
 </rss>
