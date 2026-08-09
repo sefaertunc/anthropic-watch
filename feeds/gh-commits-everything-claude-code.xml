@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 08 Aug 2026 06:57:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 07:00:08 GMT</lastBuildDate>
+    <item>
+      <title>fix(memory-vault): compare dev only when both stats report one (#2637)</title>
+      <link>https://github.com/affaan-m/ECC/commit/51a6950bde756fe3ebc8879aa0c8ee49b9c53e78</link>
+      <guid isPermaLink="false">51a6950</guid>
+      <pubDate>Sat, 08 Aug 2026 21:06:18 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>ecc memory writes and --body-file reads fail on Windows. sameFileIdentity() compares the dev field of a path-based stat against a handle-based fstat, and libuv 1.49.0 through 1.50.x resolve path-based stat() and lstat() on Windows through GetFileInformationByName, which leaves the volume serial unse</description>
+    </item>
     <item>
       <title>fix(ci): restore green main for the Itô skill test suite (#2720)</title>
       <link>https://github.com/affaan-m/ECC/commit/59a99d669f5466d99d5be8b6fce8c5f2677766d0</link>
@@ -398,14 +406,6 @@
       <pubDate>Sun, 26 Jul 2026 07:01:57 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>Preserve complete Stop-hook stdout through lifecycle wrappers, wait for queued output to flush before exiting, bound child output with a larger explicit buffer, and add end-to-end regressions for large, multibyte, dry-run, and failure cases.</description>
-    </item>
-    <item>
-      <title>fix(resolve-ecc-root): require ECC skills, not just scripts, before accepting a root (#2544) (#2577)</title>
-      <link>https://github.com/affaan-m/ECC/commit/c714dc56540ec514271fc18820f228204cd2a3c1</link>
-      <guid isPermaLink="false">c714dc5</guid>
-      <pubDate>Sun, 26 Jul 2026 05:21:27 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(resolve-ecc-root): require ECC skills, not just scripts, before accepting a root (#2544)  resolveEccRoot() accepted a candidate root on script-only evidence (scripts/lib/utils.js). A partial install that lands ECC&apos;s scripts into ~/.claude but not ECC&apos;s skills short-circuited at the standard-in</description>
     </item>
   </channel>
 </rss>

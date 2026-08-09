@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 08 Aug 2026 06:57:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 07:00:08 GMT</lastBuildDate>
+    <item>
+      <title>docs: add 15.12.0 release notes (#1120)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6838f137a083d1d62dc22fe90425d913eab27ecd</link>
+      <guid isPermaLink="false">6838f13</guid>
+      <pubDate>Sun, 09 Aug 2026 06:42:57 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Add the protected-main changelog entry for `15.12.0`, covering the catalog dashboard upgrade, `people-data`, `travel-planner`, the context-skill safety repairs, dependency refreshes, validation evidence, and contributor credits already merged since `15.11.0`.  This PR cha</description>
+    </item>
+    <item>
+      <title>feat: upgrade catalog dashboard (#1111)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/284d41c606e3279e3cfe63bd2d8c574856bbc747</link>
+      <guid isPermaLink="false">284d41c</guid>
+      <pubDate>Sun, 09 Aug 2026 06:28:01 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Original contribution by @zinzied for the catalog dashboard upgrade: shareable fuzzy search and filters, a browser-local shortlist, catalog health signals, responsive UI, and related-skill discovery.  The fork-safety gate does not authorize fork PRs to run with TSX/CSS pa</description>
+    </item>
+    <item>
+      <title>feat: upgrade catalog dashboard (#1118)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f749158bab9fb08817c2aaf4786affc3214912f4</link>
+      <guid isPermaLink="false">f749158</guid>
+      <pubDate>Sun, 09 Aug 2026 06:16:41 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Upgrade the public catalog dashboard with shareable search and filters, a browser-local shortlist, catalog health signals, and related-skill discovery.  This maintainer PR preserves the contribution from @zinzied in #1111. The original fork PR could not pass the repositor</description>
+    </item>
+    <item>
+      <title>fix: repair context skill documentation integrity (#1117)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d47be5067a15eae3f13e068f4cd42ce2e2fd04e7</link>
+      <guid isPermaLink="false">d47be50</guid>
+      <pubDate>Sun, 09 Aug 2026 06:06:15 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Repair five context-oriented skills found during the maintainer sweep:  - fence executable TypeScript examples so they render as code in `conversation-memory` and `context-window-management`; - translate the remaining prose and make the destructive local-write behavior ex</description>
+    </item>
+    <item>
+      <title>docs: refresh unified AI gateway release note (#1115)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/14af6b95d128d497786cd2a35c6267daf9739174</link>
+      <guid isPermaLink="false">14af6b9</guid>
+      <pubDate>Sun, 09 Aug 2026 05:33:20 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: add people-data skill (#1103)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/fb8926b48548288b90072218cc91cbf274471b99</link>
+      <guid isPermaLink="false">fb8926b</guid>
+      <pubDate>Sat, 08 Aug 2026 07:00:20 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds the `people-data` skill from [agentbody/skills](https://github.com/agentbody/skills) (MIT), adapted to the Agentic Awesome Skills template. It covers authorized LinkedIn professional-profile and public business-contact research plus YouTube channel business-email dis</description>
+    </item>
     <item>
       <title>feat: add travel-planner skill for itinerary planning (#1107)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/8885557f2afabb694e1c44169c426687d944fc12</link>
@@ -358,54 +406,6 @@
       <pubDate>Tue, 28 Jul 2026 14:58:12 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description># Pull Request Description</description>
-    </item>
-    <item>
-      <title>fix: update modellix upstream repo after rename (#1009)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3e7cbb0c1811e5258e59312ab55eb63e5596ae3f</link>
-      <guid isPermaLink="false">3e7cbb0</guid>
-      <pubDate>Tue, 28 Jul 2026 04:52:13 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  The Modellix upstream repository was renamed from `Modellix/modellix-skill` to `Modellix/modellix-plugin`, so the vendored listing for the `modellix` skill points at a redirect. This refreshes the provenance links and the default-model list.  - `skills/modellix/SKILL.md`:</description>
-    </item>
-    <item>
-      <title>fix: allow verified upstream repository renames (#1016)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3339f1b49f22117fb75584ef2324156f58651dc1</link>
-      <guid isPermaLink="false">3339f1b</guid>
-      <pubDate>Tue, 28 Jul 2026 04:48:14 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add brendangregg-use-tsa skill for methodical performance troubleshooting and RCA (#1012)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c89c7ca0b887caf577aad11cf45528f80d5ebc3b</link>
-      <guid isPermaLink="false">c89c7ca</guid>
-      <pubDate>Tue, 28 Jul 2026 04:16:03 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds a new skill, **brendangregg-use-tsa**: methodical system performance troubleshooting and root-cause analysis distilled from Brendan Gregg&apos;s published methodologies. It replaces ad-hoc &quot;run whatever commands you know&quot; debugging with a fixed evidence-first procedure: p</description>
-    </item>
-    <item>
-      <title>docs: add Xquik X Actors to scraper skill (#1002)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b806ad080d723075e2f2fbcef270e12f56faf5d9</link>
-      <guid isPermaLink="false">b806ad0</guid>
-      <pubDate>Tue, 28 Jul 2026 04:06:12 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds both public Xquik Apify Actors to `apify-ultimate-scraper`.  - Routes tweet lookup, search, timelines, threads, and engagement. - Routes follower, list, community, and audience-overlap tasks. - Adds both Actors to the relevant use-case tables. - Removes volatile Acto</description>
-    </item>
-    <item>
-      <title>chore: release v15.5.1 (#1007)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f9073a13a65b0bd900068102843a3fd06c18834d</link>
-      <guid isPermaLink="false">f9073a1</guid>
-      <pubDate>Mon, 27 Jul 2026 05:10:22 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v15.5.1.</description>
-    </item>
-    <item>
-      <title>docs: add v15.5.1 release notes (#1006)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b00031773383f2954f97b94a97f474e477acdbfa</link>
-      <guid isPermaLink="false">b000317</guid>
-      <pubDate>Mon, 27 Jul 2026 04:51:36 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Promotes the MCP protocol-negotiation fix from Unreleased into the dated v15.5.1 patch release notes.\n\nCo-authored-by: sck_0 &lt;188885273+sck000@users.noreply.github.com&gt;\n\n## Quality Bar Checklist\n\n- [x] Scope is limited to release notes for the already-merged fix\n- [x] npm run validate\n- [x] </description>
     </item>
   </channel>
 </rss>
