@@ -5,9 +5,53 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-09T07:00:08.059Z",
+  "generated": "2026-08-10T07:46:01.585Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "ae303fb",
+      "title": "fix(plan-canvas): deliver browser chat to the agent every time (#2739)",
+      "date": "2026-08-09T22:15:25Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ae303fb6c19e3f7cb88cb9fd9f15ddcf235294b6",
+      "snippet": "Feedback sent from the canvas only reached an agent through a live /api/await long poll. When a turn ended with no await parked, queueFeedback wrote the message to sessions.json and nothing ever consumed it, so sending appeared to do nothing at all. The presence pill made it worse: workingKeys had n",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ae303fb|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "649def7",
+      "title": "fix: complete Discord delivery receipts reliably (#2738)",
+      "date": "2026-08-09T20:44:18Z",
+      "url": "https://github.com/affaan-m/ECC/commit/649def769bd860512e5fce86e30aa05c8119259f",
+      "snippet": "* test: reproduce Actions receipt completion mismatch  * fix: complete Discord receipts with Actions identity",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "649def7|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "cdbb25b",
+      "title": "fix: deliver announcements through a scoped Discord webhook (#2737)",
+      "date": "2026-08-09T20:41:27Z",
+      "url": "https://github.com/affaan-m/ECC/commit/cdbb25bf9da8c87cdafb0d117fc1bd357bea9b64",
+      "snippet": "* test: reproduce Discord webhook announcement gap  * fix: deliver ECC announcements through channel webhook  * test: cover webhook replay and least privilege  * fix: make webhook delivery durable and least privilege  * test: cover trusted receipts and cross-workflow races  * fix: serialize and auth",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "cdbb25b|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2d46e80",
+      "title": "fix: deliver ECC announcements to Discord (#2732)",
+      "date": "2026-08-09T10:37:04Z",
+      "url": "https://github.com/affaan-m/ECC/commit/2d46e80e0925c7be0907f18c1812311ac212a6c5",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "2d46e80|gh-commits-everything-claude-code"
+    },
     {
       "id": "51a6950",
       "title": "fix(memory-vault): compare dev only when both stats report one (#2637)",
@@ -513,50 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "4d0b501|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "56d9302",
-      "title": "docs: map cross-harness control-plane roadmap (#2584)",
-      "date": "2026-07-26T08:46:56Z",
-      "url": "https://github.com/affaan-m/ECC/commit/56d9302f026b9fb0ea8920aba35db40cffcc774a",
-      "snippet": "Map the ECC Ultra report into ten dependency-ordered execution lanes with explicit security, consent, schema, lifecycle, testing, and distribution gates.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "56d9302|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ad8db87",
-      "title": "feat(skills): add contract-first collaboration workflow (#2567)",
-      "date": "2026-07-26T07:05:22Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ad8db87780c393e6161dab8c40857496a0192842",
-      "snippet": "Add a contract-first workflow for consumer/provider collaboration, including shared artifact authority, compatibility review, generated-type and runtime verification, and safe handling of contract-driven tooling.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ad8db87|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5debb79",
-      "title": "fix(continuous-learning-v2): honor non-git CLAUDE_PROJECT_DIR (#2488)",
-      "date": "2026-07-26T07:04:35Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5debb798c8941beedfef3d01c3318e04c700872a",
-      "snippet": "Honor an explicit non-git CLAUDE_PROJECT_DIR as an isolated project scope, canonicalize and hash it consistently in the shell observer and Python CLI, and preserve the global fallback for arbitrary non-git working directories.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5debb79|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "28b922d",
-      "title": "fix(hooks): preserve Stop output through lifecycle wrappers (#2493)",
-      "date": "2026-07-26T07:01:57Z",
-      "url": "https://github.com/affaan-m/ECC/commit/28b922dee3383ea3ac45aaa2155c1e2558993d89",
-      "snippet": "Preserve complete Stop-hook stdout through lifecycle wrappers, wait for queued output to flush before exiting, bound child output with a larger explicit buffer, and add end-to-end regressions for large, multibyte, dry-run, and failure cases.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "28b922d|gh-commits-everything-claude-code"
     }
   ]
 }

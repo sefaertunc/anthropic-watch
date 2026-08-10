@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 09 Aug 2026 07:00:08 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 07:46:01 GMT</lastBuildDate>
+    <item>
+      <title>fix(plan-canvas): deliver browser chat to the agent every time (#2739)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ae303fb6c19e3f7cb88cb9fd9f15ddcf235294b6</link>
+      <guid isPermaLink="false">ae303fb</guid>
+      <pubDate>Sun, 09 Aug 2026 22:15:25 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Feedback sent from the canvas only reached an agent through a live /api/await long poll. When a turn ended with no await parked, queueFeedback wrote the message to sessions.json and nothing ever consumed it, so sending appeared to do nothing at all. The presence pill made it worse: workingKeys had n</description>
+    </item>
+    <item>
+      <title>fix: complete Discord delivery receipts reliably (#2738)</title>
+      <link>https://github.com/affaan-m/ECC/commit/649def769bd860512e5fce86e30aa05c8119259f</link>
+      <guid isPermaLink="false">649def7</guid>
+      <pubDate>Sun, 09 Aug 2026 20:44:18 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* test: reproduce Actions receipt completion mismatch  * fix: complete Discord receipts with Actions identity</description>
+    </item>
+    <item>
+      <title>fix: deliver announcements through a scoped Discord webhook (#2737)</title>
+      <link>https://github.com/affaan-m/ECC/commit/cdbb25bf9da8c87cdafb0d117fc1bd357bea9b64</link>
+      <guid isPermaLink="false">cdbb25b</guid>
+      <pubDate>Sun, 09 Aug 2026 20:41:27 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* test: reproduce Discord webhook announcement gap  * fix: deliver ECC announcements through channel webhook  * test: cover webhook replay and least privilege  * fix: make webhook delivery durable and least privilege  * test: cover trusted receipts and cross-workflow races  * fix: serialize and auth</description>
+    </item>
+    <item>
+      <title>fix: deliver ECC announcements to Discord (#2732)</title>
+      <link>https://github.com/affaan-m/ECC/commit/2d46e80e0925c7be0907f18c1812311ac212a6c5</link>
+      <guid isPermaLink="false">2d46e80</guid>
+      <pubDate>Sun, 09 Aug 2026 10:37:04 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>fix(memory-vault): compare dev only when both stats report one (#2637)</title>
       <link>https://github.com/affaan-m/ECC/commit/51a6950bde756fe3ebc8879aa0c8ee49b9c53e78</link>
@@ -374,38 +406,6 @@
       <pubDate>Sun, 26 Jul 2026 09:46:59 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>Add a local-first, cross-harness memory vault with CLI and MCP surfaces, bounded search and storage, harness-scoped visibility, setup guidance, and comprehensive tests.</description>
-    </item>
-    <item>
-      <title>docs: map cross-harness control-plane roadmap (#2584)</title>
-      <link>https://github.com/affaan-m/ECC/commit/56d9302f026b9fb0ea8920aba35db40cffcc774a</link>
-      <guid isPermaLink="false">56d9302</guid>
-      <pubDate>Sun, 26 Jul 2026 08:46:56 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Map the ECC Ultra report into ten dependency-ordered execution lanes with explicit security, consent, schema, lifecycle, testing, and distribution gates.</description>
-    </item>
-    <item>
-      <title>feat(skills): add contract-first collaboration workflow (#2567)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ad8db87780c393e6161dab8c40857496a0192842</link>
-      <guid isPermaLink="false">ad8db87</guid>
-      <pubDate>Sun, 26 Jul 2026 07:05:22 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Add a contract-first workflow for consumer/provider collaboration, including shared artifact authority, compatibility review, generated-type and runtime verification, and safe handling of contract-driven tooling.</description>
-    </item>
-    <item>
-      <title>fix(continuous-learning-v2): honor non-git CLAUDE_PROJECT_DIR (#2488)</title>
-      <link>https://github.com/affaan-m/ECC/commit/5debb798c8941beedfef3d01c3318e04c700872a</link>
-      <guid isPermaLink="false">5debb79</guid>
-      <pubDate>Sun, 26 Jul 2026 07:04:35 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Honor an explicit non-git CLAUDE_PROJECT_DIR as an isolated project scope, canonicalize and hash it consistently in the shell observer and Python CLI, and preserve the global fallback for arbitrary non-git working directories.</description>
-    </item>
-    <item>
-      <title>fix(hooks): preserve Stop output through lifecycle wrappers (#2493)</title>
-      <link>https://github.com/affaan-m/ECC/commit/28b922dee3383ea3ac45aaa2155c1e2558993d89</link>
-      <guid isPermaLink="false">28b922d</guid>
-      <pubDate>Sun, 26 Jul 2026 07:01:57 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Preserve complete Stop-hook stdout through lifecycle wrappers, wait for queued output to flush before exiting, bound child output with a larger explicit buffer, and add end-to-end regressions for large, multibyte, dry-run, and failure cases.</description>
     </item>
   </channel>
 </rss>
