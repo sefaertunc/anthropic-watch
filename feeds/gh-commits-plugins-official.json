@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-10T07:46:01.580Z",
+  "generated": "2026-08-11T07:11:34.058Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "920824c",
+      "title": "Add mongodb-atlas plugin (#5113)",
+      "date": "2026-08-10T18:38:04Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/920824c3e9509890fbec03ba6097014222393022",
+      "snippet": "Driver: dir-plugin-add-official",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "920824c|gh-commits-plugins-official"
+    },
     {
       "id": "31a9ce6",
       "title": "Add paypal plugin (#4567)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "8435428|gh-commits-plugins-official"
-    },
-    {
-      "id": "0d22ba3",
-      "title": "security-guidance: respect CLAUDE_CONFIG_DIR for plugin state files (#1868)",
-      "date": "2026-05-29T06:57:10Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/0d22ba3501ef549eb657e47e0bc08b7045a72dc9",
-      "snippet": "Fixes #1868 — when CLAUDE_CONFIG_DIR is set to a non-default location (e.g. ~/.config/claude for XDG compliance, or a multi-tenant install path), the plugin still wrote state files to the hardcoded ~/.claude/ path, leaving stale state and breaking CLAUDE_CONFIG_DIR's purpose.  Resolution precedence ",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "0d22ba3|gh-commits-plugins-official"
     }
   ]
 }

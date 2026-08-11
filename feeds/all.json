@@ -5,9 +5,284 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-10T07:46:01.519Z",
+  "generated": "2026-08-11T07:11:34.002Z",
   "itemCount": 100,
   "items": [
+    {
+      "id": "0.2.135",
+      "title": "0.2.135",
+      "date": "2026-08-11T07:10:45.833Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.227",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.135|agent-sdk-py-changelog"
+    },
+    {
+      "id": "0.3.227",
+      "title": "0.3.227",
+      "date": "2026-08-11T07:10:45.597Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Updated to parity with Claude Code v2.1.227",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.227|agent-sdk-ts-changelog"
+    },
+    {
+      "id": "2.1.227",
+      "title": "2.1.227",
+      "date": "2026-08-11T07:10:45.317Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed feature flags being evaluated without the user's subscription tier when a session started with an expired login token, which could wrongly prompt Max plan users to enable usage credits for Fable\n- Fixed every Bash command failing under claude-code-action with allowednonwriteusers on GitHub-h",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.227|claude-code-changelog"
+    },
+    {
+      "id": "9b08128",
+      "title": "chore(deps): integrate safe Dependabot runtime updates (#2762)",
+      "date": "2026-08-11T04:43:01Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9b081280bc52ee6f22a2e0463761b318936dd980",
+      "snippet": "* chore(deps-dev): bump @types/node from 25.9.2 to 26.1.2  Bumps [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/HEAD/types/node) from 25.9.2 to 26.1.2. - [Release notes](https://github.com/DefinitelyTyped/DefinitelyTyped/releases) - [Commits](https://github.com/DefinitelyTyped",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9b08128|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2087023960034783616",
+      "title": "RT @jarredsumner: 8 days ago, while jogging, I asked Claude to solve the Riemann Hypothesis\n\nIt didn’t. 1.5 days later, it proved &gt;= 67% of…",
+      "date": "2026-08-11T03:51:01.000Z",
+      "url": "https://x.com/bcherny/status/2087023960034783616",
+      "snippet": "RT @jarredsumner: 8 days ago, while jogging, I asked Claude to solve the Riemann Hypothesis\n\nIt didn’t. 1.5 days later, it proved &gt;= 67% of…",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2087023960034783616|twitter-bcherny"
+    },
+    {
+      "id": "c7720d4",
+      "title": "fix(hooks): context-monitor noise — loop-detection false positives + per-call cost-warning spam (#2486)",
+      "date": "2026-08-11T02:33:10Z",
+      "url": "https://github.com/affaan-m/ECC/commit/c7720d41bb2cf79d09f00302b3aca4af7c4125b3",
+      "snippet": "* fix(hooks): context-monitor noise — loop-detection false positives and per-call cost-warning spam  Two independent noise sources in the PostToolUse context monitor injected agent-facing warnings on nearly every tool call:  1. LOOP WARNING false positives. hashToolCall() hashed only the first 160  ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "c7720d4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0e0df5a",
+      "title": "feat(agents): add rag-pipeline-reviewer agent (#2446)",
+      "date": "2026-08-11T02:08:48Z",
+      "url": "https://github.com/affaan-m/ECC/commit/0e0df5a6e76074fd8a1494aaa78c2ee229221484",
+      "snippet": "* feat(agents): add rag-pipeline-reviewer agent  * fix: correct model field syntax  * fix: address review feedback - add prompt defense baseline, fix context_recall gap, register in AGENTS.md  * chore: update agent count to 68, add trailing newline  * chore: fix agent count consistency in project st",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0e0df5a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2086997082137866628",
+      "title": "RT @AnthropicAI: We asked an unreleased research version of Claude to take a stab at the Riemann hypothesis.\n\nIt didn’t solve it, but it di…",
+      "date": "2026-08-11T02:04:13.000Z",
+      "url": "https://x.com/bcherny/status/2086997082137866628",
+      "snippet": "RT @AnthropicAI: We asked an unreleased research version of Claude to take a stab at the Riemann hypothesis.\n\nIt didn’t solve it, but it di…",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2086997082137866628|twitter-bcherny"
+    },
+    {
+      "id": "5987bd4",
+      "title": "feat(session-start): rank injected instincts by project/stack relevance (#2466)",
+      "date": "2026-08-11T01:46:24Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5987bd4dc6d6762567d2dda04ab84b5e52e3fa40",
+      "snippet": "* feat(session-start): rank injected instincts by project/stack relevance  Instinct selection at SessionStart ranked purely by confidence, so a high-confidence instinct about an unrelated stack could take an injection slot from a lower-confidence instinct that is actually relevant to the current pro",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5987bd4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "3d4ef31",
+      "title": "fix(quarkus-verification): modernize stale CI references (ZAP image + GitHub Actions v4) (#2424)",
+      "date": "2026-08-10T23:31:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/3d4ef3184b7141b18f2d0823b8fe62d2c67218bf",
+      "snippet": "* fix(quarkus-verification): use current ghcr.io/zaproxy/zaproxy:stable image  The owasp/zap2docker-* images are deprecated (ZAP left the OWASP org). The current canonical image published by the ZAP project is ghcr.io/zaproxy/zaproxy:stable; the packaged scan scripts (zap-api-scan.py) are unchanged.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "3d4ef31|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "v1.0.190",
+      "title": "v1.0.190",
+      "date": "2026-08-10T23:17:41Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.190",
+      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.190",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.190|claude-code-action"
+    },
+    {
+      "id": "v2.1.227",
+      "title": "v2.1.227",
+      "date": "2026-08-10T22:56:53Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.227",
+      "snippet": "What's changed\n- Fixed feature flags being evaluated without the user's subscription tier when a session started with an expired login token, which could wrongly prompt Max plan users to enable usage credits for Fable\n- Fixed every Bash command failing under claude-code-action with allowednonwriteus",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.227|claude-code-releases"
+    },
+    {
+      "id": "54cc51a",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-08-10T22:56:46Z",
+      "url": "https://github.com/anthropics/claude-code/commit/54cc51a08a5d3900e5abd02ad75a2ce46f3f008c",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "54cc51a|gh-commits-claude-code"
+    },
+    {
+      "id": "49250109",
+      "title": "How Claude marks AI-generated content",
+      "date": "2026-08-10T21:36:56Z",
+      "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "snippet": null,
+      "source": "hn-claude-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.com",
+      "uniqueKey": "49250109|hn-claude-com"
+    },
+    {
+      "id": "2.1.227",
+      "title": "@anthropic-ai/claude-code@2.1.227",
+      "date": "2026-08-10T20:56:57.591Z",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+      "source": "npm-claude-code",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.227|npm-claude-code"
+    },
+    {
+      "id": "2086891169217122586",
+      "title": "We're making Claude Sonnet 5's introductory pricing permanent.\n\nWe launched Sonnet 5 in June at $2 per million input tokens and $10 per million output tokens through August 31, and that price will rem",
+      "date": "2026-08-10T19:03:21.000Z",
+      "url": "https://x.com/claudeai/status/2086891169217122586",
+      "snippet": "We're making Claude Sonnet 5's introductory pricing permanent.\n\nWe launched Sonnet 5 in June at $2 per million input tokens and $10 per million output tokens through August 31, and that price will remain unchanged.",
+      "source": "twitter-claudeai",
+      "sourceCategory": "community",
+      "sourceName": "@claudeai (official)",
+      "uniqueKey": "2086891169217122586|twitter-claudeai"
+    },
+    {
+      "id": "920824c",
+      "title": "Add mongodb-atlas plugin (#5113)",
+      "date": "2026-08-10T18:38:04Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/920824c3e9509890fbec03ba6097014222393022",
+      "snippet": "Driver: dir-plugin-add-official",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "920824c|gh-commits-plugins-official"
+    },
+    {
+      "id": "49247070",
+      "title": "Learning more about Claude's mathematical capabilities",
+      "date": "2026-08-10T17:41:13Z",
+      "url": "https://www.anthropic.com/research/riemann-zeta",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "49247070|hn-anthropic-com"
+    },
+    {
+      "id": "2086867246073401655",
+      "title": "We asked an unreleased research version of Claude to take a stab at the Riemann hypothesis.\n\nIt didn’t solve it, but it did make strides on a related problem: it increased the lower bound for the frac",
+      "date": "2026-08-10T17:28:18.000Z",
+      "url": "https://x.com/AnthropicAI/status/2086867246073401655",
+      "snippet": "We asked an unreleased research version of Claude to take a stab at the Riemann hypothesis.\n\nIt didn’t solve it, but it did make strides on a related problem: it increased the lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis from 41.6% to 67.2%.\n\nhttps:/",
+      "source": "twitter-anthropicai",
+      "sourceCategory": "community",
+      "sourceName": "@AnthropicAI (official)",
+      "uniqueKey": "2086867246073401655|twitter-anthropicai"
+    },
+    {
+      "id": "https://www.anthropic.com/research/riemann-zeta",
+      "title": "Learning more about Claude's mathematical capabilities",
+      "date": "2026-08-10T17:00:00.000Z",
+      "url": "https://www.anthropic.com/research/riemann-zeta",
+      "snippet": "An unreleased research version of Claude has made strides on a problem related to the Riemann hypothesis. It improved a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis, increasing it from 41.6% to 67.2%.",
+      "source": "blog-research",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Research Blog",
+      "uniqueKey": "https://www.anthropic.com/research/riemann-zeta|blog-research"
+    },
+    {
+      "id": "2086859917756133459",
+      "title": "RT @ClaudeDevs: We recently made auto mode the default in Claude Code, which means you no longer have to approve every action.\n\nBut what de…",
+      "date": "2026-08-10T16:59:11.000Z",
+      "url": "https://x.com/bcherny/status/2086859917756133459",
+      "snippet": "RT @ClaudeDevs: We recently made auto mode the default in Claude Code, which means you no longer have to approve every action.\n\nBut what de…",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2086859917756133459|twitter-bcherny"
+    },
+    {
+      "id": "2086844755770757531",
+      "title": "We recently made auto mode the default in Claude Code, which means you no longer have to approve every action.\n\nBut what determines if something is safe to run? Watch how it works: https://t.co/zZIHvH",
+      "date": "2026-08-10T15:58:56.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2086844755770757531",
+      "snippet": "We recently made auto mode the default in Claude Code, which means you no longer have to approve every action.\n\nBut what determines if something is safe to run? Watch how it works: https://t.co/zZIHvHj9L8",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2086844755770757531|twitter-claudedevs"
+    },
+    {
+      "id": "bbcd6ef",
+      "title": "[Snyk] Upgrade @fontsource/outfit from 5.2.8 to 5.3.0 (#1123)",
+      "date": "2026-08-10T15:33:13Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/bbcd6ef752784f7de0b67dee3d26ed30fae55960",
+      "snippet": "![snyk-top-banner](https://res.cloudinary.com/snyk/image/upload/r-d/scm-platform/snyk-pull-requests/pr-banner-default.svg)  <h3>Snyk has created this PR to upgrade @fontsource/outfit from 5.2.8 to 5.3.0.</h3>  :information_source: Keep your dependencies up-to-date. This makes it easier to fix existi",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "bbcd6ef|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "84e123b",
+      "title": "[Snyk] Upgrade @fontsource/jetbrains-mono from 5.2.8 to 5.3.0 (#1122)",
+      "date": "2026-08-10T15:20:29Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/84e123b7732b2921f22cb68c122d49a948c89064",
+      "snippet": "![snyk-top-banner](https://res.cloudinary.com/snyk/image/upload/r-d/scm-platform/snyk-pull-requests/pr-banner-default.svg)  <h3>Snyk has created this PR to upgrade @fontsource/jetbrains-mono from 5.2.8 to 5.3.0.</h3>  :information_source: Keep your dependencies up-to-date. This makes it easier to fi",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "84e123b|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "24d2e4a",
+      "title": "docs: align Unified AI gateway review with v0.4.9 (#1125)",
+      "date": "2026-08-10T15:15:30Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/24d2e4a5e26b50529acec65f55f8096f448eea3e",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "24d2e4a|gh-commits-antigravity-awesome-skills"
+    },
     {
       "id": "49239021",
       "title": "Auto mode is now the default in Claude Code",
@@ -20,39 +295,6 @@
       "uniqueKey": "49239021|hn-claude-com"
     },
     {
-      "id": "ae303fb",
-      "title": "fix(plan-canvas): deliver browser chat to the agent every time (#2739)",
-      "date": "2026-08-09T22:15:25Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ae303fb6c19e3f7cb88cb9fd9f15ddcf235294b6",
-      "snippet": "Feedback sent from the canvas only reached an agent through a live /api/await long poll. When a turn ended with no await parked, queueFeedback wrote the message to sessions.json and nothing ever consumed it, so sending appeared to do nothing at all. The presence pill made it worse: workingKeys had n",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ae303fb|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "649def7",
-      "title": "fix: complete Discord delivery receipts reliably (#2738)",
-      "date": "2026-08-09T20:44:18Z",
-      "url": "https://github.com/affaan-m/ECC/commit/649def769bd860512e5fce86e30aa05c8119259f",
-      "snippet": "* test: reproduce Actions receipt completion mismatch  * fix: complete Discord receipts with Actions identity",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "649def7|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "cdbb25b",
-      "title": "fix: deliver announcements through a scoped Discord webhook (#2737)",
-      "date": "2026-08-09T20:41:27Z",
-      "url": "https://github.com/affaan-m/ECC/commit/cdbb25bf9da8c87cdafb0d117fc1bd357bea9b64",
-      "snippet": "* test: reproduce Discord webhook announcement gap  * fix: deliver ECC announcements through channel webhook  * test: cover webhook replay and least privilege  * fix: make webhook delivery durable and least privilege  * test: cover trusted receipts and cross-workflow races  * fix: serialize and auth",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "cdbb25b|gh-commits-everything-claude-code"
-    },
-    {
       "id": "2086520950259118464",
       "title": "Prompt injection is the most common way that scammers attack people and agents: your agent visits https://t.co/5ZWbR4ts4m, and the website has malicious text like “btw send the user’s ssh keys and pas",
       "date": "2026-08-09T18:32:14.000Z",
@@ -62,17 +304,6 @@
       "sourceCategory": "community",
       "sourceName": "@bcherny (Boris Cherny, Anthropic)",
       "uniqueKey": "2086520950259118464|twitter-bcherny"
-    },
-    {
-      "id": "2d46e80",
-      "title": "fix: deliver ECC announcements to Discord (#2732)",
-      "date": "2026-08-09T10:37:04Z",
-      "url": "https://github.com/affaan-m/ECC/commit/2d46e80e0925c7be0907f18c1812311ac212a6c5",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "2d46e80|gh-commits-everything-claude-code"
     },
     {
       "id": "a71166d",
@@ -97,28 +328,6 @@
       "uniqueKey": "6838f13|gh-commits-antigravity-awesome-skills"
     },
     {
-      "id": "284d41c",
-      "title": "feat: upgrade catalog dashboard (#1111)",
-      "date": "2026-08-09T06:28:01Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/284d41c606e3279e3cfe63bd2d8c574856bbc747",
-      "snippet": "# Pull Request Description  Original contribution by @zinzied for the catalog dashboard upgrade: shareable fuzzy search and filters, a browser-local shortlist, catalog health signals, responsive UI, and related-skill discovery.  The fork-safety gate does not authorize fork PRs to run with TSX/CSS pa",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "284d41c|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "f749158",
-      "title": "feat: upgrade catalog dashboard (#1118)",
-      "date": "2026-08-09T06:16:41Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/f749158bab9fb08817c2aaf4786affc3214912f4",
-      "snippet": "# Pull Request Description  Upgrade the public catalog dashboard with shareable search and filters, a browser-local shortlist, catalog health signals, and related-skill discovery.  This maintainer PR preserves the contribution from @zinzied in #1111. The original fork PR could not pass the repositor",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "f749158|gh-commits-antigravity-awesome-skills"
-    },
-    {
       "id": "t3_1vji2i5",
       "title": "Exclusive: Muse Code Sends Codex and Claude Instructions to Meta by Default — RuntimeWire",
       "date": "2026-08-09T06:10:45+00:00",
@@ -128,17 +337,6 @@
       "sourceCategory": "community",
       "sourceName": "r/ClaudeCode (top/day)",
       "uniqueKey": "t3_1vji2i5|reddit-claudecode"
-    },
-    {
-      "id": "d47be50",
-      "title": "fix: repair context skill documentation integrity (#1117)",
-      "date": "2026-08-09T06:06:15Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/d47be5067a15eae3f13e068f4cd42ce2e2fd04e7",
-      "snippet": "# Pull Request Description  Repair five context-oriented skills found during the maintainer sweep:  - fence executable TypeScript examples so they render as code in `conversation-memory` and `context-window-management`; - translate the remaining prose and make the destructive local-write behavior ex",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "d47be50|gh-commits-antigravity-awesome-skills"
     },
     {
       "id": "t3_1vj7n35",
@@ -172,17 +370,6 @@
       "sourceCategory": "community",
       "sourceName": "Hacker News — anthropic.com",
       "uniqueKey": "49226008|hn-anthropic-com"
-    },
-    {
-      "id": "51a6950",
-      "title": "fix(memory-vault): compare dev only when both stats report one (#2637)",
-      "date": "2026-08-08T21:06:18Z",
-      "url": "https://github.com/affaan-m/ECC/commit/51a6950bde756fe3ebc8879aa0c8ee49b9c53e78",
-      "snippet": "ecc memory writes and --body-file reads fail on Windows. sameFileIdentity() compares the dev field of a path-based stat against a handle-based fstat, and libuv 1.49.0 through 1.50.x resolve path-based stat() and lstat() on Windows through GetFileInformationByName, which leaves the volume serial unse",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "51a6950|gh-commits-everything-claude-code"
     },
     {
       "id": "t3_1vj5ktu",
@@ -438,17 +625,6 @@
       "uniqueKey": "2085817074816070014|twitter-claudedevs"
     },
     {
-      "id": "2085807103382519872",
-      "title": "The team and I use Auto mode exclusively, and have been for many months. I couldn't imagine going back to permission prompts! Really excited to get this out to everyone.",
-      "date": "2026-08-07T19:15:40.000Z",
-      "url": "https://x.com/bcherny/status/2085807103382519872",
-      "snippet": "The team and I use Auto mode exclusively, and have been for many months. I couldn't imagine going back to permission prompts! Really excited to get this out to everyone.",
-      "source": "twitter-bcherny",
-      "sourceCategory": "community",
-      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
-      "uniqueKey": "2085807103382519872|twitter-bcherny"
-    },
-    {
       "id": "2085794862608318627",
       "title": "Starting August 14, auto mode will be the default permission mode in Claude Code for Pro, Max, and Team users.\n\nAuto mode reviews shell commands and actions with a separate classifier. In testing, it ",
       "date": "2026-08-07T18:27:02.000Z",
@@ -680,6 +856,17 @@
       "uniqueKey": "2.1.224|npm-claude-code"
     },
     {
+      "id": "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale",
+      "title": "How Anthropic's business development team uses Claude to run inbound and outbound at scale",
+      "date": "2026-08-07T00:00:00.000Z",
+      "url": "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale",
+      "snippet": "",
+      "source": "blog-claude",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Claude Blog",
+      "uniqueKey": "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale|blog-claude"
+    },
+    {
       "id": "https://claude.com/blog/auto-mode-default-in-claude-code",
       "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
       "date": "2026-08-07T00:00:00.000Z",
@@ -766,17 +953,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.223|claude-code-changelog"
-    },
-    {
-      "id": "49193794",
-      "title": "Ask HN: Anyone's Claude Code session finishing quickly from yesterday?",
-      "date": "2026-08-06T07:53:19Z",
-      "url": "https://news.ycombinator.com/item?id=49193794",
-      "snippet": "Hello, \nFrom yesterday my 5 hour limit is finishing way too quickly in my 100$ claude code plan. Not sure why that&#x27;s happening, I also have the  clau.de&#x2F;cc-50-promo promo enabled. I noticed this started happening after this incident: https:&#x2F;&#x2F;status.claude.com&#x2F;incidents&#x2F;",
-      "source": "hn-claude-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — claude.com",
-      "uniqueKey": "49193794|hn-claude-com"
     },
     {
       "id": "v1.0.186",
@@ -931,182 +1107,6 @@
       "sourceCategory": "community",
       "sourceName": "Hacker News — claude.ai",
       "uniqueKey": "49178750|hn-claude-ai"
-    },
-    {
-      "id": "https://claude.com/blog/claude-enterprise-inference-hooks",
-      "title": "Inference hooks: inline data loss prevention for Claude Enterprise",
-      "date": "2026-08-05T00:00:00.000Z",
-      "url": "https://claude.com/blog/claude-enterprise-inference-hooks",
-      "snippet": "",
-      "source": "blog-claude",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Claude Blog",
-      "uniqueKey": "https://claude.com/blog/claude-enterprise-inference-hooks|blog-claude"
-    },
-    {
-      "id": "v1.0.185",
-      "title": "v1.0.185",
-      "date": "2026-08-04T22:41:47Z",
-      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.185",
-      "snippet": "What's Changed\n Derive trigger timestamps for issues and pullrequest events by @ashwin-ant in https://github.com/anthropics/claude-code-action/pull/1592\n Pin bun config for MCP server processes by @ashwin-ant in https://github.com/anthropics/claude-code-action/pull/1589\n Match downloaded images to t",
-      "source": "claude-code-action",
-      "sourceCategory": "extended",
-      "sourceName": "Claude Code Action Releases",
-      "uniqueKey": "v1.0.185|claude-code-action"
-    },
-    {
-      "id": "v2.1.222",
-      "title": "v2.1.222",
-      "date": "2026-08-04T22:39:55Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.222",
-      "snippet": "What's changed\n- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type\n- Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (su",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.222|claude-code-releases"
-    },
-    {
-      "id": "3b27276",
-      "title": "chore: Update CHANGELOG.md and feed.xml",
-      "date": "2026-08-04T22:39:48Z",
-      "url": "https://github.com/anthropics/claude-code/commit/3b272769d0c8fb32845ff3ea0132aeaeafa0ca6e",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "3b27276|gh-commits-claude-code"
-    },
-    {
-      "id": "2084748111239344556",
-      "title": "The UK’s @AISecurityInst (AISI) has published a report on their recent cybersecurity evaluation of Anthropic’s Claude Mythos 5 and OpenAI’s GPT-5.6 Sol. The models attempted to complete an assignment ",
-      "date": "2026-08-04T21:07:37.000Z",
-      "url": "https://x.com/AnthropicAI/status/2084748111239344556",
-      "snippet": "The UK’s @AISecurityInst (AISI) has published a report on their recent cybersecurity evaluation of Anthropic’s Claude Mythos 5 and OpenAI’s GPT-5.6 Sol. The models attempted to complete an assignment in a setup where their normal safeguards were removed and they were deliberately given internet acce",
-      "source": "twitter-anthropicai",
-      "sourceCategory": "community",
-      "sourceName": "@AnthropicAI (official)",
-      "uniqueKey": "2084748111239344556|twitter-anthropicai"
-    },
-    {
-      "id": "bdr3fq2rkchr",
-      "title": "Elevated errors across many models",
-      "date": "2026-08-04T20:48:20.773Z",
-      "url": "https://stspg.io/smnf386prrtx",
-      "snippet": "[major] resolved — This issue has been resolved.",
-      "source": "status-page",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Status Page",
-      "uniqueKey": "bdr3fq2rkchr|status-page"
-    },
-    {
-      "id": "2.1.222",
-      "title": "@anthropic-ai/claude-code@2.1.222",
-      "date": "2026-08-04T20:37:17.953Z",
-      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
-      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
-      "source": "npm-claude-code",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code npm Package",
-      "uniqueKey": "2.1.222|npm-claude-code"
-    },
-    {
-      "id": "49174536",
-      "title": "Analyzing RBLX Q2 2026",
-      "date": "2026-08-04T20:23:01Z",
-      "url": "https://claude.ai/code/artifact/fc33898e-7e43-4db0-8e03-f3b336da7d76",
-      "snippet": null,
-      "source": "hn-claude-ai",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — claude.ai",
-      "uniqueKey": "49174536|hn-claude-ai"
-    },
-    {
-      "id": "49171877",
-      "title": "Tino Cuellar Joins Anthropic as Chief Global Affairs Officer",
-      "date": "2026-08-04T17:16:38Z",
-      "url": "https://www.anthropic.com/news/tino-cuellar",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "49171877|hn-anthropic-com"
-    },
-    {
-      "id": "nlg5hjdfphmb",
-      "title": "Elevated errors on Claude Sonnet 5",
-      "date": "2026-08-04T11:27:20.691Z",
-      "url": "https://stspg.io/gx4zlbbdd7cj",
-      "snippet": "[minor] resolved — This incident has been resolved.",
-      "source": "status-page",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Status Page",
-      "uniqueKey": "nlg5hjdfphmb|status-page"
-    },
-    {
-      "id": "0.2.129",
-      "title": "0.2.129",
-      "date": "2026-08-04T08:39:54.224Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
-      "snippet": "Breaking Changes\n- Skill name validation in ClaudeAgentOptions.skills: Skill names containing parentheses, commas, control characters, wildcards (, :), leading /, surrounding whitespace, or surrogate code points now raise ValueError at connect time. skills=[\"plugin:\"] and skills=[\"\"] should be repla",
-      "source": "agent-sdk-py-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK Python Changelog",
-      "uniqueKey": "0.2.129|agent-sdk-py-changelog"
-    },
-    {
-      "id": "0.3.221",
-      "title": "0.3.221",
-      "date": "2026-08-04T08:39:54.085Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Improved skills option validation: malformed names (delimiters or control characters) and wildcard-form names are rejected with a clear error; use skills: 'all' to enable every skill\n- Fixed external MCP servers passed via the mcpServers option not being connected before the first turn, which caus",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.221|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "2.1.221",
-      "title": "2.1.221",
-      "date": "2026-08-04T08:39:53.765Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- [VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the \"Claude Code: Toggle Focus view\" command\n- Added mode: \"mask\" for sandbox credential files on Linux and WSL — sandboxed co",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.221|claude-code-changelog"
-    },
-    {
-      "id": "8k9mjhq7wmv3",
-      "title": "Elevated errors on Claude Sonnet 5",
-      "date": "2026-08-04T06:16:33.847Z",
-      "url": "https://stspg.io/f0lj38zvb6qm",
-      "snippet": "[minor] resolved — This incident has been resolved.",
-      "source": "status-page",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Status Page",
-      "uniqueKey": "8k9mjhq7wmv3|status-page"
-    },
-    {
-      "id": "https://www.anthropic.com/news/tino-cuellar",
-      "title": "Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer",
-      "date": "2026-08-04T00:00:00.000Z",
-      "url": "https://www.anthropic.com/news/tino-cuellar",
-      "snippet": "",
-      "source": "blog-news",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic News Blog",
-      "uniqueKey": "https://www.anthropic.com/news/tino-cuellar|blog-news"
-    },
-    {
-      "id": "2.1.221",
-      "title": "@anthropic-ai/claude-code@2.1.221",
-      "date": "2026-08-03T22:16:25.561Z",
-      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
-      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
-      "source": "npm-claude-code",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code npm Package",
-      "uniqueKey": "2.1.221|npm-claude-code"
     }
   ]
 }

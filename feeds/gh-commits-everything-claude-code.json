@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-10T07:46:01.585Z",
+  "generated": "2026-08-11T07:11:34.062Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "9b08128",
+      "title": "chore(deps): integrate safe Dependabot runtime updates (#2762)",
+      "date": "2026-08-11T04:43:01Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9b081280bc52ee6f22a2e0463761b318936dd980",
+      "snippet": "* chore(deps-dev): bump @types/node from 25.9.2 to 26.1.2  Bumps [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/HEAD/types/node) from 25.9.2 to 26.1.2. - [Release notes](https://github.com/DefinitelyTyped/DefinitelyTyped/releases) - [Commits](https://github.com/DefinitelyTyped",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9b08128|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "c7720d4",
+      "title": "fix(hooks): context-monitor noise — loop-detection false positives + per-call cost-warning spam (#2486)",
+      "date": "2026-08-11T02:33:10Z",
+      "url": "https://github.com/affaan-m/ECC/commit/c7720d41bb2cf79d09f00302b3aca4af7c4125b3",
+      "snippet": "* fix(hooks): context-monitor noise — loop-detection false positives and per-call cost-warning spam  Two independent noise sources in the PostToolUse context monitor injected agent-facing warnings on nearly every tool call:  1. LOOP WARNING false positives. hashToolCall() hashed only the first 160  ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "c7720d4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0e0df5a",
+      "title": "feat(agents): add rag-pipeline-reviewer agent (#2446)",
+      "date": "2026-08-11T02:08:48Z",
+      "url": "https://github.com/affaan-m/ECC/commit/0e0df5a6e76074fd8a1494aaa78c2ee229221484",
+      "snippet": "* feat(agents): add rag-pipeline-reviewer agent  * fix: correct model field syntax  * fix: address review feedback - add prompt defense baseline, fix context_recall gap, register in AGENTS.md  * chore: update agent count to 68, add trailing newline  * chore: fix agent count consistency in project st",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0e0df5a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5987bd4",
+      "title": "feat(session-start): rank injected instincts by project/stack relevance (#2466)",
+      "date": "2026-08-11T01:46:24Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5987bd4dc6d6762567d2dda04ab84b5e52e3fa40",
+      "snippet": "* feat(session-start): rank injected instincts by project/stack relevance  Instinct selection at SessionStart ranked purely by confidence, so a high-confidence instinct about an unrelated stack could take an injection slot from a lower-confidence instinct that is actually relevant to the current pro",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5987bd4|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "3d4ef31",
+      "title": "fix(quarkus-verification): modernize stale CI references (ZAP image + GitHub Actions v4) (#2424)",
+      "date": "2026-08-10T23:31:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/3d4ef3184b7141b18f2d0823b8fe62d2c67218bf",
+      "snippet": "* fix(quarkus-verification): use current ghcr.io/zaproxy/zaproxy:stable image  The owasp/zap2docker-* images are deprecated (ZAP left the OWASP org). The current canonical image published by the ZAP project is ghcr.io/zaproxy/zaproxy:stable; the packaged scan scripts (zap-api-scan.py) are unchanged.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "3d4ef31|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "bed96af",
+      "title": "Add living-docs-governance skill (maintain-phase project doc system) (#2277)",
+      "date": "2026-08-10T21:10:01Z",
+      "url": "https://github.com/affaan-m/ECC/commit/bed96afa420042775b7a3ac12296bdff09f28477",
+      "snippet": "* feat: add living-docs-governance skill (maintain-phase project doc system)  Rebased onto latest main to resolve the merge conflict (the branch had gone DIRTY as main advanced). Trimmed to just the skill file (no top-level README/AGENTS edits), mirroring the merged #2381. Previously approved by @po",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "bed96af|gh-commits-everything-claude-code"
+    },
     {
       "id": "ae303fb",
       "title": "fix(plan-canvas): deliver browser chat to the agent every time (#2739)",
@@ -491,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "536221c|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "6a9f075",
-      "title": "fix: use scalar Claude agent tools (#2583)",
-      "date": "2026-07-26T10:20:15Z",
-      "url": "https://github.com/affaan-m/ECC/commit/6a9f075cd97c139a5f7e84e1e3f2c9ab095adf64",
-      "snippet": "Normalize scalar Claude agent tool metadata across validators, adapters, dashboards, and generated surfaces with regression coverage.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "6a9f075|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "f3afd59",
-      "title": "fix: flatten Claude skill installs (#2582)",
-      "date": "2026-07-26T10:20:06Z",
-      "url": "https://github.com/affaan-m/ECC/commit/f3afd59045ff41e17d0a67b22ed2350ed35faafd",
-      "snippet": "Flatten managed Claude skill destinations, preserve user-owned conflicts, and migrate legacy nested installs through the lifecycle tooling.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "f3afd59|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7143839",
-      "title": "fix(opencode): normalize tool paths across platforms (#2459)",
-      "date": "2026-07-26T10:13:49Z",
-      "url": "https://github.com/affaan-m/ECC/commit/71438391e89bdcc446168805078eafcb2011f7d2",
-      "snippet": "Normalize backslash paths for OpenCode formatting and add branch coverage for GitHub coordination behavior.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7143839|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "1435f54",
-      "title": "docs: refresh command quick reference (#2533)",
-      "date": "2026-07-26T10:04:21Z",
-      "url": "https://github.com/affaan-m/ECC/commit/1435f540ff5debe708d2fca2b231a993137c2bf6",
-      "snippet": "Align the command catalog and retired-command guidance with the current skills-first surface.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "1435f54|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "19df41d",
-      "title": "test: cover shell substitution parser (#2495)",
-      "date": "2026-07-26T10:00:57Z",
-      "url": "https://github.com/affaan-m/ECC/commit/19df41d681a26e73bc8bde8b7e9a78198740cd2a",
-      "snippet": "Add harness-compatible unit coverage for substitution parsing, escaped syntax, compound commands, and edge-case inputs.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "19df41d|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4d0b501",
-      "title": "feat: add cross-harness memory vault (#2581)",
-      "date": "2026-07-26T09:46:59Z",
-      "url": "https://github.com/affaan-m/ECC/commit/4d0b501b0570a2ab7990ec662527f63cb7d6e86b",
-      "snippet": "Add a local-first, cross-harness memory vault with CLI and MCP surfaces, bounded search and storage, harness-scoped visibility, setup guidance, and comprehensive tests.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4d0b501|gh-commits-everything-claude-code"
     }
   ]
 }

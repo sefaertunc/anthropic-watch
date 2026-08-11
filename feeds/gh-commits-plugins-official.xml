@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 10 Aug 2026 07:46:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 07:11:34 GMT</lastBuildDate>
+    <item>
+      <title>Add mongodb-atlas plugin (#5113)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/920824c3e9509890fbec03ba6097014222393022</link>
+      <guid isPermaLink="false">920824c</guid>
+      <pubDate>Mon, 10 Aug 2026 18:38:04 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Driver: dir-plugin-add-official</description>
+    </item>
     <item>
       <title>Add paypal plugin (#4567)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/31a9ce6d9e905a687cb257a8b2ec53556217257c</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 29 May 2026 07:20:48 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: emit findings via hookSpecificOutput.additionalContext (#1358 #1375 #1783)</description>
-    </item>
-    <item>
-      <title>security-guidance: respect CLAUDE_CONFIG_DIR for plugin state files (#1868)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0d22ba3501ef549eb657e47e0bc08b7045a72dc9</link>
-      <guid isPermaLink="false">0d22ba3</guid>
-      <pubDate>Fri, 29 May 2026 06:57:10 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Fixes #1868 — when CLAUDE_CONFIG_DIR is set to a non-default location (e.g. ~/.config/claude for XDG compliance, or a multi-tenant install path), the plugin still wrote state files to the hardcoded ~/.claude/ path, leaving stale state and breaking CLAUDE_CONFIG_DIR&apos;s purpose.  Resolution precedence </description>
     </item>
   </channel>
 </rss>

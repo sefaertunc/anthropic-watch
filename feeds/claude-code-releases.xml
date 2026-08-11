@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 10 Aug 2026 07:46:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 07:11:34 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.227</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.227</link>
+      <guid isPermaLink="false">v2.1.227</guid>
+      <pubDate>Mon, 10 Aug 2026 22:56:53 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed feature flags being evaluated without the user&apos;s subscription tier when a session started with an expired login token, which could wrongly prompt Max plan users to enable usage credits for Fable
+- Fixed every Bash command failing under claude-code-action with allowednonwriteus</description>
+    </item>
     <item>
       <title>v2.1.226</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.226</link>
@@ -501,15 +511,6 @@
 - Added --safe-mode flag (and CLAUDECODESAFEMODE) to start Claude Code with all customizations (CLAUDE.md, plugins, skills, hooks, MCP servers) disabled for troubleshooting
 - Added /cd command to move a session to a new working directory without breaking the prompt cache mid-session
 -</description>
-    </item>
-    <item>
-      <title>v2.1.168</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.168</link>
-      <guid isPermaLink="false">v2.1.168</guid>
-      <pubDate>Sat, 06 Jun 2026 23:41:53 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Bug fixes and reliability improvements</description>
     </item>
   </channel>
 </rss>
