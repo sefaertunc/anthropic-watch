@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-11T07:11:34.065Z",
+  "generated": "2026-08-12T07:27:57.302Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "96cedb5",
+      "title": "fix: bind installer clones to npm release identity (#1132)",
+      "date": "2026-08-11T20:28:34Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/96cedb5420e738a41f317c02cccb6b025e309448",
+      "snippet": "Bind every default and `--release` installer clone to the immutable `gitHead` recorded by the exact npm package version. The installer now fails closed on registry errors, invalid identity metadata, or a moved Git ref before it reads or copies any cloned skill content. Explicit `--tag` remains an in",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "96cedb5|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "9e4b5fa",
+      "title": "fix: reject symlinked flagship assets (#1129)",
+      "date": "2026-08-11T16:25:47Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/9e4b5fa51fef6323170a81d66ec5cbb9c951192e",
+      "snippet": "### Motivation  - A supply-chain disclosure was possible because flagship asset sources were validated and copied using symlink-following APIs, allowing a repository symlink to materialize build-host files into distributable plugin assets; the issue originated in `tools/scripts/sync_editorial_bundle",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "9e4b5fa|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "2cabd5c",
+      "title": "fix: pin unified-ai-gateway demo flow to reviewed digest (#1130)",
+      "date": "2026-08-11T16:10:23Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/2cabd5c6e119c49b48249c5b0658573cfda92abe",
+      "snippet": "### Motivation - Remove an unsafe alternate demo path that pointed to a mutable upstream README command and therefore bypassed the repository's reviewed, digest-pinned image inspection and activation procedure.  ### Description - Update `skills/unified-ai-gateway/SKILL.md` to remove the mutable READ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "2cabd5c|gh-commits-antigravity-awesome-skills"
+    },
     {
       "id": "bbcd6ef",
       "title": "[Snyk] Upgrade @fontsource/outfit from 5.2.8 to 5.3.0 (#1123)",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
       "uniqueKey": "cb20e65|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "c431311",
-      "title": "fix: close mutable security boundaries (#1028)",
-      "date": "2026-07-29T08:32:49Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c4313115f22ca3dcd721b0fdac978d509e296819",
-      "snippet": "# Pull Request Description  Revalidates all 15 findings from the 2026-07-29 Codex security export. Two findings reproduced on the exact main base and are remediated here: BrowserAct no longer delegates operating policy to mutable provider guides, and FindMate accepts linked public profiles only when",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "c431311|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "d737163",
-      "title": "fix: update Supabase client to 2.111.0 (#1026)",
-      "date": "2026-07-29T07:56:57Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/d737163c228391ff3159fa7e1eda94d50ed89f85",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "d737163|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "cf98a3b",
-      "title": "fix: refresh modellix vendored skill URLs and speech defaults (#1025)",
-      "date": "2026-07-29T07:52:49Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/cf98a3b65a521b822be34afdada1d2b60bc7d2d0",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "cf98a3b|gh-commits-antigravity-awesome-skills"
     }
   ]
 }

@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 11 Aug 2026 07:11:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 07:27:57 GMT</lastBuildDate>
+    <item>
+      <title>fix: bind installer clones to npm release identity (#1132)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/96cedb5420e738a41f317c02cccb6b025e309448</link>
+      <guid isPermaLink="false">96cedb5</guid>
+      <pubDate>Tue, 11 Aug 2026 20:28:34 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Bind every default and `--release` installer clone to the immutable `gitHead` recorded by the exact npm package version. The installer now fails closed on registry errors, invalid identity metadata, or a moved Git ref before it reads or copies any cloned skill content. Explicit `--tag` remains an in</description>
+    </item>
+    <item>
+      <title>fix: reject symlinked flagship assets (#1129)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9e4b5fa51fef6323170a81d66ec5cbb9c951192e</link>
+      <guid isPermaLink="false">9e4b5fa</guid>
+      <pubDate>Tue, 11 Aug 2026 16:25:47 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>### Motivation  - A supply-chain disclosure was possible because flagship asset sources were validated and copied using symlink-following APIs, allowing a repository symlink to materialize build-host files into distributable plugin assets; the issue originated in `tools/scripts/sync_editorial_bundle</description>
+    </item>
+    <item>
+      <title>fix: pin unified-ai-gateway demo flow to reviewed digest (#1130)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2cabd5c6e119c49b48249c5b0658573cfda92abe</link>
+      <guid isPermaLink="false">2cabd5c</guid>
+      <pubDate>Tue, 11 Aug 2026 16:10:23 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>### Motivation - Remove an unsafe alternate demo path that pointed to a mutable upstream README command and therefore bypassed the repository&apos;s reviewed, digest-pinned image inspection and activation procedure.  ### Description - Update `skills/unified-ai-gateway/SKILL.md` to remove the mutable READ</description>
+    </item>
     <item>
       <title>[Snyk] Upgrade @fontsource/outfit from 5.2.8 to 5.3.0 (#1123)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/bbcd6ef752784f7de0b67dee3d26ed30fae55960</link>
@@ -382,30 +406,6 @@
       <pubDate>Wed, 29 Jul 2026 15:56:19 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description># Pull Request Description  Extend the trusted changed-skill evaluator budget from two to five minutes. A measured 940-skill evidence run completes in about 2m35s after the bounded path-lookup fix, so the previous 120-second limit still terminated valid repository-wide maintenance batches.  The eval</description>
-    </item>
-    <item>
-      <title>fix: close mutable security boundaries (#1028)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c4313115f22ca3dcd721b0fdac978d509e296819</link>
-      <guid isPermaLink="false">c431311</guid>
-      <pubDate>Wed, 29 Jul 2026 08:32:49 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Revalidates all 15 findings from the 2026-07-29 Codex security export. Two findings reproduced on the exact main base and are remediated here: BrowserAct no longer delegates operating policy to mutable provider guides, and FindMate accepts linked public profiles only when</description>
-    </item>
-    <item>
-      <title>fix: update Supabase client to 2.111.0 (#1026)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d737163c228391ff3159fa7e1eda94d50ed89f85</link>
-      <guid isPermaLink="false">d737163</guid>
-      <pubDate>Wed, 29 Jul 2026 07:56:57 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: refresh modellix vendored skill URLs and speech defaults (#1025)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/cf98a3b65a521b822be34afdada1d2b60bc7d2d0</link>
-      <guid isPermaLink="false">cf98a3b</guid>
-      <pubDate>Wed, 29 Jul 2026 07:52:49 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,108 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-11T07:11:34.062Z",
+  "generated": "2026-08-12T07:27:57.300Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "569b1d5",
+      "title": "fix: disable Claude co-author attribution by default (#2758)",
+      "date": "2026-08-12T04:43:58Z",
+      "url": "https://github.com/affaan-m/ECC/commit/569b1d5b32ebf4c32d0b965bb956b16713533e07",
+      "snippet": "* fix: disable Claude co-author attribution by default  * fix: harden default co-author opt-out and correct the docs  Follow-up on the co-author default in this PR.  - Remove the existsSync/writeFileSync race in the installer settings write   (CodeQL js/file-system-race, high). A single guarded read",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "569b1d5|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "ff2280a",
+      "title": "fix(plan-canvas): guard localStorage so blocked site data can't disable canvas controls (#2703)",
+      "date": "2026-08-12T04:34:15Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ff2280a3186dfdad6407391da3f92b021d526908",
+      "snippet": "Co-authored-by: haelyra <49814733+haelyra@users.noreply.github.com>",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ff2280a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "d29cf65",
+      "title": "fix(skills): declare activation triggers in descriptions and normalize version metadata (#2618)",
+      "date": "2026-08-12T03:58:14Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d29cf651c795869f733669c33e3d33dfd8307d10",
+      "snippet": "* fix(skills): move version into metadata and normalize to semver  29 skills declared `version` at the top level of their frontmatter. The schema reads it from `metadata`, so tooling that follows the schema either misses it or has to special-case the top level.  Three motion skills also declared `ve",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d29cf65|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "fd1b11c",
+      "title": "docs: refresh model-selection guidance to the Claude 5 families (#2723)",
+      "date": "2026-08-11T23:36:48Z",
+      "url": "https://github.com/affaan-m/ECC/commit/fd1b11cfc765fc6f17af7085eb8915ef7d33cf17",
+      "snippet": "Model-routing guidance across the rules, skills, and harness-steering docs still recommends Sonnet 4.6 / Opus 4.5-4.6 by name. Readers on the current generation have to map those onto Sonnet 5 / Opus 5 themselves, and the recommendation reads as pinned to a superseded generation.  Renames the recomm",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "fd1b11c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5a2453e",
+      "title": "feat: add council-multi-model skill (heterogeneous Codex review) (#2281)",
+      "date": "2026-08-11T20:30:04Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5a2453e1676f74656f31e21e63b97de48aed33b5",
+      "snippet": "* feat: add council-multi-model skill (heterogeneous Codex review)  Rebased onto latest main to resolve the merge conflict (the branch had gone DIRTY as main advanced). Trimmed to just the skill files (no top-level README/AGENTS edits), mirroring the merged #2381. Previously reviewed favorably by gr",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5a2453e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a15c8e8",
+      "title": "ci: add Python CI job (ruff, mypy, pytest) for the llm-abstraction package (#2364)",
+      "date": "2026-08-11T18:15:57Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a15c8e853309818e96fe495d373a7aea47b1298d",
+      "snippet": "* ci: add ruff + mypy to the Python CI job and fix pyproject tool config  The python-tests job runs pytest but not lint/type checks, and the ruff and mypy configuration in pyproject.toml was silently broken, so neither tool could run at all.  - add ruff and mypy steps to the existing python-tests jo",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a15c8e8|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "74ffba6",
+      "title": "fix: switch multi-model frontend routing from Gemini CLI to Antigravity CLI (#2520)",
+      "date": "2026-08-11T17:23:47Z",
+      "url": "https://github.com/affaan-m/ECC/commit/74ffba6d4f841801f8138efdcf0f37dbf585dc18",
+      "snippet": "Google is sunsetting consumer Gemini CLI access on 2026-06-18 and consolidating into Antigravity CLI. codeagent-wrapper already ships a working AntigravityBackend (confirmed by shelling to `agy`), and ~/.claude/.ccg/prompts/antigravity/*.md role prompts already exist — only the command markdown file",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "74ffba6|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9599b90",
+      "title": "docs: gate guided setup until 2.2 release (#2767)",
+      "date": "2026-08-11T16:22:55Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9599b90f6b68479c74a245389b3853d974cd6910",
+      "snippet": "* docs: gate guided install until 2.2 release  * docs: lead README with Claude plugin install  * docs: move 2.2 package commands below install options",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9599b90|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e990c0c",
+      "title": "feat(skills): add dev-team skill — multi-persona collaborative session (#2309)",
+      "date": "2026-08-11T16:17:03Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e990c0c7eda9c3be8a1675df043d29f22c7872cf",
+      "snippet": "* feat(skills): add dev-team skill — multi-persona collaborative session  Adds skills/dev-team/SKILL.md, a community skill inspired by the BMAD Method's \"party mode\": PM, Architect, Developer, and QA respond to the same topic in parallel, then a synthesis step names tensions explicitly instead of av",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e990c0c|gh-commits-everything-claude-code"
+    },
     {
       "id": "9b08128",
       "title": "chore(deps): integrate safe Dependabot runtime updates (#2762)",
@@ -458,105 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "837acaf|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "6be87a5",
-      "title": "fix: clean promoted instinct sources (#2587)",
-      "date": "2026-07-29T01:31:12Z",
-      "url": "https://github.com/affaan-m/ECC/commit/6be87a56ae24dc2ddc9eba2fc71580cbc8a711f0",
-      "snippet": "* fix: clean promoted instinct sources  * test(instincts): normalize retained-content line endings  ---------  Co-authored-by: haelyra <49814733+haelyra@users.noreply.github.com>",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "6be87a5|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4e973d3",
-      "title": "docs: drop badges whose api.ecc.tools endpoints do not exist yet",
-      "date": "2026-07-27T20:45:17Z",
-      "url": "https://github.com/affaan-m/ECC/commit/4e973d3eaf92d97f8d2e2d8abb39d8bdc8711b38",
-      "snippet": "claude-plugin, codex-plugin, and clones return 404 and would render as broken shields on the repo homepage. Re-add when the endpoints ship.  Co-Authored-By: Claude <noreply@anthropic.com> Claude-Session: https://claude.ai/code/session_0149VwNuynam6rvEfcMmiHHa",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4e973d3|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "19b0547",
-      "title": "docs: blend 2.1 README restructure with retained sections per Affaan x Haley thread",
-      "date": "2026-07-27T20:41:57Z",
-      "url": "https://github.com/affaan-m/ECC/commit/19b05476fd9ec1bd8c4469570c1e7ac1887a3ead",
-      "snippet": "Co-Authored-By: Claude <noreply@anthropic.com> Claude-Session: https://claude.ai/code/session_01H1b2jD5gWaPTnHWQ51V7oj",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "19b0547|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "b40f119",
-      "title": "fix old project name delimiter",
-      "date": "2026-07-27T20:00:46Z",
-      "url": "https://github.com/affaan-m/ECC/commit/b40f11919a1007e578977edabfdf7f0490bd0a93",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "b40f119|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "86c786e",
-      "title": "Update section title from 'Why It Feels Different' to 'Why Choose ECC?'",
-      "date": "2026-07-27T19:25:33Z",
-      "url": "https://github.com/affaan-m/ECC/commit/86c786e8bb3ff70e4d5ea6570ec3fcec0b6a93df",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "86c786e|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "b6f461a",
-      "title": "docs: add README install jump link",
-      "date": "2026-07-27T19:23:38Z",
-      "url": "https://github.com/affaan-m/ECC/commit/b6f461a3639e9b73ad5062b76114b847fec53914",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "b6f461a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "55c3435",
-      "title": "Revise TDD section title and format",
-      "date": "2026-07-27T19:20:07Z",
-      "url": "https://github.com/affaan-m/ECC/commit/55c343571b7abaeaa677db57b096d386098c8026",
-      "snippet": "Updated section title for clarity and corrected formatting.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "55c3435|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4144142",
-      "title": "docs: refresh README for ECC 2.1 (#2579)",
-      "date": "2026-07-27T19:17:36Z",
-      "url": "https://github.com/affaan-m/ECC/commit/41441427b95eb94c3ac9e385b959f5dd7d89ce58",
-      "snippet": "Refresh the main README for ECC 2.1, including the Plan Canvas demo, install paths, harness guidance, security, sponsors, and community sections.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4144142|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "536221c",
-      "title": "fix(hooks): dedupe transcript usage by message.id in cost-tracker (~2.5-3x inflation) (#2483)",
-      "date": "2026-07-27T18:14:47Z",
-      "url": "https://github.com/affaan-m/ECC/commit/536221cf7aba9d138edb5c120ccff6beb53d161d",
-      "snippet": "Claude Code writes one transcript JSONL line per content block, so a single API response (one message.id) spans multiple assistant lines that each repeat the same message.usage. sumUsageFromTranscript summed every line, inflating token totals and estimated_cost_usd roughly 2.5-3x.  Verified on a rea",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "536221c|gh-commits-everything-claude-code"
     }
   ]
 }

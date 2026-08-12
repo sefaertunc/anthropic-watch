@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 11 Aug 2026 07:11:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 07:27:57 GMT</lastBuildDate>
+    <item>
+      <title>2.1.228</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.228</guid>
+      <pubDate>Wed, 12 Aug 2026 07:27:08 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed interactive sessions that could stop redrawing entirely, while the process kept running, after a rare internal layout error
+- Fixed git / Git Bash not being found on Windows when Claude Code is launched from a parent folder of the git installation
+- Fixed /tui reverting the session to an ear</description>
+    </item>
     <item>
       <title>2.1.227</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -449,15 +459,6 @@
       <description>- Added skipLfs option to github/git plugin marketplace sources to skip Git LFS downloads during clone and update
 - Claude Code now shows a one-time notice when your npm global install can&apos;t auto-update; /doctor lists the fixes
 - Status line commands now receive COLUMNS and LINES environment variabl</description>
-    </item>
-    <item>
-      <title>2.1.152</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.152</guid>
-      <pubDate>Wed, 27 May 2026 09:57:15 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- /code-review --fix now applies review findings to your working tree after the review, surfacing reuse, simplification, and efficiency suggestions; /simplify now invokes /code-review --fix
-- Skills and slash commands can now set disallowed-tools in frontmatter to remove tools from the model while t</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,79 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 11 Aug 2026 07:11:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 07:27:57 GMT</lastBuildDate>
+    <item>
+      <title>fix: disable Claude co-author attribution by default (#2758)</title>
+      <link>https://github.com/affaan-m/ECC/commit/569b1d5b32ebf4c32d0b965bb956b16713533e07</link>
+      <guid isPermaLink="false">569b1d5</guid>
+      <pubDate>Wed, 12 Aug 2026 04:43:58 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix: disable Claude co-author attribution by default  * fix: harden default co-author opt-out and correct the docs  Follow-up on the co-author default in this PR.  - Remove the existsSync/writeFileSync race in the installer settings write   (CodeQL js/file-system-race, high). A single guarded read</description>
+    </item>
+    <item>
+      <title>fix(plan-canvas): guard localStorage so blocked site data can&apos;t disable canvas controls (#2703)</title>
+      <link>https://github.com/affaan-m/ECC/commit/ff2280a3186dfdad6407391da3f92b021d526908</link>
+      <guid isPermaLink="false">ff2280a</guid>
+      <pubDate>Wed, 12 Aug 2026 04:34:15 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Co-authored-by: haelyra &lt;49814733+haelyra@users.noreply.github.com&gt;</description>
+    </item>
+    <item>
+      <title>fix(skills): declare activation triggers in descriptions and normalize version metadata (#2618)</title>
+      <link>https://github.com/affaan-m/ECC/commit/d29cf651c795869f733669c33e3d33dfd8307d10</link>
+      <guid isPermaLink="false">d29cf65</guid>
+      <pubDate>Wed, 12 Aug 2026 03:58:14 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(skills): move version into metadata and normalize to semver  29 skills declared `version` at the top level of their frontmatter. The schema reads it from `metadata`, so tooling that follows the schema either misses it or has to special-case the top level.  Three motion skills also declared `ve</description>
+    </item>
+    <item>
+      <title>docs: refresh model-selection guidance to the Claude 5 families (#2723)</title>
+      <link>https://github.com/affaan-m/ECC/commit/fd1b11cfc765fc6f17af7085eb8915ef7d33cf17</link>
+      <guid isPermaLink="false">fd1b11c</guid>
+      <pubDate>Tue, 11 Aug 2026 23:36:48 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Model-routing guidance across the rules, skills, and harness-steering docs still recommends Sonnet 4.6 / Opus 4.5-4.6 by name. Readers on the current generation have to map those onto Sonnet 5 / Opus 5 themselves, and the recommendation reads as pinned to a superseded generation.  Renames the recomm</description>
+    </item>
+    <item>
+      <title>feat: add council-multi-model skill (heterogeneous Codex review) (#2281)</title>
+      <link>https://github.com/affaan-m/ECC/commit/5a2453e1676f74656f31e21e63b97de48aed33b5</link>
+      <guid isPermaLink="false">5a2453e</guid>
+      <pubDate>Tue, 11 Aug 2026 20:30:04 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat: add council-multi-model skill (heterogeneous Codex review)  Rebased onto latest main to resolve the merge conflict (the branch had gone DIRTY as main advanced). Trimmed to just the skill files (no top-level README/AGENTS edits), mirroring the merged #2381. Previously reviewed favorably by gr</description>
+    </item>
+    <item>
+      <title>ci: add Python CI job (ruff, mypy, pytest) for the llm-abstraction package (#2364)</title>
+      <link>https://github.com/affaan-m/ECC/commit/a15c8e853309818e96fe495d373a7aea47b1298d</link>
+      <guid isPermaLink="false">a15c8e8</guid>
+      <pubDate>Tue, 11 Aug 2026 18:15:57 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* ci: add ruff + mypy to the Python CI job and fix pyproject tool config  The python-tests job runs pytest but not lint/type checks, and the ruff and mypy configuration in pyproject.toml was silently broken, so neither tool could run at all.  - add ruff and mypy steps to the existing python-tests jo</description>
+    </item>
+    <item>
+      <title>fix: switch multi-model frontend routing from Gemini CLI to Antigravity CLI (#2520)</title>
+      <link>https://github.com/affaan-m/ECC/commit/74ffba6d4f841801f8138efdcf0f37dbf585dc18</link>
+      <guid isPermaLink="false">74ffba6</guid>
+      <pubDate>Tue, 11 Aug 2026 17:23:47 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Google is sunsetting consumer Gemini CLI access on 2026-06-18 and consolidating into Antigravity CLI. codeagent-wrapper already ships a working AntigravityBackend (confirmed by shelling to `agy`), and ~/.claude/.ccg/prompts/antigravity/*.md role prompts already exist — only the command markdown file</description>
+    </item>
+    <item>
+      <title>docs: gate guided setup until 2.2 release (#2767)</title>
+      <link>https://github.com/affaan-m/ECC/commit/9599b90f6b68479c74a245389b3853d974cd6910</link>
+      <guid isPermaLink="false">9599b90</guid>
+      <pubDate>Tue, 11 Aug 2026 16:22:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* docs: gate guided install until 2.2 release  * docs: lead README with Claude plugin install  * docs: move 2.2 package commands below install options</description>
+    </item>
+    <item>
+      <title>feat(skills): add dev-team skill — multi-persona collaborative session (#2309)</title>
+      <link>https://github.com/affaan-m/ECC/commit/e990c0c7eda9c3be8a1675df043d29f22c7872cf</link>
+      <guid isPermaLink="false">e990c0c</guid>
+      <pubDate>Tue, 11 Aug 2026 16:17:03 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* feat(skills): add dev-team skill — multi-persona collaborative session  Adds skills/dev-team/SKILL.md, a community skill inspired by the BMAD Method&apos;s &quot;party mode&quot;: PM, Architect, Developer, and QA respond to the same topic in parallel, then a synthesis step names tensions explicitly instead of av</description>
+    </item>
     <item>
       <title>chore(deps): integrate safe Dependabot runtime updates (#2762)</title>
       <link>https://github.com/affaan-m/ECC/commit/9b081280bc52ee6f22a2e0463761b318936dd980</link>
@@ -334,78 +406,6 @@
       <pubDate>Wed, 29 Jul 2026 01:32:42 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* fix(hooks,lib): fix hook detection and parsing edge cases  - auto-tmux-dev: dev\b -&gt; dev(?![\w-]) so one-shot dev-build/dev-docs scripts   are not detached into tmux; align command shapes (yarn run dev, bun dev) with   pre-bash-dev-server-block.js DEV_PATTERN. - pre-bash-commit-quality: skip obvio</description>
-    </item>
-    <item>
-      <title>fix: clean promoted instinct sources (#2587)</title>
-      <link>https://github.com/affaan-m/ECC/commit/6be87a56ae24dc2ddc9eba2fc71580cbc8a711f0</link>
-      <guid isPermaLink="false">6be87a5</guid>
-      <pubDate>Wed, 29 Jul 2026 01:31:12 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix: clean promoted instinct sources  * test(instincts): normalize retained-content line endings  ---------  Co-authored-by: haelyra &lt;49814733+haelyra@users.noreply.github.com&gt;</description>
-    </item>
-    <item>
-      <title>docs: drop badges whose api.ecc.tools endpoints do not exist yet</title>
-      <link>https://github.com/affaan-m/ECC/commit/4e973d3eaf92d97f8d2e2d8abb39d8bdc8711b38</link>
-      <guid isPermaLink="false">4e973d3</guid>
-      <pubDate>Mon, 27 Jul 2026 20:45:17 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>claude-plugin, codex-plugin, and clones return 404 and would render as broken shields on the repo homepage. Re-add when the endpoints ship.  Co-Authored-By: Claude &lt;noreply@anthropic.com&gt; Claude-Session: https://claude.ai/code/session_0149VwNuynam6rvEfcMmiHHa</description>
-    </item>
-    <item>
-      <title>docs: blend 2.1 README restructure with retained sections per Affaan x Haley thread</title>
-      <link>https://github.com/affaan-m/ECC/commit/19b05476fd9ec1bd8c4469570c1e7ac1887a3ead</link>
-      <guid isPermaLink="false">19b0547</guid>
-      <pubDate>Mon, 27 Jul 2026 20:41:57 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Co-Authored-By: Claude &lt;noreply@anthropic.com&gt; Claude-Session: https://claude.ai/code/session_01H1b2jD5gWaPTnHWQ51V7oj</description>
-    </item>
-    <item>
-      <title>fix old project name delimiter</title>
-      <link>https://github.com/affaan-m/ECC/commit/b40f11919a1007e578977edabfdf7f0490bd0a93</link>
-      <guid isPermaLink="false">b40f119</guid>
-      <pubDate>Mon, 27 Jul 2026 20:00:46 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Update section title from &apos;Why It Feels Different&apos; to &apos;Why Choose ECC?&apos;</title>
-      <link>https://github.com/affaan-m/ECC/commit/86c786e8bb3ff70e4d5ea6570ec3fcec0b6a93df</link>
-      <guid isPermaLink="false">86c786e</guid>
-      <pubDate>Mon, 27 Jul 2026 19:25:33 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: add README install jump link</title>
-      <link>https://github.com/affaan-m/ECC/commit/b6f461a3639e9b73ad5062b76114b847fec53914</link>
-      <guid isPermaLink="false">b6f461a</guid>
-      <pubDate>Mon, 27 Jul 2026 19:23:38 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Revise TDD section title and format</title>
-      <link>https://github.com/affaan-m/ECC/commit/55c343571b7abaeaa677db57b096d386098c8026</link>
-      <guid isPermaLink="false">55c3435</guid>
-      <pubDate>Mon, 27 Jul 2026 19:20:07 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Updated section title for clarity and corrected formatting.</description>
-    </item>
-    <item>
-      <title>docs: refresh README for ECC 2.1 (#2579)</title>
-      <link>https://github.com/affaan-m/ECC/commit/41441427b95eb94c3ac9e385b959f5dd7d89ce58</link>
-      <guid isPermaLink="false">4144142</guid>
-      <pubDate>Mon, 27 Jul 2026 19:17:36 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Refresh the main README for ECC 2.1, including the Plan Canvas demo, install paths, harness guidance, security, sponsors, and community sections.</description>
-    </item>
-    <item>
-      <title>fix(hooks): dedupe transcript usage by message.id in cost-tracker (~2.5-3x inflation) (#2483)</title>
-      <link>https://github.com/affaan-m/ECC/commit/536221cf7aba9d138edb5c120ccff6beb53d161d</link>
-      <guid isPermaLink="false">536221c</guid>
-      <pubDate>Mon, 27 Jul 2026 18:14:47 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Claude Code writes one transcript JSONL line per content block, so a single API response (one message.id) spans multiple assistant lines that each repeat the same message.usage. sumUsageFromTranscript summed every line, inflating token totals and estimated_cost_usd roughly 2.5-3x.  Verified on a rea</description>
     </item>
   </channel>
 </rss>
