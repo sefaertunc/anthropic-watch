@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 12 Aug 2026 07:27:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 07:37:59 GMT</lastBuildDate>
+    <item>
+      <title>0.2.137</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.137</guid>
+      <pubDate>Thu, 13 Aug 2026 07:37:12 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- ConversationResetMessage for conversation reset events: The SDK now surfaces the CLI&apos;s conversationreset frame as a ConversationResetMessage dataclass, letting applications detect when a /clear or other transcript-discarding flow resets the conversation mid-session. Includes newconver</description>
+    </item>
     <item>
       <title>0.2.136</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -459,15 +468,6 @@
       <category>agent-sdk-py-changelog</category>
       <description>Internal/Other Changes
 - Updated bundled Claude CLI to version 2.1.126</description>
-    </item>
-    <item>
-      <title>0.1.71</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.1.71</guid>
-      <pubDate>Wed, 29 Apr 2026 08:23:31 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>New Features
-- Domain allowlist fields for sandbox network config: Added allowedDomains, deniedDomains, allowManagedDomainsOnly, and allowMachLookup fields to SandboxNetworkConfig, bringing parity with the TypeScript schema and enabling Python SDK users to configure network allowlists with proper ty</description>
     </item>
   </channel>
 </rss>

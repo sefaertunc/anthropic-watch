@@ -5,9 +5,53 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-12T07:27:57.300Z",
+  "generated": "2026-08-13T07:37:59.766Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "eb49702",
+      "title": "feat: thin Pi adapter mounting ECC's canonical skills and commands (#2759)",
+      "date": "2026-08-12T22:41:33Z",
+      "url": "https://github.com/affaan-m/ECC/commit/eb4970265169fec82371c92f615e2e133d875e27",
+      "snippet": "* feat: add thin Pi adapter mounting ECC's canonical skills and commands  Adds first-class Pi (@earendil-works/pi-coding-agent) support as a thin adapter layer, following the maintainer review on #2352. ECC's canonical assets stay the single source of truth: nothing is copied or generated under .pi/",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "eb49702|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "afa0b35",
+      "title": "fix(continuous-learning-v2): warn when the observer never survives a hook invocation (#2489) (#2606)",
+      "date": "2026-08-12T22:36:30Z",
+      "url": "https://github.com/affaan-m/ECC/commit/afa0b356495532923621856b4c42eb9a3b00369a",
+      "snippet": "* fix(continuous-learning-v2): warn when the observer never survives a hook invocation (#2489)  The observer is lazy-started from a hook process that exits immediately afterwards. start-observer.sh's liveness check runs inside that still-living process tree, so it always sees a healthy observer and ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "afa0b35|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "01e1549",
+      "title": "fix(skill-evolution): wire Skill PostToolUse tracker so skill-health shows real runs (#2490)",
+      "date": "2026-08-12T22:12:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/01e15490f04e29cfefe3896951f43db46994d8ee",
+      "snippet": "* fix(skill-evolution): wire Skill PostToolUse tracker so skill-health shows real runs (#2463)  recordSkillExecution() had no production callers, so ~/.claude/state/skill-runs.jsonl was never written and `scripts/skills-health.js --dashboard` always reported 0 runs.  Adds scripts/hooks/skill-run-tra",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "01e1549|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "fc1d118",
+      "title": "feat(skills): consolidate Itô market skills into ito-baskets; align ito-training fail-closed contract (#2770)",
+      "date": "2026-08-12T19:52:26Z",
+      "url": "https://github.com/affaan-m/ECC/commit/fc1d11839c4248c6e5b138f4b09c38f8e7500dad",
+      "snippet": "* feat(skills): consolidate Itô market skills into ito-baskets; align ito-training fail-closed contract  - Replace ito-basket-compare, ito-market-intelligence, ito-data-atlas-agent,   and ito-trade-planner with one read-only ito-baskets skill (index, compare,   brief, worksheet modes) preserving eve",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "fc1d118|gh-commits-everything-claude-code"
+    },
     {
       "id": "569b1d5",
       "title": "fix: disable Claude co-author attribution by default (#2758)",
@@ -513,50 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "85c7822|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "f782bd6",
-      "title": "fix(aura): reject history-free agents by default (#2652)",
-      "date": "2026-08-02T17:42:16Z",
-      "url": "https://github.com/affaan-m/ECC/commit/f782bd616ecdf4ccb8d956319255e711725ba4ac",
-      "snippet": "* fix(aura): reject history-free agents by default  * fix(aura): keep invalid responses fail-closed",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "f782bd6|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e4e4163",
-      "title": "fix(docs): restore main CI (#2623)",
-      "date": "2026-07-29T18:11:01Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e4e4163101f162881e628f300a9ca4e6a940bcea",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e4e4163|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "591ab5c",
-      "title": "fix(opencode): don't crash the whole session when plugins/lib is missing (#2538)",
-      "date": "2026-07-29T01:37:41Z",
-      "url": "https://github.com/affaan-m/ECC/commit/591ab5cbd3f2f65860ea91c226e410b1502c8e2e",
-      "snippet": "* fix(opencode): don't crash the whole session when plugins/lib is missing (#2530)  * fix: address review feedback (trailing newlines, symptom wording)  * fix(opencode): also lazy-load the store in ecc-hooks.ts plugin entrypoint  * test(opencode): add regression coverage for missing/present plugins/",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "591ab5c|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "837acaf",
-      "title": "fix(hooks,lib): fix hook detection and parsing edge cases (#2405)",
-      "date": "2026-07-29T01:32:42Z",
-      "url": "https://github.com/affaan-m/ECC/commit/837acaf20b360302e49a9a05abf3d708f15e84db",
-      "snippet": "* fix(hooks,lib): fix hook detection and parsing edge cases  - auto-tmux-dev: dev\\b -> dev(?![\\w-]) so one-shot dev-build/dev-docs scripts   are not detached into tmux; align command shapes (yarn run dev, bun dev) with   pre-bash-dev-server-block.js DEV_PATTERN. - pre-bash-commit-quality: skip obvio",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "837acaf|gh-commits-everything-claude-code"
     }
   ]
 }

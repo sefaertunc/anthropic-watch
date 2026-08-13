@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-12T07:27:57.295Z",
+  "generated": "2026-08-13T07:37:59.762Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "4a3e656",
+      "title": "project-artifact: document headless limitations and registry enumeration (#3110)",
+      "date": "2026-08-13T01:15:43Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/4a3e6565eae08b14c5efcb842d87dee8ae99527f",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "4a3e656|gh-commits-plugins-official"
+    },
+    {
+      "id": "222b19d",
+      "title": "security-guidance: probe for a non-PATH 3.10+ interpreter on HOOK_PY_INCOMPATIBLE (2.0.6 → 2.0.7) (#2854)",
+      "date": "2026-08-13T01:14:09Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/222b19d2d1c635c440cc490364f5a88169ee31a7",
+      "snippet": "Instrument-first for the macOS Python-3.9 cohort.  v2.0.6 telemetry: ~13.6% of macOS sessions (~6,337 users) run on Apple's Python 3.9 → HOOK_PY_INCOMPATIBLE → the agentic reviewer can't load (needs 3.10+ syntax). That's ~12x macOS's build-failure rate and the single biggest macOS degradation. sg-py",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "222b19d|gh-commits-plugins-official"
+    },
+    {
+      "id": "1e96c6b",
+      "title": "fix(telegram): v0.0.7 reliability rollup — state-dir, PID guard, ppid watchdog, install stdout (#1424)",
+      "date": "2026-08-13T01:03:09Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/1e96c6b0a0f06cad576086243f3d06397c4ddf44",
+      "snippet": "* fix(telegram): honor TELEGRAM_STATE_DIR/CLAUDE_CONFIG_DIR in skills and server  The server already reads TELEGRAM_STATE_DIR for multi-bot setups, but the /telegram:access and /telegram:configure skills hardcoded ~/.claude/channels/telegram/ in 11 places. So with a custom state dir the skill writes",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "1e96c6b|gh-commits-plugins-official"
+    },
     {
       "id": "920824c",
       "title": "Add mongodb-atlas plugin (#5113)",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "bc07f7a|gh-commits-plugins-official"
-    },
-    {
-      "id": "9e150cf",
-      "title": "Merge pull request #2086 from anthropics/fix-2082-diff-parser-non-ascii",
-      "date": "2026-05-29T15:11:25Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/9e150cfd48b87280cc76e035de04a11aa604e9c5",
-      "snippet": "security-guidance: pass core.quotePath=false to diff feeders (#2082)",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "9e150cf|gh-commits-plugins-official"
-    },
-    {
-      "id": "38b298d",
-      "title": "security-guidance: pass core.quotePath=false to diff feeders (#2082)",
-      "date": "2026-05-29T14:56:22Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/38b298d5b29ece40893d3469ee1b3fe7b234494a",
-      "snippet": "Fixes anthropics/claude-plugins-official#2082 — diff feeders use git's default quotePath setting, which C-quotes any path with a non-ASCII byte. The downstream parsers in gitutil.parse_diff_into_files / gitutil.extract_file_paths_from_diff match the diff header with `re.match(r'^a/(.+?) b/(.+)$', ..",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "38b298d|gh-commits-plugins-official"
-    },
-    {
-      "id": "8435428",
-      "title": "Merge pull request #2077 from anthropics/fix-1358-1375-1783-hook-output-protocol",
-      "date": "2026-05-29T07:20:48Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/8435428dfc0fd6e4fea1c8e505ef5022b1f0d403",
-      "snippet": "security-guidance: emit findings via hookSpecificOutput.additionalContext (#1358 #1375 #1783)",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "8435428|gh-commits-plugins-official"
     }
   ]
 }

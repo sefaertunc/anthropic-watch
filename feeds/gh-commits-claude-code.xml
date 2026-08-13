@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 12 Aug 2026 07:27:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 07:37:59 GMT</lastBuildDate>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/9923819368179d7bb11b9d623fb480bf009b2e87</link>
+      <guid isPermaLink="false">9923819</guid>
+      <pubDate>Wed, 12 Aug 2026 20:56:14 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>chore: Update CHANGELOG.md and feed.xml</title>
       <link>https://github.com/anthropics/claude-code/commit/681a8be245e7759a405e276b16ae69ea6b75076f</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 19 Jun 2026 01:20:44 GMT</pubDate>
       <category>gh-commits-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>Fix lock-closed-issues workflow: use search API instead of offset pagination (#69470)</title>
-      <link>https://github.com/anthropics/claude-code/commit/baf38ddaaa030ce9a7a63acde82ca95e90cd95f6</link>
-      <guid isPermaLink="false">baf38dd</guid>
-      <pubDate>Fri, 19 Jun 2026 00:15:49 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>The workflow has been failing daily since 2026-04-27 with HTTP 422 &quot;Pagination with the page parameter is not supported for large datasets&quot; at page=100. The repo now has ~58k closed issues and the script was paging past ~10k already-locked ones every run before reaching any candidates.  Replace list</description>
     </item>
   </channel>
 </rss>

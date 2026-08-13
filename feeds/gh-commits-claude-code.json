@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-12T07:27:57.298Z",
+  "generated": "2026-08-13T07:37:59.764Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "9923819",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-08-12T20:56:14Z",
+      "url": "https://github.com/anthropics/claude-code/commit/9923819368179d7bb11b9d623fb480bf009b2e87",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "9923819|gh-commits-claude-code"
+    },
     {
       "id": "681a8be",
       "title": "chore: Update CHANGELOG.md and feed.xml",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
       "uniqueKey": "c487902|gh-commits-claude-code"
-    },
-    {
-      "id": "baf38dd",
-      "title": "Fix lock-closed-issues workflow: use search API instead of offset pagination (#69470)",
-      "date": "2026-06-19T00:15:49Z",
-      "url": "https://github.com/anthropics/claude-code/commit/baf38ddaaa030ce9a7a63acde82ca95e90cd95f6",
-      "snippet": "The workflow has been failing daily since 2026-04-27 with HTTP 422 \"Pagination with the page parameter is not supported for large datasets\" at page=100. The repo now has ~58k closed issues and the script was paging past ~10k already-locked ones every run before reaching any candidates.  Replace list",
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "baf38dd|gh-commits-claude-code"
     }
   ]
 }

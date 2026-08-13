@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 12 Aug 2026 07:27:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 07:37:59 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.229</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.229</link>
+      <guid isPermaLink="false">v2.1.229</guid>
+      <pubDate>Wed, 12 Aug 2026 20:56:22 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Documented claude remote-control --continue for resuming the most recent Remote Control session
+- Added server-supplied Claude Code hook support for self-hosted runner sessions, matching managed-environment behavior
+- Added SSE keepalive pings to gateway streaming responses during l</description>
+    </item>
     <item>
       <title>v2.1.228</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.228</link>
@@ -501,16 +512,6 @@
 - Sub-agents can now spawn their own sub-agents (up to 5 levels deep)
 - Amazon Bedrock now reads the AWS region from ~/.aws config files when AWSREGION isn&apos;t set, matching AWS SDK precedence; /status shows where the region came from
 - Added a search bar when browsing a marketplace&apos;s p</description>
-    </item>
-    <item>
-      <title>v2.1.170</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.170</link>
-      <guid isPermaLink="false">v2.1.170</guid>
-      <pubDate>Tue, 09 Jun 2026 17:23:09 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use. Fable’s capabilities exceed those of any model we’ve ever made generally available. Update to version 2.1.170 for access. https://www.anthropic.com/news/claude-fable-5-mythos-5
-- Fixed sessions no</description>
     </item>
   </channel>
 </rss>
