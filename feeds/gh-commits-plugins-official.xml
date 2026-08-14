@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 13 Aug 2026 07:37:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 07:27:31 GMT</lastBuildDate>
+    <item>
+      <title>bump tracking: enroll 8 constant-bumpers in releases-only (#4882)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/7d48aaa124cc87605a7be242641fa115c48c28f5</link>
+      <guid isPermaLink="false">7d48aaa</guid>
+      <pubDate>Thu, 13 Aug 2026 19:41:49 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Enrolls the 8 highest-churn entries with published upstream releases in releases-only tracking (~50 bump PRs/30d between them, mostly repo churn that never touches the plugin). Entries whose latest release predates the current pin hold at the pin (forward-only) until the next release.</description>
+    </item>
     <item>
       <title>project-artifact: document headless limitations and registry enumeration (#3110)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/4a3e6565eae08b14c5efcb842d87dee8ae99527f</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 29 May 2026 20:39:45 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>URGENT: security-guidance: fix #2089 regression — split |-joined if clauses</description>
-    </item>
-    <item>
-      <title>security-guidance: 5 precise if entries fixing #2089 regression + gt support</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/bc07f7a1fd10614ed5aa7563cad47f35b4a69377</link>
-      <guid isPermaLink="false">bc07f7a</guid>
-      <pubDate>Fri, 29 May 2026 20:08:46 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>URGENT REGRESSION FIX. PR #2076 (Graphite gt workflow) gated the PostToolUse commit/push hooks with:      &quot;if&quot;: &quot;Bash(git commit:*)|Bash(gt create:*)|Bash(gt modify:*)&quot;     &quot;if&quot;: &quot;Bash(git push:*)|Bash(gt submit:*)&quot;  mirroring the regex-OR idiom that `matcher` uses (&quot;Edit|Write|MultiEdit|NotebookEdi</description>
     </item>
   </channel>
 </rss>

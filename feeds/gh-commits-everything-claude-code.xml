@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 13 Aug 2026 07:37:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 07:27:31 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2784 from affaan-m/fix/installer-hotfix-2.2</title>
+      <link>https://github.com/affaan-m/ECC/commit/c9de8f5b2b3a225bca9befa2b7700aa5e3a4d1b8</link>
+      <guid isPermaLink="false">c9de8f5</guid>
+      <pubDate>Thu, 13 Aug 2026 22:55:05 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix(install): harden ECC installer lifecycle</description>
+    </item>
+    <item>
+      <title>fix(install): arm rollback before legacy sync</title>
+      <link>https://github.com/affaan-m/ECC/commit/0a7d2787c4378969be5b77022ca7a2860b6a1d00</link>
+      <guid isPermaLink="false">0a7d278</guid>
+      <pubDate>Thu, 13 Aug 2026 22:30:39 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(security): reject Windows reparse digests</title>
+      <link>https://github.com/affaan-m/ECC/commit/42d219e0de9af5a29fb2c1e29057c38bb1d89a94</link>
+      <guid isPermaLink="false">42d219e</guid>
+      <pubDate>Thu, 13 Aug 2026 22:29:21 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(security): pin installer checkpoint reads</title>
+      <link>https://github.com/affaan-m/ECC/commit/60ab63fe21bcc1457b29da2ec4df3ac05c911107</link>
+      <guid isPermaLink="false">60ab63f</guid>
+      <pubDate>Thu, 13 Aug 2026 22:21:21 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(install): checkpoint interrupted migrations</title>
+      <link>https://github.com/affaan-m/ECC/commit/08edb1cb926d7bba018dd94da754234544d9e16a</link>
+      <guid isPermaLink="false">08edb1c</guid>
+      <pubDate>Thu, 13 Aug 2026 22:17:26 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test(uninstall): record managed copy digest</title>
+      <link>https://github.com/affaan-m/ECC/commit/9bec31faf7f38e2e11cc038b3b168809c5213df9</link>
+      <guid isPermaLink="false">9bec31f</guid>
+      <pubDate>Thu, 13 Aug 2026 22:10:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(install): close reviewed reliability gaps</title>
+      <link>https://github.com/affaan-m/ECC/commit/9e393856668d7942ebf3d32a9aa0d60b6891f951</link>
+      <guid isPermaLink="false">9e39385</guid>
+      <pubDate>Thu, 13 Aug 2026 22:03:37 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(uninstall): preserve path identity and user drift</title>
+      <link>https://github.com/affaan-m/ECC/commit/01335551a3ebd16af6f8d69aacc26fb122faedea</link>
+      <guid isPermaLink="false">0133555</guid>
+      <pubDate>Thu, 13 Aug 2026 22:02:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(uninstall): close quarantined files before removal</title>
+      <link>https://github.com/affaan-m/ECC/commit/8dc6a8e73acd6f94851ed98a71c9887ca55eb30a</link>
+      <guid isPermaLink="false">8dc6a8e</guid>
+      <pubDate>Thu, 13 Aug 2026 21:30:38 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(security): verify legacy files after opening</title>
+      <link>https://github.com/affaan-m/ECC/commit/efdf17b034703f8b299ae9f17910c0620615b129</link>
+      <guid isPermaLink="false">efdf17b</guid>
+      <pubDate>Thu, 13 Aug 2026 21:20:48 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>feat: thin Pi adapter mounting ECC&apos;s canonical skills and commands (#2759)</title>
       <link>https://github.com/affaan-m/ECC/commit/eb4970265169fec82371c92f615e2e133d875e27</link>
@@ -326,86 +406,6 @@
       <pubDate>Wed, 05 Aug 2026 01:42:25 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* feat: add retention feedback loop  * test: retire obsolete README parity row guard  * fix: harden public feedback guidance  * fix: let feedback CLI output flush  * test: keep feedback help coverage focused</description>
-    </item>
-    <item>
-      <title>fix(hooks): never format installed plugin and marketplace clones (#2667)</title>
-      <link>https://github.com/affaan-m/ECC/commit/7a5757e6c0d7e8e1080d30169b4b044d76e0f7fc</link>
-      <guid isPermaLink="false">7a5757e</guid>
-      <pubDate>Tue, 04 Aug 2026 21:14:37 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The Stop hook formats every JS/TS file edited during a response, grouped by the project root each file happens to sit in. That includes trees under .claude/plugins, which are third-party checkouts we only read.  Formatting them writes to code the user does not own. It also does real damage when a re</description>
-    </item>
-    <item>
-      <title>fix(hooks): catch the bypass short flag anywhere in a cluster (#2668)</title>
-      <link>https://github.com/affaan-m/ECC/commit/a8c6da485d144f44d31b74c4a8d4e78b8f04d572</link>
-      <guid isPermaLink="false">a8c6da4</guid>
-      <pubDate>Tue, 04 Aug 2026 21:08:56 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>isCommitNoVerifyShortFlag anchored on the first character, so it only recognised the flag when it led the cluster. Git clusters short options, which means git commit -an is -a plus the bypass flag and skips the hooks. -sn and -vn slip through the same way, while -na and -nm are caught — the differen</description>
-    </item>
-    <item>
-      <title>fix(install): exclude ECC skills from antigravity install target (#2680)</title>
-      <link>https://github.com/affaan-m/ECC/commit/f235549cb8370f7ab475700a786b3d0b98bfda29</link>
-      <guid isPermaLink="false">f235549</guid>
-      <pubDate>Tue, 04 Aug 2026 20:57:27 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix: exclude ECC skills from antigravity install target  * test(install): cover antigravity skills exclusion  Two tests encoded the collision the parent commit fixes.  install-manifests used skills/example as its example of a supported antigravity path; it now asserts skills are filtered and uses </description>
-    </item>
-    <item>
-      <title>fix(continuous-learning): /evolve never produces skill or agent candidates (#2664)</title>
-      <link>https://github.com/affaan-m/ECC/commit/8a97868b5b7d2d39e9d02bed26b425baa9cd3afa</link>
-      <guid isPermaLink="false">8a97868</guid>
-      <pubDate>Tue, 04 Aug 2026 20:57:24 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(continuous-learning): cluster instincts by keyword overlap in /evolve  `cmd_evolve` grouped instincts by exact string equality of the whole normalized trigger sentence. Triggers are free-form sentences, so every instinct landed in its own bucket and `skill_candidates` was always empty. `agent_</description>
-    </item>
-    <item>
-      <title>fix(deps): bump fast-uri to 3.1.5 and brace-expansion to 5.0.9 (#2672)</title>
-      <link>https://github.com/affaan-m/ECC/commit/2665d48ae604b585d0bafb69c3a8e8dca9a15be5</link>
-      <guid isPermaLink="false">2665d48</guid>
-      <pubDate>Tue, 04 Aug 2026 16:36:54 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>npm audit --audit-level=high fails CI on two new high-severity advisories:  - fast-uri GHSA-7p8r-x3mc-p8w7 (host confusion via backslash   authority introducer) — pinned at 3.1.4 via overrides/resolutions;   bump pins to the patched 3.1.5 (still within ajv&apos;s ^3.0.1 range) - brace-expansion GHSA-rgw5</description>
-    </item>
-    <item>
-      <title>test(lib): extract shared mini test runner for coordination tests (#2663)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ff15079b9f9852c385ac3a506f8ec3a26be4f563</link>
-      <guid isPermaLink="false">ff15079</guid>
-      <pubDate>Tue, 04 Aug 2026 04:29:31 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Address CodeRabbit review on #2311: dedupe the local test(name, fn) harness and route all reporter output through a shared helper (tests/lib/helpers/mini-test-runner.js) instead of direct console.log.</description>
-    </item>
-    <item>
-      <title>fix(commands): probe for auto-update.js in auto-update ECC_ROOT resolver (#2462)</title>
-      <link>https://github.com/affaan-m/ECC/commit/203aac77100672914419a885cecae0f10b4ab016</link>
-      <guid isPermaLink="false">203aac7</guid>
-      <pubDate>Tue, 04 Aug 2026 04:28:59 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The auto-update command&apos;s inline ECC_ROOT resolver delegates to resolveEccRoot() with the default probe (scripts/lib/utils.js). A hooks-runtime-only install copies scripts/lib/ into ~/.claude, so the partial install satisfies the probe and shadows the full plugin root under ~/.claude/plugins/marketp</description>
-    </item>
-    <item>
-      <title>fix(mcp): accept reserved _meta field in tools/call params (#2670)</title>
-      <link>https://github.com/affaan-m/ECC/commit/7b76082b13278d8b449a39fef25aafed6d4fee28</link>
-      <guid isPermaLink="false">7b76082</guid>
-      <pubDate>Tue, 04 Aug 2026 04:28:09 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(mcp): accept reserved _meta field in tools/call params  The memory MCP server rejected any tools/call whose params contained a key other than name/arguments, returning -32602 &quot;Unknown or missing memory tool.&quot;  MCP clients (e.g. Claude Code) attach the spec-reserved `_meta` field (such as progr</description>
-    </item>
-    <item>
-      <title>fix: add claude-opus-5 to KNOWN_MODEL_WINDOW_TOKENS (#2609)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ab373716e7c996084fd8383fca210063a87773e7</link>
-      <guid isPermaLink="false">ab37371</guid>
-      <pubDate>Tue, 04 Aug 2026 04:27:33 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix: add claude-opus-5 to KNOWN_MODEL_WINDOW_TOKENS  claude-opus-5 has a 1M context window (verified: 250k tokens at 25% usage = ~1M), but was missing from the model table. This caused resolveContextWindowTokens() to fall back to the 200k default when tokens &lt; 200k, incorrectly triggering compact </description>
-    </item>
-    <item>
-      <title>fix(commands): generate discoverable skills from learning workflows (#2653)</title>
-      <link>https://github.com/affaan-m/ECC/commit/85c7822c4a9e076aa7824b86dc5e24d65ce64a65</link>
-      <guid isPermaLink="false">85c7822</guid>
-      <pubDate>Sun, 02 Aug 2026 18:39:29 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Carry #2246 forward on current main with native SKILL.md discovery, guarded writes, portable metadata, and fail-closed validation.</description>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-13T07:37:59.762Z",
+  "generated": "2026-08-14T07:27:31.017Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "7d48aaa",
+      "title": "bump tracking: enroll 8 constant-bumpers in releases-only (#4882)",
+      "date": "2026-08-13T19:41:49Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/7d48aaa124cc87605a7be242641fa115c48c28f5",
+      "snippet": "Enrolls the 8 highest-churn entries with published upstream releases in releases-only tracking (~50 bump PRs/30d between them, mostly repo churn that never touches the plugin). Entries whose latest release predates the current pin hold at the pin (forward-only) until the next release.",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "7d48aaa|gh-commits-plugins-official"
+    },
     {
       "id": "4a3e656",
       "title": "project-artifact: document headless limitations and registry enumeration (#3110)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "42487ee|gh-commits-plugins-official"
-    },
-    {
-      "id": "bc07f7a",
-      "title": "security-guidance: 5 precise if entries fixing #2089 regression + gt support",
-      "date": "2026-05-29T20:08:46Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/bc07f7a1fd10614ed5aa7563cad47f35b4a69377",
-      "snippet": "URGENT REGRESSION FIX. PR #2076 (Graphite gt workflow) gated the PostToolUse commit/push hooks with:      \"if\": \"Bash(git commit:*)|Bash(gt create:*)|Bash(gt modify:*)\"     \"if\": \"Bash(git push:*)|Bash(gt submit:*)\"  mirroring the regex-OR idiom that `matcher` uses (\"Edit|Write|MultiEdit|NotebookEdi",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "bc07f7a|gh-commits-plugins-official"
     }
   ]
 }

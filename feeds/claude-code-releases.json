@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-13T07:37:59.724Z",
+  "generated": "2026-08-14T07:27:30.985Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.232",
+      "title": "v2.1.232",
+      "date": "2026-08-13T23:29:59Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+      "snippet": "What's changed\n- Subagent forking is now on by default: a subagenttype: \"fork\" subagent inherits the full conversation and prompt cache, and non-teammate agent spawns in interactive sessions now run in the background by default\n- Type @ in the prompt to mention another Claude session by name; Claude",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.232|claude-code-releases"
+    },
+    {
+      "id": "v2.1.231",
+      "title": "v2.1.231",
+      "date": "2026-08-13T08:38:50Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.231",
+      "snippet": "What's changed\n- Fixed MCP OAuth sign-in failing with a redirect URI mismatch for servers that use a pre-registered OAuth client, such as Slack",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.231|claude-code-releases"
+    },
     {
       "id": "v2.1.229",
       "title": "v2.1.229",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.174|claude-code-releases"
-    },
-    {
-      "id": "v2.1.173",
-      "title": "v2.1.173",
-      "date": "2026-06-11T05:41:54Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.173",
-      "snippet": "What's changed\n- Fixed Fable 5 model names with a [1m] suffix not being normalized — Fable 5 includes 1M context by default, so the suffix is now stripped automatically\n- Fixed a spurious \"sandbox dependencies missing\" startup warning on Windows when sandbox was enabled in settings",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.173|claude-code-releases"
-    },
-    {
-      "id": "v2.1.172",
-      "title": "v2.1.172",
-      "date": "2026-06-10T20:44:15Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.172",
-      "snippet": "What's changed\n- Sub-agents can now spawn their own sub-agents (up to 5 levels deep)\n- Amazon Bedrock now reads the AWS region from ~/.aws config files when AWSREGION isn't set, matching AWS SDK precedence; /status shows where the region came from\n- Added a search bar when browsing a marketplace's p",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.172|claude-code-releases"
     }
   ]
 }

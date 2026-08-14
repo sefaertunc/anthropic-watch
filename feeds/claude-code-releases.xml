@@ -6,7 +6,26 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 13 Aug 2026 07:37:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 07:27:30 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.232</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.232</link>
+      <guid isPermaLink="false">v2.1.232</guid>
+      <pubDate>Thu, 13 Aug 2026 23:29:59 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Subagent forking is now on by default: a subagenttype: &quot;fork&quot; subagent inherits the full conversation and prompt cache, and non-teammate agent spawns in interactive sessions now run in the background by default
+- Type @ in the prompt to mention another Claude session by name; Claude</description>
+    </item>
+    <item>
+      <title>v2.1.231</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.231</link>
+      <guid isPermaLink="false">v2.1.231</guid>
+      <pubDate>Thu, 13 Aug 2026 08:38:50 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed MCP OAuth sign-in failing with a redirect URI mismatch for servers that use a pre-registered OAuth client, such as Slack</description>
+    </item>
     <item>
       <title>v2.1.229</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.229</link>
@@ -491,27 +510,6 @@
       <description>What&apos;s changed
 - Added wheelScrollAccelerationEnabled setting to disable mouse-wheel scroll acceleration in fullscreen mode
 - Fixed the /model picker hiding the model family that Default resolves to — Opus now appears as its own row on Max/Team Premium/Enterprise plans, Sonnet on Pro/Team plans, and</description>
-    </item>
-    <item>
-      <title>v2.1.173</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.173</link>
-      <guid isPermaLink="false">v2.1.173</guid>
-      <pubDate>Thu, 11 Jun 2026 05:41:54 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed Fable 5 model names with a [1m] suffix not being normalized — Fable 5 includes 1M context by default, so the suffix is now stripped automatically
-- Fixed a spurious &quot;sandbox dependencies missing&quot; startup warning on Windows when sandbox was enabled in settings</description>
-    </item>
-    <item>
-      <title>v2.1.172</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.172</link>
-      <guid isPermaLink="false">v2.1.172</guid>
-      <pubDate>Wed, 10 Jun 2026 20:44:15 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Sub-agents can now spawn their own sub-agents (up to 5 levels deep)
-- Amazon Bedrock now reads the AWS region from ~/.aws config files when AWSREGION isn&apos;t set, matching AWS SDK precedence; /status shows where the region came from
-- Added a search bar when browsing a marketplace&apos;s p</description>
     </item>
   </channel>
 </rss>
