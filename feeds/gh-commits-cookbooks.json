@@ -5,9 +5,108 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-14T07:27:31.014Z",
+  "generated": "2026-08-15T06:41:28.368Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "35f2eec",
+      "title": "Merge pull request #834 from anthropics/aravind-ant/fix-mdx-compile",
+      "date": "2026-08-14T20:50:15Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/35f2eec7e44897c537e44441b7dff2f0ecbfb804",
+      "snippet": "fix(content_moderation): replace bare <link> token that fails the site's MDX compile",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "35f2eec|gh-commits-cookbooks"
+    },
+    {
+      "id": "2a3204e",
+      "title": "Replace bare <link> token that fails the site's MDX compile",
+      "date": "2026-08-14T20:46:37Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/2a3204e9f784da1c3d2352dfa2c236b9c9abb2ba",
+      "snippet": "A literal <link> in one prose sentence parses as an unclosed tag in the site's MDX pipeline, failing the rich compile for the whole page and degrading all inline code and fenced blocks to plain text. Verified with @mdx-js/mdx: fails before, compiles clean after.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "2a3204e|gh-commits-cookbooks"
+    },
+    {
+      "id": "7eca2b4",
+      "title": "Merge pull request #833 from anthropics/aravind-ant/fix-md-fences",
+      "date": "2026-08-14T20:11:57Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/7eca2b4f6f1b7849e4500d55ce65ae6ab8292173",
+      "snippet": "fix(content_moderation): make markdown code fences render on the cookbook site",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "7eca2b4|gh-commits-cookbooks"
+    },
+    {
+      "id": "21b9fe1",
+      "title": "Fix markdown code fences for the cookbook site renderer",
+      "date": "2026-08-14T19:52:19Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/21b9fe1f9dfa671a0a6b273c02c7826c1f6cf468",
+      "snippet": "A leading comment line inside a fence gets promoted to a heading and breaks the fence, and the jsonc language tag is not recognized. Remove the three label comments and use json.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "21b9fe1|gh-commits-cookbooks"
+    },
+    {
+      "id": "92a6938",
+      "title": "Merge pull request #832 from anthropics/aravind-ant/fix-diagram-and-format",
+      "date": "2026-08-14T19:21:57Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/92a693802a54d8d1f36fb36e52fbf7a8efa74b6d",
+      "snippet": "fix(content_moderation): render architecture diagram on the cookbook site",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "92a6938|gh-commits-cookbooks"
+    },
+    {
+      "id": "2dd4d9e",
+      "title": "Fix architecture diagram rendering on the cookbook site and align formatting",
+      "date": "2026-08-14T19:07:07Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/2dd4d9ea4ade391e8da8a130ccaea2a9460c6bc1",
+      "snippet": "The diagram was embedded as a markdown cell attachment, which GitHub renders but the site's notebook converter does not. Display it as a code cell output instead, which both render. Also format two files with the repo's pinned ruff.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "2dd4d9e|gh-commits-cookbooks"
+    },
+    {
+      "id": "9148d36",
+      "title": "Merge pull request #831 from anthropics/aravind-ant/content-moderation-cookbook",
+      "date": "2026-08-14T18:03:50Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/9148d36f5d1c3a8ec1a331a6b4ad63bb00789e45",
+      "snippet": "feat(capabilities): add content moderation cookbook",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "9148d36|gh-commits-cookbooks"
+    },
+    {
+      "id": "3743210",
+      "title": "Address review: lazy client init, clearer error paths, type hints, uv install note",
+      "date": "2026-08-14T16:42:32Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/3743210cd995cec652742c6d5854e8d3962cf049",
+      "snippet": null,
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "3743210|gh-commits-cookbooks"
+    },
+    {
+      "id": "5a2576e",
+      "title": "Add content moderation cookbook",
+      "date": "2026-08-14T16:21:15Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/5a2576e211ba6bb6a2698cd14989d4091398f441",
+      "snippet": "Compile a written content policy into deterministic JSON rules with Claude, extract typed fields from text and images, and produce auditable verdicts from a rule engine that never calls a model. Three worked domains with labeled samples and a standalone evaluation script.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "5a2576e|gh-commits-cookbooks"
+    },
     {
       "id": "93ea00c",
       "title": "Merge pull request #825 from anthropics/benlehrburger/cost-optimization-description",
@@ -458,105 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "4c55042|gh-commits-cookbooks"
-    },
-    {
-      "id": "14c14bc",
-      "title": "chore(hosting): ruff format + lint fixes",
-      "date": "2026-05-29T02:53:49Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/14c14bc2f7d02551fbd99d0d41a6b62632f77815",
-      "snippet": null,
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "14c14bc|gh-commits-cookbooks"
-    },
-    {
-      "id": "31cfc00",
-      "title": "Merge pull request #677 from anthropics/kevintang/agent-sdk-hosting-public",
-      "date": "2026-05-28T18:03:18Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/31cfc00ca5e8049a23a410d1fee0dd8428104cad",
-      "snippet": "Agent SDK cookbook 07: Hosting your agent (Docker / Modal / Kubernetes)",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "31cfc00|gh-commits-cookbooks"
-    },
-    {
-      "id": "2ec3c49",
-      "title": "feat(claude_agent_sdk): add hosting cookbook — Docker, Modal, and Kubernetes tiers",
-      "date": "2026-05-28T00:07:03Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/2ec3c494e3ebc2ebcde5f9f243fbffd71f33b199",
-      "snippet": null,
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "2ec3c49|gh-commits-cookbooks"
-    },
-    {
-      "id": "3c30b02",
-      "title": "ci: migrate claude-code-action workflows to Workload Identity Federation (#662)",
-      "date": "2026-05-24T21:44:59Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/3c30b020594de29a7f24ee579c511ac3ac45fb6a",
-      "snippet": "Replaces the static ANTHROPIC_API_KEY repo secret with Workload Identity Federation across the 6 workflows that invoke claude-code-action: the action exchanges this job's GitHub OIDC token for a short-lived access token. The federation rule is bound to this repository (repository_id-pinned).  - Adds",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "3c30b02|gh-commits-cookbooks"
-    },
-    {
-      "id": "39a350b",
-      "title": "Merge pull request #601 from anthropics/devsec/pin-actions",
-      "date": "2026-05-19T18:32:24Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/39a350b6790c132337dcc3ec35240728fcc1dc0e",
-      "snippet": "Pin GitHub Actions to commit SHAs",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "39a350b|gh-commits-cookbooks"
-    },
-    {
-      "id": "d4a1fb5",
-      "title": "Merge pull request #602 from anthropics/devsec/pin-pre-commit",
-      "date": "2026-05-19T18:32:21Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/d4a1fb5e84000a310fc5cc62545df68f6233e52f",
-      "snippet": "Pin pre-commit hooks to commit SHAs",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "d4a1fb5|gh-commits-cookbooks"
-    },
-    {
-      "id": "2eed173",
-      "title": "Merge pull request #643 from anthropics/rlm/scrub-cma-notebooks",
-      "date": "2026-05-19T13:49:46Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/2eed173a533a690eb70ab324614ce5350776a23a",
-      "snippet": "refactor(self_hosted_sandboxes): rename private-sandbox → self-hosted-sandbox",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "2eed173|gh-commits-cookbooks"
-    },
-    {
-      "id": "01b041a",
-      "title": "refactor(self_hosted_sandboxes): rename private-sandbox → self-hosted-sandbox in artifacts and titles",
-      "date": "2026-05-19T13:40:31Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/01b041a64c08190ef0f5359270d4966605831144",
-      "snippet": "Align all deploy artifact names and README titles with the self_hosted language used in the directory/feature name.  - README H1s (6): 'CMA Private Sandboxes' → 'Self-Hosted Sandboxes' - wrangler.toml names (cf, cf-worker) - package.json names (cf, cf-worker, vercel) - vercel runner package name in ",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "01b041a|gh-commits-cookbooks"
-    },
-    {
-      "id": "1a4f78a",
-      "title": "Merge pull request #640 from anthropics/rlm/private-sandbox-updates",
-      "date": "2026-05-19T07:51:49Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/1a4f78a64a894fc2796072f76fb1041c218544cc",
-      "snippet": "feat(managed_agents): sandbox worker templates",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "1a4f78a|gh-commits-cookbooks"
     }
   ]
 }

@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 14 Aug 2026 07:27:30 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 06:41:28 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.233</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.233</link>
+      <guid isPermaLink="false">v2.1.233</guid>
+      <pubDate>Fri, 14 Aug 2026 22:20:57 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added GitLab merge request URL support to the --worktree flag and the claude agents view (where MRs display as !N)
+- Added an opt-in forwarduseridentity apps gateway setting on Anthropic upstreams that sends the signed-in user&apos;s identity as headers, so a proxy behind the gateway can</description>
+    </item>
     <item>
       <title>v2.1.232</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.232</link>
@@ -500,16 +510,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Added enforceAvailableModels managed setting — when enabled, the availableModels allowlist also constrains the Default model (a Default that would resolve to a disallowed model now falls back to the first allowed model), and user or project settings can no longer widen a managed ava</description>
-    </item>
-    <item>
-      <title>v2.1.174</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.174</link>
-      <guid isPermaLink="false">v2.1.174</guid>
-      <pubDate>Fri, 12 Jun 2026 01:16:36 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added wheelScrollAccelerationEnabled setting to disable mouse-wheel scroll acceleration in fullscreen mode
-- Fixed the /model picker hiding the model family that Default resolves to — Opus now appears as its own row on Max/Team Premium/Enterprise plans, Sonnet on Pro/Team plans, and</description>
     </item>
   </channel>
 </rss>

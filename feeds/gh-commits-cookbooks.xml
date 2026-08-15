@@ -6,7 +6,79 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 14 Aug 2026 07:27:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 06:41:28 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #834 from anthropics/aravind-ant/fix-mdx-compile</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/35f2eec7e44897c537e44441b7dff2f0ecbfb804</link>
+      <guid isPermaLink="false">35f2eec</guid>
+      <pubDate>Fri, 14 Aug 2026 20:50:15 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>fix(content_moderation): replace bare &lt;link&gt; token that fails the site&apos;s MDX compile</description>
+    </item>
+    <item>
+      <title>Replace bare &lt;link&gt; token that fails the site&apos;s MDX compile</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/2a3204e9f784da1c3d2352dfa2c236b9c9abb2ba</link>
+      <guid isPermaLink="false">2a3204e</guid>
+      <pubDate>Fri, 14 Aug 2026 20:46:37 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>A literal &lt;link&gt; in one prose sentence parses as an unclosed tag in the site&apos;s MDX pipeline, failing the rich compile for the whole page and degrading all inline code and fenced blocks to plain text. Verified with @mdx-js/mdx: fails before, compiles clean after.</description>
+    </item>
+    <item>
+      <title>Merge pull request #833 from anthropics/aravind-ant/fix-md-fences</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/7eca2b4f6f1b7849e4500d55ce65ae6ab8292173</link>
+      <guid isPermaLink="false">7eca2b4</guid>
+      <pubDate>Fri, 14 Aug 2026 20:11:57 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>fix(content_moderation): make markdown code fences render on the cookbook site</description>
+    </item>
+    <item>
+      <title>Fix markdown code fences for the cookbook site renderer</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/21b9fe1f9dfa671a0a6b273c02c7826c1f6cf468</link>
+      <guid isPermaLink="false">21b9fe1</guid>
+      <pubDate>Fri, 14 Aug 2026 19:52:19 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>A leading comment line inside a fence gets promoted to a heading and breaks the fence, and the jsonc language tag is not recognized. Remove the three label comments and use json.</description>
+    </item>
+    <item>
+      <title>Merge pull request #832 from anthropics/aravind-ant/fix-diagram-and-format</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/92a693802a54d8d1f36fb36e52fbf7a8efa74b6d</link>
+      <guid isPermaLink="false">92a6938</guid>
+      <pubDate>Fri, 14 Aug 2026 19:21:57 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>fix(content_moderation): render architecture diagram on the cookbook site</description>
+    </item>
+    <item>
+      <title>Fix architecture diagram rendering on the cookbook site and align formatting</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/2dd4d9ea4ade391e8da8a130ccaea2a9460c6bc1</link>
+      <guid isPermaLink="false">2dd4d9e</guid>
+      <pubDate>Fri, 14 Aug 2026 19:07:07 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>The diagram was embedded as a markdown cell attachment, which GitHub renders but the site&apos;s notebook converter does not. Display it as a code cell output instead, which both render. Also format two files with the repo&apos;s pinned ruff.</description>
+    </item>
+    <item>
+      <title>Merge pull request #831 from anthropics/aravind-ant/content-moderation-cookbook</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/9148d36f5d1c3a8ec1a331a6b4ad63bb00789e45</link>
+      <guid isPermaLink="false">9148d36</guid>
+      <pubDate>Fri, 14 Aug 2026 18:03:50 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>feat(capabilities): add content moderation cookbook</description>
+    </item>
+    <item>
+      <title>Address review: lazy client init, clearer error paths, type hints, uv install note</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/3743210cd995cec652742c6d5854e8d3962cf049</link>
+      <guid isPermaLink="false">3743210</guid>
+      <pubDate>Fri, 14 Aug 2026 16:42:32 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add content moderation cookbook</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/5a2576e211ba6bb6a2698cd14989d4091398f441</link>
+      <guid isPermaLink="false">5a2576e</guid>
+      <pubDate>Fri, 14 Aug 2026 16:21:15 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Compile a written content policy into deterministic JSON rules with Claude, extract typed fields from text and images, and produce auditable verdicts from a rule engine that never calls a model. Three worked domains with labeled samples and a standalone evaluation script.</description>
+    </item>
     <item>
       <title>Merge pull request #825 from anthropics/benlehrburger/cost-optimization-description</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/93ea00c906248f67074a32d69cc3b560af020bf0</link>
@@ -334,78 +406,6 @@
       <pubDate>Fri, 29 May 2026 02:55:17 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>- server.py, gateway/main.py: note that _limit_body_size only checks   Content-Length; chunked bodies pass through (review #1) - gateway/main.py: strip token:tenant pairs and skip malformed entries   when parsing GATEWAY_TENANTS; log loaded count (review #2) - requirements.txt, server.py _remember, </description>
-    </item>
-    <item>
-      <title>chore(hosting): ruff format + lint fixes</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/14c14bc2f7d02551fbd99d0d41a6b62632f77815</link>
-      <guid isPermaLink="false">14c14bc</guid>
-      <pubDate>Fri, 29 May 2026 02:53:49 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #677 from anthropics/kevintang/agent-sdk-hosting-public</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/31cfc00ca5e8049a23a410d1fee0dd8428104cad</link>
-      <guid isPermaLink="false">31cfc00</guid>
-      <pubDate>Thu, 28 May 2026 18:03:18 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Agent SDK cookbook 07: Hosting your agent (Docker / Modal / Kubernetes)</description>
-    </item>
-    <item>
-      <title>feat(claude_agent_sdk): add hosting cookbook — Docker, Modal, and Kubernetes tiers</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/2ec3c494e3ebc2ebcde5f9f243fbffd71f33b199</link>
-      <guid isPermaLink="false">2ec3c49</guid>
-      <pubDate>Thu, 28 May 2026 00:07:03 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description/>
-    </item>
-    <item>
-      <title>ci: migrate claude-code-action workflows to Workload Identity Federation (#662)</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/3c30b020594de29a7f24ee579c511ac3ac45fb6a</link>
-      <guid isPermaLink="false">3c30b02</guid>
-      <pubDate>Sun, 24 May 2026 21:44:59 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Replaces the static ANTHROPIC_API_KEY repo secret with Workload Identity Federation across the 6 workflows that invoke claude-code-action: the action exchanges this job&apos;s GitHub OIDC token for a short-lived access token. The federation rule is bound to this repository (repository_id-pinned).  - Adds</description>
-    </item>
-    <item>
-      <title>Merge pull request #601 from anthropics/devsec/pin-actions</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/39a350b6790c132337dcc3ec35240728fcc1dc0e</link>
-      <guid isPermaLink="false">39a350b</guid>
-      <pubDate>Tue, 19 May 2026 18:32:24 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Pin GitHub Actions to commit SHAs</description>
-    </item>
-    <item>
-      <title>Merge pull request #602 from anthropics/devsec/pin-pre-commit</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/d4a1fb5e84000a310fc5cc62545df68f6233e52f</link>
-      <guid isPermaLink="false">d4a1fb5</guid>
-      <pubDate>Tue, 19 May 2026 18:32:21 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Pin pre-commit hooks to commit SHAs</description>
-    </item>
-    <item>
-      <title>Merge pull request #643 from anthropics/rlm/scrub-cma-notebooks</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/2eed173a533a690eb70ab324614ce5350776a23a</link>
-      <guid isPermaLink="false">2eed173</guid>
-      <pubDate>Tue, 19 May 2026 13:49:46 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>refactor(self_hosted_sandboxes): rename private-sandbox → self-hosted-sandbox</description>
-    </item>
-    <item>
-      <title>refactor(self_hosted_sandboxes): rename private-sandbox → self-hosted-sandbox in artifacts and titles</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/01b041a64c08190ef0f5359270d4966605831144</link>
-      <guid isPermaLink="false">01b041a</guid>
-      <pubDate>Tue, 19 May 2026 13:40:31 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Align all deploy artifact names and README titles with the self_hosted language used in the directory/feature name.  - README H1s (6): &apos;CMA Private Sandboxes&apos; → &apos;Self-Hosted Sandboxes&apos; - wrangler.toml names (cf, cf-worker) - package.json names (cf, cf-worker, vercel) - vercel runner package name in </description>
-    </item>
-    <item>
-      <title>Merge pull request #640 from anthropics/rlm/private-sandbox-updates</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/1a4f78a64a894fc2796072f76fb1041c218544cc</link>
-      <guid isPermaLink="false">1a4f78a</guid>
-      <pubDate>Tue, 19 May 2026 07:51:49 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>feat(managed_agents): sandbox worker templates</description>
     </item>
   </channel>
 </rss>
