@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 16 Aug 2026 06:42:29 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 06:59:35 GMT</lastBuildDate>
+    <item>
+      <title>feat: add using-lwc skill (#1152)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1f67c44dc9aeaad2baa5130460a1f850d357a9ff</link>
+      <guid isPermaLink="false">1f67c44</guid>
+      <pubDate>Mon, 17 Aug 2026 02:07:58 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: add parameterized iridescent UI workbench skill (#1154)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c9cf5018b3c24a59db207e599776640b87c7d95f</link>
+      <guid isPermaLink="false">c9cf501</guid>
+      <pubDate>Mon, 17 Aug 2026 02:04:39 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: resolve release identity with npm &gt;= 12 array-shaped --json output (#1167)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/da068f3604e5458b2b271ff841dc39075d95e526</link>
+      <guid isPermaLink="false">da068f3</guid>
+      <pubDate>Mon, 17 Aug 2026 02:01:18 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: allow zero-diff fork preflight (#1173)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/34c9ed03ea39b1b55805cb57392ed49f6944822d</link>
+      <guid isPermaLink="false">34c9ed0</guid>
+      <pubDate>Mon, 17 Aug 2026 01:56:32 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Allow the trusted fork-safety preflight to accept a zero-file Git diff. This completes the protected contributor-credit workflow after reviewed content has already landed through a maintainer intake PR.  The special case is confined to `evaluateForkSafety` after repositor</description>
+    </item>
+    <item>
+      <title>fix: classify zero-diff contributor PRs (#1172)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4f107662990628903efdbbcd92706dcc7b39dd4b</link>
+      <guid isPermaLink="false">4f10766</guid>
+      <pubDate>Mon, 17 Aug 2026 01:47:20 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Complete the zero-diff maintainer workflow by treating an authoritative empty merge-base-to-head raw diff as approval-safe inside `merge:batch`. The general workflow classifier remains fail-closed when change records are missing in any other context.  The regression test </description>
+    </item>
+    <item>
+      <title>fix: allow zero-diff contributor merges (#1171)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c7236773af0b90ef34d4250ce01d9226423f903e</link>
+      <guid isPermaLink="false">c723677</guid>
+      <pubDate>Mon, 17 Aug 2026 01:41:35 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Allow `npm run merge:batch` to accept an empty raw Git diff. This preserves the protected maintainer workflow for contributor PRs whose reviewed content has already landed through a same-repository intake PR, while retaining strict parsing for every non-empty diff.  The r</description>
+    </item>
+    <item>
+      <title>fix: protected maintenance intake for external PRs (#1169)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3ff3635944bfe705a36726a2a89522ebf3038359</link>
+      <guid isPermaLink="false">3ff3635</guid>
+      <pubDate>Mon, 17 Aug 2026 01:21:49 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Protected maintainer intake for the three external PRs that cannot pass the fork-safety gate directly:  - #1167: accept npm 12&apos;s single-element `npm view --json` array while rejecting empty or ambiguous output. - #1154: import the two-mode iridescent workbench and repair </description>
+    </item>
+    <item>
+      <title>feat: refresh UIZZE anti-ui-slop skill (#1166)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/23624d03ca0ad7f7ea76fe7002564529020dac4d</link>
+      <guid isPermaLink="false">23624d0</guid>
+      <pubDate>Mon, 17 Aug 2026 00:55:37 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Refreshes the canonical UIZZE anti-ui-slop skill entry for this high-reach Agent Skills directory.\n\n- Source: https://github.com/uizze/uizze\n- Product: https://uizze.com\n- Install: `npx skills add https://uizze.com --skill anti-ui-slop`\n- Grounded in 800,000+ real web and iOS screens\n- Free lo</description>
+    </item>
     <item>
       <title>fix: update nanoid to 3.3.18 (#1150)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/b28e9633a0c6c74d407a7b58a8ac7d8dd9369287</link>
@@ -340,70 +404,6 @@
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/2d432a111df3aef9aa8086f5c1be5c11c48df89c</link>
       <guid isPermaLink="false">2d432a1</guid>
       <pubDate>Sun, 02 Aug 2026 07:41:30 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add unified-ai-gateway skill (#1061)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6931aad2f12c81cd7158e279224a105c93e82394</link>
-      <guid isPermaLink="false">6931aad</guid>
-      <pubDate>Sun, 02 Aug 2026 06:50:07 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add gh-attach skill (#1060)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/526402f1df3513691c021964bb944330d8dd1a13</link>
-      <guid isPermaLink="false">526402f</guid>
-      <pubDate>Sat, 01 Aug 2026 20:45:04 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Adds `gh-attach`, a `gh` CLI extension that uploads and downloads GitHub `user-attachments` (screenshots, PDFs, zips, logs, videos) from the terminal. It mints `github.com/user-attachments` URLs whose visibility follows the target repository, so private uploads stay private, and it supports GitHub E</description>
-    </item>
-    <item>
-      <title>chore: release v15.7.1 (#1059)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d43065e483d9057e5c5dd50ca3647652ca7c0b43</link>
-      <guid isPermaLink="false">d43065e</guid>
-      <pubDate>Fri, 31 Jul 2026 17:43:41 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v15.7.1.</description>
-    </item>
-    <item>
-      <title>docs: add v15.7.1 release notes (#1058)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/66d4e6adfc5ad3774a72a39ad772d48ee3282864</link>
-      <guid isPermaLink="false">66d4e6a</guid>
-      <pubDate>Fri, 31 Jul 2026 17:17:02 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Add the protected changelog entry required before preparing release v15.7.1.</description>
-    </item>
-    <item>
-      <title>feat: add Fact-Check-X multi-platform verification skill (#1049)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/182f86e8277773d927719b3a0bd7c65ba185e187</link>
-      <guid isPermaLink="false">182f86e</guid>
-      <pubDate>Fri, 31 Jul 2026 16:56:34 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add cowork-to-code-bridge skill (#1046)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8a2d0a076592371037c09f96c87e4b2acb28a671</link>
-      <guid isPermaLink="false">8a2d0a0</guid>
-      <pubDate>Fri, 31 Jul 2026 16:44:26 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Adds a skill for reaching the user&apos;s own machine from a sandboxed agent.  **What it does.** A deployed/sandboxed agent can reason about the user&apos;s development machine but cannot reach it — the filesystem, toolchain, local Docker daemon and git credentials are all on the other side. This skill queues</description>
-    </item>
-    <item>
-      <title>feat: make FindMate surface owner complement gaps (#1011)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8bf7e3901481fb169ba8aa0177bd25ef9ce52d5d</link>
-      <guid isPermaLink="false">8bf7e39</guid>
-      <pubDate>Fri, 31 Jul 2026 15:20:11 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: harden FindMate public profile boundaries (#1054)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d9598e52383e2ca1aefb7623b620e7e1c483f0fb</link>
-      <guid isPermaLink="false">d9598e5</guid>
-      <pubDate>Fri, 31 Jul 2026 15:16:13 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
     </item>

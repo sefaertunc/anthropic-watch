@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 16 Aug 2026 06:42:29 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 06:59:35 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #72451 from gmli-eu/patch-1</title>
+      <link>https://github.com/anthropics/claude-code/commit/ae58f7a0a23f0fddedd668de74622ff46646526b</link>
+      <guid isPermaLink="false">ae58f7a</guid>
+      <pubDate>Mon, 17 Aug 2026 05:40:39 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>fix: remove statsig.anthropic.com from init-firewall.sh</description>
+    </item>
+    <item>
+      <title>feat: add using-lwc skill (#1152)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1f67c44dc9aeaad2baa5130460a1f850d357a9ff</link>
+      <guid isPermaLink="false">1f67c44</guid>
+      <pubDate>Mon, 17 Aug 2026 02:07:58 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: add parameterized iridescent UI workbench skill (#1154)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c9cf5018b3c24a59db207e599776640b87c7d95f</link>
+      <guid isPermaLink="false">c9cf501</guid>
+      <pubDate>Mon, 17 Aug 2026 02:04:39 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: resolve release identity with npm &gt;= 12 array-shaped --json output (#1167)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/da068f3604e5458b2b271ff841dc39075d95e526</link>
+      <guid isPermaLink="false">da068f3</guid>
+      <pubDate>Mon, 17 Aug 2026 02:01:18 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: allow zero-diff fork preflight (#1173)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/34c9ed03ea39b1b55805cb57392ed49f6944822d</link>
+      <guid isPermaLink="false">34c9ed0</guid>
+      <pubDate>Mon, 17 Aug 2026 01:56:32 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Allow the trusted fork-safety preflight to accept a zero-file Git diff. This completes the protected contributor-credit workflow after reviewed content has already landed through a maintainer intake PR.  The special case is confined to `evaluateForkSafety` after repositor</description>
+    </item>
+    <item>
+      <title>fix: classify zero-diff contributor PRs (#1172)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4f107662990628903efdbbcd92706dcc7b39dd4b</link>
+      <guid isPermaLink="false">4f10766</guid>
+      <pubDate>Mon, 17 Aug 2026 01:47:20 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Complete the zero-diff maintainer workflow by treating an authoritative empty merge-base-to-head raw diff as approval-safe inside `merge:batch`. The general workflow classifier remains fail-closed when change records are missing in any other context.  The regression test </description>
+    </item>
+    <item>
+      <title>test(release): verify packed Ito distribution (#2803)</title>
+      <link>https://github.com/affaan-m/ECC/commit/06c5e118c4d3e6c3b7f9445f973a2194c82de193</link>
+      <guid isPermaLink="false">06c5e11</guid>
+      <pubDate>Sun, 16 Aug 2026 22:23:27 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Service disruption on Claude services</title>
+      <link>https://stspg.io/cc6kmwrqhzmh</link>
+      <guid isPermaLink="false">qt14v73myyy5</guid>
+      <pubDate>Sun, 16 Aug 2026 21:58:56 GMT</pubDate>
+      <category>status-page</category>
+      <description>[critical] resolved — The issue affecting claude.ai, platform.claude.com, the Claude API, Claude Code, and Claude Cowork has been resolved.</description>
+    </item>
+    <item>
+      <title>Claude Is Down</title>
+      <link>https://claude.ai/new</link>
+      <guid isPermaLink="false">49324068</guid>
+      <pubDate>Sun, 16 Aug 2026 21:51:25 GMT</pubDate>
+      <category>hn-claude-ai</category>
+      <description/>
+    </item>
+    <item>
+      <title>Claude: System Prompts</title>
+      <link>https://platform.claude.com/docs/en/release-notes/system-prompts</link>
+      <guid isPermaLink="false">49319556</guid>
+      <pubDate>Sun, 16 Aug 2026 12:48:21 GMT</pubDate>
+      <category>hn-claude-com</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #2802 from affaan-m/affaan/nasiko-windows-ci-hotfix</title>
       <link>https://github.com/affaan-m/ECC/commit/50743cec75852e32d6517c9894a3339a2462a713</link>
@@ -62,14 +142,6 @@
       <pubDate>Sun, 16 Aug 2026 01:48:12 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>feat: add opt-in Nasiko control-plane bridge</description>
-    </item>
-    <item>
-      <title>fix: close Nasiko filesystem race windows</title>
-      <link>https://github.com/affaan-m/ECC/commit/28a8fda5680bb2d7ba0e1c328d85356cb24bebf4</link>
-      <guid isPermaLink="false">28a8fda</guid>
-      <pubDate>Sun, 16 Aug 2026 01:47:57 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
     <item>
       <title>You know it’s bad when Fable 5 has a hard time w/ Opus 5 agents drifting &amp; making up data</title>
@@ -361,14 +433,6 @@ Our second Risk Report is now available: https://t.co/NgWnDmXZD3</description>
 - Type @ in the prompt to mention another Claude session by name; Claude then uses Send</description>
     </item>
     <item>
-      <title>Is HTTPS://status.claude.com loading for you all?</title>
-      <link>https://news.ycombinator.com/item?id=49295148</link>
-      <guid isPermaLink="false">49295148</guid>
-      <pubDate>Fri, 14 Aug 2026 05:51:29 GMT</pubDate>
-      <category>hn-claude-com</category>
-      <description/>
-    </item>
-    <item>
       <title>Service disruption on Claude Code on the web and related services</title>
       <link>https://stspg.io/wftzxt096mrk</link>
       <guid isPermaLink="false">whnd2z49x3xf</guid>
@@ -579,22 +643,6 @@ Full Changelog: v0.121.0...v0.122.0
       <description>* Add prompt-audit subcommand to claude-api skill  New shared/prompt-audit.md: a non-interactive audit that inventories the prompt surface, dates each instruction, scans against dated-pattern tables, and produces a findings report plus a proposed diff. SKILL.md gains the subcommand row, a cross-refe</description>
     </item>
     <item>
-      <title>fix: update nanoid to 3.3.18 (#1150)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b28e9633a0c6c74d407a7b58a8ac7d8dd9369287</link>
-      <guid isPermaLink="false">b28e963</guid>
-      <pubDate>Thu, 13 Aug 2026 17:50:33 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5</title>
-      <link>https://stspg.io/pbnrks0mrn4w</link>
-      <guid isPermaLink="false">j160kkjmm2n1</guid>
-      <pubDate>Thu, 13 Aug 2026 14:33:45 GMT</pubDate>
-      <category>status-page</category>
-      <description>[major] resolved — The issue affecting Claude Mythos 5 and Claude Fable 5 has been resolved.</description>
-    </item>
-    <item>
       <title>v2.1.231</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.231</link>
       <guid isPermaLink="false">v2.1.231</guid>
@@ -761,38 +809,6 @@ Available on Max and Team today, rolling out to Pro in the coming weeks. https:/
       <description>We&apos;re sharing a review of the evidence on worker retraining programs, coauthored by independent researcher David Roodman and Anthropic&apos;s Maxim Massenkoff.</description>
     </item>
     <item>
-      <title>docs: correct v15.13.0 changelog (#1148)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1dd6daec9f43c59b5c2082c36abc59c9418b41c6</link>
-      <guid isPermaLink="false">1dd6dae</guid>
-      <pubDate>Wed, 12 Aug 2026 15:01:32 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: release v15.13.0 (#1147)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b39fc724bcb981107fb73aedcdd190cd76df2016</link>
-      <guid isPermaLink="false">b39fc72</guid>
-      <pubDate>Wed, 12 Aug 2026 14:24:47 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v15.13.0.</description>
-    </item>
-    <item>
-      <title>docs: add v15.13.0 release notes (#1146)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a01e4d7aa0c8a4fa70c0f586ea44ff4d82b55e39</link>
-      <guid isPermaLink="false">a01e4d7</guid>
-      <pubDate>Wed, 12 Aug 2026 14:06:25 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare the protected v15.13.0 release notes from the current 15.12.0 to 15.13.0 delta.</description>
-    </item>
-    <item>
-      <title>feat: add Atlas Cloud media skill (#1144)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/767a4feafc6ef5ca5b41aa4f9e8a767abdf1d6ff</link>
-      <guid isPermaLink="false">767a4fe</guid>
-      <pubDate>Wed, 12 Aug 2026 13:35:04 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds `atlas-cloud-media`, a source-only skill for generating images and videos through Atlas Cloud&apos;s asynchronous media API.  The skill covers schema-first model discovery, explicit approval before paid requests, image/video submission, bounded polling, credential-safe ou</description>
-    </item>
-    <item>
       <title>DeepSeek: What They Invented</title>
       <link>https://claude.ai/public/artifacts/807b5183-4704-4e63-b132-98379d1a9c80</link>
       <guid isPermaLink="false">49270270</guid>
@@ -865,14 +881,6 @@ While models continue to improve, adversarial code review has been an incred</de
 - Fixed /tui reverting the se</description>
     </item>
     <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/681a8be245e7759a405e276b16ae69ea6b75076f</link>
-      <guid isPermaLink="false">681a8be</guid>
-      <pubDate>Tue, 11 Aug 2026 19:50:51 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
       <title>@anthropic-ai/claude-code@2.1.228</title>
       <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
       <guid isPermaLink="false">2.1.228</guid>
@@ -905,14 +913,6 @@ While models continue to improve, adversarial code review has been an incred</de
       <category>claude-code-changelog</category>
       <description>- Fixed feature flags being evaluated without the user&apos;s subscription tier when a session started with an expired login token, which could wrongly prompt Max plan users to enable usage credits for Fable
 - Fixed every Bash command failing under claude-code-action with allowednonwriteusers on GitHub-h</description>
-    </item>
-    <item>
-      <title>v1.0.190</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.190</link>
-      <guid isPermaLink="false">v1.0.190</guid>
-      <pubDate>Mon, 10 Aug 2026 23:17:41 GMT</pubDate>
-      <category>claude-code-action</category>
-      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1...v1.0.190</description>
     </item>
   </channel>
 </rss>
