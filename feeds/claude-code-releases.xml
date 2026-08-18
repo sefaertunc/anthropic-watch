@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 17 Aug 2026 06:59:35 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 06:46:34 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.234</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.234</link>
+      <guid isPermaLink="false">v2.1.234</guid>
+      <pubDate>Mon, 17 Aug 2026 20:20:58 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added the optional CLAUDECODEPROJECTDIRNAME environment variable: hosts that give each session its own config directory can choose a short name for the per-project transcript directory
+- Added the selection:clear keybinding action, so a key can be bound to clear an in-app text selec</description>
+    </item>
     <item>
       <title>v2.1.233</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.233</link>
@@ -501,15 +511,6 @@
 - Session titles are now generated in the language of your conversation (set the language setting to pin a specific language)
 - Added footerLinksRegexes setting for regex-matched link badges in the footer row, configurable via user or managed settings
 - Improved Bedrock credential cac</description>
-    </item>
-    <item>
-      <title>v2.1.175</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.175</link>
-      <guid isPermaLink="false">v2.1.175</guid>
-      <pubDate>Fri, 12 Jun 2026 04:23:51 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added enforceAvailableModels managed setting — when enabled, the availableModels allowlist also constrains the Default model (a Default that would resolve to a disallowed model now falls back to the first allowed model), and user or project settings can no longer widen a managed ava</description>
     </item>
   </channel>
 </rss>

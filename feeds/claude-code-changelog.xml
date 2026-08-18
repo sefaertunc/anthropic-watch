@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 17 Aug 2026 06:59:35 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 06:46:34 GMT</lastBuildDate>
+    <item>
+      <title>2.1.234</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.234</guid>
+      <pubDate>Tue, 18 Aug 2026 06:45:46 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added the optional CLAUDECODEPROJECTDIRNAME environment variable: hosts that give each session its own config directory can choose a short name for the per-project transcript directory
+- Added the selection:clear keybinding action, so a key can be bound to clear an in-app text selection; also work</description>
+    </item>
     <item>
       <title>2.1.233</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -453,14 +462,6 @@
       <description>- OTELRESOURCEATTRIBUTES values are now included as labels on metric datapoints, so you can slice usage metrics by custom dimensions like team or repo
 - claude agents rows now show done/total before the detail when work is fanned out; peek shows the longest-running item
 - /mcp now collapses claude.a</description>
-    </item>
-    <item>
-      <title>2.1.159</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.159</guid>
-      <pubDate>Mon, 01 Jun 2026 11:40:53 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Internal infrastructure improvements (no user-facing changes)</description>
     </item>
   </channel>
 </rss>
