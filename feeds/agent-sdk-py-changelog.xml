@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 18 Aug 2026 06:46:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 06:48:17 GMT</lastBuildDate>
+    <item>
+      <title>0.2.140</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.140</guid>
+      <pubDate>Wed, 19 Aug 2026 06:47:29 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- MCP 2.x support for in-process SDK MCP servers: The SDK now supports mcp 2.x alongside 1.x (dependency widened to mcp&gt;=1.23.0,&lt;3.0.0). In-process servers are served over mcp&apos;s own in-memory transport instead of hand-rolled JSON-RPC dispatch, so hand-built mcp.server.Server instances n</description>
+    </item>
     <item>
       <title>0.2.139</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -459,15 +468,6 @@
 - API error status on result messages: Added apierrorstatus: int | None to ResultMessage, surfacing the HTTP status code (e.g. 429, 500, 529) from failing API calls. This provides a safe-to-log field for classifying API failures when iserror=True (923)
  Bug Fixes
 - Permission suggestion</description>
-    </item>
-    <item>
-      <title>0.1.75</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.1.75</guid>
-      <pubDate>Wed, 06 May 2026 09:17:58 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>Internal/Other Changes
-- Updated bundled Claude CLI to version 2.1.131</description>
     </item>
   </channel>
 </rss>

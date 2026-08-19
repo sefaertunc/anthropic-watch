@@ -1,6 +1,36 @@
 [
   {
     "version": "1.0",
+    "timestamp": "2026-08-19T06:48:17.298Z",
+    "durationMs": 48505,
+    "totalNewItems": 28,
+    "sourcesChecked": 39,
+    "sourcesWithErrors": 5,
+    "errors": [
+      {
+        "key": "reddit-claudecode",
+        "error": "HTTP 403 for https://www.reddit.com/r/ClaudeCode/top.rss?t=day&limit=15"
+      },
+      {
+        "key": "reddit-claudeai",
+        "error": "HTTP 429 for https://www.reddit.com/r/ClaudeAI/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claude",
+        "error": "HTTP 429 for https://www.reddit.com/r/claude/top.rss?t=day&limit=5"
+      },
+      {
+        "key": "reddit-claudeskills",
+        "error": "HTTP 429 for https://www.reddit.com/r/claudeskills/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claudeopus",
+        "error": "HTTP 429 for https://www.reddit.com/r/Claudeopus/top.rss?t=week&limit=10"
+      }
+    ]
+  },
+  {
+    "version": "1.0",
     "timestamp": "2026-08-18T06:46:34.376Z",
     "durationMs": 48633,
     "totalNewItems": 36,
@@ -2113,15 +2143,6 @@
     "durationMs": 48564,
     "totalNewItems": 138,
     "sourcesChecked": 39,
-    "sourcesWithErrors": 0,
-    "errors": []
-  },
-  {
-    "version": "1.0",
-    "timestamp": "2026-05-18T10:10:53.210Z",
-    "durationMs": 46557,
-    "totalNewItems": 57,
-    "sourcesChecked": 37,
     "sourcesWithErrors": 0,
     "errors": []
   }

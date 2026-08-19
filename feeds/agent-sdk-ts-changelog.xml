@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 18 Aug 2026 06:46:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 06:48:17 GMT</lastBuildDate>
+    <item>
+      <title>0.3.235</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.235</guid>
+      <pubDate>Wed, 19 Aug 2026 06:47:29 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Updated to parity with Claude Code v2.1.235</description>
+    </item>
     <item>
       <title>0.3.234</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -431,15 +439,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Refusal error messages now carry stopreason: &quot;refusal&quot; and stopdetails on the assistant message and in session transcripts, so SDK consumers can detect refusals without text-matching the error content
 - Agent SDK sessions on native builds now default to fast embedded find/grep search in Bash, matc</description>
-    </item>
-    <item>
-      <title>0.3.161</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.161</guid>
-      <pubDate>Wed, 03 Jun 2026 11:04:17 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- The initialize control request is now idempotent: a second initialize returns the same success payload instead of an Already initialized error. ControlResponse gains an optional pendingpermissionrequests field, mirroring ControlErrorResponse
-- applyFlagSettings now live-applies agent changes: swit</description>
     </item>
   </channel>
 </rss>
