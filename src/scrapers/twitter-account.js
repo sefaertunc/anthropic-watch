@@ -2,6 +2,9 @@ import { fetchSource } from "../fetch-source.js";
 import { parseFlexibleDate } from "../parse-date.js";
 import * as log from "../log.js";
 
+const TWITTERAPI_IO_PROVIDER = "twitterapi.io";
+const XQUIK_PROVIDER = "xquik";
+
 // twitterapi.io free tier is documented at 1 req / 5 s. Under the orchestrator's
 // runWithConcurrency(4) the Twitter lane reliably blew through that limit in
 // v1.4.0 — 5–6 of 8 handles returned 429 per scheduled run. v1.4.1 paces
@@ -29,14 +32,42 @@ export function _resetGateForTests() {
   gate = Promise.resolve();
 }
 
-// Graceful-skip contract: if TWITTERAPI_IO_KEY is unset or empty, return []
-// without attempting any fetch. This is the ONE narrowly-scoped carve-out to
-// the Rule 4 "scrapers throw on errors" contract. Missing key is not an error
-// — it's an explicit feature so forks and local dev sessions can run the
-// scraper without configuring a paid credential.
+function selectedProvider() {
+  const provider = (
+    process.env.TWITTER_PROVIDER ?? TWITTERAPI_IO_PROVIDER
+  ).toLowerCase();
+  if (provider === XQUIK_PROVIDER) return XQUIK_PROVIDER;
+  if (provider === TWITTERAPI_IO_PROVIDER) return TWITTERAPI_IO_PROVIDER;
+  throw new Error(
+    `Unsupported TWITTER_PROVIDER "${process.env.TWITTER_PROVIDER}". Use "${TWITTERAPI_IO_PROVIDER}" or "${XQUIK_PROVIDER}".`,
+  );
+}
+
+function mapTweet(tweet, source, url = tweet.url) {
+  return {
+    id: String(tweet.id),
+    title: (tweet.text ?? "").slice(0, 200),
+    date: parseFlexibleDate(tweet.createdAt),
+    url,
+    snippet: tweet.text ? tweet.text.slice(0, 300) : null,
+    source: source.key,
+    sourceCategory: source.category,
+    sourceName: source.name,
+  };
+}
+
+// Graceful-skip contract: if the selected provider key is unset or empty,
+// return [] without attempting any fetch. This is the ONE narrowly-scoped
+// carve-out to the Rule 4 "scrapers throw on errors" contract. Missing key is
+// not an error — it's an explicit feature so forks and local dev sessions can
+// run the scraper without configuring a paid credential.
 //
 // Every other failure mode (401, 403, 429, 5xx, network, parse) throws.
 export async function scrapeTwitterAccount(source) {
+  if (selectedProvider() === XQUIK_PROVIDER) {
+    return scrapeXquikTwitterAccount(source);
+  }
+
   const key = process.env.TWITTERAPI_IO_KEY;
   if (!key) {
     log.info(
@@ -64,14 +95,43 @@ export async function scrapeTwitterAccount(source) {
 
   // Twitter returns legacy format like "Wed Apr 22 17:36:07 +0000 2026";
   // parseFlexibleDate handles NaN-guarding and ISO conversion.
-  return tweets.map((tweet) => ({
-    id: String(tweet.id),
-    title: (tweet.text ?? "").slice(0, 200),
-    date: parseFlexibleDate(tweet.createdAt),
-    url: tweet.url,
-    snippet: tweet.text ? tweet.text.slice(0, 300) : null,
-    source: source.key,
-    sourceCategory: source.category,
-    sourceName: source.name,
-  }));
+  return tweets.map((tweet) => mapTweet(tweet, source));
+}
+
+async function scrapeXquikTwitterAccount(source) {
+  const key = process.env.XQUIK_API_KEY;
+  if (!key) {
+    log.info(
+      `twitter-account: XQUIK_API_KEY not set; returning 0 items for ${source.username}`,
+    );
+    return [];
+  }
+
+  const limit = source.limit ?? 10;
+  const params = new URLSearchParams({
+    q: `from:${source.username}`,
+    queryType: "Latest",
+    limit: String(limit),
+    fromUser: source.username,
+    replies: "exclude",
+  });
+  const url = `https://xquik.com/api/v1/x/tweets/search?${params}`;
+  const res = await fetchSource(
+    url,
+    { headers: { "x-api-key": key } },
+    source.fixtureFile,
+  );
+
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+
+  const payload = await res.json();
+  const tweets = (payload?.tweets ?? []).slice(0, limit);
+
+  return tweets.map((tweet) =>
+    mapTweet(
+      tweet,
+      source,
+      tweet.url ?? `https://x.com/${source.username}/status/${tweet.id}`,
+    ),
+  );
 }
