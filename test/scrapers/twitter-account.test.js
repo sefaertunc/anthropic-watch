@@ -52,10 +52,14 @@ describe("twitter-account: waitForSlot spacing gate", () => {
 describe("scrapeTwitterAccount", () => {
   let tmpDir;
   let savedKey;
+  let savedProvider;
+  let savedXquikKey;
 
   beforeEach(async () => {
     tmpDir = await mkdtemp(join(tmpdir(), "aw-test-"));
     savedKey = process.env.TWITTERAPI_IO_KEY;
+    savedProvider = process.env.TWITTER_PROVIDER;
+    savedXquikKey = process.env.XQUIK_API_KEY;
     _resetGateForTests();
   });
 
@@ -63,6 +67,10 @@ describe("scrapeTwitterAccount", () => {
     await rm(tmpDir, { recursive: true, force: true });
     if (savedKey === undefined) delete process.env.TWITTERAPI_IO_KEY;
     else process.env.TWITTERAPI_IO_KEY = savedKey;
+    if (savedProvider === undefined) delete process.env.TWITTER_PROVIDER;
+    else process.env.TWITTER_PROVIDER = savedProvider;
+    if (savedXquikKey === undefined) delete process.env.XQUIK_API_KEY;
+    else process.env.XQUIK_API_KEY = savedXquikKey;
   });
 
   function makeSource(fixturePath, overrides = {}) {
@@ -238,5 +246,74 @@ describe("scrapeTwitterAccount", () => {
     });
     const items = await scrapeTwitterAccount(makeSource(fixturePath));
     expect(items[0].snippet).toBeNull();
+  });
+
+  it("should return [] without fetching when Xquik is selected and XQUIK_API_KEY is unset", async () => {
+    process.env.TWITTER_PROVIDER = "xquik";
+    delete process.env.XQUIK_API_KEY;
+    const logSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+    const items = await scrapeTwitterAccount(
+      makeSource(null, { fixtureFile: null }),
+    );
+    expect(items).toEqual([]);
+    const combined = logSpy.mock.calls.map((c) => c[0]).join("\n");
+    expect(combined).toContain("XQUIK_API_KEY not set");
+    expect(combined).toContain("AnthropicAI");
+    logSpy.mockRestore();
+  });
+
+  it("should parse Xquik search results when TWITTER_PROVIDER is xquik", async () => {
+    process.env.TWITTER_PROVIDER = "xquik";
+    process.env.XQUIK_API_KEY = "test-key";
+    const fixturePath = await writeFixture({
+      tweets: [
+        {
+          id: "2047006548149289017",
+          text: "Hello from Xquik",
+          url: "https://x.com/AnthropicAI/status/2047006548149289017",
+          createdAt: "2026-04-22T17:36:07.000Z",
+        },
+        {
+          id: "2047006548149289018",
+          text: "",
+          createdAt: "2026-04-22T17:37:07.000Z",
+        },
+        {
+          id: "2047006548149289019",
+          text: "Excluded by the source limit",
+          createdAt: "2026-04-22T17:38:07.000Z",
+        },
+      ],
+      has_next_page: false,
+      next_cursor: "",
+    });
+
+    const items = await scrapeTwitterAccount(
+      makeSource(fixturePath, { limit: 2 }),
+    );
+
+    expect(items).toHaveLength(2);
+    expect(items[0]).toEqual(
+      expect.objectContaining({
+        id: "2047006548149289017",
+        title: "Hello from Xquik",
+        date: "2026-04-22T17:36:07.000Z",
+        url: "https://x.com/AnthropicAI/status/2047006548149289017",
+        snippet: "Hello from Xquik",
+        source: "twitter-anthropicai",
+        sourceCategory: "community",
+        sourceName: "@AnthropicAI (official)",
+      }),
+    );
+    expect(items[1].url).toBe(
+      "https://x.com/AnthropicAI/status/2047006548149289018",
+    );
+  });
+
+  it("should reject unsupported TWITTER_PROVIDER values", async () => {
+    process.env.TWITTER_PROVIDER = "unknown";
+    await expect(
+      scrapeTwitterAccount(makeSource(null, { fixtureFile: null })),
+    ).rejects.toThrow('Unsupported TWITTER_PROVIDER "unknown"');
   });
 });
