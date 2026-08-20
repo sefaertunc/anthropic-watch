@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 19 Aug 2026 06:48:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 06:49:58 GMT</lastBuildDate>
+    <item>
+      <title>0.2.142</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.142</guid>
+      <pubDate>Thu, 20 Aug 2026 06:49:11 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Internal/Other Changes
+- Updated bundled Claude CLI to version 2.1.237</description>
+    </item>
     <item>
       <title>0.2.140</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -457,17 +466,6 @@
 - Actionable error messages after error results: Replaced the generic Command failed with exit code 1 exception raised after an error result with one carrying the result&apos;s actual error text (e.g. &quot;Reached maximum number of turns&quot;), matching the TypeScript SDK behavior (918)
  Documentation
 </description>
-    </item>
-    <item>
-      <title>0.1.76</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.1.76</guid>
-      <pubDate>Thu, 07 May 2026 08:38:15 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>New Features
-- API error status on result messages: Added apierrorstatus: int | None to ResultMessage, surfacing the HTTP status code (e.g. 429, 500, 529) from failing API calls. This provides a safe-to-log field for classifying API failures when iserror=True (923)
- Bug Fixes
-- Permission suggestion</description>
     </item>
   </channel>
 </rss>

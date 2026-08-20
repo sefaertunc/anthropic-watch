@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-19T06:48:17.219Z",
+  "generated": "2026-08-20T06:49:58.440Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.237",
+      "title": "2.1.237",
+      "date": "2026-08-20T06:49:10.683Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed prompt caching for sessions using an LLM gateway or custom base URL\n- Added a built-in \"Concise\" output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config.",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.237|claude-code-changelog"
+    },
     {
       "id": "2.1.235",
       "title": "2.1.235",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.165|claude-code-changelog"
-    },
-    {
-      "id": "2.1.162",
-      "title": "2.1.162",
-      "date": "2026-06-04T09:59:34.963Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- claude agents --json now includes waitingFor showing what a waiting session is blocked on (e.g. permission prompt)\n- --tools: explicitly listing Grep/Glob now provides the dedicated search tools on native builds with embedded search (previously these names were silently ignored)\n- /effort now conf",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.162|claude-code-changelog"
     }
   ]
 }

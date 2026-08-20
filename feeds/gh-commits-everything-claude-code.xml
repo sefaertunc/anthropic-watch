@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 19 Aug 2026 06:48:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 06:49:58 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2824 from affaan-m/agent/tasteforge-multimodal-20260819</title>
+      <link>https://github.com/affaan-m/ECC/commit/d8409a4b0813771235555e32e3d8046a73988bfa</link>
+      <guid isPermaLink="false">d8409a4</guid>
+      <pubDate>Wed, 19 Aug 2026 23:31:56 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>feat(skills): add TasteForge multimodal workflow</description>
+    </item>
+    <item>
+      <title>test(skills): align TasteForge final contract</title>
+      <link>https://github.com/affaan-m/ECC/commit/b86138ae7b68d979938ccb235731038e26783a5f</link>
+      <guid isPermaLink="false">b86138a</guid>
+      <pubDate>Wed, 19 Aug 2026 22:30:38 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(skills): harden TasteForge multimodal contract</title>
+      <link>https://github.com/affaan-m/ECC/commit/71e3622640df5c709a657de2e4b13ec4bcf80f65</link>
+      <guid isPermaLink="false">71e3622</guid>
+      <pubDate>Wed, 19 Aug 2026 21:47:31 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs(skills): define TasteForge multimodal contract</title>
+      <link>https://github.com/affaan-m/ECC/commit/348cd34a2b790dd0add8619d083f238002056488</link>
+      <guid isPermaLink="false">348cd34</guid>
+      <pubDate>Wed, 19 Aug 2026 20:45:27 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat(skills): add tasteforge-video skill for repeatable taste-driven video work</title>
+      <link>https://github.com/affaan-m/ECC/commit/9c450046beb9de48e48fbb71b8b91931802485f8</link>
+      <guid isPermaLink="false">9c45004</guid>
+      <pubDate>Tue, 18 Aug 2026 12:04:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Curated skill delegating to the canonical tasteforge package in Ito-Markets/ito-video: taste interviews, style-pack validation, offline distillation with measured grounding, deterministic cadence application to local footage, EDL/FCPXML export, and generated-media provenance audits. Provider (Fal) g</description>
+    </item>
     <item>
       <title>test(release): verify packed Ito distribution (#2803)</title>
       <link>https://github.com/affaan-m/ECC/commit/06c5e118c4d3e6c3b7f9445f973a2194c82de193</link>
@@ -366,46 +406,6 @@
       <pubDate>Sat, 08 Aug 2026 21:06:18 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>ecc memory writes and --body-file reads fail on Windows. sameFileIdentity() compares the dev field of a path-based stat against a handle-based fstat, and libuv 1.49.0 through 1.50.x resolve path-based stat() and lstat() on Windows through GetFileInformationByName, which leaves the volume serial unse</description>
-    </item>
-    <item>
-      <title>fix(ci): restore green main for the Itô skill test suite (#2720)</title>
-      <link>https://github.com/affaan-m/ECC/commit/59a99d669f5466d99d5be8b6fce8c5f2677766d0</link>
-      <guid isPermaLink="false">59a99d6</guid>
-      <pubDate>Fri, 07 Aug 2026 23:47:55 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>main has been red since the Itô skill series landed. Two independent problems, both in test files rather than shipped behavior:  - tests/ci/ito-inference-skill.test.js asserted a stale copy of the   capability:ito-compute description. #2706 added device revocation to   the lifecycle and updated mani</description>
-    </item>
-    <item>
-      <title>fix(skill): harden ito basket comparison lifecycle (#2712)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d451f5100af57e33a73400b14b03e126ff49a3f9</link>
-      <guid isPermaLink="false">d451f51</guid>
-      <pubDate>Fri, 07 Aug 2026 19:08:52 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: formalize Itô inference serving contract (#2708)</title>
-      <link>https://github.com/affaan-m/ECC/commit/a73deb211e7864c00edc86ce641373b132f66187</link>
-      <guid isPermaLink="false">a73deb2</guid>
-      <pubDate>Fri, 07 Aug 2026 18:55:22 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Harden Itô market intelligence skill (#2711)</title>
-      <link>https://github.com/affaan-m/ECC/commit/b844a9edb85b5adf440f202c725588de279ecba6</link>
-      <guid isPermaLink="false">b844a9e</guid>
-      <pubDate>Fri, 07 Aug 2026 18:54:37 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix ito trade planner safety contract (#2709)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d13a0706b95965f88a695c8f33fd11e7c6456fe5</link>
-      <guid isPermaLink="false">d13a070</guid>
-      <pubDate>Fri, 07 Aug 2026 18:53:41 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>

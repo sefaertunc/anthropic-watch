@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 19 Aug 2026 06:48:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 06:49:58 GMT</lastBuildDate>
+    <item>
+      <title>2.1.237</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.237</guid>
+      <pubDate>Thu, 20 Aug 2026 06:49:10 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed prompt caching for sessions using an LLM gateway or custom base URL
+- Added a built-in &quot;Concise&quot; output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config.</description>
+    </item>
     <item>
       <title>2.1.235</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -452,16 +461,6 @@
       <pubDate>Fri, 05 Jun 2026 09:56:02 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- Bug fixes and reliability improvements</description>
-    </item>
-    <item>
-      <title>2.1.162</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.162</guid>
-      <pubDate>Thu, 04 Jun 2026 09:59:34 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- claude agents --json now includes waitingFor showing what a waiting session is blocked on (e.g. permission prompt)
-- --tools: explicitly listing Grep/Glob now provides the dedicated search tools on native builds with embedded search (previously these names were silently ignored)
-- /effort now conf</description>
     </item>
   </channel>
 </rss>

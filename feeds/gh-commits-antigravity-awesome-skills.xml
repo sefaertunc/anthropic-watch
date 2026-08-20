@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 19 Aug 2026 06:48:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 06:49:58 GMT</lastBuildDate>
+    <item>
+      <title>docs: prepare 15.16.0 changelog (#1210)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3eeafe01191344f13f4bdee2f2d3abdf9a1562ea</link>
+      <guid isPermaLink="false">3eeafe0</guid>
+      <pubDate>Thu, 20 Aug 2026 06:48:13 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: harden multi-source evidence integrity (#1205)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/29bf2d4704ead6db4233d40884792b16dfe5b64e</link>
+      <guid isPermaLink="false">29bf2d4</guid>
+      <pubDate>Thu, 20 Aug 2026 01:01:02 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Ports the executable follow-up from community PR #1204 onto the protected maintainer lane. Claims now classify every source as supporting or contradicting, conflict state is checked against that classification, and superficial URL variants cannot inflate source diversity.  Supersedes #1204 while pre</description>
+    </item>
+    <item>
+      <title>feat: add multi-source research ledger (#1202)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/cc5c3d6e36aaf66a701789f5e7a9a68b632c86ca</link>
+      <guid isPermaLink="false">cc5c3d6</guid>
+      <pubDate>Thu, 20 Aug 2026 00:31:34 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Ports the source contribution from #1200 because external forks cannot merge executable Python under the repository approval policy. Preserves the bounded, provider-optional research workflow and offline evidence ledger; pins the Apache-2.0 license to upstream commit fc25b2ed4548b1bb91621661e82d07d4</description>
+    </item>
+    <item>
+      <title>feat: add cross-artifact stack audit (#1199)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/67ec2ff8fcaa2f8df1a13a15907e82ec5bc7f298</link>
+      <guid isPermaLink="false">67ec2ff</guid>
+      <pubDate>Thu, 20 Aug 2026 00:19:32 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Ports the compatible maintainer-only portions of #1187 and #1188 into one read-only review flow. Adds aas stack audit for local manifest/evidence/plan consistency checks and a paired artifact comparison in the browser-local Workbench. Both surfaces report digest, catalog, target, and exact skill-set</description>
+    </item>
+    <item>
+      <title>fix: support modern YouTube transcript API (#1198)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/60e30286699665c6b639febda89b0144a496cdef</link>
+      <guid isPermaLink="false">60e3028</guid>
+      <pubDate>Thu, 20 Aug 2026 00:15:11 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Ports the canonical-source fix from #1194. Supports both youtube-transcript-api 0.6.x and 1.x, accepts common YouTube URL forms, and forces UTF-8 output on legacy Windows consoles. Adds isolated regression tests without network access. Plugin mirrors remain owned by protected canonical synchronizati</description>
+    </item>
+    <item>
+      <title>feat(skills): add boost-asio-pro for async C++ networking with Boost.Asio (#1186)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e138a2bdbcd602a5e545625d328f2d530ef56d48</link>
+      <guid isPermaLink="false">e138a2b</guid>
+      <pubDate>Thu, 20 Aug 2026 00:05:15 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
     <item>
       <title>chore: release v15.15.0 (#1184)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/746ad69f2524d2cc4ef1bd00eb73614592eee489</link>
@@ -358,54 +406,6 @@
       <pubDate>Thu, 06 Aug 2026 14:22:07 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description># Pull Request Description  Adds a source-only `outreachagent` skill for operating reply-aware cold outbound email workflows through OutreachAgent&apos;s public REST API.  The skill is intentionally safety-first: it separates draft mutations from final send approval, requires exact rendered-payload revie</description>
-    </item>
-    <item>
-      <title>web-scraper: add prompt-injection hardening and escalation consent (#1092)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c0227ce4e3504a02d82374f488d89be169ee4c65</link>
-      <guid isPermaLink="false">c0227ce</guid>
-      <pubDate>Thu, 06 Aug 2026 14:12:07 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: harden coordinated disclosure boundaries (#1087)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d3a442eaadd69c35c97b712a873a9ddc539ee9c5</link>
-      <guid isPermaLink="false">d3a442e</guid>
-      <pubDate>Wed, 05 Aug 2026 07:16:13 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Harden the trust boundaries identified during the coordinated disclosure review. This source-only batch covers untrusted browser destinations and model output, path containment and private temporary storage, inert TSX/Markdown/HTML/CSV rendering, OAuth callback binding, a</description>
-    </item>
-    <item>
-      <title>chore: release v15.9.0 (#1086)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6bfc62a9cc2d4a5b649483027fb5809a68ce3354</link>
-      <guid isPermaLink="false">6bfc62a</guid>
-      <pubDate>Tue, 04 Aug 2026 18:47:39 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v15.9.0.</description>
-    </item>
-    <item>
-      <title>docs: prepare v15.9.0 release notes (#1085)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9301201d95e0869fce2d1b3f635205eb5a63e7fa</link>
-      <guid isPermaLink="false">9301201</guid>
-      <pubDate>Tue, 04 Aug 2026 18:37:27 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare the versioned 15.9.0 changelog section from the existing Unreleased security and dependency entries, and add the two new skills, Unified AI Gateway refresh, audience, validation, and source credits required for public release notes.</description>
-    </item>
-    <item>
-      <title>fix: remediate Codex security findings (#1083)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/caf3aa6590e440135a39d92652676fe46644867d</link>
-      <guid isPermaLink="false">caf3aa6</guid>
-      <pubDate>Tue, 04 Aug 2026 17:51:35 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Remediates the August 4 Codex Security sweep across skill guidance, maintainer CI, AAS Core MCP framing, and public documentation.  Security changes:  - prevent image-review grep commands from following untrusted rootfs symlinks; - treat project package scripts, environme</description>
-    </item>
-    <item>
-      <title>fix: refresh loki-mode vulnerable lockfiles (#1081)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/58b1ec0496fe988a2b071c0b9cdc4b838551b36a</link>
-      <guid isPermaLink="false">58b1ec0</guid>
-      <pubDate>Tue, 04 Aug 2026 16:50:13 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Refreshes the bundled `loki-mode` todo example lockfiles to resolve all eight open Dependabot alerts on the canonical skill and its generated Claude mirror.  - backend: `ip-address` 10.2.0 -&gt; 10.4.0 - frontend: PostCSS 8.5.18 -&gt; 8.5.25 and its compatible Nano ID resolutio</description>
     </item>
   </channel>
 </rss>

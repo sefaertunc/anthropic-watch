@@ -6,7 +6,27 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 19 Aug 2026 06:48:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 06:49:58 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.237</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.237</link>
+      <guid isPermaLink="false">v2.1.237</guid>
+      <pubDate>Thu, 20 Aug 2026 00:54:41 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed prompt caching for sessions using an LLM gateway or custom base URL
+- Added a built-in &quot;Concise&quot; output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config.</description>
+    </item>
+    <item>
+      <title>v2.1.236</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.236</link>
+      <guid isPermaLink="false">v2.1.236</guid>
+      <pubDate>Wed, 19 Aug 2026 20:02:05 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added ANTHROPICDEFAULTMODEL environment variable: sets the model new sessions start on, while a /model pick still overrides it and persists across restarts (unlike ANTHROPICMODEL)
+- Added notifywhenidle to cross-session SendMessage: ask another Claude Code session on this machine to</description>
+    </item>
     <item>
       <title>v2.1.235</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.235</link>
@@ -493,24 +513,6 @@
 - Fixed mid-stream connection drops: partial responses are now preserved instead of showing a raw error, and the spinner no longer gets stuck at &quot;running tool&quot;
 - Fixed mouse-wheel scrolling in WSL2 under Windows Terminal and VS Code (regression in 2.1.172)
 - Fixed a sandbox denyRead/a</description>
-    </item>
-    <item>
-      <title>v2.1.178</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.178</link>
-      <guid isPermaLink="false">v2.1.178</guid>
-      <pubDate>Mon, 15 Jun 2026 21:35:55 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added Tool(param:value) syntax for permission rules to match a tool&apos;s input parameters (with  wildcard), e.g. Agent(model:opus) to block Opus subagents
-- Skills in nested .claude/skills directories now load when working on files there; on a name clash, the nested skill appears as &lt;d</description>
-    </item>
-    <item>
-      <title>v2.1.177</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.177</link>
-      <guid isPermaLink="false">v2.1.177</guid>
-      <pubDate>Sat, 13 Jun 2026 01:25:15 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description/>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-19T06:48:17.224Z",
+  "generated": "2026-08-20T06:49:58.444Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.237",
+      "title": "v2.1.237",
+      "date": "2026-08-20T00:54:41Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
+      "snippet": "What's changed\n- Fixed prompt caching for sessions using an LLM gateway or custom base URL\n- Added a built-in \"Concise\" output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config.",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.237|claude-code-releases"
+    },
+    {
+      "id": "v2.1.236",
+      "title": "v2.1.236",
+      "date": "2026-08-19T20:02:05Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+      "snippet": "What's changed\n- Added ANTHROPICDEFAULTMODEL environment variable: sets the model new sessions start on, while a /model pick still overrides it and persists across restarts (unlike ANTHROPICMODEL)\n- Added notifywhenidle to cross-session SendMessage: ask another Claude Code session on this machine to",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.236|claude-code-releases"
+    },
     {
       "id": "v2.1.235",
       "title": "v2.1.235",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.179|claude-code-releases"
-    },
-    {
-      "id": "v2.1.178",
-      "title": "v2.1.178",
-      "date": "2026-06-15T21:35:55Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.178",
-      "snippet": "What's changed\n- Added Tool(param:value) syntax for permission rules to match a tool's input parameters (with  wildcard), e.g. Agent(model:opus) to block Opus subagents\n- Skills in nested .claude/skills directories now load when working on files there; on a name clash, the nested skill appears as <d",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.178|claude-code-releases"
-    },
-    {
-      "id": "v2.1.177",
-      "title": "v2.1.177",
-      "date": "2026-06-13T01:25:15Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.177",
-      "snippet": "",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.177|claude-code-releases"
     }
   ]
 }
