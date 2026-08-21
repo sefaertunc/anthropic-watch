@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 20 Aug 2026 06:49:58 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 06:51:13 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.238</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.238</link>
+      <guid isPermaLink="false">v2.1.238</guid>
+      <pubDate>Thu, 20 Aug 2026 20:33:51 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a keybindingFlavor setting: set it to &quot;readline&quot; to make Ctrl+W in the prompt delete back to the previous whitespace, as in Bash; the default (&quot;classic&quot;) is unchanged
+- Plugin marketplaces: headersHelper on a url marketplace or a catalog entry runs a command that mints HTTP he</description>
+    </item>
     <item>
       <title>v2.1.237</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.237</link>
@@ -502,17 +512,6 @@
 - Added /config key=value syntax to set any setting from the prompt (e.g. /config thinking=false) — works in interactive, -p, and Remote Control
 - Added sandbox.allowAppleEvents opt-in setting that lets sandboxed commands send Apple Events on macOS
 - Added CLAUDECLIENTPRESENCEFILE env</description>
-    </item>
-    <item>
-      <title>v2.1.179</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.179</link>
-      <guid isPermaLink="false">v2.1.179</guid>
-      <pubDate>Tue, 16 Jun 2026 20:22:14 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed mid-stream connection drops: partial responses are now preserved instead of showing a raw error, and the spinner no longer gets stuck at &quot;running tool&quot;
-- Fixed mouse-wheel scrolling in WSL2 under Windows Terminal and VS Code (regression in 2.1.172)
-- Fixed a sandbox denyRead/a</description>
     </item>
   </channel>
 </rss>
