@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-21T06:51:13.963Z",
+  "generated": "2026-08-22T06:42:48.466Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "340e33a",
+      "title": "Merge pull request #5560 from anthropics/claude-security-v0.10.2",
+      "date": "2026-08-21T16:44:54Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/340e33aef211d95769d252324854497af871dafe",
+      "snippet": "Claude Security Plugin - v0.10.2",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "340e33a|gh-commits-plugins-official"
+    },
+    {
+      "id": "1247e88",
+      "title": "Claude Security Plugin - v0.10.2",
+      "date": "2026-08-21T15:48:34Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/1247e88a7028a6c47493081ef221989cb302b8ef",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "1247e88|gh-commits-plugins-official"
+    },
     {
       "id": "08cf3ad",
       "title": "Remove aws-dev-toolkit official plugin (#5357)",
@@ -535,28 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "c7a3e2f|gh-commits-plugins-official"
-    },
-    {
-      "id": "1ecf3d1",
-      "title": "security-guidance: purge text=True from subprocess.run + bake PYTHONUTF8=1 (#2099)",
-      "date": "2026-05-30T18:29:07Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/1ecf3d1bac6ca2be1fbedef9500ca1457da8d42d",
-      "snippet": "URGENT WINDOWS FIX. Sibling of #2056 / PR #2075 but covering 14 more sites that PR #2075 missed.  The bug class: on Windows with cp1252 default encoding (typical en-US locale), `subprocess.run(..., text=True)` decodes child stdout AND stderr via `locale.getpreferredencoding()`. When git emits a UTF-",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "1ecf3d1|gh-commits-plugins-official"
-    },
-    {
-      "id": "c40770a",
-      "title": "Merge pull request #2078 from anthropics/fix-1868-claude-config-dir",
-      "date": "2026-05-29T23:14:35Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/c40770ae5a1d6855fce096c5b747e709ec946b2b",
-      "snippet": "security-guidance: respect CLAUDE_CONFIG_DIR for plugin state files (#1868)",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "c40770a|gh-commits-plugins-official"
     }
   ]
 }

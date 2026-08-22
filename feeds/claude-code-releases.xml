@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 21 Aug 2026 06:51:13 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 06:42:48 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.239</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.239</link>
+      <guid isPermaLink="false">v2.1.239</guid>
+      <pubDate>Fri, 21 Aug 2026 19:54:23 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Cost estimates (/cost, status line, --max-budget-usd) now include the 1.1× US-only-inference premium for data-residency workspaces
+- Added the one-time fullscreen renderer offer on Bedrock, Vertex, Foundry and other previously excluded setups; new installs there now start in fullscr</description>
+    </item>
     <item>
       <title>v2.1.238</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.238</link>
@@ -501,17 +511,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Improved auto mode safety: destructive git commands (git reset --hard, git checkout -- ., git clean -fd, git stash drop) are now blocked when you didn&apos;t ask to discard local work, git commit --amend is blocked when the commit wasn&apos;t made by the agent this session, and terraform dest</description>
-    </item>
-    <item>
-      <title>v2.1.181</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.181</link>
-      <guid isPermaLink="false">v2.1.181</guid>
-      <pubDate>Wed, 17 Jun 2026 22:07:41 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added /config key=value syntax to set any setting from the prompt (e.g. /config thinking=false) — works in interactive, -p, and Remote Control
-- Added sandbox.allowAppleEvents opt-in setting that lets sandboxed commands send Apple Events on macOS
-- Added CLAUDECLIENTPRESENCEFILE env</description>
     </item>
   </channel>
 </rss>

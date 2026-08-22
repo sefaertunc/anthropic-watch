@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 21 Aug 2026 06:51:13 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 06:42:48 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #5560 from anthropics/claude-security-v0.10.2</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/340e33aef211d95769d252324854497af871dafe</link>
+      <guid isPermaLink="false">340e33a</guid>
+      <pubDate>Fri, 21 Aug 2026 16:44:54 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Claude Security Plugin - v0.10.2</description>
+    </item>
+    <item>
+      <title>Claude Security Plugin - v0.10.2</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1247e88a7028a6c47493081ef221989cb302b8ef</link>
+      <guid isPermaLink="false">1247e88</guid>
+      <pubDate>Fri, 21 Aug 2026 15:48:34 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Remove aws-dev-toolkit official plugin (#5357)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/08cf3ad271a04a2fa872e8fe501bcb5958978bbe</link>
@@ -390,22 +406,6 @@
       <pubDate>Sat, 30 May 2026 19:14:03 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: purge text=True from subprocess.run + bake PYTHONUTF8=1 (#2099)</description>
-    </item>
-    <item>
-      <title>security-guidance: purge text=True from subprocess.run + bake PYTHONUTF8=1 (#2099)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/1ecf3d1bac6ca2be1fbedef9500ca1457da8d42d</link>
-      <guid isPermaLink="false">1ecf3d1</guid>
-      <pubDate>Sat, 30 May 2026 18:29:07 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>URGENT WINDOWS FIX. Sibling of #2056 / PR #2075 but covering 14 more sites that PR #2075 missed.  The bug class: on Windows with cp1252 default encoding (typical en-US locale), `subprocess.run(..., text=True)` decodes child stdout AND stderr via `locale.getpreferredencoding()`. When git emits a UTF-</description>
-    </item>
-    <item>
-      <title>Merge pull request #2078 from anthropics/fix-1868-claude-config-dir</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/c40770ae5a1d6855fce096c5b747e709ec946b2b</link>
-      <guid isPermaLink="false">c40770a</guid>
-      <pubDate>Fri, 29 May 2026 23:14:35 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: respect CLAUDE_CONFIG_DIR for plugin state files (#1868)</description>
     </item>
   </channel>
 </rss>
