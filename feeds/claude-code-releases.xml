@@ -6,7 +6,25 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 22 Aug 2026 06:42:48 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 06:43:44 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.241</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.241</link>
+      <guid isPermaLink="false">v2.1.241</guid>
+      <pubDate>Sun, 23 Aug 2026 00:52:16 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Bug fixes and reliability improvements</description>
+    </item>
+    <item>
+      <title>v2.1.240</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.240</link>
+      <guid isPermaLink="false">v2.1.240</guid>
+      <pubDate>Sat, 22 Aug 2026 14:45:30 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Bug fixes and reliability improvements</description>
+    </item>
     <item>
       <title>v2.1.239</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.239</link>
@@ -493,24 +511,6 @@
 - Added claude mcp login &lt;name&gt; and claude mcp logout &lt;name&gt; to authenticate MCP servers from the CLI without opening the interactive /mcp menu, with --no-browser stdin redirect support for completing over SSH
 - Added status filtering (press f) to the /workflows agent detail view
 - Ad</description>
-    </item>
-    <item>
-      <title>v2.1.185</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.185</link>
-      <guid isPermaLink="false">v2.1.185</guid>
-      <pubDate>Sat, 20 Jun 2026 20:59:19 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- The stream-stall hint now reads &quot;Waiting for API response · will retry in …&quot; instead of &quot;No response from API · Retrying in …&quot;, and triggers after 20s of silence instead of 10s</description>
-    </item>
-    <item>
-      <title>v2.1.183</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.183</link>
-      <guid isPermaLink="false">v2.1.183</guid>
-      <pubDate>Fri, 19 Jun 2026 01:20:50 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Improved auto mode safety: destructive git commands (git reset --hard, git checkout -- ., git clean -fd, git stash drop) are now blocked when you didn&apos;t ask to discard local work, git commit --amend is blocked when the commit wasn&apos;t made by the agent this session, and terraform dest</description>
     </item>
   </channel>
 </rss>
