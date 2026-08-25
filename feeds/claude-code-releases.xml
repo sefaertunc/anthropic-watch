@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 24 Aug 2026 07:02:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 06:52:24 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.245</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.245</link>
+      <guid isPermaLink="false">v2.1.245</guid>
+      <pubDate>Tue, 25 Aug 2026 05:13:24 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)</description>
+    </item>
     <item>
       <title>v2.1.241</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.241</link>
@@ -500,17 +509,6 @@
       <description>What&apos;s changed
 - Added sandbox.credentials setting to block sandboxed commands from reading credential files and secret environment variables
 - Added org-configured model restrictions to the model picker, --model, /model, and ANTHROPICMODEL, with a &quot;restricted by your organization&apos;s settings&quot; messag</description>
-    </item>
-    <item>
-      <title>v2.1.186</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.186</link>
-      <guid isPermaLink="false">v2.1.186</guid>
-      <pubDate>Mon, 22 Jun 2026 20:37:34 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added claude mcp login &lt;name&gt; and claude mcp logout &lt;name&gt; to authenticate MCP servers from the CLI without opening the interactive /mcp menu, with --no-browser stdin redirect support for completing over SSH
-- Added status filtering (press f) to the /workflows agent detail view
-- Ad</description>
     </item>
   </channel>
 </rss>

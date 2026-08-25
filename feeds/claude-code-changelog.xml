@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 24 Aug 2026 07:02:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 06:52:24 GMT</lastBuildDate>
+    <item>
+      <title>2.1.245</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.245</guid>
+      <pubDate>Tue, 25 Aug 2026 06:51:36 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)</description>
+    </item>
     <item>
       <title>2.1.241</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -454,16 +462,6 @@
       <category>claude-code-changelog</category>
       <description>- Introducing Claude Fable 5: a Mythos-class model that we’ve made safe for general use. Fable’s capabilities exceed those of any model we’ve ever made generally available. Update to version 2.1.170 for access. https://www.anthropic.com/news/claude-fable-5-mythos-5
 - Fixed sessions not saving transc</description>
-    </item>
-    <item>
-      <title>2.1.169</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.169</guid>
-      <pubDate>Tue, 09 Jun 2026 09:50:43 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added --safe-mode flag (and CLAUDECODESAFEMODE) to start Claude Code with all customizations (CLAUDE.md, plugins, skills, hooks, MCP servers) disabled for troubleshooting
-- Added /cd command to move a session to a new working directory without breaking the prompt cache mid-session
-- Added a disabl</description>
     </item>
   </channel>
 </rss>

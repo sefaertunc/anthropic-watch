@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 24 Aug 2026 07:02:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 06:52:24 GMT</lastBuildDate>
+    <item>
+      <title>Refresh NetSuite plugins: repoint netsuite-suitecloud, add netsuite-ai-companion and netsuite-finance-analyst (#5600)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/b819188d2eea14e0400556ca29dbd1179a7c595b</link>
+      <guid isPermaLink="false">b819188</guid>
+      <pubDate>Tue, 25 Aug 2026 03:14:16 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>Add author to unity and qodo entries (#5598)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e572d204d75338d76cbf9c06a53cf7b6e0c705d4</link>
+      <guid isPermaLink="false">e572d20</guid>
+      <pubDate>Mon, 24 Aug 2026 22:06:37 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>bump(carta): carta-investors 3.72.5 -&gt; 3.82.2, carta-cap-table 6.50.0 -&gt; 6.56.0, carta-crm 1.7.2 -&gt; 1.8.6 (#5599)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0c87ada1bb2128a00a7cfed4ce2b0943067a3295</link>
+      <guid isPermaLink="false">0c87ada</guid>
+      <pubDate>Mon, 24 Aug 2026 21:54:50 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>Add unity plugin (Unity Technologies partner listing) (#5595)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/91b42cce4121b0cf34ee22c634ef4ff60a5574b8</link>
+      <guid isPermaLink="false">91b42cc</guid>
+      <pubDate>Mon, 24 Aug 2026 20:52:40 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>Merge pull request #5597 from anthropics/claude-security-v0.10.2.3</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d18fbb0c35d0134e577af492098a8c58600f3b72</link>
+      <guid isPermaLink="false">d18fbb0</guid>
+      <pubDate>Mon, 24 Aug 2026 20:34:28 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Claude Security Plugin - v0.10.2.3</description>
+    </item>
+    <item>
+      <title>Claude Security Plugin - v0.10.2.3</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/9518f7a2ce367e85b432860bf897c57ffdcd8ae9</link>
+      <guid isPermaLink="false">9518f7a</guid>
+      <pubDate>Mon, 24 Aug 2026 20:17:27 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #5560 from anthropics/claude-security-v0.10.2</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/340e33aef211d95769d252324854497af871dafe</link>
@@ -358,54 +406,6 @@
       <pubDate>Tue, 02 Jun 2026 15:52:38 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Fixes #2159. The Stop hook emits feedback via `hookSpecificOutput: {hookEventName: &quot;Stop&quot;, additionalContext}`, but `Stop`/`SubagentStop` are NOT members of CC&apos;s `hookSpecificOutput` discriminated union (coreSchemas.ts — valid members are PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, etc.</description>
-    </item>
-    <item>
-      <title>bump: switch to per-entry PR mode (one PR per stale plugin) (#2051)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0d82eac145a50e6867d908419dccc5087b8595b0</link>
-      <guid isPermaLink="false">0d82eac</guid>
-      <pubDate>Mon, 01 Jun 2026 05:38:22 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* bump: switch to per-entry PR mode (one PR per stale plugin)  Replaces the single batched bump PR with one PR per stale plugin so a single failing plugin no longer blocks the rest. Pins to a feature branch of the bump-plugin-shas action that adds &apos;pr-mode: per-entry&apos;; re-pin to the merge commit on </description>
-    </item>
-    <item>
-      <title>Merge pull request #2105 from anthropics/fix-2098-output-config-format</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/3d368d2972d9af8f52e96ae7d86d2686967af31f</link>
-      <guid isPermaLink="false">3d368d2</guid>
-      <pubDate>Sun, 31 May 2026 05:32:02 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: migrate _call_claude from deprecated output_format to output_config.format (#2098)</description>
-    </item>
-    <item>
-      <title>security-guidance: migrate from deprecated output_format to output_config.format (#2098)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/84011d43b1de3303592d566a01b9466d5f7be191</link>
-      <guid isPermaLink="false">84011d4</guid>
-      <pubDate>Sun, 31 May 2026 03:11:41 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Fixes #2098. The Anthropic Messages API moved structured-output schema specification from a top-level `output_format` field to a nested `output_config.format` field, per https://platform.claude.com/docs/en/build-with-claude/structured-outputs.  Per docs the old form &quot;will continue working for a tran</description>
-    </item>
-    <item>
-      <title>Merge pull request #2101 from anthropics/fix-2099-quotepath-global</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/2a822c0787435b7924377c26b7d02be171df7814</link>
-      <guid isPermaLink="false">2a822c0</guid>
-      <pubDate>Sun, 31 May 2026 03:07:06 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: move core.quotePath=false to GIT_CMD globally (#2099 followup)</description>
-    </item>
-    <item>
-      <title>security-guidance: move core.quotePath=false to GIT_CMD globally (#2099 followup)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a40c9f1e834a50651236584b22a09894cdcad431</link>
-      <guid isPermaLink="false">a40c9f1</guid>
-      <pubDate>Sat, 30 May 2026 19:19:38 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Followup to PR #2086 (which added the flag to 4 specific git call sites) and PR #2100 (text=True purge for #2099).  The Windows reporter for #2099 noticed more git invocations still lacked the flag — rev-parse path queries (--show-toplevel, --git-dir, --git-common-dir), reflog %gs subjects, and `git</description>
-    </item>
-    <item>
-      <title>Merge pull request #2100 from anthropics/fix-2099-text-true-pythonutf8</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/c7a3e2ffa047de2da799c2237475f024c83f4c4b</link>
-      <guid isPermaLink="false">c7a3e2f</guid>
-      <pubDate>Sat, 30 May 2026 19:14:03 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: purge text=True from subprocess.run + bake PYTHONUTF8=1 (#2099)</description>
     </item>
   </channel>
 </rss>
