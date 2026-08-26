@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 25 Aug 2026 06:52:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 06:53:31 GMT</lastBuildDate>
+    <item>
+      <title>0.3.246</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.246</guid>
+      <pubDate>Wed, 26 Aug 2026 06:52:43 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added optional usermessageuuid to error result messages and to the first assistant message or streamevent of each turn, linking a reply or failure to the user message that triggered it
+- Added modelUsage[].costBasis (&apos;list&apos; | &apos;managed&apos; | &apos;unknown&apos;) reporting which price table each model&apos;s costUSD </description>
+    </item>
     <item>
       <title>0.3.245</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -431,15 +440,6 @@
       <pubDate>Thu, 11 Jun 2026 10:40:30 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Updated to parity with Claude Code v2.1.173</description>
-    </item>
-    <item>
-      <title>0.3.170</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.170</guid>
-      <pubDate>Wed, 10 Jun 2026 10:06:00 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added claude-fable-5 model and the fable alias to SDK model types. https://www.anthropic.com/news/claude-fable-5-mythos-5
-- Updated to parity with Claude Code v2.1.170</description>
     </item>
   </channel>
 </rss>

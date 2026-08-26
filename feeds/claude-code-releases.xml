@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 25 Aug 2026 06:52:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 06:53:31 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.246</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.246</link>
+      <guid isPermaLink="false">v2.1.246</guid>
+      <pubDate>Tue, 25 Aug 2026 22:31:52 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a startup warning for Bash allow rules with a wildcard before the subcommand (e.g. Bash(git  main)), since they also match options inserted before the subcommand
+- Added an Auto mode tab to /permissions for viewing and editing auto mode classifier rules
+- Added the turn&apos;s comp</description>
+    </item>
     <item>
       <title>v2.1.245</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.245</link>
@@ -499,16 +510,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Bug fixes and reliability improvements</description>
-    </item>
-    <item>
-      <title>v2.1.187</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.187</link>
-      <guid isPermaLink="false">v2.1.187</guid>
-      <pubDate>Tue, 23 Jun 2026 21:03:48 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added sandbox.credentials setting to block sandboxed commands from reading credential files and secret environment variables
-- Added org-configured model restrictions to the model picker, --model, /model, and ANTHROPICMODEL, with a &quot;restricted by your organization&apos;s settings&quot; messag</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,36 @@
 [
   {
     "version": "1.0",
+    "timestamp": "2026-08-26T06:53:31.571Z",
+    "durationMs": 48619,
+    "totalNewItems": 40,
+    "sourcesChecked": 39,
+    "sourcesWithErrors": 5,
+    "errors": [
+      {
+        "key": "docs-release-notes",
+        "error": "model-table: \"Claude API ID\" row missing or incomplete"
+      },
+      {
+        "key": "reddit-claudeai",
+        "error": "HTTP 429 for https://www.reddit.com/r/ClaudeAI/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claude",
+        "error": "HTTP 429 for https://www.reddit.com/r/claude/top.rss?t=day&limit=5"
+      },
+      {
+        "key": "reddit-claudeskills",
+        "error": "HTTP 429 for https://www.reddit.com/r/claudeskills/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claudeopus",
+        "error": "HTTP 429 for https://www.reddit.com/r/Claudeopus/top.rss?t=week&limit=10"
+      }
+    ]
+  },
+  {
+    "version": "1.0",
     "timestamp": "2026-08-25T06:52:24.879Z",
     "durationMs": 48932,
     "totalNewItems": 37,
@@ -2241,23 +2271,5 @@
     "sourcesChecked": 39,
     "sourcesWithErrors": 0,
     "errors": []
-  },
-  {
-    "version": "1.0",
-    "timestamp": "2026-05-26T10:01:53.120Z",
-    "durationMs": 50219,
-    "totalNewItems": 70,
-    "sourcesChecked": 39,
-    "sourcesWithErrors": 2,
-    "errors": [
-      {
-        "key": "twitter-anthropicai",
-        "error": "The operation was aborted due to timeout"
-      },
-      {
-        "key": "twitter-theamolavasare",
-        "error": "The operation was aborted due to timeout"
-      }
-    ]
   }
 ]
