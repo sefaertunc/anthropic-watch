@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 26 Aug 2026 06:53:31 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 17:27:03 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.247</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.247</link>
+      <guid isPermaLink="false">v2.1.247</guid>
+      <pubDate>Wed, 26 Aug 2026 23:06:39 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added the SendFeedback tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from /feedback (turn off with the feedbackDrafts setting)
+- Added {id, text, cooldownSessions, priority} entries, tipsFile, and label to spinnerTipsOver</description>
+    </item>
     <item>
       <title>v2.1.246</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.246</link>
@@ -501,15 +511,6 @@
 - Added /rewind support for resuming a conversation from before /clear was run
 - Fixed scroll position jumping to the bottom while reading earlier output during a streaming response
 - Fixed background agents resurrecting after being stopped — stopping an agent from the tasks panel is </description>
-    </item>
-    <item>
-      <title>v2.1.190</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.190</link>
-      <guid isPermaLink="false">v2.1.190</guid>
-      <pubDate>Wed, 24 Jun 2026 15:53:56 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Bug fixes and reliability improvements</description>
     </item>
   </channel>
 </rss>

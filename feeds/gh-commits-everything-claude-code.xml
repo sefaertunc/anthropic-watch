@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 26 Aug 2026 06:53:31 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 17:27:03 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2863 from affaan-m/maint/release-2.2-ready</title>
+      <link>https://github.com/affaan-m/ECC/commit/5eddf1a3ffd311423be2d4ba7d26f7209c91b033</link>
+      <guid isPermaLink="false">5eddf1a</guid>
+      <pubDate>Thu, 27 Aug 2026 17:00:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix(release): make ECC 2.2 ready to publish</description>
+    </item>
+    <item>
+      <title>test(opencode): verify recovery through descriptors</title>
+      <link>https://github.com/affaan-m/ECC/commit/51982fdab1d27f370c6de47aa12d06d72f07f0a7</link>
+      <guid isPermaLink="false">51982fd</guid>
+      <pubDate>Tue, 25 Aug 2026 21:27:26 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test(opencode): avoid path race in recovery fixture</title>
+      <link>https://github.com/affaan-m/ECC/commit/aaaff77ef9976a8fcb770192914caabf27e7e987</link>
+      <guid isPermaLink="false">aaaff77</guid>
+      <pubDate>Tue, 25 Aug 2026 21:23:24 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(release): stage ECC 2.2 launch safely</title>
+      <link>https://github.com/affaan-m/ECC/commit/204cc2d2a31b11ecf584de9ff5d9597b7ff24c64</link>
+      <guid isPermaLink="false">204cc2d</guid>
+      <pubDate>Tue, 25 Aug 2026 21:19:45 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test(nasiko): isolate malformed lock fixture</title>
+      <link>https://github.com/affaan-m/ECC/commit/d6d0c4e696023b6dc62066820b4328490d53dc79</link>
+      <guid isPermaLink="false">d6d0c4e</guid>
+      <pubDate>Tue, 25 Aug 2026 17:52:19 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(nasiko): use descriptor lock identity</title>
+      <link>https://github.com/affaan-m/ECC/commit/e10c4bb5bfe4b1876a285fe7a8c0e6e85c9d953e</link>
+      <guid isPermaLink="false">e10c4bb</guid>
+      <pubDate>Tue, 25 Aug 2026 17:49:26 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(nasiko): harden lifecycle recovery</title>
+      <link>https://github.com/affaan-m/ECC/commit/307bbd53a61a34dc0d72ce3a33b92fa8088e3595</link>
+      <guid isPermaLink="false">307bbd5</guid>
+      <pubDate>Tue, 25 Aug 2026 17:34:58 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test(opencode): canonicalize Windows path expectations</title>
+      <link>https://github.com/affaan-m/ECC/commit/d66eaf116fa6b4f691ee646d814be6fbf27a5ec3</link>
+      <guid isPermaLink="false">d66eaf1</guid>
+      <pubDate>Tue, 25 Aug 2026 16:55:02 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs(release): record final environment evidence</title>
+      <link>https://github.com/affaan-m/ECC/commit/0b9573682f3a3565453a2de093cf923f2aee2b2c</link>
+      <guid isPermaLink="false">0b95736</guid>
+      <pubDate>Tue, 25 Aug 2026 16:44:26 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(opencode): snapshot invocation environments</title>
+      <link>https://github.com/affaan-m/ECC/commit/f67387e83605859dc25eb60a23f3ced911f8c5f0</link>
+      <guid isPermaLink="false">f67387e</guid>
+      <pubDate>Tue, 25 Aug 2026 16:37:53 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #2824 from affaan-m/agent/tasteforge-multimodal-20260819</title>
       <link>https://github.com/affaan-m/ECC/commit/d8409a4b0813771235555e32e3d8046a73988bfa</link>
@@ -326,86 +406,6 @@
       <pubDate>Tue, 11 Aug 2026 04:43:01 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>* chore(deps-dev): bump @types/node from 25.9.2 to 26.1.2  Bumps [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/HEAD/types/node) from 25.9.2 to 26.1.2. - [Release notes](https://github.com/DefinitelyTyped/DefinitelyTyped/releases) - [Commits](https://github.com/DefinitelyTyped</description>
-    </item>
-    <item>
-      <title>fix(hooks): context-monitor noise — loop-detection false positives + per-call cost-warning spam (#2486)</title>
-      <link>https://github.com/affaan-m/ECC/commit/c7720d41bb2cf79d09f00302b3aca4af7c4125b3</link>
-      <guid isPermaLink="false">c7720d4</guid>
-      <pubDate>Tue, 11 Aug 2026 02:33:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(hooks): context-monitor noise — loop-detection false positives and per-call cost-warning spam  Two independent noise sources in the PostToolUse context monitor injected agent-facing warnings on nearly every tool call:  1. LOOP WARNING false positives. hashToolCall() hashed only the first 160  </description>
-    </item>
-    <item>
-      <title>feat(agents): add rag-pipeline-reviewer agent (#2446)</title>
-      <link>https://github.com/affaan-m/ECC/commit/0e0df5a6e76074fd8a1494aaa78c2ee229221484</link>
-      <guid isPermaLink="false">0e0df5a</guid>
-      <pubDate>Tue, 11 Aug 2026 02:08:48 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat(agents): add rag-pipeline-reviewer agent  * fix: correct model field syntax  * fix: address review feedback - add prompt defense baseline, fix context_recall gap, register in AGENTS.md  * chore: update agent count to 68, add trailing newline  * chore: fix agent count consistency in project st</description>
-    </item>
-    <item>
-      <title>feat(session-start): rank injected instincts by project/stack relevance (#2466)</title>
-      <link>https://github.com/affaan-m/ECC/commit/5987bd4dc6d6762567d2dda04ab84b5e52e3fa40</link>
-      <guid isPermaLink="false">5987bd4</guid>
-      <pubDate>Tue, 11 Aug 2026 01:46:24 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat(session-start): rank injected instincts by project/stack relevance  Instinct selection at SessionStart ranked purely by confidence, so a high-confidence instinct about an unrelated stack could take an injection slot from a lower-confidence instinct that is actually relevant to the current pro</description>
-    </item>
-    <item>
-      <title>fix(quarkus-verification): modernize stale CI references (ZAP image + GitHub Actions v4) (#2424)</title>
-      <link>https://github.com/affaan-m/ECC/commit/3d4ef3184b7141b18f2d0823b8fe62d2c67218bf</link>
-      <guid isPermaLink="false">3d4ef31</guid>
-      <pubDate>Mon, 10 Aug 2026 23:31:55 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(quarkus-verification): use current ghcr.io/zaproxy/zaproxy:stable image  The owasp/zap2docker-* images are deprecated (ZAP left the OWASP org). The current canonical image published by the ZAP project is ghcr.io/zaproxy/zaproxy:stable; the packaged scan scripts (zap-api-scan.py) are unchanged.</description>
-    </item>
-    <item>
-      <title>Add living-docs-governance skill (maintain-phase project doc system) (#2277)</title>
-      <link>https://github.com/affaan-m/ECC/commit/bed96afa420042775b7a3ac12296bdff09f28477</link>
-      <guid isPermaLink="false">bed96af</guid>
-      <pubDate>Mon, 10 Aug 2026 21:10:01 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* feat: add living-docs-governance skill (maintain-phase project doc system)  Rebased onto latest main to resolve the merge conflict (the branch had gone DIRTY as main advanced). Trimmed to just the skill file (no top-level README/AGENTS edits), mirroring the merged #2381. Previously approved by @po</description>
-    </item>
-    <item>
-      <title>fix(plan-canvas): deliver browser chat to the agent every time (#2739)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ae303fb6c19e3f7cb88cb9fd9f15ddcf235294b6</link>
-      <guid isPermaLink="false">ae303fb</guid>
-      <pubDate>Sun, 09 Aug 2026 22:15:25 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Feedback sent from the canvas only reached an agent through a live /api/await long poll. When a turn ended with no await parked, queueFeedback wrote the message to sessions.json and nothing ever consumed it, so sending appeared to do nothing at all. The presence pill made it worse: workingKeys had n</description>
-    </item>
-    <item>
-      <title>fix: complete Discord delivery receipts reliably (#2738)</title>
-      <link>https://github.com/affaan-m/ECC/commit/649def769bd860512e5fce86e30aa05c8119259f</link>
-      <guid isPermaLink="false">649def7</guid>
-      <pubDate>Sun, 09 Aug 2026 20:44:18 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* test: reproduce Actions receipt completion mismatch  * fix: complete Discord receipts with Actions identity</description>
-    </item>
-    <item>
-      <title>fix: deliver announcements through a scoped Discord webhook (#2737)</title>
-      <link>https://github.com/affaan-m/ECC/commit/cdbb25bf9da8c87cdafb0d117fc1bd357bea9b64</link>
-      <guid isPermaLink="false">cdbb25b</guid>
-      <pubDate>Sun, 09 Aug 2026 20:41:27 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* test: reproduce Discord webhook announcement gap  * fix: deliver ECC announcements through channel webhook  * test: cover webhook replay and least privilege  * fix: make webhook delivery durable and least privilege  * test: cover trusted receipts and cross-workflow races  * fix: serialize and auth</description>
-    </item>
-    <item>
-      <title>fix: deliver ECC announcements to Discord (#2732)</title>
-      <link>https://github.com/affaan-m/ECC/commit/2d46e80e0925c7be0907f18c1812311ac212a6c5</link>
-      <guid isPermaLink="false">2d46e80</guid>
-      <pubDate>Sun, 09 Aug 2026 10:37:04 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(memory-vault): compare dev only when both stats report one (#2637)</title>
-      <link>https://github.com/affaan-m/ECC/commit/51a6950bde756fe3ebc8879aa0c8ee49b9c53e78</link>
-      <guid isPermaLink="false">51a6950</guid>
-      <pubDate>Sat, 08 Aug 2026 21:06:18 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>ecc memory writes and --body-file reads fail on Windows. sameFileIdentity() compares the dev field of a path-based stat against a handle-based fstat, and libuv 1.49.0 through 1.50.x resolve path-based stat() and lstat() on Windows through GetFileInformationByName, which leaves the volume serial unse</description>
     </item>
   </channel>
 </rss>
