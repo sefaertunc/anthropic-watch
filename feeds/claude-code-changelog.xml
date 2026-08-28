@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 27 Aug 2026 17:27:03 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 18:20:23 GMT</lastBuildDate>
+    <item>
+      <title>2.1.251</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.251</guid>
+      <pubDate>Fri, 28 Aug 2026 18:19:31 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added PreModelSwitch and PostModelSwitch hook events (block, confirm, or annotate a model switch); SessionStart resume hooks now receive session staleness and the estimated re-cache cost
+- Added live streaming of a foreground subagent&apos;s tool calls and results to Remote Control clients (background </description>
+    </item>
     <item>
       <title>2.1.247</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -455,14 +464,6 @@
       <description>- Session titles are now generated in the language of your conversation (set the language setting to pin a specific language)
 - Added footerLinksRegexes setting for regex-matched link badges in the footer row, configurable via user or managed settings
 - Improved Bedrock credential caching: credentia</description>
-    </item>
-    <item>
-      <title>2.1.175</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.175</guid>
-      <pubDate>Fri, 12 Jun 2026 10:17:48 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added enforceAvailableModels managed setting — when enabled, the availableModels allowlist also constrains the Default model (a Default that would resolve to a disallowed model now falls back to the first allowed model), and user or project settings can no longer widen a managed availableModels li</description>
     </item>
   </channel>
 </rss>

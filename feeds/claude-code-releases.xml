@@ -6,7 +6,26 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 27 Aug 2026 17:27:03 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 18:20:23 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.250</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.250</link>
+      <guid isPermaLink="false">v2.1.250</guid>
+      <pubDate>Fri, 28 Aug 2026 00:49:16 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Bug fixes and reliability improvements</description>
+    </item>
+    <item>
+      <title>v2.1.248</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.248</link>
+      <guid isPermaLink="false">v2.1.248</guid>
+      <pubDate>Thu, 27 Aug 2026 22:12:20 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added --restricted (or CLAUDECODERESTRICTED=1): removes the built-in tools that run commands or code and WebFetch (unless named in --tools), keeps file tools inside the working directory, refuses bypassPermissions, and ignores user, project and local settings files
+- Added experimen</description>
+    </item>
     <item>
       <title>v2.1.247</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.247</link>
@@ -489,28 +508,6 @@
       <description>What&apos;s changed
 - Added CLAUDECODEDISABLEMOUSECLICKS to disable mouse click/drag/hover in fullscreen mode while keeping wheel scroll
 - Fixed hook matchers with hyphenated identifiers (e.g. code-reviewer, mcpbrave-search) accidentally substring-matching — they now exact-match. Use mcpbrave-search. to </description>
-    </item>
-    <item>
-      <title>v2.1.193</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.193</link>
-      <guid isPermaLink="false">v2.1.193</guid>
-      <pubDate>Thu, 25 Jun 2026 21:45:57 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added autoMode.classifyAllShell setting to route all Bash/PowerShell commands through the auto-mode classifier instead of only arbitrary-code-execution patterns
-- Added auto-mode denial reasons to the transcript, the denial toast, and /permissions recent denials
-- Added claudecode.a</description>
-    </item>
-    <item>
-      <title>v2.1.191</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.191</link>
-      <guid isPermaLink="false">v2.1.191</guid>
-      <pubDate>Wed, 24 Jun 2026 21:58:12 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added /rewind support for resuming a conversation from before /clear was run
-- Fixed scroll position jumping to the bottom while reading earlier output during a streaming response
-- Fixed background agents resurrecting after being stopped — stopping an agent from the tasks panel is </description>
     </item>
   </channel>
 </rss>
