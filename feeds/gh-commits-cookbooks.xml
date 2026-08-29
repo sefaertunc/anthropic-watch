@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 28 Aug 2026 18:20:23 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 12:28:40 GMT</lastBuildDate>
+    <item>
+      <title>docs(managed_agents): remove cost and latency ratios from CMA_plan_big_execute_small (#851)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/bbfab1bbbe5d4c353241a6df4e7d9a112a1ba356</link>
+      <guid isPermaLink="false">bbfab1b</guid>
+      <pubDate>Fri, 28 Aug 2026 21:53:42 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Drop the &quot;roughly 2.5x cheaper and 3x faster&quot; figures from the intro and the results discussion, and reword the matched-rigor caveat so it no longer asserts a cost win. The measured token split (84-98% of the team&apos;s input tokens at the worker rate) stays.</description>
+    </item>
     <item>
       <title>Merge pull request #834 from anthropics/aravind-ant/fix-mdx-compile</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/35f2eec7e44897c537e44441b7dff2f0ecbfb804</link>
@@ -398,14 +406,6 @@
       <pubDate>Sat, 30 May 2026 01:31:29 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>hosting: lint fixes + address #677 review comments</description>
-    </item>
-    <item>
-      <title>hosting: address #677 review comments</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/4c55042d610b228b8983fafccdcfd0849e9eca5d</link>
-      <guid isPermaLink="false">4c55042</guid>
-      <pubDate>Fri, 29 May 2026 02:55:17 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>- server.py, gateway/main.py: note that _limit_body_size only checks   Content-Length; chunked bodies pass through (review #1) - gateway/main.py: strip token:tenant pairs and skip malformed entries   when parsing GATEWAY_TENANTS; log loaded count (review #2) - requirements.txt, server.py _remember, </description>
     </item>
   </channel>
 </rss>

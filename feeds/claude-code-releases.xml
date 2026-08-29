@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 28 Aug 2026 18:20:23 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 12:28:40 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.251</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.251</link>
+      <guid isPermaLink="false">v2.1.251</guid>
+      <pubDate>Fri, 28 Aug 2026 18:19:32 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added PreModelSwitch and PostModelSwitch hook events (block, confirm, or annotate a model switch); SessionStart resume hooks now receive session staleness and the estimated re-cache cost
+- Added live streaming of a foreground subagent&apos;s tool calls and results to Remote Control clien</description>
+    </item>
     <item>
       <title>v2.1.250</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.250</link>
@@ -498,16 +508,6 @@
 - Added support for organization default models — admins set it in the org console; it shows as &quot;Org default&quot; (or &quot;Role default&quot;) in /model when you haven&apos;t picked one yourself
 - Added readable default names for sessions at start, making them easier to identify and message
 - Added cli</description>
-    </item>
-    <item>
-      <title>v2.1.195</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.195</link>
-      <guid isPermaLink="false">v2.1.195</guid>
-      <pubDate>Fri, 26 Jun 2026 21:29:42 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added CLAUDECODEDISABLEMOUSECLICKS to disable mouse click/drag/hover in fullscreen mode while keeping wheel scroll
-- Fixed hook matchers with hyphenated identifiers (e.g. code-reviewer, mcpbrave-search) accidentally substring-matching — they now exact-match. Use mcpbrave-search. to </description>
     </item>
   </channel>
 </rss>

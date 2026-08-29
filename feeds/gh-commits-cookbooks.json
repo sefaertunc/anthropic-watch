@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-28T18:20:23.780Z",
+  "generated": "2026-08-29T12:28:40.386Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "bbfab1b",
+      "title": "docs(managed_agents): remove cost and latency ratios from CMA_plan_big_execute_small (#851)",
+      "date": "2026-08-28T21:53:42Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/bbfab1bbbe5d4c353241a6df4e7d9a112a1ba356",
+      "snippet": "Drop the \"roughly 2.5x cheaper and 3x faster\" figures from the intro and the results discussion, and reword the matched-rigor caveat so it no longer asserts a cost win. The measured token split (84-98% of the team's input tokens at the worker rate) stays.",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "bbfab1b|gh-commits-cookbooks"
+    },
     {
       "id": "35f2eec",
       "title": "Merge pull request #834 from anthropics/aravind-ant/fix-mdx-compile",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "f1d568d|gh-commits-cookbooks"
-    },
-    {
-      "id": "4c55042",
-      "title": "hosting: address #677 review comments",
-      "date": "2026-05-29T02:55:17Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/4c55042d610b228b8983fafccdcfd0849e9eca5d",
-      "snippet": "- server.py, gateway/main.py: note that _limit_body_size only checks   Content-Length; chunked bodies pass through (review #1) - gateway/main.py: strip token:tenant pairs and skip malformed entries   when parsing GATEWAY_TENANTS; log loaded count (review #2) - requirements.txt, server.py _remember, ",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "4c55042|gh-commits-cookbooks"
     }
   ]
 }
