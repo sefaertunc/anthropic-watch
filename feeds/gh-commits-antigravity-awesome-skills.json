@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-29T12:28:40.396Z",
+  "generated": "2026-08-30T11:30:13.763Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "d91ed42",
+      "title": "chore: release v16.4.0 (#1294)",
+      "date": "2026-08-30T10:10:57Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/d91ed427d91596da3fcab6dd26ff3306c8003ce5",
+      "snippet": "Prepare protected release v16.4.0.",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "d91ed42|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "a8fc15b",
+      "title": "docs: add v16.4.0 release notes (#1293)",
+      "date": "2026-08-30T09:56:49Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/a8fc15bd1095e839a6fa2ee5d4cc0ffbefb44687",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "a8fc15b|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "393bf3e",
+      "title": "fix: sync canonical state before reference validation (#1291)",
+      "date": "2026-08-30T07:45:21Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/393bf3ef4b5cccb70eb09584c4c4735940d07d50",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "393bf3e|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "25b31e7",
+      "title": "feat: add graceful-shutdown skill for zero-downtime server deploys (#1289)",
+      "date": "2026-08-30T07:29:21Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/25b31e733041e0bf0427bed358916f1f5087ec47",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "25b31e7|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "7797409",
+      "title": "feat: update falsify — add MODE SELECTION gate and Nudge routing (0.8.3) (#1287)",
+      "date": "2026-08-30T07:25:11Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/77974094f8ce15ded09b5c294fe9862914f84477",
+      "snippet": "Updates the merged **falsify** skill (`skills/falsify/SKILL.md`) to the latest upstream version (0.8.3), syncing two protocol fixes that shipped after the original merge:  1. **Mandatory MODE SELECTION gate** — route before answering: Incident (OODA, act first at ~70% with rollback) / Simple / Nudge",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "7797409|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "12e4128",
+      "title": "chore: remove retired UIZZE score skill (#1288)",
+      "date": "2026-08-30T07:15:56Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/12e4128aba3699dead9380d0c72e582e54bf21b3",
+      "snippet": "UIZZE retired `ui-slop-score`; the canonical source no longer publishes that package. The maintained UIZZE skills are `anti-ui-slop`, `ui-design`, and `ui-radar`.  This stays source-only as requested by the contributor guide, so generated registry artifacts are left for the repository canonicalizati",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "12e4128|gh-commits-antigravity-awesome-skills"
+    },
     {
       "id": "0362363",
       "title": "chore: release v16.3.0 (#1285)",
@@ -491,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
       "uniqueKey": "34c9ed0|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "4f10766",
-      "title": "fix: classify zero-diff contributor PRs (#1172)",
-      "date": "2026-08-17T01:47:20Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/4f107662990628903efdbbcd92706dcc7b39dd4b",
-      "snippet": "# Pull Request Description  Complete the zero-diff maintainer workflow by treating an authoritative empty merge-base-to-head raw diff as approval-safe inside `merge:batch`. The general workflow classifier remains fail-closed when change records are missing in any other context.  The regression test ",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "4f10766|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "c723677",
-      "title": "fix: allow zero-diff contributor merges (#1171)",
-      "date": "2026-08-17T01:41:35Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c7236773af0b90ef34d4250ce01d9226423f903e",
-      "snippet": "# Pull Request Description  Allow `npm run merge:batch` to accept an empty raw Git diff. This preserves the protected maintainer workflow for contributor PRs whose reviewed content has already landed through a same-repository intake PR, while retaining strict parsing for every non-empty diff.  The r",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "c723677|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "3ff3635",
-      "title": "fix: protected maintenance intake for external PRs (#1169)",
-      "date": "2026-08-17T01:21:49Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/3ff3635944bfe705a36726a2a89522ebf3038359",
-      "snippet": "# Pull Request Description  Protected maintainer intake for the three external PRs that cannot pass the fork-safety gate directly:  - #1167: accept npm 12's single-element `npm view --json` array while rejecting empty or ambiguous output. - #1154: import the two-mode iridescent workbench and repair ",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "3ff3635|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "23624d0",
-      "title": "feat: refresh UIZZE anti-ui-slop skill (#1166)",
-      "date": "2026-08-17T00:55:37Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/23624d03ca0ad7f7ea76fe7002564529020dac4d",
-      "snippet": "Refreshes the canonical UIZZE anti-ui-slop skill entry for this high-reach Agent Skills directory.\\n\\n- Source: https://github.com/uizze/uizze\\n- Product: https://uizze.com\\n- Install: `npx skills add https://uizze.com --skill anti-ui-slop`\\n- Grounded in 800,000+ real web and iOS screens\\n- Free lo",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "23624d0|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "b28e963",
-      "title": "fix: update nanoid to 3.3.18 (#1150)",
-      "date": "2026-08-13T17:50:33Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/b28e9633a0c6c74d407a7b58a8ac7d8dd9369287",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "b28e963|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "1dd6dae",
-      "title": "docs: correct v15.13.0 changelog (#1148)",
-      "date": "2026-08-12T15:01:32Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/1dd6daec9f43c59b5c2082c36abc59c9418b41c6",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "1dd6dae|gh-commits-antigravity-awesome-skills"
     }
   ]
 }

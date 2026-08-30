@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 29 Aug 2026 12:28:40 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 11:30:13 GMT</lastBuildDate>
+    <item>
+      <title>chore: release v16.4.0 (#1294)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d91ed427d91596da3fcab6dd26ff3306c8003ce5</link>
+      <guid isPermaLink="false">d91ed42</guid>
+      <pubDate>Sun, 30 Aug 2026 10:10:57 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v16.4.0.</description>
+    </item>
+    <item>
+      <title>docs: add v16.4.0 release notes (#1293)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a8fc15bd1095e839a6fa2ee5d4cc0ffbefb44687</link>
+      <guid isPermaLink="false">a8fc15b</guid>
+      <pubDate>Sun, 30 Aug 2026 09:56:49 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: sync canonical state before reference validation (#1291)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/393bf3ef4b5cccb70eb09584c4c4735940d07d50</link>
+      <guid isPermaLink="false">393bf3e</guid>
+      <pubDate>Sun, 30 Aug 2026 07:45:21 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: add graceful-shutdown skill for zero-downtime server deploys (#1289)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/25b31e733041e0bf0427bed358916f1f5087ec47</link>
+      <guid isPermaLink="false">25b31e7</guid>
+      <pubDate>Sun, 30 Aug 2026 07:29:21 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: update falsify — add MODE SELECTION gate and Nudge routing (0.8.3) (#1287)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/77974094f8ce15ded09b5c294fe9862914f84477</link>
+      <guid isPermaLink="false">7797409</guid>
+      <pubDate>Sun, 30 Aug 2026 07:25:11 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Updates the merged **falsify** skill (`skills/falsify/SKILL.md`) to the latest upstream version (0.8.3), syncing two protocol fixes that shipped after the original merge:  1. **Mandatory MODE SELECTION gate** — route before answering: Incident (OODA, act first at ~70% with rollback) / Simple / Nudge</description>
+    </item>
+    <item>
+      <title>chore: remove retired UIZZE score skill (#1288)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/12e4128aba3699dead9380d0c72e582e54bf21b3</link>
+      <guid isPermaLink="false">12e4128</guid>
+      <pubDate>Sun, 30 Aug 2026 07:15:56 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>UIZZE retired `ui-slop-score`; the canonical source no longer publishes that package. The maintained UIZZE skills are `anti-ui-slop`, `ui-design`, and `ui-radar`.  This stays source-only as requested by the contributor guide, so generated registry artifacts are left for the repository canonicalizati</description>
+    </item>
     <item>
       <title>chore: release v16.3.0 (#1285)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/03623634e9c9b7f7f2e75f548c1a3e53362a10fc</link>
@@ -358,54 +406,6 @@
       <pubDate>Mon, 17 Aug 2026 01:56:32 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description># Pull Request Description  Allow the trusted fork-safety preflight to accept a zero-file Git diff. This completes the protected contributor-credit workflow after reviewed content has already landed through a maintainer intake PR.  The special case is confined to `evaluateForkSafety` after repositor</description>
-    </item>
-    <item>
-      <title>fix: classify zero-diff contributor PRs (#1172)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4f107662990628903efdbbcd92706dcc7b39dd4b</link>
-      <guid isPermaLink="false">4f10766</guid>
-      <pubDate>Mon, 17 Aug 2026 01:47:20 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Complete the zero-diff maintainer workflow by treating an authoritative empty merge-base-to-head raw diff as approval-safe inside `merge:batch`. The general workflow classifier remains fail-closed when change records are missing in any other context.  The regression test </description>
-    </item>
-    <item>
-      <title>fix: allow zero-diff contributor merges (#1171)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c7236773af0b90ef34d4250ce01d9226423f903e</link>
-      <guid isPermaLink="false">c723677</guid>
-      <pubDate>Mon, 17 Aug 2026 01:41:35 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Allow `npm run merge:batch` to accept an empty raw Git diff. This preserves the protected maintainer workflow for contributor PRs whose reviewed content has already landed through a same-repository intake PR, while retaining strict parsing for every non-empty diff.  The r</description>
-    </item>
-    <item>
-      <title>fix: protected maintenance intake for external PRs (#1169)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3ff3635944bfe705a36726a2a89522ebf3038359</link>
-      <guid isPermaLink="false">3ff3635</guid>
-      <pubDate>Mon, 17 Aug 2026 01:21:49 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Protected maintainer intake for the three external PRs that cannot pass the fork-safety gate directly:  - #1167: accept npm 12&apos;s single-element `npm view --json` array while rejecting empty or ambiguous output. - #1154: import the two-mode iridescent workbench and repair </description>
-    </item>
-    <item>
-      <title>feat: refresh UIZZE anti-ui-slop skill (#1166)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/23624d03ca0ad7f7ea76fe7002564529020dac4d</link>
-      <guid isPermaLink="false">23624d0</guid>
-      <pubDate>Mon, 17 Aug 2026 00:55:37 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Refreshes the canonical UIZZE anti-ui-slop skill entry for this high-reach Agent Skills directory.\n\n- Source: https://github.com/uizze/uizze\n- Product: https://uizze.com\n- Install: `npx skills add https://uizze.com --skill anti-ui-slop`\n- Grounded in 800,000+ real web and iOS screens\n- Free lo</description>
-    </item>
-    <item>
-      <title>fix: update nanoid to 3.3.18 (#1150)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b28e9633a0c6c74d407a7b58a8ac7d8dd9369287</link>
-      <guid isPermaLink="false">b28e963</guid>
-      <pubDate>Thu, 13 Aug 2026 17:50:33 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: correct v15.13.0 changelog (#1148)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1dd6daec9f43c59b5c2082c36abc59c9418b41c6</link>
-      <guid isPermaLink="false">1dd6dae</guid>
-      <pubDate>Wed, 12 Aug 2026 15:01:32 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
     </item>
   </channel>
 </rss>
