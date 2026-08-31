@@ -5,9 +5,53 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-08-30T11:30:13.763Z",
+  "generated": "2026-08-31T13:01:54.777Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "bcb9b98",
+      "title": "fix: resolve exported security findings (#1303)",
+      "date": "2026-08-31T09:00:39Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/bcb9b98ee2768062b82e9fab70889997ac1a8d5c",
+      "snippet": "# Pull Request Description  Resolve the full exported security-findings batch from 2026-08-31 without including generated registry state.  This source PR:  - replaces JavaScript execution in the Liuguang Banlan manifest helpers with a strict, size-bounded static parser; - removes the mutable `npx` f",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "bcb9b98|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "89241a4",
+      "title": "Add Vercel favicon cache cleanup guidance (#1296)",
+      "date": "2026-08-31T07:06:16Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/89241a4bb0ab80cf4b4797632dd007750e7c5e7c",
+      "snippet": "This PR expands the `lovable-cleanup` skill to cover stale favicon/CDN cache handling on Vercel. Adds **Area 15** — overwrite-in-place instead of deleting, link all icon variants in `index.html` (ICO/SVG/apple-touch), immutable `vercel.json` cache headers, and post-deploy `curl` verification. Refres",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "89241a4|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "dd07545",
+      "title": "fix: satisfy FLOSS manifest validation (#1301)",
+      "date": "2026-08-31T06:20:38Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/dd075454d8a23e51f76cfa1654d07706e28e0c2e",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "dd07545|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "7539226",
+      "title": "docs: add FLOSS/fund sustainability manifest (#1299)",
+      "date": "2026-08-31T06:04:51Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/753922610b7a40b639d60afac678761cf091040e",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "7539226|gh-commits-antigravity-awesome-skills"
+    },
     {
       "id": "d91ed42",
       "title": "chore: release v16.4.0 (#1294)",
@@ -513,50 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
       "uniqueKey": "172287e|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "1f67c44",
-      "title": "feat: add using-lwc skill (#1152)",
-      "date": "2026-08-17T02:07:58Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/1f67c44dc9aeaad2baa5130460a1f850d357a9ff",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "1f67c44|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "c9cf501",
-      "title": "feat: add parameterized iridescent UI workbench skill (#1154)",
-      "date": "2026-08-17T02:04:39Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c9cf5018b3c24a59db207e599776640b87c7d95f",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "c9cf501|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "da068f3",
-      "title": "fix: resolve release identity with npm >= 12 array-shaped --json output (#1167)",
-      "date": "2026-08-17T02:01:18Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/da068f3604e5458b2b271ff841dc39075d95e526",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "da068f3|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "34c9ed0",
-      "title": "fix: allow zero-diff fork preflight (#1173)",
-      "date": "2026-08-17T01:56:32Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/34c9ed03ea39b1b55805cb57392ed49f6944822d",
-      "snippet": "# Pull Request Description  Allow the trusted fork-safety preflight to accept a zero-file Git diff. This completes the protected contributor-credit workflow after reviewed content has already landed through a maintainer intake PR.  The special case is confined to `evaluateForkSafety` after repositor",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "34c9ed0|gh-commits-antigravity-awesome-skills"
     }
   ]
 }
