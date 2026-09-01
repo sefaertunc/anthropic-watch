@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 31 Aug 2026 13:01:54 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 11:18:48 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.252</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.252</link>
+      <guid isPermaLink="false">v2.1.252</guid>
+      <pubDate>Mon, 31 Aug 2026 19:46:55 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed Bash commands failing with &quot;task output swap refused (tasks dir moved or linked)&quot; on some Macs
+- Fixed &quot;always allow&quot; not saving in a project that has no .claude/settings.local.json yet
+- Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes af</description>
+    </item>
     <item>
       <title>v2.1.251</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.251</link>
@@ -497,17 +508,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Introducing Claude Sonnet 5: now the default model in Claude Code, with a native 1M-token context window and promotional pricing of $2/$10 per Mtok through August 31. Update to version 2.1.197 for access. https://www.anthropic.com/news/claude-sonnet-5</description>
-    </item>
-    <item>
-      <title>v2.1.196</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.196</link>
-      <guid isPermaLink="false">v2.1.196</guid>
-      <pubDate>Mon, 29 Jun 2026 23:27:32 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added support for organization default models — admins set it in the org console; it shows as &quot;Org default&quot; (or &quot;Role default&quot;) in /model when you haven&apos;t picked one yourself
-- Added readable default names for sessions at start, making them easier to identify and message
-- Added cli</description>
     </item>
   </channel>
 </rss>

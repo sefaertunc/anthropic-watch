@@ -1,6 +1,36 @@
 [
   {
     "version": "1.0",
+    "timestamp": "2026-09-01T11:18:48.674Z",
+    "durationMs": 49441,
+    "totalNewItems": 36,
+    "sourcesChecked": 39,
+    "sourcesWithErrors": 5,
+    "errors": [
+      {
+        "key": "docs-release-notes",
+        "error": "model-table: \"Claude API ID\" row missing or incomplete"
+      },
+      {
+        "key": "reddit-claudeai",
+        "error": "HTTP 429 for https://www.reddit.com/r/ClaudeAI/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claude",
+        "error": "HTTP 429 for https://www.reddit.com/r/claude/top.rss?t=day&limit=5"
+      },
+      {
+        "key": "reddit-claudeskills",
+        "error": "HTTP 429 for https://www.reddit.com/r/claudeskills/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claudeopus",
+        "error": "HTTP 429 for https://www.reddit.com/r/Claudeopus/top.rss?t=week&limit=10"
+      }
+    ]
+  },
+  {
+    "version": "1.0",
     "timestamp": "2026-08-31T13:01:54.799Z",
     "durationMs": 48211,
     "totalNewItems": 15,
@@ -2379,14 +2409,5 @@
         "error": "HTTP 405 for https://status.anthropic.com/api/v2/incidents.json"
       }
     ]
-  },
-  {
-    "version": "1.0",
-    "timestamp": "2026-06-01T11:41:43.813Z",
-    "durationMs": 50677,
-    "totalNewItems": 50,
-    "sourcesChecked": 39,
-    "sourcesWithErrors": 0,
-    "errors": []
   }
 ]

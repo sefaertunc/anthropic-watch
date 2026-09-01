@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 31 Aug 2026 13:01:54 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 11:18:48 GMT</lastBuildDate>
+    <item>
+      <title>2.1.252</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.252</guid>
+      <pubDate>Tue, 01 Sep 2026 11:18:00 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed Bash commands failing with &quot;task output swap refused (tasks dir moved or linked)&quot; on some Macs
+- Fixed &quot;always allow&quot; not saving in a project that has no .claude/settings.local.json yet
+- Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes after a tool fini</description>
+    </item>
     <item>
       <title>2.1.251</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -454,16 +464,6 @@
       <category>claude-code-changelog</category>
       <description>- Added Tool(param:value) syntax for permission rules to match a tool&apos;s input parameters (with  wildcard), e.g. Agent(model:opus) to block Opus subagents
 - Skills in nested .claude/skills directories now load when working on files there; on a name clash, the nested skill appears as &lt;dir&gt;:&lt;name&gt; so b</description>
-    </item>
-    <item>
-      <title>2.1.176</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.176</guid>
-      <pubDate>Sat, 13 Jun 2026 09:20:02 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Session titles are now generated in the language of your conversation (set the language setting to pin a specific language)
-- Added footerLinksRegexes setting for regex-matched link badges in the footer row, configurable via user or managed settings
-- Improved Bedrock credential caching: credentia</description>
     </item>
   </channel>
 </rss>
