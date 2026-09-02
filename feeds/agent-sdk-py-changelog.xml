@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 01 Sep 2026 11:18:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 10:52:48 GMT</lastBuildDate>
+    <item>
+      <title>0.2.151</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.151</guid>
+      <pubDate>Wed, 02 Sep 2026 10:52:00 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Internal/Other Changes
+- Updated bundled Claude CLI to version 2.1.258</description>
+    </item>
     <item>
       <title>0.2.149</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -452,16 +461,6 @@
       <category>agent-sdk-py-changelog</category>
       <description>Bug Fixes
 - Trio compatibility for session stores: Ported sessionstore code paths (TranscriptMirrorBatcher, sessionresume, sessions) from raw asyncio primitives to anyio, fixing a crash (TypeError: trio.run received unrecognized yield message) when passing sessionstore= to query() or ClaudeSDKClient</description>
-    </item>
-    <item>
-      <title>0.2.87</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.87</guid>
-      <pubDate>Sat, 23 May 2026 08:23:11 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>Internal/Other Changes
-- Updated bundled Claude CLI to version 2.1.150
-- Switched CI workflows from static API key to Workload Identity Federation for Claude authentication, using short-lived tokens instead of long-lived secrets (984)</description>
     </item>
   </channel>
 </rss>

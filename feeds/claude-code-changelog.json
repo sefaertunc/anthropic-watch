@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-01T11:18:48.594Z",
+  "generated": "2026-09-02T10:52:48.446Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.258",
+      "title": "2.1.258",
+      "date": "2026-09-02T10:52:00.022Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255\n- Fixed remote and scheduled sessions failing with \"user messages must have non-empty content\" after a re-sent permission approval could not be applied",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.258|claude-code-changelog"
+    },
     {
       "id": "2.1.252",
       "title": "2.1.252",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.179|claude-code-changelog"
-    },
-    {
-      "id": "2.1.178",
-      "title": "2.1.178",
-      "date": "2026-06-16T11:16:25.893Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Added Tool(param:value) syntax for permission rules to match a tool's input parameters (with  wildcard), e.g. Agent(model:opus) to block Opus subagents\n- Skills in nested .claude/skills directories now load when working on files there; on a name clash, the nested skill appears as <dir>:<name> so b",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.178|claude-code-changelog"
     }
   ]
 }

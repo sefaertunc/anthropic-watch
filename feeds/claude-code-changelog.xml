@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 01 Sep 2026 11:18:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 10:52:48 GMT</lastBuildDate>
+    <item>
+      <title>2.1.258</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.258</guid>
+      <pubDate>Wed, 02 Sep 2026 10:52:00 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255
+- Fixed remote and scheduled sessions failing with &quot;user messages must have non-empty content&quot; after a re-sent permission approval could not be applied</description>
+    </item>
     <item>
       <title>2.1.252</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -455,15 +464,6 @@
       <description>- Fixed mid-stream connection drops: partial responses are now preserved instead of showing a raw error, and the spinner no longer gets stuck at &quot;running tool&quot;
 - Fixed mouse-wheel scrolling in WSL2 under Windows Terminal and VS Code (regression in 2.1.172)
 - Fixed a sandbox denyRead/allowRead glob o</description>
-    </item>
-    <item>
-      <title>2.1.178</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.178</guid>
-      <pubDate>Tue, 16 Jun 2026 11:16:25 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added Tool(param:value) syntax for permission rules to match a tool&apos;s input parameters (with  wildcard), e.g. Agent(model:opus) to block Opus subagents
-- Skills in nested .claude/skills directories now load when working on files there; on a name clash, the nested skill appears as &lt;dir&gt;:&lt;name&gt; so b</description>
     </item>
   </channel>
 </rss>
