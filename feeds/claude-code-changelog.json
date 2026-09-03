@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-02T10:52:48.446Z",
+  "generated": "2026-09-03T10:52:32.103Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.259",
+      "title": "2.1.259",
+      "date": "2026-09-03T10:51:44.222Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added managedMcpServers managed setting: organizations can provide HTTP/SSE MCP servers to every user (same entry shape as .mcp.json); entries that name a command to run are skipped\n- Added --permission-prompts none for unattended headless hosts: anything that would prompt is denied automatically ",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.259|claude-code-changelog"
+    },
     {
       "id": "2.1.258",
       "title": "2.1.258",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.181|claude-code-changelog"
-    },
-    {
-      "id": "2.1.179",
-      "title": "2.1.179",
-      "date": "2026-06-17T11:01:36.841Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Fixed mid-stream connection drops: partial responses are now preserved instead of showing a raw error, and the spinner no longer gets stuck at \"running tool\"\n- Fixed mouse-wheel scrolling in WSL2 under Windows Terminal and VS Code (regression in 2.1.172)\n- Fixed a sandbox denyRead/allowRead glob o",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.179|claude-code-changelog"
     }
   ]
 }

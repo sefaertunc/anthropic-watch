@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 02 Sep 2026 10:52:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 10:52:32 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.259</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.259</link>
+      <guid isPermaLink="false">v2.1.259</guid>
+      <pubDate>Wed, 02 Sep 2026 22:33:51 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added managedMcpServers managed setting: organizations can provide HTTP/SSE MCP servers to every user (same entry shape as .mcp.json); entries that name a command to run are skipped
+- Added --permission-prompts none for unattended headless hosts: anything that would prompt is denied</description>
+    </item>
     <item>
       <title>v2.1.258</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.258</link>
@@ -498,16 +508,6 @@
       <description>What&apos;s changed
 - Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config
 - Changed the &quot;default&quot; permission mode to &quot;Manual&quot; across the CLI, --help, VS Code, and JetBrains; --permission-mode manual and &quot;defaultMode&quot;: &quot;manual&quot; are accepted alongside</description>
-    </item>
-    <item>
-      <title>v2.1.199</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.199</link>
-      <guid isPermaLink="false">v2.1.199</guid>
-      <pubDate>Thu, 02 Jul 2026 23:35:18 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Stacked slash-skill invocations like /skill-a /skill-b do XYZ now load all leading skills (up to 5), not just the first
-- Fixed SSL certificate errors (TLS-inspecting proxies, missing NODEEXTRACACERTS, expired certs) burning retries before showing actionable guidance — they now fail</description>
     </item>
   </channel>
 </rss>

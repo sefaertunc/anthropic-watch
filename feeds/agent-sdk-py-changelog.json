@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-02T10:52:48.460Z",
+  "generated": "2026-09-03T10:52:32.116Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.2.152",
+      "title": "0.2.152",
+      "date": "2026-09-03T10:51:44.704Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.259",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.152|agent-sdk-py-changelog"
+    },
     {
       "id": "0.2.151",
       "title": "0.2.151",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK Python Changelog",
       "uniqueKey": "0.2.89|agent-sdk-py-changelog"
-    },
-    {
-      "id": "0.2.88",
-      "title": "0.2.88",
-      "date": "2026-06-03T11:04:17.427Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
-      "snippet": "Bug Fixes\n- Trio compatibility for session stores: Ported sessionstore code paths (TranscriptMirrorBatcher, sessionresume, sessions) from raw asyncio primitives to anyio, fixing a crash (TypeError: trio.run received unrecognized yield message) when passing sessionstore= to query() or ClaudeSDKClient",
-      "source": "agent-sdk-py-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK Python Changelog",
-      "uniqueKey": "0.2.88|agent-sdk-py-changelog"
     }
   ]
 }
