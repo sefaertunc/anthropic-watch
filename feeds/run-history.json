@@ -1,6 +1,36 @@
 [
   {
     "version": "1.0",
+    "timestamp": "2026-09-04T10:54:25.420Z",
+    "durationMs": 49146,
+    "totalNewItems": 53,
+    "sourcesChecked": 39,
+    "sourcesWithErrors": 5,
+    "errors": [
+      {
+        "key": "docs-release-notes",
+        "error": "model-table: \"Claude API ID\" row missing or incomplete"
+      },
+      {
+        "key": "reddit-claudeai",
+        "error": "HTTP 429 for https://www.reddit.com/r/ClaudeAI/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claude",
+        "error": "HTTP 429 for https://www.reddit.com/r/claude/top.rss?t=day&limit=5"
+      },
+      {
+        "key": "reddit-claudeskills",
+        "error": "HTTP 429 for https://www.reddit.com/r/claudeskills/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claudeopus",
+        "error": "HTTP 429 for https://www.reddit.com/r/Claudeopus/top.rss?t=week&limit=10"
+      }
+    ]
+  },
+  {
+    "version": "1.0",
     "timestamp": "2026-09-03T10:52:32.175Z",
     "durationMs": 48381,
     "totalNewItems": 49,
@@ -2429,15 +2459,6 @@
     "timestamp": "2026-06-06T08:37:39.473Z",
     "durationMs": 47089,
     "totalNewItems": 78,
-    "sourcesChecked": 39,
-    "sourcesWithErrors": 0,
-    "errors": []
-  },
-  {
-    "version": "1.0",
-    "timestamp": "2026-06-05T09:56:48.454Z",
-    "durationMs": 46641,
-    "totalNewItems": 75,
     "sourcesChecked": 39,
     "sourcesWithErrors": 0,
     "errors": []

@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 03 Sep 2026 10:52:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 10:54:25 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #2949 from affaan-m/dependabot/github_actions/actions-minor-and-patch-6512b1d693</title>
+      <link>https://github.com/affaan-m/ECC/commit/e04ea0b9cc8248686edf5ac751cadff550e162b8</link>
+      <guid isPermaLink="false">e04ea0b</guid>
+      <pubDate>Thu, 03 Sep 2026 20:51:15 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>chore(deps): bump softprops/action-gh-release from 3.0.2 to 3.0.3 in the actions-minor-and-patch group across 1 directory</description>
+    </item>
+    <item>
+      <title>Merge pull request #2948 from haelyra/maint/dependabot-2026-09-03</title>
+      <link>https://github.com/affaan-m/ECC/commit/d1955a66f61d2be47cc1a0d66fec4314f59c07d2</link>
+      <guid isPermaLink="false">d1955a6</guid>
+      <pubDate>Thu, 03 Sep 2026 20:03:10 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>chore(deps): consolidate verified Dependabot updates</description>
+    </item>
+    <item>
+      <title>fix(deps): pin patched @humanfs/node</title>
+      <link>https://github.com/affaan-m/ECC/commit/8059798888e6a664cbdc973bb1fbd19b019f96e4</link>
+      <guid isPermaLink="false">8059798</guid>
+      <pubDate>Thu, 03 Sep 2026 19:08:04 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Keep npm and Yarn resolution policy aligned so both lockfile paths stay on the patched release.\n\nCo-authored-by: Svector-anu &lt;svector-anu@users.noreply.github.com&gt;</description>
+    </item>
+    <item>
+      <title>test: synchronize dependency update coverage</title>
+      <link>https://github.com/affaan-m/ECC/commit/b74e0add1dd90a94392118bd5c455f9326e1774e</link>
+      <guid isPermaLink="false">b74e0ad</guid>
+      <pubDate>Thu, 03 Sep 2026 19:00:31 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>ci: avoid redundant Python dependency floors</title>
+      <link>https://github.com/affaan-m/ECC/commit/23fb7e0c7906ede8ab7739b20d9387df8124b09c</link>
+      <guid isPermaLink="false">23fb7e0</guid>
+      <pubDate>Thu, 03 Sep 2026 18:59:01 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>test(ci): scale repair timeout on Windows (#2942)</title>
       <link>https://github.com/affaan-m/ECC/commit/22e8cf01d0b54719b3a49002fab2ccbda4ff5b9e</link>
@@ -366,46 +406,6 @@
       <pubDate>Tue, 25 Aug 2026 16:37:53 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>Merge pull request #2824 from affaan-m/agent/tasteforge-multimodal-20260819</title>
-      <link>https://github.com/affaan-m/ECC/commit/d8409a4b0813771235555e32e3d8046a73988bfa</link>
-      <guid isPermaLink="false">d8409a4</guid>
-      <pubDate>Wed, 19 Aug 2026 23:31:56 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>feat(skills): add TasteForge multimodal workflow</description>
-    </item>
-    <item>
-      <title>test(skills): align TasteForge final contract</title>
-      <link>https://github.com/affaan-m/ECC/commit/b86138ae7b68d979938ccb235731038e26783a5f</link>
-      <guid isPermaLink="false">b86138a</guid>
-      <pubDate>Wed, 19 Aug 2026 22:30:38 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(skills): harden TasteForge multimodal contract</title>
-      <link>https://github.com/affaan-m/ECC/commit/71e3622640df5c709a657de2e4b13ec4bcf80f65</link>
-      <guid isPermaLink="false">71e3622</guid>
-      <pubDate>Wed, 19 Aug 2026 21:47:31 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs(skills): define TasteForge multimodal contract</title>
-      <link>https://github.com/affaan-m/ECC/commit/348cd34a2b790dd0add8619d083f238002056488</link>
-      <guid isPermaLink="false">348cd34</guid>
-      <pubDate>Wed, 19 Aug 2026 20:45:27 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat(skills): add tasteforge-video skill for repeatable taste-driven video work</title>
-      <link>https://github.com/affaan-m/ECC/commit/9c450046beb9de48e48fbb71b8b91931802485f8</link>
-      <guid isPermaLink="false">9c45004</guid>
-      <pubDate>Tue, 18 Aug 2026 12:04:33 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Curated skill delegating to the canonical tasteforge package in Ito-Markets/ito-video: taste interviews, style-pack validation, offline distillation with measured grounding, deterministic cadence application to local footage, EDL/FCPXML export, and generated-media provenance audits. Provider (Fal) g</description>
     </item>
   </channel>
 </rss>

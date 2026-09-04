@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 03 Sep 2026 10:52:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 10:54:25 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.260</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.260</link>
+      <guid isPermaLink="false">v2.1.260</guid>
+      <pubDate>Thu, 03 Sep 2026 23:48:12 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a diff panel that opens beside the conversation in fullscreen mode and shows your uncommitted changes as Claude edits; toggle it with /diff
+- Added a likely cause for prompt-cache misses (e.g. tool definitions or system prompt changed, idle past the TTL) to /cost and the statu</description>
+    </item>
     <item>
       <title>v2.1.259</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.259</link>
@@ -498,16 +508,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders</description>
-    </item>
-    <item>
-      <title>v2.1.200</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.200</link>
-      <guid isPermaLink="false">v2.1.200</guid>
-      <pubDate>Fri, 03 Jul 2026 16:52:33 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config
-- Changed the &quot;default&quot; permission mode to &quot;Manual&quot; across the CLI, --help, VS Code, and JetBrains; --permission-mode manual and &quot;defaultMode&quot;: &quot;manual&quot; are accepted alongside</description>
     </item>
   </channel>
 </rss>
