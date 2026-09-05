@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 04 Sep 2026 10:54:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 10:10:24 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.261</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.261</link>
+      <guid isPermaLink="false">v2.1.261</guid>
+      <pubDate>Fri, 04 Sep 2026 19:58:10 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added an &quot;Organization policy&quot; line to /status and claude doctor that says why your organization&apos;s policy could not be loaded, such as a proxy not passing the endpoint through
+- Added bashOutputMaxChars and taskOutputMaxChars settings to raise how much command and background-task ou</description>
+    </item>
     <item>
       <title>v2.1.260</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.260</link>
@@ -499,15 +509,6 @@
       <description>What&apos;s changed
 - Added a &quot;Dynamic workflow size&quot; setting in /config for controlling how large Claude generally makes dynamic workflows (small/medium/large agent counts) — an advisory guideline, not an enforced cap
 - Added workflow.runid and workflow.name OpenTelemetry attributes to telemetry emitted</description>
-    </item>
-    <item>
-      <title>v2.1.201</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.201</link>
-      <guid isPermaLink="false">v2.1.201</guid>
-      <pubDate>Fri, 03 Jul 2026 23:50:35 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders</description>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,86 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-04T10:54:25.390Z",
+  "generated": "2026-09-05T10:10:24.584Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2f68a82",
+      "title": "chore: refresh compatible web dependencies (#1366)",
+      "date": "2026-09-05T07:41:01Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/2f68a82f608169ad9b74bb0adbc611aa215a1b89",
+      "snippet": "# Pull Request Description  The web app lockfile lagged behind the newest versions allowed by its existing dependency ranges. Updating it exposed a stricter ESLint error in the Workbench path validator and a Vitest native-config warning; this change updates the compatible dependency graph, preserves",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "2f68a82|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "8f4ace4",
+      "title": "chore: complete skill date metadata (#1364)",
+      "date": "2026-09-05T07:23:24Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/8f4ace40a320e50cbe54e273cc011c0f304091fb",
+      "snippet": "# Pull Request Description  The skill validator still reported 216 optional metadata advisories after the structural audit reached zero. This change adds `date_added: \"2026-09-04\"` to those canonical skills, using each file's first addition commit from `git log --follow --diff-filter=A` as the sourc",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "8f4ace4|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "e69f4f0",
+      "title": "refactor: modularize oversized skills (#1361)",
+      "date": "2026-09-05T07:04:08Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/e69f4f039234518ab86a41f71e6e99452c79bc7c",
+      "snippet": "# Pull Request Description  The audit still reported 211 oversized canonical skills after the examples cleanup. This change moves detailed procedure and reference sections into per-skill `references/detailed-guide.md` files while keeping activation guidance, examples, limitations, prerequisites, and",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "e69f4f0|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "14e1df8",
+      "title": "fix: classify copies into existing skills (#1362)",
+      "date": "2026-09-05T06:57:27Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/14e1df8f996bec2752ad2b4b9a10cfddee474116",
+      "snippet": "# Pull Request Description  Changed-skill evidence treated a Git copy record into an already existing skill directory as a newly copied skill. That caused false provenance blockers when a new reference file resembled another skill. The classifier now creates cross-skill copy/rename pairs only when t",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "14e1df8|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "7d54b97",
+      "title": "docs: lower funding request and clarify EUR 100 monthly goal (#1359)",
+      "date": "2026-09-05T06:43:59Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/7d54b979fa9b658c1ce1f0536b347e8a55604a2f",
+      "snippet": "# Pull Request Description  Reduce the one-time FLOSS/fund proposal from USD 25,000 to USD 10,000 (-60%), its published minimum, and rebalance the proposed allocation to match. The README now asks for EUR 100/month in optional recurring Buy Me a Coffee support to help cover maintenance tools. The gr",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "7d54b97|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "342019c",
+      "title": "docs: add actionable skill examples (#1357)",
+      "date": "2026-09-05T06:20:40Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/342019cb09fdbd66921bea74dc6f995aff746b64",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "342019c|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "1bf6b1a",
+      "title": "fix: recognize bundled skill examples (#1356)",
+      "date": "2026-09-05T06:01:25Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/1bf6b1a665dca5778ceb75f5cfcc0276d66cc2b3",
+      "snippet": "The structural audit was reporting 164 skills as missing examples even though they already expose concrete examples through nested Markdown headings, non-empty bundled `examples/` files, or bundled support documents. This teaches the audit to recognize those forms while refusing empty files, symlink",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "1bf6b1a|gh-commits-antigravity-awesome-skills"
+    },
     {
       "id": "c91abcf",
       "title": "chore: release v16.7.0 (#1336)",
@@ -480,83 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
       "uniqueKey": "58795e5|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "c14ca99",
-      "title": "fix: correct Tree Ring skill guidance (#1253)",
-      "date": "2026-08-26T17:47:57Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c14ca9963f4c039d132fef482f67577d9ecef5cf",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "c14ca99|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "d7bda4e",
-      "title": "feat: add api-rate-limit-handler for retry, backoff, and throttle strategies (#1258)",
-      "date": "2026-08-26T17:20:01Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/d7bda4e02c5c57b8d37fa16975129d7e5597767f",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "d7bda4e|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "58d8579",
-      "title": "chore: release v16.1.0 (#1249)",
-      "date": "2026-08-25T18:02:57Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/58d857988fcfac6986206bca2b2fe223aa437e4b",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "58d8579|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "19c78c0",
-      "title": "docs: add v16.1.0 release notes (#1248)",
-      "date": "2026-08-25T17:50:29Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/19c78c08a76873e01306dbea8bed725ca6d2c39f",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "19c78c0|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "4636470",
-      "title": "feat: add poka-yoke for mistake-proofing code, config and process (#1240)",
-      "date": "2026-08-25T17:14:17Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/4636470aab49f3ec5a88a15788400df015603721",
-      "snippet": "Adds one skill: `skills/poka-yoke/SKILL.md`.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "4636470|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "e776a51",
-      "title": "fix: complete reviewed maintenance repairs (#1244)",
-      "date": "2026-08-25T16:55:17Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/e776a512c16a3e4ebf754d2a2c7e504c4afc4508",
-      "snippet": "# Pull Request Description  Completes the reviewed maintenance repairs that cannot safely merge through their original branches:  - Supersedes #1237 with the Lore update pinned to upstream commit `25111dead1b54053d65124e43c35d307951c1844`, while preserving repository path-containment hardening and f",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "e776a51|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "ba9ae11",
-      "title": "fix: align project state lifecycle statuses (#1241)",
-      "date": "2026-08-25T15:47:49Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/ba9ae11a0cfb897f00a94cb1f4998c7ef9614b21",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "ba9ae11|gh-commits-antigravity-awesome-skills"
     }
   ]
 }

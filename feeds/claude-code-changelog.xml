@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 04 Sep 2026 10:54:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 10:10:24 GMT</lastBuildDate>
+    <item>
+      <title>2.1.261</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.261</guid>
+      <pubDate>Sat, 05 Sep 2026 10:09:36 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added an &quot;Organization policy&quot; line to /status and claude doctor that says why your organization&apos;s policy could not be loaded, such as a proxy not passing the endpoint through
+- Added bashOutputMaxChars and taskOutputMaxChars settings to raise how much command and background-task output Claude rec</description>
+    </item>
     <item>
       <title>2.1.260</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -454,14 +463,6 @@
       <pubDate>Sun, 21 Jun 2026 09:53:21 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- The stream-stall hint now reads &quot;Waiting for API response · will retry in …&quot; instead of &quot;No response from API · Retrying in …&quot;, and triggers after 20s of silence instead of 10s</description>
-    </item>
-    <item>
-      <title>2.1.183</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.183</guid>
-      <pubDate>Fri, 19 Jun 2026 10:41:23 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Improved auto mode safety: destructive git commands (git reset --hard, git checkout -- ., git clean -fd, git stash drop) are now blocked when you didn&apos;t ask to discard local work, git commit --amend is blocked when the commit wasn&apos;t made by the agent this session, and terraform destroy/pulumi dest</description>
     </item>
   </channel>
 </rss>

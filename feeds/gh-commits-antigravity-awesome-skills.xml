@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 04 Sep 2026 10:54:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 10:10:24 GMT</lastBuildDate>
+    <item>
+      <title>chore: refresh compatible web dependencies (#1366)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2f68a82f608169ad9b74bb0adbc611aa215a1b89</link>
+      <guid isPermaLink="false">2f68a82</guid>
+      <pubDate>Sat, 05 Sep 2026 07:41:01 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  The web app lockfile lagged behind the newest versions allowed by its existing dependency ranges. Updating it exposed a stricter ESLint error in the Workbench path validator and a Vitest native-config warning; this change updates the compatible dependency graph, preserves</description>
+    </item>
+    <item>
+      <title>chore: complete skill date metadata (#1364)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8f4ace40a320e50cbe54e273cc011c0f304091fb</link>
+      <guid isPermaLink="false">8f4ace4</guid>
+      <pubDate>Sat, 05 Sep 2026 07:23:24 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  The skill validator still reported 216 optional metadata advisories after the structural audit reached zero. This change adds `date_added: &quot;2026-09-04&quot;` to those canonical skills, using each file&apos;s first addition commit from `git log --follow --diff-filter=A` as the sourc</description>
+    </item>
+    <item>
+      <title>refactor: modularize oversized skills (#1361)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e69f4f039234518ab86a41f71e6e99452c79bc7c</link>
+      <guid isPermaLink="false">e69f4f0</guid>
+      <pubDate>Sat, 05 Sep 2026 07:04:08 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  The audit still reported 211 oversized canonical skills after the examples cleanup. This change moves detailed procedure and reference sections into per-skill `references/detailed-guide.md` files while keeping activation guidance, examples, limitations, prerequisites, and</description>
+    </item>
+    <item>
+      <title>fix: classify copies into existing skills (#1362)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/14e1df8f996bec2752ad2b4b9a10cfddee474116</link>
+      <guid isPermaLink="false">14e1df8</guid>
+      <pubDate>Sat, 05 Sep 2026 06:57:27 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Changed-skill evidence treated a Git copy record into an already existing skill directory as a newly copied skill. That caused false provenance blockers when a new reference file resembled another skill. The classifier now creates cross-skill copy/rename pairs only when t</description>
+    </item>
+    <item>
+      <title>docs: lower funding request and clarify EUR 100 monthly goal (#1359)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/7d54b979fa9b658c1ce1f0536b347e8a55604a2f</link>
+      <guid isPermaLink="false">7d54b97</guid>
+      <pubDate>Sat, 05 Sep 2026 06:43:59 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Reduce the one-time FLOSS/fund proposal from USD 25,000 to USD 10,000 (-60%), its published minimum, and rebalance the proposed allocation to match. The README now asks for EUR 100/month in optional recurring Buy Me a Coffee support to help cover maintenance tools. The gr</description>
+    </item>
+    <item>
+      <title>docs: add actionable skill examples (#1357)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/342019cb09fdbd66921bea74dc6f995aff746b64</link>
+      <guid isPermaLink="false">342019c</guid>
+      <pubDate>Sat, 05 Sep 2026 06:20:40 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: recognize bundled skill examples (#1356)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1bf6b1a665dca5778ceb75f5cfcc0276d66cc2b3</link>
+      <guid isPermaLink="false">1bf6b1a</guid>
+      <pubDate>Sat, 05 Sep 2026 06:01:25 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>The structural audit was reporting 164 skills as missing examples even though they already expose concrete examples through nested Markdown headings, non-empty bundled `examples/` files, or bundled support documents. This teaches the audit to recognize those forms while refusing empty files, symlink</description>
+    </item>
     <item>
       <title>chore: release v16.7.0 (#1336)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/c91abcfb9c52ac8a7c1292cc0326f459106cde1d</link>
@@ -350,62 +406,6 @@
       <pubDate>Wed, 26 Aug 2026 17:53:42 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description># Pull Request Description  Adds the `instructree` community skill for mapping and linting repository-scoped coding-agent instructions before an agent changes code.  The contribution is pinned to the MIT-licensed Instructree v0.7.0 release, credits the source repository, and keeps generated catalogs</description>
-    </item>
-    <item>
-      <title>fix: correct Tree Ring skill guidance (#1253)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c14ca9963f4c039d132fef482f67577d9ecef5cf</link>
-      <guid isPermaLink="false">c14ca99</guid>
-      <pubDate>Wed, 26 Aug 2026 17:47:57 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add api-rate-limit-handler for retry, backoff, and throttle strategies (#1258)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d7bda4e02c5c57b8d37fa16975129d7e5597767f</link>
-      <guid isPermaLink="false">d7bda4e</guid>
-      <pubDate>Wed, 26 Aug 2026 17:20:01 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: release v16.1.0 (#1249)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/58d857988fcfac6986206bca2b2fe223aa437e4b</link>
-      <guid isPermaLink="false">58d8579</guid>
-      <pubDate>Tue, 25 Aug 2026 18:02:57 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: add v16.1.0 release notes (#1248)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/19c78c08a76873e01306dbea8bed725ca6d2c39f</link>
-      <guid isPermaLink="false">19c78c0</guid>
-      <pubDate>Tue, 25 Aug 2026 17:50:29 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add poka-yoke for mistake-proofing code, config and process (#1240)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4636470aab49f3ec5a88a15788400df015603721</link>
-      <guid isPermaLink="false">4636470</guid>
-      <pubDate>Tue, 25 Aug 2026 17:14:17 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Adds one skill: `skills/poka-yoke/SKILL.md`.</description>
-    </item>
-    <item>
-      <title>fix: complete reviewed maintenance repairs (#1244)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e776a512c16a3e4ebf754d2a2c7e504c4afc4508</link>
-      <guid isPermaLink="false">e776a51</guid>
-      <pubDate>Tue, 25 Aug 2026 16:55:17 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Completes the reviewed maintenance repairs that cannot safely merge through their original branches:  - Supersedes #1237 with the Lore update pinned to upstream commit `25111dead1b54053d65124e43c35d307951c1844`, while preserving repository path-containment hardening and f</description>
-    </item>
-    <item>
-      <title>fix: align project state lifecycle statuses (#1241)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ba9ae11a0cfb897f00a94cb1f4998c7ef9614b21</link>
-      <guid isPermaLink="false">ba9ae11</guid>
-      <pubDate>Tue, 25 Aug 2026 15:47:49 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
     </item>
   </channel>
 </rss>
