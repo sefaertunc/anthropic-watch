@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 05 Sep 2026 10:10:24 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 10:31:21 GMT</lastBuildDate>
+    <item>
+      <title>test: verify Windows PowerShell 5.1 before 16.9 release (#1395)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ee5fa219836cef07e640ca807b1be798707910cf</link>
+      <guid isPermaLink="false">ee5fa21</guid>
+      <pubDate>Sun, 06 Sep 2026 10:13:29 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Repeat the full Windows installation lifecycle under the built-in Windows PowerShell 5.1, alongside PowerShell 7. Record actual shell versions and reject missing, wrong-version or failed legacy-shell evidence. Add the 16.9.0 changelog for accumulated CLI/MCP and Specializ</description>
+    </item>
+    <item>
+      <title>test: verify packed workflow on Windows PowerShell (#1391)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/58433b8998c2914e4d4eb3e96d6b54a012458dd0</link>
+      <guid isPermaLink="false">58433b8</guid>
+      <pubDate>Sun, 06 Sep 2026 09:26:04 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  The installed-candidate preview previously exercised only Linux, leaving emitted PowerShell commands unexecuted. Add an isolated Windows Server 2025 / Node 22 runner and require its receipt alongside Linux. Exercise the actual packed installer through the emitted PowerShe</description>
+    </item>
+    <item>
+      <title>fix: validate and test complete CLI installation handoff (#1389)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/dac5f54cfe1451435bbeeb56ef8db834fd62c758</link>
+      <guid isPermaLink="false">dac5f54</guid>
+      <pubDate>Sun, 06 Sep 2026 08:49:07 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  `stack install-preview` accepted destination names that the direct installer rejects, such as `invalid?directory`; executing the handoff then produced an uncaught stack trace. Apply the same filename restrictions before command preparation and report direct target-resolut</description>
+    </item>
+    <item>
+      <title>feat: streamline agent-owned CLI installation handoff (#1387)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8872b80976554cdae4b41ab30969d18a31312613</link>
+      <guid isPermaLink="false">8872b80</guid>
+      <pubDate>Sun, 06 Sep 2026 08:17:50 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Agents currently have to copy selected skill IDs into a separate installer command and repeat runtime integrity already present in a verified cache. Add `aas stack install-preview` to validate the agent&apos;s manifest and prepare an exact-version, quoted direct-installer dry </description>
+    </item>
+    <item>
+      <title>fix: preserve MCP request correlation across overload and errors (#1385)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/40ad1d8af067056db833f49a8555b7c194498c99</link>
+      <guid isPermaLink="false">40ad1d8</guid>
+      <pubDate>Sun, 06 Sep 2026 07:46:26 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
     <item>
       <title>chore: refresh compatible web dependencies (#1366)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/2f68a82f608169ad9b74bb0adbc611aa215a1b89</link>
@@ -366,46 +406,6 @@
       <pubDate>Fri, 28 Aug 2026 07:35:10 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
-    </item>
-    <item>
-      <title>chore: release v16.2.0 (#1263)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/5cf4dfeb13ea966daa1e117897689cd7991e3f44</link>
-      <guid isPermaLink="false">5cf4dfe</guid>
-      <pubDate>Wed, 26 Aug 2026 18:47:20 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v16.2.0.</description>
-    </item>
-    <item>
-      <title>docs: add v16.2.0 changelog (#1262)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1a32f879a84072e1c50c1c48c346620ac55aa75b</link>
-      <guid isPermaLink="false">1a32f87</guid>
-      <pubDate>Wed, 26 Aug 2026 18:21:16 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Add the protected-main changelog entry for v16.2.0, covering the accepted maintenance batch and the canonical 2,074-skill catalog state.</description>
-    </item>
-    <item>
-      <title>feat: add 43 security skills from zhaoxuya520/reverse-skill (#1247)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9f28eef9ae1d73e4c6cc53db7013b5331c2f1f8b</link>
-      <guid isPermaLink="false">9f28eef</guid>
-      <pubDate>Wed, 26 Aug 2026 18:06:14 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add MuAPI media generation skill (#1257)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9d61767b5dcd7e9e4e2db0d01bbc1c286781213c</link>
-      <guid isPermaLink="false">9d61767</guid>
-      <pubDate>Wed, 26 Aug 2026 17:59:21 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add instructree skill (#1251)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/58795e5a6cba0479adbc4fb4b455ef80dfe04382</link>
-      <guid isPermaLink="false">58795e5</guid>
-      <pubDate>Wed, 26 Aug 2026 17:53:42 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds the `instructree` community skill for mapping and linting repository-scoped coding-agent instructions before an agent changes code.  The contribution is pinned to the MIT-licensed Instructree v0.7.0 release, credits the source repository, and keeps generated catalogs</description>
     </item>
   </channel>
 </rss>
