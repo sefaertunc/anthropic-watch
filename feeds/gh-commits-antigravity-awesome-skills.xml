@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 06 Sep 2026 10:31:21 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 11:54:21 GMT</lastBuildDate>
+    <item>
+      <title>chore: release v16.9.1 (#1410)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b1aebac60a88dffa0f5723cb3816f22cc0af6b13</link>
+      <guid isPermaLink="false">b1aebac</guid>
+      <pubDate>Sun, 06 Sep 2026 14:53:42 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v16.9.1.</description>
+    </item>
+    <item>
+      <title>fix: ship reviewed CLI file safety and security release notes (#1409)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f8d5d2c82b0cdb54a8a022bced09db53db57e94c</link>
+      <guid isPermaLink="false">f8d5d2c</guid>
+      <pubDate>Sun, 06 Sep 2026 14:39:31 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Integrate the reviewed CLI JSON-read hardening from #1398 and prepare the 16.9.1 security release notes. The original contributor commits are retained in this branch. The fork PR cannot be approved by the protected runtime-path policy; this owner-authored PR uses the exac</description>
+    </item>
+    <item>
+      <title>fix: lock secure bot template dependency graphs (#1407)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3c422554edaa520d4aac8ce8d1727b43a2601bba</link>
+      <guid isPermaLink="false">3c42255</guid>
+      <pubDate>Sun, 06 Sep 2026 13:49:58 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Snyk&apos;s GitHub scan still resolves qs 6.15.3 from the Express dependency range when a template has only a package.json override. Commit npm lockfiles for the Telegram and WhatsApp Node templates so remote scans and npm ci use the tested qs 6.16.0 dependency graph.  Both lo</description>
+    </item>
+    <item>
+      <title>fix: resolve remaining Snyk group dependency findings (#1405)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/571ab2071c183c7d0109f9f69fe71ea741f84d91</link>
+      <guid isPermaLink="false">571ab20</guid>
+      <pubDate>Sun, 06 Sep 2026 13:34:50 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Reconcile additional dependency findings from the complete Snyk group inventory: require qs &gt;=6.16.0 through overrides in the Telegram/WhatsApp templates because Express 4 still resolves the vulnerable minor line; raise the GIF toolkit setuptools floor to 83.0.0; select P</description>
+    </item>
+    <item>
+      <title>fix: remediate meaningful Snyk file safety findings (#1403)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/feb9a2cdcbe19c8ccedd484fc174f1a1a9b924de</link>
+      <guid isPermaLink="false">feb9a2c</guid>
+      <pubDate>Sun, 06 Sep 2026 13:06:07 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Fix reproducible local-file hazards found while triaging Snyk: VideoDB truncated hard-linked files before rejecting them and retained public file modes; profile export overwrote hard links; Instagram and NotebookLM chmodded shared parent directories. Validate opened files</description>
+    </item>
     <item>
       <title>test: verify Windows PowerShell 5.1 before 16.9 release (#1395)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/ee5fa219836cef07e640ca807b1be798707910cf</link>
@@ -364,46 +404,6 @@
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/b4d8cbd4a253778169dc19c15e7533b25f8ebd7c</link>
       <guid isPermaLink="false">b4d8cbd</guid>
       <pubDate>Fri, 28 Aug 2026 08:06:24 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add docs-only review skills (#1282)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c8ed640b9a1e248e000f945e25228a755772e7af</link>
-      <guid isPermaLink="false">c8ed640</guid>
-      <pubDate>Fri, 28 Aug 2026 08:00:55 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add falsify scientific reasoning protocol (#1281)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/fd41ab7a6b345685c834b8ba7580557d6e2c733e</link>
-      <guid isPermaLink="false">fd41ab7</guid>
-      <pubDate>Fri, 28 Aug 2026 07:54:44 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add SandBase MCP skill (#1279)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4067d35d18372a494d72b17c72521181c847dc88</link>
-      <guid isPermaLink="false">4067d35</guid>
-      <pubDate>Fri, 28 Aug 2026 07:49:55 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add unsloth-finetuning skill (#1278)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/614a848ad91b7b4e78bb47f2c7121d3b0c01e179</link>
-      <guid isPermaLink="false">614a848</guid>
-      <pubDate>Fri, 28 Aug 2026 07:45:17 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add graceful-shutdown skill for zero-downtime deploys (#1276)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/5eea3309ff412de9a8ac0d7397620e03f4d6e675</link>
-      <guid isPermaLink="false">5eea330</guid>
-      <pubDate>Fri, 28 Aug 2026 07:35:10 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
     </item>
