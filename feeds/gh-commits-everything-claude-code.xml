@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 07 Sep 2026 11:54:21 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 10:51:05 GMT</lastBuildDate>
+    <item>
+      <title>fix: integrate verified ECC 2.2.1 maintenance patches (#3012)</title>
+      <link>https://github.com/affaan-m/ECC/commit/5064474d4d762dc9640234a41617cccb79185cec</link>
+      <guid isPermaLink="false">5064474</guid>
+      <pubDate>Mon, 07 Sep 2026 22:36:32 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>All 48 hosted checks passed on 165074ecf40aaa9f95173f5182509c8193c48b86.  Fixes #2921 Fixes #2924 Fixes #2909 Fixes #2952 Fixes #2964 Fixes #2957 Fixes #2982</description>
+    </item>
+    <item>
+      <title>test: fix Windows ownership paths and failure annotations</title>
+      <link>https://github.com/affaan-m/ECC/commit/165074ecf40aaa9f95173f5182509c8193c48b86</link>
+      <guid isPermaLink="false">165074e</guid>
+      <pubDate>Mon, 07 Sep 2026 22:09:46 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: close release review gaps and expose failing CI suites</title>
+      <link>https://github.com/affaan-m/ECC/commit/14e731c6d5f341f35a9e24609de1d91f57cf8d70</link>
+      <guid isPermaLink="false">14e731c</guid>
+      <pubDate>Mon, 07 Sep 2026 21:57:26 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(setup): preserve preflight guarantees across ownership filtering</title>
+      <link>https://github.com/affaan-m/ECC/commit/ba3a64a2c5713d0369d7482fefc5d39f12db3902</link>
+      <guid isPermaLink="false">ba3a64a</guid>
+      <pubDate>Mon, 07 Sep 2026 20:53:53 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge Windows-safe Claude settings race regression fixtures</title>
+      <link>https://github.com/affaan-m/ECC/commit/d542cbe4cd6204abccf4e1dcd0821b38aca08e61</link>
+      <guid isPermaLink="false">d542cbe</guid>
+      <pubDate>Mon, 07 Sep 2026 20:51:51 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test: make release safety fixtures CodeQL-clean</title>
+      <link>https://github.com/affaan-m/ECC/commit/adb39a13c9ed34f2783adf2a72f133ee191019f1</link>
+      <guid isPermaLink="false">adb39a1</guid>
+      <pubDate>Mon, 07 Sep 2026 20:51:18 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Use literal matching for the forbidden documentation endpoint, pin lifecycle mode/content assertions to one descriptor, and inject parent races through the staged descriptor without forwarding arbitrary file-creation flags.</description>
+    </item>
+    <item>
+      <title>test(install): exercise settings races safely on Windows</title>
+      <link>https://github.com/affaan-m/ECC/commit/a220947fb51524174b74856a7697dddcaf3bf4d7</link>
+      <guid isPermaLink="false">a220947</guid>
+      <pubDate>Mon, 07 Sep 2026 20:49:20 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Close fixture-owned descriptors when Windows blocks a directory rename before open returns. Assert OS rejection preserves both settings files and releases staging handles. Move the rename-boundary injection after descriptor close so Windows exercises parent-identity validation without skipping race </description>
+    </item>
+    <item>
+      <title>docs(release): record reviewed 2.2.1 bug fixes and verification boundaries</title>
+      <link>https://github.com/affaan-m/ECC/commit/8cc31f1e5f18801af6ccedf44100c9343cb9fb86</link>
+      <guid isPermaLink="false">8cc31f1</guid>
+      <pubDate>Mon, 07 Sep 2026 20:41:45 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(skills): replace invented autonomous harness setup instructions</title>
+      <link>https://github.com/affaan-m/ECC/commit/c11753d0b94d3a8cc379564609a740c5e68599e3</link>
+      <guid isPermaLink="false">c11753d</guid>
+      <pubDate>Mon, 07 Sep 2026 20:36:10 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Resolve #2957 using the verified MCP reference memory package, native session scheduling, supported CLI invocation and documented computer-use integration. Incorporates the corrective direction from #2977 and #2958, including package-version pinning and regression checks for executable examples.  Co</description>
+    </item>
+    <item>
+      <title>fix(install): preserve user files and honor uninstall previews</title>
+      <link>https://github.com/affaan-m/ECC/commit/59b74901c451b899fa873b8a4a2ced1ab945db4d</link>
+      <guid isPermaLink="false">59b7490</guid>
+      <pubDate>Mon, 07 Sep 2026 20:32:58 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Generalize PR #2981 ownership protection to every managed target. Reject mismatched target state and preserve files that appear during writes or failed-install checkpoints. Keep prior hashes for managed files a failed attempt never writes.  Integrate PR #2980 preview wording and global dry-run propa</description>
+    </item>
     <item>
       <title>Merge pull request #2949 from affaan-m/dependabot/github_actions/actions-minor-and-patch-6512b1d693</title>
       <link>https://github.com/affaan-m/ECC/commit/e04ea0b9cc8248686edf5ac751cadff550e162b8</link>
@@ -324,86 +404,6 @@
       <link>https://github.com/affaan-m/ECC/commit/9768c075c313298364a3d81f67e60bea7d180fb4</link>
       <guid isPermaLink="false">9768c07</guid>
       <pubDate>Fri, 28 Aug 2026 01:05:41 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #2863 from affaan-m/maint/release-2.2-ready</title>
-      <link>https://github.com/affaan-m/ECC/commit/5eddf1a3ffd311423be2d4ba7d26f7209c91b033</link>
-      <guid isPermaLink="false">5eddf1a</guid>
-      <pubDate>Thu, 27 Aug 2026 17:00:06 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix(release): make ECC 2.2 ready to publish</description>
-    </item>
-    <item>
-      <title>test(opencode): verify recovery through descriptors</title>
-      <link>https://github.com/affaan-m/ECC/commit/51982fdab1d27f370c6de47aa12d06d72f07f0a7</link>
-      <guid isPermaLink="false">51982fd</guid>
-      <pubDate>Tue, 25 Aug 2026 21:27:26 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test(opencode): avoid path race in recovery fixture</title>
-      <link>https://github.com/affaan-m/ECC/commit/aaaff77ef9976a8fcb770192914caabf27e7e987</link>
-      <guid isPermaLink="false">aaaff77</guid>
-      <pubDate>Tue, 25 Aug 2026 21:23:24 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(release): stage ECC 2.2 launch safely</title>
-      <link>https://github.com/affaan-m/ECC/commit/204cc2d2a31b11ecf584de9ff5d9597b7ff24c64</link>
-      <guid isPermaLink="false">204cc2d</guid>
-      <pubDate>Tue, 25 Aug 2026 21:19:45 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test(nasiko): isolate malformed lock fixture</title>
-      <link>https://github.com/affaan-m/ECC/commit/d6d0c4e696023b6dc62066820b4328490d53dc79</link>
-      <guid isPermaLink="false">d6d0c4e</guid>
-      <pubDate>Tue, 25 Aug 2026 17:52:19 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(nasiko): use descriptor lock identity</title>
-      <link>https://github.com/affaan-m/ECC/commit/e10c4bb5bfe4b1876a285fe7a8c0e6e85c9d953e</link>
-      <guid isPermaLink="false">e10c4bb</guid>
-      <pubDate>Tue, 25 Aug 2026 17:49:26 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(nasiko): harden lifecycle recovery</title>
-      <link>https://github.com/affaan-m/ECC/commit/307bbd53a61a34dc0d72ce3a33b92fa8088e3595</link>
-      <guid isPermaLink="false">307bbd5</guid>
-      <pubDate>Tue, 25 Aug 2026 17:34:58 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test(opencode): canonicalize Windows path expectations</title>
-      <link>https://github.com/affaan-m/ECC/commit/d66eaf116fa6b4f691ee646d814be6fbf27a5ec3</link>
-      <guid isPermaLink="false">d66eaf1</guid>
-      <pubDate>Tue, 25 Aug 2026 16:55:02 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs(release): record final environment evidence</title>
-      <link>https://github.com/affaan-m/ECC/commit/0b9573682f3a3565453a2de093cf923f2aee2b2c</link>
-      <guid isPermaLink="false">0b95736</guid>
-      <pubDate>Tue, 25 Aug 2026 16:44:26 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(opencode): snapshot invocation environments</title>
-      <link>https://github.com/affaan-m/ECC/commit/f67387e83605859dc25eb60a23f3ced911f8c5f0</link>
-      <guid isPermaLink="false">f67387e</guid>
-      <pubDate>Tue, 25 Aug 2026 16:37:53 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
     </item>
