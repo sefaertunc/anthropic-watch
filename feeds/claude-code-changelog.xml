@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 08 Sep 2026 10:51:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 10:56:39 GMT</lastBuildDate>
+    <item>
+      <title>2.1.266</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.266</guid>
+      <pubDate>Wed, 09 Sep 2026 10:55:51 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented CLAUDECODEUSEGATEWAY environment variable, previously ignored unless ANTHROPICBASEURL and ANTHROPICAUTHTOKEN were both set, began forcing Cloud-gateway sign-in on its own in 2.1.265, so configurations that set it a</description>
+    </item>
     <item>
       <title>2.1.263</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -453,16 +461,6 @@
       <category>claude-code-changelog</category>
       <description>- Added sandbox.credentials setting to block sandboxed commands from reading credential files and secret environment variables
 - Added org-configured model restrictions to the model picker, --model, /model, and ANTHROPICMODEL, with a &quot;restricted by your organization&apos;s settings&quot; message when a restri</description>
-    </item>
-    <item>
-      <title>2.1.186</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.186</guid>
-      <pubDate>Tue, 23 Jun 2026 09:45:32 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added claude mcp login &lt;name&gt; and claude mcp logout &lt;name&gt; to authenticate MCP servers from the CLI without opening the interactive /mcp menu, with --no-browser stdin redirect support for completing over SSH
-- Added status filtering (press f) to the /workflows agent detail view
-- Added a &quot;Skills&quot; </description>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-08T10:51:05.518Z",
+  "generated": "2026-09-09T10:56:39.990Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.266",
+      "title": "v2.1.266",
+      "date": "2026-09-08T23:55:14Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.266",
+      "snippet": "What's changed\n- Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented CLAUDECODEUSEGATEWAY environment variable, previously ignored unless ANTHROPICBASEURL and ANTHROPICAUTHTOKEN were both set, began forcing Cloud-gateway sign-in on its own in 2.1.265, so configuration",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.266|claude-code-releases"
+    },
+    {
+      "id": "v2.1.265",
+      "title": "v2.1.265",
+      "date": "2026-09-08T20:37:31Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.265",
+      "snippet": "What's changed\n- Added user.email and user.groups to the telemetry Claude Desktop and Cowork send through a Claude apps gateway, matching terminal sessions\n- Added support for pointing --plugin-dir at a folder of plugins: each child folder with a manifest loads, and children added or removed while r",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.265|claude-code-releases"
+    },
     {
       "id": "v2.1.263",
       "title": "v2.1.263",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.205|claude-code-releases"
-    },
-    {
-      "id": "v2.1.204",
-      "title": "v2.1.204",
-      "date": "2026-07-08T00:27:50Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.204",
-      "snippet": "What's changed\n- Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.204|claude-code-releases"
-    },
-    {
-      "id": "v2.1.203",
-      "title": "v2.1.203",
-      "date": "2026-07-07T21:06:12Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.203",
-      "snippet": "What's changed\n- Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted\n- Added a grey ⏸ badge to the footer when in manual permission mode, making the active mode always visible\n- Added the session's additional working directories t",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.203|claude-code-releases"
     }
   ]
 }
