@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-09T10:56:40.033Z",
+  "generated": "2026-09-10T10:53:24.598Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "cc91c24",
+      "title": "fix(commands): distinguish prp-pr alias (#2907)",
+      "date": "2026-09-09T19:00:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/cc91c24f9a35dc79811f2326b6cbf4a74739009a",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "cc91c24|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "549c146",
+      "title": "fix(security): bump js-yaml 4.3.1 -> 4.3.2 (GHSA-2883-xcg3-v3hh) (#3032)",
+      "date": "2026-09-09T17:56:47Z",
+      "url": "https://github.com/affaan-m/ECC/commit/549c14692ccf610f127a4b95eb6f496bb45ab6c9",
+      "snippet": "js-yaml < 4.3.2 is affected by a high-severity uncontrolled-resource- consumption issue (CWE-400 / CWE-407, CVSS 7.5): maxTotalMergeKeys does not limit CPU use for empty merge sources, allowing a crafted YAML document with merge keys to cause a denial of service while parsing.  js-yaml is a direct r",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "549c146|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2cb58a0",
+      "title": "docs: add Kimi tracking links to sponsor logo and Kimi sections (#3047)",
+      "date": "2026-09-09T14:20:47Z",
+      "url": "https://github.com/affaan-m/ECC/commit/2cb58a0b3c76dff9deac27851677e115a5b0f290",
+      "snippet": "Point the Moonshot sponsor logo href at https://platform.kimi.ai?aff=ecc (image unchanged, link target only). Add a Get Kimi Code link (https://www.kimi.com/code?aff=ecc) to the Kimi Code CLI row of the install-target table. Link the API endpoint mention in the Self-host Kimi intro to the API platfo",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "2cb58a0|gh-commits-everything-claude-code"
+    },
     {
       "id": "5064474",
       "title": "fix: integrate verified ECC 2.2.1 maintenance patches (#3012)",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "69874a5|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a4d72b2",
-      "title": "fix(gateguard): surface graduated recovery hints",
-      "date": "2026-08-28T07:40:33Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a4d72b2271a7045220cb8ed36f54c2a2c0f30054",
-      "snippet": "Change-Id: I6ade0a2a54a26bd5721c62edf7efa462e8043a08 Co-authored-by: TRAE CLI <traecli@bytedance.com>",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a4d72b2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "c40d0e4",
-      "title": "fix: normalize heredoc line continuations",
-      "date": "2026-08-28T01:19:12Z",
-      "url": "https://github.com/affaan-m/ECC/commit/c40d0e4f7c4592af33a9dcca0462584cbbca561b",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "c40d0e4|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "9768c07",
-      "title": "refactor: keep heredoc scanning linear",
-      "date": "2026-08-28T01:05:41Z",
-      "url": "https://github.com/affaan-m/ECC/commit/9768c075c313298364a3d81f67e60bea7d180fb4",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "9768c07|gh-commits-everything-claude-code"
     }
   ]
 }

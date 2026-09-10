@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-09T10:56:39.986Z",
+  "generated": "2026-09-10T10:53:24.547Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.267",
+      "title": "2.1.267",
+      "date": "2026-09-10T10:52:35.070Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added maxEffortLevel setting (top-level or per model under modelSettings): caps the effort level on every provider, including Bedrock, Vertex and Foundry; users can still pick a lower level\n- Added --system-prompt-snapshot off to render the system prompt fresh on every request instead of reusing t",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.267|claude-code-changelog"
+    },
     {
       "id": "2.1.266",
       "title": "2.1.266",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.191|claude-code-changelog"
-    },
-    {
-      "id": "2.1.187",
-      "title": "2.1.187",
-      "date": "2026-06-24T09:34:50.656Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Added sandbox.credentials setting to block sandboxed commands from reading credential files and secret environment variables\n- Added org-configured model restrictions to the model picker, --model, /model, and ANTHROPICMODEL, with a \"restricted by your organization's settings\" message when a restri",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.187|claude-code-changelog"
     }
   ]
 }

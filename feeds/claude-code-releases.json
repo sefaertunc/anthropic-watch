@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-09T10:56:39.990Z",
+  "generated": "2026-09-10T10:53:24.552Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.267",
+      "title": "v2.1.267",
+      "date": "2026-09-09T19:58:14Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.267",
+      "snippet": "What's changed\n- Added maxEffortLevel setting (top-level or per model under modelSettings): caps the effort level on every provider, including Bedrock, Vertex and Foundry; users can still pick a lower level\n- Added --system-prompt-snapshot off to render the system prompt fresh on every request inste",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.267|claude-code-releases"
+    },
     {
       "id": "v2.1.266",
       "title": "v2.1.266",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.206|claude-code-releases"
-    },
-    {
-      "id": "v2.1.205",
-      "title": "v2.1.205",
-      "date": "2026-07-08T21:22:06Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205",
-      "snippet": "What's changed\n- Added an auto mode rule that blocks tampering with session transcript files\n- Fixed --json-schema silently producing unstructured output when the schema was invalid, and schemas using the format keyword being rejected\n- Fixed a message sent while Claude was working being silently lo",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.205|claude-code-releases"
     }
   ]
 }

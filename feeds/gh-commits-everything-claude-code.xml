@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 09 Sep 2026 10:56:40 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 10:53:24 GMT</lastBuildDate>
+    <item>
+      <title>fix(commands): distinguish prp-pr alias (#2907)</title>
+      <link>https://github.com/affaan-m/ECC/commit/cc91c24f9a35dc79811f2326b6cbf4a74739009a</link>
+      <guid isPermaLink="false">cc91c24</guid>
+      <pubDate>Wed, 09 Sep 2026 19:00:49 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(security): bump js-yaml 4.3.1 -&gt; 4.3.2 (GHSA-2883-xcg3-v3hh) (#3032)</title>
+      <link>https://github.com/affaan-m/ECC/commit/549c14692ccf610f127a4b95eb6f496bb45ab6c9</link>
+      <guid isPermaLink="false">549c146</guid>
+      <pubDate>Wed, 09 Sep 2026 17:56:47 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>js-yaml &lt; 4.3.2 is affected by a high-severity uncontrolled-resource- consumption issue (CWE-400 / CWE-407, CVSS 7.5): maxTotalMergeKeys does not limit CPU use for empty merge sources, allowing a crafted YAML document with merge keys to cause a denial of service while parsing.  js-yaml is a direct r</description>
+    </item>
+    <item>
+      <title>docs: add Kimi tracking links to sponsor logo and Kimi sections (#3047)</title>
+      <link>https://github.com/affaan-m/ECC/commit/2cb58a0b3c76dff9deac27851677e115a5b0f290</link>
+      <guid isPermaLink="false">2cb58a0</guid>
+      <pubDate>Wed, 09 Sep 2026 14:20:47 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Point the Moonshot sponsor logo href at https://platform.kimi.ai?aff=ecc (image unchanged, link target only). Add a Get Kimi Code link (https://www.kimi.com/code?aff=ecc) to the Kimi Code CLI row of the install-target table. Link the API endpoint mention in the Self-host Kimi intro to the API platfo</description>
+    </item>
     <item>
       <title>fix: integrate verified ECC 2.2.1 maintenance patches (#3012)</title>
       <link>https://github.com/affaan-m/ECC/commit/5064474d4d762dc9640234a41617cccb79185cec</link>
@@ -382,30 +406,6 @@
       <pubDate>Sat, 29 Aug 2026 01:24:11 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>docs: note container isolation limits, add Jailbox reference</description>
-    </item>
-    <item>
-      <title>fix(gateguard): surface graduated recovery hints</title>
-      <link>https://github.com/affaan-m/ECC/commit/a4d72b2271a7045220cb8ed36f54c2a2c0f30054</link>
-      <guid isPermaLink="false">a4d72b2</guid>
-      <pubDate>Fri, 28 Aug 2026 07:40:33 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Change-Id: I6ade0a2a54a26bd5721c62edf7efa462e8043a08 Co-authored-by: TRAE CLI &lt;traecli@bytedance.com&gt;</description>
-    </item>
-    <item>
-      <title>fix: normalize heredoc line continuations</title>
-      <link>https://github.com/affaan-m/ECC/commit/c40d0e4f7c4592af33a9dcca0462584cbbca561b</link>
-      <guid isPermaLink="false">c40d0e4</guid>
-      <pubDate>Fri, 28 Aug 2026 01:19:12 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>refactor: keep heredoc scanning linear</title>
-      <link>https://github.com/affaan-m/ECC/commit/9768c075c313298364a3d81f67e60bea7d180fb4</link>
-      <guid isPermaLink="false">9768c07</guid>
-      <pubDate>Fri, 28 Aug 2026 01:05:41 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>

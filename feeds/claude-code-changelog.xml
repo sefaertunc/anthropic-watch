@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 09 Sep 2026 10:56:39 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 10:53:24 GMT</lastBuildDate>
+    <item>
+      <title>2.1.267</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.267</guid>
+      <pubDate>Thu, 10 Sep 2026 10:52:35 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added maxEffortLevel setting (top-level or per model under modelSettings): caps the effort level on every provider, including Bedrock, Vertex and Foundry; users can still pick a lower level
+- Added --system-prompt-snapshot off to render the system prompt fresh on every request instead of reusing t</description>
+    </item>
     <item>
       <title>2.1.266</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -452,15 +461,6 @@
 - Fixed scroll position jumping to the bottom while reading earlier output during a streaming response
 - Fixed background agents resurrecting after being stopped — stopping an agent from the tasks panel is now permanent
 -</description>
-    </item>
-    <item>
-      <title>2.1.187</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.187</guid>
-      <pubDate>Wed, 24 Jun 2026 09:34:50 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added sandbox.credentials setting to block sandboxed commands from reading credential files and secret environment variables
-- Added org-configured model restrictions to the model picker, --model, /model, and ANTHROPICMODEL, with a &quot;restricted by your organization&apos;s settings&quot; message when a restri</description>
     </item>
   </channel>
 </rss>

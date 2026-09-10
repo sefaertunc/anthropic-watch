@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 09 Sep 2026 10:56:40 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 10:53:24 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #5982 from anthropics/sg-resolve-repo-root</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/3ea32df27be71d78775e627df2382fc26203577f</link>
+      <guid isPermaLink="false">3ea32df</guid>
+      <pubDate>Wed, 09 Sep 2026 18:05:41 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: resolve repository from command and edited paths</description>
+    </item>
+    <item>
+      <title>Harden git invocation and repository hint handling</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/debbe686ab74ec095436a499b1a59864037e46cf</link>
+      <guid isPermaLink="false">debbe68</guid>
+      <pubDate>Wed, 09 Sep 2026 17:42:50 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>:house: Remote-Dev: homespace</description>
+    </item>
+    <item>
+      <title>Adjust SubagentStop handling and repository precedence</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f03d41e2c96f30b7b59a05566e998e6236a943e7</link>
+      <guid isPermaLink="false">f03d41e</guid>
+      <pubDate>Wed, 09 Sep 2026 16:46:55 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>- SubagentStop reviews without consuming or advancing the session&apos;s   Stop state; an identical diff is not reviewed twice. - SubagentStop from a different working tree than the project is skipped. - An explicit `git -C &lt;dir&gt;` / `cd &lt;dir&gt;` naming another repository takes   precedence over the hook cw</description>
+    </item>
+    <item>
+      <title>security-guidance: resolve repository from command and edited paths (2.0.7 → 2.0.8)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0b2f3e30a9c6f6e5ed7ca72408ffb957103174ca</link>
+      <guid isPermaLink="false">0b2f3e3</guid>
+      <pubDate>Wed, 09 Sep 2026 13:41:46 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>- Adds repository resolution from `git -C &lt;dir&gt;` / `cd &lt;dir&gt;` in the hook   command, from the commit SHA, and from edited file paths when the hook   cwd is not a git repository. - Adds PostToolUse matchers for `git -C … commit|push`. - Registers SubagentStop. - Adds `repo_resolution` / `cwd_is_repo`</description>
+    </item>
     <item>
       <title>Add qodo-standards plugin (Qodo, packages/qodo-standards @ v1.0.10) (#5863)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/517b2fcd1b60fa2181ac52dcf8492361ba341180</link>
@@ -374,38 +406,6 @@
       <pubDate>Fri, 21 Aug 2026 16:44:54 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Claude Security Plugin - v0.10.2</description>
-    </item>
-    <item>
-      <title>Claude Security Plugin - v0.10.2</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/1247e88a7028a6c47493081ef221989cb302b8ef</link>
-      <guid isPermaLink="false">1247e88</guid>
-      <pubDate>Fri, 21 Aug 2026 15:48:34 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Remove aws-dev-toolkit official plugin (#5357)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/08cf3ad271a04a2fa872e8fe501bcb5958978bbe</link>
-      <guid isPermaLink="false">08cf3ad</guid>
-      <pubDate>Fri, 14 Aug 2026 23:49:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Driver: lane-pa-aws-delist</description>
-    </item>
-    <item>
-      <title>bump tracking: enroll 8 constant-bumpers in releases-only (#4882)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/7d48aaa124cc87605a7be242641fa115c48c28f5</link>
-      <guid isPermaLink="false">7d48aaa</guid>
-      <pubDate>Thu, 13 Aug 2026 19:41:49 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Enrolls the 8 highest-churn entries with published upstream releases in releases-only tracking (~50 bump PRs/30d between them, mostly repo churn that never touches the plugin). Entries whose latest release predates the current pin hold at the pin (forward-only) until the next release.</description>
-    </item>
-    <item>
-      <title>project-artifact: document headless limitations and registry enumeration (#3110)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/4a3e6565eae08b14c5efcb842d87dee8ae99527f</link>
-      <guid isPermaLink="false">4a3e656</guid>
-      <pubDate>Thu, 13 Aug 2026 01:15:43 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
     </item>
   </channel>
 </rss>

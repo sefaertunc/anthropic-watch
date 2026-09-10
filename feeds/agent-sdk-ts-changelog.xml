@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 09 Sep 2026 10:56:39 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 10:53:24 GMT</lastBuildDate>
+    <item>
+      <title>0.3.267</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.267</guid>
+      <pubDate>Thu, 10 Sep 2026 10:52:35 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added getCcrEvent(query, message) and getSseLastSequenceNum(query) to the browser SDK&apos;s SSE transport, plus fromSequenceNum, onCatchUpTruncated and onDeliveryUpdate SSE options
+- Changed systemPrompt recording to default on for custom prompts and appends (a mid-session prompt change takes effect a</description>
+    </item>
     <item>
       <title>0.3.266</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -429,16 +438,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added promptSuggestions option to Browser SDK query() to opt the remote CLI into emitting follow-up suggestions
 - Fixed brief console window flashes on Windows when spawning CLI subprocesses</description>
-    </item>
-    <item>
-      <title>0.3.191</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.191</guid>
-      <pubDate>Thu, 25 Jun 2026 09:26:44 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added oldsource field to NotebookEdit tool results for replace and delete operations, enabling inline diffs
-- Added sevendayoverageincluded to SDKRateLimitInfo.rateLimitType for per-model weekly usage limits
-- Added modelscoped array to usage response for per-model weekly limit windows with utiliz</description>
     </item>
   </channel>
 </rss>

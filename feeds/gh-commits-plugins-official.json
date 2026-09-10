@@ -5,9 +5,53 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-09T10:56:40.029Z",
+  "generated": "2026-09-10T10:53:24.595Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "3ea32df",
+      "title": "Merge pull request #5982 from anthropics/sg-resolve-repo-root",
+      "date": "2026-09-09T18:05:41Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/3ea32df27be71d78775e627df2382fc26203577f",
+      "snippet": "security-guidance: resolve repository from command and edited paths",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "3ea32df|gh-commits-plugins-official"
+    },
+    {
+      "id": "debbe68",
+      "title": "Harden git invocation and repository hint handling",
+      "date": "2026-09-09T17:42:50Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/debbe686ab74ec095436a499b1a59864037e46cf",
+      "snippet": ":house: Remote-Dev: homespace",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "debbe68|gh-commits-plugins-official"
+    },
+    {
+      "id": "f03d41e",
+      "title": "Adjust SubagentStop handling and repository precedence",
+      "date": "2026-09-09T16:46:55Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/f03d41e2c96f30b7b59a05566e998e6236a943e7",
+      "snippet": "- SubagentStop reviews without consuming or advancing the session's   Stop state; an identical diff is not reviewed twice. - SubagentStop from a different working tree than the project is skipped. - An explicit `git -C <dir>` / `cd <dir>` naming another repository takes   precedence over the hook cw",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "f03d41e|gh-commits-plugins-official"
+    },
+    {
+      "id": "0b2f3e3",
+      "title": "security-guidance: resolve repository from command and edited paths (2.0.7 → 2.0.8)",
+      "date": "2026-09-09T13:41:46Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/0b2f3e30a9c6f6e5ed7ca72408ffb957103174ca",
+      "snippet": "- Adds repository resolution from `git -C <dir>` / `cd <dir>` in the hook   command, from the commit SHA, and from edited file paths when the hook   cwd is not a git repository. - Adds PostToolUse matchers for `git -C … commit|push`. - Registers SubagentStop. - Adds `repo_resolution` / `cwd_is_repo`",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "0b2f3e3|gh-commits-plugins-official"
+    },
     {
       "id": "517b2fc",
       "title": "Add qodo-standards plugin (Qodo, packages/qodo-standards @ v1.0.10) (#5863)",
@@ -513,50 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "340e33a|gh-commits-plugins-official"
-    },
-    {
-      "id": "1247e88",
-      "title": "Claude Security Plugin - v0.10.2",
-      "date": "2026-08-21T15:48:34Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/1247e88a7028a6c47493081ef221989cb302b8ef",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "1247e88|gh-commits-plugins-official"
-    },
-    {
-      "id": "08cf3ad",
-      "title": "Remove aws-dev-toolkit official plugin (#5357)",
-      "date": "2026-08-14T23:49:50Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/08cf3ad271a04a2fa872e8fe501bcb5958978bbe",
-      "snippet": "Driver: lane-pa-aws-delist",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "08cf3ad|gh-commits-plugins-official"
-    },
-    {
-      "id": "7d48aaa",
-      "title": "bump tracking: enroll 8 constant-bumpers in releases-only (#4882)",
-      "date": "2026-08-13T19:41:49Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/7d48aaa124cc87605a7be242641fa115c48c28f5",
-      "snippet": "Enrolls the 8 highest-churn entries with published upstream releases in releases-only tracking (~50 bump PRs/30d between them, mostly repo churn that never touches the plugin). Entries whose latest release predates the current pin hold at the pin (forward-only) until the next release.",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "7d48aaa|gh-commits-plugins-official"
-    },
-    {
-      "id": "4a3e656",
-      "title": "project-artifact: document headless limitations and registry enumeration (#3110)",
-      "date": "2026-08-13T01:15:43Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/4a3e6565eae08b14c5efcb842d87dee8ae99527f",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "4a3e656|gh-commits-plugins-official"
     }
   ]
 }
