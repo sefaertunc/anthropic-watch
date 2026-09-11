@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 10 Sep 2026 10:53:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 10:50:11 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.268</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.268</link>
+      <guid isPermaLink="false">v2.1.268</guid>
+      <pubDate>Thu, 10 Sep 2026 20:30:54 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added to the Claude apps gateway: with pricing: set in gateway.yaml, signed-in Claude Code clients receive the same rates through managed settings, so /cost and telemetry match the spend meter
+- Added a startup warning for gateways when accesscontrol.allowcidrs is empty, and a one-t</description>
+    </item>
     <item>
       <title>v2.1.267</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.267</link>
@@ -495,17 +505,6 @@
       <description>What&apos;s changed
 - Auto mode is now available without CLAUDECODEENABLEAUTOMODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings
 - Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code block</description>
-    </item>
-    <item>
-      <title>v2.1.206</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.206</link>
-      <guid isPermaLink="false">v2.1.206</guid>
-      <pubDate>Fri, 10 Jul 2026 01:45:26 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added directory path suggestions to /cd, matching /add-dir behavior
-- Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase
-- /commit-push-pr now auto-allows git push to the repo&apos;s configured push remote (rem</description>
     </item>
   </channel>
 </rss>

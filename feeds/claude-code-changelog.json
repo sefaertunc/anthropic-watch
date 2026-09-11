@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-10T10:53:24.547Z",
+  "generated": "2026-09-11T10:50:11.624Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.268",
+      "title": "2.1.268",
+      "date": "2026-09-11T10:49:23.584Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added to the Claude apps gateway: with pricing: set in gateway.yaml, signed-in Claude Code clients receive the same rates through managed settings, so /cost and telemetry match the spend meter\n- Added a startup warning for gateways when accesscontrol.allowcidrs is empty, and a one-time warning the",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.268|claude-code-changelog"
+    },
     {
       "id": "2.1.267",
       "title": "2.1.267",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.193|claude-code-changelog"
-    },
-    {
-      "id": "2.1.191",
-      "title": "2.1.191",
-      "date": "2026-06-25T09:26:44.249Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Added /rewind support for resuming a conversation from before /clear was run\n- Fixed scroll position jumping to the bottom while reading earlier output during a streaming response\n- Fixed background agents resurrecting after being stopped — stopping an agent from the tasks panel is now permanent\n-",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.191|claude-code-changelog"
     }
   ]
 }

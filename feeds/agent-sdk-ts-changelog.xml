@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 10 Sep 2026 10:53:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 10:50:11 GMT</lastBuildDate>
+    <item>
+      <title>0.3.268</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.268</guid>
+      <pubDate>Fri, 11 Sep 2026 10:49:24 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added resultindex to result messages: the result&apos;s position in delivery order within the run, from 0
+- Added localcommand to the result message of a turn that ran a slash command without entering the model loop, carrying the command&apos;s name
+- Added holdoncacheimpact to the reloadplugins control req</description>
+    </item>
     <item>
       <title>0.3.267</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -429,15 +439,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added Query.reinitialize() to re-send the initialize control request and redeliver pending permission/dialog prompts after a transport gap
 - Fixed commandschanged event not being emitted for synced skills when the skill list resolves before the change-detector subscribes</description>
-    </item>
-    <item>
-      <title>0.3.193</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.193</guid>
-      <pubDate>Fri, 26 Jun 2026 09:31:44 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added promptSuggestions option to Browser SDK query() to opt the remote CLI into emitting follow-up suggestions
-- Fixed brief console window flashes on Windows when spawning CLI subprocesses</description>
     </item>
   </channel>
 </rss>
