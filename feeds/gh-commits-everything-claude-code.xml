@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 11 Sep 2026 10:50:11 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 10:18:34 GMT</lastBuildDate>
+    <item>
+      <title>fix(memory): distinguish incomplete reads from missing records</title>
+      <link>https://github.com/affaan-m/ECC/commit/90ef62cb1d637f97e0c7f06f2e51a168c853ac7e</link>
+      <guid isPermaLink="false">90ef62c</guid>
+      <pubDate>Sat, 12 Sep 2026 09:52:29 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Independent local Codex review PASS at 73b07f8d17c6fc17b57eae60fdc43af2be9b4bed, no P0/P1. Independent 66 tests and strict validation of 810 skills passed. CI run 34683976362 passed; all 48 current checks green. Incomplete memory reads fail closed with safe MCP diagnostics; canonical guidance synchr</description>
+    </item>
+    <item>
+      <title>Fix/rails patterns followups</title>
+      <link>https://github.com/affaan-m/ECC/commit/b6ddd13a9f6ec2ccf55bc1773d52391c5afc05ab</link>
+      <guid isPermaLink="false">b6ddd13</guid>
+      <pubDate>Sat, 12 Sep 2026 08:39:08 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Independent local Codex review PASS at a6a641940279b3306933939433b11ef18b2be7f2, no P0/P1. Independent 181 checks and strict skill validation pass. CI run 34667546951 passed, all 45 current checks green. Existing Rails skill mapping and documentation corrections only. Rollback: revert this squash co</description>
+    </item>
+    <item>
+      <title>feat: group verified capsules into offline retrospective reports</title>
+      <link>https://github.com/affaan-m/ECC/commit/ab1f1a09ba90d43c8a87361cc841164f7c9b9c0d</link>
+      <guid isPermaLink="false">ab1f1a0</guid>
+      <pubDate>Sat, 12 Sep 2026 08:35:38 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Independent local Codex review PASS at 472cfa94fbf5fae05e46fbaaf7a3d08077ef6be3, no P0/P1. Independent retrospective, CLI, envelope and capsule tests: 73 passed. CI run 34664487219 attempt 2 passed all 42 jobs. Read-only offline capsule grouping only; no provenance, scoring, execution or promotion c</description>
+    </item>
+    <item>
+      <title>feat(control-pane): live control-plane view with 2D projection and static-threshold advisories</title>
+      <link>https://github.com/affaan-m/ECC/commit/1ed03ecf2ec91aac77f3c98094d7d1136e89b4d4</link>
+      <guid isPermaLink="false">1ed03ec</guid>
+      <pubDate>Sat, 12 Sep 2026 08:17:37 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Exact-head independent local Codex review PASS with no P0/P1. CI run 34680860653 attempt 2 passed at 0707cd431c2b242200a7ef28ab984f4a2c032238. Includes HTTP/schema failure handling, coalesced sampling cache and regression tests. Disclosed P2 follow-ups remain in the merge-queue receipt. Rollback: re</description>
+    </item>
+    <item>
+      <title>fix(hooks): keep hooks.json within Claude Code&apos;s schema</title>
+      <link>https://github.com/affaan-m/ECC/commit/1ac07903ec993f89757b59912d7fb31a366953bd</link>
+      <guid isPermaLink="false">1ac0790</guid>
+      <pubDate>Sat, 12 Sep 2026 06:59:02 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Move stable hook metadata to a validated sidecar while preserving hook commands and installer identity. Reject moved fingerprints and duplicate IDs, and validate before updating metadata. Independent local review passed at c315271624a1fd055b992f2bff889ad2a0ff8a6b; CI run 34678210149 passed. Rollback</description>
+    </item>
+    <item>
+      <title>fix(catalog): remove Serply and Squish entries (#3094)</title>
+      <link>https://github.com/affaan-m/ECC/commit/c4904e3f6381df934fc00bffb0afa7a1f8dae0e3</link>
+      <guid isPermaLink="false">c4904e3</guid>
+      <pubDate>Sat, 12 Sep 2026 03:45:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Remove the two reference catalog entries and their promotional descriptions. The catalog retains its other 34 entries unchanged.  Validated JSON structure, exact 13-line deletion, tracked references and independent code/security review.</description>
+    </item>
+    <item>
+      <title>feat(mcp): add serply-search server catalog entry (#3085)</title>
+      <link>https://github.com/affaan-m/ECC/commit/fba8e352cc8e2847b7b0f9289d868f399e8fb066</link>
+      <guid isPermaLink="false">fba8e35</guid>
+      <pubDate>Sat, 12 Sep 2026 03:32:09 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds an opt-in HTTP entry for Serply&apos;s hosted MCP endpoint to mcp-configs/mcp-servers.json, following the parallel-search and browser-use shape: https URL, X-Api-Key header placeholder, nothing enabled by default. Independent review confirmed valid JSON, catalog-tier policy per docs/MCP-CONNECTOR-PO</description>
+    </item>
+    <item>
+      <title>docs: add explicit hook consent to OpenCode install command (#3080)</title>
+      <link>https://github.com/affaan-m/ECC/commit/bdf92d8fab701ac31990ada6250ac15757ab0451</link>
+      <guid isPermaLink="false">bdf92d8</guid>
+      <pubDate>Sat, 12 Sep 2026 03:20:03 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The README&apos;s OpenCode full-profile install command fails because assertHookConsentReady refuses to materialize hooks-runtime without explicit consent; --profile full selects the runtime so the gate fires. Add --enable-hooks to the documented command. Independent review reproduced the failure and the</description>
+    </item>
+    <item>
+      <title>fix(hooks): block-no-verify handles stuck optional values and long-option prefixes (#3073)</title>
+      <link>https://github.com/affaan-m/ECC/commit/4f373874209b4b63fdec0469b76992923ea0a9d0</link>
+      <guid isPermaLink="false">4f37387</guid>
+      <pubDate>Sat, 12 Sep 2026 02:07:29 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Two cases the word-level rewrite still got wrong. Short options that take an optional stuck value (-u[mode], -S[keyid]) end the cluster scan, so git commit -uno and -Sn are allowed while -nu stays blocked. Git accepts any unambiguous long-option prefix, so --no-veri and --no-verif on commit, push, m</description>
+    </item>
+    <item>
+      <title>feat(rails-patterns): add Rails framework patterns skill (#3074)</title>
+      <link>https://github.com/affaan-m/ECC/commit/95b9fe157f815ef064793e49eacfecdbbfc5b813</link>
+      <guid isPermaLink="false">95b9fe1</guid>
+      <pubDate>Sat, 12 Sep 2026 00:48:16 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds skills/rails-patterns alongside laravel-patterns and django-patterns: directory contract, skinny controllers with service objects, form and query objects, idiomatic ActiveRecord, background jobs, ViewComponent, Hotwire, and the Rails 8 Solid stack. Decisions defer to rules/ruby/patterns.md. Reg</description>
+    </item>
     <item>
       <title>Merge pull request #3071 from haelyra/maint/stewardship-batch-2026-09-10</title>
       <link>https://github.com/affaan-m/ECC/commit/c9148d0bb239ed01a95724a5928b98cdf9c30658</link>
@@ -326,86 +406,6 @@
       <pubDate>Sun, 30 Aug 2026 19:20:35 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>test(ci): confirm hooks in packed target smoke</description>
-    </item>
-    <item>
-      <title>test(ci): confirm hooks in packed target smoke</title>
-      <link>https://github.com/affaan-m/ECC/commit/d26b9cccee7beb6339729d29497e6b4d5b68ff91</link>
-      <guid isPermaLink="false">d26b9cc</guid>
-      <pubDate>Sun, 30 Aug 2026 19:16:49 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #2715 from affaan-m/feat/hook-runtime-consent</title>
-      <link>https://github.com/affaan-m/ECC/commit/8211578ee7765c947f53e5b61fb5e0ee79ced929</link>
-      <guid isPermaLink="false">8211578</guid>
-      <pubDate>Sun, 30 Aug 2026 19:13:28 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>feat(install): require an explicit hook decision at the apply layer</description>
-    </item>
-    <item>
-      <title>test(ci): opt in to hooks in packed lifecycle smoke</title>
-      <link>https://github.com/affaan-m/ECC/commit/caee3ee455d770bda53cce41cd38ad4d35a8abbd</link>
-      <guid isPermaLink="false">caee3ee</guid>
-      <pubDate>Sun, 30 Aug 2026 19:13:07 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #2854 from samartomar/codex/issue-744-pure-plan</title>
-      <link>https://github.com/affaan-m/ECC/commit/a89cec96581537f875cbec38a8e16eb22d11d829</link>
-      <guid isPermaLink="false">a89cec9</guid>
-      <pubDate>Sun, 30 Aug 2026 18:50:53 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>refactor(install): expose pure manifest planner</description>
-    </item>
-    <item>
-      <title>Merge pull request #2902 from affaan-m/maint/pr-stewardship-portability-2026-08-29</title>
-      <link>https://github.com/affaan-m/ECC/commit/d8e6a51755c6971a65eef73419076d449df0f490</link>
-      <guid isPermaLink="false">d8e6a51</guid>
-      <pubDate>Sat, 29 Aug 2026 20:30:55 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix: forward-port reviewed ECC 2.2 fixes (13 PRs)</description>
-    </item>
-    <item>
-      <title>fix: count observations for whitespace paths</title>
-      <link>https://github.com/affaan-m/ECC/commit/299544e6801e6938281985f74df9a25e12905c65</link>
-      <guid isPermaLink="false">299544e</guid>
-      <pubDate>Sat, 29 Aug 2026 20:07:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: close validator and path edge cases</title>
-      <link>https://github.com/affaan-m/ECC/commit/1bdda4bdacca65d53ff7c4e1cb268f60e3fe669c</link>
-      <guid isPermaLink="false">1bdda4b</guid>
-      <pubDate>Sat, 29 Aug 2026 19:36:59 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test: honor per-invocation Bash overrides</title>
-      <link>https://github.com/affaan-m/ECC/commit/703163275d32630ea74bb23accc85eb641469f6f</link>
-      <guid isPermaLink="false">7031632</guid>
-      <pubDate>Sat, 29 Aug 2026 19:11:38 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(gateguard): match heredoc tab-strip order</title>
-      <link>https://github.com/affaan-m/ECC/commit/224da03d01ecae5187e0cb5458f0d85bc6fc4869</link>
-      <guid isPermaLink="false">224da03</guid>
-      <pubDate>Sat, 29 Aug 2026 18:45:22 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test(hooks): keep matcher mirrors in sync</title>
-      <link>https://github.com/affaan-m/ECC/commit/fab534f9247ebe0565dc01ebf64f5fed19d890d9</link>
-      <guid isPermaLink="false">fab534f</guid>
-      <pubDate>Sat, 29 Aug 2026 18:15:16 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>

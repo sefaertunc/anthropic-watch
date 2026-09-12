@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 11 Sep 2026 10:50:11 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 10:18:34 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.269</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.269</link>
+      <guid isPermaLink="false">v2.1.269</guid>
+      <pubDate>Fri, 11 Sep 2026 19:17:55 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added claude plugin eval: run a plugin&apos;s eval suite against Claude Code and get scored, reproducible results (JSON + HTML report); see claude plugin eval --help
+- Added /output-style [name] to list and switch output styles, including over Remote Control and in cloud and other headle</description>
+    </item>
     <item>
       <title>v2.1.268</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.268</link>
@@ -495,16 +505,6 @@
 - Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDEAXSCREENREADER=1, or add &quot;axScreenReader&quot;: true to settings.
 - Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode
 -</description>
-    </item>
-    <item>
-      <title>v2.1.207</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.207</link>
-      <guid isPermaLink="false">v2.1.207</guid>
-      <pubDate>Sat, 11 Jul 2026 00:52:10 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Auto mode is now available without CLAUDECODEENABLEAUTOMODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings
-- Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code block</description>
     </item>
   </channel>
 </rss>

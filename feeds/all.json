@@ -5,9 +5,383 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-11T10:50:11.610Z",
+  "generated": "2026-09-12T10:18:34.802Z",
   "itemCount": 100,
   "items": [
+    {
+      "id": "0.3.269",
+      "title": "0.3.269",
+      "date": "2026-09-12T10:17:47.443Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Changed usermessageuuid, usermessageuuids and resumereason to be stamped on a turn's first complete assistant message as well as its first stream event when partial messages are on\n- Fixed result.permissiondenials omitting Read, Edit and Write calls blocked by a path-scoped deny rule\n- Fixed inter",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.269|agent-sdk-ts-changelog"
+    },
+    {
+      "id": "2.1.269",
+      "title": "2.1.269",
+      "date": "2026-09-12T10:17:47.063Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added claude plugin eval: run a plugin's eval suite against Claude Code and get scored, reproducible results (JSON + HTML report); see claude plugin eval --help\n- Added /output-style [name] to list and switch output styles, including over Remote Control and in cloud and other headless sessions\n- A",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.269|claude-code-changelog"
+    },
+    {
+      "id": "90ef62c",
+      "title": "fix(memory): distinguish incomplete reads from missing records",
+      "date": "2026-09-12T09:52:29Z",
+      "url": "https://github.com/affaan-m/ECC/commit/90ef62cb1d637f97e0c7f06f2e51a168c853ac7e",
+      "snippet": "Independent local Codex review PASS at 73b07f8d17c6fc17b57eae60fdc43af2be9b4bed, no P0/P1. Independent 66 tests and strict validation of 810 skills passed. CI run 34683976362 passed; all 48 current checks green. Incomplete memory reads fail closed with safe MCP diagnostics; canonical guidance synchr",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "90ef62c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "t3_1we7x02",
+      "title": "183,987 tokens used up my entire 5 hour limit. What the fuck, Anthropic.",
+      "date": "2026-09-12T09:23:33+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1we7x02/183987_tokens_used_up_my_entire_5_hour_limit_what/",
+      "snippet": "I asked it to review a plan. That was it. That was enough to burn my ENTIRE 5 hour limit in less than 19 minutes. I've gone months without ever hitting my 5 hour limit using Fable and ultracode. This is like, 1% of my usual usage. Something is extremely wrong here.",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1we7x02|reddit-claudecode"
+    },
+    {
+      "id": "392a9b0",
+      "title": "chore: release v17.1.0 (#1428)",
+      "date": "2026-09-12T09:08:22Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/392a9b0133e4c077db5877ba042347c780db4a35",
+      "snippet": "Prepare protected release v17.1.0.",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "392a9b0|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "824bbea",
+      "title": "feat: add md2video-audio skill for narrated video generation (#1425)",
+      "date": "2026-09-12T08:44:02Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/824bbea4c09ee4c946cf088cf85d207bc4fa5713",
+      "snippet": "# Pull Request Description  Please include a summary of the change and which skill is added or fixed.",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "824bbea|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "b6ddd13",
+      "title": "Fix/rails patterns followups",
+      "date": "2026-09-12T08:39:08Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b6ddd13a9f6ec2ccf55bc1773d52391c5afc05ab",
+      "snippet": "Independent local Codex review PASS at a6a641940279b3306933939433b11ef18b2be7f2, no P0/P1. Independent 181 checks and strict skill validation pass. CI run 34667546951 passed, all 45 current checks green. Existing Rails skill mapping and documentation corrections only. Rollback: revert this squash co",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b6ddd13|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "ab1f1a0",
+      "title": "feat: group verified capsules into offline retrospective reports",
+      "date": "2026-09-12T08:35:38Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ab1f1a09ba90d43c8a87361cc841164f7c9b9c0d",
+      "snippet": "Independent local Codex review PASS at 472cfa94fbf5fae05e46fbaaf7a3d08077ef6be3, no P0/P1. Independent retrospective, CLI, envelope and capsule tests: 73 passed. CI run 34664487219 attempt 2 passed all 42 jobs. Read-only offline capsule grouping only; no provenance, scoring, execution or promotion c",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ab1f1a0|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "162316c",
+      "title": "feat(skills): add agy-auto permission gate skill (#1423)",
+      "date": "2026-09-12T08:33:36Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/162316cc12e174a0ac56b35121bfac1d29565006",
+      "snippet": "# Pull Request Description  Adds `skills/agy-auto/SKILL.md`: a playbook skill for configuring and operating the `agy-auto` PreToolUse security gate and auto-permission mode with Antigravity CLI (`agy`).",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "162316c|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "6f36993",
+      "title": "feat: add client-secret-exposure-audit skill (#1422)",
+      "date": "2026-09-12T08:28:07Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/6f369937a581d84f89c9666c896135f2f5c00cce",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "6f36993|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "1ed03ec",
+      "title": "feat(control-pane): live control-plane view with 2D projection and static-threshold advisories",
+      "date": "2026-09-12T08:17:37Z",
+      "url": "https://github.com/affaan-m/ECC/commit/1ed03ecf2ec91aac77f3c98094d7d1136e89b4d4",
+      "snippet": "Exact-head independent local Codex review PASS with no P0/P1. CI run 34680860653 attempt 2 passed at 0707cd431c2b242200a7ef28ab984f4a2c032238. Includes HTTP/schema failure handling, coalesced sampling cache and regression tests. Disclosed P2 follow-ups remain in the merge-queue receipt. Rollback: re",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "1ed03ec|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2098673314642436251",
+      "title": "RT @trq212: we heard feedback that it's hard to know if your skills are still working with new model releases\n\nplugin evals are here to hel…",
+      "date": "2026-09-12T07:21:24.000Z",
+      "url": "https://x.com/bcherny/status/2098673314642436251",
+      "snippet": "RT @trq212: we heard feedback that it's hard to know if your skills are still working with new model releases\n\nplugin evals are here to hel…",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2098673314642436251|twitter-bcherny"
+    },
+    {
+      "id": "2098670885150605529",
+      "title": "RT @ClaudeDevs: Here's how our team uses Claude Tag for on-call:\n\nWhen an alert fires in Slack, Claude pulls metrics, diffs deploys, and ch…",
+      "date": "2026-09-12T07:11:45.000Z",
+      "url": "https://x.com/bcherny/status/2098670885150605529",
+      "snippet": "RT @ClaudeDevs: Here's how our team uses Claude Tag for on-call:\n\nWhen an alert fires in Slack, Claude pulls metrics, diffs deploys, and ch…",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2098670885150605529|twitter-bcherny"
+    },
+    {
+      "id": "2098670782184612051",
+      "title": "RT @ClaudeDevs: New in Claude Code: claude plugin eval\n\nSee what value your plugin is adding, or if it needs more work.\n\nYou can create tes…",
+      "date": "2026-09-12T07:11:20.000Z",
+      "url": "https://x.com/bcherny/status/2098670782184612051",
+      "snippet": "RT @ClaudeDevs: New in Claude Code: claude plugin eval\n\nSee what value your plugin is adding, or if it needs more work.\n\nYou can create tes…",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2098670782184612051|twitter-bcherny"
+    },
+    {
+      "id": "1ac0790",
+      "title": "fix(hooks): keep hooks.json within Claude Code's schema",
+      "date": "2026-09-12T06:59:02Z",
+      "url": "https://github.com/affaan-m/ECC/commit/1ac07903ec993f89757b59912d7fb31a366953bd",
+      "snippet": "Move stable hook metadata to a validated sidecar while preserving hook commands and installer identity. Reject moved fingerprints and duplicate IDs, and validate before updating metadata. Independent local review passed at c315271624a1fd055b992f2bff889ad2a0ff8a6b; CI run 34678210149 passed. Rollback",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "1ac0790|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "t3_1wdyqzs",
+      "title": "Vibecoders about to post the \"claude deleted my entire codebase\"",
+      "date": "2026-09-12T01:20:17+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wdyqzs/vibecoders_about_to_post_the_claude_deleted_my/",
+      "snippet": null,
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1wdyqzs|reddit-claudecode"
+    },
+    {
+      "id": "t3_1wdy70c",
+      "title": "Opus is fine actually?",
+      "date": "2026-09-12T00:54:52+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wdy70c/opus_is_fine_actually/",
+      "snippet": "Ive seen a lot of hate for the way opus talks. Am i an outlier here? Its verbose but i can scan it for what i need quickly enough and that verbosity will often cause it to say something not quite right that I can correct. Am I alone here?",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1wdy70c|reddit-claudecode"
+    },
+    {
+      "id": "49666190",
+      "title": "Anthropic released a CLI to evaluate skills and plugins",
+      "date": "2026-09-11T22:20:10Z",
+      "url": "https://code.claude.com/docs/en/plugin-evals",
+      "snippet": null,
+      "source": "hn-claude-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.com",
+      "uniqueKey": "49666190|hn-claude-com"
+    },
+    {
+      "id": "t3_1wdtrsa",
+      "title": "I’m done with Opus 5",
+      "date": "2026-09-11T21:44:17+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wdtrsa/im_done_with_opus_5/",
+      "snippet": "There’s really something wrong with it. It seems like it acts like an overqualified post doc intern who cares more about proving he’s super intelligent, than actually doing the job he’s asked to do. For instance: talking in a non intelligible way, or being overly rigid in following any kind of proce",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1wdtrsa|reddit-claudecode"
+    },
+    {
+      "id": "2098519883214643227",
+      "title": "Join a Fable 5.1 Build Day near you! We'd love to see what you're building.",
+      "date": "2026-09-11T21:11:43.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2098519883214643227",
+      "snippet": "Join a Fable 5.1 Build Day near you! We'd love to see what you're building.",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2098519883214643227|twitter-claudedevs"
+    },
+    {
+      "id": "2098508880921899197",
+      "title": "Here's how our team uses Claude Tag for on-call:\n\nWhen an alert fires in Slack, Claude pulls metrics, diffs deploys, and checks flags. It finds a likely cause and proposes a fix, which we can approve ",
+      "date": "2026-09-11T20:28:00.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2098508880921899197",
+      "snippet": "Here's how our team uses Claude Tag for on-call:\n\nWhen an alert fires in Slack, Claude pulls metrics, diffs deploys, and checks flags. It finds a likely cause and proposes a fix, which we can approve and merge. Every minute counts, so we love that it starts right away! https://t.co/15gdEHjI7d",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2098508880921899197|twitter-claudedevs"
+    },
+    {
+      "id": "t3_1wdrgz0",
+      "title": "How I keep track of ~100 parallel Claude Code sessions: Beads as a private work graph between GitHub and my agents",
+      "date": "2026-09-11T20:16:48+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wdrgz0/how_i_keep_track_of_100_parallel_claude_code/",
+      "snippet": "I run four tmux sessions with 20-30 Claude Code chats each, across 30-plus Go services, a mobile app, infra repos and a data pipeline. The agents cope fine. I didn't. Long efforts branch into many PRs and sub-issues, ops work pulls me sideways, and after a few weeks nobody holds the whole picture, i",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1wdrgz0|reddit-claudecode"
+    },
+    {
+      "id": "2098500999656923145",
+      "title": "New in Claude Code: claude plugin eval\n\nSee what value your plugin is adding, or if it needs more work.\n\nYou can create test cases, run your plugin or skill against those test cases, score those runs,",
+      "date": "2026-09-11T19:56:41.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2098500999656923145",
+      "snippet": "New in Claude Code: claude plugin eval\n\nSee what value your plugin is adding, or if it needs more work.\n\nYou can create test cases, run your plugin or skill against those test cases, score those runs, then run each case again without the plugin to see the differences. https://t.co/qfPU6WHueV",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2098500999656923145|twitter-claudedevs"
+    },
+    {
+      "id": "v1.0.222",
+      "title": "v1.0.222",
+      "date": "2026-09-11T19:20:03Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.222",
+      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.221...v1.0.222",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.222|claude-code-action"
+    },
+    {
+      "id": "v2.1.269",
+      "title": "v2.1.269",
+      "date": "2026-09-11T19:17:55Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269",
+      "snippet": "What's changed\n- Added claude plugin eval: run a plugin's eval suite against Claude Code and get scored, reproducible results (JSON + HTML report); see claude plugin eval --help\n- Added /output-style [name] to list and switch output styles, including over Remote Control and in cloud and other headle",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.269|claude-code-releases"
+    },
+    {
+      "id": "df52d04",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-09-11T19:17:47Z",
+      "url": "https://github.com/anthropics/claude-code/commit/df52d04a4e65195c1621fe6222e0564bcccb1804",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "df52d04|gh-commits-claude-code"
+    },
+    {
+      "id": "2.1.269",
+      "title": "@anthropic-ai/claude-code@2.1.269",
+      "date": "2026-09-11T18:12:49.253Z",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+      "source": "npm-claude-code",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.269|npm-claude-code"
+    },
+    {
+      "id": "3deb821",
+      "title": "Merge pull request #6021 from anthropics/bump/workos",
+      "date": "2026-09-11T16:08:28Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/3deb821cb71ccfaaf2ffa9935e977df314ce5cd5",
+      "snippet": "bump(workos): de1ed17c → 6b7d596a",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "3deb821|gh-commits-plugins-official"
+    },
+    {
+      "id": "6038164",
+      "title": "Merge pull request #6020 from anthropics/bump/unreal-engine-skills-for-claude-code",
+      "date": "2026-09-11T16:08:20Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/60381640e8bd262ce65ba2312c5c3ec6cd95eebd",
+      "snippet": "bump(unreal-engine-skills-for-claude-code): 7e3b09bb → d1b05809",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "6038164|gh-commits-plugins-official"
+    },
+    {
+      "id": "cd882a6",
+      "title": "Merge pull request #6019 from anthropics/bump/postiz",
+      "date": "2026-09-11T16:08:12Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/cd882a6655c2ab2e29bce29bd24a1e55df9ef8f0",
+      "snippet": "bump(postiz): 6d3be9c0 → 51293500",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "cd882a6|gh-commits-plugins-official"
+    },
+    {
+      "id": "c74dd38",
+      "title": "Merge pull request #6018 from anthropics/bump/posthog",
+      "date": "2026-09-11T16:08:04Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/c74dd380b32c1dd8ca3a40c3fd45d68e75880736",
+      "snippet": "bump(posthog): 19e4737a → 33c066c8",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "c74dd38|gh-commits-plugins-official"
+    },
+    {
+      "id": "f5e304b",
+      "title": "Merge pull request #6017 from anthropics/bump/netlify-skills",
+      "date": "2026-09-11T16:07:56Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/f5e304b000d701bbeb7bab1d89cf162938cb404a",
+      "snippet": "bump(netlify-skills): b79c1e58 → b4fd870c",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "f5e304b|gh-commits-plugins-official"
+    },
+    {
+      "id": "49659016",
+      "title": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+      "date": "2026-09-11T14:25:18Z",
+      "url": "https://status.claude.com/incidents/t33dncr5ydvl",
+      "snippet": null,
+      "source": "hn-claude-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.com",
+      "uniqueKey": "49659016|hn-claude-com"
+    },
+    {
+      "id": "t33dncr5ydvl",
+      "title": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+      "date": "2026-09-11T14:19:51.478Z",
+      "url": "https://stspg.io/n9n8kfcxtkfm",
+      "snippet": "[major] resolved — The issue affecting Claude services has been resolved. Impact occurred from 13:57 to 14:20 UTC",
+      "source": "status-page",
+      "sourceCategory": "extended",
+      "sourceName": "Anthropic Status Page",
+      "uniqueKey": "t33dncr5ydvl|status-page"
+    },
     {
       "id": "0.3.268",
       "title": "0.3.268",
@@ -119,17 +493,6 @@
       "uniqueKey": "t3_1wd15a1|reddit-claudeai"
     },
     {
-      "id": "2098209880310264048",
-      "title": "wait what",
-      "date": "2026-09-11T00:39:52.000Z",
-      "url": "https://x.com/bcherny/status/2098209880310264048",
-      "snippet": "wait what",
-      "source": "twitter-bcherny",
-      "sourceCategory": "community",
-      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
-      "uniqueKey": "2098209880310264048|twitter-bcherny"
-    },
-    {
       "id": "t3_1wd12fr",
       "title": "Recreating my favorite game with Claude",
       "date": "2026-09-11T00:38:52+00:00",
@@ -161,28 +524,6 @@
       "sourceCategory": "extended",
       "sourceName": "Anthropic Status Page",
       "uniqueKey": "2pt83vlkk7x7|status-page"
-    },
-    {
-      "id": "2098165206296011059",
-      "title": "Just landed: /diff is now a persistent pane that you can scroll and click. It updates in real-time.\n\nFor the times when you want to see the code without having to switch windows.\n\nEnjoy! https://t.co/",
-      "date": "2026-09-10T21:42:21.000Z",
-      "url": "https://x.com/bcherny/status/2098165206296011059",
-      "snippet": "Just landed: /diff is now a persistent pane that you can scroll and click. It updates in real-time.\n\nFor the times when you want to see the code without having to switch windows.\n\nEnjoy! https://t.co/mT9izecZWq",
-      "source": "twitter-bcherny",
-      "sourceCategory": "community",
-      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
-      "uniqueKey": "2098165206296011059|twitter-bcherny"
-    },
-    {
-      "id": "c9148d0",
-      "title": "Merge pull request #3071 from haelyra/maint/stewardship-batch-2026-09-10",
-      "date": "2026-09-10T20:57:26Z",
-      "url": "https://github.com/affaan-m/ECC/commit/c9148d0bb239ed01a95724a5928b98cdf9c30658",
-      "snippet": "fix: consolidate verified stewardship repairs",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "c9148d0|gh-commits-everything-claude-code"
     },
     {
       "id": "v1.0.221",
@@ -249,39 +590,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/skills (main commits)",
       "uniqueKey": "34040c9|gh-commits-skills"
-    },
-    {
-      "id": "2ae86b4",
-      "title": "test(github-ops): report locale policy failures",
-      "date": "2026-09-10T19:40:13Z",
-      "url": "https://github.com/affaan-m/ECC/commit/2ae86b4fcf661d6c1f60ee2fe7d86eb1cf8b14ca",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "2ae86b4|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "678c6de",
-      "title": "fix(github-ops): synchronize localized merge authority",
-      "date": "2026-09-10T19:26:56Z",
-      "url": "https://github.com/affaan-m/ECC/commit/678c6dea19e32d6cf8b2e0de4dc39373bdfbdde0",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "678c6de|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "f81b43b",
-      "title": "docs: synchronize README skill tree count",
-      "date": "2026-09-10T18:56:25Z",
-      "url": "https://github.com/affaan-m/ECC/commit/f81b43b38d37f4135387760fd370edc8630420b5",
-      "snippet": "Carry forward the still-current part of #2944 against the live 291-skill catalog. Keep the accurate compatibility-shim wording already on main.  Co-authored-by: NIKHIL <nagarajnikhil.cs24@bmsce.ac.in>",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "f81b43b|gh-commits-everything-claude-code"
     },
     {
       "id": "2098120133549895978",
@@ -482,28 +790,6 @@
       "uniqueKey": "r1pqn1kb4hvk|status-page"
     },
     {
-      "id": "3b60051",
-      "title": "Merge pull request #5636 from anthropics/tobin/add-gc-ai",
-      "date": "2026-09-10T15:12:18Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/3b600518a637492d37c9877aeb49c2a55d939c04",
-      "snippet": "Add gc-ai plugin",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "3b60051|gh-commits-plugins-official"
-    },
-    {
-      "id": "6701e11",
-      "title": "Merge pull request #5640 from anthropics/tobin/add-hubspot-sales",
-      "date": "2026-09-10T15:07:00Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/6701e11ad07b5f4f9cee3d5aa8338841c7ee0c34",
-      "snippet": "Add hubspot-sales plugin",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "6701e11|gh-commits-plugins-official"
-    },
-    {
       "id": "1297731",
       "title": "mods/diff: backgrounds summary in two lines, as the internal copy has it",
       "date": "2026-09-10T14:56:57Z",
@@ -559,28 +845,6 @@
       "uniqueKey": "2.1.267|claude-code-changelog"
     },
     {
-      "id": "49640703",
-      "title": "Reducing cost and improving performance with Claude Platform",
-      "date": "2026-09-10T09:09:11Z",
-      "url": "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform",
-      "snippet": null,
-      "source": "hn-claude-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — claude.com",
-      "uniqueKey": "49640703|hn-claude-com"
-    },
-    {
-      "id": "8939dec",
-      "title": "mods/diff: the backend probes comment names where a host adds backends",
-      "date": "2026-09-10T05:47:12Z",
-      "url": "https://github.com/anthropics/claude-code/commit/8939decc616bc758b440642d06248bcaa249c589",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "8939dec|gh-commits-claude-code"
-    },
-    {
       "id": "https://support.claude.com/en/articles/12138966-release-notes#h_431d85b345",
       "title": "September 10, 2026",
       "date": "2026-09-10T00:00:00.000Z",
@@ -612,17 +876,6 @@
       "sourceCategory": "extended",
       "sourceName": "Anthropic Claude Blog",
       "uniqueKey": "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai|blog-claude"
-    },
-    {
-      "id": "9771d67",
-      "title": "Merge branch 'main' into tobin/add-hubspot-sales",
-      "date": "2026-09-09T22:10:55Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/9771d67eb06a525d9235c00108b2392ca1b92d7c",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "9771d67|gh-commits-plugins-official"
     },
     {
       "id": "v1.0.220",
@@ -658,28 +911,6 @@
       "uniqueKey": "2097762642958135398|twitter-anthropicai"
     },
     {
-      "id": "cc91c24",
-      "title": "fix(commands): distinguish prp-pr alias (#2907)",
-      "date": "2026-09-09T19:00:49Z",
-      "url": "https://github.com/affaan-m/ECC/commit/cc91c24f9a35dc79811f2326b6cbf4a74739009a",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "cc91c24|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "49631967",
-      "title": "Responding to Claude's feedback prompts is opting-in for data sharing",
-      "date": "2026-09-09T18:50:59Z",
-      "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
-      "snippet": null,
-      "source": "hn-claude-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — claude.com",
-      "uniqueKey": "49631967|hn-claude-com"
-    },
-    {
       "id": "2.1.267",
       "title": "@anthropic-ai/claude-code@2.1.267",
       "date": "2026-09-09T18:25:42.820Z",
@@ -689,28 +920,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code npm Package",
       "uniqueKey": "2.1.267|npm-claude-code"
-    },
-    {
-      "id": "3ea32df",
-      "title": "Merge pull request #5982 from anthropics/sg-resolve-repo-root",
-      "date": "2026-09-09T18:05:41Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/3ea32df27be71d78775e627df2382fc26203577f",
-      "snippet": "security-guidance: resolve repository from command and edited paths",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "3ea32df|gh-commits-plugins-official"
-    },
-    {
-      "id": "debbe68",
-      "title": "Harden git invocation and repository hint handling",
-      "date": "2026-09-09T17:42:50Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/debbe686ab74ec095436a499b1a59864037e46cf",
-      "snippet": ":house: Remote-Dev: homespace",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "debbe68|gh-commits-plugins-official"
     },
     {
       "id": "2097718980437831935",
@@ -757,17 +966,6 @@
       "uniqueKey": "c11cabd|gh-commits-antigravity-awesome-skills"
     },
     {
-      "id": "ff8c024",
-      "title": "docs: publish funding transparency and preserve About disclosure (#1418)",
-      "date": "2026-09-09T12:46:44Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/ff8c02425f0c44a138e0ed0093abaa3b318c33d0",
-      "snippet": "# Pull Request Description  Publish the maintainer-approved Funding & transparency page and link it from the README support section and documentation index. The page identifies the community-managed token, discloses creator-fee income, rejects trading endorsement and explains that token ownership gr",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "ff8c024|gh-commits-antigravity-awesome-skills"
-    },
-    {
       "id": "0.3.266",
       "title": "0.3.266",
       "date": "2026-09-09T10:55:52.094Z",
@@ -788,61 +986,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.266|claude-code-changelog"
-    },
-    {
-      "id": "t3_1wbg30i",
-      "title": "I made an MCP app so claude code can record, edit and export demo screen recordings for you",
-      "date": "2026-09-09T08:53:15+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wbg30i/i_made_an_mcp_app_so_claude_code_can_record_edit/",
-      "snippet": "Just say \"film a 30-second demo of my app\" and your agent opens it, moves the cursor, clicks through it, and hands you back a polished video. Works with Claude Code, Codex, OpenClaw or any compatible AI agent through MCP. Supports basically every app or website! Just ask and get a demo ready for sha",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1wbg30i|reddit-claudecode"
-    },
-    {
-      "id": "t3_1wbed3t",
-      "title": "The gap between 'using AI' and 'being good at AI' is wider than most people think",
-      "date": "2026-09-09T07:10:04+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wbed3t/the_gap_between_using_ai_and_being_good_at_ai_is/",
-      "snippet": "Most people in communities like this are probably better than average because you're actively learning. but even among active learners, the pattern holds, tool awareness ≠ tool proficiency. Knowing about RAG, agents, and MCP doesn't mean you can build effective workflows with them. The biggest diffe",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1wbed3t|reddit-claudecode"
-    },
-    {
-      "id": "t3_1wbclml",
-      "title": "Claude Code prompt-cache bugs: who pays for the wasted usage?",
-      "date": "2026-09-09T05:32:19+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wbclml/claude_code_promptcache_bugs_who_pays_for_the/",
-      "snippet": "I previously posted that I suspected Claude Code was not yet properly optimized for orchestrator-style workflows with many subagents, tools, hooks and long-running context, because the usage consumption was extreme. Since the Fable 5.1 rollout, we started looking much more closely at the cache behav",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1wbclml|reddit-claudecode"
-    },
-    {
-      "id": "t3_1wbc03f",
-      "title": "How I use sub-agents without burning through Fable 5.1",
-      "date": "2026-09-09T05:00:40+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wbc03f/how_i_use_subagents_without_burning_through_fable/",
-      "snippet": "I keep seeing people say they burn through Fable 5.1 insanely fast, so figured I'd share how I run it. I'm no guru at all, just sharing what's been working for me. I use Fable on High basically all the time. Right now I'm at 90% Fable / 89% all models. I feel I have a pretty good split between Fable",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1wbc03f|reddit-claudecode"
-    },
-    {
-      "id": "t3_1wba7c3",
-      "title": "So sick of Opus",
-      "date": "2026-09-09T03:29:51+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wba7c3/so_sick_of_opus/",
-      "snippet": "https://preview.redd.it/l437rtjcyeoh1.png?width=481&format=png&auto=webp&s=dd77814637b9df833bda353c461b46af0e736aac https://preview.redd.it/w4cplznhyeoh1.png?width=603&format=png&auto=webp&s=646b57c5b82af8e12471db17f5259461b490bb6d https://preview.redd.it/tc1b5qriyeoh1.png?width=546&format=png&auto=",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1wba7c3|reddit-claudecode"
     },
     {
       "id": "v1.0.219",
@@ -867,17 +1010,6 @@
       "uniqueKey": "v2.1.266|claude-code-releases"
     },
     {
-      "id": "2097470212471922848",
-      "title": "It's the little things https://t.co/dhyV5jPE8o",
-      "date": "2026-09-08T23:40:42.000Z",
-      "url": "https://x.com/bcherny/status/2097470212471922848",
-      "snippet": "It's the little things https://t.co/dhyV5jPE8o",
-      "source": "twitter-bcherny",
-      "sourceCategory": "community",
-      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
-      "uniqueKey": "2097470212471922848|twitter-bcherny"
-    },
-    {
       "id": "2.1.266",
       "title": "@anthropic-ai/claude-code@2.1.266",
       "date": "2026-09-08T23:32:32.880Z",
@@ -900,17 +1032,6 @@
       "uniqueKey": "2097465080330031509|twitter-noahzweben"
     },
     {
-      "id": "2097437571634639035",
-      "title": "Our CI team's on-call first responder is Claude Tag.\n\nIt reads alerts, metrics, and logs, then writes a SITREP and keeps a lessons.md as it learns.\n\nWe're sharing our setup, including a template and s",
-      "date": "2026-09-08T21:31:00.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2097437571634639035",
-      "snippet": "Our CI team's on-call first responder is Claude Tag.\n\nIt reads alerts, metrics, and logs, then writes a SITREP and keeps a lessons.md as it learns.\n\nWe're sharing our setup, including a template and skills, and hope your team finds it as useful as we do: https://t.co/qc1CsEYvBm",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2097437571634639035|twitter-claudedevs"
-    },
-    {
       "id": "v1.0.218",
       "title": "v1.0.218",
       "date": "2026-09-08T20:39:25Z",
@@ -931,61 +1052,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.265|claude-code-releases"
-    },
-    {
-      "id": "2097415273645228460",
-      "title": "We sat down with the founders of @WisprFlow, @useactively, and @pendoio, who are building on Claude Managed Agents.\n\nLearn how they used features like outcomes, sandboxing, and memory to scale their p",
-      "date": "2026-09-08T20:02:23.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2097415273645228460",
-      "snippet": "We sat down with the founders of @WisprFlow, @useactively, and @pendoio, who are building on Claude Managed Agents.\n\nLearn how they used features like outcomes, sandboxing, and memory to scale their products. https://t.co/AwV0ER8898",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2097415273645228460|twitter-claudedevs"
-    },
-    {
-      "id": "78acbe3",
-      "title": "chore: release v17.0.0 (#1417)",
-      "date": "2026-09-08T17:20:00Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/78acbe3f333315cfdd887c81a11aa1ffe42f8e64",
-      "snippet": "Prepare protected release v17.0.0.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "78acbe3|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "2097369738968195513",
-      "title": "https://t.co/BAGbeyTkga",
-      "date": "2026-09-08T17:01:27.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2097369738968195513",
-      "snippet": "https://t.co/BAGbeyTkga",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2097369738968195513|twitter-claudedevs"
-    },
-    {
-      "id": "3676aa0",
-      "title": "feat: add skill-porter for importing and optimizing external agent skills (#1413)",
-      "date": "2026-09-08T17:00:11Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/3676aa0bd371d053a732b031625f4ebf53b9013b",
-      "snippet": "### Summary Adds the \\skill-porter\\ skill under \\skills/skill-porter/SKILL.md\\.  ### What does this skill do? Imports, converts, and optimizes external agent skills created for Claude Code, Cursor, Codex, or generic LLMs into native Google Antigravity multi-agent plugins. It translates serial subage",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "3676aa0|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "c79831c",
-      "title": "feat: add break-ai-fix-loops evidence workflow (#1337)",
-      "date": "2026-09-08T16:55:05Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c79831c86f4c2948382b9b968be0c106c1768f4a",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "c79831c|gh-commits-antigravity-awesome-skills"
     },
     {
       "id": "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform",
@@ -1032,28 +1098,6 @@
       "uniqueKey": "2.1.263|claude-code-changelog"
     },
     {
-      "id": "v1.0.217",
-      "title": "v1.0.217",
-      "date": "2026-09-06T02:56:44Z",
-      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.217",
-      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.216...v1.0.217",
-      "source": "claude-code-action",
-      "sourceCategory": "extended",
-      "sourceName": "Claude Code Action Releases",
-      "uniqueKey": "v1.0.217|claude-code-action"
-    },
-    {
-      "id": "v2.1.263",
-      "title": "v2.1.263",
-      "date": "2026-09-06T02:54:20Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263",
-      "snippet": "What's changed\n- Bug fixes and reliability improvements",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.263|claude-code-releases"
-    },
-    {
       "id": "2.1.263",
       "title": "@anthropic-ai/claude-code@2.1.263",
       "date": "2026-09-06T02:07:58.391Z",
@@ -1063,50 +1107,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code npm Package",
       "uniqueKey": "2.1.263|npm-claude-code"
-    },
-    {
-      "id": "0.3.261",
-      "title": "0.3.261",
-      "date": "2026-09-05T10:09:37.053Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added pluginDelivery: 'initialize' to send plugins over stdin so the launch command line no longer grows with the plugin count (fixes Windows start failures with many plugins)\n- Fixed query() throwing \"Object not disposable\" in runtimes without a native Symbol.dispose, such as Node ≤22 vm contexts",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.261|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "2.1.261",
-      "title": "2.1.261",
-      "date": "2026-09-05T10:09:36.628Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Added an \"Organization policy\" line to /status and claude doctor that says why your organization's policy could not be loaded, such as a proxy not passing the endpoint through\n- Added bashOutputMaxChars and taskOutputMaxChars settings to raise how much command and background-task output Claude rec",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.261|claude-code-changelog"
-    },
-    {
-      "id": "v1.4.0",
-      "title": "v1.4.0",
-      "date": "2026-09-04T22:20:20Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.4.0",
-      "snippet": "1.4.0 (2026-09-04)\nFull Changelog: v1.3.0...v1.4.0\n Features\n api: add Claude Tag category and user breakdowns to usage reports (9fce1e4)\n api: add named types for organization compliance settings state (1de1957)\n api: add support for sending a workspace ID on more endpoints (d1d2c01)\n Bug Fixes\n cl",
-      "source": "api-sdk-py-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK Python Releases",
-      "uniqueKey": "v1.4.0|api-sdk-py-releases"
-    },
-    {
-      "id": "2095947707605266436",
-      "title": "Checking that a major mathematical proof is correct can take years. Formalization—converting the mathematical reasoning into a form computer proof assistants like Lean can verify—can help.\n\nLast month",
-      "date": "2026-09-04T18:50:48.000Z",
-      "url": "https://x.com/AnthropicAI/status/2095947707605266436",
-      "snippet": "Checking that a major mathematical proof is correct can take years. Formalization—converting the mathematical reasoning into a form computer proof assistants like Lean can verify—can help.\n\nLast month, Claude completed the first formalized proof of Fermat’s Last Theorem, one of the most famous theor",
-      "source": "twitter-anthropicai",
-      "sourceCategory": "community",
-      "sourceName": "@AnthropicAI (official)",
-      "uniqueKey": "2095947707605266436|twitter-anthropicai"
     }
   ]
 }

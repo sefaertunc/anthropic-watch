@@ -5,9 +5,119 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-11T10:50:11.671Z",
+  "generated": "2026-09-12T10:18:34.863Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "90ef62c",
+      "title": "fix(memory): distinguish incomplete reads from missing records",
+      "date": "2026-09-12T09:52:29Z",
+      "url": "https://github.com/affaan-m/ECC/commit/90ef62cb1d637f97e0c7f06f2e51a168c853ac7e",
+      "snippet": "Independent local Codex review PASS at 73b07f8d17c6fc17b57eae60fdc43af2be9b4bed, no P0/P1. Independent 66 tests and strict validation of 810 skills passed. CI run 34683976362 passed; all 48 current checks green. Incomplete memory reads fail closed with safe MCP diagnostics; canonical guidance synchr",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "90ef62c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "b6ddd13",
+      "title": "Fix/rails patterns followups",
+      "date": "2026-09-12T08:39:08Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b6ddd13a9f6ec2ccf55bc1773d52391c5afc05ab",
+      "snippet": "Independent local Codex review PASS at a6a641940279b3306933939433b11ef18b2be7f2, no P0/P1. Independent 181 checks and strict skill validation pass. CI run 34667546951 passed, all 45 current checks green. Existing Rails skill mapping and documentation corrections only. Rollback: revert this squash co",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b6ddd13|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "ab1f1a0",
+      "title": "feat: group verified capsules into offline retrospective reports",
+      "date": "2026-09-12T08:35:38Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ab1f1a09ba90d43c8a87361cc841164f7c9b9c0d",
+      "snippet": "Independent local Codex review PASS at 472cfa94fbf5fae05e46fbaaf7a3d08077ef6be3, no P0/P1. Independent retrospective, CLI, envelope and capsule tests: 73 passed. CI run 34664487219 attempt 2 passed all 42 jobs. Read-only offline capsule grouping only; no provenance, scoring, execution or promotion c",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ab1f1a0|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "1ed03ec",
+      "title": "feat(control-pane): live control-plane view with 2D projection and static-threshold advisories",
+      "date": "2026-09-12T08:17:37Z",
+      "url": "https://github.com/affaan-m/ECC/commit/1ed03ecf2ec91aac77f3c98094d7d1136e89b4d4",
+      "snippet": "Exact-head independent local Codex review PASS with no P0/P1. CI run 34680860653 attempt 2 passed at 0707cd431c2b242200a7ef28ab984f4a2c032238. Includes HTTP/schema failure handling, coalesced sampling cache and regression tests. Disclosed P2 follow-ups remain in the merge-queue receipt. Rollback: re",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "1ed03ec|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "1ac0790",
+      "title": "fix(hooks): keep hooks.json within Claude Code's schema",
+      "date": "2026-09-12T06:59:02Z",
+      "url": "https://github.com/affaan-m/ECC/commit/1ac07903ec993f89757b59912d7fb31a366953bd",
+      "snippet": "Move stable hook metadata to a validated sidecar while preserving hook commands and installer identity. Reject moved fingerprints and duplicate IDs, and validate before updating metadata. Independent local review passed at c315271624a1fd055b992f2bff889ad2a0ff8a6b; CI run 34678210149 passed. Rollback",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "1ac0790|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "c4904e3",
+      "title": "fix(catalog): remove Serply and Squish entries (#3094)",
+      "date": "2026-09-12T03:45:33Z",
+      "url": "https://github.com/affaan-m/ECC/commit/c4904e3f6381df934fc00bffb0afa7a1f8dae0e3",
+      "snippet": "Remove the two reference catalog entries and their promotional descriptions. The catalog retains its other 34 entries unchanged.  Validated JSON structure, exact 13-line deletion, tracked references and independent code/security review.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "c4904e3|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "fba8e35",
+      "title": "feat(mcp): add serply-search server catalog entry (#3085)",
+      "date": "2026-09-12T03:32:09Z",
+      "url": "https://github.com/affaan-m/ECC/commit/fba8e352cc8e2847b7b0f9289d868f399e8fb066",
+      "snippet": "Adds an opt-in HTTP entry for Serply's hosted MCP endpoint to mcp-configs/mcp-servers.json, following the parallel-search and browser-use shape: https URL, X-Api-Key header placeholder, nothing enabled by default. Independent review confirmed valid JSON, catalog-tier policy per docs/MCP-CONNECTOR-PO",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "fba8e35|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "bdf92d8",
+      "title": "docs: add explicit hook consent to OpenCode install command (#3080)",
+      "date": "2026-09-12T03:20:03Z",
+      "url": "https://github.com/affaan-m/ECC/commit/bdf92d8fab701ac31990ada6250ac15757ab0451",
+      "snippet": "The README's OpenCode full-profile install command fails because assertHookConsentReady refuses to materialize hooks-runtime without explicit consent; --profile full selects the runtime so the gate fires. Add --enable-hooks to the documented command. Independent review reproduced the failure and the",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "bdf92d8|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "4f37387",
+      "title": "fix(hooks): block-no-verify handles stuck optional values and long-option prefixes (#3073)",
+      "date": "2026-09-12T02:07:29Z",
+      "url": "https://github.com/affaan-m/ECC/commit/4f373874209b4b63fdec0469b76992923ea0a9d0",
+      "snippet": "Two cases the word-level rewrite still got wrong. Short options that take an optional stuck value (-u[mode], -S[keyid]) end the cluster scan, so git commit -uno and -Sn are allowed while -nu stays blocked. Git accepts any unambiguous long-option prefix, so --no-veri and --no-verif on commit, push, m",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "4f37387|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "95b9fe1",
+      "title": "feat(rails-patterns): add Rails framework patterns skill (#3074)",
+      "date": "2026-09-12T00:48:16Z",
+      "url": "https://github.com/affaan-m/ECC/commit/95b9fe157f815ef064793e49eacfecdbbfc5b813",
+      "snippet": "Adds skills/rails-patterns alongside laravel-patterns and django-patterns: directory contract, skinny controllers with service objects, form and query objects, idiomatic ActiveRecord, background jobs, ViewComponent, Hotwire, and the Rails 8 Solid stack. Decisions defer to rules/ruby/patterns.md. Reg",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "95b9fe1|gh-commits-everything-claude-code"
+    },
     {
       "id": "c9148d0",
       "title": "Merge pull request #3071 from haelyra/maint/stewardship-batch-2026-09-10",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "19e2f2b|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d26b9cc",
-      "title": "test(ci): confirm hooks in packed target smoke",
-      "date": "2026-08-30T19:16:49Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d26b9cccee7beb6339729d29497e6b4d5b68ff91",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d26b9cc|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8211578",
-      "title": "Merge pull request #2715 from affaan-m/feat/hook-runtime-consent",
-      "date": "2026-08-30T19:13:28Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8211578ee7765c947f53e5b61fb5e0ee79ced929",
-      "snippet": "feat(install): require an explicit hook decision at the apply layer",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8211578|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "caee3ee",
-      "title": "test(ci): opt in to hooks in packed lifecycle smoke",
-      "date": "2026-08-30T19:13:07Z",
-      "url": "https://github.com/affaan-m/ECC/commit/caee3ee455d770bda53cce41cd38ad4d35a8abbd",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "caee3ee|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a89cec9",
-      "title": "Merge pull request #2854 from samartomar/codex/issue-744-pure-plan",
-      "date": "2026-08-30T18:50:53Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a89cec96581537f875cbec38a8e16eb22d11d829",
-      "snippet": "refactor(install): expose pure manifest planner",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a89cec9|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d8e6a51",
-      "title": "Merge pull request #2902 from affaan-m/maint/pr-stewardship-portability-2026-08-29",
-      "date": "2026-08-29T20:30:55Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d8e6a51755c6971a65eef73419076d449df0f490",
-      "snippet": "fix: forward-port reviewed ECC 2.2 fixes (13 PRs)",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d8e6a51|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "299544e",
-      "title": "fix: count observations for whitespace paths",
-      "date": "2026-08-29T20:07:00Z",
-      "url": "https://github.com/affaan-m/ECC/commit/299544e6801e6938281985f74df9a25e12905c65",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "299544e|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "1bdda4b",
-      "title": "fix: close validator and path edge cases",
-      "date": "2026-08-29T19:36:59Z",
-      "url": "https://github.com/affaan-m/ECC/commit/1bdda4bdacca65d53ff7c4e1cb268f60e3fe669c",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "1bdda4b|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7031632",
-      "title": "test: honor per-invocation Bash overrides",
-      "date": "2026-08-29T19:11:38Z",
-      "url": "https://github.com/affaan-m/ECC/commit/703163275d32630ea74bb23accc85eb641469f6f",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7031632|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "224da03",
-      "title": "fix(gateguard): match heredoc tab-strip order",
-      "date": "2026-08-29T18:45:22Z",
-      "url": "https://github.com/affaan-m/ECC/commit/224da03d01ecae5187e0cb5458f0d85bc6fc4869",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "224da03|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "fab534f",
-      "title": "test(hooks): keep matcher mirrors in sync",
-      "date": "2026-08-29T18:15:16Z",
-      "url": "https://github.com/affaan-m/ECC/commit/fab534f9247ebe0565dc01ebf64f5fed19d890d9",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "fab534f|gh-commits-everything-claude-code"
     }
   ]
 }

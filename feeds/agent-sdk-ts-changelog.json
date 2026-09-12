@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-11T10:50:11.635Z",
+  "generated": "2026-09-12T10:18:34.826Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.269",
+      "title": "0.3.269",
+      "date": "2026-09-12T10:17:47.443Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Changed usermessageuuid, usermessageuuids and resumereason to be stamped on a turn's first complete assistant message as well as its first stream event when partial messages are on\n- Fixed result.permissiondenials omitting Read, Edit and Write calls blocked by a path-scoped deny rule\n- Fixed inter",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.269|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.268",
       "title": "0.3.268",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.196|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.195",
-      "title": "0.3.195",
-      "date": "2026-06-27T08:39:05.425Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added Query.reinitialize() to re-send the initialize control request and redeliver pending permission/dialog prompts after a transport gap\n- Fixed commandschanged event not being emitted for synced skills when the skill list resolves before the change-detector subscribes",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.195|agent-sdk-ts-changelog"
     }
   ]
 }
