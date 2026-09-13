@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-12T10:18:34.815Z",
+  "generated": "2026-09-13T11:18:49.645Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.270",
+      "title": "2.1.270",
+      "date": "2026-09-13T11:18:01.110Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been running for a while (regression in 2.1.269)",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.270|claude-code-changelog"
+    },
     {
       "id": "2.1.269",
       "title": "2.1.269",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.196|claude-code-changelog"
-    },
-    {
-      "id": "2.1.195",
-      "title": "2.1.195",
-      "date": "2026-06-27T08:39:04.581Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Added CLAUDECODEDISABLEMOUSECLICKS to disable mouse click/drag/hover in fullscreen mode while keeping wheel scroll\n- Fixed hook matchers with hyphenated identifiers (e.g. code-reviewer, mcpbrave-search) accidentally substring-matching — they now exact-match. Use mcpbrave-search. to match all tools",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.195|claude-code-changelog"
     }
   ]
 }

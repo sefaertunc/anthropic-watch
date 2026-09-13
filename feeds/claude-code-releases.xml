@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 12 Sep 2026 10:18:34 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 11:18:49 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.270</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.270</link>
+      <guid isPermaLink="false">v2.1.270</guid>
+      <pubDate>Sat, 12 Sep 2026 19:45:44 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been running for a while (regression in 2.1.269)</description>
+    </item>
     <item>
       <title>v2.1.269</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.269</link>
@@ -494,17 +503,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)</description>
-    </item>
-    <item>
-      <title>v2.1.208</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.208</link>
-      <guid isPermaLink="false">v2.1.208</guid>
-      <pubDate>Tue, 14 Jul 2026 01:10:42 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader, set CLAUDEAXSCREENREADER=1, or add &quot;axScreenReader&quot;: true to settings.
-- Added vimInsertModeRemaps setting: map two-key insert-mode sequences like jj to Escape in vim mode
--</description>
     </item>
   </channel>
 </rss>

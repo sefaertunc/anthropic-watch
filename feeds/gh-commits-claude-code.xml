@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 12 Sep 2026 10:18:34 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 11:18:49 GMT</lastBuildDate>
+    <item>
+      <title>mods: telemetry&apos;s types path is ./-relative like the other manifest paths (#93932)</title>
+      <link>https://github.com/anthropics/claude-code/commit/b5932767f3acbd07da25367064827e5cb81f43de</link>
+      <guid isPermaLink="false">b593276</guid>
+      <pubDate>Sun, 13 Sep 2026 01:59:33 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>Merge pull request #93912 from anthropics/poteat/mod-tests-seat</title>
+      <link>https://github.com/anthropics/claude-code/commit/e46ab548ab3ffc5f75309a3f36016fb418c730ca</link>
+      <guid isPermaLink="false">e46ab54</guid>
+      <pubDate>Sat, 12 Sep 2026 22:21:29 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>mods: unit tests for diff, sec-default and telemetry, typed against the plugin declarations</description>
+    </item>
+    <item>
+      <title>mods: the CI job tells a build with plugin test by its usage line</title>
+      <link>https://github.com/anthropics/claude-code/commit/c13655688dda0595ed344401877929924ee3f1d5</link>
+      <guid isPermaLink="false">c136556</guid>
+      <pubDate>Sat, 12 Sep 2026 22:14:00 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge remote-tracking branch &apos;origin/main&apos; into poteat/mod-tests-seat</title>
+      <link>https://github.com/anthropics/claude-code/commit/28e2635f3505c3cc8ed46f207da018f47132d358</link>
+      <guid isPermaLink="false">28e2635</guid>
+      <pubDate>Sat, 12 Sep 2026 22:06:58 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>mods: the CI job skips the test step until the installed Claude Code has plugin test</title>
+      <link>https://github.com/anthropics/claude-code/commit/43cc34032393b2fa5b95b262a6f9156e0757961b</link>
+      <guid isPermaLink="false">43cc340</guid>
+      <pubDate>Sat, 12 Sep 2026 22:06:56 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>mods: the declarations name only announced tools and modes</title>
+      <link>https://github.com/anthropics/claude-code/commit/50f8bb0b7cfa9a8db1f21733638293d806c60fd1</link>
+      <guid isPermaLink="false">50f8bb0</guid>
+      <pubDate>Sat, 12 Sep 2026 19:57:13 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>mods: tests settle a started dispatch with clock.settle()</title>
+      <link>https://github.com/anthropics/claude-code/commit/bf4322ffe250f1554ec9135215eec64c03c81a5c</link>
+      <guid isPermaLink="false">bf4322f</guid>
+      <pubDate>Sat, 12 Sep 2026 19:52:24 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/2b40e76d3f03b9070e2431e0bd05b4f3ace77982</link>
+      <guid isPermaLink="false">2b40e76</guid>
+      <pubDate>Sat, 12 Sep 2026 19:45:38 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>mods: the telemetry contract exports its types at top level, its hooks and tests importing them from the folder, so the engine&apos;s repository reads the same file by path</title>
+      <link>https://github.com/anthropics/claude-code/commit/485170e06b3e7a147657fbaf5d0722b56a6fb9f5</link>
+      <guid isPermaLink="false">485170e</guid>
+      <pubDate>Sat, 12 Sep 2026 19:18:59 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>mods: a noun&apos;s types live in its own types folder and dependents read them from there</title>
+      <link>https://github.com/anthropics/claude-code/commit/b95b0150f8fb04da6007323ed16827be4db5d0e1</link>
+      <guid isPermaLink="false">b95b015</guid>
+      <pubDate>Sat, 12 Sep 2026 18:57:54 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>chore: Update CHANGELOG.md and feed.xml</title>
       <link>https://github.com/anthropics/claude-code/commit/df52d04a4e65195c1621fe6222e0564bcccb1804</link>
@@ -324,86 +404,6 @@
       <link>https://github.com/anthropics/claude-code/commit/0fa8c19d50f70f9f383fb6ff5ce5209575267d21</link>
       <guid isPermaLink="false">0fa8c19</guid>
       <pubDate>Fri, 14 Aug 2026 22:20:50 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/1f6015b5d578adf79c8527443328a216d6b6a3f1</link>
-      <guid isPermaLink="false">1f6015b</guid>
-      <pubDate>Thu, 13 Aug 2026 23:29:53 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/be90077c6a353f292fa612d97173865a9ab21b83</link>
-      <guid isPermaLink="false">be90077</guid>
-      <pubDate>Thu, 13 Aug 2026 08:38:44 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/9923819368179d7bb11b9d623fb480bf009b2e87</link>
-      <guid isPermaLink="false">9923819</guid>
-      <pubDate>Wed, 12 Aug 2026 20:56:14 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/681a8be245e7759a405e276b16ae69ea6b75076f</link>
-      <guid isPermaLink="false">681a8be</guid>
-      <pubDate>Tue, 11 Aug 2026 19:50:51 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/54cc51a08a5d3900e5abd02ad75a2ce46f3f008c</link>
-      <guid isPermaLink="false">54cc51a</guid>
-      <pubDate>Mon, 10 Aug 2026 22:56:46 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/2bb60696142b493eafaeacfe00eac51d16c50c4f</link>
-      <guid isPermaLink="false">2bb6069</guid>
-      <pubDate>Sat, 08 Aug 2026 02:47:59 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/53f9910f6ef015ddda6a4b5fceab5dd745af7f4c</link>
-      <guid isPermaLink="false">53f9910</guid>
-      <pubDate>Sat, 08 Aug 2026 01:09:19 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/66edf5358349356774812264b75b8ea792f0d0a3</link>
-      <guid isPermaLink="false">66edf53</guid>
-      <pubDate>Fri, 07 Aug 2026 04:00:52 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/5cf69b18c86d0224dc53815332bbd85574b97097</link>
-      <guid isPermaLink="false">5cf69b1</guid>
-      <pubDate>Thu, 06 Aug 2026 00:52:31 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/3b272769d0c8fb32845ff3ea0132aeaeafa0ca6e</link>
-      <guid isPermaLink="false">3b27276</guid>
-      <pubDate>Tue, 04 Aug 2026 22:39:48 GMT</pubDate>
       <category>gh-commits-claude-code</category>
       <description/>
     </item>

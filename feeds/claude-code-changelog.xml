@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 12 Sep 2026 10:18:34 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 11:18:49 GMT</lastBuildDate>
+    <item>
+      <title>2.1.270</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.270</guid>
+      <pubDate>Sun, 13 Sep 2026 11:18:01 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been running for a while (regression in 2.1.269)</description>
+    </item>
     <item>
       <title>2.1.269</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -450,15 +458,6 @@
       <description>- Added support for organization default models — admins set it in the org console; it shows as &quot;Org default&quot; (or &quot;Role default&quot;) in /model when you haven&apos;t picked one yourself
 - Added readable default names for sessions at start, making them easier to identify and message
 - Added clickable file att</description>
-    </item>
-    <item>
-      <title>2.1.195</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.195</guid>
-      <pubDate>Sat, 27 Jun 2026 08:39:04 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added CLAUDECODEDISABLEMOUSECLICKS to disable mouse click/drag/hover in fullscreen mode while keeping wheel scroll
-- Fixed hook matchers with hyphenated identifiers (e.g. code-reviewer, mcpbrave-search) accidentally substring-matching — they now exact-match. Use mcpbrave-search. to match all tools</description>
     </item>
   </channel>
 </rss>
