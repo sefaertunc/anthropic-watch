@@ -6,7 +6,26 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 14 Sep 2026 12:09:51 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 11:20:48 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.272</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.272</link>
+      <guid isPermaLink="false">v2.1.272</guid>
+      <pubDate>Tue, 15 Sep 2026 00:42:25 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Bug fixes and reliability improvements</description>
+    </item>
+    <item>
+      <title>v2.1.271</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.271</link>
+      <guid isPermaLink="false">v2.1.271</guid>
+      <pubDate>Mon, 14 Sep 2026 22:12:54 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added fast mode in Claude Code Remote sessions (cloud and self-hosted runners): the host&apos;s fast-mode setting or /fast typed in the session applies where your organization allows it
+- Added mouse support to the /config panel in fullscreen mode: the wheel scrolls the settings list, a </description>
+    </item>
     <item>
       <title>v2.1.270</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.270</link>
@@ -483,26 +502,6 @@
       <description>What&apos;s changed
 - Added --forward-subagent-text flag and CLAUDECODEFORWARDSUBAGENTTEXT environment variable to include subagent text and thinking in stream-json output
 - Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote charac</description>
-    </item>
-    <item>
-      <title>v2.1.210</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.210</link>
-      <guid isPermaLink="false">v2.1.210</guid>
-      <pubDate>Tue, 14 Jul 2026 23:45:25 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck
-- Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead
-- Fixed isolati</description>
-    </item>
-    <item>
-      <title>v2.1.209</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.209</link>
-      <guid isPermaLink="false">v2.1.209</guid>
-      <pubDate>Tue, 14 Jul 2026 06:36:28 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)</description>
     </item>
   </channel>
 </rss>
