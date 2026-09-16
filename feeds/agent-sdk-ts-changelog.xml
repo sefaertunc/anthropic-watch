@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 15 Sep 2026 11:20:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 11:03:50 GMT</lastBuildDate>
+    <item>
+      <title>0.3.273</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.273</guid>
+      <pubDate>Wed, 16 Sep 2026 11:03:02 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added a usagereport sibling (SDKUsageReport: session totals, the plan&apos;s usage rows as the server sends them, extra usage) on the assistant message that delivers a headless /usage result
+- Added reason: &quot;workerrestart&quot; to tasknotification messages when a background task was stopped by a worker proc</description>
+    </item>
     <item>
       <title>0.3.272</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -429,16 +438,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added requestId to canUseTool callback options for correlating out-of-band permission responses, and support for returning null to suppress the SDK&apos;s automatic control response
 - Added blocked field to workflowagent progress events indicating when an agent was blocked by the auto-mode safety class</description>
-    </item>
-    <item>
-      <title>0.3.198</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.198</guid>
-      <pubDate>Thu, 02 Jul 2026 09:16:31 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added a runtime warning when canUseTool is configured alongside allowedTools or bypassPermissions, which shadow the callback
-- Added per-server requesttimeoutms option to mcpsetservers control request
-- Fixed SDKUserMessage.isSynthetic not being mapped to isMeta on ingestion, which could cause syn</description>
     </item>
   </channel>
 </rss>

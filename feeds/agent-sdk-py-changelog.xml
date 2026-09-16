@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 15 Sep 2026 11:20:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 11:03:50 GMT</lastBuildDate>
+    <item>
+      <title>0.2.153</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.153</guid>
+      <pubDate>Wed, 16 Sep 2026 11:03:02 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- snapshot option for system prompts: Added a snapshot field to SystemPromptPreset and a new SystemPromptCustom typed dict. When snapshot is True, the session keeps the system prompt recorded on its first request, improving prompt-caching behavior across resumed sessions. When False, th</description>
+    </item>
     <item>
       <title>0.2.152</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -452,15 +461,6 @@
       <description>Internal/Other Changes
 - Switched test suite from pytest-asyncio to anyio&apos;s pytest plugin, running every async test under both asyncio and trio backends to catch backend-specific regressions in CI (1021)
 - Updated bundled Claude CLI to version 2.1.165</description>
-    </item>
-    <item>
-      <title>0.2.89</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.89</guid>
-      <pubDate>Thu, 04 Jun 2026 09:59:36 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>Internal/Other Changes
-- Updated bundled Claude CLI to version 2.1.162</description>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-15T11:20:48.895Z",
+  "generated": "2026-09-16T11:03:50.120Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.273",
+      "title": "0.3.273",
+      "date": "2026-09-16T11:03:02.697Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added a usagereport sibling (SDKUsageReport: session totals, the plan's usage rows as the server sends them, extra usage) on the assistant message that delivers a headless /usage result\n- Added reason: \"workerrestart\" to tasknotification messages when a background task was stopped by a worker proc",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.273|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.272",
       "title": "0.3.272",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.199|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.198",
-      "title": "0.3.198",
-      "date": "2026-07-02T09:16:31.187Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added a runtime warning when canUseTool is configured alongside allowedTools or bypassPermissions, which shadow the callback\n- Added per-server requesttimeoutms option to mcpsetservers control request\n- Fixed SDKUserMessage.isSynthetic not being mapped to isMeta on ingestion, which could cause syn",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.198|agent-sdk-ts-changelog"
     }
   ]
 }

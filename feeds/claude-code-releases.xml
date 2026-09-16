@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 15 Sep 2026 11:20:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 11:03:50 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.273</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.273</link>
+      <guid isPermaLink="false">v2.1.273</guid>
+      <pubDate>Tue, 15 Sep 2026 20:23:03 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations, x-claude-code-compaction and x-claude-code-context-compacted request headers for LLM gateways; opt in with CLAUDECODEGATEWAYHINTHEADERS=1
+- Added a notification when an MCP server disconn</description>
+    </item>
     <item>
       <title>v2.1.272</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.272</link>
@@ -492,16 +502,6 @@
       <description>What&apos;s changed
 - /fork now copies your conversation into a new background session (its own row in claude agents) while you keep working; the in-session subagent it used to launch is now /subtask
 - Added claude auto-mode reset to restore the default auto-mode configuration, with a confirmation prompt</description>
-    </item>
-    <item>
-      <title>v2.1.211</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.211</link>
-      <guid isPermaLink="false">v2.1.211</guid>
-      <pubDate>Wed, 15 Jul 2026 23:02:35 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added --forward-subagent-text flag and CLAUDECODEFORWARDSUBAGENTTEXT environment variable to include subagent text and thinking in stream-json output
-- Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote charac</description>
     </item>
   </channel>
 </rss>
