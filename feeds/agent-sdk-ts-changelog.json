@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-16T11:03:50.120Z",
+  "generated": "2026-09-17T11:13:47.597Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.274",
+      "title": "0.3.274",
+      "date": "2026-09-17T11:12:59.343Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added startupfailurereason to the error result a stream-json run writes before exiting on a known startup failure\n- Added mcpServer: {name, source} to canUseTool options, mcpserver to tool hook inputs, and source to MCP server status rows, so hosts can key trust on source === \"sdk\"\n- Added CLAUDEC",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.274|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.273",
       "title": "0.3.273",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.201|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.199",
-      "title": "0.3.199",
-      "date": "2026-07-03T09:21:55.941Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added requestId to canUseTool callback options for correlating out-of-band permission responses, and support for returning null to suppress the SDK's automatic control response\n- Added blocked field to workflowagent progress events indicating when an agent was blocked by the auto-mode safety class",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.199|agent-sdk-ts-changelog"
     }
   ]
 }

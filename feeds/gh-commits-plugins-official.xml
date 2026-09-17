@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 16 Sep 2026 11:03:50 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 11:13:47 GMT</lastBuildDate>
+    <item>
+      <title>Add Chronograph GP and LP plugins (#6199)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ea0a38e1d671aa18a30431c9160e31193dc9860b</link>
+      <guid isPermaLink="false">ea0a38e</guid>
+      <pubDate>Thu, 17 Sep 2026 00:17:29 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add Leadfeeder plugin (leadfeeder) (#6198)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0981431e51c6405c7794df108707fcd91fa15a99</link>
+      <guid isPermaLink="false">0981431</guid>
+      <pubDate>Thu, 17 Sep 2026 00:17:23 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add Clay plugin (clay) (#6191)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/da64a662de3fb6a2f832cb022170ff2a2e718bf5</link>
+      <guid isPermaLink="false">da64a66</guid>
+      <pubDate>Wed, 16 Sep 2026 19:06:19 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add Zocks Advisor Intelligence plugin (zocks-advisor) (#6188)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e3eaa24f0bebe0b6413d9e60439147f80a86dd73</link>
+      <guid isPermaLink="false">e3eaa24</guid>
+      <pubDate>Wed, 16 Sep 2026 18:32:00 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add Intuit QuickBooks plugin (intuit-quickbooks) (#6189)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/59b9c810caac3ec2bea7a08e8dff956ed4f6a965</link>
+      <guid isPermaLink="false">59b9c81</guid>
+      <pubDate>Wed, 16 Sep 2026 18:31:28 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add Pendo plugins (pendo-analytics, pendo-guides, pendo-orchestrate, setup-agent-analytics, setup-mcp-agent-analytics) (#6190)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/52db45bdaa01be9d92a96c9a6ff823a89cad98e5</link>
+      <guid isPermaLink="false">52db45b</guid>
+      <pubDate>Wed, 16 Sep 2026 17:37:23 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Add Informatica plugin (informatica-for-claude-platform) (#6152)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/76c85b7366c8be78ce3ac67dd21945b3960d1a8c</link>
@@ -358,54 +406,6 @@
       <pubDate>Wed, 09 Sep 2026 17:42:50 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>:house: Remote-Dev: homespace</description>
-    </item>
-    <item>
-      <title>Adjust SubagentStop handling and repository precedence</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f03d41e2c96f30b7b59a05566e998e6236a943e7</link>
-      <guid isPermaLink="false">f03d41e</guid>
-      <pubDate>Wed, 09 Sep 2026 16:46:55 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>- SubagentStop reviews without consuming or advancing the session&apos;s   Stop state; an identical diff is not reviewed twice. - SubagentStop from a different working tree than the project is skipped. - An explicit `git -C &lt;dir&gt;` / `cd &lt;dir&gt;` naming another repository takes   precedence over the hook cw</description>
-    </item>
-    <item>
-      <title>security-guidance: resolve repository from command and edited paths (2.0.7 → 2.0.8)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0b2f3e30a9c6f6e5ed7ca72408ffb957103174ca</link>
-      <guid isPermaLink="false">0b2f3e3</guid>
-      <pubDate>Wed, 09 Sep 2026 13:41:46 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>- Adds repository resolution from `git -C &lt;dir&gt;` / `cd &lt;dir&gt;` in the hook   command, from the commit SHA, and from edited file paths when the hook   cwd is not a git repository. - Adds PostToolUse matchers for `git -C … commit|push`. - Registers SubagentStop. - Adds `repo_resolution` / `cwd_is_repo`</description>
-    </item>
-    <item>
-      <title>Add qodo-standards plugin (Qodo, packages/qodo-standards @ v1.0.10) (#5863)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/517b2fcd1b60fa2181ac52dcf8492361ba341180</link>
-      <guid isPermaLink="false">517b2fc</guid>
-      <pubDate>Tue, 08 Sep 2026 21:39:33 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>box: follow the box-for-ai -&gt; skills repository rename (#5824)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/5c80307d32bfdbba990dc39c194dbc0fea33ed5f</link>
-      <guid isPermaLink="false">5c80307</guid>
-      <pubDate>Tue, 08 Sep 2026 18:55:03 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>context7: tag the remote MCP URL with client=claude-code-plugin (+ validate path fix) (#5823)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/bc875e80bee06bf11bd28cfc2fdf9ee563d3d2d7</link>
-      <guid isPermaLink="false">bc875e8</guid>
-      <pubDate>Tue, 08 Sep 2026 18:54:59 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* context7: tag the remote MCP URL with client=claude-code-plugin  * validate: also trigger on vendored plugins&apos; .mcp.json and hooks changes</description>
-    </item>
-    <item>
-      <title>qodo: migrate the listing to the packaged plugin layout (git-subdir packages/qodo @ v1.0.10) (#5862)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b8ed5b51855f5dcf74991f312eb0cb81696b118e</link>
-      <guid isPermaLink="false">b8ed5b5</guid>
-      <pubDate>Tue, 08 Sep 2026 18:54:49 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
     </item>
   </channel>
 </rss>

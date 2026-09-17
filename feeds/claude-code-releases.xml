@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 16 Sep 2026 11:03:50 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 11:13:47 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.274</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.274</link>
+      <guid isPermaLink="false">v2.1.274</guid>
+      <pubDate>Thu, 17 Sep 2026 00:12:02 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a visible warning when memory usage is critical, with steps to free memory or restart safely
+- Added CLAUDECODEMCPSTARTUPWAITMS to bound how long the first non-interactive turn waits for connecting MCP servers (0 = don&apos;t wait)
+- Added effort attribute to the claudecode.llmrequ</description>
+    </item>
     <item>
       <title>v2.1.273</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.273</link>
@@ -492,16 +503,6 @@
 - Fixed single-segment dir/ allow rules like Edit(src/) auto-approving writes to nested dir/ directories anywhere in the tree instead of only &lt;cwd&gt;/dir
 - Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions
 - Fixed Bash permission checks to fail cl</description>
-    </item>
-    <item>
-      <title>v2.1.212</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.212</link>
-      <guid isPermaLink="false">v2.1.212</guid>
-      <pubDate>Fri, 17 Jul 2026 00:26:27 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- /fork now copies your conversation into a new background session (its own row in claude agents) while you keep working; the in-session subagent it used to launch is now /subtask
-- Added claude auto-mode reset to restore the default auto-mode configuration, with a confirmation prompt</description>
     </item>
   </channel>
 </rss>
