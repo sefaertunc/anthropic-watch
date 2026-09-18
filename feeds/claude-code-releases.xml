@@ -6,7 +6,26 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 17 Sep 2026 11:13:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 10:46:58 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.276</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.276</link>
+      <guid isPermaLink="false">v2.1.276</guid>
+      <pubDate>Fri, 18 Sep 2026 02:12:26 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed every request failing with 400 … Input tag &apos;advisor20260301&apos; when ANTHROPICBASEURL points at a proxy or gateway (2.1.275 regression)</description>
+    </item>
+    <item>
+      <title>v2.1.275</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.275</link>
+      <guid isPermaLink="false">v2.1.275</guid>
+      <pubDate>Thu, 17 Sep 2026 22:33:17 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added the signed-in account to Claude apps gateway sign-in: when the gateway names it, you confirm it before the credential is saved, and /status shows it
+- Added a send-now key (ctrl+enter, or ctrl+x ctrl+s) that interrupts the current turn and sends all queued messages at once; se</description>
+    </item>
     <item>
       <title>v2.1.274</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.274</link>
@@ -483,26 +502,6 @@
 - Added sandbox.filesystem.disabled setting to skip filesystem isolation while keeping network egress control
 - Fixed a slowdown in long sessions where message normalization cost grew quadratically with the number of turns, causing multi-second stalls and slow resumes
 - Fixed auto mod</description>
-    </item>
-    <item>
-      <title>v2.1.215</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.215</link>
-      <guid isPermaLink="false">v2.1.215</guid>
-      <pubDate>Sun, 19 Jul 2026 02:56:01 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Claude no longer runs the /verify and /code-review skills on its own; invoke them with /verify or /code-review when you want them</description>
-    </item>
-    <item>
-      <title>v2.1.214</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.214</link>
-      <guid isPermaLink="false">v2.1.214</guid>
-      <pubDate>Sat, 18 Jul 2026 01:20:30 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed single-segment dir/ allow rules like Edit(src/) auto-approving writes to nested dir/ directories anywhere in the tree instead of only &lt;cwd&gt;/dir
-- Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions
-- Fixed Bash permission checks to fail cl</description>
     </item>
   </channel>
 </rss>

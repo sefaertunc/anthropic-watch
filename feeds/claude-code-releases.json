@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-17T11:13:47.591Z",
+  "generated": "2026-09-18T10:46:58.060Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.276",
+      "title": "v2.1.276",
+      "date": "2026-09-18T02:12:26Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.276",
+      "snippet": "What's changed\n- Fixed every request failing with 400 … Input tag 'advisor20260301' when ANTHROPICBASEURL points at a proxy or gateway (2.1.275 regression)",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.276|claude-code-releases"
+    },
+    {
+      "id": "v2.1.275",
+      "title": "v2.1.275",
+      "date": "2026-09-17T22:33:17Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.275",
+      "snippet": "What's changed\n- Added the signed-in account to Claude apps gateway sign-in: when the gateway names it, you confirm it before the credential is saved, and /status shows it\n- Added a send-now key (ctrl+enter, or ctrl+x ctrl+s) that interrupts the current turn and sends all queued messages at once; se",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.275|claude-code-releases"
+    },
     {
       "id": "v2.1.274",
       "title": "v2.1.274",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.216|claude-code-releases"
-    },
-    {
-      "id": "v2.1.215",
-      "title": "v2.1.215",
-      "date": "2026-07-19T02:56:01Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.215",
-      "snippet": "What's changed\n- Claude no longer runs the /verify and /code-review skills on its own; invoke them with /verify or /code-review when you want them",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.215|claude-code-releases"
-    },
-    {
-      "id": "v2.1.214",
-      "title": "v2.1.214",
-      "date": "2026-07-18T01:20:30Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
-      "snippet": "What's changed\n- Fixed single-segment dir/ allow rules like Edit(src/) auto-approving writes to nested dir/ directories anywhere in the tree instead of only <cwd>/dir\n- Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions\n- Fixed Bash permission checks to fail cl",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.214|claude-code-releases"
     }
   ]
 }

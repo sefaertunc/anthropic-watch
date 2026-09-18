@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 17 Sep 2026 11:13:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 10:46:58 GMT</lastBuildDate>
+    <item>
+      <title>feat: add weather model data fetching skill (#1488)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/aae9646e6803eb77e1238590ef32f356d4355d81</link>
+      <guid isPermaLink="false">aae9646</guid>
+      <pubDate>Fri, 18 Sep 2026 08:33:11 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds `weather-model-data-fetching`, a provider-neutral skill for retrieving numerical weather prediction data from public AWS S3 and HTTP archives.  The skill covers:  - GRIB2 inventory (`.idx`) selection and verified byte-range downloads - Herbie provider discovery and f</description>
+    </item>
+    <item>
+      <title>fix(workbench): honor plan identity schema (#1489)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/71cbf461283be3749c11a47c13efcfdd2ea73808</link>
+      <guid isPermaLink="false">71cbf46</guid>
+      <pubDate>Fri, 18 Sep 2026 08:00:05 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>docs: complete 17.5.0 changelog entry with Improved, Validation scope, and contributor thanks (#1472)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d336cb317e8259e6229824fa06a16d911aa30123</link>
+      <guid isPermaLink="false">d336cb3</guid>
+      <pubDate>Fri, 18 Sep 2026 04:20:48 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Co-authored-by: antigravity-maintainer-bot &lt;actions@users.noreply.github.com&gt;</description>
+    </item>
+    <item>
+      <title>docs: conform 17.5.0 changelog entry to release format (Start here, Keep a Changelog) (#1471)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1ccd61879c7123fe45e8956218bbad8fe0cfa5b6</link>
+      <guid isPermaLink="false">1ccd618</guid>
+      <pubDate>Fri, 18 Sep 2026 04:14:22 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Co-authored-by: antigravity-maintainer-bot &lt;actions@users.noreply.github.com&gt;</description>
+    </item>
+    <item>
+      <title>chore: release v17.5.0 (#1470)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ebffb8789f6f36047ba76ed7233380b4d837d371</link>
+      <guid isPermaLink="false">ebffb87</guid>
+      <pubDate>Fri, 18 Sep 2026 04:03:32 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>* docs: add 17.5.0 changelog entry  * chore: release v17.5.0  ---------  Co-authored-by: antigravity-maintainer-bot &lt;actions@users.noreply.github.com&gt;</description>
+    </item>
+    <item>
+      <title>feat: add meteora-dlmm-pool-screening skill (#1466)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/199b2ad51ab09ebcd91a119f223eb677029de792</link>
+      <guid isPermaLink="false">199b2ad</guid>
+      <pubDate>Thu, 17 Sep 2026 20:29:47 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Adds a read-only skill that screens and ranks Meteora DLMM pools for LP quality using public Meteora APIs (fee/TVL, bin step, organic score, TVL, volume).  **What it does** - Queries Meteora&apos;s public datapi (no API key) and ranks candidate pools by fee/TVL and organic score. - Ships `scripts/screen.</description>
+    </item>
+    <item>
+      <title>fix(web): validate catalog records before use (#1464)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/13e595befd5db337c00027dccfb1dea12ed9b7b8</link>
+      <guid isPermaLink="false">13e595b</guid>
+      <pubDate>Thu, 17 Sep 2026 19:41:43 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(workbench): enforce published profile limits (#1465)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9ce325696a0047d542ef9b94c0e71f4f439fca1a</link>
+      <guid isPermaLink="false">9ce3256</guid>
+      <pubDate>Thu, 17 Sep 2026 19:36:23 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
     <item>
       <title>chore: release v17.4.0 (#1463)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/fd1fdf5bddeb31a61f333e7777aa53a2cf0f8f6d</link>
@@ -342,70 +406,6 @@
       <pubDate>Sun, 06 Sep 2026 10:13:29 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description># Pull Request Description  Repeat the full Windows installation lifecycle under the built-in Windows PowerShell 5.1, alongside PowerShell 7. Record actual shell versions and reject missing, wrong-version or failed legacy-shell evidence. Add the 16.9.0 changelog for accumulated CLI/MCP and Specializ</description>
-    </item>
-    <item>
-      <title>test: verify packed workflow on Windows PowerShell (#1391)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/58433b8998c2914e4d4eb3e96d6b54a012458dd0</link>
-      <guid isPermaLink="false">58433b8</guid>
-      <pubDate>Sun, 06 Sep 2026 09:26:04 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  The installed-candidate preview previously exercised only Linux, leaving emitted PowerShell commands unexecuted. Add an isolated Windows Server 2025 / Node 22 runner and require its receipt alongside Linux. Exercise the actual packed installer through the emitted PowerShe</description>
-    </item>
-    <item>
-      <title>fix: validate and test complete CLI installation handoff (#1389)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/dac5f54cfe1451435bbeeb56ef8db834fd62c758</link>
-      <guid isPermaLink="false">dac5f54</guid>
-      <pubDate>Sun, 06 Sep 2026 08:49:07 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  `stack install-preview` accepted destination names that the direct installer rejects, such as `invalid?directory`; executing the handoff then produced an uncaught stack trace. Apply the same filename restrictions before command preparation and report direct target-resolut</description>
-    </item>
-    <item>
-      <title>feat: streamline agent-owned CLI installation handoff (#1387)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8872b80976554cdae4b41ab30969d18a31312613</link>
-      <guid isPermaLink="false">8872b80</guid>
-      <pubDate>Sun, 06 Sep 2026 08:17:50 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Agents currently have to copy selected skill IDs into a separate installer command and repeat runtime integrity already present in a verified cache. Add `aas stack install-preview` to validate the agent&apos;s manifest and prepare an exact-version, quoted direct-installer dry </description>
-    </item>
-    <item>
-      <title>fix: preserve MCP request correlation across overload and errors (#1385)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/40ad1d8af067056db833f49a8555b7c194498c99</link>
-      <guid isPermaLink="false">40ad1d8</guid>
-      <pubDate>Sun, 06 Sep 2026 07:46:26 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: refresh compatible web dependencies (#1366)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2f68a82f608169ad9b74bb0adbc611aa215a1b89</link>
-      <guid isPermaLink="false">2f68a82</guid>
-      <pubDate>Sat, 05 Sep 2026 07:41:01 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  The web app lockfile lagged behind the newest versions allowed by its existing dependency ranges. Updating it exposed a stricter ESLint error in the Workbench path validator and a Vitest native-config warning; this change updates the compatible dependency graph, preserves</description>
-    </item>
-    <item>
-      <title>chore: complete skill date metadata (#1364)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8f4ace40a320e50cbe54e273cc011c0f304091fb</link>
-      <guid isPermaLink="false">8f4ace4</guid>
-      <pubDate>Sat, 05 Sep 2026 07:23:24 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  The skill validator still reported 216 optional metadata advisories after the structural audit reached zero. This change adds `date_added: &quot;2026-09-04&quot;` to those canonical skills, using each file&apos;s first addition commit from `git log --follow --diff-filter=A` as the sourc</description>
-    </item>
-    <item>
-      <title>refactor: modularize oversized skills (#1361)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e69f4f039234518ab86a41f71e6e99452c79bc7c</link>
-      <guid isPermaLink="false">e69f4f0</guid>
-      <pubDate>Sat, 05 Sep 2026 07:04:08 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  The audit still reported 211 oversized canonical skills after the examples cleanup. This change moves detailed procedure and reference sections into per-skill `references/detailed-guide.md` files while keeping activation guidance, examples, limitations, prerequisites, and</description>
-    </item>
-    <item>
-      <title>fix: classify copies into existing skills (#1362)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/14e1df8f996bec2752ad2b4b9a10cfddee474116</link>
-      <guid isPermaLink="false">14e1df8</guid>
-      <pubDate>Sat, 05 Sep 2026 06:57:27 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Changed-skill evidence treated a Git copy record into an already existing skill directory as a newly copied skill. That caused false provenance blockers when a new reference file resembled another skill. The classifier now creates cross-skill copy/rename pairs only when t</description>
     </item>
   </channel>
 </rss>
