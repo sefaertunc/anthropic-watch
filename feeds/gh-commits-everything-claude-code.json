@@ -5,9 +5,119 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-18T10:46:58.101Z",
+  "generated": "2026-09-19T10:30:56.795Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "07756ce",
+      "title": "fix(gateguard): gate ref- and history-destroying git commands (#3154, #3151) (#3170)",
+      "date": "2026-09-19T06:58:33Z",
+      "url": "https://github.com/affaan-m/ECC/commit/07756cee15788a54506031462794ad645719b028",
+      "snippet": "branch -D, stash drop/clear, reflog expire/delete, update-ref -d, restore (except --staged alone), and force-with-lease pushes to shared branches now hit the destructive gate. 238 hook tests pass; 49 CI checks green.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "07756ce|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "f6eb800",
+      "title": "fix(session-start): scope summary lookup to repository identity (#3160) (#3168)",
+      "date": "2026-09-19T06:08:50Z",
+      "url": "https://github.com/affaan-m/ECC/commit/f6eb80047448e254ae9c450616d98079857a91b6",
+      "snippet": "Windows: compare repo identity via normalizeRepoPath/sameRepoIdentity (8.3 short names, case, separators; inode fallback). All nine windows-latest jobs green on 52587005.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "f6eb800|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9e06a27",
+      "title": "Merge pull request #3162 from affaan-m/fix/readme-badges-star-history-20260918",
+      "date": "2026-09-19T02:34:23Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9e06a2792bb3a5c1bc3ca272b853bac7998485d8",
+      "snippet": "docs: repair README badges and live star history",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9e06a27|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "522b49a",
+      "title": "Merge branch 'main' into fix/readme-badges-star-history-20260918",
+      "date": "2026-09-19T02:13:36Z",
+      "url": "https://github.com/affaan-m/ECC/commit/522b49a3c521b1f83fa72513c871174af337b27c",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "522b49a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "10013e8",
+      "title": "Merge pull request #3149 from affaan-m/docs/lane-rules-20260916",
+      "date": "2026-09-19T02:13:33Z",
+      "url": "https://github.com/affaan-m/ECC/commit/10013e8b6340ae9937eecf71acdefc4f91dbc6fe",
+      "snippet": "Docs: lane rules and Ito desk relationship (2026-09-16)",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "10013e8|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "2bcba5b",
+      "title": "Merge branch 'main' into docs/lane-rules-20260916",
+      "date": "2026-09-19T02:06:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/2bcba5b66f322b10cd3c6a807e03a21bda528960",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "2bcba5b|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "dde604e",
+      "title": "Merge pull request #3146 from yashraj4/fix/agent-location-and-namespacing",
+      "date": "2026-09-19T02:06:46Z",
+      "url": "https://github.com/affaan-m/ECC/commit/dde604e75fc9bd7808b6b45f641b54dea017792c",
+      "snippet": "fix: correct agent location and add ecc: prefix to agent names in rules",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "dde604e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "07e6b42",
+      "title": "docs: use fenced code blocks in agent rules to satisfy MD046",
+      "date": "2026-09-19T01:53:16Z",
+      "url": "https://github.com/affaan-m/ECC/commit/07e6b42e5cabe45f314a3771d666df60a36504da",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "07e6b42|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "c7e60cc",
+      "title": "Merge remote-tracking branch 'origin/main' into pr-3146",
+      "date": "2026-09-19T01:47:13Z",
+      "url": "https://github.com/affaan-m/ECC/commit/c7e60cc6a6bd8dd541845f68158462b3ef3f1257",
+      "snippet": "# Conflicts: #\tdocs/es/rules/common/agents.md #\tdocs/ja-JP/rules/common/agents.md #\tdocs/tr/rules/common/agents.md #\tdocs/zh-CN/rules/common/agents.md #\trules/common/agents.md",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "c7e60cc|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "75970dd",
+      "title": "docs: fix LANE-RULES heading level and drop personal path",
+      "date": "2026-09-19T01:41:50Z",
+      "url": "https://github.com/affaan-m/ECC/commit/75970dda724198282ea9164501a92ef69243af01",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "75970dd|gh-commits-everything-claude-code"
+    },
     {
       "id": "dd6ee53",
       "title": "Merge pull request #3156 from affaan-m/fix/sponsor-status-20260917",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "23fb7e0|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "22e8cf0",
-      "title": "test(ci): scale repair timeout on Windows (#2942)",
-      "date": "2026-09-03T00:48:57Z",
-      "url": "https://github.com/affaan-m/ECC/commit/22e8cf01d0b54719b3a49002fab2ccbda4ff5b9e",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "22e8cf0|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d365203",
-      "title": "test(hooks): drain bootstrap children asynchronously (#2941)",
-      "date": "2026-09-02T23:55:26Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d3652039ac0b8dd9545ecc30ef4b95397f8e3cfd",
-      "snippet": "* test(hooks): drain bootstrap children asynchronously  * test(hooks): harden async supervisor lifecycle  * test(hooks): accept Windows child stdin closure",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d365203|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "11813f9",
-      "title": "test(hooks): avoid repeated giant wrapper payloads (#2940)",
-      "date": "2026-09-02T21:47:04Z",
-      "url": "https://github.com/affaan-m/ECC/commit/11813f968cc0087b2793470a4082b754688bf168",
-      "snippet": "* test(hooks): avoid repeated giant wrapper payloads  * test(hooks): assert callback-governed wrapper exits",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "11813f9|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "90430ab",
-      "title": "test(ci): tolerate loaded macOS hook runners (#2939)",
-      "date": "2026-09-02T20:37:08Z",
-      "url": "https://github.com/affaan-m/ECC/commit/90430ab3a716e12a9c6770802efa352098735f24",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "90430ab|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "013ed0a",
-      "title": "fix(rules): make Boolean naming guidance neutral",
-      "date": "2026-09-02T19:47:12Z",
-      "url": "https://github.com/affaan-m/ECC/commit/013ed0a8e6ec5236d8b4d7e7aee9e42ce56f8d1d",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "013ed0a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "348f80a",
-      "title": "fix(security): update fast-uri to 3.1.7 (#2936)",
-      "date": "2026-09-02T19:13:20Z",
-      "url": "https://github.com/affaan-m/ECC/commit/348f80a89b8c344253e0d948f8fcbdef0e8572d4",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "348f80a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a0ecb79",
-      "title": "fix(rules): keep common naming guidance language-neutral",
-      "date": "2026-09-02T18:56:21Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a0ecb7939a832ee7003272a07805fff8f08e48d2",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a0ecb79|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "de899ac",
-      "title": "fix(tests): preserve session alias HOME isolation (#2877)",
-      "date": "2026-09-02T18:24:39Z",
-      "url": "https://github.com/affaan-m/ECC/commit/de899ac47293e3b75522bc8070ac65e97a6ac799",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "de899ac|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ca185ef",
-      "title": "chore(release): prepare signed 2.2.1 patch (#2920)",
-      "date": "2026-08-31T22:14:22Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ca185ef5f7667078a1e70a763bd3a9c71c48acf0",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ca185ef|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a104765",
-      "title": "docs(ito-compute): document ito accept and ito_accept MCP workflow (#2893)",
-      "date": "2026-08-31T19:16:16Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a104765bf20fd1480a3dd30f514f18f73ca80b8a",
-      "snippet": "* docs(ito-compute): document ito accept and ito_accept MCP workflow  Updates the canonical ECC skill to cover the new quote acceptance path: - CLI: ecc ito accept <ticket-id> - MCP: ito_accept tool - Explicit buyer-authority guard before accepting - Clear statement that accept routes to desk, does ",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a104765|gh-commits-everything-claude-code"
     }
   ]
 }

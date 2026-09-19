@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 18 Sep 2026 10:46:58 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 10:30:56 GMT</lastBuildDate>
+    <item>
+      <title>2.1.278</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.278</guid>
+      <pubDate>Sat, 19 Sep 2026 10:30:08 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Changed auto mode for Claude API and Enterprise users, and on Bedrock, Vertex, Foundry and gateways, to default to the server-side classifier, which does not charge for classifier overhead (CLAUDECODEAUTOMODESERVER=0 opts out on Bedrock, Vertex, Foundry and gateways); warns on billed fallback. See</description>
+    </item>
     <item>
       <title>2.1.276</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -448,14 +456,6 @@
       <category>claude-code-changelog</category>
       <description>- Added a &quot;Dynamic workflow size&quot; setting in /config for controlling how large Claude generally makes dynamic workflows (small/medium/large agent counts) — an advisory guideline, not an enforced cap
 - Added workflow.runid and workflow.name OpenTelemetry attributes to telemetry emitted by workflow-sp</description>
-    </item>
-    <item>
-      <title>2.1.201</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.201</guid>
-      <pubDate>Sat, 04 Jul 2026 08:40:23 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders</description>
     </item>
   </channel>
 </rss>

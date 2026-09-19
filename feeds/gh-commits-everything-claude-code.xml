@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 18 Sep 2026 10:46:58 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 10:30:56 GMT</lastBuildDate>
+    <item>
+      <title>fix(gateguard): gate ref- and history-destroying git commands (#3154, #3151) (#3170)</title>
+      <link>https://github.com/affaan-m/ECC/commit/07756cee15788a54506031462794ad645719b028</link>
+      <guid isPermaLink="false">07756ce</guid>
+      <pubDate>Sat, 19 Sep 2026 06:58:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>branch -D, stash drop/clear, reflog expire/delete, update-ref -d, restore (except --staged alone), and force-with-lease pushes to shared branches now hit the destructive gate. 238 hook tests pass; 49 CI checks green.</description>
+    </item>
+    <item>
+      <title>fix(session-start): scope summary lookup to repository identity (#3160) (#3168)</title>
+      <link>https://github.com/affaan-m/ECC/commit/f6eb80047448e254ae9c450616d98079857a91b6</link>
+      <guid isPermaLink="false">f6eb800</guid>
+      <pubDate>Sat, 19 Sep 2026 06:08:50 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Windows: compare repo identity via normalizeRepoPath/sameRepoIdentity (8.3 short names, case, separators; inode fallback). All nine windows-latest jobs green on 52587005.</description>
+    </item>
+    <item>
+      <title>Merge pull request #3162 from affaan-m/fix/readme-badges-star-history-20260918</title>
+      <link>https://github.com/affaan-m/ECC/commit/9e06a2792bb3a5c1bc3ca272b853bac7998485d8</link>
+      <guid isPermaLink="false">9e06a27</guid>
+      <pubDate>Sat, 19 Sep 2026 02:34:23 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>docs: repair README badges and live star history</description>
+    </item>
+    <item>
+      <title>Merge branch &apos;main&apos; into fix/readme-badges-star-history-20260918</title>
+      <link>https://github.com/affaan-m/ECC/commit/522b49a3c521b1f83fa72513c871174af337b27c</link>
+      <guid isPermaLink="false">522b49a</guid>
+      <pubDate>Sat, 19 Sep 2026 02:13:36 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #3149 from affaan-m/docs/lane-rules-20260916</title>
+      <link>https://github.com/affaan-m/ECC/commit/10013e8b6340ae9937eecf71acdefc4f91dbc6fe</link>
+      <guid isPermaLink="false">10013e8</guid>
+      <pubDate>Sat, 19 Sep 2026 02:13:33 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Docs: lane rules and Ito desk relationship (2026-09-16)</description>
+    </item>
+    <item>
+      <title>Merge branch &apos;main&apos; into docs/lane-rules-20260916</title>
+      <link>https://github.com/affaan-m/ECC/commit/2bcba5b66f322b10cd3c6a807e03a21bda528960</link>
+      <guid isPermaLink="false">2bcba5b</guid>
+      <pubDate>Sat, 19 Sep 2026 02:06:49 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #3146 from yashraj4/fix/agent-location-and-namespacing</title>
+      <link>https://github.com/affaan-m/ECC/commit/dde604e75fc9bd7808b6b45f641b54dea017792c</link>
+      <guid isPermaLink="false">dde604e</guid>
+      <pubDate>Sat, 19 Sep 2026 02:06:46 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix: correct agent location and add ecc: prefix to agent names in rules</description>
+    </item>
+    <item>
+      <title>docs: use fenced code blocks in agent rules to satisfy MD046</title>
+      <link>https://github.com/affaan-m/ECC/commit/07e6b42e5cabe45f314a3771d666df60a36504da</link>
+      <guid isPermaLink="false">07e6b42</guid>
+      <pubDate>Sat, 19 Sep 2026 01:53:16 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge remote-tracking branch &apos;origin/main&apos; into pr-3146</title>
+      <link>https://github.com/affaan-m/ECC/commit/c7e60cc6a6bd8dd541845f68158462b3ef3f1257</link>
+      <guid isPermaLink="false">c7e60cc</guid>
+      <pubDate>Sat, 19 Sep 2026 01:47:13 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description># Conflicts: #	docs/es/rules/common/agents.md #	docs/ja-JP/rules/common/agents.md #	docs/tr/rules/common/agents.md #	docs/zh-CN/rules/common/agents.md #	rules/common/agents.md</description>
+    </item>
+    <item>
+      <title>docs: fix LANE-RULES heading level and drop personal path</title>
+      <link>https://github.com/affaan-m/ECC/commit/75970dda724198282ea9164501a92ef69243af01</link>
+      <guid isPermaLink="false">75970dd</guid>
+      <pubDate>Sat, 19 Sep 2026 01:41:50 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #3156 from affaan-m/fix/sponsor-status-20260917</title>
       <link>https://github.com/affaan-m/ECC/commit/dd6ee538aee0f548d4a6b520118f875431fd749e</link>
@@ -326,86 +406,6 @@
       <pubDate>Thu, 03 Sep 2026 18:59:01 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>test(ci): scale repair timeout on Windows (#2942)</title>
-      <link>https://github.com/affaan-m/ECC/commit/22e8cf01d0b54719b3a49002fab2ccbda4ff5b9e</link>
-      <guid isPermaLink="false">22e8cf0</guid>
-      <pubDate>Thu, 03 Sep 2026 00:48:57 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test(hooks): drain bootstrap children asynchronously (#2941)</title>
-      <link>https://github.com/affaan-m/ECC/commit/d3652039ac0b8dd9545ecc30ef4b95397f8e3cfd</link>
-      <guid isPermaLink="false">d365203</guid>
-      <pubDate>Wed, 02 Sep 2026 23:55:26 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* test(hooks): drain bootstrap children asynchronously  * test(hooks): harden async supervisor lifecycle  * test(hooks): accept Windows child stdin closure</description>
-    </item>
-    <item>
-      <title>test(hooks): avoid repeated giant wrapper payloads (#2940)</title>
-      <link>https://github.com/affaan-m/ECC/commit/11813f968cc0087b2793470a4082b754688bf168</link>
-      <guid isPermaLink="false">11813f9</guid>
-      <pubDate>Wed, 02 Sep 2026 21:47:04 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* test(hooks): avoid repeated giant wrapper payloads  * test(hooks): assert callback-governed wrapper exits</description>
-    </item>
-    <item>
-      <title>test(ci): tolerate loaded macOS hook runners (#2939)</title>
-      <link>https://github.com/affaan-m/ECC/commit/90430ab3a716e12a9c6770802efa352098735f24</link>
-      <guid isPermaLink="false">90430ab</guid>
-      <pubDate>Wed, 02 Sep 2026 20:37:08 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(rules): make Boolean naming guidance neutral</title>
-      <link>https://github.com/affaan-m/ECC/commit/013ed0a8e6ec5236d8b4d7e7aee9e42ce56f8d1d</link>
-      <guid isPermaLink="false">013ed0a</guid>
-      <pubDate>Wed, 02 Sep 2026 19:47:12 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(security): update fast-uri to 3.1.7 (#2936)</title>
-      <link>https://github.com/affaan-m/ECC/commit/348f80a89b8c344253e0d948f8fcbdef0e8572d4</link>
-      <guid isPermaLink="false">348f80a</guid>
-      <pubDate>Wed, 02 Sep 2026 19:13:20 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(rules): keep common naming guidance language-neutral</title>
-      <link>https://github.com/affaan-m/ECC/commit/a0ecb7939a832ee7003272a07805fff8f08e48d2</link>
-      <guid isPermaLink="false">a0ecb79</guid>
-      <pubDate>Wed, 02 Sep 2026 18:56:21 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(tests): preserve session alias HOME isolation (#2877)</title>
-      <link>https://github.com/affaan-m/ECC/commit/de899ac47293e3b75522bc8070ac65e97a6ac799</link>
-      <guid isPermaLink="false">de899ac</guid>
-      <pubDate>Wed, 02 Sep 2026 18:24:39 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore(release): prepare signed 2.2.1 patch (#2920)</title>
-      <link>https://github.com/affaan-m/ECC/commit/ca185ef5f7667078a1e70a763bd3a9c71c48acf0</link>
-      <guid isPermaLink="false">ca185ef</guid>
-      <pubDate>Mon, 31 Aug 2026 22:14:22 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs(ito-compute): document ito accept and ito_accept MCP workflow (#2893)</title>
-      <link>https://github.com/affaan-m/ECC/commit/a104765bf20fd1480a3dd30f514f18f73ca80b8a</link>
-      <guid isPermaLink="false">a104765</guid>
-      <pubDate>Mon, 31 Aug 2026 19:16:16 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* docs(ito-compute): document ito accept and ito_accept MCP workflow  Updates the canonical ECC skill to cover the new quote acceptance path: - CLI: ecc ito accept &lt;ticket-id&gt; - MCP: ito_accept tool - Explicit buyer-authority guard before accepting - Clear statement that accept routes to desk, does </description>
     </item>
   </channel>
 </rss>
