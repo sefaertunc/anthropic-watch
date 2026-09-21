@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-20T10:53:55.062Z",
+  "generated": "2026-09-21T12:18:13.352Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2b6e839",
+      "title": "Fix/proximity a11y risk cues (#3193)",
+      "date": "2026-09-20T19:37:57Z",
+      "url": "https://github.com/affaan-m/ECC/commit/2b6e839771e53096d8451a213d40dc64ec8acac0",
+      "snippet": "* fix(control-plane): add non-color airspace risk cues  * test(control-plane): cover airspace accessibility cues",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "2b6e839|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "651118b",
+      "title": "Fix/control plane canvas size (#3192)",
+      "date": "2026-09-20T19:37:51Z",
+      "url": "https://github.com/affaan-m/ECC/commit/651118bd50ab1289a6651a8bf21cb051ded44493",
+      "snippet": "* fix(control-plane): constrain visualization canvas layout  * fix(control-plane): constrain visualization canvas layout  * test(control-plane): guard bounded canvas layout",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "651118b|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9606a74",
+      "title": "fix(control-pane): handle proximity HTTP errors (#3191)",
+      "date": "2026-09-20T19:37:47Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9606a741af13fe327ba9e1730a119a409779a6f9",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9606a74|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9ac593b",
+      "title": "fix(scripts): extract cross-platform openBrowser helper with structured launch result (#3180)",
+      "date": "2026-09-20T18:26:52Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9ac593b55cba44c8b20152a5c7f28d300a67ec7e",
+      "snippet": "scripts/plan-canvas.js and scripts/control-pane.js both define their own openBrowser helpers for launching the user's default browser. The two implementations have diverged:  - plan-canvas.js dispatches across darwin/win32/linux but its   try/spawn try/catch does not catch async child errors (ENOENT",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9ac593b|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "95448ad",
+      "title": "fix: isolate Claude project hooks from ESM hosts (#3184)",
+      "date": "2026-09-20T18:26:49Z",
+      "url": "https://github.com/affaan-m/ECC/commit/95448ad81d3b795b31e3c2d9acfa8a674a5d3e4c",
+      "snippet": "* fix: isolate Claude project hooks from ESM hosts  * fix: handle user-owned Claude scripts package",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "95448ad|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "111387a",
+      "title": "docs: fix dead MCP overview link in shortform guide (#3190)",
+      "date": "2026-09-20T18:26:46Z",
+      "url": "https://github.com/affaan-m/ECC/commit/111387afe47ba077670875d446919373cf98465b",
+      "snippet": "The Claude Code docs page at code.claude.com/docs/en/mcp-overview no longer exists (404). The current MCP page is https://code.claude.com/docs/en/mcp (\"Connect Claude Code to tools via MCP\"). Update the link in the English, zh-CN, and tr versions of the shortform guide.  Co-authored-by: kuishou68 <k",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "111387a|gh-commits-everything-claude-code"
+    },
     {
       "id": "934195f",
       "title": "Merge pull request #3123 from VarunGore36/fix/security-critical-hardening",
@@ -491,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "22d7ed5|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5064474",
-      "title": "fix: integrate verified ECC 2.2.1 maintenance patches (#3012)",
-      "date": "2026-09-07T22:36:32Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5064474d4d762dc9640234a41617cccb79185cec",
-      "snippet": "All 48 hosted checks passed on 165074ecf40aaa9f95173f5182509c8193c48b86.  Fixes #2921 Fixes #2924 Fixes #2909 Fixes #2952 Fixes #2964 Fixes #2957 Fixes #2982",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5064474|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "165074e",
-      "title": "test: fix Windows ownership paths and failure annotations",
-      "date": "2026-09-07T22:09:46Z",
-      "url": "https://github.com/affaan-m/ECC/commit/165074ecf40aaa9f95173f5182509c8193c48b86",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "165074e|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "14e731c",
-      "title": "fix: close release review gaps and expose failing CI suites",
-      "date": "2026-09-07T21:57:26Z",
-      "url": "https://github.com/affaan-m/ECC/commit/14e731c6d5f341f35a9e24609de1d91f57cf8d70",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "14e731c|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "ba3a64a",
-      "title": "fix(setup): preserve preflight guarantees across ownership filtering",
-      "date": "2026-09-07T20:53:53Z",
-      "url": "https://github.com/affaan-m/ECC/commit/ba3a64a2c5713d0369d7482fefc5d39f12db3902",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "ba3a64a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d542cbe",
-      "title": "Merge Windows-safe Claude settings race regression fixtures",
-      "date": "2026-09-07T20:51:51Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d542cbe4cd6204abccf4e1dcd0821b38aca08e61",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d542cbe|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "adb39a1",
-      "title": "test: make release safety fixtures CodeQL-clean",
-      "date": "2026-09-07T20:51:18Z",
-      "url": "https://github.com/affaan-m/ECC/commit/adb39a13c9ed34f2783adf2a72f133ee191019f1",
-      "snippet": "Use literal matching for the forbidden documentation endpoint, pin lifecycle mode/content assertions to one descriptor, and inject parent races through the staged descriptor without forwarding arbitrary file-creation flags.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "adb39a1|gh-commits-everything-claude-code"
     }
   ]
 }
