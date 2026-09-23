@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 22 Sep 2026 11:10:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 11:01:09 GMT</lastBuildDate>
+    <item>
+      <title>0.3.280</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.280</guid>
+      <pubDate>Wed, 23 Sep 2026 11:00:21 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added optional fireReason to the task-notification SDKMessageOrigin; a local host&apos;s declared scheduled-task fire is honored only in a process it started with CLAUDECODEHOSTSCHEDULEDRUN=1
+- Added verbatimPrompts option: prompts are delivered as written — no @path expansion, no slash-command dispatc</description>
+    </item>
     <item>
       <title>0.3.278</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -430,14 +439,6 @@
       <pubDate>Fri, 10 Jul 2026 09:39:10 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Added commandlifecycle frames to stream-json and SDK sessions, reporting each uuid-stamped message&apos;s terminal state (queued/started/completed/cancelled/discarded); zero-API results no longer report stale durationapims</description>
-    </item>
-    <item>
-      <title>0.3.204</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.204</guid>
-      <pubDate>Wed, 08 Jul 2026 08:32:28 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.204</description>
     </item>
   </channel>
 </rss>
