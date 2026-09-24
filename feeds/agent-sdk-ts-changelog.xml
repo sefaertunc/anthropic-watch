@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 23 Sep 2026 11:01:09 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 11:19:57 GMT</lastBuildDate>
+    <item>
+      <title>0.3.281</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.281</guid>
+      <pubDate>Thu, 24 Sep 2026 11:19:09 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added optional trigger, usermessageuuid and timestamp fields to the conversationreset message so clients can tell what reset the conversation, match a /clear to its message, and show when the reset happened
+- Fixed permission and dialog callbacks still being invoked for requests that arrived after</description>
+    </item>
     <item>
       <title>0.3.280</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -431,14 +440,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Fixed canUseTool returning {behavior: &apos;allow&apos;} without updatedInput being rejected as a deny with a raw ZodError message; the tool now runs with the original input per the documented contract
 - The Agent tool&apos;s structured result now has a published SDK type (AgentToolCompletedOutput) that matches </description>
-    </item>
-    <item>
-      <title>0.3.206</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.206</guid>
-      <pubDate>Fri, 10 Jul 2026 09:39:10 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added commandlifecycle frames to stream-json and SDK sessions, reporting each uuid-stamped message&apos;s terminal state (queued/started/completed/cancelled/discarded); zero-API results no longer report stale durationapims</description>
     </item>
   </channel>
 </rss>

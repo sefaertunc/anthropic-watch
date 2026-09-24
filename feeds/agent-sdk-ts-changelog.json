@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-23T11:01:09.301Z",
+  "generated": "2026-09-24T11:19:57.183Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.281",
+      "title": "0.3.281",
+      "date": "2026-09-24T11:19:09.209Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added optional trigger, usermessageuuid and timestamp fields to the conversationreset message so clients can tell what reset the conversation, match a /clear to its message, and show when the reset happened\n- Fixed permission and dialog callbacks still being invoked for requests that arrived after",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.281|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.280",
       "title": "0.3.280",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.207|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.206",
-      "title": "0.3.206",
-      "date": "2026-07-10T09:39:10.851Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added commandlifecycle frames to stream-json and SDK sessions, reporting each uuid-stamped message's terminal state (queued/started/completed/cancelled/discarded); zero-API results no longer report stale durationapims",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.206|agent-sdk-ts-changelog"
     }
   ]
 }
