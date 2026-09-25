@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-24T11:19:57.215Z",
-  "itemCount": 24,
+  "generated": "2026-09-25T11:25:25.406Z",
+  "itemCount": 25,
   "items": [
+    {
+      "id": "3337550",
+      "title": "Update claude-api skill: link refusal billing to the docs (#1825)",
+      "date": "2026-09-24T16:20:35Z",
+      "url": "https://github.com/anthropics/skills/commit/33375500bcea98d610eb30ce10ac4e59b89c390d",
+      "snippet": "Point each refusal billing sentence at the \"How refusals are billed\" docs section instead of restating the rules in the skill.  Also correct two claims to match that section: a refusal before any output counts against rate limits, and a mid-stream refusal bills input tokens as well as the output alr",
+      "source": "gh-commits-skills",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/skills (main commits)",
+      "uniqueKey": "3337550|gh-commits-skills"
+    },
     {
       "id": "34040c9",
       "title": "Update claude-api skill: Managed Agents `auto` permission policy and `ant beta:sessions connect` (#1750)",

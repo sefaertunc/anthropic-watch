@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 24 Sep 2026 11:19:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 11:25:25 GMT</lastBuildDate>
+    <item>
+      <title>2.1.282</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.282</guid>
+      <pubDate>Fri, 25 Sep 2026 11:24:26 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added a maxProseWidth setting that caps the width of Claude&apos;s prose in wide terminals while tables and code blocks keep the full width
+- Added a startup notice, and /status and claude doctor entries, listing telemetry variables in a project&apos;s settings files that were ignored or that turned telemet</description>
+    </item>
     <item>
       <title>2.1.281</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -448,16 +457,6 @@
       <description>- Auto mode is now available without CLAUDECODEENABLEAUTOMODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings
 - Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks
 - Fixed remot</description>
-    </item>
-    <item>
-      <title>2.1.206</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.206</guid>
-      <pubDate>Fri, 10 Jul 2026 09:39:09 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added directory path suggestions to /cd, matching /add-dir behavior
-- Added a /doctor check that proposes trimming checked-in CLAUDE.md files by cutting content Claude could derive from the codebase
-- /commit-push-pr now auto-allows git push to the repo&apos;s configured push remote (remote.pushDefault</description>
     </item>
   </channel>
 </rss>

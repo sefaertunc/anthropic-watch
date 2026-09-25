@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-24T11:19:57.183Z",
+  "generated": "2026-09-25T11:25:25.374Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.282",
+      "title": "0.3.282",
+      "date": "2026-09-25T11:24:26.924Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added support for strictKnownMarketplaces and blockedMarketplaces in host-supplied managedSettings: the allowlist applies only where admin policy sets none; the blocklist adds to the admin's\n- Added @anthropic-ai/claude-agent-sdk/core, a smaller entry point for apps that bundle the SDK (query, MCP",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.282|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.281",
       "title": "0.3.281",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.209|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.207",
-      "title": "0.3.207",
-      "date": "2026-07-11T07:59:18.438Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Fixed canUseTool returning {behavior: 'allow'} without updatedInput being rejected as a deny with a raw ZodError message; the tool now runs with the original input per the documented contract\n- The Agent tool's structured result now has a published SDK type (AgentToolCompletedOutput) that matches ",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.207|agent-sdk-ts-changelog"
     }
   ]
 }

@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 24 Sep 2026 11:19:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 11:25:25 GMT</lastBuildDate>
+    <item>
+      <title>Update claude-api skill: link refusal billing to the docs (#1825)</title>
+      <link>https://github.com/anthropics/skills/commit/33375500bcea98d610eb30ce10ac4e59b89c390d</link>
+      <guid isPermaLink="false">3337550</guid>
+      <pubDate>Thu, 24 Sep 2026 16:20:35 GMT</pubDate>
+      <category>gh-commits-skills</category>
+      <description>Point each refusal billing sentence at the &quot;How refusals are billed&quot; docs section instead of restating the rules in the skill.  Also correct two claims to match that section: a refusal before any output counts against rate limits, and a mid-stream refusal bills input tokens as well as the output alr</description>
+    </item>
     <item>
       <title>Update claude-api skill: Managed Agents `auto` permission policy and `ant beta:sessions connect` (#1750)</title>
       <link>https://github.com/anthropics/skills/commit/34040c9c568585f6929bedeaad110ad08f079624</link>

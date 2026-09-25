@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-24T11:19:57.213Z",
+  "generated": "2026-09-25T11:25:25.404Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "813fbee",
+      "title": "feat(managed_agents): tag cookbook agents with anthropic_cookbook metadata (#886)",
+      "date": "2026-09-24T18:19:10Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/813fbeec03cdedfda7808529438d1c7af71f26eb",
+      "snippet": "* feat(managed_agents): tag cookbook agents with anthropic_cookbook metadata  Every agents.create call in the Managed Agents notebooks now passes metadata={\"anthropic_cookbook\": \"claude-cookbooks/<notebook-name>\"}, so sessions started from a cookbook can be attributed to it. Sessions inherit the tag",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "813fbee|gh-commits-cookbooks"
+    },
+    {
+      "id": "c5ff1dc",
+      "title": "docs(fable_5_fallback_billing): update billing text for pre-stream refusal billing (#890)",
+      "date": "2026-09-24T17:05:05Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/c5ff1dc523e28d9b8fbd5c6ecd63204e20b8a0ed",
+      "snippet": "Squash merge of 1 commit",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "c5ff1dc|gh-commits-cookbooks"
+    },
     {
       "id": "a4b0d89",
       "title": "feat(patterns): add multi-agent teams under latency pressure and budgets cookbook (#885)",
@@ -535,28 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "d146098|gh-commits-cookbooks"
-    },
-    {
-      "id": "8231472",
-      "title": "Reproduce Claude's agentic search benchmark scores in the Messages API (#749)",
-      "date": "2026-06-30T19:25:05Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/8231472d020fc4807f0442f28d201316d54f35e9",
-      "snippet": "* Reproduce Claude's agentic search benchmark scores in the Messages API  A Messages API harness that reproduces Claude's published DeepSearchQA and BrowseComp scores using programmatic tool calling, server-side compaction, and task budgets. Walks through the configuration that matters for long-hori",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "8231472|gh-commits-cookbooks"
-    },
-    {
-      "id": "34022c5",
-      "title": "Merge pull request #698 from anthropics/cj-ant/sentry-managed-agent",
-      "date": "2026-06-09T20:53:19Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/34022c55c1fde7056280e01b84f562cb92575cb5",
-      "snippet": "feat(managed_agents): add Sentry triage scheduled agent example",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "34022c5|gh-commits-cookbooks"
     }
   ]
 }

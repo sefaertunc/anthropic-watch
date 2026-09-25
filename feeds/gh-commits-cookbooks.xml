@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 24 Sep 2026 11:19:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 11:25:25 GMT</lastBuildDate>
+    <item>
+      <title>feat(managed_agents): tag cookbook agents with anthropic_cookbook metadata (#886)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/813fbeec03cdedfda7808529438d1c7af71f26eb</link>
+      <guid isPermaLink="false">813fbee</guid>
+      <pubDate>Thu, 24 Sep 2026 18:19:10 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>* feat(managed_agents): tag cookbook agents with anthropic_cookbook metadata  Every agents.create call in the Managed Agents notebooks now passes metadata={&quot;anthropic_cookbook&quot;: &quot;claude-cookbooks/&lt;notebook-name&gt;&quot;}, so sessions started from a cookbook can be attributed to it. Sessions inherit the tag</description>
+    </item>
+    <item>
+      <title>docs(fable_5_fallback_billing): update billing text for pre-stream refusal billing (#890)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/c5ff1dc523e28d9b8fbd5c6ecd63204e20b8a0ed</link>
+      <guid isPermaLink="false">c5ff1dc</guid>
+      <pubDate>Thu, 24 Sep 2026 17:05:05 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
     <item>
       <title>feat(patterns): add multi-agent teams under latency pressure and budgets cookbook (#885)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/a4b0d89061bc65769fea7947c080b3b11d938515</link>
@@ -390,22 +406,6 @@
       <pubDate>Tue, 30 Jun 2026 20:07:44 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>A Next.js chat built directly on a Managed Agent session: event stream previews (event_deltas), vault credential injection_location, per-session agent_with_overrides, and a multiagent coordinator roster with an Opus reviewer. The planner calls the National Park Service and Windy APIs with keys it ne</description>
-    </item>
-    <item>
-      <title>Reproduce Claude&apos;s agentic search benchmark scores in the Messages API (#749)</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/8231472d020fc4807f0442f28d201316d54f35e9</link>
-      <guid isPermaLink="false">8231472</guid>
-      <pubDate>Tue, 30 Jun 2026 19:25:05 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>* Reproduce Claude&apos;s agentic search benchmark scores in the Messages API  A Messages API harness that reproduces Claude&apos;s published DeepSearchQA and BrowseComp scores using programmatic tool calling, server-side compaction, and task budgets. Walks through the configuration that matters for long-hori</description>
-    </item>
-    <item>
-      <title>Merge pull request #698 from anthropics/cj-ant/sentry-managed-agent</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/34022c55c1fde7056280e01b84f562cb92575cb5</link>
-      <guid isPermaLink="false">34022c5</guid>
-      <pubDate>Tue, 09 Jun 2026 20:53:19 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>feat(managed_agents): add Sentry triage scheduled agent example</description>
     </item>
   </channel>
 </rss>
