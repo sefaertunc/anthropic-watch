@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 25 Sep 2026 11:25:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 11:01:00 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #6309 from anthropics/morganl/code-modernization-consolidated</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/fa59bc9037741ecfa131aa27938272605710d7b2</link>
+      <guid isPermaLink="false">fa59bc9</guid>
+      <pubDate>Fri, 25 Sep 2026 23:12:23 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>code-modernization: guided workflow with independent proof</description>
+    </item>
+    <item>
+      <title>Claude Security Plugin - v0.12.0 (#6310)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ca08d5e47d6402db586d37780c559a0c4c7ded9a</link>
+      <guid isPermaLink="false">ca08d5e</guid>
+      <pubDate>Fri, 25 Sep 2026 19:33:24 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>code-modernization: count failures and the machine&apos;s python, once per version</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c8874f5ad883e26428f483ffa4d537cc81489e64</link>
+      <guid isPermaLink="false">c8874f5</guid>
+      <pubDate>Fri, 25 Sep 2026 19:06:43 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Usage counts now say what the plugin runs on (system, python status and version, path problems) and which kind of failure happens: a missing or placeholder python, a permission block, a model error, or an error in the plugin&apos;s own script. Failures are classified on the machine into a fixed list and </description>
+    </item>
+    <item>
+      <title>code-modernization: version 1.0.0, usage counts and a README results table</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/363af43603ecdb1bdbed7303764b6daeeec7c37f</link>
+      <guid isPermaLink="false">363af43</guid>
+      <pubDate>Fri, 25 Sep 2026 18:29:00 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The plugin now has a version and a changelog. Two hooks record whole-number usage counts (which command ran, how far a system got, how many rules and proofs) through the CLI&apos;s own telemetry: counts from 100 up are rounded, nothing is sent when the plugin is not in use, and any of three switches turn</description>
+    </item>
+    <item>
+      <title>code-modernization: rename the pane&apos;s rule review command to /modernize-review-pane</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/28abd83ad92c24a4107803bd03e510387f2014c2</link>
+      <guid isPermaLink="false">28abd83</guid>
+      <pubDate>Fri, 25 Sep 2026 18:28:51 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The pane&apos;s bare /modernize-review took the name of the plugin&apos;s own review command, so typing the short form in a pane-enabled session opened the pane&apos;s cards instead of the pop-up review. The pane&apos;s version is now /modernize-review-pane, and /modernize-review always runs the plugin command. Both st</description>
+    </item>
+    <item>
+      <title>code-modernization: a rule is tested only if a test that ran backs it</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d49ccb3844876e35262a32f145b7b717646da733</link>
+      <guid isPermaLink="false">d49ccb3</guid>
+      <pubDate>Fri, 25 Sep 2026 18:28:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>A rule named only by a skipped or pending test no longer counts as covered. It is listed as &quot;named, not run&quot; and fails the rules check. A test-only folder is listed as tooling and gets no verdict. The verify command tries malformed records only when the person asked for exact behavior, so a proof lo</description>
+    </item>
+    <item>
+      <title>code-modernization: approve a difference once per input</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d3a40f72165764888f9a57a3e93db86e88f8e063</link>
+      <guid isPermaLink="false">d3a40f7</guid>
+      <pubDate>Fri, 25 Sep 2026 04:27:42 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>An independent check of a rewritten batch job found differences on two new inputs of one family (a blank numeric field the rewrite rejects on purpose and the old program reads as zero). Each input has several output files, so accepting the deviation meant three or four hand-written entries per input</description>
+    </item>
+    <item>
+      <title>code-modernization: make rule consolidation auditable and injection-safe</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ff833bd7231262a8521ab3728c5625dc6c4f4a1d</link>
+      <guid isPermaLink="false">ff833bd</guid>
+      <pubDate>Fri, 25 Sep 2026 04:22:06 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Follow-ups from review of the consolidation pass:  - The agent is a restricted type with the same read-only wording as its   siblings, and every field on its numbered list is a single bounded line, so   a rule name containing a newline cannot fake another entry. - A group with any number out of rang</description>
+    </item>
+    <item>
+      <title>code-modernization: an uplift is not proven by a typed baseline or edited tests</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f45794fa4831636e7ae55f8081769c8ebf3f58c6</link>
+      <guid isPermaLink="false">f45794f</guid>
+      <pubDate>Fri, 25 Sep 2026 04:18:46 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Three ways a same-technology uplift could come out PROVEN too easily:  - The baseline came from a table someone typed. It now counts as measured   only when the script can read per-test results (JUnit or TRX XML, a runner   log with a summary line, or per-test JSON) from analysis/&lt;system&gt;/baseline/ </description>
+    </item>
+    <item>
+      <title>code-modernization: fold the same rule found in several files into one</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/fc8adcf13fab336a810a622e8cf7be86be3a183b</link>
+      <guid isPermaLink="false">fc8adcf</guid>
+      <pubDate>Fri, 25 Sep 2026 04:18:31 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>A numeric library implemented in C, in a C++ header and in a fixed-point variant produced three &quot;twiddle factor&quot; rules, two &quot;generic butterfly&quot; rules and two &quot;factorization&quot; rules, because the referee&apos;s duplicate key is the file plus the rule&apos;s name. The plan and the review then carry noise.  After </description>
+    </item>
     <item>
       <title>Add GovTribe plugin (govtribe) (#6303)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/ad30d62cd52ad0d0af1beda1eab7f61c601045d0</link>
@@ -326,86 +406,6 @@
       <pubDate>Mon, 14 Sep 2026 17:13:07 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>bump(clickhouse): 988a7a39 → e3229ed4</description>
-    </item>
-    <item>
-      <title>Add BlackRock Advisor Center plugin (#6094)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/02bc302b0cd18575b00d750407859b915b378b63</link>
-      <guid isPermaLink="false">02bc302</guid>
-      <pubDate>Sun, 13 Sep 2026 23:05:28 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Add the BlackRock Advisor Center skills plugin (blackrock/advisor-center-agent-skills, Apache-2.0). Skills-only: six SKILL.md workflows plus rendering/design-token references, plugin.json, and an .mcp.json pointing at the already-listed production Advisor Center MCP (https://ac360-mcp.blackrock.com/</description>
-    </item>
-    <item>
-      <title>Merge pull request #6091 from anthropics/bump/coderabbit</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f0dce59fec064db10450cb6ed6e33c1080d61537</link>
-      <guid isPermaLink="false">f0dce59</guid>
-      <pubDate>Sun, 13 Sep 2026 13:29:47 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(coderabbit): aa49953c → 929b0ec6</description>
-    </item>
-    <item>
-      <title>Merge pull request #6090 from anthropics/bump/agentforce-adlc</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/041d2003b5bc081df571f2fafe3429682cd58022</link>
-      <guid isPermaLink="false">041d200</guid>
-      <pubDate>Sun, 13 Sep 2026 13:29:41 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(agentforce-adlc): b280f634 → 09bf1539</description>
-    </item>
-    <item>
-      <title>Merge pull request #6084 from anthropics/bump/hubspot-sales</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/05ae505dc05b8d16127e2db6fc6b5f4d52115e31</link>
-      <guid isPermaLink="false">05ae505</guid>
-      <pubDate>Sun, 13 Sep 2026 13:29:36 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(hubspot-sales): 843d5a38 → a0c59600</description>
-    </item>
-    <item>
-      <title>Merge pull request #6083 from anthropics/bump/youdotcom-agent-skills</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/bd5414df13fc8bd9263f6cbd3904ad8c0547a3ca</link>
-      <guid isPermaLink="false">bd5414d</guid>
-      <pubDate>Sun, 13 Sep 2026 13:29:31 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(youdotcom-agent-skills): 5aed8820 → 71eeb239</description>
-    </item>
-    <item>
-      <title>Merge pull request #6082 from anthropics/bump/wix</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/027ef2ee8a46c9962036cf44ed38789eaac4d263</link>
-      <guid isPermaLink="false">027ef2e</guid>
-      <pubDate>Sun, 13 Sep 2026 13:29:25 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(wix): d8247b9f → 58922ec0</description>
-    </item>
-    <item>
-      <title>Merge pull request #6081 from anthropics/bump/vercel</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/426414478cb07480f48865ba36ba4d1b8c09ce77</link>
-      <guid isPermaLink="false">4264144</guid>
-      <pubDate>Sun, 13 Sep 2026 13:29:20 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(vercel): dca8da78 → df0f5521</description>
-    </item>
-    <item>
-      <title>Merge pull request #6080 from anthropics/bump/unity</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/dbf663ba50d8c4d5f6cdaa7e7718f3f27dc9981b</link>
-      <guid isPermaLink="false">dbf663b</guid>
-      <pubDate>Sun, 13 Sep 2026 13:29:15 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(unity): 34bc9c40 → c7055702</description>
-    </item>
-    <item>
-      <title>Merge pull request #6079 from anthropics/bump/teamcity-cli</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a9ff9c9c3a9297c427c9b8f80e59f076a92b1297</link>
-      <guid isPermaLink="false">a9ff9c9</guid>
-      <pubDate>Sun, 13 Sep 2026 13:29:09 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(teamcity-cli): f9f1a7c6 → ac6c1fd8</description>
-    </item>
-    <item>
-      <title>Merge pull request #6021 from anthropics/bump/workos</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/3deb821cb71ccfaaf2ffa9935e977df314ce5cd5</link>
-      <guid isPermaLink="false">3deb821</guid>
-      <pubDate>Fri, 11 Sep 2026 16:08:28 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(workos): de1ed17c → 6b7d596a</description>
     </item>
   </channel>
 </rss>

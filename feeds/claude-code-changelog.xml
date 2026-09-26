@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 25 Sep 2026 11:25:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 11:01:00 GMT</lastBuildDate>
+    <item>
+      <title>2.1.283</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.283</guid>
+      <pubDate>Sat, 26 Sep 2026 11:00:12 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added x-claude-code-prompt-id to the gateway hint headers so LLM gateways can group the requests that serve one user prompt; opt in with CLAUDECODEGATEWAYHINTHEADERS=1
+- Added availableModelsMatch managed setting: with &quot;exact&quot;, an availableModels entry allows only the model version it names, so ne</description>
+    </item>
     <item>
       <title>2.1.282</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -447,16 +456,6 @@
       <pubDate>Tue, 14 Jul 2026 08:09:49 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)</description>
-    </item>
-    <item>
-      <title>2.1.207</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.207</guid>
-      <pubDate>Sat, 11 Jul 2026 07:59:17 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Auto mode is now available without CLAUDECODEENABLEAUTOMODE opt-in on Bedrock, Vertex AI, and Foundry; disable via disableAutoMode in settings
-- Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks
-- Fixed remot</description>
     </item>
   </channel>
 </rss>

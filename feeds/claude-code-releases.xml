@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 25 Sep 2026 11:25:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 11:01:00 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.283</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.283</link>
+      <guid isPermaLink="false">v2.1.283</guid>
+      <pubDate>Fri, 25 Sep 2026 21:50:12 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added x-claude-code-prompt-id to the gateway hint headers so LLM gateways can group the requests that serve one user prompt; opt in with CLAUDECODEGATEWAYHINTHEADERS=1
+- Added availableModelsMatch managed setting: with &quot;exact&quot;, an availableModels entry allows only the model version </description>
+    </item>
     <item>
       <title>v2.1.282</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.282</link>
@@ -491,16 +501,6 @@
       <description>What&apos;s changed
 - Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type
 - Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (su</description>
-    </item>
-    <item>
-      <title>v2.1.221</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.221</link>
-      <guid isPermaLink="false">v2.1.221</guid>
-      <pubDate>Tue, 04 Aug 2026 00:14:23 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- [VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the &quot;Claude Code: Toggle Focus view&quot; command
-- Added mode: &quot;mask&quot; for sandbox credential files on Linux and WSL</description>
     </item>
   </channel>
 </rss>

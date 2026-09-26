@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-25T11:25:25.378Z",
+  "generated": "2026-09-26T11:01:00.697Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.2.160",
+      "title": "0.2.160",
+      "date": "2026-09-26T11:00:12.991Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "Bug Fixes\n- Fixed follow-up turns failing after background subagents: When using query() with hooks, canusetool, or SDK MCP servers, stdin was closed too early if a subagent finished just before the turn's result arrived. Follow-up turns would then fail with \"Stream closed\" and the model would repor",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.160|agent-sdk-py-changelog"
+    },
     {
       "id": "0.2.159",
       "title": "0.2.159",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK Python Changelog",
       "uniqueKey": "0.2.99|agent-sdk-py-changelog"
-    },
-    {
-      "id": "0.2.97",
-      "title": "0.2.97",
-      "date": "2026-06-11T10:40:30.323Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
-      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.173",
-      "source": "agent-sdk-py-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK Python Changelog",
-      "uniqueKey": "0.2.97|agent-sdk-py-changelog"
     }
   ]
 }

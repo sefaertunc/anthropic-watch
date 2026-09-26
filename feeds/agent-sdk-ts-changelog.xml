@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 25 Sep 2026 11:25:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 11:01:00 GMT</lastBuildDate>
+    <item>
+      <title>0.3.283</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.283</guid>
+      <pubDate>Sat, 26 Sep 2026 11:00:12 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added pluginerrors to the SDKSystemMessage type (system/init), including path for a --plugin-dir entry that did not load
+- Fixed getSessionMessages() returning, and forkSession() copying, a rewound-away branch when the newest branch ends at a meta row or a local command&apos;s rows
+- Changed stream-jso</description>
+    </item>
     <item>
       <title>0.3.282</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -432,14 +442,6 @@
       <pubDate>Wed, 15 Jul 2026 08:16:02 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Added timedOutAfterMs to BashToolOutput, set when a command is auto-backgrounded on timeout</description>
-    </item>
-    <item>
-      <title>0.3.209</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.209</guid>
-      <pubDate>Tue, 14 Jul 2026 08:09:50 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.209</description>
     </item>
   </channel>
 </rss>
