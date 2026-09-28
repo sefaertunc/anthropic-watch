@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-27T11:39:20.280Z",
+  "generated": "2026-09-28T13:14:39.058Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "042924e",
+      "title": "fix(install): support invocation through POSIX sh (#3014)",
+      "date": "2026-09-28T00:04:10Z",
+      "url": "https://github.com/affaan-m/ECC/commit/042924e1f47df4a7a9bad34a3768f48144493834",
+      "snippet": "* fix(install): make install.sh robust to sh/dash invocation  Two related portability fixes so `sh install.sh` behaves correctly even though the script is written for bash:  - The cygpath detection used the bash-only `&>/dev/null` redirection.   dash misparses `&>`, so `command -v cygpath &>/dev/nul",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "042924e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "eaeef53",
+      "title": "Merge pull request #3234 from haelyra/feat/ecc-029-production-acceptance",
+      "date": "2026-09-27T22:34:29Z",
+      "url": "https://github.com/affaan-m/ECC/commit/eaeef53a15854e68cb2be336c2ba47e111fa25c3",
+      "snippet": "feat(profiles): add opt-in Lean/Full with hybrid Auto skill selection",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "eaeef53|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "befde0d",
+      "title": "fix(profiles): bind routing receipts and harden review paths",
+      "date": "2026-09-27T22:01:40Z",
+      "url": "https://github.com/affaan-m/ECC/commit/befde0d2cd4fc03e9c47931e9480aa906ce7572b",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "befde0d|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "a9e3ecb",
+      "title": "fix(ci): allow slow Windows test cleanup",
+      "date": "2026-09-27T21:37:47Z",
+      "url": "https://github.com/affaan-m/ECC/commit/a9e3ecb77f877a0ce30dfe576c3a1e805edf7491",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "a9e3ecb|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "874883c",
+      "title": "fix(profiles): make evaluator permissions and Windows checks portable",
+      "date": "2026-09-27T21:03:28Z",
+      "url": "https://github.com/affaan-m/ECC/commit/874883c72807d4286d0318abb9d7509fd8d7a276",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "874883c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0765f7a",
+      "title": "feat(profiles): add opt-in Lean/Full and hybrid Auto selection",
+      "date": "2026-09-27T20:44:36Z",
+      "url": "https://github.com/affaan-m/ECC/commit/0765f7a2ca2bd5df214d3aa7ba7e7ac19db8b189",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0765f7a|gh-commits-everything-claude-code"
+    },
     {
       "id": "e482e57",
       "title": "docs: point the Kimi Code link at the international site (kimi.ai/code) (#3183)",
@@ -491,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "c4904e3|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "fba8e35",
-      "title": "feat(mcp): add serply-search server catalog entry (#3085)",
-      "date": "2026-09-12T03:32:09Z",
-      "url": "https://github.com/affaan-m/ECC/commit/fba8e352cc8e2847b7b0f9289d868f399e8fb066",
-      "snippet": "Adds an opt-in HTTP entry for Serply's hosted MCP endpoint to mcp-configs/mcp-servers.json, following the parallel-search and browser-use shape: https URL, X-Api-Key header placeholder, nothing enabled by default. Independent review confirmed valid JSON, catalog-tier policy per docs/MCP-CONNECTOR-PO",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "fba8e35|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "bdf92d8",
-      "title": "docs: add explicit hook consent to OpenCode install command (#3080)",
-      "date": "2026-09-12T03:20:03Z",
-      "url": "https://github.com/affaan-m/ECC/commit/bdf92d8fab701ac31990ada6250ac15757ab0451",
-      "snippet": "The README's OpenCode full-profile install command fails because assertHookConsentReady refuses to materialize hooks-runtime without explicit consent; --profile full selects the runtime so the gate fires. Add --enable-hooks to the documented command. Independent review reproduced the failure and the",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "bdf92d8|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4f37387",
-      "title": "fix(hooks): block-no-verify handles stuck optional values and long-option prefixes (#3073)",
-      "date": "2026-09-12T02:07:29Z",
-      "url": "https://github.com/affaan-m/ECC/commit/4f373874209b4b63fdec0469b76992923ea0a9d0",
-      "snippet": "Two cases the word-level rewrite still got wrong. Short options that take an optional stuck value (-u[mode], -S[keyid]) end the cluster scan, so git commit -uno and -Sn are allowed while -nu stays blocked. Git accepts any unambiguous long-option prefix, so --no-veri and --no-verif on commit, push, m",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4f37387|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "95b9fe1",
-      "title": "feat(rails-patterns): add Rails framework patterns skill (#3074)",
-      "date": "2026-09-12T00:48:16Z",
-      "url": "https://github.com/affaan-m/ECC/commit/95b9fe157f815ef064793e49eacfecdbbfc5b813",
-      "snippet": "Adds skills/rails-patterns alongside laravel-patterns and django-patterns: directory contract, skinny controllers with service objects, form and query objects, idiomatic ActiveRecord, background jobs, ViewComponent, Hotwire, and the Rails 8 Solid stack. Decisions defer to rules/ruby/patterns.md. Reg",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "95b9fe1|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "c9148d0",
-      "title": "Merge pull request #3071 from haelyra/maint/stewardship-batch-2026-09-10",
-      "date": "2026-09-10T20:57:26Z",
-      "url": "https://github.com/affaan-m/ECC/commit/c9148d0bb239ed01a95724a5928b98cdf9c30658",
-      "snippet": "fix: consolidate verified stewardship repairs",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "c9148d0|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "2ae86b4",
-      "title": "test(github-ops): report locale policy failures",
-      "date": "2026-09-10T19:40:13Z",
-      "url": "https://github.com/affaan-m/ECC/commit/2ae86b4fcf661d6c1f60ee2fe7d86eb1cf8b14ca",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "2ae86b4|gh-commits-everything-claude-code"
     }
   ]
 }

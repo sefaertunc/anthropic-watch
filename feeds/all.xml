@@ -6,22 +6,122 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 27 Sep 2026 11:39:20 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 13:14:38 GMT</lastBuildDate>
     <item>
-      <title>docs: simplify top contributors introduction (#1648)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c338e0279b192ea6bacd47984167e60b130bad7b</link>
-      <guid isPermaLink="false">c338e02</guid>
-      <pubDate>Sun, 27 Sep 2026 11:18:25 GMT</pubDate>
+      <title>Prompting Claude Opus 5.5</title>
+      <link>https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5</link>
+      <guid isPermaLink="false">49874728</guid>
+      <pubDate>Mon, 28 Sep 2026 07:33:29 GMT</pubDate>
+      <category>hn-claude-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: release v18.8.0 (#1659)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8526ebc9a77b180b47e877f199fed827bc99614e</link>
+      <guid isPermaLink="false">8526ebc</guid>
+      <pubDate>Mon, 28 Sep 2026 07:11:46 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v18.8.0.</description>
+    </item>
+    <item>
+      <title>feat: add nsfw-ai-spicyapi for adult image and video generation via SpicyAPI (#1649)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ef9391f72eb14813b15e24f8b4816cc74257daaa</link>
+      <guid isPermaLink="false">ef9391f</guid>
+      <pubDate>Mon, 28 Sep 2026 06:27:51 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds **`nsfw-ai-spicyapi`**, a media skill for adult (18+) image, image-to-video and image-edit generation through the [SpicyAPI](https://spicyapi.ai) API. It adapts the official upstream skill [Spicy-API/nsfw-ai-skill](https://github.com/Spicy-API/nsfw-ai-skill) (MIT) to</description>
+    </item>
+    <item>
+      <title>feat: add Serply Search MCP skill (#1655)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/cf8d66cbde7aa8cac59bddd4564d1ca2cafc5ccd</link>
+      <guid isPermaLink="false">cf8d66c</guid>
+      <pubDate>Mon, 28 Sep 2026 06:22:24 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds `serply-search-mcp`, a skill for searching Google, Bing, Google News and Google Scholar and reading public pages through the Serply MCP server (`https://api.serply.io/mcp`). It follows the structure of `parallel-search-mcp` (#1339): provider-chosen trigger, no defaul</description>
+    </item>
+    <item>
+      <title>docs: improve README contributor table layout (#1653)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/5e1c78d37cc595e31cc8b985aa54856517b0c69b</link>
+      <guid isPermaLink="false">5e1c78d</guid>
+      <pubDate>Mon, 28 Sep 2026 06:09:14 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
     </item>
     <item>
-      <title>docs: add top repository contributors to README (#1647)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d36fbeedec41fab4002dc44566eba338fd734642</link>
-      <guid isPermaLink="false">d36fbee</guid>
-      <pubDate>Sun, 27 Sep 2026 11:10:51 GMT</pubDate>
+      <title>fix: refresh Jev Social runtime pin to v0.1.10 (#1656)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/463b781eb48c8b3a48869090a2dbd56eeb41e7c3</link>
+      <guid isPermaLink="false">463b781</guid>
+      <pubDate>Mon, 28 Sep 2026 05:55:29 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Refresh the existing Jev Social catalog skill from its v0.1.8 runtime pin to the reviewed runtime commit included in v0.1.10.  This keeps the catalog workflow source-only and read-only while documenting the v0.1.10 boundaries that matter to users and reviewers:  - OpenRou</description>
+    </item>
+    <item>
+      <title>Claude Generated Summary on Sri Lanka Batalanda Commission of Inquiry</title>
+      <link>https://claude.ai/artifact/4xzcAXCXwFTeMSopXhJjvk</link>
+      <guid isPermaLink="false">49872727</guid>
+      <pubDate>Mon, 28 Sep 2026 02:05:56 GMT</pubDate>
+      <category>hn-claude-ai</category>
       <description/>
+    </item>
+    <item>
+      <title>fix(install): support invocation through POSIX sh (#3014)</title>
+      <link>https://github.com/affaan-m/ECC/commit/042924e1f47df4a7a9bad34a3768f48144493834</link>
+      <guid isPermaLink="false">042924e</guid>
+      <pubDate>Mon, 28 Sep 2026 00:04:10 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(install): make install.sh robust to sh/dash invocation  Two related portability fixes so `sh install.sh` behaves correctly even though the script is written for bash:  - The cygpath detection used the bash-only `&amp;&gt;/dev/null` redirection.   dash misparses `&amp;&gt;`, so `command -v cygpath &amp;&gt;/dev/nul</description>
+    </item>
+    <item>
+      <title>Merge pull request #3234 from haelyra/feat/ecc-029-production-acceptance</title>
+      <link>https://github.com/affaan-m/ECC/commit/eaeef53a15854e68cb2be336c2ba47e111fa25c3</link>
+      <guid isPermaLink="false">eaeef53</guid>
+      <pubDate>Sun, 27 Sep 2026 22:34:29 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>feat(profiles): add opt-in Lean/Full with hybrid Auto skill selection</description>
+    </item>
+    <item>
+      <title>fix(profiles): bind routing receipts and harden review paths</title>
+      <link>https://github.com/affaan-m/ECC/commit/befde0d2cd4fc03e9c47931e9480aa906ce7572b</link>
+      <guid isPermaLink="false">befde0d</guid>
+      <pubDate>Sun, 27 Sep 2026 22:01:40 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(ci): allow slow Windows test cleanup</title>
+      <link>https://github.com/affaan-m/ECC/commit/a9e3ecb77f877a0ce30dfe576c3a1e805edf7491</link>
+      <guid isPermaLink="false">a9e3ecb</guid>
+      <pubDate>Sun, 27 Sep 2026 21:37:47 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(profiles): make evaluator permissions and Windows checks portable</title>
+      <link>https://github.com/affaan-m/ECC/commit/874883c72807d4286d0318abb9d7509fd8d7a276</link>
+      <guid isPermaLink="false">874883c</guid>
+      <pubDate>Sun, 27 Sep 2026 21:03:28 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>I had Opus 5.5 create a parody of the &quot;nihilistic&quot; penguin and it created everything (models, textures) from scratch by using Blender as a Python library. Pretty spectacular. https://t.co/Uwc9BE9jnf</title>
+      <link>https://x.com/felixrieseberg/status/2104310106762678734</link>
+      <guid isPermaLink="false">2104310106762678734</guid>
+      <pubDate>Sun, 27 Sep 2026 20:40:00 GMT</pubDate>
+      <category>twitter-felixrieseberg</category>
+      <description>I had Opus 5.5 create a parody of the &quot;nihilistic&quot; penguin and it created everything (models, textures) from scratch by using Blender as a Python library. Pretty spectacular. https://t.co/Uwc9BE9jnf</description>
+    </item>
+    <item>
+      <title>I remade my homepage with Opus 5.5 and pushed it hard. We made music &amp;amp; movies, drew textures, modeled things in Blender: https://t.co/WOGPQVm6Fq
+
+I&apos;m really happy with the result! https://t.co/y6y</title>
+      <link>https://x.com/felixrieseberg/status/2104304766599971110</link>
+      <guid isPermaLink="false">2104304766599971110</guid>
+      <pubDate>Sun, 27 Sep 2026 20:18:47 GMT</pubDate>
+      <category>twitter-felixrieseberg</category>
+      <description>I remade my homepage with Opus 5.5 and pushed it hard. We made music &amp;amp; movies, drew textures, modeled things in Blender: https://t.co/WOGPQVm6Fq
+
+I&apos;m really happy with the result! https://t.co/y6yUXaKb7K</description>
     </item>
     <item>
       <title>The mood between subs...</title>
@@ -32,35 +132,11 @@
       <description/>
     </item>
     <item>
-      <title>chore: release v18.7.0 (#1645)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/24d027834ddcd4b82945a5c039cb1eb20dfa1937</link>
-      <guid isPermaLink="false">24d0278</guid>
-      <pubDate>Sun, 27 Sep 2026 09:57:52 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v18.7.0.</description>
-    </item>
-    <item>
-      <title>docs: add complete changelog for v18.7.0 (#1644)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/fcc35447a1b0e9ef0d5b5229ddabbb142195c1f5</link>
-      <guid isPermaLink="false">fcc3544</guid>
-      <pubDate>Sun, 27 Sep 2026 09:36:35 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
       <title>Show HN: Gigantua – A Black Hole in your Browser</title>
       <link>https://claude.ai/artifact/XmWGFtQPgn8aJvU193Ksf8</link>
       <guid isPermaLink="false">49864907</guid>
       <pubDate>Sun, 27 Sep 2026 09:22:47 GMT</pubDate>
       <category>hn-claude-ai</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: make canonical sitemap dates reproducible (#1642)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/af473eb920771658e7493a01fffcc39e2a4d6c95</link>
-      <guid isPermaLink="false">af473eb</guid>
-      <pubDate>Sun, 27 Sep 2026 08:46:13 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
     </item>
     <item>
@@ -528,14 +604,6 @@ I spoke to my computer for 5mins, claude worked for 12 hours, and I woke up t…
       <description>Squash merge of 1 commit</description>
     </item>
     <item>
-      <title>docs: point the Kimi Code link at the international site (kimi.ai/code) (#3183)</title>
-      <link>https://github.com/affaan-m/ECC/commit/e482e579415fde18357cafce70f177ae19fd7f03</link>
-      <guid isPermaLink="false">e482e57</guid>
-      <pubDate>Thu, 24 Sep 2026 16:52:47 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>kimi.com/code serves mainland China (WeChat / +86 sign-in, Alipay and WeChat Pay), so ECC&apos;s international readers cannot sign up or pay there. Point the Kimi Code link in the install-target tables at kimi.ai/code (Google sign-in, card payment) instead, keeping the same aff value.</description>
-    </item>
-    <item>
       <title>Update claude-api skill: link refusal billing to the docs (#1825)</title>
       <link>https://github.com/anthropics/skills/commit/33375500bcea98d610eb30ce10ac4e59b89c390d</link>
       <guid isPermaLink="false">3337550</guid>
@@ -795,14 +863,6 @@ Full Changelog: https://github.com/anthropi</description>
       <description/>
     </item>
     <item>
-      <title>Recorded, Not Proven</title>
-      <link>https://claude.ai/artifact/HucaoGuaQqp9g9TZX97HGw</link>
-      <guid isPermaLink="false">49808150</guid>
-      <pubDate>Tue, 22 Sep 2026 21:09:59 GMT</pubDate>
-      <category>hn-claude-ai</category>
-      <description/>
-    </item>
-    <item>
       <title>A thread of early explorations with Claude Opus 5.5:
 
 A short story about a watermelon created by @kevin_t_ngo. https://t.co/v48srlNi7V</title>
@@ -845,18 +905,6 @@ A short story about a watermelon created by @kevin_t_ngo. https://t.co/v48srlNi7
       <description/>
     </item>
     <item>
-      <title>RT @claudeai: Introducing Claude Opus 5.5, the first model in our new Claude 5.5 family.
-
-It performs at the level of Claude Fable 5.1 for…</title>
-      <link>https://x.com/felixrieseberg/status/2102443151890030849</link>
-      <guid isPermaLink="false">2102443151890030849</guid>
-      <pubDate>Tue, 22 Sep 2026 17:01:23 GMT</pubDate>
-      <category>twitter-felixrieseberg</category>
-      <description>RT @claudeai: Introducing Claude Opus 5.5, the first model in our new Claude 5.5 family.
-
-It performs at the level of Claude Fable 5.1 for…</description>
-    </item>
-    <item>
       <title>v2.1.280</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.280</link>
       <guid isPermaLink="false">v2.1.280</guid>
@@ -866,61 +914,6 @@ It performs at the level of Claude Fable 5.1 for…</description>
 - Added Claude Opus 5.5 (claude-opus-5-5), now the default Opus model — 1M context, $4/$20 per Mtok with $0.20/Mtok cache reads
 - Added mouse support to more lists in fullscreen mode: the wheel scrolls the /skills list, and a skill&apos;s state options in /plugin can be clicked
 - Added CLA</description>
-    </item>
-    <item>
-      <title>Claude Opus 5.5 is available today.</title>
-      <link>https://x.com/AnthropicAI/status/2102435703535939725</link>
-      <guid isPermaLink="false">2102435703535939725</guid>
-      <pubDate>Tue, 22 Sep 2026 16:31:47 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>Claude Opus 5.5 is available today.</description>
-    </item>
-    <item>
-      <title>Introducing Claude Opus 5.5, the first model in our new Claude 5.5 family.
-
-It performs at the level of Claude Fable 5.1 for most tasks, and costs 40% less to run than Opus 5. https://t.co/Q9C2VKQ79f</title>
-      <link>https://x.com/claudeai/status/2102435511222890900</link>
-      <guid isPermaLink="false">2102435511222890900</guid>
-      <pubDate>Tue, 22 Sep 2026 16:31:01 GMT</pubDate>
-      <category>twitter-claudeai</category>
-      <description>Introducing Claude Opus 5.5, the first model in our new Claude 5.5 family.
-
-It performs at the level of Claude Fable 5.1 for most tasks, and costs 40% less to run than Opus 5. https://t.co/Q9C2VKQ79f</description>
-    </item>
-    <item>
-      <title>Claude Opus 5.5</title>
-      <link>https://www.anthropic.com/claude-opus-5-5</link>
-      <guid isPermaLink="false">49803892</guid>
-      <pubDate>Tue, 22 Sep 2026 16:29:05 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>google-cloud-sdk: v0.0.14</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.14</link>
-      <guid isPermaLink="false">google-cloud-sdk-v0.0.14</guid>
-      <pubDate>Tue, 22 Sep 2026 16:28:25 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.0.14 (2026-09-22)
-Full Changelog: google-cloud-sdk-v0.0.13...google-cloud-sdk-v0.0.14</description>
-    </item>
-    <item>
-      <title>aws-sdk: v0.7.4</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.7.4</link>
-      <guid isPermaLink="false">aws-sdk-v0.7.4</guid>
-      <pubDate>Tue, 22 Sep 2026 16:28:19 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.7.4 (2026-09-22)
-Full Changelog: aws-sdk-v0.7.3...aws-sdk-v0.7.4</description>
-    </item>
-    <item>
-      <title>foundry-sdk: v0.4.9</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.9</link>
-      <guid isPermaLink="false">foundry-sdk-v0.4.9</guid>
-      <pubDate>Tue, 22 Sep 2026 16:28:13 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.4.9 (2026-09-22)
-Full Changelog: foundry-sdk-v0.4.8...foundry-sdk-v0.4.9</description>
     </item>
   </channel>
 </rss>

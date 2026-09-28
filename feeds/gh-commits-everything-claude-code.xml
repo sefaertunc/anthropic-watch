@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 27 Sep 2026 11:39:20 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 13:14:39 GMT</lastBuildDate>
+    <item>
+      <title>fix(install): support invocation through POSIX sh (#3014)</title>
+      <link>https://github.com/affaan-m/ECC/commit/042924e1f47df4a7a9bad34a3768f48144493834</link>
+      <guid isPermaLink="false">042924e</guid>
+      <pubDate>Mon, 28 Sep 2026 00:04:10 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* fix(install): make install.sh robust to sh/dash invocation  Two related portability fixes so `sh install.sh` behaves correctly even though the script is written for bash:  - The cygpath detection used the bash-only `&amp;&gt;/dev/null` redirection.   dash misparses `&amp;&gt;`, so `command -v cygpath &amp;&gt;/dev/nul</description>
+    </item>
+    <item>
+      <title>Merge pull request #3234 from haelyra/feat/ecc-029-production-acceptance</title>
+      <link>https://github.com/affaan-m/ECC/commit/eaeef53a15854e68cb2be336c2ba47e111fa25c3</link>
+      <guid isPermaLink="false">eaeef53</guid>
+      <pubDate>Sun, 27 Sep 2026 22:34:29 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>feat(profiles): add opt-in Lean/Full with hybrid Auto skill selection</description>
+    </item>
+    <item>
+      <title>fix(profiles): bind routing receipts and harden review paths</title>
+      <link>https://github.com/affaan-m/ECC/commit/befde0d2cd4fc03e9c47931e9480aa906ce7572b</link>
+      <guid isPermaLink="false">befde0d</guid>
+      <pubDate>Sun, 27 Sep 2026 22:01:40 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(ci): allow slow Windows test cleanup</title>
+      <link>https://github.com/affaan-m/ECC/commit/a9e3ecb77f877a0ce30dfe576c3a1e805edf7491</link>
+      <guid isPermaLink="false">a9e3ecb</guid>
+      <pubDate>Sun, 27 Sep 2026 21:37:47 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(profiles): make evaluator permissions and Windows checks portable</title>
+      <link>https://github.com/affaan-m/ECC/commit/874883c72807d4286d0318abb9d7509fd8d7a276</link>
+      <guid isPermaLink="false">874883c</guid>
+      <pubDate>Sun, 27 Sep 2026 21:03:28 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat(profiles): add opt-in Lean/Full and hybrid Auto selection</title>
+      <link>https://github.com/affaan-m/ECC/commit/0765f7a2ca2bd5df214d3aa7ba7e7ac19db8b189</link>
+      <guid isPermaLink="false">0765f7a</guid>
+      <pubDate>Sun, 27 Sep 2026 20:44:36 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>docs: point the Kimi Code link at the international site (kimi.ai/code) (#3183)</title>
       <link>https://github.com/affaan-m/ECC/commit/e482e579415fde18357cafce70f177ae19fd7f03</link>
@@ -358,54 +406,6 @@
       <pubDate>Sat, 12 Sep 2026 03:45:33 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>Remove the two reference catalog entries and their promotional descriptions. The catalog retains its other 34 entries unchanged.  Validated JSON structure, exact 13-line deletion, tracked references and independent code/security review.</description>
-    </item>
-    <item>
-      <title>feat(mcp): add serply-search server catalog entry (#3085)</title>
-      <link>https://github.com/affaan-m/ECC/commit/fba8e352cc8e2847b7b0f9289d868f399e8fb066</link>
-      <guid isPermaLink="false">fba8e35</guid>
-      <pubDate>Sat, 12 Sep 2026 03:32:09 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds an opt-in HTTP entry for Serply&apos;s hosted MCP endpoint to mcp-configs/mcp-servers.json, following the parallel-search and browser-use shape: https URL, X-Api-Key header placeholder, nothing enabled by default. Independent review confirmed valid JSON, catalog-tier policy per docs/MCP-CONNECTOR-PO</description>
-    </item>
-    <item>
-      <title>docs: add explicit hook consent to OpenCode install command (#3080)</title>
-      <link>https://github.com/affaan-m/ECC/commit/bdf92d8fab701ac31990ada6250ac15757ab0451</link>
-      <guid isPermaLink="false">bdf92d8</guid>
-      <pubDate>Sat, 12 Sep 2026 03:20:03 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The README&apos;s OpenCode full-profile install command fails because assertHookConsentReady refuses to materialize hooks-runtime without explicit consent; --profile full selects the runtime so the gate fires. Add --enable-hooks to the documented command. Independent review reproduced the failure and the</description>
-    </item>
-    <item>
-      <title>fix(hooks): block-no-verify handles stuck optional values and long-option prefixes (#3073)</title>
-      <link>https://github.com/affaan-m/ECC/commit/4f373874209b4b63fdec0469b76992923ea0a9d0</link>
-      <guid isPermaLink="false">4f37387</guid>
-      <pubDate>Sat, 12 Sep 2026 02:07:29 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Two cases the word-level rewrite still got wrong. Short options that take an optional stuck value (-u[mode], -S[keyid]) end the cluster scan, so git commit -uno and -Sn are allowed while -nu stays blocked. Git accepts any unambiguous long-option prefix, so --no-veri and --no-verif on commit, push, m</description>
-    </item>
-    <item>
-      <title>feat(rails-patterns): add Rails framework patterns skill (#3074)</title>
-      <link>https://github.com/affaan-m/ECC/commit/95b9fe157f815ef064793e49eacfecdbbfc5b813</link>
-      <guid isPermaLink="false">95b9fe1</guid>
-      <pubDate>Sat, 12 Sep 2026 00:48:16 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds skills/rails-patterns alongside laravel-patterns and django-patterns: directory contract, skinny controllers with service objects, form and query objects, idiomatic ActiveRecord, background jobs, ViewComponent, Hotwire, and the Rails 8 Solid stack. Decisions defer to rules/ruby/patterns.md. Reg</description>
-    </item>
-    <item>
-      <title>Merge pull request #3071 from haelyra/maint/stewardship-batch-2026-09-10</title>
-      <link>https://github.com/affaan-m/ECC/commit/c9148d0bb239ed01a95724a5928b98cdf9c30658</link>
-      <guid isPermaLink="false">c9148d0</guid>
-      <pubDate>Thu, 10 Sep 2026 20:57:26 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix: consolidate verified stewardship repairs</description>
-    </item>
-    <item>
-      <title>test(github-ops): report locale policy failures</title>
-      <link>https://github.com/affaan-m/ECC/commit/2ae86b4fcf661d6c1f60ee2fe7d86eb1cf8b14ca</link>
-      <guid isPermaLink="false">2ae86b4</guid>
-      <pubDate>Thu, 10 Sep 2026 19:40:13 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>
