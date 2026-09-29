@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 28 Sep 2026 13:14:39 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 12:22:31 GMT</lastBuildDate>
+    <item>
+      <title>0.3.284</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.284</guid>
+      <pubDate>Tue, 29 Sep 2026 12:21:44 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added a renamed skill&apos;s directory name to its SlashCommand aliases when the name is plain and Claude Code ships no command by that name
+- Added applied.ultracodeAvailable and applied.ultracodeRequested to getSettings(): whether this session can run Ultracode, and whether it is requested, independe</description>
+    </item>
     <item>
       <title>0.3.283</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -434,14 +443,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Fixed --replay-user-messages with --include-partial-messages emitting the turn-start user replay after the first content block instead of before the turn&apos;s content events
 - Added SDKAssistantMessage.timestamp (ISO-8601) to the live stream, matching SDKUserMessage; older emitters omit it, consumers</description>
-    </item>
-    <item>
-      <title>0.3.210</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.210</guid>
-      <pubDate>Wed, 15 Jul 2026 08:16:02 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added timedOutAfterMs to BashToolOutput, set when a command is auto-backgrounded on timeout</description>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-28T13:14:39.054Z",
+  "generated": "2026-09-29T12:22:31.998Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "fbe07fb",
+      "title": "Exempt command sources from scope guard source.url check (#6296)",
+      "date": "2026-09-28T13:14:38Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "snippet": "* Exempt command sources from scope guard source.url check  Command sources have no repo URL to validate, so the guard no longer fails a non-member PR that adds one.  Remote-Dev: homespace  * Flag unvalidated command sources in scope guard output  Report command-source entries the guard skipped and ",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "fbe07fb|gh-commits-plugins-official"
+    },
     {
       "id": "fa59bc9",
       "title": "Merge pull request #6309 from anthropics/morganl/code-modernization-consolidated",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "cc59547|gh-commits-plugins-official"
-    },
-    {
-      "id": "bf661c8",
-      "title": "Merge pull request #6098 from anthropics/bump/clickhouse",
-      "date": "2026-09-14T17:13:07Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/bf661c8083d919ee5a108e66b2e5e8ea1251c5b6",
-      "snippet": "bump(clickhouse): 988a7a39 → e3229ed4",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "bf661c8|gh-commits-plugins-official"
     }
   ]
 }

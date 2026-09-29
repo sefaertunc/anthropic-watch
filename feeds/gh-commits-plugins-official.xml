@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 28 Sep 2026 13:14:39 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 12:22:31 GMT</lastBuildDate>
+    <item>
+      <title>Exempt command sources from scope guard source.url check (#6296)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/fbe07fb6ce7d51d8e86ca6efdf050059894cdb80</link>
+      <guid isPermaLink="false">fbe07fb</guid>
+      <pubDate>Mon, 28 Sep 2026 13:14:38 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>* Exempt command sources from scope guard source.url check  Command sources have no repo URL to validate, so the guard no longer fails a non-member PR that adds one.  Remote-Dev: homespace  * Flag unvalidated command sources in scope guard output  Report command-source entries the guard skipped and </description>
+    </item>
     <item>
       <title>Merge pull request #6309 from anthropics/morganl/code-modernization-consolidated</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/fa59bc9037741ecfa131aa27938272605710d7b2</link>
@@ -398,14 +406,6 @@
       <pubDate>Mon, 14 Sep 2026 17:14:05 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>bump(fastly-agent-toolkit): 2b3bdd64 → 10ceb976</description>
-    </item>
-    <item>
-      <title>Merge pull request #6098 from anthropics/bump/clickhouse</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/bf661c8083d919ee5a108e66b2e5e8ea1251c5b6</link>
-      <guid isPermaLink="false">bf661c8</guid>
-      <pubDate>Mon, 14 Sep 2026 17:13:07 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(clickhouse): 988a7a39 → e3229ed4</description>
     </item>
   </channel>
 </rss>

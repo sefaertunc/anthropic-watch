@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-28T13:14:39.060Z",
+  "generated": "2026-09-29T12:22:32.005Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "e9e2487",
+      "title": "fix: keep contrib.rocks headroom so the README shows every contributor (#1683)",
+      "date": "2026-09-29T10:07:32Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/e9e248762251f7063e18c8549ec987e88490b782",
+      "snippet": "# Pull Request Description  Fixes the `## Repo Contributors` image so it actually contains every contributor.  **The bug.** `CONTRIB_ROCKS_MAX` was `500`, and `max` is part of the image URL. contrib.rocks serves a cached image per exact URL for up to three days (`cache-control: public, max-age=25920",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "e9e2487|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "2de1b2c",
+      "title": "chore: release v18.9.0 (#1680)",
+      "date": "2026-09-29T09:30:24Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/2de1b2c046623c29cef266e97243b6c6f79704cf",
+      "snippet": "Prepare protected release v18.9.0.",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "2de1b2c|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "2cf8f29",
+      "title": "docs: add 18.9.0 changelog entry (#1679)",
+      "date": "2026-09-29T09:06:45Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/2cf8f29b3c3c6f6a80e0b8966899eb50fef056fa",
+      "snippet": "# Pull Request Description  Adds the `[18.9.0]` section to `CHANGELOG.md`.  The protected release flow requires the target changelog entry to be on `main` before `release:prepare` runs, so this ships the release notes for the batch merged after `18.8.0` in a separate source PR instead of a release-n",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "2cf8f29|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "28759f1",
+      "title": "fix: resolve Bing homepage meta description warning (#1678)",
+      "date": "2026-09-29T08:50:41Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/28759f143be1ffb3236bc5b53d22c5fd0dfeec3d",
+      "snippet": "# Pull Request Description  Shorten the homepage meta description flagged by Bing Webmaster Tools and keep the live SEO check aligned with the published copy.",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "28759f1|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "66afb46",
+      "title": "fix: align live SEO checks with catalog metadata (#1677)",
+      "date": "2026-09-29T07:56:24Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/66afb4629426da756b33175c82a60be477b714bc",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "66afb46|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "c4fcb56",
+      "title": "fix: override ip-address to clear loki-mode lockfile advisories (#1675)",
+      "date": "2026-09-28T22:29:48Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c4fcb56997c5f3856854f9be559bcfd972d2cc02",
+      "snippet": "# Pull Request Description  Closes the four open Dependabot alerts for `ip-address` in the `loki-mode` example backend lockfile.  `express-rate-limit@8.7.0` pulls `ip-address@10.4.0`, which is affected by two moderate advisories:  - GHSA-rpw4-54j3-4h4q - `Address6.isLinkLocal()` matches all of `fe80",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "c4fcb56|gh-commits-antigravity-awesome-skills"
+    },
     {
       "id": "8526ebc",
       "title": "chore: release v18.8.0 (#1659)",
@@ -491,72 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
       "uniqueKey": "196d2c4|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "87107e3",
-      "title": "chore: release v18.0.0",
-      "date": "2026-09-21T06:49:45Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/87107e3c1e34ccf178d54b4850c63212aa695b08",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "87107e3|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "1bf639b",
-      "title": "feat: 50 curated upstream skills (reviewed) (#1539)",
-      "date": "2026-09-21T06:34:18Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/1bf639b0d18d73a764cb12c5eb5e10ef02b1c04e",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "1bf639b|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "5cebd34",
-      "title": "chore: release v17.8.4 (#1536)",
-      "date": "2026-09-20T21:07:03Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/5cebd344a13123d16e0ea453d56bb67984c493cf",
-      "snippet": "Prepare protected release v17.8.4.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "5cebd34|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "3f81594",
-      "title": "fix(web-app): expect Core SearchAction in Pages SEO gate (#1535)",
-      "date": "2026-09-20T20:58:23Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/3f81594cf0c0c497ecbd8bbb1cf47b1c94b9972f",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "3f81594|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "83b367a",
-      "title": "chore: release v17.8.3 (#1534)",
-      "date": "2026-09-20T20:47:45Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/83b367a791a7aad621e7fe9eda3697d63e0192f0",
-      "snippet": "Prepare protected release v17.8.3.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "83b367a|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "bb7a048",
-      "title": "fix(web-app): align landing JSON-LD identities for Pages SEO (#1533)",
-      "date": "2026-09-20T20:36:06Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/bb7a048f21205344f49f347d5bbc506eca41b2bb",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "bb7a048|gh-commits-antigravity-awesome-skills"
     }
   ]
 }

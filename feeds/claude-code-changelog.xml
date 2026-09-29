@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 28 Sep 2026 13:14:39 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 12:22:31 GMT</lastBuildDate>
+    <item>
+      <title>2.1.284</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.284</guid>
+      <pubDate>Tue, 29 Sep 2026 12:21:43 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added Claude Sonnet 5.5 (claude-sonnet-5-5), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads
+- Added a &quot;Yes, but ask again next time&quot; answer to auto mode&apos;s prompt before a read outside the working directories, so you can allow that one re</description>
+    </item>
     <item>
       <title>2.1.283</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -448,14 +457,6 @@
       <description>- Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck
 - Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead
 - Fixed isolation: &apos;worktree&apos; </description>
-    </item>
-    <item>
-      <title>2.1.209</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.209</guid>
-      <pubDate>Tue, 14 Jul 2026 08:09:49 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)</description>
     </item>
   </channel>
 </rss>

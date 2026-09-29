@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-28T13:14:39.014Z",
+  "generated": "2026-09-29T12:22:31.958Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.284",
+      "title": "v2.1.284",
+      "date": "2026-09-28T18:02:03Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
+      "snippet": "What's changed\n- Added Claude Sonnet 5.5 (claude-sonnet-5-5), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads\n- Added a \"Yes, but ask again next time\" answer to auto mode's prompt before a read outside the working directories, so you can al",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.284|claude-code-releases"
+    },
     {
       "id": "v2.1.283",
       "title": "v2.1.283",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.223|claude-code-releases"
-    },
-    {
-      "id": "v2.1.222",
-      "title": "v2.1.222",
-      "date": "2026-08-04T22:39:55Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.222",
-      "snippet": "What's changed\n- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type\n- Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (su",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.222|claude-code-releases"
     }
   ]
 }

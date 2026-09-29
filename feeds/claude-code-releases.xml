@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 28 Sep 2026 13:14:39 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 12:22:31 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.284</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.284</link>
+      <guid isPermaLink="false">v2.1.284</guid>
+      <pubDate>Mon, 28 Sep 2026 18:02:03 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added Claude Sonnet 5.5 (claude-sonnet-5-5), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads
+- Added a &quot;Yes, but ask again next time&quot; answer to auto mode&apos;s prompt before a read outside the working directories, so you can al</description>
+    </item>
     <item>
       <title>v2.1.283</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.283</link>
@@ -491,16 +501,6 @@
       <description>What&apos;s changed
 - Added owner wildcard entries (&quot;owner/&quot;) to the strictKnownMarketplaces and blockedMarketplaces managed settings for allowing or blocking all marketplace repos under a GitHub org
 - Added a warning when workflow agents, forked skills, slash commands, or resumed background agents&apos; requ</description>
-    </item>
-    <item>
-      <title>v2.1.222</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.222</link>
-      <guid isPermaLink="false">v2.1.222</guid>
-      <pubDate>Tue, 04 Aug 2026 22:39:55 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type
-- Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (su</description>
     </item>
   </channel>
 </rss>
