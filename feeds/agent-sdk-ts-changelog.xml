@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 29 Sep 2026 12:22:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <item>
+      <title>0.3.285</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.285</guid>
+      <pubDate>Wed, 30 Sep 2026 12:07:16 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added an optional read.title (the artifact&apos;s stored title) to the Artifact tool&apos;s structured read result
+- Added providernotallowed to startupfailurereason and allowedProviders to the Settings type
+- Fixed sessions with CLAUDECODEFORKSUBAGENT=1: a subagent&apos;s own Agent call now runs in the foregrou</description>
+    </item>
     <item>
       <title>0.3.284</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -434,15 +444,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Fixed dash-leading resumeSessionAt and sessionId values being passed to the CLI as separate argv tokens; both now use equals-form (--flag=value)
 - Agent tool output now includes the resolved model when a mid-turn model swap changed the subagent&apos;s model</description>
-    </item>
-    <item>
-      <title>0.3.211</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.211</guid>
-      <pubDate>Thu, 16 Jul 2026 08:17:07 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Fixed --replay-user-messages with --include-partial-messages emitting the turn-start user replay after the first content block instead of before the turn&apos;s content events
-- Added SDKAssistantMessage.timestamp (ISO-8601) to the live stream, matching SDKUserMessage; older emitters omit it, consumers</description>
     </item>
   </channel>
 </rss>

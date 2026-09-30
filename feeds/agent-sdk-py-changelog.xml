@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 29 Sep 2026 12:22:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <item>
+      <title>0.2.162</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.162</guid>
+      <pubDate>Wed, 30 Sep 2026 12:07:17 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Internal/Other Changes
+- Updated bundled Claude CLI to version 2.1.285</description>
+    </item>
     <item>
       <title>0.2.161</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -452,15 +461,6 @@
       <category>agent-sdk-py-changelog</category>
       <description>Internal/Other Changes
 - Updated bundled Claude CLI to version 2.1.178</description>
-    </item>
-    <item>
-      <title>0.2.101</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.101</guid>
-      <pubDate>Sat, 13 Jun 2026 09:20:03 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>Bug Fixes
-- Typed taskupdated lifecycle events: Exposed terminal system/taskupdated events as typed TaskUpdatedMessage with taskid, patch, status, sessionid, and uuid fields. Consumers tracking active background tasks no longer hang when a task finishes via a taskupdated message without a correspond</description>
     </item>
   </channel>
 </rss>

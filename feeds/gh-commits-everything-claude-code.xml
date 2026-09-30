@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 29 Sep 2026 12:22:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <item>
+      <title>feat(pi): curated pi/core skills+prompts profile, CI load test, and 2.2.2 release sync (#3264)</title>
+      <link>https://github.com/affaan-m/ECC/commit/c70874fae9eb0e5ad0365beb7e2955899fd1d30f</link>
+      <guid isPermaLink="false">c70874f</guid>
+      <pubDate>Wed, 30 Sep 2026 01:24:05 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Adds a curated, Pi-native, skills+prompts-only profile at pi/core/ for downstream packagers that mirror GitHub Releases.  - manifests/pi-core.json: explicit include lists, per-item exclusion reasons, curation rules, safety allowlists; every root skill and command must be classified. - scripts/build-</description>
+    </item>
+    <item>
+      <title>Merge pull request #3251 from affaan-m/affaan/integrate-reviewed-followups-20260928</title>
+      <link>https://github.com/affaan-m/ECC/commit/d30588f90a82e49e3d4c18c072c9f1e9f1c294f6</link>
+      <guid isPermaLink="false">d30588f</guid>
+      <pubDate>Tue, 29 Sep 2026 23:04:47 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix: integrate reviewed contributor repairs and bounded installer tests</description>
+    </item>
+    <item>
+      <title>merge: preserve PR #3243 rollback redraw regression</title>
+      <link>https://github.com/affaan-m/ECC/commit/759d841b24b7d30809e7ce872b553cacdf7ed934</link>
+      <guid isPermaLink="false">759d841</guid>
+      <pubDate>Tue, 29 Sep 2026 22:25:59 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test(gateguard): align spawned hook timeouts</title>
+      <link>https://github.com/affaan-m/ECC/commit/51a59a11123f3d3ee928e29462a1067af3f9563a</link>
+      <guid isPermaLink="false">51a59a1</guid>
+      <pubDate>Tue, 29 Sep 2026 22:22:26 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge branch &apos;main&apos; into affaan/integrate-reviewed-followups-20260928</title>
+      <link>https://github.com/affaan-m/ECC/commit/dc3f44ad5a40bf4e6fbfbadf236a18bbb4cddd6c</link>
+      <guid isPermaLink="false">dc3f44a</guid>
+      <pubDate>Tue, 29 Sep 2026 22:13:54 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(hooks): scope MCP health checks to MCP tools (#2838)</title>
+      <link>https://github.com/affaan-m/ECC/commit/bd9402f774511f682f6a6d9a8c5dcc38a4c5536c</link>
+      <guid isPermaLink="false">bd9402f</guid>
+      <pubDate>Tue, 29 Sep 2026 19:08:37 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Anchor the PreToolUse and PostToolUseFailure MCP health-check matchers so non-MCP tool calls do not spawn the health hook.</description>
+    </item>
+    <item>
+      <title>test(control-pane): assert the rollback redraws without waiting for a resize</title>
+      <link>https://github.com/affaan-m/ECC/commit/a85f43b1fa727009b68646aa40b4d0568f799e6b</link>
+      <guid isPermaLink="false">a85f43b</guid>
+      <pubDate>Tue, 29 Sep 2026 14:02:41 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The malformed-drawing rollback test took its marker baseline before the malformed poll but only checked it after resizeAgain(). Resize redraws the accepted view on its own, so the test still passed with the immediate rollback redraw removed and the canvas left blank until the operator resized.  Reco</description>
+    </item>
+    <item>
+      <title>Merge reviewed Biome-filename correction from PR2835</title>
+      <link>https://github.com/affaan-m/ECC/commit/93fca4a604ea8cdf735585337404920ba74d139f</link>
+      <guid isPermaLink="false">93fca4a</guid>
+      <pubDate>Mon, 28 Sep 2026 11:07:45 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Source-PR: https://github.com/affaan-m/ECC/pull/2835 Source-Head: 7ffea7091a8323e8eaa65a76183c0196479c20ec</description>
+    </item>
+    <item>
+      <title>Merge reviewed append-assignment correction from PR2965</title>
+      <link>https://github.com/affaan-m/ECC/commit/e10bbaa4925d8199c4a382a096b5ab9840f24b3e</link>
+      <guid isPermaLink="false">e10bbaa</guid>
+      <pubDate>Mon, 28 Sep 2026 11:07:45 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Source-PR: https://github.com/affaan-m/ECC/pull/2965 Source-Head: eca846248d6e6837d0881f7dcc251fc390aa37bd</description>
+    </item>
+    <item>
+      <title>fix(hooks): distinguish Biome configs from results files</title>
+      <link>https://github.com/affaan-m/ECC/commit/7ffea7091a8323e8eaa65a76183c0196479c20ec</link>
+      <guid isPermaLink="false">7ffea70</guid>
+      <pubDate>Mon, 28 Sep 2026 11:07:07 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Preserve the original contributor histories and apply the exact independently reviewed repair.  Source-Parent: 74023e568908f528c9d9ae1a9bae501f4c1f2e38 Review-Manifest-SHA256: 208a6350119857df7c1e5b83a46cdba0b7f7399f58ed60167397920c7a21b454</description>
+    </item>
     <item>
       <title>fix(install): support invocation through POSIX sh (#3014)</title>
       <link>https://github.com/affaan-m/ECC/commit/042924e1f47df4a7a9bad34a3768f48144493834</link>
@@ -326,86 +406,6 @@
       <pubDate>Sat, 19 Sep 2026 01:41:50 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>Merge pull request #3156 from affaan-m/fix/sponsor-status-20260917</title>
-      <link>https://github.com/affaan-m/ECC/commit/dd6ee538aee0f548d4a6b520118f875431fd749e</link>
-      <guid isPermaLink="false">dd6ee53</guid>
-      <pubDate>Thu, 17 Sep 2026 18:04:06 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>docs: move Atlas Cloud to past sponsors</description>
-    </item>
-    <item>
-      <title>docs: archive Atlas Cloud sponsorship</title>
-      <link>https://github.com/affaan-m/ECC/commit/15cd6ff506f3f839db93bae637f6a60ee74484dc</link>
-      <guid isPermaLink="false">15cd6ff</guid>
-      <pubDate>Thu, 17 Sep 2026 17:13:17 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>docs: Add SerpApi as a sponsor (#3155)</title>
-      <link>https://github.com/affaan-m/ECC/commit/bb1c58a35065f3c15995489826b8837d71643304</link>
-      <guid isPermaLink="false">bb1c58a</guid>
-      <pubDate>Thu, 17 Sep 2026 16:46:44 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* docs: add SerpApi as a new sponsor  * Remove extra anchor closing tag  Co-authored-by: greptile-apps[bot] &lt;165735046+greptile-apps[bot]@users.noreply.github.com&gt;  ---------  Co-authored-by: greptile-apps[bot] &lt;165735046+greptile-apps[bot]@users.noreply.github.com&gt;</description>
-    </item>
-    <item>
-      <title>fix(memory): classify directory traversal failures</title>
-      <link>https://github.com/affaan-m/ECC/commit/8321021c54d670126ce3b2969d5deb880b4b0c2a</link>
-      <guid isPermaLink="false">8321021</guid>
-      <pubDate>Sat, 12 Sep 2026 11:45:40 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(memory): distinguish incomplete reads from missing records</title>
-      <link>https://github.com/affaan-m/ECC/commit/90ef62cb1d637f97e0c7f06f2e51a168c853ac7e</link>
-      <guid isPermaLink="false">90ef62c</guid>
-      <pubDate>Sat, 12 Sep 2026 09:52:29 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Independent local Codex review PASS at 73b07f8d17c6fc17b57eae60fdc43af2be9b4bed, no P0/P1. Independent 66 tests and strict validation of 810 skills passed. CI run 34683976362 passed; all 48 current checks green. Incomplete memory reads fail closed with safe MCP diagnostics; canonical guidance synchr</description>
-    </item>
-    <item>
-      <title>Fix/rails patterns followups</title>
-      <link>https://github.com/affaan-m/ECC/commit/b6ddd13a9f6ec2ccf55bc1773d52391c5afc05ab</link>
-      <guid isPermaLink="false">b6ddd13</guid>
-      <pubDate>Sat, 12 Sep 2026 08:39:08 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Independent local Codex review PASS at a6a641940279b3306933939433b11ef18b2be7f2, no P0/P1. Independent 181 checks and strict skill validation pass. CI run 34667546951 passed, all 45 current checks green. Existing Rails skill mapping and documentation corrections only. Rollback: revert this squash co</description>
-    </item>
-    <item>
-      <title>feat: group verified capsules into offline retrospective reports</title>
-      <link>https://github.com/affaan-m/ECC/commit/ab1f1a09ba90d43c8a87361cc841164f7c9b9c0d</link>
-      <guid isPermaLink="false">ab1f1a0</guid>
-      <pubDate>Sat, 12 Sep 2026 08:35:38 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Independent local Codex review PASS at 472cfa94fbf5fae05e46fbaaf7a3d08077ef6be3, no P0/P1. Independent retrospective, CLI, envelope and capsule tests: 73 passed. CI run 34664487219 attempt 2 passed all 42 jobs. Read-only offline capsule grouping only; no provenance, scoring, execution or promotion c</description>
-    </item>
-    <item>
-      <title>feat(control-pane): live control-plane view with 2D projection and static-threshold advisories</title>
-      <link>https://github.com/affaan-m/ECC/commit/1ed03ecf2ec91aac77f3c98094d7d1136e89b4d4</link>
-      <guid isPermaLink="false">1ed03ec</guid>
-      <pubDate>Sat, 12 Sep 2026 08:17:37 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Exact-head independent local Codex review PASS with no P0/P1. CI run 34680860653 attempt 2 passed at 0707cd431c2b242200a7ef28ab984f4a2c032238. Includes HTTP/schema failure handling, coalesced sampling cache and regression tests. Disclosed P2 follow-ups remain in the merge-queue receipt. Rollback: re</description>
-    </item>
-    <item>
-      <title>fix(hooks): keep hooks.json within Claude Code&apos;s schema</title>
-      <link>https://github.com/affaan-m/ECC/commit/1ac07903ec993f89757b59912d7fb31a366953bd</link>
-      <guid isPermaLink="false">1ac0790</guid>
-      <pubDate>Sat, 12 Sep 2026 06:59:02 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Move stable hook metadata to a validated sidecar while preserving hook commands and installer identity. Reject moved fingerprints and duplicate IDs, and validate before updating metadata. Independent local review passed at c315271624a1fd055b992f2bff889ad2a0ff8a6b; CI run 34678210149 passed. Rollback</description>
-    </item>
-    <item>
-      <title>fix(catalog): remove Serply and Squish entries (#3094)</title>
-      <link>https://github.com/affaan-m/ECC/commit/c4904e3f6381df934fc00bffb0afa7a1f8dae0e3</link>
-      <guid isPermaLink="false">c4904e3</guid>
-      <pubDate>Sat, 12 Sep 2026 03:45:33 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Remove the two reference catalog entries and their promotional descriptions. The catalog retains its other 34 entries unchanged.  Validated JSON structure, exact 13-line deletion, tracked references and independent code/security review.</description>
     </item>
   </channel>
 </rss>

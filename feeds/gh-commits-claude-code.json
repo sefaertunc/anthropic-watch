@@ -5,9 +5,97 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-29T12:22:32.001Z",
+  "generated": "2026-09-30T12:08:05.222Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "732e167",
+      "title": "Merge pull request #97952 from anthropics/security-hardening-gh-actions",
+      "date": "2026-09-30T06:30:04Z",
+      "url": "https://github.com/anthropics/claude-code/commit/732e167ee9d71296b4b63d6f529ac1334513826a",
+      "snippet": "ci: security hardening for GitHub Actions workflows that call Claude",
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "732e167|gh-commits-claude-code"
+    },
+    {
+      "id": "89c73ce",
+      "title": "Remove a compiled Python file committed by mistake",
+      "date": "2026-09-30T06:20:54Z",
+      "url": "https://github.com/anthropics/claude-code/commit/89c73ce6f6e71204b067d456fed154d1111a7811",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "89c73ce|gh-commits-claude-code"
+    },
+    {
+      "id": "2282079",
+      "title": "agents-md: send the AGENTS.md loaded line to the debug log (#98275)",
+      "date": "2026-09-30T01:03:19Z",
+      "url": "https://github.com/anthropics/claude-code/commit/2282079d6ac8824ec4b72a432a03e0c636e0512f",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "2282079|gh-commits-claude-code"
+    },
+    {
+      "id": "684800b",
+      "title": "sec-default: the system prompt's sections continue past the user tier (#97241)",
+      "date": "2026-09-29T19:39:25Z",
+      "url": "https://github.com/anthropics/claude-code/commit/684800b206824dfd0cc8a876e8604b20f72c3617",
+      "snippet": "* sec-default: the system prompt's sections continue past the user tier; the declarations carry prompt.compose  * sec-default: prompt.compose has its own row, a second case where a person's plugin asks first, and the declarations as the event shipped  * sec-default: the two new cases set their sever",
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "684800b|gh-commits-claude-code"
+    },
+    {
+      "id": "ec44ca9",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-09-29T19:27:09Z",
+      "url": "https://github.com/anthropics/claude-code/commit/ec44ca97dc86c33d934c8d55b24959aabf076871",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "ec44ca9|gh-commits-claude-code"
+    },
+    {
+      "id": "16da1ec",
+      "title": "sec-default: a settings deny rule holds over an allow or ask from a plugin the person installed (#98080)",
+      "date": "2026-09-29T19:07:07Z",
+      "url": "https://github.com/anthropics/claude-code/commit/16da1ecd3ff1e18a0522248f20bce52726e653ff",
+      "snippet": "* sec-default: a settings deny rule holds over an allow or ask from a plugin the person installed  * sec-default: the tool.check test plugins carry their verdicts in their own bodies  * sec-default: a user-tier link counts as loosening only when it answers looser than it was handed  * sec-default: t",
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "16da1ec|gh-commits-claude-code"
+    },
+    {
+      "id": "0d7f14d",
+      "title": "sec-default: a managed option, allowManagedModsOnly, keeps the mods a person installs from loading (#98083)",
+      "date": "2026-09-29T17:27:48Z",
+      "url": "https://github.com/anthropics/claude-code/commit/0d7f14dd352fa67affd4e172eb1b6f524dbd709e",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "0d7f14d|gh-commits-claude-code"
+    },
+    {
+      "id": "7dbaea2",
+      "title": "Run @claude mentions and dedupe in auto mode on a model that supports it",
+      "date": "2026-09-29T08:09:10Z",
+      "url": "https://github.com/anthropics/claude-code/commit/7dbaea237fca9aed7baf250390ec4d49a57a2211",
+      "snippet": "claude-sonnet-4-5 predates auto mode, so Claude Code fell back to its default permission mode in the dedupe job. Move it and claude.yml to claude-sonnet-4-6. The action sets --permission-mode acceptEdits for @claude mentions and appends the workflow's claude_args after it, so the --permission-mode a",
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "7dbaea2|gh-commits-claude-code"
+    },
     {
       "id": "dec92bc",
       "title": "mods: revert two changes (agents-md truncated reads, diff forced colors) (#98018)",
@@ -18,6 +106,17 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
       "uniqueKey": "dec92bc|gh-commits-claude-code"
+    },
+    {
+      "id": "574ef0b",
+      "title": "Fail the check when settings name a file outside the repository",
+      "date": "2026-09-28T18:56:30Z",
+      "url": "https://github.com/anthropics/claude-code/commit/574ef0b8b75695b38d15fd35173d6ac0e9e5066e",
+      "snippet": "The check can't read such a file, so it can't tell whether it sets a permission mode.",
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "574ef0b|gh-commits-claude-code"
     },
     {
       "id": "8364969",
@@ -458,105 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
       "uniqueKey": "9d302a8|gh-commits-claude-code"
-    },
-    {
-      "id": "18be13b",
-      "title": "mods: the diff, sec-default and telemetry tests move next to the mods (#93951)",
-      "date": "2026-09-14T01:50:58Z",
-      "url": "https://github.com/anthropics/claude-code/commit/18be13be81538c38efa5cb157fb2fc8da7469855",
-      "snippet": "Squash merge of 4 commits",
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "18be13b|gh-commits-claude-code"
-    },
-    {
-      "id": "0fdc7b2",
-      "title": "diff tests: the walk stops at the last file",
-      "date": "2026-09-13T23:39:02Z",
-      "url": "https://github.com/anthropics/claude-code/commit/0fdc7b2f17709e3965fcb2bcffbe548ed365dcd3",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "0fdc7b2|gh-commits-claude-code"
-    },
-    {
-      "id": "17db2e1",
-      "title": "diff: the dialog's walk stops at the first and last file as the built-in's does, where the ring would wrap",
-      "date": "2026-09-13T23:39:00Z",
-      "url": "https://github.com/anthropics/claude-code/commit/17db2e1954fcd83dc42f749ea69d2f1a2698efc6",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "17db2e1|gh-commits-claude-code"
-    },
-    {
-      "id": "78c94ce",
-      "title": "diff: the rows' widths and reserves live under limits, sparing six of the files a hooks module may link",
-      "date": "2026-09-13T23:29:36Z",
-      "url": "https://github.com/anthropics/claude-code/commit/78c94cecbda07e341e0ad39faaa3095aba323426",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "78c94ce|gh-commits-claude-code"
-    },
-    {
-      "id": "01e6ae4",
-      "title": "diff tests and README: the walk selects and the window follows",
-      "date": "2026-09-13T23:27:06Z",
-      "url": "https://github.com/anthropics/claude-code/commit/01e6ae421fc1f46ad5957a10032d22d05d0675af",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "01e6ae4|gh-commits-claude-code"
-    },
-    {
-      "id": "b593276",
-      "title": "mods: telemetry's types path is ./-relative like the other manifest paths (#93932)",
-      "date": "2026-09-13T01:59:33Z",
-      "url": "https://github.com/anthropics/claude-code/commit/b5932767f3acbd07da25367064827e5cb81f43de",
-      "snippet": "Squash merge of 1 commit",
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "b593276|gh-commits-claude-code"
-    },
-    {
-      "id": "e46ab54",
-      "title": "Merge pull request #93912 from anthropics/poteat/mod-tests-seat",
-      "date": "2026-09-12T22:21:29Z",
-      "url": "https://github.com/anthropics/claude-code/commit/e46ab548ab3ffc5f75309a3f36016fb418c730ca",
-      "snippet": "mods: unit tests for diff, sec-default and telemetry, typed against the plugin declarations",
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "e46ab54|gh-commits-claude-code"
-    },
-    {
-      "id": "c136556",
-      "title": "mods: the CI job tells a build with plugin test by its usage line",
-      "date": "2026-09-12T22:14:00Z",
-      "url": "https://github.com/anthropics/claude-code/commit/c13655688dda0595ed344401877929924ee3f1d5",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "c136556|gh-commits-claude-code"
-    },
-    {
-      "id": "28e2635",
-      "title": "Merge remote-tracking branch 'origin/main' into poteat/mod-tests-seat",
-      "date": "2026-09-12T22:06:58Z",
-      "url": "https://github.com/anthropics/claude-code/commit/28e2635f3505c3cc8ed46f207da018f47132d358",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "28e2635|gh-commits-claude-code"
     }
   ]
 }

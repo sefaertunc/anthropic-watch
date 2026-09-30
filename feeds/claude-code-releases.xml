@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 29 Sep 2026 12:22:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.285</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.285</link>
+      <guid isPermaLink="false">v2.1.285</guid>
+      <pubDate>Tue, 29 Sep 2026 19:27:30 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added CLAUDECODEDISABLEWEBFETCH environment variable to turn off the WebFetch tool
+- Added claude --desktop to open the Claude desktop app on the current directory, or on a session with --continue / --resume &lt;id&gt;
+- Added claude plugin configure &lt;plugin&gt; to show a plugin&apos;s options an</description>
+    </item>
     <item>
       <title>v2.1.284</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.284</link>
@@ -491,16 +502,6 @@
       <description>What&apos;s changed
 - Added self-hosted environments: claude self-hosted-runner turns your own machines or containers into a place Claude Code web, mobile, and desktop sessions can run, on Team and Enterprise plans
 - Added archive plugin source: install plugins from a zip over HTTPS without git or npm, w</description>
-    </item>
-    <item>
-      <title>v2.1.223</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.223</link>
-      <guid isPermaLink="false">v2.1.223</guid>
-      <pubDate>Thu, 06 Aug 2026 00:52:37 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added owner wildcard entries (&quot;owner/&quot;) to the strictKnownMarketplaces and blockedMarketplaces managed settings for allowing or blocking all marketplace repos under a GitHub org
-- Added a warning when workflow agents, forked skills, slash commands, or resumed background agents&apos; requ</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 29 Sep 2026 12:22:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #97952 from anthropics/security-hardening-gh-actions</title>
+      <link>https://github.com/anthropics/claude-code/commit/732e167ee9d71296b4b63d6f529ac1334513826a</link>
+      <guid isPermaLink="false">732e167</guid>
+      <pubDate>Wed, 30 Sep 2026 06:30:04 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>ci: security hardening for GitHub Actions workflows that call Claude</description>
+    </item>
+    <item>
+      <title>Remove a compiled Python file committed by mistake</title>
+      <link>https://github.com/anthropics/claude-code/commit/89c73ce6f6e71204b067d456fed154d1111a7811</link>
+      <guid isPermaLink="false">89c73ce</guid>
+      <pubDate>Wed, 30 Sep 2026 06:20:54 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>agents-md: send the AGENTS.md loaded line to the debug log (#98275)</title>
+      <link>https://github.com/anthropics/claude-code/commit/2282079d6ac8824ec4b72a432a03e0c636e0512f</link>
+      <guid isPermaLink="false">2282079</guid>
+      <pubDate>Wed, 30 Sep 2026 01:03:19 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>sec-default: the system prompt&apos;s sections continue past the user tier (#97241)</title>
+      <link>https://github.com/anthropics/claude-code/commit/684800b206824dfd0cc8a876e8604b20f72c3617</link>
+      <guid isPermaLink="false">684800b</guid>
+      <pubDate>Tue, 29 Sep 2026 19:39:25 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>* sec-default: the system prompt&apos;s sections continue past the user tier; the declarations carry prompt.compose  * sec-default: prompt.compose has its own row, a second case where a person&apos;s plugin asks first, and the declarations as the event shipped  * sec-default: the two new cases set their sever</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/ec44ca97dc86c33d934c8d55b24959aabf076871</link>
+      <guid isPermaLink="false">ec44ca9</guid>
+      <pubDate>Tue, 29 Sep 2026 19:27:09 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>sec-default: a settings deny rule holds over an allow or ask from a plugin the person installed (#98080)</title>
+      <link>https://github.com/anthropics/claude-code/commit/16da1ecd3ff1e18a0522248f20bce52726e653ff</link>
+      <guid isPermaLink="false">16da1ec</guid>
+      <pubDate>Tue, 29 Sep 2026 19:07:07 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>* sec-default: a settings deny rule holds over an allow or ask from a plugin the person installed  * sec-default: the tool.check test plugins carry their verdicts in their own bodies  * sec-default: a user-tier link counts as loosening only when it answers looser than it was handed  * sec-default: t</description>
+    </item>
+    <item>
+      <title>sec-default: a managed option, allowManagedModsOnly, keeps the mods a person installs from loading (#98083)</title>
+      <link>https://github.com/anthropics/claude-code/commit/0d7f14dd352fa67affd4e172eb1b6f524dbd709e</link>
+      <guid isPermaLink="false">0d7f14d</guid>
+      <pubDate>Tue, 29 Sep 2026 17:27:48 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Run @claude mentions and dedupe in auto mode on a model that supports it</title>
+      <link>https://github.com/anthropics/claude-code/commit/7dbaea237fca9aed7baf250390ec4d49a57a2211</link>
+      <guid isPermaLink="false">7dbaea2</guid>
+      <pubDate>Tue, 29 Sep 2026 08:09:10 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>claude-sonnet-4-5 predates auto mode, so Claude Code fell back to its default permission mode in the dedupe job. Move it and claude.yml to claude-sonnet-4-6. The action sets --permission-mode acceptEdits for @claude mentions and appends the workflow&apos;s claude_args after it, so the --permission-mode a</description>
+    </item>
     <item>
       <title>mods: revert two changes (agents-md truncated reads, diff forced colors) (#98018)</title>
       <link>https://github.com/anthropics/claude-code/commit/dec92bc87ab6fe9c7be0fcba1f97966f902dd243</link>
@@ -14,6 +78,14 @@
       <pubDate>Tue, 29 Sep 2026 00:05:53 GMT</pubDate>
       <category>gh-commits-claude-code</category>
       <description>* Revert &quot;agents-md: the truncated-read tests laid out as the formatter lays them&quot;  * Revert &quot;fix(agents-md): retain instructions after truncated reads&quot;  * Revert &quot;diff: the shared diff arguments&apos; doc says what --no-color pins&quot;  * Revert &quot;fix(diff): preserve hunks when Git forces colored output&quot;</description>
+    </item>
+    <item>
+      <title>Fail the check when settings name a file outside the repository</title>
+      <link>https://github.com/anthropics/claude-code/commit/574ef0b8b75695b38d15fd35173d6ac0e9e5066e</link>
+      <guid isPermaLink="false">574ef0b</guid>
+      <pubDate>Mon, 28 Sep 2026 18:56:30 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>The check can&apos;t read such a file, so it can&apos;t tell whether it sets a permission mode.</description>
     </item>
     <item>
       <title>chore: Update CHANGELOG.md and feed.xml</title>
@@ -334,78 +406,6 @@
       <pubDate>Mon, 14 Sep 2026 02:55:26 GMT</pubDate>
       <category>gh-commits-claude-code</category>
       <description># Conflicts: #	mods/diff/hooks/register.ts #	mods/diff/hooks/views/detail/code-blocks-of/code-blocks-of.ts #	mods/diff/tests/fixtures/git-in.ts #	mods/diff/tests/fixtures/in-repository.ts #	mods/diff/tests/fixtures/index.ts #	mods/telemetry/tests/fixtures/index.ts</description>
-    </item>
-    <item>
-      <title>mods: the diff, sec-default and telemetry tests move next to the mods (#93951)</title>
-      <link>https://github.com/anthropics/claude-code/commit/18be13be81538c38efa5cb157fb2fc8da7469855</link>
-      <guid isPermaLink="false">18be13b</guid>
-      <pubDate>Mon, 14 Sep 2026 01:50:58 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>Squash merge of 4 commits</description>
-    </item>
-    <item>
-      <title>diff tests: the walk stops at the last file</title>
-      <link>https://github.com/anthropics/claude-code/commit/0fdc7b2f17709e3965fcb2bcffbe548ed365dcd3</link>
-      <guid isPermaLink="false">0fdc7b2</guid>
-      <pubDate>Sun, 13 Sep 2026 23:39:02 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>diff: the dialog&apos;s walk stops at the first and last file as the built-in&apos;s does, where the ring would wrap</title>
-      <link>https://github.com/anthropics/claude-code/commit/17db2e1954fcd83dc42f749ea69d2f1a2698efc6</link>
-      <guid isPermaLink="false">17db2e1</guid>
-      <pubDate>Sun, 13 Sep 2026 23:39:00 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>diff: the rows&apos; widths and reserves live under limits, sparing six of the files a hooks module may link</title>
-      <link>https://github.com/anthropics/claude-code/commit/78c94cecbda07e341e0ad39faaa3095aba323426</link>
-      <guid isPermaLink="false">78c94ce</guid>
-      <pubDate>Sun, 13 Sep 2026 23:29:36 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>diff tests and README: the walk selects and the window follows</title>
-      <link>https://github.com/anthropics/claude-code/commit/01e6ae421fc1f46ad5957a10032d22d05d0675af</link>
-      <guid isPermaLink="false">01e6ae4</guid>
-      <pubDate>Sun, 13 Sep 2026 23:27:06 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>mods: telemetry&apos;s types path is ./-relative like the other manifest paths (#93932)</title>
-      <link>https://github.com/anthropics/claude-code/commit/b5932767f3acbd07da25367064827e5cb81f43de</link>
-      <guid isPermaLink="false">b593276</guid>
-      <pubDate>Sun, 13 Sep 2026 01:59:33 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>Squash merge of 1 commit</description>
-    </item>
-    <item>
-      <title>Merge pull request #93912 from anthropics/poteat/mod-tests-seat</title>
-      <link>https://github.com/anthropics/claude-code/commit/e46ab548ab3ffc5f75309a3f36016fb418c730ca</link>
-      <guid isPermaLink="false">e46ab54</guid>
-      <pubDate>Sat, 12 Sep 2026 22:21:29 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>mods: unit tests for diff, sec-default and telemetry, typed against the plugin declarations</description>
-    </item>
-    <item>
-      <title>mods: the CI job tells a build with plugin test by its usage line</title>
-      <link>https://github.com/anthropics/claude-code/commit/c13655688dda0595ed344401877929924ee3f1d5</link>
-      <guid isPermaLink="false">c136556</guid>
-      <pubDate>Sat, 12 Sep 2026 22:14:00 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge remote-tracking branch &apos;origin/main&apos; into poteat/mod-tests-seat</title>
-      <link>https://github.com/anthropics/claude-code/commit/28e2635f3505c3cc8ed46f207da018f47132d358</link>
-      <guid isPermaLink="false">28e2635</guid>
-      <pubDate>Sat, 12 Sep 2026 22:06:58 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>

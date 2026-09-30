@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-29T12:22:31.964Z",
+  "generated": "2026-09-30T12:08:05.187Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.285",
+      "title": "0.3.285",
+      "date": "2026-09-30T12:07:16.958Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added an optional read.title (the artifact's stored title) to the Artifact tool's structured read result\n- Added providernotallowed to startupfailurereason and allowedProviders to the Settings type\n- Fixed sessions with CLAUDECODEFORKSUBAGENT=1: a subagent's own Agent call now runs in the foregrou",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.285|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.284",
       "title": "0.3.284",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.212|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.211",
-      "title": "0.3.211",
-      "date": "2026-07-16T08:17:07.189Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Fixed --replay-user-messages with --include-partial-messages emitting the turn-start user replay after the first content block instead of before the turn's content events\n- Added SDKAssistantMessage.timestamp (ISO-8601) to the live stream, matching SDKUserMessage; older emitters omit it, consumers",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.211|agent-sdk-ts-changelog"
     }
   ]
 }

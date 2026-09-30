@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 29 Sep 2026 12:22:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <item>
+      <title>2.1.285</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.285</guid>
+      <pubDate>Wed, 30 Sep 2026 12:07:16 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added CLAUDECODEDISABLEWEBFETCH environment variable to turn off the WebFetch tool
+- Added claude --desktop to open the Claude desktop app on the current directory, or on a session with --continue / --resume &lt;id&gt;
+- Added claude plugin configure &lt;plugin&gt; to show a plugin&apos;s options and which are uns</description>
+    </item>
     <item>
       <title>2.1.284</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -447,16 +457,6 @@
       <category>claude-code-changelog</category>
       <description>- Added --forward-subagent-text flag and CLAUDECODEFORWARDSUBAGENTTEXT environment variable to include subagent text and thinking in stream-json output
 - Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool i</description>
-    </item>
-    <item>
-      <title>2.1.210</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.210</guid>
-      <pubDate>Wed, 15 Jul 2026 08:16:01 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck
-- Added a startup warning for Write(path), NotebookEdit(path), and Glob(path) permission rules — use Edit(path) or Read(path) instead
-- Fixed isolation: &apos;worktree&apos; </description>
     </item>
   </channel>
 </rss>
