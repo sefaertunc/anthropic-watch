@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 12:41:28 GMT</lastBuildDate>
+    <item>
+      <title>diff: the dialog opens every file it lists, and says nothing when closed (#98555)</title>
+      <link>https://github.com/anthropics/claude-code/commit/6160717d8994f236ab381cf534fc1cde5347c12f</link>
+      <guid isPermaLink="false">6160717</guid>
+      <pubDate>Thu, 01 Oct 2026 05:23:04 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>* diff: the dialog opens every file it lists, and says nothing when closed  * diff: the dialog&apos;s fetch asks its seat first, and a generated file opens too  * diff: a read started by a move of the selection never rejects unheard  * diff: a test that a moving window reads only its new rows</description>
+    </item>
+    <item>
+      <title>diff: the pane notices a finished merge by itself, and stays quiet on an unusual branch name (#98357)</title>
+      <link>https://github.com/anthropics/claude-code/commit/525d3b35312636cf8c001ecb3df2be0324a48b43</link>
+      <guid isPermaLink="false">525d3b3</guid>
+      <pubDate>Wed, 30 Sep 2026 19:36:31 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>diff: the pane reads every file&apos;s hunks with one git process, where it started one per file (#98445)</title>
+      <link>https://github.com/anthropics/claude-code/commit/292c5b8971bee74b816019aa1d092d8fc37c7707</link>
+      <guid isPermaLink="false">292c5b8</guid>
+      <pubDate>Wed, 30 Sep 2026 19:36:22 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>diff: the pane reads the diff again after a rebase that finished (#98374)</title>
+      <link>https://github.com/anthropics/claude-code/commit/9778ad7c09eeefc854efdd79f6ea779976a47c8b</link>
+      <guid isPermaLink="false">9778ad7</guid>
+      <pubDate>Wed, 30 Sep 2026 19:35:43 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/f5f60250a032caa72d1eb47f9ca5f29becc7066f</link>
+      <guid isPermaLink="false">f5f6025</guid>
+      <pubDate>Wed, 30 Sep 2026 19:09:54 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #97952 from anthropics/security-hardening-gh-actions</title>
       <link>https://github.com/anthropics/claude-code/commit/732e167ee9d71296b4b63d6f529ac1334513826a</link>
@@ -366,46 +406,6 @@
       <pubDate>Tue, 15 Sep 2026 20:22:56 GMT</pubDate>
       <category>gh-commits-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/f96c3b49c4c8721685206aaab23609b2d399df4e</link>
-      <guid isPermaLink="false">f96c3b4</guid>
-      <pubDate>Tue, 15 Sep 2026 00:42:19 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/f2ccbe279409fc6357c2fb1bfd7e195e0e1bcfca</link>
-      <guid isPermaLink="false">f2ccbe2</guid>
-      <pubDate>Mon, 14 Sep 2026 22:12:48 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #94184 from anthropics/poteat/diff-parity-2</title>
-      <link>https://github.com/anthropics/claude-code/commit/f4ceeecabff13e814dc4302620e2da1a688e47f8</link>
-      <guid isPermaLink="false">f4ceeec</guid>
-      <pubDate>Mon, 14 Sep 2026 14:00:51 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>mods/diff: pinned header with body-only scroll, the built-in&apos;s list and base chords, wheel routing, and the DiffDialog off fullscreen</description>
-    </item>
-    <item>
-      <title>diff: the docked window&apos;s hunks are made printable and split under a leaf&apos;s cap, draw only their lines in view, and stop at the tree&apos;s budget</title>
-      <link>https://github.com/anthropics/claude-code/commit/7d4f9471afb25c9b48fb9bca010d06cdc1f19cf8</link>
-      <guid isPermaLink="false">7d4f947</guid>
-      <pubDate>Mon, 14 Sep 2026 02:55:39 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge remote-tracking branch &apos;origin/main&apos; into poteat/diff-parity-2</title>
-      <link>https://github.com/anthropics/claude-code/commit/9d302a84deb80490083dfbbcbdcf02a6751940a8</link>
-      <guid isPermaLink="false">9d302a8</guid>
-      <pubDate>Mon, 14 Sep 2026 02:55:26 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description># Conflicts: #	mods/diff/hooks/register.ts #	mods/diff/hooks/views/detail/code-blocks-of/code-blocks-of.ts #	mods/diff/tests/fixtures/git-in.ts #	mods/diff/tests/fixtures/in-repository.ts #	mods/diff/tests/fixtures/index.ts #	mods/telemetry/tests/fixtures/index.ts</description>
     </item>
   </channel>
 </rss>

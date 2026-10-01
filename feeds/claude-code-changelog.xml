@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 12:41:28 GMT</lastBuildDate>
+    <item>
+      <title>2.1.286</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.286</guid>
+      <pubDate>Thu, 01 Oct 2026 12:40:39 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added a count such as &quot;2 of 5&quot; to the permission prompt when several permission requests stack up
+- Added mouse support for the &quot;N more&quot; rows of lists in fullscreen mode: click one to jump to that end of the list, with hover and pressed states
+- Fixed several Claude Code processes and IDE extensio</description>
+    </item>
     <item>
       <title>2.1.285</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -448,15 +458,6 @@
       <category>claude-code-changelog</category>
       <description>- /fork now copies your conversation into a new background session (its own row in claude agents) while you keep working; the in-session subagent it used to launch is now /subtask
 - Added claude auto-mode reset to restore the default auto-mode configuration, with a confirmation prompt (pass --yes to</description>
-    </item>
-    <item>
-      <title>2.1.211</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.211</guid>
-      <pubDate>Thu, 16 Jul 2026 08:17:06 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added --forward-subagent-text flag and CLAUDECODEFORWARDSUBAGENTTEXT environment variable to include subagent text and thinking in stream-json output
-- Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool i</description>
     </item>
   </channel>
 </rss>

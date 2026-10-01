@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 12:41:28 GMT</lastBuildDate>
+    <item>
+      <title>Fix Context7 OAuth fallback (#6333)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ab024cdcfa7ca80be204acd4907656ba5a968589</link>
+      <guid isPermaLink="false">ab024cd</guid>
+      <pubDate>Wed, 30 Sep 2026 20:11:48 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Remote-Dev: homespace  Co-authored-by: Fahreddin Özcan &lt;ozcanfahrettinn@gmail.com&gt;</description>
+    </item>
+    <item>
+      <title>Merge pull request #6334 from anthropics/dltn/imessage-multi-image</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/72399850766aef9b8652fdd26fda2dc030b8541a</link>
+      <guid isPermaLink="false">7239985</guid>
+      <pubDate>Wed, 30 Sep 2026 19:56:17 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>imessage: surface every inbound image, not just the first</description>
+    </item>
+    <item>
+      <title>imessage: surface every inbound image, not just the first</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/b6041c772138cdb3408fb4d93accd770f0ec56a1</link>
+      <guid isPermaLink="false">b6041c7</guid>
+      <pubDate>Wed, 30 Sep 2026 19:34:53 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>An iMessage with several photos arrived with only the first one in the channel tag: handleInbound took the first image attachment and stopped. Collect every image attachment instead (same filters as before) and pass each path in the notification meta as image_path, image_path_2, image_path_3, ... so</description>
+    </item>
+    <item>
+      <title>Add math-proof plugin: solo and siege (multi-agent) skills for hard mathematics problems (#6322)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/aa5654b7acb7d3096b5db44381bcfceaf4a71dfb</link>
+      <guid isPermaLink="false">aa5654b</guid>
+      <pubDate>Wed, 30 Sep 2026 18:31:58 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 2 commits</description>
+    </item>
     <item>
       <title>postman: repoint to postmanlabs/postman-plugin (#6326)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/2a8ad9f74633d10e3d9bb0660a03bfc6e50584b1</link>
@@ -374,38 +406,6 @@
       <pubDate>Mon, 14 Sep 2026 17:19:01 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>bump(vercel): df0f5521 → b0b3b326</description>
-    </item>
-    <item>
-      <title>Merge pull request #6104 from anthropics/bump/ui-theme-designer</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a8b147141aed426e96d2054ba7f3a66c48849a7c</link>
-      <guid isPermaLink="false">a8b1471</guid>
-      <pubDate>Mon, 14 Sep 2026 17:18:22 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(ui-theme-designer): 4e30f575 → 768de1f2</description>
-    </item>
-    <item>
-      <title>Merge pull request #6103 from anthropics/bump/stripe</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ffb46211fc08845c5be532889df4b4aff3b476d4</link>
-      <guid isPermaLink="false">ffb4621</guid>
-      <pubDate>Mon, 14 Sep 2026 17:17:44 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(stripe): 12f48810 → 583467aa</description>
-    </item>
-    <item>
-      <title>Merge pull request #6102 from anthropics/bump/remember</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ad67e9da6bc2b7e21c6d0d1e6331b9f03304ffd4</link>
-      <guid isPermaLink="false">ad67e9d</guid>
-      <pubDate>Mon, 14 Sep 2026 17:17:04 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(remember): 9f92bc6a → d7c4a460</description>
-    </item>
-    <item>
-      <title>Merge pull request #6101 from anthropics/bump/quarkus-agent</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b561fc4572d68b750da05ae9609b7bc18ed31ade</link>
-      <guid isPermaLink="false">b561fc4</guid>
-      <pubDate>Mon, 14 Sep 2026 17:16:23 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(quarkus-agent): 78d7a24b → 46fdeebb</description>
     </item>
   </channel>
 </rss>

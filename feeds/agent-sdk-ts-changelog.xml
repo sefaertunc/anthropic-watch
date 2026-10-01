@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 30 Sep 2026 12:08:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 12:41:28 GMT</lastBuildDate>
+    <item>
+      <title>0.3.286</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.286</guid>
+      <pubDate>Thu, 01 Oct 2026 12:40:39 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added the initialize response field sdkmcpmanifestsparked and the system/init capabilities sdkmcpmanifests and sdkmcptoolslistchanged
+- Fixed foreground subagents sometimes not receiving the task-tracking tools listed in tools or allowedTools
+- Fixed an SDK MCP server listing no tools when one too</description>
+    </item>
     <item>
       <title>0.3.285</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -435,15 +445,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- setpermissionmode now rejects unrecognized permission modes with an error instead of silently adopting them; the &apos;manual&apos; alias is accepted at every ingress
 - Added optional subkind: &apos;scheduled-trigger&apos; to the task-notification member of SDKMessageOrigin, marking deliveries that are the fired prom</description>
-    </item>
-    <item>
-      <title>0.3.212</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.212</guid>
-      <pubDate>Fri, 17 Jul 2026 08:12:39 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Fixed dash-leading resumeSessionAt and sessionId values being passed to the CLI as separate argv tokens; both now use equals-form (--flag=value)
-- Agent tool output now includes the resolved model when a mid-turn model swap changed the subagent&apos;s model</description>
     </item>
   </channel>
 </rss>

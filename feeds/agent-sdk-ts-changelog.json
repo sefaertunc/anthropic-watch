@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-09-30T12:08:05.187Z",
+  "generated": "2026-10-01T12:41:28.073Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.286",
+      "title": "0.3.286",
+      "date": "2026-10-01T12:40:39.986Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added the initialize response field sdkmcpmanifestsparked and the system/init capabilities sdkmcpmanifests and sdkmcptoolslistchanged\n- Fixed foreground subagents sometimes not receiving the task-tracking tools listed in tools or allowedTools\n- Fixed an SDK MCP server listing no tools when one too",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.286|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.285",
       "title": "0.3.285",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.214|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.212",
-      "title": "0.3.212",
-      "date": "2026-07-17T08:12:39.999Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Fixed dash-leading resumeSessionAt and sessionId values being passed to the CLI as separate argv tokens; both now use equals-form (--flag=value)\n- Agent tool output now includes the resolved model when a mid-turn model swap changed the subagent's model",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.212|agent-sdk-ts-changelog"
     }
   ]
 }
