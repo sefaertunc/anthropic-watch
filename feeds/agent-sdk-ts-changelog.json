@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-01T12:41:28.073Z",
+  "generated": "2026-10-02T12:05:36.541Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.287",
+      "title": "0.3.287",
+      "date": "2026-10-02T12:04:48.845Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added optional remote-session latency fields (firsttextpostqueuewaitms, firsttextpostqueuedbehind) to the success result message\n- Fixed includePartialMessages streams sending a cut-short reply's messagestop late or never, so apps could show the reply as still in progress\n- Fixed the error for a r",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.287|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.286",
       "title": "0.3.286",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.215|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.214",
-      "title": "0.3.214",
-      "date": "2026-07-18T07:54:54.664Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- setpermissionmode now rejects unrecognized permission modes with an error instead of silently adopting them; the 'manual' alias is accepted at every ingress\n- Added optional subkind: 'scheduled-trigger' to the task-notification member of SDKMessageOrigin, marking deliveries that are the fired prom",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.214|agent-sdk-ts-changelog"
     }
   ]
 }
