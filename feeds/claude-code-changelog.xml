@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 02 Oct 2026 12:05:36 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 11:17:23 GMT</lastBuildDate>
+    <item>
+      <title>2.1.288</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.288</guid>
+      <pubDate>Sat, 03 Oct 2026 11:16:35 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added $.ui.selection() for mods: returns the text you last selected in fullscreen mode and, when the selection lies within one transcript row, that row
+- Added a built-in gh api to cloud sessions whose image has no GitHub CLI, and fixed the built-in sending control characters from file names, jq f</description>
+    </item>
     <item>
       <title>2.1.287</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -449,16 +458,6 @@
       <pubDate>Sun, 19 Jul 2026 08:22:30 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- Claude no longer runs the /verify and /code-review skills on its own; invoke them with /verify or /code-review when you want them</description>
-    </item>
-    <item>
-      <title>2.1.214</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.214</guid>
-      <pubDate>Sat, 18 Jul 2026 07:54:53 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Fixed single-segment dir/ allow rules like Edit(src/) auto-approving writes to nested dir/ directories anywhere in the tree instead of only &lt;cwd&gt;/dir
-- Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions
-- Fixed Bash permission checks to fail closed on file-de</description>
     </item>
   </channel>
 </rss>

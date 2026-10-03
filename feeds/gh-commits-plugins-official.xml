@@ -6,7 +6,31 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 02 Oct 2026 12:05:36 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 11:17:23 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #6350 from anthropics/mhegazy/sg-track-latest-opus</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d182ca456ca09d31d139f7d3818d1d333b103cce</link>
+      <guid isPermaLink="false">d182ca4</guid>
+      <pubDate>Fri, 02 Oct 2026 21:26:10 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: follow the newest Opus instead of a pinned release</description>
+    </item>
+    <item>
+      <title>bump(aws): aws-core, aws-agents, aws-data-analytics 7bde20fa → 0d6167ad (#6349)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/2f189354595613190f575ab1f7510f3a94150022</link>
+      <guid isPermaLink="false">2f18935</guid>
+      <pubDate>Fri, 02 Oct 2026 20:55:49 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>security-guidance: follow the newest Opus instead of a pinned release (2.0.8 → 2.0.9)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/01f8be9b220b6e993a3c2cb219f28d7cc6fd3d6f</link>
+      <guid isPermaLink="false">01f8be9</guid>
+      <pubDate>Fri, 02 Oct 2026 20:17:39 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The review model was hardcoded to claude-opus-4-7, so the plugin fell behind each time a new Opus shipped.  - The diff review asks the configured endpoint (GET /v1/models) for the   newest Opus it serves, cached for a day; claude-opus-5-5 if it can&apos;t say. - The agentic commit review, and every revie</description>
+    </item>
     <item>
       <title>Fix Context7 OAuth fallback (#6333)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/ab024cdcfa7ca80be204acd4907656ba5a968589</link>
@@ -382,30 +406,6 @@
       <pubDate>Tue, 15 Sep 2026 16:19:58 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>bump(vsql-extension-builder): 450139a6 → 6e7edf8d</description>
-    </item>
-    <item>
-      <title>Merge pull request #6107 from anthropics/bump/dynatrace</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/da823e86c8feef13b73b6712af11eadd38c992f6</link>
-      <guid isPermaLink="false">da823e8</guid>
-      <pubDate>Mon, 14 Sep 2026 17:20:24 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(dynatrace): 9ebe70d4 → b7ae5e6c</description>
-    </item>
-    <item>
-      <title>Merge pull request #6106 from anthropics/bump/wix</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/d5b0e2c4d8786465c8909a12da242554d3c70173</link>
-      <guid isPermaLink="false">d5b0e2c</guid>
-      <pubDate>Mon, 14 Sep 2026 17:19:42 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(wix): 58922ec0 → 20c21610</description>
-    </item>
-    <item>
-      <title>Merge pull request #6105 from anthropics/bump/vercel</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/c950860e1307e6ec1a7c4455a16588af7ae9b825</link>
-      <guid isPermaLink="false">c950860</guid>
-      <pubDate>Mon, 14 Sep 2026 17:19:01 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(vercel): df0f5521 → b0b3b326</description>
     </item>
   </channel>
 </rss>

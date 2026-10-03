@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 02 Oct 2026 12:05:36 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 11:17:23 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.288</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.288</link>
+      <guid isPermaLink="false">v2.1.288</guid>
+      <pubDate>Fri, 02 Oct 2026 20:19:57 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added $.ui.selection() for mods: returns the text you last selected in fullscreen mode and, when the selection lies within one transcript row, that row
+- Added a built-in gh api to cloud sessions whose image has no GitHub CLI, and fixed the built-in sending control characters from f</description>
+    </item>
     <item>
       <title>v2.1.287</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.287</link>
@@ -494,15 +504,6 @@
       <description>What&apos;s changed
 - Fixed feature flags being evaluated without the user&apos;s subscription tier when a session started with an expired login token, which could wrongly prompt Max plan users to enable usage credits for Fable
 - Fixed every Bash command failing under claude-code-action with allowednonwriteus</description>
-    </item>
-    <item>
-      <title>v2.1.226</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.226</link>
-      <guid isPermaLink="false">v2.1.226</guid>
-      <pubDate>Sat, 08 Aug 2026 02:48:05 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Bug fixes and reliability improvements</description>
     </item>
   </channel>
 </rss>

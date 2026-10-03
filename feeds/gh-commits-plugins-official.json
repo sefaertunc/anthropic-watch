@@ -5,9 +5,42 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-02T12:05:36.572Z",
+  "generated": "2026-10-03T11:17:23.572Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "d182ca4",
+      "title": "Merge pull request #6350 from anthropics/mhegazy/sg-track-latest-opus",
+      "date": "2026-10-02T21:26:10Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "snippet": "security-guidance: follow the newest Opus instead of a pinned release",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "d182ca4|gh-commits-plugins-official"
+    },
+    {
+      "id": "2f18935",
+      "title": "bump(aws): aws-core, aws-agents, aws-data-analytics 7bde20fa → 0d6167ad (#6349)",
+      "date": "2026-10-02T20:55:49Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/2f189354595613190f575ab1f7510f3a94150022",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "2f18935|gh-commits-plugins-official"
+    },
+    {
+      "id": "01f8be9",
+      "title": "security-guidance: follow the newest Opus instead of a pinned release (2.0.8 → 2.0.9)",
+      "date": "2026-10-02T20:17:39Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/01f8be9b220b6e993a3c2cb219f28d7cc6fd3d6f",
+      "snippet": "The review model was hardcoded to claude-opus-4-7, so the plugin fell behind each time a new Opus shipped.  - The diff review asks the configured endpoint (GET /v1/models) for the   newest Opus it serves, cached for a day; claude-opus-5-5 if it can't say. - The agentic commit review, and every revie",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "01f8be9|gh-commits-plugins-official"
+    },
     {
       "id": "ab024cd",
       "title": "Fix Context7 OAuth fallback (#6333)",
@@ -524,39 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "902b1af|gh-commits-plugins-official"
-    },
-    {
-      "id": "da823e8",
-      "title": "Merge pull request #6107 from anthropics/bump/dynatrace",
-      "date": "2026-09-14T17:20:24Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/da823e86c8feef13b73b6712af11eadd38c992f6",
-      "snippet": "bump(dynatrace): 9ebe70d4 → b7ae5e6c",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "da823e8|gh-commits-plugins-official"
-    },
-    {
-      "id": "d5b0e2c",
-      "title": "Merge pull request #6106 from anthropics/bump/wix",
-      "date": "2026-09-14T17:19:42Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/d5b0e2c4d8786465c8909a12da242554d3c70173",
-      "snippet": "bump(wix): 58922ec0 → 20c21610",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "d5b0e2c|gh-commits-plugins-official"
-    },
-    {
-      "id": "c950860",
-      "title": "Merge pull request #6105 from anthropics/bump/vercel",
-      "date": "2026-09-14T17:19:01Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/c950860e1307e6ec1a7c4455a16588af7ae9b825",
-      "snippet": "bump(vercel): df0f5521 → b0b3b326",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "c950860|gh-commits-plugins-official"
     }
   ]
 }
