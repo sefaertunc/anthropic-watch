@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 03 Oct 2026 11:17:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 11:57:17 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.289</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.289</link>
+      <guid isPermaLink="false">v2.1.289</guid>
+      <pubDate>Sat, 03 Oct 2026 23:07:17 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed a deny or ask rule on a nested part of a compound shell command not holding over a user-installed mod&apos;s approval on managed machines
+- Fixed the terminal freezing on short code blocks with many unclosed &lt;script&gt; tags or deeply nested ${ substitutions
+- Fixed Read deny rules no</description>
+    </item>
     <item>
       <title>v2.1.288</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.288</link>
@@ -494,16 +505,6 @@
 - Fixed interactive sessions that could stop redrawing entirely, while the process kept running, after a rare internal layout error
 - Fixed git / Git Bash not being found on Windows when Claude Code is launched from a parent folder of the git installation
 - Fixed /tui reverting the se</description>
-    </item>
-    <item>
-      <title>v2.1.227</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.227</link>
-      <guid isPermaLink="false">v2.1.227</guid>
-      <pubDate>Mon, 10 Aug 2026 22:56:53 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed feature flags being evaluated without the user&apos;s subscription tier when a session started with an expired login token, which could wrongly prompt Max plan users to enable usage credits for Fable
-- Fixed every Bash command failing under claude-code-action with allowednonwriteus</description>
     </item>
   </channel>
 </rss>

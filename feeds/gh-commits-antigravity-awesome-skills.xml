@@ -6,7 +6,47 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 03 Oct 2026 11:17:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 11:57:17 GMT</lastBuildDate>
+    <item>
+      <title>chore: release v18.14.0 (#1781)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b64d50f5a5e8e7ae73fe60152b7536c2c5885e65</link>
+      <guid isPermaLink="false">b64d50f</guid>
+      <pubDate>Sun, 04 Oct 2026 07:06:36 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v18.14.0.</description>
+    </item>
+    <item>
+      <title>docs: stage 18.14.0 changelog (#1780)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/63329a1d24e732c507038dbd7fd771c8d89f468c</link>
+      <guid isPermaLink="false">63329a1</guid>
+      <pubDate>Sun, 04 Oct 2026 06:46:35 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Stage the 18.14.0 changelog entry ahead of the protected release PR.</description>
+    </item>
+    <item>
+      <title>feat: add browser-extension-launch skill (#1768)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/bea0be58f42f85f860585991874c94649b12c505</link>
+      <guid isPermaLink="false">bea0be5</guid>
+      <pubDate>Sun, 04 Oct 2026 06:28:49 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: add cloudish skill for deploying containers to Cloudish (#1776)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8f40b4afeffec291c118895c265339340c576f5d</link>
+      <guid isPermaLink="false">8f40b4a</guid>
+      <pubDate>Sun, 04 Oct 2026 06:24:08 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds `skills/cloudish/SKILL.md`, adapted from the official Cloudish skill (cloudishai/skills, MIT), plus the source credit in `README.md` under `### Official Sources`.  It teaches an agent to take a project to a running container at a live URL on Cloudish: - inspect the p</description>
+    </item>
+    <item>
+      <title>fix: remove vulnerable vite-plugin-singlefile from the web-app build (#1775)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/fdaf26298c5824c9fc7893d3ad64a983fc329b70</link>
+      <guid isPermaLink="false">fdaf262</guid>
+      <pubDate>Sun, 04 Oct 2026 06:08:30 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
     <item>
       <title>chore: release v18.13.0 (#1772)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/9e6b7da26ea9e6656ab9466246919aa5a64c9f9b</link>
@@ -366,46 +406,6 @@
       <pubDate>Sun, 27 Sep 2026 07:52:59 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description>Disclosure: I work at Continuum AI and maintain the repository this skill is sourced from. Same team that contributed `orca-replay` (#1330).</description>
-    </item>
-    <item>
-      <title>feat: add electron drive skill (#1621)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e1555b771ee934d782c740ea55015945e8648cfc</link>
-      <guid isPermaLink="false">e1555b7</guid>
-      <pubDate>Sat, 26 Sep 2026 10:47:15 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Maintainer repair for #1593.  Adds the reviewed electron-drive-skill bundle and preserves the contributor attribution. The original fork PR included executable bundle files that require repository-owner review under the protected intake policy; this maintainer-owned PR carries the same reviewed cont</description>
-    </item>
-    <item>
-      <title>feat: add six TraderSpy crypto market research skills (#1610)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c05dac3872e14f2051fb200791ef0db6aa55bab1</link>
-      <guid isPermaLink="false">c05dac3</guid>
-      <pubDate>Sat, 26 Sep 2026 10:27:46 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds six official TraderSpy skills under `skills/traderspy-*`, copied from [target1m/traderspy-mcp](https://github.com/target1m/traderspy-mcp) (MIT) at commit `069aae5a84640d671f92705a2e3bc0b62efca1e0` (release v1.7.0), plus one README line under **Official Sources**.  I&apos;</description>
-    </item>
-    <item>
-      <title>fix: refresh claude-api skill from upstream (#1618)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/276668fea0931bd786c77852317de2d10be78840</link>
-      <guid isPermaLink="false">276668f</guid>
-      <pubDate>Sat, 26 Sep 2026 10:08:31 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Fixes #1614  Refreshes the complete `claude-api` skill bundle from the official Anthropic source at current `main`, including current model guidance, API migration notes, and all language/reference files. Preserves repository metadata and local safety limits.  Validation run: `npm run validate`, `np</description>
-    </item>
-    <item>
-      <title>sync(unified-ai-gateway): the published server exposes fifteen tools, not nine (#1616)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c3de7b4daa2d281a5a0917db80cc4072a316d014</link>
-      <guid isPermaLink="false">c3de7b4</guid>
-      <pubDate>Sat, 26 Sep 2026 09:34:26 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>### What is stale, and in which file  The front matter of `skills/unified-ai-gateway/SKILL.md` names its source as `happy520ai/unified-ai-system`, so this catalog is a copy of our file. The copy is from the `0.4.x` era, when the published image exposed nine tools; `mcp-server:0.8.0` exposes fifteen.</description>
-    </item>
-    <item>
-      <title>fix: improve Jev maintainer triage evidence (#1613)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b5d2d877e440b205cb42f81ac4ced779d62e4bbe</link>
-      <guid isPermaLink="false">b5d2d87</guid>
-      <pubDate>Fri, 25 Sep 2026 20:36:53 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Improve Jev&apos;s advisory maintainer triage by supplying the exact skill and README source-credit diff, treating PR text as untrusted input, and asking for evidence-based rather than generic risk judgments. Update the maintainer guide to clarify that Jev returns probabilitie</description>
     </item>
   </channel>
 </rss>

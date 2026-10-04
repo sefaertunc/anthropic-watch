@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 03 Oct 2026 11:17:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 11:57:17 GMT</lastBuildDate>
+    <item>
+      <title>2.1.289</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.289</guid>
+      <pubDate>Sun, 04 Oct 2026 11:56:29 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Fixed a deny or ask rule on a nested part of a compound shell command not holding over a user-installed mod&apos;s approval on managed machines
+- Fixed the terminal freezing on short code blocks with many unclosed &lt;script&gt; tags or deeply nested ${ substitutions
+- Fixed Read deny rules not applying to f</description>
+    </item>
     <item>
       <title>2.1.288</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -450,14 +460,6 @@
       <description>- Added sandbox.filesystem.disabled setting to skip filesystem isolation while keeping network egress control
 - Fixed a slowdown in long sessions where message normalization cost grew quadratically with the number of turns, causing multi-second stalls and slow resumes
 - Fixed auto mode denying comma</description>
-    </item>
-    <item>
-      <title>2.1.215</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.215</guid>
-      <pubDate>Sun, 19 Jul 2026 08:22:30 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Claude no longer runs the /verify and /code-review skills on its own; invoke them with /verify or /code-review when you want them</description>
     </item>
   </channel>
 </rss>
