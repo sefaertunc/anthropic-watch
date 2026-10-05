@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 04 Oct 2026 11:57:17 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 13:57:11 GMT</lastBuildDate>
+    <item>
+      <title>docs: correct 18.15.0 catalog skill count (#1795)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5</link>
+      <guid isPermaLink="false">bdacd76</guid>
+      <pubDate>Sun, 04 Oct 2026 23:53:08 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Corrects the `18.15.0` catalog total in `CHANGELOG.md` from **2,651** to **2,652**.  The count was written before the last canonical sync landed `axonx`. The released tag&apos;s canonical `skills_index.json` and `data/catalog.json` are **2,652**, and `2,640 + 12 = 2,652`, so the prose now matches the act</description>
+    </item>
+    <item>
+      <title>chore: release v18.15.0 (#1793)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0345c303faf8a21357536b6854ae4052e3f4653b</link>
+      <guid isPermaLink="false">0345c30</guid>
+      <pubDate>Sun, 04 Oct 2026 23:23:35 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v18.15.0.</description>
+    </item>
+    <item>
+      <title>docs: stage 18.15.0 changelog (#1792)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/bb24e82651b55f921d3261f6d4c532a7a188f430</link>
+      <guid isPermaLink="false">bb24e82</guid>
+      <pubDate>Sun, 04 Oct 2026 23:01:47 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Stages the `18.15.0` changelog entry ahead of the protected release PR.</description>
+    </item>
+    <item>
+      <title>feat: add AxonX quantitative research skill (#1784)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/cd956b93aa9f00990e6238221c79f30e11866dd8</link>
+      <guid isPermaLink="false">cd956b9</guid>
+      <pubDate>Sun, 04 Oct 2026 22:48:57 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds `axonx`, a standalone quantitative research Skill adapted from FlowLLM-AI/AxonX at commit `862b90da9c49c3bdee4c2ab9ef896c415aee9f45`. It covers research plugin development, CLI/MCP task operation, status/log inspection, and artifact lineage. Includes Apache-2.0 licen</description>
+    </item>
+    <item>
+      <title>feat: add 8 VoiceMoat skills for Twitter/X and LinkedIn posts (#1783)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c65f397d0d554f9770e2de6d48cfbf775ca133b7</link>
+      <guid isPermaLink="false">c65f397</guid>
+      <pubDate>Sun, 04 Oct 2026 22:35:36 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds eight skills for writing and reviewing Twitter/X and LinkedIn posts, adapted from the official VoiceMoat skills repo ([prateeks367/voicemoat-skills](https://github.com/prateeks367/voicemoat-skills), MIT), plus the source credit in `README.md` under Official Sources. </description>
+    </item>
+    <item>
+      <title>fix: replace placeholder descriptions in jobs-to-be-done-analyst and onboarding-psychologist (#1785)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c66452b3f730d92775e1b3dbe305f55caef170b2</link>
+      <guid isPermaLink="false">c66452b</guid>
+      <pubDate>Sun, 04 Oct 2026 22:30:22 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Both skills ship with the template placeholder `One sentence - what this skill does and when to invoke it` as their `description`, so agents can&apos;t tell when to use them. This PR replaces it with a real description based on each skill&apos;s &quot;When to Use&quot; section. Only the `description` line changes.</description>
+    </item>
+    <item>
+      <title>feat: add fxmacrodata skill (#1786)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ed360b1b8b6a14cd48d90e96a9d7ffdcd3384947</link>
+      <guid isPermaLink="false">ed360b1</guid>
+      <pubDate>Sun, 04 Oct 2026 22:25:37 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds `skills/fxmacrodata/SKILL.md`, an original skill (`source: self`) for the [FXMacroData](https://fxmacrodata.com/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=agentic-awesome-skills&amp;utm_content=pr) REST API: official-source macro indicators, release calendars, c</description>
+    </item>
     <item>
       <title>chore: release v18.14.0 (#1781)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/b64d50f5a5e8e7ae73fe60152b7536c2c5885e65</link>
@@ -350,62 +406,6 @@
       <pubDate>Sun, 27 Sep 2026 11:18:25 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description/>
-    </item>
-    <item>
-      <title>docs: add top repository contributors to README (#1647)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d36fbeedec41fab4002dc44566eba338fd734642</link>
-      <guid isPermaLink="false">d36fbee</guid>
-      <pubDate>Sun, 27 Sep 2026 11:10:51 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: release v18.7.0 (#1645)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/24d027834ddcd4b82945a5c039cb1eb20dfa1937</link>
-      <guid isPermaLink="false">24d0278</guid>
-      <pubDate>Sun, 27 Sep 2026 09:57:52 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v18.7.0.</description>
-    </item>
-    <item>
-      <title>docs: add complete changelog for v18.7.0 (#1644)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/fcc35447a1b0e9ef0d5b5229ddabbb142195c1f5</link>
-      <guid isPermaLink="false">fcc3544</guid>
-      <pubDate>Sun, 27 Sep 2026 09:36:35 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: make canonical sitemap dates reproducible (#1642)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/af473eb920771658e7493a01fffcc39e2a4d6c95</link>
-      <guid isPermaLink="false">af473eb</guid>
-      <pubDate>Sun, 27 Sep 2026 08:46:13 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: categorize uncategorized catalog skills (#1641)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/dfb35e5f71536a1a4d675e409f5d675af87c7410</link>
-      <guid isPermaLink="false">dfb35e5</guid>
-      <pubDate>Sun, 27 Sep 2026 08:20:30 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add LintLang audit skill for agent instructions (#1638)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/239716e3a223b7f5df5369d59679eb6424810e54</link>
-      <guid isPermaLink="false">239716e</guid>
-      <pubDate>Sun, 27 Sep 2026 08:04:44 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds `lintlang-audit`, an on-demand skill for checking a specific agent instruction file, tool definition, or supported Python prompt before an agent runs. Given paths from the user, it runs the pinned LintLang 0.8.0 static checks locally and reports per-file verdicts, se</description>
-    </item>
-    <item>
-      <title>feat: add system-prompt-lookup skill for verifying an agent&apos;s actual instructions (#1628)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/be52f3020f79d6f7e5127cde6f06d52f9b2921f8</link>
-      <guid isPermaLink="false">be52f30</guid>
-      <pubDate>Sun, 27 Sep 2026 07:52:59 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Disclosure: I work at Continuum AI and maintain the repository this skill is sourced from. Same team that contributed `orca-replay` (#1330).</description>
     </item>
   </channel>
 </rss>
