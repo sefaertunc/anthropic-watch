@@ -6,7 +6,306 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 05 Oct 2026 13:57:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 12:53:02 GMT</lastBuildDate>
+    <item>
+      <title>0.3.292</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.292</guid>
+      <pubDate>Wed, 07 Oct 2026 12:52:14 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added agentid to the assistant and user messages a subagent produces; it equals the taskid on that subagent&apos;s task events and stays the same when the subagent is resumed
+- Added parenttaskid to taskstarted events and backgroundtaskschanged entries, naming the subagent task that launched a task
+- A</description>
+    </item>
+    <item>
+      <title>0.2.164</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.164</guid>
+      <pubDate>Wed, 07 Oct 2026 12:52:14 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>Internal/Other Changes
+- Updated bundled Claude CLI to version 2.1.292
+- CI: security hardening for GitHub Actions workflows that call Claude — egress-firewall runner, network allow list, auto permission mode, and a check workflow to enforce them (1329)
+- CI: raised PyPI per-file limit guard to 250 </description>
+    </item>
+    <item>
+      <title>2.1.292</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.292</guid>
+      <pubDate>Wed, 07 Oct 2026 12:52:13 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added --marketplace &lt;source&gt; to claude plugin install: adds the marketplace if needed, under the same policy checks as claude plugin marketplace add, then installs the plugin from it
+- Added an effort parameter to the Agent tool, so Claude runs a sub-agent at the effort level you ask for
+- Added C</description>
+    </item>
+    <item>
+      <title>Claude for Startups Program</title>
+      <link>https://claude.com/programs/startups</link>
+      <guid isPermaLink="false">49991983</guid>
+      <pubDate>Wed, 07 Oct 2026 12:44:59 GMT</pubDate>
+      <category>hn-claude-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>Claude for Google Workspace public beta</title>
+      <link>https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides</link>
+      <guid isPermaLink="false">49991594</guid>
+      <pubDate>Wed, 07 Oct 2026 12:05:53 GMT</pubDate>
+      <category>hn-claude-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>claude&apos;s pixel art is so good</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1wzq2l6/claudes_pixel_art_is_so_good/</link>
+      <guid isPermaLink="false">t3_1wzq2l6</guid>
+      <pubDate>Wed, 07 Oct 2026 07:14:15 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>been generating some pixel art with Claude for a vibe coding project by giving it reference images - it&apos;s amazing, thought i&apos;d share. thoughts?</description>
+    </item>
+    <item>
+      <title>Expanding the Cyber Verification Program</title>
+      <link>https://www.anthropic.com/news/cyber-verification-program</link>
+      <guid isPermaLink="false">49988768</guid>
+      <pubDate>Wed, 07 Oct 2026 05:47:25 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>Just got access to Mythos 5.1</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1wzn92v/just_got_access_to_mythos_51/</link>
+      <guid isPermaLink="false">t3_1wzn92v</guid>
+      <pubDate>Wed, 07 Oct 2026 04:20:44 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>What Can I say. I tested it a bit ... it&apos;s a monster🤯</description>
+    </item>
+    <item>
+      <title>Claude tells Ben Thompson his Mac Mini is compromised</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1wzkpu9/claude_tells_ben_thompson_his_mac_mini_is/</link>
+      <guid isPermaLink="false">t3_1wzkpu9</guid>
+      <pubDate>Wed, 07 Oct 2026 02:04:19 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>https://stratechery.com/2026/apple-and-a-hackers-future/ Edited to add: Thompson uses Claude Code&apos;s persistent monitoring tool to &quot;capture interactions with a status board I built to visually track everything&quot; he&apos;s working on. The tool is restarted every 30 minutes. During one of these restarts, Cla</description>
+    </item>
+    <item>
+      <title>Elevated errors loading usage data on platform.claude.com</title>
+      <link>https://stspg.io/scdhhnplc2jn</link>
+      <guid isPermaLink="false">wf2v8ms031sx</guid>
+      <pubDate>Wed, 07 Oct 2026 01:20:26 GMT</pubDate>
+      <category>status-page</category>
+      <description>[major] resolved — This incident has been resolved. From 17:00 PT on October 6 / 00:00 UTC on October 7 to 18:40 PT on October 6 / 01:40 UTC on October 7, many requests to load usage data on the platform.claude.com Usage page and the Admin API usage report returned errors.</description>
+    </item>
+    <item>
+      <title>diff: the docked pane starts at its header, under the engine&apos;s own head row (#99206)</title>
+      <link>https://github.com/anthropics/claude-code/commit/765f236fe1bfcc678e0ec59af9170fb7d6771a3a</link>
+      <guid isPermaLink="false">765f236</guid>
+      <pubDate>Wed, 07 Oct 2026 00:13:57 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>Docked, the pane no longer pads a blank row of its own above its header: the engine keeps a docked pane&apos;s first row for its close mark, and that row is the blank one.</description>
+    </item>
+    <item>
+      <title>56% of my Claude Code usage was Claude re-reading the conversation</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1wzhbfc/56_of_my_claude_code_usage_was_claude_rereading/</link>
+      <guid isPermaLink="false">t3_1wzhbfc</guid>
+      <pubDate>Tue, 06 Oct 2026 23:17:48 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>I priced 6 months of my own Claude Code transcripts at API rates. Only 20% of the spend went toward actual useful work. 56% was re-reading the conversation, since every call resends the context, and almost half my calls carried over 200K tokens. Two things I&apos;m testing: /clear before unrelated small </description>
+    </item>
+    <item>
+      <title>CVP members now have Mythos 5.1</title>
+      <link>https://www.reddit.com/r/ClaudeAI/comments/1wzgbby/cvp_members_now_have_mythos_51/</link>
+      <guid isPermaLink="false">t3_1wzgbby</guid>
+      <pubDate>Tue, 06 Oct 2026 22:31:36 GMT</pubDate>
+      <category>reddit-claudeai</category>
+      <description>I’m a member of the CVP and just noticed Mythos is now an option in regular chat under “More Models” CVP = Cyber Verification Program</description>
+    </item>
+    <item>
+      <title>The Every team runs as much work as possible through agents. To help the whole team share skills when a new model comes out, they built a company agent on Claude Managed Agents that everyone uses in S</title>
+      <link>https://x.com/claudeai/status/2107574195978641911</link>
+      <guid isPermaLink="false">2107574195978641911</guid>
+      <pubDate>Tue, 06 Oct 2026 20:50:19 GMT</pubDate>
+      <category>twitter-claudeai</category>
+      <description>The Every team runs as much work as possible through agents. To help the whole team share skills when a new model comes out, they built a company agent on Claude Managed Agents that everyone uses in Slack.
+
+Once it caught on internally, they released it to their subscribers. https://t.co/sKAhBei27k</description>
+    </item>
+    <item>
+      <title>I am surprised that people are surprised this is how I prompt Claude.
+
+Talk to Claude the way you would a coworker. There&apos;s no secret to prompting. There&apos;s no need to be overly scaffolded or prescript</title>
+      <link>https://x.com/bcherny/status/2107565388250874193</link>
+      <guid isPermaLink="false">2107565388250874193</guid>
+      <pubDate>Tue, 06 Oct 2026 20:15:19 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>I am surprised that people are surprised this is how I prompt Claude.
+
+Talk to Claude the way you would a coworker. There&apos;s no secret to prompting. There&apos;s no need to be overly scaffolded or prescriptive for most tasks -- give Claude a goal, and it will figure it out.
+
+Back in the Sonnet 3.5 days, y</description>
+    </item>
+    <item>
+      <title>RT @claudeai: The Claude Startups program is expanding to more founders.
+
+Members can get a year of Claude Team, API credits, special offer…</title>
+      <link>https://x.com/bcherny/status/2107564141837996487</link>
+      <guid isPermaLink="false">2107564141837996487</guid>
+      <pubDate>Tue, 06 Oct 2026 20:10:22 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @claudeai: The Claude Startups program is expanding to more founders.
+
+Members can get a year of Claude Team, API credits, special offer…</description>
+    </item>
+    <item>
+      <title>RT @ClaudeDevs: Cloud sessions run Claude Code on a fresh VM for each task, so you can start several at once and they keep going when you c…</title>
+      <link>https://x.com/bcherny/status/2107552696660336675</link>
+      <guid isPermaLink="false">2107552696660336675</guid>
+      <pubDate>Tue, 06 Oct 2026 19:24:53 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @ClaudeDevs: Cloud sessions run Claude Code on a fresh VM for each task, so you can start several at once and they keep going when you c…</description>
+    </item>
+    <item>
+      <title>RT @claudeai: Claude now works inside Google Docs, Sheets, and Slides, and those files also open inside Claude.
+
+In Google Workspace, Claud…</title>
+      <link>https://x.com/bcherny/status/2107552673398686200</link>
+      <guid isPermaLink="false">2107552673398686200</guid>
+      <pubDate>Tue, 06 Oct 2026 19:24:48 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @claudeai: Claude now works inside Google Docs, Sheets, and Slides, and those files also open inside Claude.
+
+In Google Workspace, Claud…</description>
+    </item>
+    <item>
+      <title>v1.0.244</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.244</link>
+      <guid isPermaLink="false">v1.0.244</guid>
+      <pubDate>Tue, 06 Oct 2026 19:08:49 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.243...v1.0.244</description>
+    </item>
+    <item>
+      <title>We’re expanding our Cyber Verification Program to give security professionals broader access to our most capable models.
+
+Through this program, verified security professionals can access Claude Mythos</title>
+      <link>https://x.com/AnthropicAI/status/2107546569654636883</link>
+      <guid isPermaLink="false">2107546569654636883</guid>
+      <pubDate>Tue, 06 Oct 2026 19:00:33 GMT</pubDate>
+      <category>twitter-anthropicai</category>
+      <description>We’re expanding our Cyber Verification Program to give security professionals broader access to our most capable models.
+
+Through this program, verified security professionals can access Claude Mythos 5.1, Opus 5.5, and Sonnet 5.5 with safeguards designed for defensive work.
+
+We’re also opening up n</description>
+    </item>
+    <item>
+      <title>Expanding the Cyber Verification Program</title>
+      <link>https://www.anthropic.com/news/cyber-verification-program</link>
+      <guid isPermaLink="false">49982574</guid>
+      <pubDate>Tue, 06 Oct 2026 19:00:11 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>v2.1.292</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.292</link>
+      <guid isPermaLink="false">v2.1.292</guid>
+      <pubDate>Tue, 06 Oct 2026 18:59:30 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added --marketplace &lt;source&gt; to claude plugin install: adds the marketplace if needed, under the same policy checks as claude plugin marketplace add, then installs the plugin from it
+- Added an effort parameter to the Agent tool, so Claude runs a sub-agent at the effort level you as</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/fbe20e00e2851fc01506f54f98a8f0b875af3847</link>
+      <guid isPermaLink="false">fbe20e0</guid>
+      <pubDate>Tue, 06 Oct 2026 18:59:09 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Cloud sessions run Claude Code on a fresh VM for each task, so you can start several at once and they keep going when you close your laptop.
+
+We wrote a field guide with seven workflows that suit them</title>
+      <link>https://x.com/ClaudeDevs/status/2107542087243907506</link>
+      <guid isPermaLink="false">2107542087243907506</guid>
+      <pubDate>Tue, 06 Oct 2026 18:42:44 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>Cloud sessions run Claude Code on a fresh VM for each task, so you can start several at once and they keep going when you close your laptop.
+
+We wrote a field guide with seven workflows that suit them, plus how to connect GitHub on the first try.
+
+https://t.co/1Usw2M4KHG</description>
+    </item>
+    <item>
+      <title>Claude now works inside Google Docs, Sheets, and Slides, and those files also open inside Claude.
+
+In Google Workspace, Claude sits in a sidebar next to your file, reads what you have open, and edits </title>
+      <link>https://x.com/claudeai/status/2107522596845822135</link>
+      <guid isPermaLink="false">2107522596845822135</guid>
+      <pubDate>Tue, 06 Oct 2026 17:25:17 GMT</pubDate>
+      <category>twitter-claudeai</category>
+      <description>Claude now works inside Google Docs, Sheets, and Slides, and those files also open inside Claude.
+
+In Google Workspace, Claude sits in a sidebar next to your file, reads what you have open, and edits it in place. You can approve each edit before it lands. https://t.co/se9wIS7vK1</description>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.292</title>
+      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
+      <guid isPermaLink="false">2.1.292</guid>
+      <pubDate>Tue, 06 Oct 2026 17:10:31 GMT</pubDate>
+      <category>npm-claude-code</category>
+      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>I asked Opus 5.5 to make an interactive website companion for the latest @AcquiredFM Home Depot episode. It came out pretty nice!
+
+Water color illustrations all drawn by Claude, too: https://t.co/Camr</title>
+      <link>https://x.com/bcherny/status/2107516876876362200</link>
+      <guid isPermaLink="false">2107516876876362200</guid>
+      <pubDate>Tue, 06 Oct 2026 17:02:33 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>I asked Opus 5.5 to make an interactive website companion for the latest @AcquiredFM Home Depot episode. It came out pretty nice!
+
+Water color illustrations all drawn by Claude, too: https://t.co/Camrfu3bwT
+
+Episode here: https://t.co/x2t57gdjxr</description>
+    </item>
+    <item>
+      <title>The Claude Startups program is expanding to more founders.
+
+Members can get a year of Claude Team, API credits, special offers on the tools a startup runs on, and office hours with Anthropic’s Applied</title>
+      <link>https://x.com/claudeai/status/2107513494493179954</link>
+      <guid isPermaLink="false">2107513494493179954</guid>
+      <pubDate>Tue, 06 Oct 2026 16:49:07 GMT</pubDate>
+      <category>twitter-claudeai</category>
+      <description>The Claude Startups program is expanding to more founders.
+
+Members can get a year of Claude Team, API credits, special offers on the tools a startup runs on, and office hours with Anthropic’s Applied AI team. https://t.co/3MUg1whIfl</description>
+    </item>
+    <item>
+      <title>fix: clear dependabot advisories in bundled nodejs examples (#1819)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/1a049b06384d3671a5b421baaa3a1d177542d64c</link>
+      <guid isPermaLink="false">1a049b0</guid>
+      <pubDate>Tue, 06 Oct 2026 15:14:51 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>Show HN: I turned Andrej Karpathy&apos;s tips on understanding LLM output into Skill</title>
+      <link>https://github.com/ajithraghavan/make-it-click</link>
+      <guid isPermaLink="false">49978680</guid>
+      <pubDate>Tue, 06 Oct 2026 14:03:18 GMT</pubDate>
+      <category>hn-claude-ai</category>
+      <description>I turned Andrej Karpathy’s tips on understanding LLM output into an Open Source Agent Skill : [make-it-click](&lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;ajithraghavan&amp;#x2F;make-it-click&quot; rel=&quot;nofollow&quot;&gt;https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;ajithraghavan&amp;#x2F;make-it-click&lt;/a&gt;)&lt;p&gt;Inspired by his X post :</description>
+    </item>
+    <item>
+      <title>Expanding the Cyber Verification Program</title>
+      <link>https://www.anthropic.com/news/cyber-verification-program</link>
+      <guid isPermaLink="false">https://www.anthropic.com/news/cyber-verification-program</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <category>blog-news</category>
+      <description>We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.</description>
+    </item>
     <item>
       <title>Update claude-api skill: managed-agents-onboard from a quickstart name or a URL (#1962)</title>
       <link>https://github.com/anthropics/skills/commit/683bc88e56f3e09ba94f7055977f3d3aa499f202</link>
@@ -112,32 +411,12 @@
       <description># Pull Request Description  Adds `axonx`, a standalone quantitative research Skill adapted from FlowLLM-AI/AxonX at commit `862b90da9c49c3bdee4c2ab9ef896c415aee9f45`. It covers research plugin development, CLI/MCP task operation, status/log inspection, and artifact lineage. Includes Apache-2.0 licen</description>
     </item>
     <item>
-      <title>feat: add 8 VoiceMoat skills for Twitter/X and LinkedIn posts (#1783)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c65f397d0d554f9770e2de6d48cfbf775ca133b7</link>
-      <guid isPermaLink="false">c65f397</guid>
-      <pubDate>Sun, 04 Oct 2026 22:35:36 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds eight skills for writing and reviewing Twitter/X and LinkedIn posts, adapted from the official VoiceMoat skills repo ([prateeks367/voicemoat-skills](https://github.com/prateeks367/voicemoat-skills), MIT), plus the source credit in `README.md` under Official Sources. </description>
-    </item>
-    <item>
       <title>Claude&apos;s Constitution</title>
       <link>https://www.anthropic.com/constitution</link>
       <guid isPermaLink="false">49956284</guid>
       <pubDate>Sun, 04 Oct 2026 18:05:17 GMT</pubDate>
       <category>hn-anthropic-com</category>
       <description/>
-    </item>
-    <item>
-      <title>RT @claudeai: Lots of inventive things made with Claude these past few weeks. A few of our favorites:
-
-A working watermill, built with Opus…</title>
-      <link>https://x.com/bcherny/status/2106805098534052135</link>
-      <guid isPermaLink="false">2106805098534052135</guid>
-      <pubDate>Sun, 04 Oct 2026 17:54:12 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @claudeai: Lots of inventive things made with Claude these past few weeks. A few of our favorites:
-
-A working watermill, built with Opus…</description>
     </item>
     <item>
       <title>0.3.289</title>
@@ -156,14 +435,6 @@ A working watermill, built with Opus…</description>
       <description>- Fixed a deny or ask rule on a nested part of a compound shell command not holding over a user-installed mod&apos;s approval on managed machines
 - Fixed the terminal freezing on short code blocks with many unclosed &lt;script&gt; tags or deeply nested ${ substitutions
 - Fixed Read deny rules not applying to f</description>
-    </item>
-    <item>
-      <title>RT @lydiahallie: A few of you asked what mods are, here&apos;s a quick walkthrough! They’re really just plugins with a few special functions tha…</title>
-      <link>https://x.com/bcherny/status/2106565344919953590</link>
-      <guid isPermaLink="false">2106565344919953590</guid>
-      <pubDate>Sun, 04 Oct 2026 02:01:30 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @lydiahallie: A few of you asked what mods are, here&apos;s a quick walkthrough! They’re really just plugins with a few special functions tha…</description>
     </item>
     <item>
       <title>v1.0.241</title>
@@ -246,44 +517,12 @@ I prefer Claude being a tool used by humans to make art rather than making art u
       <description/>
     </item>
     <item>
-      <title>Opus 5.5 can one-shot a video, so I pushed it a little bit further: a Skill that turns PDF into an animated, interactive web book</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1wwhlgb/opus_55_can_oneshot_a_video_so_i_pushed_it_a/</link>
-      <guid isPermaLink="false">t3_1wwhlgb</guid>
-      <pubDate>Sat, 03 Oct 2026 07:59:25 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>Everyone knows Opus 5.5 can one-shot a video. I tried it myself and it blew my mind, so I wanted to see how far I could push it (mainly by itself,haha). Papermorph started as a Skill to turn a book into a series of teaching videos. It&apos;s since grown into full web books: animated, narrated lessons you</description>
-    </item>
-    <item>
       <title>Geocities 1996/97 – the good old days</title>
       <link>https://claude.ai/artifact/ASgJADXmxzvXCQa47KaKzH</link>
       <guid isPermaLink="false">49941509</guid>
       <pubDate>Sat, 03 Oct 2026 05:12:23 GMT</pubDate>
       <category>hn-claude-ai</category>
       <description/>
-    </item>
-    <item>
-      <title>Can we predict the jobs robots will do?</title>
-      <link>https://www.anthropic.com/research/what-work-can-robots-do</link>
-      <guid isPermaLink="false">49940547</guid>
-      <pubDate>Sat, 03 Oct 2026 01:24:57 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>“But babe, it’s like a free $200 gift card!”</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1wwapbj/but_babe_its_like_a_free_200_gift_card/</link>
-      <guid isPermaLink="false">t3_1wwapbj</guid>
-      <pubDate>Sat, 03 Oct 2026 01:23:42 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>Being funny but also, seriously does the reset also carry the same usage based on the current plan upon using the reset??</description>
-    </item>
-    <item>
-      <title>I use Claude daily but I know I&apos;m only using a fraction of what Claude can do. How do I actually maximize my use of Claude and build a system that runs my life?</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1ww9nq3/i_use_claude_daily_but_i_know_im_only_using_a/</link>
-      <guid isPermaLink="false">t3_1ww9nq3</guid>
-      <pubDate>Sat, 03 Oct 2026 00:29:15 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>Hey everyone, this is my first time posting here and it&apos;s a bit of a longer loaded one. Background on myself: I&apos;m a college senior with my time spread across classes, gym / health, networking, learning AI, and more. My current stack: Claude (Pro Subscription), Claude Code, GitHub, Notion (PARA setup</description>
     </item>
     <item>
       <title>RT @lydiahallie: A few of you asked what mods are, here&apos;s a quick walkthrough! They’re really just plugins with a few special functions tha…</title>
@@ -390,36 +629,12 @@ Enable it with:
       <description>The review model was hardcoded to claude-opus-4-7, so the plugin fell behind each time a new Opus shipped.  - The diff review asks the configured endpoint (GET /v1/models) for the   newest Opus it serves, cached for a day; claude-opus-5-5 if it can&apos;t say. - The agentic commit review, and every revie</description>
     </item>
     <item>
-      <title>I built Claude Fables, a Claude Code mod that turns what Claude is doing into a little animated cartoon above the prompt</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1ww2cn3/i_built_claude_fables_a_claude_code_mod_that/</link>
-      <guid isPermaLink="false">t3_1ww2cn3</guid>
-      <pubDate>Fri, 02 Oct 2026 19:09:14 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>I built Claude Fables, a mod for the Claude Code desktop app. While Claude works, it watches each tool call and each line Claude says. Every few seconds it retells the latest moment as a short art scene in the band above the prompt. A bug hunt becomes a nature documentary, a failing test makes Claud</description>
-    </item>
-    <item>
       <title>@anthropic-ai/claude-code@2.1.288</title>
       <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
       <guid isPermaLink="false">2.1.288</guid>
       <pubDate>Fri, 02 Oct 2026 18:30:40 GMT</pubDate>
       <category>npm-claude-code</category>
       <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
-    </item>
-    <item>
-      <title>Team recently started using Claude. Sprints get cleared in a few days</title>
-      <link>https://www.reddit.com/r/ClaudeAI/comments/1ww0u3i/team_recently_started_using_claude_sprints_get/</link>
-      <guid isPermaLink="false">t3_1ww0u3i</guid>
-      <pubDate>Fri, 02 Oct 2026 18:10:07 GMT</pubDate>
-      <category>reddit-claudeai</category>
-      <description>I lead the development team of a few enterprise systems mostly based around Python/Typescript, processing data at scale, with a ton of dev ops and micro services. At the title say, things are getting awkward. Sprints get cleared in days instead of weeks. We’re running out of work and product managem</description>
-    </item>
-    <item>
-      <title>Anthropic invests $100M to train 10k engineers</title>
-      <link>https://www.anthropic.com/news/claude-frontier-academy</link>
-      <guid isPermaLink="false">49935906</guid>
-      <pubDate>Fri, 02 Oct 2026 17:06:29 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
     </item>
     <item>
       <title>0.3.287</title>
@@ -480,18 +695,6 @@ Enable it with:
       <pubDate>Thu, 01 Oct 2026 22:49:51 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>pi/core and the bundled blueprint skill now refer to the project as ECC only; the generated README no longer expands the name. Profile contents, package name and paths are unchanged (123 skills, 24 commands).  The release workflows poll npm for up to five minutes after publish before verifying the a</description>
-    </item>
-    <item>
-      <title>Mods are absolutely insane. You can now customize Claude to work and look the way you want by just prompting it.
-
-Each person works differently, so there&apos;s no reason why everyone should have an identi</title>
-      <link>https://x.com/bcherny/status/2105756563302723721</link>
-      <guid isPermaLink="false">2105756563302723721</guid>
-      <pubDate>Thu, 01 Oct 2026 20:27:42 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>Mods are absolutely insane. You can now customize Claude to work and look the way you want by just prompting it.
-
-Each person works differently, so there&apos;s no reason why everyone should have an identical Claude experience. Make Claude your own, and share mods as plugins so others can try your mods t</description>
     </item>
     <item>
       <title>Claude Code Mods: plugins may now modify deeper behavior</title>
@@ -582,14 +785,6 @@ A few examples: https://t.co/qMtzV8A</description>
 - Added You should know, a built-in mod where a side agent watches your back and flags things you or Claude might miss. Turn it on with /plugin enable cc-plugin-you-should-know@builtin (for first-party sessions with telemetry</description>
     </item>
     <item>
-      <title>chore: Update CHANGELOG.md and feed.xml</title>
-      <link>https://github.com/anthropics/claude-code/commit/816ec211a648f17a411f63a45cfd44ddf8db00d9</link>
-      <guid isPermaLink="false">816ec21</guid>
-      <pubDate>Thu, 01 Oct 2026 17:59:57 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>Fixes #70763 Fixes #97352</description>
-    </item>
-    <item>
       <title>View: Program that drew, in 3D, what Apollo astronauts would see out the window</title>
       <link>https://claude.ai/artifact/5cPjoQTJ8PvXF5FUwwbLEC</link>
       <guid isPermaLink="false">49924726</guid>
@@ -612,14 +807,6 @@ A few examples: https://t.co/qMtzV8A</description>
       <pubDate>Thu, 01 Oct 2026 16:20:40 GMT</pubDate>
       <category>status-page</category>
       <description>[minor] resolved — This issue has been resolved.</description>
-    </item>
-    <item>
-      <title>Claude for Government is now generally available</title>
-      <link>https://claude.com/blog/claude-for-government-is-now-generally-available</link>
-      <guid isPermaLink="false">49922315</guid>
-      <pubDate>Thu, 01 Oct 2026 14:42:36 GMT</pubDate>
-      <category>hn-claude-com</category>
-      <description/>
     </item>
     <item>
       <title>Claude-shaped science</title>
@@ -660,36 +847,12 @@ A few examples: https://t.co/qMtzV8A</description>
 - Fixed several Claude Code processes and IDE extensio</description>
     </item>
     <item>
-      <title>RT @ClaudeDevs: https://t.co/sRyO7OigQ7 is our new home for developers building with Claude. 
-
-You&apos;ll find engineering deep dives, Claude C…</title>
-      <link>https://x.com/bcherny/status/2105533886424113373</link>
-      <guid isPermaLink="false">2105533886424113373</guid>
-      <pubDate>Thu, 01 Oct 2026 05:42:52 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @ClaudeDevs: https://t.co/sRyO7OigQ7 is our new home for developers building with Claude. 
-
-You&apos;ll find engineering deep dives, Claude C…</description>
-    </item>
-    <item>
-      <title>diff: the dialog opens every file it lists, and says nothing when closed (#98555)</title>
-      <link>https://github.com/anthropics/claude-code/commit/6160717d8994f236ab381cf534fc1cde5347c12f</link>
-      <guid isPermaLink="false">6160717</guid>
-      <pubDate>Thu, 01 Oct 2026 05:23:04 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>* diff: the dialog opens every file it lists, and says nothing when closed  * diff: the dialog&apos;s fetch asks its seat first, and a generated file opens too  * diff: a read started by a move of the selection never rejects unheard  * diff: a test that a moving window reads only its new rows</description>
-    </item>
-    <item>
-      <title>RT @dfeinition: I work almost exclusively in Claude Projects now, here are some of the things that stand out to me:
-
-I often end up floodin…</title>
-      <link>https://x.com/bcherny/status/2105448431972217045</link>
-      <guid isPermaLink="false">2105448431972217045</guid>
-      <pubDate>Thu, 01 Oct 2026 00:03:18 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @dfeinition: I work almost exclusively in Claude Projects now, here are some of the things that stand out to me:
-
-I often end up floodin…</description>
+      <title>Barclays scales Claude to upgrade operations and improve client experience</title>
+      <link>https://www.anthropic.com/news/barclays-scales-claude</link>
+      <guid isPermaLink="false">https://www.anthropic.com/news/barclays-scales-claude</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <category>blog-news</category>
+      <description/>
     </item>
     <item>
       <title>Customize Claude Code with mods</title>
@@ -697,14 +860,6 @@ I often end up floodin…</description>
       <guid isPermaLink="false">https://claude.com/blog/claude-code-mods</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
       <category>blog-claude</category>
-      <description/>
-    </item>
-    <item>
-      <title>Barclays scales Claude to upgrade operations and improve client experience</title>
-      <link>https://www.anthropic.com/news/barclays-scales-claude</link>
-      <guid isPermaLink="false">https://www.anthropic.com/news/barclays-scales-claude</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
-      <category>blog-news</category>
       <description/>
     </item>
     <item>
@@ -788,147 +943,6 @@ You&apos;ll find engineering deep dives, Claude Code and API guides, tips from t
       <pubDate>Wed, 30 Sep 2026 20:11:48 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Remote-Dev: homespace  Co-authored-by: Fahreddin Özcan &lt;ozcanfahrettinn@gmail.com&gt;</description>
-    </item>
-    <item>
-      <title>Merge pull request #6334 from anthropics/dltn/imessage-multi-image</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/72399850766aef9b8652fdd26fda2dc030b8541a</link>
-      <guid isPermaLink="false">7239985</guid>
-      <pubDate>Wed, 30 Sep 2026 19:56:17 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>imessage: surface every inbound image, not just the first</description>
-    </item>
-    <item>
-      <title>v1.0.238</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.238</link>
-      <guid isPermaLink="false">v1.0.238</guid>
-      <pubDate>Wed, 30 Sep 2026 19:17:33 GMT</pubDate>
-      <category>claude-code-action</category>
-      <description>What&apos;s Changed
- ci: security hardening for GitHub Actions workflows that call Claude by @qing-ant in https://github.com/anthropics/claude-code-action/pull/1867
- New Contributors
- @qing-ant made their first contribution in https://github.com/anthropics/claude-code-action/pull/1867
-Full Changelog: htt</description>
-    </item>
-    <item>
-      <title>v2.1.286</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.286</link>
-      <guid isPermaLink="false">v2.1.286</guid>
-      <pubDate>Wed, 30 Sep 2026 19:10:13 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added a count such as &quot;2 of 5&quot; to the permission prompt when several permission requests stack up
-- Added mouse support for the &quot;N more&quot; rows of lists in fullscreen mode: click one to jump to that end of the list, with hover and pressed states
-- Fixed several Claude Code processes a</description>
-    </item>
-    <item>
-      <title>Claude Founder House is coming to SF Tech Week (Oct 6–8) and Stockholm (Oct 14).
-
-Come for talks, workshops, and office hours with our team, plus time to meet others building with Claude. Whether you&apos;</title>
-      <link>https://x.com/claudeai/status/2105370680485417401</link>
-      <guid isPermaLink="false">2105370680485417401</guid>
-      <pubDate>Wed, 30 Sep 2026 18:54:20 GMT</pubDate>
-      <category>twitter-claudeai</category>
-      <description>Claude Founder House is coming to SF Tech Week (Oct 6–8) and Stockholm (Oct 14).
-
-Come for talks, workshops, and office hours with our team, plus time to meet others building with Claude. Whether you&apos;re a founder, a CEO, or a builder, there&apos;s a session for you. https://t.co/LiXccCEV7t</description>
-    </item>
-    <item>
-      <title>v1.10.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.10.0</link>
-      <guid isPermaLink="false">v1.10.0</guid>
-      <pubDate>Wed, 30 Sep 2026 18:28:45 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>1.10.0 (2026-09-30)
-Full Changelog: v1.9.0...v1.10.0
- Features
- api: add a refusal stop reason and stopdetails to Managed Agents session idle events (cba653f)
- api: add Claude Enterprise analytics, spend limits, and RBAC groups and roles to the Admin API (6bb2c0c)
- api: add per-user usage and cost r</description>
-    </item>
-    <item>
-      <title>@anthropic-ai/claude-code@2.1.286</title>
-      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
-      <guid isPermaLink="false">2.1.286</guid>
-      <pubDate>Wed, 30 Sep 2026 17:14:38 GMT</pubDate>
-      <category>npm-claude-code</category>
-      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
-    </item>
-    <item>
-      <title>What work can robots do?</title>
-      <link>https://www.anthropic.com/research/what-work-can-robots-do</link>
-      <guid isPermaLink="false">https://www.anthropic.com/research/what-work-can-robots-do</guid>
-      <pubDate>Wed, 30 Sep 2026 16:01:00 GMT</pubDate>
-      <category>blog-research</category>
-      <description>We built an index of how well today’s robots can perform US job tasks. Robots can already do three-quarters of physical tasks, mostly in limited settings, but are cost-competitive for just 0.3% of them.</description>
-    </item>
-    <item>
-      <title>Claude Cowork removes local-only mode for Pro and Max users on October 6</title>
-      <link>https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile</link>
-      <guid isPermaLink="false">49910278</guid>
-      <pubDate>Wed, 30 Sep 2026 15:30:21 GMT</pubDate>
-      <category>hn-claude-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>Thoughts on AI</title>
-      <link>https://claude.ai/anthropic-interviewer/your-thoughts-on-ai</link>
-      <guid isPermaLink="false">49909946</guid>
-      <pubDate>Wed, 30 Sep 2026 15:03:06 GMT</pubDate>
-      <category>hn-claude-ai</category>
-      <description/>
-    </item>
-    <item>
-      <title>0.2.162</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.162</guid>
-      <pubDate>Wed, 30 Sep 2026 12:07:17 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>Internal/Other Changes
-- Updated bundled Claude CLI to version 2.1.285</description>
-    </item>
-    <item>
-      <title>0.3.285</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.285</guid>
-      <pubDate>Wed, 30 Sep 2026 12:07:16 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added an optional read.title (the artifact&apos;s stored title) to the Artifact tool&apos;s structured read result
-- Added providernotallowed to startupfailurereason and allowedProviders to the Settings type
-- Fixed sessions with CLAUDECODEFORKSUBAGENT=1: a subagent&apos;s own Agent call now runs in the foregrou</description>
-    </item>
-    <item>
-      <title>2.1.285</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.285</guid>
-      <pubDate>Wed, 30 Sep 2026 12:07:16 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added CLAUDECODEDISABLEWEBFETCH environment variable to turn off the WebFetch tool
-- Added claude --desktop to open the Claude desktop app on the current directory, or on a session with --continue / --resume &lt;id&gt;
-- Added claude plugin configure &lt;plugin&gt; to show a plugin&apos;s options and which are uns</description>
-    </item>
-    <item>
-      <title>feat(pi): curated pi/core skills+prompts profile, CI load test, and 2.2.2 release sync (#3264)</title>
-      <link>https://github.com/affaan-m/ECC/commit/c70874fae9eb0e5ad0365beb7e2955899fd1d30f</link>
-      <guid isPermaLink="false">c70874f</guid>
-      <pubDate>Wed, 30 Sep 2026 01:24:05 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds a curated, Pi-native, skills+prompts-only profile at pi/core/ for downstream packagers that mirror GitHub Releases.  - manifests/pi-core.json: explicit include lists, per-item exclusion reasons, curation rules, safety allowlists; every root skill and command must be classified. - scripts/build-</description>
-    </item>
-    <item>
-      <title>Claude for Government is now generally available</title>
-      <link>https://claude.com/blog/claude-for-government-is-now-generally-available</link>
-      <guid isPermaLink="false">https://claude.com/blog/claude-for-government-is-now-generally-available</guid>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-      <category>blog-claude</category>
-      <description/>
-    </item>
-    <item>
-      <title>How Anthropic&apos;s sales team rebuilt inbound with Claude Managed Agents</title>
-      <link>https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents</link>
-      <guid isPermaLink="false">https://claude.com/blog/how-anthropics-sales-team-rebuilt-inbound-with-claude-managed-agents</guid>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-      <category>blog-claude</category>
-      <description/>
     </item>
   </channel>
 </rss>

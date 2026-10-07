@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-05T13:57:11.628Z",
+  "generated": "2026-10-07T12:53:02.414Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.292",
+      "title": "0.3.292",
+      "date": "2026-10-07T12:52:14.461Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added agentid to the assistant and user messages a subagent produces; it equals the taskid on that subagent's task events and stays the same when the subagent is resumed\n- Added parenttaskid to taskstarted events and backgroundtaskschanged entries, naming the subagent task that launched a task\n- A",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.292|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.289",
       "title": "0.3.289",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.218|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.217",
-      "title": "0.3.217",
-      "date": "2026-07-22T08:32:04.407Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Changed subagents to no longer spawn nested subagents by default (depth cap lowered from 5 to 1); set CLAUDECODEMAXSUBAGENTSPAWNDEPTH to allow deeper nesting\n- Added a cap on concurrently-running subagents (default 20, override with CLAUDECODEMAXCONCURRENTSUBAGENTS)\n- Fixed Remote Control sessions",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.217|agent-sdk-ts-changelog"
     }
   ]
 }

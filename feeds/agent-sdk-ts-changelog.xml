@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 05 Oct 2026 13:57:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 12:53:02 GMT</lastBuildDate>
+    <item>
+      <title>0.3.292</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.292</guid>
+      <pubDate>Wed, 07 Oct 2026 12:52:14 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added agentid to the assistant and user messages a subagent produces; it equals the taskid on that subagent&apos;s task events and stays the same when the subagent is resumed
+- Added parenttaskid to taskstarted events and backgroundtaskschanged entries, naming the subagent task that launched a task
+- A</description>
+    </item>
     <item>
       <title>0.3.289</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -435,16 +445,6 @@
       <description>- SkillToolOutput now reports background: true when a forked skill was dispatched as a detached background agent
 - Fixed the result event&apos;s apierrorstatus reporting null for rate-limit and overloaded errors delivered mid-stream; it now reports 429/529
 - Added canonicalModel and provider to each mode</description>
-    </item>
-    <item>
-      <title>0.3.217</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.217</guid>
-      <pubDate>Wed, 22 Jul 2026 08:32:04 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Changed subagents to no longer spawn nested subagents by default (depth cap lowered from 5 to 1); set CLAUDECODEMAXSUBAGENTSPAWNDEPTH to allow deeper nesting
-- Added a cap on concurrently-running subagents (default 20, override with CLAUDECODEMAXCONCURRENTSUBAGENTS)
-- Fixed Remote Control sessions</description>
     </item>
   </channel>
 </rss>

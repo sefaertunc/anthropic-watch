@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 05 Oct 2026 13:57:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 12:53:02 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.292</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.292</link>
+      <guid isPermaLink="false">v2.1.292</guid>
+      <pubDate>Tue, 06 Oct 2026 18:59:30 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added --marketplace &lt;source&gt; to claude plugin install: adds the marketplace if needed, under the same policy checks as claude plugin marketplace add, then installs the plugin from it
+- Added an effort parameter to the Agent tool, so Claude runs a sub-agent at the effort level you as</description>
+    </item>
     <item>
       <title>v2.1.289</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.289</link>
@@ -494,17 +504,6 @@
 - Documented claude remote-control --continue for resuming the most recent Remote Control session
 - Added server-supplied Claude Code hook support for self-hosted runner sessions, matching managed-environment behavior
 - Added SSE keepalive pings to gateway streaming responses during l</description>
-    </item>
-    <item>
-      <title>v2.1.228</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.228</link>
-      <guid isPermaLink="false">v2.1.228</guid>
-      <pubDate>Tue, 11 Aug 2026 19:50:59 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed interactive sessions that could stop redrawing entirely, while the process kept running, after a rare internal layout error
-- Fixed git / Git Bash not being found on Windows when Claude Code is launched from a parent folder of the git installation
-- Fixed /tui reverting the se</description>
     </item>
   </channel>
 </rss>
