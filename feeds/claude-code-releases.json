@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-07T12:53:02.407Z",
+  "generated": "2026-10-08T13:01:36.220Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.294",
+      "title": "v2.1.294",
+      "date": "2026-10-08T05:03:54Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.294",
+      "snippet": "What's changed\n- Fixed prompt and agent hooks written as instructions (such as \"Block commands that...\") allowing what they should block\n- Improved how prompt hooks on Stop and SubagentStop written as instructions (such as \"Carry on if the build is broken\") are judged, so Claude is less likely to st",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.294|claude-code-releases"
+    },
+    {
+      "id": "v2.1.293",
+      "title": "v2.1.293",
+      "date": "2026-10-07T18:10:20Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+      "snippet": "What's changed\n- Added Claude Haiku 5.5 (claude-haiku-5-5), now the default Haiku model on the Anthropic API — 1M context, $0.10/$0.50 per Mtok ($0.50/$2.50 for prompts over 100K)\n- Added agentType to the subagentStatusLine payload, so scripts can tell custom subagent types apart\n- Added isDeferred ",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.293|claude-code-releases"
+    },
     {
       "id": "v2.1.292",
       "title": "v2.1.292",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.232|claude-code-releases"
-    },
-    {
-      "id": "v2.1.231",
-      "title": "v2.1.231",
-      "date": "2026-08-13T08:38:50Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.231",
-      "snippet": "What's changed\n- Fixed MCP OAuth sign-in failing with a redirect URI mismatch for servers that use a pre-registered OAuth client, such as Slack",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.231|claude-code-releases"
-    },
-    {
-      "id": "v2.1.229",
-      "title": "v2.1.229",
-      "date": "2026-08-12T20:56:22Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
-      "snippet": "What's changed\n- Documented claude remote-control --continue for resuming the most recent Remote Control session\n- Added server-supplied Claude Code hook support for self-hosted runner sessions, matching managed-environment behavior\n- Added SSE keepalive pings to gateway streaming responses during l",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.229|claude-code-releases"
     }
   ]
 }

@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 07 Oct 2026 12:53:02 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 13:01:36 GMT</lastBuildDate>
+    <item>
+      <title>Issue with spend limits</title>
+      <link>https://stspg.io/frlrjsqqn605</link>
+      <guid isPermaLink="false">vmys9qn874h4</guid>
+      <pubDate>Wed, 07 Oct 2026 21:23:29 GMT</pubDate>
+      <category>status-page</category>
+      <description>[none] resolved — We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Claude.ai, Claude Code, Claude Security, and Claude Cowork. This is now resolved.</description>
+    </item>
+    <item>
+      <title>Elevated errors on platform.claude.com</title>
+      <link>https://stspg.io/sjkw7njwf0mt</link>
+      <guid isPermaLink="false">978mjkgw6mh7</guid>
+      <pubDate>Wed, 07 Oct 2026 13:25:04 GMT</pubDate>
+      <category>status-page</category>
+      <description>[major] monitoring — We&apos;ve mitigated the errors loading usage data on platform.claude.com and in the Admin API usage report. While we work on a full fix, the most recent ~30 minutes of usage may take longer to appear on the platform.claude.com. API requests are not affected, and we will provide addi</description>
+    </item>
     <item>
       <title>Elevated errors loading usage data on platform.claude.com</title>
       <link>https://stspg.io/scdhhnplc2jn</link>
@@ -390,22 +406,6 @@
       <pubDate>Mon, 27 Jul 2026 08:16:57 GMT</pubDate>
       <category>status-page</category>
       <description>[minor] resolved — As of 2:03 PST / 9:03 UTC the errors have returned to baseline.</description>
-    </item>
-    <item>
-      <title>Elevated errors for Opus 5</title>
-      <link>https://stspg.io/jrz1yk46f9xp</link>
-      <guid isPermaLink="false">zftg3gqkmv18</guid>
-      <pubDate>Sun, 26 Jul 2026 09:17:12 GMT</pubDate>
-      <category>status-page</category>
-      <description>[major] resolved — This incident has been resolved.</description>
-    </item>
-    <item>
-      <title>Elevated errors for Claude Fable 5, Claude Sonnet 5, Claude Haiku 4.5, and other models</title>
-      <link>https://stspg.io/9w9f5y5k2vwx</link>
-      <guid isPermaLink="false">j6gv862066n7</guid>
-      <pubDate>Sat, 25 Jul 2026 21:34:51 GMT</pubDate>
-      <category>status-page</category>
-      <description>[major] resolved — This incident has been resolved.</description>
     </item>
   </channel>
 </rss>
