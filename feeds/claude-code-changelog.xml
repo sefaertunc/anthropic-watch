@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 08 Oct 2026 13:01:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 12:48:07 GMT</lastBuildDate>
+    <item>
+      <title>2.1.295</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.295</guid>
+      <pubDate>Fri, 09 Oct 2026 12:47:18 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added onFailure: &quot;block&quot; for command and HTTP hooks: a hook that can&apos;t start, times out, or exits with an unexpected code blocks the action instead of letting it through
+- Added Program Status Protocol (OSC 7501) support: terminals that implement it can show whether Claude Code is working, waiting</description>
+    </item>
     <item>
       <title>2.1.294</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -451,15 +460,6 @@
       <pubDate>Sat, 25 Jul 2026 08:08:54 GMT</pubDate>
       <category>claude-code-changelog</category>
       <description>- Bug fixes and reliability improvements</description>
-    </item>
-    <item>
-      <title>2.1.218</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.218</guid>
-      <pubDate>Thu, 23 Jul 2026 08:33:27 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Changed /code-review to run as a background subagent, so review work no longer fills your conversation and keeps stacked slash commands as its review target
-- Added screen-reader announcements of deleted text for word and line deletions (Option+Delete, Ctrl+W, Cmd+Backspace, Ctrl+U, Ctrl+K) in --a</description>
     </item>
   </channel>
 </rss>

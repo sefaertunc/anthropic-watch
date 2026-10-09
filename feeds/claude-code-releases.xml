@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 08 Oct 2026 13:01:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 12:48:07 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.295</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.295</link>
+      <guid isPermaLink="false">v2.1.295</guid>
+      <pubDate>Thu, 08 Oct 2026 19:48:38 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added onFailure: &quot;block&quot; for command and HTTP hooks: a hook that can&apos;t start, times out, or exits with an unexpected code blocks the action instead of letting it through
+- Added Program Status Protocol (OSC 7501) support: terminals that implement it can show whether Claude Code is w</description>
+    </item>
     <item>
       <title>v2.1.294</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.294</link>
@@ -495,16 +505,6 @@
       <description>What&apos;s changed
 - Added GitLab merge request URL support to the --worktree flag and the claude agents view (where MRs display as !N)
 - Added an opt-in forwarduseridentity apps gateway setting on Anthropic upstreams that sends the signed-in user&apos;s identity as headers, so a proxy behind the gateway can</description>
-    </item>
-    <item>
-      <title>v2.1.232</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.232</link>
-      <guid isPermaLink="false">v2.1.232</guid>
-      <pubDate>Thu, 13 Aug 2026 23:29:59 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Subagent forking is now on by default: a subagenttype: &quot;fork&quot; subagent inherits the full conversation and prompt cache, and non-teammate agent spawns in interactive sessions now run in the background by default
-- Type @ in the prompt to mention another Claude session by name; Claude</description>
     </item>
   </channel>
 </rss>

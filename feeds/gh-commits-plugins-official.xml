@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 08 Oct 2026 13:01:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 12:48:07 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #6398 from anthropics/oct/sg-2.0.12</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/b860d6f2554f145fe1e7ac4cdcabca0120d14030</link>
+      <guid isPermaLink="false">b860d6f</guid>
+      <pubDate>Fri, 09 Oct 2026 11:57:56 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: bump to 2.0.12</description>
+    </item>
+    <item>
+      <title>security-guidance: bump to 2.0.12</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6a76e75ca4ab6fafaf6641f451aa4c35a652c7dc</link>
+      <guid isPermaLink="false">6a76e75</guid>
+      <pubDate>Fri, 09 Oct 2026 10:53:01 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>Merge pull request #6393 from anthropics/mhegazy/sg-drop-subagent-review</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8206942d3ec08519557bd750858d689d082bea7c</link>
+      <guid isPermaLink="false">8206942</guid>
+      <pubDate>Fri, 09 Oct 2026 10:33:29 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: stop reviewing on every subagent finish</description>
+    </item>
+    <item>
+      <title>security-guidance: stop reviewing on every subagent finish</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/3752f0e092cb0fec08e68f80aa4d54849423a8b0</link>
+      <guid isPermaLink="false">3752f0e</guid>
+      <pubDate>Thu, 08 Oct 2026 22:46:16 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Each subagent finish re-reviewed the whole diff since the last prompt, so a turn with N subagents sent N growing reviews. The end-of-turn review already covers what subagents changed, so drop the SubagentStop registration.</description>
+    </item>
+    <item>
+      <title>Merge pull request #6390 from anthropics/claude/receipts-query-all-clones</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/315c4e48967d9541c29c3c656441dded353ca7aa</link>
+      <guid isPermaLink="false">315c4e4</guid>
+      <pubDate>Thu, 08 Oct 2026 17:06:41 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>receipts: query every local clone when counting commits</description>
+    </item>
+    <item>
+      <title>receipts: report git unavailable when a clone errored and none found commits</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0baf7d19f0b2ad785746af2c868adbbf46d47f24</link>
+      <guid isPermaLink="false">0baf7d1</guid>
+      <pubDate>Thu, 08 Oct 2026 16:33:07 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>bump(incident-io): 443f4716 → c8e50a4a (#6377)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f713a7c59b729741282f9c2d9a04e28e2abbd20c</link>
+      <guid isPermaLink="false">f713a7c</guid>
+      <pubDate>Thu, 08 Oct 2026 14:35:50 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>bump(aws-core): 0d6167ad → 34b3eccf (#6376)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e5750b2fc7246ea5f11a6df41504d3fac97cc70a</link>
+      <guid isPermaLink="false">e5750b2</guid>
+      <pubDate>Thu, 08 Oct 2026 14:35:39 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #6374 from anthropics/mhegazy/sg-reclaim-after-hook-kill</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/b78ac49cdc6b3d7b61c4439470e311f4291265b1</link>
@@ -342,70 +406,6 @@
       <pubDate>Thu, 17 Sep 2026 00:17:29 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
-    </item>
-    <item>
-      <title>Add Leadfeeder plugin (leadfeeder) (#6198)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0981431e51c6405c7794df108707fcd91fa15a99</link>
-      <guid isPermaLink="false">0981431</guid>
-      <pubDate>Thu, 17 Sep 2026 00:17:23 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add Clay plugin (clay) (#6191)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/da64a662de3fb6a2f832cb022170ff2a2e718bf5</link>
-      <guid isPermaLink="false">da64a66</guid>
-      <pubDate>Wed, 16 Sep 2026 19:06:19 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add Zocks Advisor Intelligence plugin (zocks-advisor) (#6188)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e3eaa24f0bebe0b6413d9e60439147f80a86dd73</link>
-      <guid isPermaLink="false">e3eaa24</guid>
-      <pubDate>Wed, 16 Sep 2026 18:32:00 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add Intuit QuickBooks plugin (intuit-quickbooks) (#6189)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/59b9c810caac3ec2bea7a08e8dff956ed4f6a965</link>
-      <guid isPermaLink="false">59b9c81</guid>
-      <pubDate>Wed, 16 Sep 2026 18:31:28 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add Pendo plugins (pendo-analytics, pendo-guides, pendo-orchestrate, setup-agent-analytics, setup-mcp-agent-analytics) (#6190)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/52db45bdaa01be9d92a96c9a6ff823a89cad98e5</link>
-      <guid isPermaLink="false">52db45b</guid>
-      <pubDate>Wed, 16 Sep 2026 17:37:23 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add Informatica plugin (informatica-for-claude-platform) (#6152)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/76c85b7366c8be78ce3ac67dd21945b3960d1a8c</link>
-      <guid isPermaLink="false">76c85b7</guid>
-      <pubDate>Wed, 16 Sep 2026 02:15:31 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #6151 from anthropics/tobin/remove-small-business</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b5439c41ae9864833eb73d5efd088af8e3be13fe</link>
-      <guid isPermaLink="false">b5439c4</guid>
-      <pubDate>Tue, 15 Sep 2026 19:31:41 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Remove small-business plugin</description>
-    </item>
-    <item>
-      <title>Remove small-business plugin</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f4c97189c628085dd5f64878da4da0d34cd7ba91</link>
-      <guid isPermaLink="false">f4c9718</guid>
-      <pubDate>Tue, 15 Sep 2026 19:13:56 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Remove the small-business entry from the marketplace.</description>
     </item>
   </channel>
 </rss>

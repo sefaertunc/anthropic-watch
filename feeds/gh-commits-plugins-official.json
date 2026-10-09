@@ -5,9 +5,97 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-08T13:01:36.260Z",
+  "generated": "2026-10-09T12:48:07.069Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "b860d6f",
+      "title": "Merge pull request #6398 from anthropics/oct/sg-2.0.12",
+      "date": "2026-10-09T11:57:56Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/b860d6f2554f145fe1e7ac4cdcabca0120d14030",
+      "snippet": "security-guidance: bump to 2.0.12",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "b860d6f|gh-commits-plugins-official"
+    },
+    {
+      "id": "6a76e75",
+      "title": "security-guidance: bump to 2.0.12",
+      "date": "2026-10-09T10:53:01Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/6a76e75ca4ab6fafaf6641f451aa4c35a652c7dc",
+      "snippet": "Co-Authored-By: Claude <noreply@anthropic.com>",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "6a76e75|gh-commits-plugins-official"
+    },
+    {
+      "id": "8206942",
+      "title": "Merge pull request #6393 from anthropics/mhegazy/sg-drop-subagent-review",
+      "date": "2026-10-09T10:33:29Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/8206942d3ec08519557bd750858d689d082bea7c",
+      "snippet": "security-guidance: stop reviewing on every subagent finish",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "8206942|gh-commits-plugins-official"
+    },
+    {
+      "id": "3752f0e",
+      "title": "security-guidance: stop reviewing on every subagent finish",
+      "date": "2026-10-08T22:46:16Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/3752f0e092cb0fec08e68f80aa4d54849423a8b0",
+      "snippet": "Each subagent finish re-reviewed the whole diff since the last prompt, so a turn with N subagents sent N growing reviews. The end-of-turn review already covers what subagents changed, so drop the SubagentStop registration.",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "3752f0e|gh-commits-plugins-official"
+    },
+    {
+      "id": "315c4e4",
+      "title": "Merge pull request #6390 from anthropics/claude/receipts-query-all-clones",
+      "date": "2026-10-08T17:06:41Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/315c4e48967d9541c29c3c656441dded353ca7aa",
+      "snippet": "receipts: query every local clone when counting commits",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "315c4e4|gh-commits-plugins-official"
+    },
+    {
+      "id": "0baf7d1",
+      "title": "receipts: report git unavailable when a clone errored and none found commits",
+      "date": "2026-10-08T16:33:07Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/0baf7d19f0b2ad785746af2c868adbbf46d47f24",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "0baf7d1|gh-commits-plugins-official"
+    },
+    {
+      "id": "f713a7c",
+      "title": "bump(incident-io): 443f4716 → c8e50a4a (#6377)",
+      "date": "2026-10-08T14:35:50Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/f713a7c59b729741282f9c2d9a04e28e2abbd20c",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "f713a7c|gh-commits-plugins-official"
+    },
+    {
+      "id": "e5750b2",
+      "title": "bump(aws-core): 0d6167ad → 34b3eccf (#6376)",
+      "date": "2026-10-08T14:35:39Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/e5750b2fc7246ea5f11a6df41504d3fac97cc70a",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "e5750b2|gh-commits-plugins-official"
+    },
     {
       "id": "b78ac49",
       "title": "Merge pull request #6374 from anthropics/mhegazy/sg-reclaim-after-hook-kill",
@@ -469,94 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "ea0a38e|gh-commits-plugins-official"
-    },
-    {
-      "id": "0981431",
-      "title": "Add Leadfeeder plugin (leadfeeder) (#6198)",
-      "date": "2026-09-17T00:17:23Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/0981431e51c6405c7794df108707fcd91fa15a99",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "0981431|gh-commits-plugins-official"
-    },
-    {
-      "id": "da64a66",
-      "title": "Add Clay plugin (clay) (#6191)",
-      "date": "2026-09-16T19:06:19Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/da64a662de3fb6a2f832cb022170ff2a2e718bf5",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "da64a66|gh-commits-plugins-official"
-    },
-    {
-      "id": "e3eaa24",
-      "title": "Add Zocks Advisor Intelligence plugin (zocks-advisor) (#6188)",
-      "date": "2026-09-16T18:32:00Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/e3eaa24f0bebe0b6413d9e60439147f80a86dd73",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "e3eaa24|gh-commits-plugins-official"
-    },
-    {
-      "id": "59b9c81",
-      "title": "Add Intuit QuickBooks plugin (intuit-quickbooks) (#6189)",
-      "date": "2026-09-16T18:31:28Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/59b9c810caac3ec2bea7a08e8dff956ed4f6a965",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "59b9c81|gh-commits-plugins-official"
-    },
-    {
-      "id": "52db45b",
-      "title": "Add Pendo plugins (pendo-analytics, pendo-guides, pendo-orchestrate, setup-agent-analytics, setup-mcp-agent-analytics) (#6190)",
-      "date": "2026-09-16T17:37:23Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/52db45bdaa01be9d92a96c9a6ff823a89cad98e5",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "52db45b|gh-commits-plugins-official"
-    },
-    {
-      "id": "76c85b7",
-      "title": "Add Informatica plugin (informatica-for-claude-platform) (#6152)",
-      "date": "2026-09-16T02:15:31Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/76c85b7366c8be78ce3ac67dd21945b3960d1a8c",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "76c85b7|gh-commits-plugins-official"
-    },
-    {
-      "id": "b5439c4",
-      "title": "Merge pull request #6151 from anthropics/tobin/remove-small-business",
-      "date": "2026-09-15T19:31:41Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/b5439c41ae9864833eb73d5efd088af8e3be13fe",
-      "snippet": "Remove small-business plugin",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "b5439c4|gh-commits-plugins-official"
-    },
-    {
-      "id": "f4c9718",
-      "title": "Remove small-business plugin",
-      "date": "2026-09-15T19:13:56Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/f4c97189c628085dd5f64878da4da0d34cd7ba91",
-      "snippet": "Remove the small-business entry from the marketplace.",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "f4c9718|gh-commits-plugins-official"
     }
   ]
 }

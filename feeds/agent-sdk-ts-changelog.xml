@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 08 Oct 2026 13:01:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 12:48:07 GMT</lastBuildDate>
+    <item>
+      <title>0.3.295</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.295</guid>
+      <pubDate>Fri, 09 Oct 2026 12:47:18 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added overageEnabled to SDKRateLimitInfo: on usage-limit warnings, whether the account has extra usage turned on
+- Fixed an MCP server added with mcpsetservers sometimes keeping an outdated tool list when another server in the same request connected later
+- Fixed assistant text blocks losing their</description>
+    </item>
     <item>
       <title>0.3.294</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -435,14 +445,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Improved skills option validation: malformed names (delimiters or control characters) and wildcard-form names are rejected with a clear error; use skills: &apos;all&apos; to enable every skill
 - Fixed external MCP servers passed via the mcpServers option not being connected before the first turn, which caus</description>
-    </item>
-    <item>
-      <title>0.3.220</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.220</guid>
-      <pubDate>Sat, 25 Jul 2026 08:08:55 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.220</description>
     </item>
   </channel>
 </rss>

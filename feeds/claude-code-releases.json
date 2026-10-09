@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-08T13:01:36.220Z",
+  "generated": "2026-10-09T12:48:07.037Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.295",
+      "title": "v2.1.295",
+      "date": "2026-10-08T19:48:38Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+      "snippet": "What's changed\n- Added onFailure: \"block\" for command and HTTP hooks: a hook that can't start, times out, or exits with an unexpected code blocks the action instead of letting it through\n- Added Program Status Protocol (OSC 7501) support: terminals that implement it can show whether Claude Code is w",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.295|claude-code-releases"
+    },
     {
       "id": "v2.1.294",
       "title": "v2.1.294",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.233|claude-code-releases"
-    },
-    {
-      "id": "v2.1.232",
-      "title": "v2.1.232",
-      "date": "2026-08-13T23:29:59Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
-      "snippet": "What's changed\n- Subagent forking is now on by default: a subagenttype: \"fork\" subagent inherits the full conversation and prompt cache, and non-teammate agent spawns in interactive sessions now run in the background by default\n- Type @ in the prompt to mention another Claude session by name; Claude",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.232|claude-code-releases"
     }
   ]
 }
