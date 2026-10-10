@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 09 Oct 2026 12:48:07 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 12:06:17 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #3484 from affaan-m/integration/ecc-043-20261009-verified</title>
+      <link>https://github.com/affaan-m/ECC/commit/4eb71d92a39cab44ad40ac9d8a6a5ccb4029d6c2</link>
+      <guid isPermaLink="false">4eb71d9</guid>
+      <pubDate>Sat, 10 Oct 2026 01:41:12 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix: guard literal Git include redirects and env split arguments</description>
+    </item>
+    <item>
+      <title>fix: reject unsupported env split-string escapes</title>
+      <link>https://github.com/affaan-m/ECC/commit/34a97fa898a1b8c23766a80c12657afd6b85222a</link>
+      <guid isPermaLink="false">34a97fa</guid>
+      <pubDate>Sat, 10 Oct 2026 01:00:40 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Validate env -S and --split-string escape syntax before shell scanning or opaque fallback. Preserve literal single-quoted data and charge each validation character against the shared input-proportional work budget.  Verified 787 focused cases and 290 real Git/config, harmless native env and register</description>
+    </item>
+    <item>
+      <title>fix: guard literal Git hook redirects and env split arguments</title>
+      <link>https://github.com/affaan-m/ECC/commit/993b5f230ff4b5120d35463b30e4b2aa7c6ded40</link>
+      <guid isPermaLink="false">993b5f2</guid>
+      <pubDate>Sat, 10 Oct 2026 00:32:11 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Carry forward bounded literal include/includeIf configuration capabilities and env -S/--split-string words from PRs #2858 and #2897. Charge array copy and expansion work before allocation to preserve the shared quota.  Verified 731 hook cases and 60 real Git/config and registered-route controls. Dyn</description>
+    </item>
+    <item>
+      <title>Merge pull request #3479 from affaan-m/integration/ecc-043-20261009-verified</title>
+      <link>https://github.com/affaan-m/ECC/commit/8384d609a0e6dc071503f669cb6a581420e23469</link>
+      <guid isPermaLink="false">8384d60</guid>
+      <pubDate>Sat, 10 Oct 2026 00:07:13 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Integrate reviewed installer, hook, state, and workflow fixes</description>
+    </item>
+    <item>
+      <title>fix: preserve activity errors, asset bytes and runner summaries</title>
+      <link>https://github.com/affaan-m/ECC/commit/aac9b3d34b8bf64f28580b41f8e3896faffd68d5</link>
+      <guid isPermaLink="false">aac9b3d</guid>
+      <pubDate>Fri, 09 Oct 2026 23:33:37 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Treat non-2xx activity responses as feed errors, preserve non-Markdown Copilot agent assets, and apply the reviewed reference escape parity correction with regenerated bindings. Allow the test runner to drain piped output on its existing success or failure exit status. Validate installed workflows a</description>
+    </item>
+    <item>
+      <title>fix: preserve Hookify Windows missing-device identity</title>
+      <link>https://github.com/affaan-m/ECC/commit/984d4f07018e1502e08c9f74abea47bc86428b38</link>
+      <guid isPermaLink="false">984d4f0</guid>
+      <pubDate>Fri, 09 Oct 2026 23:10:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Match the Windows missing volume-serial exception while retaining strict reported-device, inode, ownership, permission, link and snapshot checks. Add loader warning/block and race regression controls with isolated platform metadata injection.</description>
+    </item>
+    <item>
+      <title>Merge reviewed #3277 ancestry with the stronger tested config</title>
+      <link>https://github.com/affaan-m/ECC/commit/59305119971af58ed4f58a964f1414d0c5d811e6</link>
+      <guid isPermaLink="false">5930511</guid>
+      <pubDate>Fri, 09 Oct 2026 22:54:52 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: complete reviewed integration workflows and safety checks</title>
+      <link>https://github.com/affaan-m/ECC/commit/5981dd70920ec81ba28ba346725ccd7f902f564b</link>
+      <guid isPermaLink="false">5981dd7</guid>
+      <pubDate>Fri, 09 Oct 2026 22:54:39 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: pin and bound Hookify rule reads</title>
+      <link>https://github.com/affaan-m/ECC/commit/0cb1476f9d002919a5f052d6346718939aa3d24f</link>
+      <guid isPermaLink="false">0cb1476</guid>
+      <pubDate>Fri, 09 Oct 2026 21:54:01 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Open with supported no-follow and nonblocking flags before relying on file metadata. Validate descriptor, pathname and rule-directory consistency before and after reading at most64KiB plus one overflow byte. Reject observed replacement, mutation, premature EOF and non-regular files, and close descri</description>
+    </item>
+    <item>
+      <title>merge: preserve reviewed original and refreshed source ancestry</title>
+      <link>https://github.com/affaan-m/ECC/commit/53e606b78e384bd6286b559bb52a6efc9abdff9f</link>
+      <guid isPermaLink="false">53e606b</guid>
+      <pubDate>Fri, 09 Oct 2026 21:27:57 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Keep tested tree 655e700d82930cf4adab4aadabb2da659a4d22d7 unchanged. Preserve original 3049, 3055, 3115 and 3119 heads alongside their accepted attributed carry-forwards. Preserve parent-approved live 3257 and 3265 heads without replaying generated bindings, old locks, superseded migrations or disca</description>
+    </item>
     <item>
       <title>docs(ja-JP): match current sponsors (CodeRabbit, Greptile, Moonshot AI, Itô, SerpApi) (#3363)</title>
       <link>https://github.com/affaan-m/ECC/commit/ef648e01899ba3e8dc6371642deaaf64b4477775</link>
@@ -326,86 +406,6 @@
       <pubDate>Sat, 19 Sep 2026 21:03:57 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>perf(ecc2): stream dashboard output with a DB cursor</description>
-    </item>
-    <item>
-      <title>Merge pull request #3102 from wellkilo/perf/metrics-tail-read</title>
-      <link>https://github.com/affaan-m/ECC/commit/0a5207b6f221ac1e2681acb48c1583756bec8d10</link>
-      <guid isPermaLink="false">0a5207b</guid>
-      <pubDate>Sat, 19 Sep 2026 21:00:05 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>perf(metrics): cache cumulative session costs</description>
-    </item>
-    <item>
-      <title>Merge pull request #3104 from cedrickcantero/fix/security-review-sql-placeholder</title>
-      <link>https://github.com/affaan-m/ECC/commit/4ec7229146c9fc6d22be6fb484ffdc2fc7372994</link>
-      <guid isPermaLink="false">4ec7229</guid>
-      <pubDate>Sat, 19 Sep 2026 20:53:47 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix(skills): avoid a literal $1 placeholder in the security-review sql example</description>
-    </item>
-    <item>
-      <title>Merge pull request #3111 from Fibilisim-Tekno/fix/memory-initialized-metadata</title>
-      <link>https://github.com/affaan-m/ECC/commit/ada4db1157f4a595385ac84229649c70daafddeb</link>
-      <guid isPermaLink="false">ada4db1</guid>
-      <pubDate>Sat, 19 Sep 2026 20:51:53 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix(memory-mcp): accept metadata on initialized notifications</description>
-    </item>
-    <item>
-      <title>fix(gateguard): gate ref- and history-destroying git commands (#3154, #3151) (#3170)</title>
-      <link>https://github.com/affaan-m/ECC/commit/07756cee15788a54506031462794ad645719b028</link>
-      <guid isPermaLink="false">07756ce</guid>
-      <pubDate>Sat, 19 Sep 2026 06:58:33 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>branch -D, stash drop/clear, reflog expire/delete, update-ref -d, restore (except --staged alone), and force-with-lease pushes to shared branches now hit the destructive gate. 238 hook tests pass; 49 CI checks green.</description>
-    </item>
-    <item>
-      <title>fix(session-start): scope summary lookup to repository identity (#3160) (#3168)</title>
-      <link>https://github.com/affaan-m/ECC/commit/f6eb80047448e254ae9c450616d98079857a91b6</link>
-      <guid isPermaLink="false">f6eb800</guid>
-      <pubDate>Sat, 19 Sep 2026 06:08:50 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Windows: compare repo identity via normalizeRepoPath/sameRepoIdentity (8.3 short names, case, separators; inode fallback). All nine windows-latest jobs green on 52587005.</description>
-    </item>
-    <item>
-      <title>Merge pull request #3162 from affaan-m/fix/readme-badges-star-history-20260918</title>
-      <link>https://github.com/affaan-m/ECC/commit/9e06a2792bb3a5c1bc3ca272b853bac7998485d8</link>
-      <guid isPermaLink="false">9e06a27</guid>
-      <pubDate>Sat, 19 Sep 2026 02:34:23 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>docs: repair README badges and live star history</description>
-    </item>
-    <item>
-      <title>Merge branch &apos;main&apos; into fix/readme-badges-star-history-20260918</title>
-      <link>https://github.com/affaan-m/ECC/commit/522b49a3c521b1f83fa72513c871174af337b27c</link>
-      <guid isPermaLink="false">522b49a</guid>
-      <pubDate>Sat, 19 Sep 2026 02:13:36 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #3149 from affaan-m/docs/lane-rules-20260916</title>
-      <link>https://github.com/affaan-m/ECC/commit/10013e8b6340ae9937eecf71acdefc4f91dbc6fe</link>
-      <guid isPermaLink="false">10013e8</guid>
-      <pubDate>Sat, 19 Sep 2026 02:13:33 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Docs: lane rules and Ito desk relationship (2026-09-16)</description>
-    </item>
-    <item>
-      <title>Merge branch &apos;main&apos; into docs/lane-rules-20260916</title>
-      <link>https://github.com/affaan-m/ECC/commit/2bcba5b66f322b10cd3c6a807e03a21bda528960</link>
-      <guid isPermaLink="false">2bcba5b</guid>
-      <pubDate>Sat, 19 Sep 2026 02:06:49 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #3146 from yashraj4/fix/agent-location-and-namespacing</title>
-      <link>https://github.com/affaan-m/ECC/commit/dde604e75fc9bd7808b6b45f641b54dea017792c</link>
-      <guid isPermaLink="false">dde604e</guid>
-      <pubDate>Sat, 19 Sep 2026 02:06:46 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix: correct agent location and add ecc: prefix to agent names in rules</description>
     </item>
   </channel>
 </rss>

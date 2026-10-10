@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 09 Oct 2026 12:48:07 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 12:06:17 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.296</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.296</link>
+      <guid isPermaLink="false">v2.1.296</guid>
+      <pubDate>Fri, 09 Oct 2026 19:28:59 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a code key to the Claude apps gateway&apos;s managed.policies[]: the same settings as cli, also applied in Claude Desktop&apos;s Code tab; beside desktop, it turns on Claude Desktop&apos;s gateway mode
+- Added autoCompactWindow to subagent frontmatter and --agents definitions, so a subagent </description>
+    </item>
     <item>
       <title>v2.1.295</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.295</link>
@@ -495,16 +505,6 @@
       <description>What&apos;s changed
 - Added the optional CLAUDECODEPROJECTDIRNAME environment variable: hosts that give each session its own config directory can choose a short name for the per-project transcript directory
 - Added the selection:clear keybinding action, so a key can be bound to clear an in-app text selec</description>
-    </item>
-    <item>
-      <title>v2.1.233</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.233</link>
-      <guid isPermaLink="false">v2.1.233</guid>
-      <pubDate>Fri, 14 Aug 2026 22:20:57 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added GitLab merge request URL support to the --worktree flag and the claude agents view (where MRs display as !N)
-- Added an opt-in forwarduseridentity apps gateway setting on Anthropic upstreams that sends the signed-in user&apos;s identity as headers, so a proxy behind the gateway can</description>
     </item>
   </channel>
 </rss>

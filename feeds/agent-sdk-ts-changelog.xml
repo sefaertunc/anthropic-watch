@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 09 Oct 2026 12:48:07 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 12:06:17 GMT</lastBuildDate>
+    <item>
+      <title>0.3.296</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.296</guid>
+      <pubDate>Sat, 10 Oct 2026 12:05:31 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added claudecodeversion to the initialize control response so clients know the CLI version before the first turn
+- Added autoCompactWindow to AgentDefinition, so a subagent can auto-compact earlier than the main conversation&apos;s window
+- Fixed the sandbox option discarding an inline settings.sandbox</description>
+    </item>
     <item>
       <title>0.3.295</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -436,15 +446,6 @@
       <pubDate>Wed, 05 Aug 2026 08:38:56 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Fixed query({ sessionStore, resume }) not carrying user settings.json (apiKeyHelper, env, hooks, permissions) into the resumed subprocess</description>
-    </item>
-    <item>
-      <title>0.3.221</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.221</guid>
-      <pubDate>Tue, 04 Aug 2026 08:39:54 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Improved skills option validation: malformed names (delimiters or control characters) and wildcard-form names are rejected with a clear error; use skills: &apos;all&apos; to enable every skill
-- Fixed external MCP servers passed via the mcpServers option not being connected before the first turn, which caus</description>
     </item>
   </channel>
 </rss>
