@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sun, 11 Oct 2026 12:19:48 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 14:45:56 GMT</lastBuildDate>
+    <item>
+      <title>fix: restore homepage introduction video and maintainer credits (#1879)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/09e94102a5008d4d8066e14bdb8d0b95d365748c</link>
+      <guid isPermaLink="false">09e9410</guid>
+      <pubDate>Sun, 11 Oct 2026 20:00:18 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Restore the original 40-second introduction video below Core setup and the bottom Maintained by @sickn33 strip, with the existing avatar, licensing notice and GitHub link. Keep the Core-first homepage intact. Native video controls use the existing local assets, without au</description>
+    </item>
+    <item>
+      <title>feat: make Core the product homepage and simplify discovery (#1877)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/5f4e9f9f002d5139d132326d09ca2734a4548ea1</link>
+      <guid isPermaLink="false">5f4e9f9</guid>
+      <pubDate>Sun, 11 Oct 2026 19:31:01 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  The homepage previously presented a skill directory while Core, CLI/MCP, Workbench, packs and guides competed as separate entry points. It now presents AAS Core as the product: one setup action, a navigable recorded example, and contextual client guides. The example uses </description>
+    </item>
+    <item>
+      <title>fix: allow informational routes in SEO verifier and sitemap (#1876)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6b8c84adbda971fc5886038c96bdd11954f6e4e3</link>
+      <guid isPermaLink="false">6b8c84a</guid>
+      <pubDate>Sun, 11 Oct 2026 18:40:31 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  The release-tag Pages deployment for `v19.4.0` failed on a real, pre-existing defect on `main`:  ``` Error: Sitemap contains unsupported non-skill routes. ```  PRs #1867 and #1869 added the informational routes `/teams/`, `/trust/` and `/aas-core/` to `apps/web-app/src/da</description>
+    </item>
+    <item>
+      <title>chore: release v19.4.0 (#1874)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8248fdd1946b835ecec8c8c60927b398ac4c6e66</link>
+      <guid isPermaLink="false">8248fdd</guid>
+      <pubDate>Sun, 11 Oct 2026 18:04:41 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v19.4.0.</description>
+    </item>
+    <item>
+      <title>docs: add 19.4.0 changelog entry (#1873)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c7574bb6964bd401e08685051e2bdb378bb533ea</link>
+      <guid isPermaLink="false">c7574bb</guid>
+      <pubDate>Sun, 11 Oct 2026 17:48:28 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds the `19.4.0` changelog section so the scripted protected release flow can run from protected `main`. It covers the maintainer batch merged after `19.3.0`:  - **Added**: `kernel-prompt` (community source, MIT) and `skeleton-first` (self-authored). - **Changed**: `data</description>
+    </item>
+    <item>
+      <title>docs: add opencanviz/opencanviz-skills-repo to Official Sources (#1865)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/730837e48d52dd821667db505a1031ece2d414f0</link>
+      <guid isPermaLink="false">730837e</guid>
+      <pubDate>Sun, 11 Oct 2026 17:34:16 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds openCanviz&apos;s agent skill repo (https://github.com/opencanviz/opencanviz-skills-repo) to Official Sources, at the end of the list. It holds one skill, `opencanviz-json`, which teaches an agent to write an openCanviz video project as JSON. A standard-library Python 3.9</description>
+    </item>
+    <item>
+      <title>feat: add skeleton-first skill (#1871)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9440c1a2c054c5deb328a1ef07e0788c75951729</link>
+      <guid isPermaLink="false">9440c1a</guid>
+      <pubDate>Sun, 11 Oct 2026 17:28:21 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds `skeleton-first`, an original skill (source: self). It makes agents prove a data/AI/agent workflow end to end on a tiny sample, look for cheap wins in the data (duplicates, boilerplate, invalid inputs the API still bills), then scale in cost-gated rungs within a budg</description>
+    </item>
     <item>
       <title>chore: release v19.3.0 (#1858)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/f6605b665550f103e6e9dae6b977cef56300e6e9</link>
@@ -350,62 +406,6 @@
       <pubDate>Fri, 02 Oct 2026 07:16:08 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description># Pull Request Description  Adds `skills/dropthehassle-publish/SKILL.md`, adapted from the official DropTheHassle skill (bosmdavid-gif/dropthehassle-skill, MIT), plus the source credit in `README.md`.  It teaches an agent to put a finished static site online with DropTheHassle. The agent first check</description>
-    </item>
-    <item>
-      <title>chore: release v18.11.0 (#1750)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c45d8a74abc189a992fead5a171df3a5bb809f7c</link>
-      <guid isPermaLink="false">c45d8a7</guid>
-      <pubDate>Thu, 01 Oct 2026 06:54:28 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v18.11.0.</description>
-    </item>
-    <item>
-      <title>docs: add 18.11.0 changelog entry (#1749)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b4cfb27b89058fb7cd25a05a4a801accc86fed4e</link>
-      <guid isPermaLink="false">b4cfb27</guid>
-      <pubDate>Thu, 01 Oct 2026 06:31:28 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds the `[18.11.0]` section to `CHANGELOG.md`, written against the actual `v18.10.0..main` diff.</description>
-    </item>
-    <item>
-      <title>feat: add 5 English productivity skills for everyday knowledge work (#1741)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f4d01feba7e2e4d12b65fda0d4848725a3eb202a</link>
-      <guid isPermaLink="false">f4d01fe</guid>
-      <pubDate>Thu, 01 Oct 2026 05:57:15 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Adds five MIT-licensed English agent skills for everyday knowledge work, ported from https://github.com/alapha888/agent-skills-en:  - **tech-writing-proofread** — proofread technical docs, returns Original → Suggestion → Reason checklist - **git-commit-message** — generate conventional commit messag</description>
-    </item>
-    <item>
-      <title>[Snyk] Upgrade react-dom from 19.2.8 to 19.3.0 (#1746)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f8e79d15237a735d18cebe04050d35b15805c5c2</link>
-      <guid isPermaLink="false">f8e79d1</guid>
-      <pubDate>Thu, 01 Oct 2026 05:48:37 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>![snyk-top-banner](https://res.cloudinary.com/snyk/image/upload/r-d/scm-platform/snyk-pull-requests/pr-banner-default.svg)  &lt;h3&gt;Snyk has created this PR to upgrade react-dom from 19.2.8 to 19.3.0.&lt;/h3&gt;  :information_source: Keep your dependencies up-to-date. This makes it easier to fix existing vuln</description>
-    </item>
-    <item>
-      <title>chore: install and configure Vercel Web Analytics (#1668) (#1744)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a8b8bd4249dc9678352c28e634ffc3df1e5b2e62</link>
-      <guid isPermaLink="false">a8b8bd4</guid>
-      <pubDate>Thu, 01 Oct 2026 05:42:34 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Maintainer re-land of the Vercel bot PR #1668 (`Install and configure Vercel Web Analytics`), which was a draft left in conflict after months of `main` drift.</description>
-    </item>
-    <item>
-      <title>feat: refresh liuguang-banlan-ui spectral field and measurement (#1726) (#1743)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8117e465a734870cc755bb0a31deb6b2d863d1d6</link>
-      <guid isPermaLink="false">8117e46</guid>
-      <pubDate>Thu, 01 Oct 2026 05:37:53 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Maintainer re-land of contributor PR #1726 (`Update liuguang-banlan-ui with calibrated spectral field and measurement`) by @3516027002att-ui.</description>
-    </item>
-    <item>
-      <title>feat: add idea-to-blueprint skill (#1729) (#1742)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/58d1e7ded473f6ae81af7e3b719a9ee8e4debeb3</link>
-      <guid isPermaLink="false">58d1e7d</guid>
-      <pubDate>Thu, 01 Oct 2026 05:24:22 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Maintainer re-land of contributor PR #1729 (`feat: add idea-to-blueprint...`) by @iniesohidham.</description>
     </item>
   </channel>
 </rss>
