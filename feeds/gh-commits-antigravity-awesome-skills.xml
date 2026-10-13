@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 12 Oct 2026 14:45:56 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 13:47:54 GMT</lastBuildDate>
+    <item>
+      <title>fix: complete agent setup and clarify skill pages (#1894)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/acafd3bfadd0ba2a76e3d0792d0a38f974b0a25c</link>
+      <guid isPermaLink="false">acafd3b</guid>
+      <pubDate>Mon, 12 Oct 2026 20:17:45 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Users following Codex/Claude setup can now complete configuration, verify a real tool call, obtain an agent-selected manifest, review a plan and prepare the separate installer preview from the same guide. Shared command generation keeps both guides pinned to the same rele</description>
+    </item>
+    <item>
+      <title>chore: release v19.5.0 (#1892)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4f5ef5b65969ae8930dffabacc5c283660a2ccc0</link>
+      <guid isPermaLink="false">4f5ef5b</guid>
+      <pubDate>Mon, 12 Oct 2026 19:23:38 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v19.5.0.</description>
+    </item>
+    <item>
+      <title>docs: add 19.5.0 changelog entry (#1891)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0e2fc6b4c3591af14f223498e629a3bef875c763</link>
+      <guid isPermaLink="false">0e2fc6b</guid>
+      <pubDate>Mon, 12 Oct 2026 19:13:04 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat: add Arcmira timestamped quote research skill (#1889)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/891a1d1995a0a2f4cd05b6d27c55996aa3c61bb7</link>
+      <guid isPermaLink="false">891a1d1</guid>
+      <pubDate>Mon, 12 Oct 2026 18:57:08 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds `arcmira-find-quotes` for searching indexed YouTube and podcast transcripts and returning timestamped sources. Adapted from the Apache-2.0 Arcmira plugin at v0.10.6, with no monitor or feedback writes.  Validation: `npm run chain`, `npm run check:warning-budget`, `np</description>
+    </item>
+    <item>
+      <title>[Snyk] Upgrade react-virtuoso from 4.18.13 to 4.18.14 (#1881)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/da5ffcd9a761a7303279505e94cf9cd9356792e8</link>
+      <guid isPermaLink="false">da5ffcd</guid>
+      <pubDate>Mon, 12 Oct 2026 18:50:27 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>![snyk-top-banner](https://res.cloudinary.com/snyk/image/upload/r-d/scm-platform/snyk-pull-requests/pr-banner-default.svg)  &lt;h3&gt;Snyk has created this PR to upgrade react-virtuoso from 4.18.13 to 4.18.14.&lt;/h3&gt;  :information_source: Keep your dependencies up-to-date. This makes it easier to fix existi</description>
+    </item>
+    <item>
+      <title>feat: add Invokely statistics skill (#1886)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2e270d4c45d58ffa0175c0046a96793f6e640a76</link>
+      <guid isPermaLink="false">2e270d4</guid>
+      <pubDate>Mon, 12 Oct 2026 18:44:51 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds a source-only `invokely-statistics` skill for querying official statistics through the configured Invokely MCP server. It covers indicator and place discovery, values, time series, comparisons, rankings, period and unit reporting, citations, source caveats, projectio</description>
+    </item>
     <item>
       <title>fix: restore homepage introduction video and maintainer credits (#1879)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/09e94102a5008d4d8066e14bdb8d0b95d365748c</link>
@@ -358,54 +406,6 @@
       <pubDate>Fri, 02 Oct 2026 09:56:06 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description>Prepare protected release v18.12.0.</description>
-    </item>
-    <item>
-      <title>docs: stage 18.12.0 changelog (#1762)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2079776445c0da8a773d63e7b8c4f3c1cc727878</link>
-      <guid isPermaLink="false">2079776</guid>
-      <pubDate>Fri, 02 Oct 2026 09:47:20 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add cline-pilot skill for proxy-driving Cline CLI coding tasks (#1756)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/b98ec12e2ffb555395ab759ccf39d353dc3a2691</link>
-      <guid isPermaLink="false">b98ec12</guid>
-      <pubDate>Fri, 02 Oct 2026 08:03:58 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Add cline-pilot (upstream: gongdear/cline-pilot, MIT) — a Cline CLI orchestration skill that dispatches focused coding tasks, monitors long background runs against hard evidence (git state, test reports) rather than self-report, relays decision points in a fixed 4-element format, verifies against an</description>
-    </item>
-    <item>
-      <title>feat: allow exact reviewed support paths for fork skill bundles (#1760)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/dcbc0bae116fb1a97b6cef3b94cbc03c4bb4c822</link>
-      <guid isPermaLink="false">dcbc0ba</guid>
-      <pubDate>Fri, 02 Oct 2026 07:57:54 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Extends the trusted reviewed-fork ledger so an exact, previously reviewed fork skill bundle can include its own root manifest files. This unblocks protected review of fork PR #1756 (`cline-pilot`) without widening the general fork intake policy.</description>
-    </item>
-    <item>
-      <title>feat: add 10 Web3, DeFi, and AI agent engineering skills (batch 2 of 5) (#1753)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/5cd6961a0d10242538555d9944b99ff82e8f161d</link>
-      <guid isPermaLink="false">5cd6961</guid>
-      <pubDate>Fri, 02 Oct 2026 07:31:01 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add 10 Web3 and AI agent operational engineering skills (batch 1 of 5) (#1752)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/fa2d4a9e26768e38e093a4b3caff0fb68ca385bd</link>
-      <guid isPermaLink="false">fa2d4a9</guid>
-      <pubDate>Fri, 02 Oct 2026 07:22:37 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add dropthehassle-publish skill (#1754)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/360097fe063a4133b5dbe3a62d175f5d71f6b488</link>
-      <guid isPermaLink="false">360097f</guid>
-      <pubDate>Fri, 02 Oct 2026 07:16:08 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds `skills/dropthehassle-publish/SKILL.md`, adapted from the official DropTheHassle skill (bosmdavid-gif/dropthehassle-skill, MIT), plus the source credit in `README.md`.  It teaches an agent to put a finished static site online with DropTheHassle. The agent first check</description>
     </item>
   </channel>
 </rss>
