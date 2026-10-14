@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 13 Oct 2026 13:47:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.299</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.299</link>
+      <guid isPermaLink="false">v2.1.299</guid>
+      <pubDate>Wed, 14 Oct 2026 02:49:42 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added CLAUDECODEDISABLEFILEMENTIONS environment variable: Claude gets the paths of @ file mentions to read with its file tools, not the files&apos; contents
+- Added idle compaction in the terminal: a 200K+ token conversation left idle for about 54 minutes is compacted before its one-hour</description>
+    </item>
     <item>
       <title>v2.1.296</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.296</link>
@@ -495,16 +505,6 @@
 - Added an optional spellcheck setting that underlines misspelled words in the prompt input as you type, using your installed aspell, hunspell, or ispell
 - Fixed whole-prompt-cache invalidation when a language server disconnected or reconnected mid-session
 - Fixed nested markdown list</description>
-    </item>
-    <item>
-      <title>v2.1.234</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.234</link>
-      <guid isPermaLink="false">v2.1.234</guid>
-      <pubDate>Mon, 17 Aug 2026 20:20:58 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added the optional CLAUDECODEPROJECTDIRNAME environment variable: hosts that give each session its own config directory can choose a short name for the per-project transcript directory
-- Added the selection:clear keybinding action, so a key can be bound to clear an in-app text selec</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 13 Oct 2026 13:47:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
+    <item>
+      <title>0.3.299</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.299</guid>
+      <pubDate>Wed, 14 Oct 2026 11:24:27 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added an optional nextFireAt (epoch ms of the next run) to the CronCreate and CronList tool outputs
+- Added propertyorder to the elicitation control request: a form&apos;s field names in the order the MCP server listed them, for hosts whose transport keeps no JSON object key order
+- Fixed rewindconvers</description>
+    </item>
     <item>
       <title>0.3.296</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -438,14 +448,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added resumeDropsTurn option: with resumeSessionAt, declares the turn a truncating resume intends to drop; the CLI refuses the resume if anything else would be discarded
 - Result messages for repeated 529 overload failures now include apierrorstatus: 529, so SDK consumers can detect overload termi</description>
-    </item>
-    <item>
-      <title>0.3.222</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.222</guid>
-      <pubDate>Wed, 05 Aug 2026 08:38:56 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Fixed query({ sessionStore, resume }) not carrying user settings.json (apiKeyHelper, env, hooks, permissions) into the resumed subprocess</description>
     </item>
   </channel>
 </rss>

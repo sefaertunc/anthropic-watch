@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-13T13:47:54.242Z",
+  "generated": "2026-10-14T11:25:15.886Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "39cd5a7",
+      "title": "feat(managed_agents): move plan-big-execute-small to multiagent_20261001 (#915)",
+      "date": "2026-10-14T02:56:52Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/39cd5a7a3a29a73e7391e17b7644c51f34a6aaa1",
+      "snippet": "The recipe now sets the multiagent_20261001 type. The small-model worker is listed under subagents.predefined_agents, and subagents.inline_agents and workflows are set to disabled, so every delegated task goes to the listed worker.  Also in this change: - \"coordinator\" becomes \"orchestrator\" in the ",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "39cd5a7|gh-commits-cookbooks"
+    },
     {
       "id": "9c1e493",
       "title": "docs(managed_agents): move the self-hosted sandbox variants to claude-quickstarts (#888)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "5d6d633|gh-commits-cookbooks"
-    },
-    {
-      "id": "a485090",
-      "title": "Add coordinator-pattern cost cookbook: big models plan, small models execute",
-      "date": "2026-07-02T21:30:05Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/a485090d4c3af1a59f6071aa13d388d48e0c9bf3",
-      "snippet": "New managed_agents notebook on the economics of the multiagent coordinator config: a frontier coordinator (Fable 5) plans and synthesizes while cheap workers (Sonnet 5, scoped to web_search + web_fetch) do the token-hungry reading in parallel threads. The comparison is rigor-matched: the control is ",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "a485090|gh-commits-cookbooks"
     }
   ]
 }

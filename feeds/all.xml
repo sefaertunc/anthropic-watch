@@ -6,30 +6,335 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 13 Oct 2026 13:47:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
     <item>
-      <title>13 weeks of vibe coding my MMORPG with Claude Code. Here&apos;s how much it&apos;s changed in one month</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1x4tuqy/13_weeks_of_vibe_coding_my_mmorpg_with_claude/</link>
-      <guid isPermaLink="false">t3_1x4tuqy</guid>
-      <pubDate>Tue, 13 Oct 2026 11:13:54 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>Hey everyone, About a month ago I shared my MMORPG Lythravel here and got way more feedback than I expected. It&apos;s now been a little over 3 months since I started building it with Claude Code, so I thought I&apos;d share another update. I&apos;ve spent most of the last month reworking the visuals. Quite a few </description>
+      <title>0.2.166</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.166</guid>
+      <pubDate>Wed, 14 Oct 2026 11:24:27 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- Hook-specific output types: Added typed output classes and missing input fields for hooks, giving hook implementations precise type information instead of untyped dicts (1331)
+- SystemInitData TypedDict: The init system message payload is now fully typed via SystemInitData, along with</description>
     </item>
     <item>
-      <title>I built a Claude Code skill that turns biology ideas into interactive scientific figures</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1x4tif3/i_built_a_claude_code_skill_that_turns_biology/</link>
-      <guid isPermaLink="false">t3_1x4tif3</guid>
-      <pubDate>Tue, 13 Oct 2026 10:55:25 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>I built Anima, a free, open-source Claude Code skill for visualizing biological structures and mechanisms. Instead of generating another static diagram, you can ask Claude to explain something like dopamine receptor signaling, how different stimulants affect neurotransmission, or how semaglutide wor</description>
+      <title>0.3.299</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.299</guid>
+      <pubDate>Wed, 14 Oct 2026 11:24:27 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added an optional nextFireAt (epoch ms of the next run) to the CronCreate and CronList tool outputs
+- Added propertyorder to the elicitation control request: a form&apos;s field names in the order the MCP server listed them, for hosts whose transport keeps no JSON object key order
+- Fixed rewindconvers</description>
     </item>
     <item>
-      <title>You can&apos;t win</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1x4r47t/you_cant_win/</link>
-      <guid isPermaLink="false">t3_1x4r47t</guid>
-      <pubDate>Tue, 13 Oct 2026 08:25:46 GMT</pubDate>
+      <title>2.1.299</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.299</guid>
+      <pubDate>Wed, 14 Oct 2026 11:24:27 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added CLAUDECODEDISABLEFILEMENTIONS environment variable: Claude gets the paths of @ file mentions to read with its file tools, not the files&apos; contents
+- Added idle compaction in the terminal: a 200K+ token conversation left idle for about 54 minutes is compacted before its one-hour prompt cache e</description>
+    </item>
+    <item>
+      <title>fix: complete individual report skill review and evidence (#1920)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/28f8baa46c505cf88137ac4fa28bc0e90ca0a25c</link>
+      <guid isPermaLink="false">28f8baa</guid>
+      <pubDate>Wed, 14 Oct 2026 11:14:57 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Complete the remaining individual skill corrections from the setup/expansion/consolidation reports after #1918. Fix 29 canonical trees: 18 persuasion workflows with concrete examples and verified origin links; Swift cancellation/forms/sheets and incomplete live clients; u</description>
+    </item>
+    <item>
+      <title>fix: repair report skill security and integration examples (#1918)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6e9ea293d0649b01a19a9369e062d3c1649b40b4</link>
+      <guid isPermaLink="false">6e9ea29</guid>
+      <pubDate>Wed, 14 Oct 2026 10:29:39 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Deferred candidates in the earlier report still contained unsafe or incomplete examples. Repair 31 canonical skill trees: bound SQL and filesystem access, authenticate before fetching private data, preserve memory originals, make billing/retry/migration behavior explicit,</description>
+    </item>
+    <item>
+      <title>Opus 5.5 orchestrating GPT-6 Astra vs Gemini 4 Argon: directing Blender to build a warship from one picture</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1x5mnrd/opus_55_orchestrating_gpt6_astra_vs_gemini_4/</link>
+      <guid isPermaLink="false">t3_1x5mnrd</guid>
+      <pubDate>Wed, 14 Oct 2026 09:24:02 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>Soooo after the &quot;TinyPlanet&quot; bench I always run on new models, a topic that&apos;s of much interest to me: can Gemini 4 direct Blender better than Astra (the crowned king). Well, you be the judge of it. All subagents are orchestrated by Claude Opus 5.5. It monitored the processes, and unstuck what needed</description>
+    </item>
+    <item>
+      <title>Not Found \ Anthropic</title>
+      <link>https://www.anthropic.com/news/singapore-office-opening</link>
+      <guid isPermaLink="false">50084383</guid>
+      <pubDate>Wed, 14 Oct 2026 08:45:09 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.
+
+You can read more about our </title>
+      <link>https://x.com/AnthropicAI/status/2110289695888511368</link>
+      <guid isPermaLink="false">2110289695888511368</guid>
+      <pubDate>Wed, 14 Oct 2026 08:40:45 GMT</pubDate>
+      <category>twitter-anthropicai</category>
+      <description>We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.
+
+You can read more about our new office here: https://t.co/125mBgHLkM</description>
+    </item>
+    <item>
+      <title>Skill: Restore licensed upstream helpers and runtime support (#1915)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/45089b2823caeee223f7df7e656ded9be6364c71</link>
+      <guid isPermaLink="false">45089b2</guid>
+      <pubDate>Wed, 14 Oct 2026 08:38:13 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(skills): restore licensed upstream reference helpers (#1914)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/01f69d50602a8caa902563a8d46ca553a5501db3</link>
+      <guid isPermaLink="false">01f69d5</guid>
+      <pubDate>Wed, 14 Oct 2026 08:21:46 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>First session of the week of Max 20x: Weekly limit = 2 x session?</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1x5kflr/first_session_of_the_week_of_max_20x_weekly_limit/</link>
+      <guid isPermaLink="false">t3_1x5kflr</guid>
+      <pubDate>Wed, 14 Oct 2026 06:56:55 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>It is my first session in this week. The pace of weekly limit consumption in the last 15 minutes is like in the screenshot. With this pace, it means that in 2 sessions, I will be done with my whole weekly limit usage. I upgraded my account from 5x to 20x to avoid exactly this problem. What&apos;s wrong w</description>
+    </item>
+    <item>
+      <title>Tool or automation? You make the decision each time</title>
+      <link>https://claude.ai/public/artifacts/81970b33-4697-4226-aef6-ca669d900d68</link>
+      <guid isPermaLink="false">50083366</guid>
+      <pubDate>Wed, 14 Oct 2026 06:44:19 GMT</pubDate>
+      <category>hn-claude-ai</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(skills): repair verified documentation defects (#1912)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/177869f0f476325c7e4da7b6a0ed60fbe0ec4782</link>
+      <guid isPermaLink="false">177869f</guid>
+      <pubDate>Wed, 14 Oct 2026 05:55:24 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Several canonical skill entries expose truncated or duplicated discovery metadata, obligatory vendor promotions, or references to material absent from the distributed skill. This batch repairs verified defects in 267 entries while preserving skill IDs, declared risk and source identity. Language/sty</description>
+    </item>
+    <item>
+      <title>Merge pull request #6515 from anthropics/bump/postman</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8bd00f08f0b04705e610cf132fbe2cf5ec44cfe3</link>
+      <guid isPermaLink="false">8bd00f0</guid>
+      <pubDate>Wed, 14 Oct 2026 04:54:10 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>bump(postman): 67cff8f3 → 0128d247</description>
+    </item>
+    <item>
+      <title>chore: Update mods/</title>
+      <link>https://github.com/anthropics/claude-code/commit/9b4f0d6ef8ceaf62f6b46babb9a4d84bec541a2e</link>
+      <guid isPermaLink="false">9b4f0d6</guid>
+      <pubDate>Wed, 14 Oct 2026 04:30:05 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Anthropic is merging 30,000 code changes per day using Claude. Says software engineers are still vital because they tell Claude &quot;no.&quot;</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1x5he2c/anthropic_is_merging_30000_code_changes_per_day/</link>
+      <guid isPermaLink="false">t3_1x5he2c</guid>
+      <pubDate>Wed, 14 Oct 2026 03:54:35 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>How are software engineers staying in the loop? By telling Claude no. “Very often, we found that the role of the engineers was to tell Claude “no.” Agents will sometimes violate core system constraints to satisfy a pattern that should never have been allowed in the first place. This was particularly</description>
+    </item>
+    <item>
+      <title>Today I got two Claude instances to talk to each other 🤯</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1x5gvnt/today_i_got_two_claude_instances_to_talk_to_each/</link>
+      <guid isPermaLink="false">t3_1x5gvnt</guid>
+      <pubDate>Wed, 14 Oct 2026 03:26:47 GMT</pubDate>
+      <category>reddit-claudecode</category>
+      <description>That is all. I know you guys have probably been doing this for months but it just clicked for me today. I tend to work in two different directories/projects frequently and this was a game changer.</description>
+    </item>
+    <item>
+      <title>Managed to reverse engineer my peripheral software drivers and create and all-in-one app to change settings and show status of each peripheral!</title>
+      <link>https://www.reddit.com/r/ClaudeCode/comments/1x5gemk/managed_to_reverse_engineer_my_peripheral/</link>
+      <guid isPermaLink="false">t3_1x5gemk</guid>
+      <pubDate>Wed, 14 Oct 2026 03:01:47 GMT</pubDate>
       <category>reddit-claudecode</category>
       <description/>
+    </item>
+    <item>
+      <title>Anthropic 2026 AUP Update</title>
+      <link>https://www.anthropic.com/news/2026-usage-policy-update</link>
+      <guid isPermaLink="false">50081868</guid>
+      <pubDate>Wed, 14 Oct 2026 03:00:30 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>v1.0.249</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.249</link>
+      <guid isPermaLink="false">v1.0.249</guid>
+      <pubDate>Wed, 14 Oct 2026 02:57:56 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.248...v1.0.249</description>
+    </item>
+    <item>
+      <title>feat(managed_agents): move plan-big-execute-small to multiagent_20261001 (#915)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/39cd5a7a3a29a73e7391e17b7644c51f34a6aaa1</link>
+      <guid isPermaLink="false">39cd5a7</guid>
+      <pubDate>Wed, 14 Oct 2026 02:56:52 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>The recipe now sets the multiagent_20261001 type. The small-model worker is listed under subagents.predefined_agents, and subagents.inline_agents and workflows are set to disabled, so every delegated task goes to the listed worker.  Also in this change: - &quot;coordinator&quot; becomes &quot;orchestrator&quot; in the </description>
+    </item>
+    <item>
+      <title>v2.1.299</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.299</link>
+      <guid isPermaLink="false">v2.1.299</guid>
+      <pubDate>Wed, 14 Oct 2026 02:49:42 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added CLAUDECODEDISABLEFILEMENTIONS environment variable: Claude gets the paths of @ file mentions to read with its file tools, not the files&apos; contents
+- Added idle compaction in the terminal: a 200K+ token conversation left idle for about 54 minutes is compacted before its one-hour</description>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/db93774d73e8fdbaf315a6f4c175ae99ad3d515a</link>
+      <guid isPermaLink="false">db93774</guid>
+      <pubDate>Wed, 14 Oct 2026 02:49:24 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>Fixes #92238 Fixes #99014</description>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.299</title>
+      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
+      <guid isPermaLink="false">2.1.299</guid>
+      <pubDate>Wed, 14 Oct 2026 00:23:19 GMT</pubDate>
+      <category>npm-claude-code</category>
+      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>Anthropic opens Singapore office and signs MOU with the Government of Singapore</title>
+      <link>https://www.anthropic.com/news/singapore-office-opening</link>
+      <guid isPermaLink="false">https://www.anthropic.com/news/singapore-office-opening</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <category>blog-news</category>
+      <description/>
+    </item>
+    <item>
+      <title>Investigating unintended model actions in our evaluations and internal use</title>
+      <link>https://www.anthropic.com/research/investigating-unintended-model-actions</link>
+      <guid isPermaLink="false">50079528</guid>
+      <pubDate>Tue, 13 Oct 2026 22:03:04 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>The Claude Code hackathon is back, and we&apos;re bringing it to Japan!
+
+エンジニアの方も、そうでない方も、日本在住のビルダーならどなたでも応募できます。世界に何を見せてくれるのか、楽しみにしています。
+応募締切は10月26日 23:59（日本時間）：
+
+https://t.co/YXVYxl5gdU
+
+#claudejapan2026</title>
+      <link>https://x.com/ClaudeDevs/status/2110128453760815153</link>
+      <guid isPermaLink="false">2110128453760815153</guid>
+      <pubDate>Tue, 13 Oct 2026 22:00:02 GMT</pubDate>
+      <category>twitter-claudedevs</category>
+      <description>The Claude Code hackathon is back, and we&apos;re bringing it to Japan!
+
+エンジニアの方も、そうでない方も、日本在住のビルダーならどなたでも応募できます。世界に何を見せてくれるのか、楽しみにしています。
+応募締切は10月26日 23:59（日本時間）：
+
+https://t.co/YXVYxl5gdU
+
+#claudejapan2026</description>
+    </item>
+    <item>
+      <title>Show HN: Keep your eyes in one place while typing</title>
+      <link>https://claude.ai/artifact/XrdjCJXgerVYbG75qzv3HB</link>
+      <guid isPermaLink="false">50079111</guid>
+      <pubDate>Tue, 13 Oct 2026 21:31:36 GMT</pubDate>
+      <category>hn-claude-ai</category>
+      <description>I wanted a way of typing that&amp;#x27;s tuned towards stream of consciousness&amp;#x2F;get down a bunch of words quickly. And I&amp;#x27;m too lazy to move my eyes, so I wanted something where I could relax my eyes&amp;#x2F;brain and just get words out.</description>
+    </item>
+    <item>
+      <title>security-guidance: deliver commit and push findings on stderr (#6379)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8d392c8169665866be1d95f2bfeda5aaae7149dd</link>
+      <guid isPermaLink="false">8d392c8</guid>
+      <pubDate>Tue, 13 Oct 2026 20:46:31 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Commit and push findings went only into hookSpecificOutput.additionalContext, which Claude Code&apos;s asyncRewake path never reads: it shows Claude stderr, or stdout when stderr is empty. When the agentic reviewer&apos;s inner CLI printed a warning to stderr, Claude got that warning instead of the findings (</description>
+    </item>
+    <item>
+      <title>Merge pull request #6378 from anthropics/mhegazy/sg-gateway-headers</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/99951e9e4678548f90531dfc80be2e95e4618ff0</link>
+      <guid isPermaLink="false">99951e9</guid>
+      <pubDate>Tue, 13 Oct 2026 20:44:50 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: send ANTHROPIC_CUSTOM_HEADERS on the plugin&apos;s own API calls</description>
+    </item>
+    <item>
+      <title>Merge pull request #6375 from anthropics/mhegazy/sg-review-failures</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d44ca8eb76581bfc5be38cc4c9b7e75be3c22046</link>
+      <guid isPermaLink="false">d44ca8e</guid>
+      <pubDate>Tue, 13 Oct 2026 20:33:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: never report a failed review as clean</description>
+    </item>
+    <item>
+      <title>chore: Update mods/</title>
+      <link>https://github.com/anthropics/claude-code/commit/b0b7bed9820350bb0942e32c7f00752a99ea3555</link>
+      <guid isPermaLink="false">b0b7bed</guid>
+      <pubDate>Tue, 13 Oct 2026 19:57:37 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>RT @AnthropicAI: New on our Engineering blog: Creating in-house source control. 
+
+In May, we merged around 2,500 code changes per day. In S…</title>
+      <link>https://x.com/bcherny/status/2110073054479143217</link>
+      <guid isPermaLink="false">2110073054479143217</guid>
+      <pubDate>Tue, 13 Oct 2026 18:19:54 GMT</pubDate>
+      <category>twitter-bcherny</category>
+      <description>RT @AnthropicAI: New on our Engineering blog: Creating in-house source control. 
+
+In May, we merged around 2,500 code changes per day. In S…</description>
+    </item>
+    <item>
+      <title>New on our Engineering blog: Creating in-house source control. 
+
+In May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenec</title>
+      <link>https://x.com/AnthropicAI/status/2110047081414987957</link>
+      <guid isPermaLink="false">2110047081414987957</guid>
+      <pubDate>Tue, 13 Oct 2026 16:36:41 GMT</pubDate>
+      <category>twitter-anthropicai</category>
+      <description>New on our Engineering blog: Creating in-house source control. 
+
+In May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenecked by developer infrastructure built for human (rather than agent) scale.  
+
+Here, we share how we </description>
+    </item>
+    <item>
+      <title>Redesigning source control at Anthropic</title>
+      <link>https://www.anthropic.com/engineering/redesigning-source-control</link>
+      <guid isPermaLink="false">50073633</guid>
+      <pubDate>Tue, 13 Oct 2026 15:49:56 GMT</pubDate>
+      <category>hn-anthropic-com</category>
+      <description/>
+    </item>
+    <item>
+      <title>Hi, I&apos;m Felix. I&apos;m an eng lead working on Claude. I love watching people take flight and do things they never thought possible.
+
+We often describe that as &quot;being more ambitious&quot; when using AI, which i</title>
+      <link>https://x.com/felixrieseberg/status/2110023283169247623</link>
+      <guid isPermaLink="false">2110023283169247623</guid>
+      <pubDate>Tue, 13 Oct 2026 15:02:07 GMT</pubDate>
+      <category>twitter-felixrieseberg</category>
+      <description>Hi, I&apos;m Felix. I&apos;m an eng lead working on Claude. I love watching people take flight and do things they never thought possible.
+
+We often describe that as &quot;being more ambitious&quot; when using AI, which is tricky advice to follow. I wrote a tutorial:
+
+https://t.co/vNPPs5FWm8</description>
     </item>
     <item>
       <title>Show HN: A Playable Architectural Facade Synth</title>
@@ -64,36 +369,12 @@
       <description/>
     </item>
     <item>
-      <title>What do you do about the growing number of tests in a large project?</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1x4k1yj/what_do_you_do_about_the_growing_number_of_tests/</link>
-      <guid isPermaLink="false">t3_1x4k1yj</guid>
-      <pubDate>Tue, 13 Oct 2026 01:42:47 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>Probably obvious, but I&apos;m a nontechnical user, building a recurring invoice app for a small Shopify store. I&apos;ve noticed that the suite of tests that Claude code has been performing has grown steadily over the course of the project. I assume this is normal. What I&apos;m wondering is if there comes a poin</description>
-    </item>
-    <item>
-      <title>chore: Update mods/</title>
-      <link>https://github.com/anthropics/claude-code/commit/addd7a69690bb5f5484c2a47583a8f88c4842a6e</link>
-      <guid isPermaLink="false">addd7a6</guid>
-      <pubDate>Tue, 13 Oct 2026 00:50:04 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Supercharging your max subscription!</title>
-      <link>https://www.reddit.com/r/ClaudeCode/comments/1x4ixl9/supercharging_your_max_subscription/</link>
-      <guid isPermaLink="false">t3_1x4ixl9</guid>
-      <pubDate>Tue, 13 Oct 2026 00:48:15 GMT</pubDate>
-      <category>reddit-claudecode</category>
-      <description>https://preview.redd.it/ersx8iy1t4vh1.png?width=2160&amp;format=png&amp;auto=webp&amp;s=cd15ee41114a2f007d283d534e481a6391b0dc78 https://preview.redd.it/rekllgsps4vh1.png?width=2160&amp;format=png&amp;auto=webp&amp;s=6d98177c272ea5f7d730aebd96f70511bae9909a https://preview.redd.it/7zq6lhsps4vh1.png?width=2160&amp;format=png&amp;au</description>
-    </item>
-    <item>
-      <title>chore: Update mods/</title>
-      <link>https://github.com/anthropics/claude-code/commit/fa3ffa4456bae44d1a63b11f15f3068f0a5e06dc</link>
-      <guid isPermaLink="false">fa3ffa4</guid>
-      <pubDate>Tue, 13 Oct 2026 00:07:29 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
+      <title> Redesigning source control at Anthropic</title>
+      <link>https://www.anthropic.com/engineering/redesigning-source-control</link>
+      <guid isPermaLink="false">https://www.anthropic.com/engineering/redesigning-source-control</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <category>blog-engineering</category>
+      <description>As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.</description>
     </item>
     <item>
       <title>Over the last few months, we’ve made significant progress in reducing the effectiveness of distillation attacks against Claude.
@@ -108,68 +389,12 @@ In this post, we explain how: https://t.co/uWiRSLBuOS</title>
 In this post, we explain how: https://t.co/uWiRSLBuOS</description>
     </item>
     <item>
-      <title>OSS Scanner</title>
-      <link>https://red.anthropic.com/oss-scanner/</link>
-      <guid isPermaLink="false">50064421</guid>
-      <pubDate>Mon, 12 Oct 2026 23:19:16 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: complete agent setup and clarify skill pages (#1894)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/acafd3bfadd0ba2a76e3d0792d0a38f974b0a25c</link>
-      <guid isPermaLink="false">acafd3b</guid>
-      <pubDate>Mon, 12 Oct 2026 20:17:45 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Users following Codex/Claude setup can now complete configuration, verify a real tool call, obtain an agent-selected manifest, review a plan and prepare the separate installer preview from the same guide. Shared command generation keeps both guides pinned to the same rele</description>
-    </item>
-    <item>
       <title>AI models may be capable of self-replicating without access to a datacenter</title>
       <link>https://www.anthropic.com/research/self-replicating-ai</link>
       <guid isPermaLink="false">https://www.anthropic.com/research/self-replicating-ai</guid>
       <pubDate>Mon, 12 Oct 2026 19:30:00 GMT</pubDate>
       <category>blog-research</category>
       <description>Our experiments suggest that small AI models may be only months away from being capable enough to self-replicate on commercial IoT devices, like Android TVs and smart ovens.</description>
-    </item>
-    <item>
-      <title>AI models may be capable of self-replicating without access to a datacenter</title>
-      <link>https://www.anthropic.com/research/self-replicating-ai</link>
-      <guid isPermaLink="false">50061603</guid>
-      <pubDate>Mon, 12 Oct 2026 19:25:29 GMT</pubDate>
-      <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: release v19.5.0 (#1892)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4f5ef5b65969ae8930dffabacc5c283660a2ccc0</link>
-      <guid isPermaLink="false">4f5ef5b</guid>
-      <pubDate>Mon, 12 Oct 2026 19:23:38 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v19.5.0.</description>
-    </item>
-    <item>
-      <title>docs: add 19.5.0 changelog entry (#1891)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0e2fc6b4c3591af14f223498e629a3bef875c763</link>
-      <guid isPermaLink="false">0e2fc6b</guid>
-      <pubDate>Mon, 12 Oct 2026 19:13:04 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add Arcmira timestamped quote research skill (#1889)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/891a1d1995a0a2f4cd05b6d27c55996aa3c61bb7</link>
-      <guid isPermaLink="false">891a1d1</guid>
-      <pubDate>Mon, 12 Oct 2026 18:57:08 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds `arcmira-find-quotes` for searching indexed YouTube and podcast transcripts and returning timestamped sources. Adapted from the Apache-2.0 Arcmira plugin at v0.10.6, with no monitor or feedback writes.  Validation: `npm run chain`, `npm run check:warning-budget`, `np</description>
-    </item>
-    <item>
-      <title>[Snyk] Upgrade react-virtuoso from 4.18.13 to 4.18.14 (#1881)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/da5ffcd9a761a7303279505e94cf9cd9356792e8</link>
-      <guid isPermaLink="false">da5ffcd</guid>
-      <pubDate>Mon, 12 Oct 2026 18:50:27 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>![snyk-top-banner](https://res.cloudinary.com/snyk/image/upload/r-d/scm-platform/snyk-pull-requests/pr-banner-default.svg)  &lt;h3&gt;Snyk has created this PR to upgrade react-virtuoso from 4.18.13 to 4.18.14.&lt;/h3&gt;  :information_source: Keep your dependencies up-to-date. This makes it easier to fix existi</description>
     </item>
     <item>
       <title>Strengthening our defenses against distillation attacks</title>
@@ -220,14 +445,6 @@ In this post, we explain how: https://t.co/uWiRSLBuOS</description>
       <description/>
     </item>
     <item>
-      <title>chore: Update mods/</title>
-      <link>https://github.com/anthropics/claude-code/commit/3deb873687379f0c199a69fdaccc65f0865f7a29</link>
-      <guid isPermaLink="false">3deb873</guid>
-      <pubDate>Sun, 11 Oct 2026 19:07:16 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
       <title>Merge pull request #6408 from anthropics/mhegazy/data-agent-kit-rename</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/f359d43b406057f1a8cdbc4ea93b827642c162e6</link>
       <guid isPermaLink="false">f359d43</guid>
@@ -236,35 +453,11 @@ In this post, we explain how: https://t.co/uWiRSLBuOS</description>
       <description>data-agent-kit: rename, repoint to GoogleCloudPlatform, bump to 1.0.0</description>
     </item>
     <item>
-      <title>Merge pull request #6400 from anthropics/oct/sg-2.0.13</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a9fd21643fc10eb9c8c8b581902f6259937fa1a4</link>
-      <guid isPermaLink="false">a9fd216</guid>
-      <pubDate>Sat, 10 Oct 2026 22:23:16 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: bump to 2.0.13</description>
-    </item>
-    <item>
-      <title>data-agent-kit: rename, repoint to GoogleCloudPlatform, bump to 1.0.0</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/adbc7f48e98fbeb288a9e2baf537bc774b86643e</link>
-      <guid isPermaLink="false">adbc7f4</guid>
-      <pubDate>Sat, 10 Oct 2026 22:22:40 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Google renamed the plugin&apos;s repository and moved it from gemini-cli-extensions/data-agent-kit-starter-pack to GoogleCloudPlatform/data-agent-kit-plugin, and released 1.0.0.  Rename the entry to data-agent-kit and add a renames entry so installs under the old name follow it. Point the source at the n</description>
-    </item>
-    <item>
       <title>I bet AI would invent its own language; Claude Opus&apos;s survived every copy</title>
       <link>https://claude.ai/artifact/KNR1u48RyraRAy6hi64wc8</link>
       <guid isPermaLink="false">50037145</guid>
       <pubDate>Sat, 10 Oct 2026 21:02:24 GMT</pubDate>
       <category>hn-claude-ai</category>
-      <description/>
-    </item>
-    <item>
-      <title>Investigating unintended model actions in our evaluations and internal use</title>
-      <link>https://www.anthropic.com/research/investigating-unintended-model-actions</link>
-      <guid isPermaLink="false">50036665</guid>
-      <pubDate>Sat, 10 Oct 2026 20:12:07 GMT</pubDate>
-      <category>hn-anthropic-com</category>
       <description/>
     </item>
     <item>
@@ -300,14 +493,6 @@ In this post, we explain how: https://t.co/uWiRSLBuOS</description>
       <guid isPermaLink="false">9c1e493</guid>
       <pubDate>Sat, 10 Oct 2026 09:24:54 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
-      <description/>
-    </item>
-    <item>
-      <title>Anthropic bans users from needless abusive or cruel behavior towards Claude</title>
-      <link>https://www.anthropic.com/news/2026-usage-policy-update</link>
-      <guid isPermaLink="false">50031115</guid>
-      <pubDate>Sat, 10 Oct 2026 09:20:25 GMT</pubDate>
-      <category>hn-anthropic-com</category>
       <description/>
     </item>
     <item>
@@ -368,22 +553,6 @@ Today’s report describes four types of behaviors we’ve identified during eva
       <guid isPermaLink="false">50026693</guid>
       <pubDate>Fri, 09 Oct 2026 21:20:09 GMT</pubDate>
       <category>hn-claude-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(snowflake-cortex-code): 0c54225e → e2a3cbb4 (#6389)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b8e53f1c05dff3b6d751297f6527990ffc81c2f4</link>
-      <guid isPermaLink="false">b8e53f1</guid>
-      <pubDate>Fri, 09 Oct 2026 20:54:09 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(crowdstrike-falcon-foundry, crowdstrike-falcon-fusion): v1.6.0, v1.3.0 (#6388)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/5238fd480c7b97696942bf12f24b734a0a9bed67</link>
-      <guid isPermaLink="false">5238fd4</guid>
-      <pubDate>Fri, 09 Oct 2026 20:53:58 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
       <description/>
     </item>
     <item>
@@ -610,16 +779,6 @@ https://t.co/0tz0ARAEMj</description>
       <description>Zoom Zoom</description>
     </item>
     <item>
-      <title>An astrophysicist worked with Claude Science to create the first complete ultraviolet map of the sky. Astronomers have already created complete sky maps from radio to gamma rays. But large regions of </title>
-      <link>https://x.com/AnthropicAI/status/2108290395599667700</link>
-      <guid isPermaLink="false">2108290395599667700</guid>
-      <pubDate>Thu, 08 Oct 2026 20:16:15 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>An astrophysicist worked with Claude Science to create the first complete ultraviolet map of the sky. Astronomers have already created complete sky maps from radio to gamma rays. But large regions of the sky have never been observed in UV.
-
-In today’s science blog, Brice Ménard explains how he guide</description>
-    </item>
-    <item>
       <title>@nateparrott and team really cooked here. My entire timeline is filled with people making cool little videos with Opus 5.5, this makes it _way_ easier to do.</title>
       <link>https://x.com/felixrieseberg/status/2108287979991228574</link>
       <guid isPermaLink="false">2108287979991228574</guid>
@@ -738,32 +897,6 @@ Looking for a seasoned marketing leader who is happy to scrappily IC things, is 
 https://t.co/bCWG6zbJrj</description>
     </item>
     <item>
-      <title>Monthly API credits are now available on Max and Team plans: $100 on Max 5x, $200 on Max 20x, and up to $500 pooled on Team. Use them on any Claude model.
-
-How it works and full terms: https://t.co/qm</title>
-      <link>https://x.com/ClaudeDevs/status/2108228391404966005</link>
-      <guid isPermaLink="false">2108228391404966005</guid>
-      <pubDate>Thu, 08 Oct 2026 16:09:52 GMT</pubDate>
-      <category>twitter-claudedevs</category>
-      <description>Monthly API credits are now available on Max and Team plans: $100 on Max 5x, $200 on Max 20x, and up to $500 pooled on Team. Use them on any Claude model.
-
-How it works and full terms: https://t.co/qmWL6xV8GT</description>
-    </item>
-    <item>
-      <title>We&apos;re deepening our commitment to scientific research and technological discovery by committing $150 million to the Genesis Mission.
-
-We&apos;ll also make Claude and our technical support available to more</title>
-      <link>https://x.com/AnthropicAI/status/2108226292235809081</link>
-      <guid isPermaLink="false">2108226292235809081</guid>
-      <pubDate>Thu, 08 Oct 2026 16:01:31 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>We&apos;re deepening our commitment to scientific research and technological discovery by committing $150 million to the Genesis Mission.
-
-We&apos;ll also make Claude and our technical support available to more than 15 federal agencies.
-
-https://t.co/MUmQBiC6MF</description>
-    </item>
-    <item>
       <title>0.3.294</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
       <guid isPermaLink="false">0.3.294</guid>
@@ -800,122 +933,6 @@ https://t.co/MUmQBiC6MF</description>
  ci: check that pull requests update the changelog
  docs: note that listing Claude Console spend limits is in early access
  internal: match the package version in uv.lock</description>
-    </item>
-    <item>
-      <title>google-cloud-sdk-v0.0.19</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.19</link>
-      <guid isPermaLink="false">google-cloud-sdk-v0.0.19</guid>
-      <pubDate>Thu, 08 Oct 2026 03:07:11 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>Chores
- ci: check that pull requests update the changelog</description>
-    </item>
-    <item>
-      <title>aws-sdk-v0.7.9</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.7.9</link>
-      <guid isPermaLink="false">aws-sdk-v0.7.9</guid>
-      <pubDate>Thu, 08 Oct 2026 03:07:09 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>Chores
- ci: check that pull requests update the changelog</description>
-    </item>
-    <item>
-      <title>foundry-sdk-v0.5.4</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.5.4</link>
-      <guid isPermaLink="false">foundry-sdk-v0.5.4</guid>
-      <pubDate>Thu, 08 Oct 2026 03:07:07 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>Chores
- ci: check that pull requests update the changelog</description>
-    </item>
-    <item>
-      <title>bedrock-sdk-v0.34.4</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.34.4</link>
-      <guid isPermaLink="false">bedrock-sdk-v0.34.4</guid>
-      <pubDate>Thu, 08 Oct 2026 03:07:05 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>Chores
- ci: check that pull requests update the changelog</description>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: Cloud sessions run Claude Code on a fresh VM for each task, so you can start several at once and they keep going when you c…</title>
-      <link>https://x.com/noahzweben/status/2108006059432640734</link>
-      <guid isPermaLink="false">2108006059432640734</guid>
-      <pubDate>Thu, 08 Oct 2026 01:26:24 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>RT @ClaudeDevs: Cloud sessions run Claude Code on a fresh VM for each task, so you can start several at once and they keep going when you c…</description>
-    </item>
-    <item>
-      <title>Sometimes I read on flights, and sometimes… https://t.co/k3NBRfjMvu</title>
-      <link>https://x.com/bcherny/status/2108004023249088528</link>
-      <guid isPermaLink="false">2108004023249088528</guid>
-      <pubDate>Thu, 08 Oct 2026 01:18:18 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>Sometimes I read on flights, and sometimes… https://t.co/k3NBRfjMvu</description>
-    </item>
-    <item>
-      <title>2026 Usage Policy update</title>
-      <link>https://www.anthropic.com/news/2026-usage-policy-update</link>
-      <guid isPermaLink="false">https://www.anthropic.com/news/2026-usage-policy-update</guid>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-      <category>blog-news</category>
-      <description/>
-    </item>
-    <item>
-      <title>Building on our commitment to American scientific discovery</title>
-      <link>https://www.anthropic.com/news/genesis-mission-commitment</link>
-      <guid isPermaLink="false">https://www.anthropic.com/news/genesis-mission-commitment</guid>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-      <category>blog-news</category>
-      <description/>
-    </item>
-    <item>
-      <title>Introducing the Anthropic Cyber Mission</title>
-      <link>https://www.anthropic.com/news/anthropic-cyber-mission</link>
-      <guid isPermaLink="false">https://www.anthropic.com/news/anthropic-cyber-mission</guid>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-      <category>blog-news</category>
-      <description/>
-    </item>
-    <item>
-      <title>RT @lydiahallie: If you&apos;re on API billing, you can set Haiku 5.5&apos;s autocompact window to 100K so you stay in the cheaper token pricing tier…</title>
-      <link>https://x.com/bcherny/status/2107980493614616996</link>
-      <guid isPermaLink="false">2107980493614616996</guid>
-      <pubDate>Wed, 07 Oct 2026 23:44:48 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @lydiahallie: If you&apos;re on API billing, you can set Haiku 5.5&apos;s autocompact window to 100K so you stay in the cheaper token pricing tier…</description>
-    </item>
-    <item>
-      <title>RT @ClaudeDevs: We’re rolling out monthly Claude Platform API credits for Max and Team plans:
-
-Max 5x: $100
-Max 20x: $200
-Team: up to $500,…</title>
-      <link>https://x.com/TheAmolAvasare/status/2107976664827433460</link>
-      <guid isPermaLink="false">2107976664827433460</guid>
-      <pubDate>Wed, 07 Oct 2026 23:29:35 GMT</pubDate>
-      <category>twitter-theamolavasare</category>
-      <description>RT @ClaudeDevs: We’re rolling out monthly Claude Platform API credits for Max and Team plans:
-
-Max 5x: $100
-Max 20x: $200
-Team: up to $500,…</description>
-    </item>
-    <item>
-      <title>Issue with spend limits</title>
-      <link>https://stspg.io/frlrjsqqn605</link>
-      <guid isPermaLink="false">vmys9qn874h4</guid>
-      <pubDate>Wed, 07 Oct 2026 21:23:29 GMT</pubDate>
-      <category>status-page</category>
-      <description>[none] resolved — We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Claude.ai, Claude Code, Claude Security, and Claude Cowork. This is now resolved.</description>
-    </item>
-    <item>
-      <title>v1.0.245</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.245</link>
-      <guid isPermaLink="false">v1.0.245</guid>
-      <pubDate>Wed, 07 Oct 2026 18:15:47 GMT</pubDate>
-      <category>claude-code-action</category>
-      <description>Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.244...v1.0.245</description>
     </item>
   </channel>
 </rss>

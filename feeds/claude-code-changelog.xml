@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 13 Oct 2026 13:47:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
+    <item>
+      <title>2.1.299</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.299</guid>
+      <pubDate>Wed, 14 Oct 2026 11:24:27 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added CLAUDECODEDISABLEFILEMENTIONS environment variable: Claude gets the paths of @ file mentions to read with its file tools, not the files&apos; contents
+- Added idle compaction in the terminal: a 200K+ token conversation left idle for about 54 minutes is compacted before its one-hour prompt cache e</description>
+    </item>
     <item>
       <title>2.1.296</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -452,15 +461,6 @@
       <category>claude-code-changelog</category>
       <description>- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type
 - Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (summaries, compac</description>
-    </item>
-    <item>
-      <title>2.1.221</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.221</guid>
-      <pubDate>Tue, 04 Aug 2026 08:39:53 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- [VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with Ctrl+Alt+F or the &quot;Claude Code: Toggle Focus view&quot; command
-- Added mode: &quot;mask&quot; for sandbox credential files on Linux and WSL — sandboxed co</description>
     </item>
   </channel>
 </rss>

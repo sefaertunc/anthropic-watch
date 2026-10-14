@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 13 Oct 2026 13:47:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #6515 from anthropics/bump/postman</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8bd00f08f0b04705e610cf132fbe2cf5ec44cfe3</link>
+      <guid isPermaLink="false">8bd00f0</guid>
+      <pubDate>Wed, 14 Oct 2026 04:54:10 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>bump(postman): 67cff8f3 → 0128d247</description>
+    </item>
+    <item>
+      <title>security-guidance: deliver commit and push findings on stderr (#6379)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8d392c8169665866be1d95f2bfeda5aaae7149dd</link>
+      <guid isPermaLink="false">8d392c8</guid>
+      <pubDate>Tue, 13 Oct 2026 20:46:31 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Commit and push findings went only into hookSpecificOutput.additionalContext, which Claude Code&apos;s asyncRewake path never reads: it shows Claude stderr, or stdout when stderr is empty. When the agentic reviewer&apos;s inner CLI printed a warning to stderr, Claude got that warning instead of the findings (</description>
+    </item>
+    <item>
+      <title>Merge pull request #6378 from anthropics/mhegazy/sg-gateway-headers</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/99951e9e4678548f90531dfc80be2e95e4618ff0</link>
+      <guid isPermaLink="false">99951e9</guid>
+      <pubDate>Tue, 13 Oct 2026 20:44:50 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: send ANTHROPIC_CUSTOM_HEADERS on the plugin&apos;s own API calls</description>
+    </item>
+    <item>
+      <title>Merge pull request #6375 from anthropics/mhegazy/sg-review-failures</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d44ca8eb76581bfc5be38cc4c9b7e75be3c22046</link>
+      <guid isPermaLink="false">d44ca8e</guid>
+      <pubDate>Tue, 13 Oct 2026 20:33:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: never report a failed review as clean</description>
+    </item>
     <item>
       <title>Merge pull request #6408 from anthropics/mhegazy/data-agent-kit-rename</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/f359d43b406057f1a8cdbc4ea93b827642c162e6</link>
@@ -374,38 +406,6 @@
       <pubDate>Fri, 25 Sep 2026 04:18:46 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Three ways a same-technology uplift could come out PROVEN too easily:  - The baseline came from a table someone typed. It now counts as measured   only when the script can read per-test results (JUnit or TRX XML, a runner   log with a summary line, or per-test JSON) from analysis/&lt;system&gt;/baseline/ </description>
-    </item>
-    <item>
-      <title>code-modernization: fold the same rule found in several files into one</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/fc8adcf13fab336a810a622e8cf7be86be3a183b</link>
-      <guid isPermaLink="false">fc8adcf</guid>
-      <pubDate>Fri, 25 Sep 2026 04:18:31 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>A numeric library implemented in C, in a C++ header and in a fixed-point variant produced three &quot;twiddle factor&quot; rules, two &quot;generic butterfly&quot; rules and two &quot;factorization&quot; rules, because the referee&apos;s duplicate key is the file plus the rule&apos;s name. The plan and the review then carry noise.  After </description>
-    </item>
-    <item>
-      <title>Add GovTribe plugin (govtribe) (#6303)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ad30d62cd52ad0d0af1beda1eab7f61c601045d0</link>
-      <guid isPermaLink="false">ad30d62</guid>
-      <pubDate>Thu, 24 Sep 2026 21:04:59 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add Vanguard Advisor Tools plugin (#6302)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/8286e2db0113d3e0a124af3345a8fd15ab93937d</link>
-      <guid isPermaLink="false">8286e2d</guid>
-      <pubDate>Thu, 24 Sep 2026 19:33:34 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Add LinqAlpha plugin (linq-alpha) (#6281)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e225b998a17e06ac87787165f2a1b5c1cac7edc2</link>
-      <guid isPermaLink="false">e225b99</guid>
-      <pubDate>Thu, 24 Sep 2026 15:24:27 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
     </item>
   </channel>
 </rss>

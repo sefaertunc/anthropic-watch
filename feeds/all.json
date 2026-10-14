@@ -5,41 +5,404 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-13T13:47:54.202Z",
+  "generated": "2026-10-14T11:25:15.828Z",
   "itemCount": 100,
   "items": [
     {
-      "id": "t3_1x4tuqy",
-      "title": "13 weeks of vibe coding my MMORPG with Claude Code. Here's how much it's changed in one month",
-      "date": "2026-10-13T11:13:54+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x4tuqy/13_weeks_of_vibe_coding_my_mmorpg_with_claude/",
-      "snippet": "Hey everyone, About a month ago I shared my MMORPG Lythravel here and got way more feedback than I expected. It's now been a little over 3 months since I started building it with Claude Code, so I thought I'd share another update. I've spent most of the last month reworking the visuals. Quite a few ",
+      "id": "0.2.166",
+      "title": "0.2.166",
+      "date": "2026-10-14T11:24:27.999Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "New Features\n- Hook-specific output types: Added typed output classes and missing input fields for hooks, giving hook implementations precise type information instead of untyped dicts (1331)\n- SystemInitData TypedDict: The init system message payload is now fully typed via SystemInitData, along with",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.166|agent-sdk-py-changelog"
+    },
+    {
+      "id": "0.3.299",
+      "title": "0.3.299",
+      "date": "2026-10-14T11:24:27.930Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added an optional nextFireAt (epoch ms of the next run) to the CronCreate and CronList tool outputs\n- Added propertyorder to the elicitation control request: a form's field names in the order the MCP server listed them, for hosts whose transport keeps no JSON object key order\n- Fixed rewindconvers",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.299|agent-sdk-ts-changelog"
+    },
+    {
+      "id": "2.1.299",
+      "title": "2.1.299",
+      "date": "2026-10-14T11:24:27.529Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added CLAUDECODEDISABLEFILEMENTIONS environment variable: Claude gets the paths of @ file mentions to read with its file tools, not the files' contents\n- Added idle compaction in the terminal: a 200K+ token conversation left idle for about 54 minutes is compacted before its one-hour prompt cache e",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.299|claude-code-changelog"
+    },
+    {
+      "id": "28f8baa",
+      "title": "fix: complete individual report skill review and evidence (#1920)",
+      "date": "2026-10-14T11:14:57Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/28f8baa46c505cf88137ac4fa28bc0e90ca0a25c",
+      "snippet": "# Pull Request Description  Complete the remaining individual skill corrections from the setup/expansion/consolidation reports after #1918. Fix 29 canonical trees: 18 persuasion workflows with concrete examples and verified origin links; Swift cancellation/forms/sheets and incomplete live clients; u",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "28f8baa|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "6e9ea29",
+      "title": "fix: repair report skill security and integration examples (#1918)",
+      "date": "2026-10-14T10:29:39Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/6e9ea293d0649b01a19a9369e062d3c1649b40b4",
+      "snippet": "# Pull Request Description  Deferred candidates in the earlier report still contained unsafe or incomplete examples. Repair 31 canonical skill trees: bound SQL and filesystem access, authenticate before fetching private data, preserve memory originals, make billing/retry/migration behavior explicit,",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "6e9ea29|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "t3_1x5mnrd",
+      "title": "Opus 5.5 orchestrating GPT-6 Astra vs Gemini 4 Argon: directing Blender to build a warship from one picture",
+      "date": "2026-10-14T09:24:02+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x5mnrd/opus_55_orchestrating_gpt6_astra_vs_gemini_4/",
+      "snippet": "Soooo after the \"TinyPlanet\" bench I always run on new models, a topic that's of much interest to me: can Gemini 4 direct Blender better than Astra (the crowned king). Well, you be the judge of it. All subagents are orchestrated by Claude Opus 5.5. It monitored the processes, and unstuck what needed",
       "source": "reddit-claudecode",
       "sourceCategory": "community",
       "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1x4tuqy|reddit-claudecode"
+      "uniqueKey": "t3_1x5mnrd|reddit-claudecode"
     },
     {
-      "id": "t3_1x4tif3",
-      "title": "I built a Claude Code skill that turns biology ideas into interactive scientific figures",
-      "date": "2026-10-13T10:55:25+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x4tif3/i_built_a_claude_code_skill_that_turns_biology/",
-      "snippet": "I built Anima, a free, open-source Claude Code skill for visualizing biological structures and mechanisms. Instead of generating another static diagram, you can ask Claude to explain something like dopamine receptor signaling, how different stimulants affect neurotransmission, or how semaglutide wor",
+      "id": "50084383",
+      "title": "Not Found \\ Anthropic",
+      "date": "2026-10-14T08:45:09Z",
+      "url": "https://www.anthropic.com/news/singapore-office-opening",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "50084383|hn-anthropic-com"
+    },
+    {
+      "id": "2110289695888511368",
+      "title": "We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.\n\nYou can read more about our ",
+      "date": "2026-10-14T08:40:45.000Z",
+      "url": "https://x.com/AnthropicAI/status/2110289695888511368",
+      "snippet": "We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.\n\nYou can read more about our new office here: https://t.co/125mBgHLkM",
+      "source": "twitter-anthropicai",
+      "sourceCategory": "community",
+      "sourceName": "@AnthropicAI (official)",
+      "uniqueKey": "2110289695888511368|twitter-anthropicai"
+    },
+    {
+      "id": "45089b2",
+      "title": "Skill: Restore licensed upstream helpers and runtime support (#1915)",
+      "date": "2026-10-14T08:38:13Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/45089b2823caeee223f7df7e656ded9be6364c71",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "45089b2|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "01f69d5",
+      "title": "fix(skills): restore licensed upstream reference helpers (#1914)",
+      "date": "2026-10-14T08:21:46Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/01f69d50602a8caa902563a8d46ca553a5501db3",
+      "snippet": null,
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "01f69d5|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "t3_1x5kflr",
+      "title": "First session of the week of Max 20x: Weekly limit = 2 x session?",
+      "date": "2026-10-14T06:56:55+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x5kflr/first_session_of_the_week_of_max_20x_weekly_limit/",
+      "snippet": "It is my first session in this week. The pace of weekly limit consumption in the last 15 minutes is like in the screenshot. With this pace, it means that in 2 sessions, I will be done with my whole weekly limit usage. I upgraded my account from 5x to 20x to avoid exactly this problem. What's wrong w",
       "source": "reddit-claudecode",
       "sourceCategory": "community",
       "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1x4tif3|reddit-claudecode"
+      "uniqueKey": "t3_1x5kflr|reddit-claudecode"
     },
     {
-      "id": "t3_1x4r47t",
-      "title": "You can't win",
-      "date": "2026-10-13T08:25:46+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x4r47t/you_cant_win/",
+      "id": "50083366",
+      "title": "Tool or automation? You make the decision each time",
+      "date": "2026-10-14T06:44:19Z",
+      "url": "https://claude.ai/public/artifacts/81970b33-4697-4226-aef6-ca669d900d68",
+      "snippet": null,
+      "source": "hn-claude-ai",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.ai",
+      "uniqueKey": "50083366|hn-claude-ai"
+    },
+    {
+      "id": "177869f",
+      "title": "fix(skills): repair verified documentation defects (#1912)",
+      "date": "2026-10-14T05:55:24Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/177869f0f476325c7e4da7b6a0ed60fbe0ec4782",
+      "snippet": "Several canonical skill entries expose truncated or duplicated discovery metadata, obligatory vendor promotions, or references to material absent from the distributed skill. This batch repairs verified defects in 267 entries while preserving skill IDs, declared risk and source identity. Language/sty",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "177869f|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "8bd00f0",
+      "title": "Merge pull request #6515 from anthropics/bump/postman",
+      "date": "2026-10-14T04:54:10Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/8bd00f08f0b04705e610cf132fbe2cf5ec44cfe3",
+      "snippet": "bump(postman): 67cff8f3 → 0128d247",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "8bd00f0|gh-commits-plugins-official"
+    },
+    {
+      "id": "9b4f0d6",
+      "title": "chore: Update mods/",
+      "date": "2026-10-14T04:30:05Z",
+      "url": "https://github.com/anthropics/claude-code/commit/9b4f0d6ef8ceaf62f6b46babb9a4d84bec541a2e",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "9b4f0d6|gh-commits-claude-code"
+    },
+    {
+      "id": "t3_1x5he2c",
+      "title": "Anthropic is merging 30,000 code changes per day using Claude. Says software engineers are still vital because they tell Claude \"no.\"",
+      "date": "2026-10-14T03:54:35+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x5he2c/anthropic_is_merging_30000_code_changes_per_day/",
+      "snippet": "How are software engineers staying in the loop? By telling Claude no. “Very often, we found that the role of the engineers was to tell Claude “no.” Agents will sometimes violate core system constraints to satisfy a pattern that should never have been allowed in the first place. This was particularly",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1x5he2c|reddit-claudecode"
+    },
+    {
+      "id": "t3_1x5gvnt",
+      "title": "Today I got two Claude instances to talk to each other 🤯",
+      "date": "2026-10-14T03:26:47+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x5gvnt/today_i_got_two_claude_instances_to_talk_to_each/",
+      "snippet": "That is all. I know you guys have probably been doing this for months but it just clicked for me today. I tend to work in two different directories/projects frequently and this was a game changer.",
+      "source": "reddit-claudecode",
+      "sourceCategory": "community",
+      "sourceName": "r/ClaudeCode (top/day)",
+      "uniqueKey": "t3_1x5gvnt|reddit-claudecode"
+    },
+    {
+      "id": "t3_1x5gemk",
+      "title": "Managed to reverse engineer my peripheral software drivers and create and all-in-one app to change settings and show status of each peripheral!",
+      "date": "2026-10-14T03:01:47+00:00",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x5gemk/managed_to_reverse_engineer_my_peripheral/",
       "snippet": null,
       "source": "reddit-claudecode",
       "sourceCategory": "community",
       "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1x4r47t|reddit-claudecode"
+      "uniqueKey": "t3_1x5gemk|reddit-claudecode"
+    },
+    {
+      "id": "50081868",
+      "title": "Anthropic 2026 AUP Update",
+      "date": "2026-10-14T03:00:30Z",
+      "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "50081868|hn-anthropic-com"
+    },
+    {
+      "id": "v1.0.249",
+      "title": "v1.0.249",
+      "date": "2026-10-14T02:57:56Z",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.249",
+      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.248...v1.0.249",
+      "source": "claude-code-action",
+      "sourceCategory": "extended",
+      "sourceName": "Claude Code Action Releases",
+      "uniqueKey": "v1.0.249|claude-code-action"
+    },
+    {
+      "id": "39cd5a7",
+      "title": "feat(managed_agents): move plan-big-execute-small to multiagent_20261001 (#915)",
+      "date": "2026-10-14T02:56:52Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/39cd5a7a3a29a73e7391e17b7644c51f34a6aaa1",
+      "snippet": "The recipe now sets the multiagent_20261001 type. The small-model worker is listed under subagents.predefined_agents, and subagents.inline_agents and workflows are set to disabled, so every delegated task goes to the listed worker.  Also in this change: - \"coordinator\" becomes \"orchestrator\" in the ",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "39cd5a7|gh-commits-cookbooks"
+    },
+    {
+      "id": "v2.1.299",
+      "title": "v2.1.299",
+      "date": "2026-10-14T02:49:42Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
+      "snippet": "What's changed\n- Added CLAUDECODEDISABLEFILEMENTIONS environment variable: Claude gets the paths of @ file mentions to read with its file tools, not the files' contents\n- Added idle compaction in the terminal: a 200K+ token conversation left idle for about 54 minutes is compacted before its one-hour",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.299|claude-code-releases"
+    },
+    {
+      "id": "db93774",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-10-14T02:49:24Z",
+      "url": "https://github.com/anthropics/claude-code/commit/db93774d73e8fdbaf315a6f4c175ae99ad3d515a",
+      "snippet": "Fixes #92238 Fixes #99014",
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "db93774|gh-commits-claude-code"
+    },
+    {
+      "id": "2.1.299",
+      "title": "@anthropic-ai/claude-code@2.1.299",
+      "date": "2026-10-14T00:23:19.588Z",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+      "snippet": "Use Claude, Anthropic's AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+      "source": "npm-claude-code",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code npm Package",
+      "uniqueKey": "2.1.299|npm-claude-code"
+    },
+    {
+      "id": "https://www.anthropic.com/news/singapore-office-opening",
+      "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+      "date": "2026-10-14T00:00:00.000Z",
+      "url": "https://www.anthropic.com/news/singapore-office-opening",
+      "snippet": "",
+      "source": "blog-news",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic News Blog",
+      "uniqueKey": "https://www.anthropic.com/news/singapore-office-opening|blog-news"
+    },
+    {
+      "id": "50079528",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "date": "2026-10-13T22:03:04Z",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "50079528|hn-anthropic-com"
+    },
+    {
+      "id": "2110128453760815153",
+      "title": "The Claude Code hackathon is back, and we're bringing it to Japan!\n\nエンジニアの方も、そうでない方も、日本在住のビルダーならどなたでも応募できます。世界に何を見せてくれるのか、楽しみにしています。\n応募締切は10月26日 23:59（日本時間）：\n\nhttps://t.co/YXVYxl5gdU\n\n#claudejapan2026",
+      "date": "2026-10-13T22:00:02.000Z",
+      "url": "https://x.com/ClaudeDevs/status/2110128453760815153",
+      "snippet": "The Claude Code hackathon is back, and we're bringing it to Japan!\n\nエンジニアの方も、そうでない方も、日本在住のビルダーならどなたでも応募できます。世界に何を見せてくれるのか、楽しみにしています。\n応募締切は10月26日 23:59（日本時間）：\n\nhttps://t.co/YXVYxl5gdU\n\n#claudejapan2026",
+      "source": "twitter-claudedevs",
+      "sourceCategory": "community",
+      "sourceName": "@ClaudeDevs",
+      "uniqueKey": "2110128453760815153|twitter-claudedevs"
+    },
+    {
+      "id": "50079111",
+      "title": "Show HN: Keep your eyes in one place while typing",
+      "date": "2026-10-13T21:31:36Z",
+      "url": "https://claude.ai/artifact/XrdjCJXgerVYbG75qzv3HB",
+      "snippet": "I wanted a way of typing that&#x27;s tuned towards stream of consciousness&#x2F;get down a bunch of words quickly. And I&#x27;m too lazy to move my eyes, so I wanted something where I could relax my eyes&#x2F;brain and just get words out.",
+      "source": "hn-claude-ai",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — claude.ai",
+      "uniqueKey": "50079111|hn-claude-ai"
+    },
+    {
+      "id": "8d392c8",
+      "title": "security-guidance: deliver commit and push findings on stderr (#6379)",
+      "date": "2026-10-13T20:46:31Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/8d392c8169665866be1d95f2bfeda5aaae7149dd",
+      "snippet": "Commit and push findings went only into hookSpecificOutput.additionalContext, which Claude Code's asyncRewake path never reads: it shows Claude stderr, or stdout when stderr is empty. When the agentic reviewer's inner CLI printed a warning to stderr, Claude got that warning instead of the findings (",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "8d392c8|gh-commits-plugins-official"
+    },
+    {
+      "id": "99951e9",
+      "title": "Merge pull request #6378 from anthropics/mhegazy/sg-gateway-headers",
+      "date": "2026-10-13T20:44:50Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/99951e9e4678548f90531dfc80be2e95e4618ff0",
+      "snippet": "security-guidance: send ANTHROPIC_CUSTOM_HEADERS on the plugin's own API calls",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "99951e9|gh-commits-plugins-official"
+    },
+    {
+      "id": "d44ca8e",
+      "title": "Merge pull request #6375 from anthropics/mhegazy/sg-review-failures",
+      "date": "2026-10-13T20:33:44Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/d44ca8eb76581bfc5be38cc4c9b7e75be3c22046",
+      "snippet": "security-guidance: never report a failed review as clean",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "d44ca8e|gh-commits-plugins-official"
+    },
+    {
+      "id": "b0b7bed",
+      "title": "chore: Update mods/",
+      "date": "2026-10-13T19:57:37Z",
+      "url": "https://github.com/anthropics/claude-code/commit/b0b7bed9820350bb0942e32c7f00752a99ea3555",
+      "snippet": null,
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "b0b7bed|gh-commits-claude-code"
+    },
+    {
+      "id": "2110073054479143217",
+      "title": "RT @AnthropicAI: New on our Engineering blog: Creating in-house source control. \n\nIn May, we merged around 2,500 code changes per day. In S…",
+      "date": "2026-10-13T18:19:54.000Z",
+      "url": "https://x.com/bcherny/status/2110073054479143217",
+      "snippet": "RT @AnthropicAI: New on our Engineering blog: Creating in-house source control. \n\nIn May, we merged around 2,500 code changes per day. In S…",
+      "source": "twitter-bcherny",
+      "sourceCategory": "community",
+      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
+      "uniqueKey": "2110073054479143217|twitter-bcherny"
+    },
+    {
+      "id": "2110047081414987957",
+      "title": "New on our Engineering blog: Creating in-house source control. \n\nIn May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenec",
+      "date": "2026-10-13T16:36:41.000Z",
+      "url": "https://x.com/AnthropicAI/status/2110047081414987957",
+      "snippet": "New on our Engineering blog: Creating in-house source control. \n\nIn May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenecked by developer infrastructure built for human (rather than agent) scale.  \n\nHere, we share how we ",
+      "source": "twitter-anthropicai",
+      "sourceCategory": "community",
+      "sourceName": "@AnthropicAI (official)",
+      "uniqueKey": "2110047081414987957|twitter-anthropicai"
+    },
+    {
+      "id": "50073633",
+      "title": "Redesigning source control at Anthropic",
+      "date": "2026-10-13T15:49:56Z",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "snippet": null,
+      "source": "hn-anthropic-com",
+      "sourceCategory": "community",
+      "sourceName": "Hacker News — anthropic.com",
+      "uniqueKey": "50073633|hn-anthropic-com"
+    },
+    {
+      "id": "2110023283169247623",
+      "title": "Hi, I'm Felix. I'm an eng lead working on Claude. I love watching people take flight and do things they never thought possible.\n\nWe often describe that as \"being more ambitious\" when using AI, which i",
+      "date": "2026-10-13T15:02:07.000Z",
+      "url": "https://x.com/felixrieseberg/status/2110023283169247623",
+      "snippet": "Hi, I'm Felix. I'm an eng lead working on Claude. I love watching people take flight and do things they never thought possible.\n\nWe often describe that as \"being more ambitious\" when using AI, which is tricky advice to follow. I wrote a tutorial:\n\nhttps://t.co/vNPPs5FWm8",
+      "source": "twitter-felixrieseberg",
+      "sourceCategory": "community",
+      "sourceName": "@felixrieseberg (Felix Rieseberg)",
+      "uniqueKey": "2110023283169247623|twitter-felixrieseberg"
     },
     {
       "id": "50068405",
@@ -86,48 +449,15 @@
       "uniqueKey": "50065553|hn-anthropic-com"
     },
     {
-      "id": "t3_1x4k1yj",
-      "title": "What do you do about the growing number of tests in a large project?",
-      "date": "2026-10-13T01:42:47+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x4k1yj/what_do_you_do_about_the_growing_number_of_tests/",
-      "snippet": "Probably obvious, but I'm a nontechnical user, building a recurring invoice app for a small Shopify store. I've noticed that the suite of tests that Claude code has been performing has grown steadily over the course of the project. I assume this is normal. What I'm wondering is if there comes a poin",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1x4k1yj|reddit-claudecode"
-    },
-    {
-      "id": "addd7a6",
-      "title": "chore: Update mods/",
-      "date": "2026-10-13T00:50:04Z",
-      "url": "https://github.com/anthropics/claude-code/commit/addd7a69690bb5f5484c2a47583a8f88c4842a6e",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "addd7a6|gh-commits-claude-code"
-    },
-    {
-      "id": "t3_1x4ixl9",
-      "title": "Supercharging your max subscription!",
-      "date": "2026-10-13T00:48:15+00:00",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x4ixl9/supercharging_your_max_subscription/",
-      "snippet": "https://preview.redd.it/ersx8iy1t4vh1.png?width=2160&format=png&auto=webp&s=cd15ee41114a2f007d283d534e481a6391b0dc78 https://preview.redd.it/rekllgsps4vh1.png?width=2160&format=png&auto=webp&s=6d98177c272ea5f7d730aebd96f70511bae9909a https://preview.redd.it/7zq6lhsps4vh1.png?width=2160&format=png&au",
-      "source": "reddit-claudecode",
-      "sourceCategory": "community",
-      "sourceName": "r/ClaudeCode (top/day)",
-      "uniqueKey": "t3_1x4ixl9|reddit-claudecode"
-    },
-    {
-      "id": "fa3ffa4",
-      "title": "chore: Update mods/",
-      "date": "2026-10-13T00:07:29Z",
-      "url": "https://github.com/anthropics/claude-code/commit/fa3ffa4456bae44d1a63b11f15f3068f0a5e06dc",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "fa3ffa4|gh-commits-claude-code"
+      "id": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "title": " Redesigning source control at Anthropic",
+      "date": "2026-10-13T00:00:00.000Z",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "snippet": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
+      "source": "blog-engineering",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic Engineering Blog",
+      "uniqueKey": "https://www.anthropic.com/engineering/redesigning-source-control|blog-engineering"
     },
     {
       "id": "2109795898909950247",
@@ -141,28 +471,6 @@
       "uniqueKey": "2109795898909950247|twitter-anthropicai"
     },
     {
-      "id": "50064421",
-      "title": "OSS Scanner",
-      "date": "2026-10-12T23:19:16Z",
-      "url": "https://red.anthropic.com/oss-scanner/",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "50064421|hn-anthropic-com"
-    },
-    {
-      "id": "acafd3b",
-      "title": "fix: complete agent setup and clarify skill pages (#1894)",
-      "date": "2026-10-12T20:17:45Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/acafd3bfadd0ba2a76e3d0792d0a38f974b0a25c",
-      "snippet": "# Pull Request Description  Users following Codex/Claude setup can now complete configuration, verify a real tool call, obtain an agent-selected manifest, review a plan and prepare the separate installer preview from the same guide. Shared command generation keeps both guides pinned to the same rele",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "acafd3b|gh-commits-antigravity-awesome-skills"
-    },
-    {
       "id": "https://www.anthropic.com/research/self-replicating-ai",
       "title": "AI models may be capable of self-replicating without access to a datacenter",
       "date": "2026-10-12T19:30:00.000Z",
@@ -172,61 +480,6 @@
       "sourceCategory": "extended",
       "sourceName": "Anthropic Research Blog",
       "uniqueKey": "https://www.anthropic.com/research/self-replicating-ai|blog-research"
-    },
-    {
-      "id": "50061603",
-      "title": "AI models may be capable of self-replicating without access to a datacenter",
-      "date": "2026-10-12T19:25:29Z",
-      "url": "https://www.anthropic.com/research/self-replicating-ai",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "50061603|hn-anthropic-com"
-    },
-    {
-      "id": "4f5ef5b",
-      "title": "chore: release v19.5.0 (#1892)",
-      "date": "2026-10-12T19:23:38Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/4f5ef5b65969ae8930dffabacc5c283660a2ccc0",
-      "snippet": "Prepare protected release v19.5.0.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "4f5ef5b|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "0e2fc6b",
-      "title": "docs: add 19.5.0 changelog entry (#1891)",
-      "date": "2026-10-12T19:13:04Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/0e2fc6b4c3591af14f223498e629a3bef875c763",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "0e2fc6b|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "891a1d1",
-      "title": "feat: add Arcmira timestamped quote research skill (#1889)",
-      "date": "2026-10-12T18:57:08Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/891a1d1995a0a2f4cd05b6d27c55996aa3c61bb7",
-      "snippet": "# Pull Request Description  Adds `arcmira-find-quotes` for searching indexed YouTube and podcast transcripts and returning timestamped sources. Adapted from the Apache-2.0 Arcmira plugin at v0.10.6, with no monitor or feedback writes.  Validation: `npm run chain`, `npm run check:warning-budget`, `np",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "891a1d1|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "da5ffcd",
-      "title": "[Snyk] Upgrade react-virtuoso from 4.18.13 to 4.18.14 (#1881)",
-      "date": "2026-10-12T18:50:27Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/da5ffcd9a761a7303279505e94cf9cd9356792e8",
-      "snippet": "![snyk-top-banner](https://res.cloudinary.com/snyk/image/upload/r-d/scm-platform/snyk-pull-requests/pr-banner-default.svg)  <h3>Snyk has created this PR to upgrade react-virtuoso from 4.18.13 to 4.18.14.</h3>  :information_source: Keep your dependencies up-to-date. This makes it easier to fix existi",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "da5ffcd|gh-commits-antigravity-awesome-skills"
     },
     {
       "id": "https://www.anthropic.com/research/distillation-defenses",
@@ -295,17 +548,6 @@
       "uniqueKey": "345cd36|gh-commits-everything-claude-code"
     },
     {
-      "id": "3deb873",
-      "title": "chore: Update mods/",
-      "date": "2026-10-11T19:07:16Z",
-      "url": "https://github.com/anthropics/claude-code/commit/3deb873687379f0c199a69fdaccc65f0865f7a29",
-      "snippet": null,
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "3deb873|gh-commits-claude-code"
-    },
-    {
       "id": "f359d43",
       "title": "Merge pull request #6408 from anthropics/mhegazy/data-agent-kit-rename",
       "date": "2026-10-11T02:41:21Z",
@@ -317,28 +559,6 @@
       "uniqueKey": "f359d43|gh-commits-plugins-official"
     },
     {
-      "id": "a9fd216",
-      "title": "Merge pull request #6400 from anthropics/oct/sg-2.0.13",
-      "date": "2026-10-10T22:23:16Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/a9fd21643fc10eb9c8c8b581902f6259937fa1a4",
-      "snippet": "security-guidance: bump to 2.0.13",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "a9fd216|gh-commits-plugins-official"
-    },
-    {
-      "id": "adbc7f4",
-      "title": "data-agent-kit: rename, repoint to GoogleCloudPlatform, bump to 1.0.0",
-      "date": "2026-10-10T22:22:40Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/adbc7f48e98fbeb288a9e2baf537bc774b86643e",
-      "snippet": "Google renamed the plugin's repository and moved it from gemini-cli-extensions/data-agent-kit-starter-pack to GoogleCloudPlatform/data-agent-kit-plugin, and released 1.0.0.  Rename the entry to data-agent-kit and add a renames entry so installs under the old name follow it. Point the source at the n",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "adbc7f4|gh-commits-plugins-official"
-    },
-    {
       "id": "50037145",
       "title": "I bet AI would invent its own language; Claude Opus's survived every copy",
       "date": "2026-10-10T21:02:24Z",
@@ -348,17 +568,6 @@
       "sourceCategory": "community",
       "sourceName": "Hacker News — claude.ai",
       "uniqueKey": "50037145|hn-claude-ai"
-    },
-    {
-      "id": "50036665",
-      "title": "Investigating unintended model actions in our evaluations and internal use",
-      "date": "2026-10-10T20:12:07Z",
-      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "50036665|hn-anthropic-com"
     },
     {
       "id": "0.3.296",
@@ -403,17 +612,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "9c1e493|gh-commits-cookbooks"
-    },
-    {
-      "id": "50031115",
-      "title": "Anthropic bans users from needless abusive or cruel behavior towards Claude",
-      "date": "2026-10-10T09:20:25Z",
-      "url": "https://www.anthropic.com/news/2026-usage-policy-update",
-      "snippet": null,
-      "source": "hn-anthropic-com",
-      "sourceCategory": "community",
-      "sourceName": "Hacker News — anthropic.com",
-      "uniqueKey": "50031115|hn-anthropic-com"
     },
     {
       "id": "t3_1x296ob",
@@ -491,28 +689,6 @@
       "sourceCategory": "community",
       "sourceName": "Hacker News — claude.com",
       "uniqueKey": "50026693|hn-claude-com"
-    },
-    {
-      "id": "b8e53f1",
-      "title": "bump(snowflake-cortex-code): 0c54225e → e2a3cbb4 (#6389)",
-      "date": "2026-10-09T20:54:09Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/b8e53f1c05dff3b6d751297f6527990ffc81c2f4",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "b8e53f1|gh-commits-plugins-official"
-    },
-    {
-      "id": "5238fd4",
-      "title": "bump(crowdstrike-falcon-foundry, crowdstrike-falcon-fusion): v1.6.0, v1.3.0 (#6388)",
-      "date": "2026-10-09T20:53:58Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/5238fd480c7b97696942bf12f24b734a0a9bed67",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "5238fd4|gh-commits-plugins-official"
     },
     {
       "id": "2108649203610403032",
@@ -768,17 +944,6 @@
       "uniqueKey": "2108291260440334382|twitter-noahzweben"
     },
     {
-      "id": "2108290395599667700",
-      "title": "An astrophysicist worked with Claude Science to create the first complete ultraviolet map of the sky. Astronomers have already created complete sky maps from radio to gamma rays. But large regions of ",
-      "date": "2026-10-08T20:16:15.000Z",
-      "url": "https://x.com/AnthropicAI/status/2108290395599667700",
-      "snippet": "An astrophysicist worked with Claude Science to create the first complete ultraviolet map of the sky. Astronomers have already created complete sky maps from radio to gamma rays. But large regions of the sky have never been observed in UV.\n\nIn today’s science blog, Brice Ménard explains how he guide",
-      "source": "twitter-anthropicai",
-      "sourceCategory": "community",
-      "sourceName": "@AnthropicAI (official)",
-      "uniqueKey": "2108290395599667700|twitter-anthropicai"
-    },
-    {
       "id": "2108287979991228574",
       "title": "@nateparrott and team really cooked here. My entire timeline is filled with people making cool little videos with Opus 5.5, this makes it _way_ easier to do.",
       "date": "2026-10-08T20:06:39.000Z",
@@ -900,28 +1065,6 @@
       "uniqueKey": "2108242288334065934|twitter-theamolavasare"
     },
     {
-      "id": "2108228391404966005",
-      "title": "Monthly API credits are now available on Max and Team plans: $100 on Max 5x, $200 on Max 20x, and up to $500 pooled on Team. Use them on any Claude model.\n\nHow it works and full terms: https://t.co/qm",
-      "date": "2026-10-08T16:09:52.000Z",
-      "url": "https://x.com/ClaudeDevs/status/2108228391404966005",
-      "snippet": "Monthly API credits are now available on Max and Team plans: $100 on Max 5x, $200 on Max 20x, and up to $500 pooled on Team. Use them on any Claude model.\n\nHow it works and full terms: https://t.co/qmWL6xV8GT",
-      "source": "twitter-claudedevs",
-      "sourceCategory": "community",
-      "sourceName": "@ClaudeDevs",
-      "uniqueKey": "2108228391404966005|twitter-claudedevs"
-    },
-    {
-      "id": "2108226292235809081",
-      "title": "We're deepening our commitment to scientific research and technological discovery by committing $150 million to the Genesis Mission.\n\nWe'll also make Claude and our technical support available to more",
-      "date": "2026-10-08T16:01:31.000Z",
-      "url": "https://x.com/AnthropicAI/status/2108226292235809081",
-      "snippet": "We're deepening our commitment to scientific research and technological discovery by committing $150 million to the Genesis Mission.\n\nWe'll also make Claude and our technical support available to more than 15 federal agencies.\n\nhttps://t.co/MUmQBiC6MF",
-      "source": "twitter-anthropicai",
-      "sourceCategory": "community",
-      "sourceName": "@AnthropicAI (official)",
-      "uniqueKey": "2108226292235809081|twitter-anthropicai"
-    },
-    {
       "id": "0.3.294",
       "title": "0.3.294",
       "date": "2026-10-08T13:00:48.827Z",
@@ -964,149 +1107,6 @@
       "sourceCategory": "core",
       "sourceName": "Anthropic SDK Python Releases",
       "uniqueKey": "v1.12.1|api-sdk-py-releases"
-    },
-    {
-      "id": "google-cloud-sdk-v0.0.19",
-      "title": "google-cloud-sdk-v0.0.19",
-      "date": "2026-10-08T03:07:11Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.19",
-      "snippet": "Chores\n ci: check that pull requests update the changelog",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "google-cloud-sdk-v0.0.19|api-sdk-ts-releases"
-    },
-    {
-      "id": "aws-sdk-v0.7.9",
-      "title": "aws-sdk-v0.7.9",
-      "date": "2026-10-08T03:07:09Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.7.9",
-      "snippet": "Chores\n ci: check that pull requests update the changelog",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "aws-sdk-v0.7.9|api-sdk-ts-releases"
-    },
-    {
-      "id": "foundry-sdk-v0.5.4",
-      "title": "foundry-sdk-v0.5.4",
-      "date": "2026-10-08T03:07:07Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.5.4",
-      "snippet": "Chores\n ci: check that pull requests update the changelog",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "foundry-sdk-v0.5.4|api-sdk-ts-releases"
-    },
-    {
-      "id": "bedrock-sdk-v0.34.4",
-      "title": "bedrock-sdk-v0.34.4",
-      "date": "2026-10-08T03:07:05Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.34.4",
-      "snippet": "Chores\n ci: check that pull requests update the changelog",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "bedrock-sdk-v0.34.4|api-sdk-ts-releases"
-    },
-    {
-      "id": "2108006059432640734",
-      "title": "RT @ClaudeDevs: Cloud sessions run Claude Code on a fresh VM for each task, so you can start several at once and they keep going when you c…",
-      "date": "2026-10-08T01:26:24.000Z",
-      "url": "https://x.com/noahzweben/status/2108006059432640734",
-      "snippet": "RT @ClaudeDevs: Cloud sessions run Claude Code on a fresh VM for each task, so you can start several at once and they keep going when you c…",
-      "source": "twitter-noahzweben",
-      "sourceCategory": "community",
-      "sourceName": "@noahzweben (Noah Zweben)",
-      "uniqueKey": "2108006059432640734|twitter-noahzweben"
-    },
-    {
-      "id": "2108004023249088528",
-      "title": "Sometimes I read on flights, and sometimes… https://t.co/k3NBRfjMvu",
-      "date": "2026-10-08T01:18:18.000Z",
-      "url": "https://x.com/bcherny/status/2108004023249088528",
-      "snippet": "Sometimes I read on flights, and sometimes… https://t.co/k3NBRfjMvu",
-      "source": "twitter-bcherny",
-      "sourceCategory": "community",
-      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
-      "uniqueKey": "2108004023249088528|twitter-bcherny"
-    },
-    {
-      "id": "https://www.anthropic.com/news/2026-usage-policy-update",
-      "title": "2026 Usage Policy update",
-      "date": "2026-10-08T00:00:00.000Z",
-      "url": "https://www.anthropic.com/news/2026-usage-policy-update",
-      "snippet": "",
-      "source": "blog-news",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic News Blog",
-      "uniqueKey": "https://www.anthropic.com/news/2026-usage-policy-update|blog-news"
-    },
-    {
-      "id": "https://www.anthropic.com/news/genesis-mission-commitment",
-      "title": "Building on our commitment to American scientific discovery",
-      "date": "2026-10-08T00:00:00.000Z",
-      "url": "https://www.anthropic.com/news/genesis-mission-commitment",
-      "snippet": "",
-      "source": "blog-news",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic News Blog",
-      "uniqueKey": "https://www.anthropic.com/news/genesis-mission-commitment|blog-news"
-    },
-    {
-      "id": "https://www.anthropic.com/news/anthropic-cyber-mission",
-      "title": "Introducing the Anthropic Cyber Mission",
-      "date": "2026-10-08T00:00:00.000Z",
-      "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
-      "snippet": "",
-      "source": "blog-news",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic News Blog",
-      "uniqueKey": "https://www.anthropic.com/news/anthropic-cyber-mission|blog-news"
-    },
-    {
-      "id": "2107980493614616996",
-      "title": "RT @lydiahallie: If you're on API billing, you can set Haiku 5.5's autocompact window to 100K so you stay in the cheaper token pricing tier…",
-      "date": "2026-10-07T23:44:48.000Z",
-      "url": "https://x.com/bcherny/status/2107980493614616996",
-      "snippet": "RT @lydiahallie: If you're on API billing, you can set Haiku 5.5's autocompact window to 100K so you stay in the cheaper token pricing tier…",
-      "source": "twitter-bcherny",
-      "sourceCategory": "community",
-      "sourceName": "@bcherny (Boris Cherny, Anthropic)",
-      "uniqueKey": "2107980493614616996|twitter-bcherny"
-    },
-    {
-      "id": "2107976664827433460",
-      "title": "RT @ClaudeDevs: We’re rolling out monthly Claude Platform API credits for Max and Team plans:\n\nMax 5x: $100\nMax 20x: $200\nTeam: up to $500,…",
-      "date": "2026-10-07T23:29:35.000Z",
-      "url": "https://x.com/TheAmolAvasare/status/2107976664827433460",
-      "snippet": "RT @ClaudeDevs: We’re rolling out monthly Claude Platform API credits for Max and Team plans:\n\nMax 5x: $100\nMax 20x: $200\nTeam: up to $500,…",
-      "source": "twitter-theamolavasare",
-      "sourceCategory": "community",
-      "sourceName": "@TheAmolAvasare (Amol Avasare)",
-      "uniqueKey": "2107976664827433460|twitter-theamolavasare"
-    },
-    {
-      "id": "vmys9qn874h4",
-      "title": "Issue with spend limits",
-      "date": "2026-10-07T21:23:29.603Z",
-      "url": "https://stspg.io/frlrjsqqn605",
-      "snippet": "[none] resolved — We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Claude.ai, Claude Code, Claude Security, and Claude Cowork. This is now resolved.",
-      "source": "status-page",
-      "sourceCategory": "extended",
-      "sourceName": "Anthropic Status Page",
-      "uniqueKey": "vmys9qn874h4|status-page"
-    },
-    {
-      "id": "v1.0.245",
-      "title": "v1.0.245",
-      "date": "2026-10-07T18:15:47Z",
-      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.245",
-      "snippet": "Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.244...v1.0.245",
-      "source": "claude-code-action",
-      "sourceCategory": "extended",
-      "sourceName": "Claude Code Action Releases",
-      "uniqueKey": "v1.0.245|claude-code-action"
     }
   ]
 }

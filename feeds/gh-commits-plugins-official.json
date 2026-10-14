@@ -5,9 +5,53 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-13T13:47:54.246Z",
+  "generated": "2026-10-14T11:25:15.891Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "8bd00f0",
+      "title": "Merge pull request #6515 from anthropics/bump/postman",
+      "date": "2026-10-14T04:54:10Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/8bd00f08f0b04705e610cf132fbe2cf5ec44cfe3",
+      "snippet": "bump(postman): 67cff8f3 → 0128d247",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "8bd00f0|gh-commits-plugins-official"
+    },
+    {
+      "id": "8d392c8",
+      "title": "security-guidance: deliver commit and push findings on stderr (#6379)",
+      "date": "2026-10-13T20:46:31Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/8d392c8169665866be1d95f2bfeda5aaae7149dd",
+      "snippet": "Commit and push findings went only into hookSpecificOutput.additionalContext, which Claude Code's asyncRewake path never reads: it shows Claude stderr, or stdout when stderr is empty. When the agentic reviewer's inner CLI printed a warning to stderr, Claude got that warning instead of the findings (",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "8d392c8|gh-commits-plugins-official"
+    },
+    {
+      "id": "99951e9",
+      "title": "Merge pull request #6378 from anthropics/mhegazy/sg-gateway-headers",
+      "date": "2026-10-13T20:44:50Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/99951e9e4678548f90531dfc80be2e95e4618ff0",
+      "snippet": "security-guidance: send ANTHROPIC_CUSTOM_HEADERS on the plugin's own API calls",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "99951e9|gh-commits-plugins-official"
+    },
+    {
+      "id": "d44ca8e",
+      "title": "Merge pull request #6375 from anthropics/mhegazy/sg-review-failures",
+      "date": "2026-10-13T20:33:44Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/d44ca8eb76581bfc5be38cc4c9b7e75be3c22046",
+      "snippet": "security-guidance: never report a failed review as clean",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "d44ca8e|gh-commits-plugins-official"
+    },
     {
       "id": "f359d43",
       "title": "Merge pull request #6408 from anthropics/mhegazy/data-agent-kit-rename",
@@ -513,50 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "f45794f|gh-commits-plugins-official"
-    },
-    {
-      "id": "fc8adcf",
-      "title": "code-modernization: fold the same rule found in several files into one",
-      "date": "2026-09-25T04:18:31Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/fc8adcf13fab336a810a622e8cf7be86be3a183b",
-      "snippet": "A numeric library implemented in C, in a C++ header and in a fixed-point variant produced three \"twiddle factor\" rules, two \"generic butterfly\" rules and two \"factorization\" rules, because the referee's duplicate key is the file plus the rule's name. The plan and the review then carry noise.  After ",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "fc8adcf|gh-commits-plugins-official"
-    },
-    {
-      "id": "ad30d62",
-      "title": "Add GovTribe plugin (govtribe) (#6303)",
-      "date": "2026-09-24T21:04:59Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/ad30d62cd52ad0d0af1beda1eab7f61c601045d0",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "ad30d62|gh-commits-plugins-official"
-    },
-    {
-      "id": "8286e2d",
-      "title": "Add Vanguard Advisor Tools plugin (#6302)",
-      "date": "2026-09-24T19:33:34Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/8286e2db0113d3e0a124af3345a8fd15ab93937d",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "8286e2d|gh-commits-plugins-official"
-    },
-    {
-      "id": "e225b99",
-      "title": "Add LinqAlpha plugin (linq-alpha) (#6281)",
-      "date": "2026-09-24T15:24:27Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/e225b998a17e06ac87787165f2a1b5c1cac7edc2",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "e225b99|gh-commits-plugins-official"
     }
   ]
 }

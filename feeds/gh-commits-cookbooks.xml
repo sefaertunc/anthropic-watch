@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 13 Oct 2026 13:47:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
+    <item>
+      <title>feat(managed_agents): move plan-big-execute-small to multiagent_20261001 (#915)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/39cd5a7a3a29a73e7391e17b7644c51f34a6aaa1</link>
+      <guid isPermaLink="false">39cd5a7</guid>
+      <pubDate>Wed, 14 Oct 2026 02:56:52 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>The recipe now sets the multiagent_20261001 type. The small-model worker is listed under subagents.predefined_agents, and subagents.inline_agents and workflows are set to disabled, so every delegated task goes to the listed worker.  Also in this change: - &quot;coordinator&quot; becomes &quot;orchestrator&quot; in the </description>
+    </item>
     <item>
       <title>docs(managed_agents): move the self-hosted sandbox variants to claude-quickstarts (#888)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/9c1e493ddd2b82df399d2a61b9c806c539e18be6</link>
@@ -398,14 +406,6 @@
       <pubDate>Mon, 06 Jul 2026 18:57:44 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>Review fixes (comments and prose only, recorded outputs untouched): a fourth honest caveat documenting that the committed run&apos;s own park list is wrong at #10 (facts were verified; question decomposition was not - which is the sharpest lesson in the notebook), the PRICES comment now names Sonnet 5&apos;s </description>
-    </item>
-    <item>
-      <title>Add coordinator-pattern cost cookbook: big models plan, small models execute</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/a485090d4c3af1a59f6071aa13d388d48e0c9bf3</link>
-      <guid isPermaLink="false">a485090</guid>
-      <pubDate>Thu, 02 Jul 2026 21:30:05 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>New managed_agents notebook on the economics of the multiagent coordinator config: a frontier coordinator (Fable 5) plans and synthesizes while cheap workers (Sonnet 5, scoped to web_search + web_fetch) do the token-hungry reading in parallel threads. The comparison is rigor-matched: the control is </description>
     </item>
   </channel>
 </rss>
