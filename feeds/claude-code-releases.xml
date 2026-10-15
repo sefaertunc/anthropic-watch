@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 11:02:16 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.300</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.300</link>
+      <guid isPermaLink="false">v2.1.300</guid>
+      <pubDate>Wed, 14 Oct 2026 18:24:25 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added virtualText to a mod&apos;s prompt decorations: text drawn in the prompt box that never enters the draft or the submitted prompt
+- Added cachecreation5mtokens and cachecreation1htokens to the OpenTelemetry apirequest event, splitting cache writes by lifetime
+- Added $.ui.view({ age</description>
+    </item>
     <item>
       <title>v2.1.299</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.299</link>
@@ -494,17 +505,6 @@
       <description>What&apos;s changed
 - Added ANTHROPICDEFAULTMODEL environment variable: sets the model new sessions start on, while a /model pick still overrides it and persists across restarts (unlike ANTHROPICMODEL)
 - Added notifywhenidle to cross-session SendMessage: ask another Claude Code session on this machine to</description>
-    </item>
-    <item>
-      <title>v2.1.235</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.235</link>
-      <guid isPermaLink="false">v2.1.235</guid>
-      <pubDate>Tue, 18 Aug 2026 20:38:54 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added an optional spellcheck setting that underlines misspelled words in the prompt input as you type, using your installed aspell, hunspell, or ispell
-- Fixed whole-prompt-cache invalidation when a language server disconnected or reconnected mid-session
-- Fixed nested markdown list</description>
     </item>
   </channel>
 </rss>

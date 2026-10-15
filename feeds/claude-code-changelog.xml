@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 11:02:16 GMT</lastBuildDate>
+    <item>
+      <title>2.1.300</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.300</guid>
+      <pubDate>Thu, 15 Oct 2026 11:01:28 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added virtualText to a mod&apos;s prompt decorations: text drawn in the prompt box that never enters the draft or the submitted prompt
+- Added cachecreation5mtokens and cachecreation1htokens to the OpenTelemetry apirequest event, splitting cache writes by lifetime
+- Added $.ui.view({ agentId }) for mod</description>
+    </item>
     <item>
       <title>2.1.299</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -452,15 +462,6 @@
       <category>claude-code-changelog</category>
       <description>- Added owner wildcard entries (&quot;owner/&quot;) to the strictKnownMarketplaces and blockedMarketplaces managed settings for allowing or blocking all marketplace repos under a GitHub org
 - Added a warning when workflow agents, forked skills, slash commands, or resumed background agents&apos; requested subagent </description>
-    </item>
-    <item>
-      <title>2.1.222</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.222</guid>
-      <pubDate>Wed, 05 Aug 2026 08:38:56 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type
-- Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (summaries, compac</description>
     </item>
   </channel>
 </rss>

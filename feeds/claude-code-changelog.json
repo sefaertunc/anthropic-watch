@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-14T11:25:15.842Z",
+  "generated": "2026-10-15T11:02:16.384Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "2.1.300",
+      "title": "2.1.300",
+      "date": "2026-10-15T11:01:28.233Z",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "snippet": "- Added virtualText to a mod's prompt decorations: text drawn in the prompt box that never enters the draft or the submitted prompt\n- Added cachecreation5mtokens and cachecreation1htokens to the OpenTelemetry apirequest event, splitting cache writes by lifetime\n- Added $.ui.view({ agentId }) for mod",
+      "source": "claude-code-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Changelog",
+      "uniqueKey": "2.1.300|claude-code-changelog"
+    },
     {
       "id": "2.1.299",
       "title": "2.1.299",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Changelog",
       "uniqueKey": "2.1.223|claude-code-changelog"
-    },
-    {
-      "id": "2.1.222",
-      "title": "2.1.222",
-      "date": "2026-08-05T08:38:56.410Z",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
-      "snippet": "- Fixed worktree-isolated sessions and their subagents being able to run destructive git commands against the main checkout; isolation now applies to file edits and Bash in every session type\n- Fixed PreToolUse auto-allow hooks bypassing tool restrictions in background agent tasks (summaries, compac",
-      "source": "claude-code-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Changelog",
-      "uniqueKey": "2.1.222|claude-code-changelog"
     }
   ]
 }

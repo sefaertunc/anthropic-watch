@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 14 Oct 2026 11:25:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 11:02:16 GMT</lastBuildDate>
+    <item>
+      <title>0.3.300</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.300</guid>
+      <pubDate>Thu, 15 Oct 2026 11:01:28 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Fixed importSessionToStore skipping transcript rows that contain a Unicode line or paragraph separator (U+2028, U+2029) on Node 24 and Bun
+- Fixed a background subagent&apos;s final report in auto mode being joined into one turn with another message from the same subagent; the report now always runs as</description>
+    </item>
     <item>
       <title>0.3.299</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -439,15 +448,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added crossSessionInbound and dialogExpiry settings: cross-session messages sent to a session running with bypassed permissions are held for your approval, and messages to other sessions auto-deliver
 - Added subkind: &apos;peer-send-message&apos; to the task-notification member of SDKMessageOrigin, marking </description>
-    </item>
-    <item>
-      <title>0.3.223</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.223</guid>
-      <pubDate>Thu, 06 Aug 2026 08:39:16 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added resumeDropsTurn option: with resumeSessionAt, declares the turn a truncating resume intends to drop; the CLI refuses the resume if anything else would be discarded
-- Result messages for repeated 529 overload failures now include apierrorstatus: 529, so SDK consumers can detect overload termi</description>
     </item>
   </channel>
 </rss>

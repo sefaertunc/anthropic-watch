@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-14T11:25:15.854Z",
+  "generated": "2026-10-15T11:02:16.395Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.300",
+      "title": "0.3.300",
+      "date": "2026-10-15T11:01:28.547Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Fixed importSessionToStore skipping transcript rows that contain a Unicode line or paragraph separator (U+2028, U+2029) on Node 24 and Bun\n- Fixed a background subagent's final report in auto mode being joined into one turn with another message from the same subagent; the report now always runs as",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.300|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.299",
       "title": "0.3.299",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.224|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.223",
-      "title": "0.3.223",
-      "date": "2026-08-06T08:39:16.779Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added resumeDropsTurn option: with resumeSessionAt, declares the turn a truncating resume intends to drop; the CLI refuses the resume if anything else would be discarded\n- Result messages for repeated 529 overload failures now include apierrorstatus: 529, so SDK consumers can detect overload termi",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.223|agent-sdk-ts-changelog"
     }
   ]
 }
