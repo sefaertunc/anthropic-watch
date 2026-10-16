@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-15T11:02:16.395Z",
+  "generated": "2026-10-16T10:58:14.499Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.301",
+      "title": "0.3.301",
+      "date": "2026-10-16T10:57:26.777Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added per-tool permission policies to sdk-type MCP server configs: tools entries with permissionpolicy alwaysask or alwaysdeny, applied on initialize and setMcpServers()\n- Added BUILTINTOOLNAMES and LEGACYTOOLNAMEALIASES exports: the public built-in tool names and their earlier names, for checking",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.301|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.300",
       "title": "0.3.300",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.226|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.224",
-      "title": "0.3.224",
-      "date": "2026-08-07T07:18:46.472Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added crossSessionInbound and dialogExpiry settings: cross-session messages sent to a session running with bypassed permissions are held for your approval, and messages to other sessions auto-deliver\n- Added subkind: 'peer-send-message' to the task-notification member of SDKMessageOrigin, marking ",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.224|agent-sdk-ts-changelog"
     }
   ]
 }

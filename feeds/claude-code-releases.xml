@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 15 Oct 2026 11:02:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 10:58:14 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.301</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.301</link>
+      <guid isPermaLink="false">v2.1.301</guid>
+      <pubDate>Thu, 15 Oct 2026 19:22:06 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added CLAUDECODERETRYWATCHDOGMAXUSAGELIMITWAITMS so unattended retry mode (CLAUDECODERETRYWATCHDOG) ends a request at a usage limit that resets too far away instead of waiting
+- Added OpenTelemetry tracing guidance to the claude-api skill, including setting up trace destinations wit</description>
+    </item>
     <item>
       <title>v2.1.300</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.300</link>
@@ -495,16 +505,6 @@
       <description>What&apos;s changed
 - Fixed prompt caching for sessions using an LLM gateway or custom base URL
 - Added a built-in &quot;Concise&quot; output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config.</description>
-    </item>
-    <item>
-      <title>v2.1.236</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.236</link>
-      <guid isPermaLink="false">v2.1.236</guid>
-      <pubDate>Wed, 19 Aug 2026 20:02:05 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added ANTHROPICDEFAULTMODEL environment variable: sets the model new sessions start on, while a /model pick still overrides it and persists across restarts (unlike ANTHROPICMODEL)
-- Added notifywhenidle to cross-session SendMessage: ask another Claude Code session on this machine to</description>
     </item>
   </channel>
 </rss>

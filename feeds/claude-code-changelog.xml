@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 15 Oct 2026 11:02:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 10:58:14 GMT</lastBuildDate>
+    <item>
+      <title>2.1.301</title>
+      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">2.1.301</guid>
+      <pubDate>Fri, 16 Oct 2026 10:57:26 GMT</pubDate>
+      <category>claude-code-changelog</category>
+      <description>- Added CLAUDECODERETRYWATCHDOGMAXUSAGELIMITWAITMS so unattended retry mode (CLAUDECODERETRYWATCHDOG) ends a request at a usage limit that resets too far away instead of waiting
+- Added OpenTelemetry tracing guidance to the claude-api skill, including setting up trace destinations with the ant CLI
+-</description>
+    </item>
     <item>
       <title>2.1.300</title>
       <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
@@ -453,15 +463,6 @@
       <category>claude-code-changelog</category>
       <description>- Added self-hosted environments: claude self-hosted-runner turns your own machines or containers into a place Claude Code web, mobile, and desktop sessions can run, on Team and Enterprise plans
 - Added archive plugin source: install plugins from a zip over HTTPS without git or npm, with optional SH</description>
-    </item>
-    <item>
-      <title>2.1.223</title>
-      <link>https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">2.1.223</guid>
-      <pubDate>Thu, 06 Aug 2026 08:39:16 GMT</pubDate>
-      <category>claude-code-changelog</category>
-      <description>- Added owner wildcard entries (&quot;owner/&quot;) to the strictKnownMarketplaces and blockedMarketplaces managed settings for allowing or blocking all marketplace repos under a GitHub org
-- Added a warning when workflow agents, forked skills, slash commands, or resumed background agents&apos; requested subagent </description>
     </item>
   </channel>
 </rss>

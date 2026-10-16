@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 15 Oct 2026 11:02:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 10:58:14 GMT</lastBuildDate>
+    <item>
+      <title>0.3.301</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.301</guid>
+      <pubDate>Fri, 16 Oct 2026 10:57:26 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added per-tool permission policies to sdk-type MCP server configs: tools entries with permissionpolicy alwaysask or alwaysdeny, applied on initialize and setMcpServers()
+- Added BUILTINTOOLNAMES and LEGACYTOOLNAMEALIASES exports: the public built-in tool names and their earlier names, for checking</description>
+    </item>
     <item>
       <title>0.3.300</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -439,15 +448,6 @@
       <pubDate>Sat, 08 Aug 2026 06:56:21 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Updated to parity with Claude Code v2.1.226</description>
-    </item>
-    <item>
-      <title>0.3.224</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.224</guid>
-      <pubDate>Fri, 07 Aug 2026 07:18:46 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added crossSessionInbound and dialogExpiry settings: cross-session messages sent to a session running with bypassed permissions are held for your approval, and messages to other sessions auto-deliver
-- Added subkind: &apos;peer-send-message&apos; to the task-notification member of SDKMessageOrigin, marking </description>
     </item>
   </channel>
 </rss>
