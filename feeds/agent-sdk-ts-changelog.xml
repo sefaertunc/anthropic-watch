@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 16 Oct 2026 10:58:14 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 10:19:29 GMT</lastBuildDate>
+    <item>
+      <title>0.3.302</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.302</guid>
+      <pubDate>Sat, 17 Oct 2026 10:18:41 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Fixed structured output results delivering a response&apos;s output as structuredoutput when the API refused that response; the result is now an error with no payload
+- Changed an omitted permissionMode to start in default mode on third-party providers, with telemetry off or on a fresh install; pass pe</description>
+    </item>
     <item>
       <title>0.3.301</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -440,14 +449,6 @@
       <pubDate>Tue, 11 Aug 2026 07:10:45 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Updated to parity with Claude Code v2.1.227</description>
-    </item>
-    <item>
-      <title>0.3.226</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.226</guid>
-      <pubDate>Sat, 08 Aug 2026 06:56:21 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.226</description>
     </item>
   </channel>
 </rss>

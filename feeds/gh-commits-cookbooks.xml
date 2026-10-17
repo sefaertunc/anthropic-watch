@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 16 Oct 2026 10:58:14 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 10:19:29 GMT</lastBuildDate>
+    <item>
+      <title>feat(managed_agents): add agent security review cookbook (#926)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/a162e0184e71b60290808a43961a6cbc8060123c</link>
+      <guid isPermaLink="false">a162e01</guid>
+      <pubDate>Sat, 17 Oct 2026 00:28:08 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description/>
+    </item>
     <item>
       <title>feat(observability): add OpenTelemetry tracing cookbook (#922)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/b2b0aa1ff7d8980b005b225d3802969c87bedad5</link>
@@ -398,14 +406,6 @@
       <pubDate>Mon, 06 Jul 2026 19:20:20 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>The check-links workflow has been failing to parse the config (unknown field &apos;headers&apos;), so links were never actually checked. The only header set was the user agent, which has a dedicated option.</description>
-    </item>
-    <item>
-      <title>Fix pre-existing verify-urls failures</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/e02f0311fe4b34eaa46179599e749ea761aac582</link>
-      <guid isPermaLink="false">e02f031</guid>
-      <pubDate>Mon, 06 Jul 2026 19:16:49 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>registry.yaml: the fable_5_fallback_billing entry used &apos;Safeguards&apos; and &apos;Billing&apos;, neither of which is in the registry schema&apos;s category enum - trimmed to &apos;Responses&apos;. authors.yaml: benlehrburger-ant&apos;s website no longer resolves; point it at the GitHub profile instead.</description>
     </item>
   </channel>
 </rss>
