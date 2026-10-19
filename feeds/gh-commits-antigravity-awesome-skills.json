@@ -5,9 +5,119 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-18T10:35:22.530Z",
+  "generated": "2026-10-19T12:30:58.049Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "c808e6e",
+      "title": "fix: handle maintenance network failures and CI races safely (#2003)",
+      "date": "2026-10-19T11:19:48Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c808e6e480696d243e0668ebbc3499bb8e7e10a4",
+      "snippet": "# Pull Request Description  Maintenance could accept an older successful check alias after a newer alias failed, omit check runs beyond the first page, and retain a final green proof while a workflow was being rerun. Select the newest eligible check across aliases, fetch all pages, reject malformed ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "c808e6e|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "89a6b43",
+      "title": "fix: reconcile maintenance instructions and stale cycle state (#2002)",
+      "date": "2026-10-19T10:48:30Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/89a6b43c3e8cd210215e9803172be2bd8897b0c7",
+      "snippet": "# Pull Request Description  A resumed maintenance cycle could keep an old completed status after a failed recheck, and pending checks could consume their entire wait budget after the PR changed. Clear current completion before each new action while preserving history/start time; require current clea",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "89a6b43|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "47a563f",
+      "title": "fix: preserve polling cadence for guided maintenance merges (#2001)",
+      "date": "2026-10-19T10:18:52Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/47a563fabc3dd64651a74b1da0922babd4294103",
+      "snippet": "# Pull Request Description  The guided maintenance runner calls `runBatch` directly, bypassing CLI argument defaults. An omitted `pollSeconds` made its 180 checks run without the intended pause, exhausting the budget in about three minutes while Taasky's full validation was still running. Normalize ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "47a563f|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "f8a3048",
+      "title": "feat: add taasky skill (official, hosted MCP) (#1994)",
+      "date": "2026-10-19T10:10:12Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/f8a30481583459ea2ee1575b01311dd7eec01250",
+      "snippet": "# Pull Request Description  Adds `skills/taasky`, the official skill for [Taasky](https://taasky.ai), a hosted MCP server (`https://mcp.taasky.ai/mcp`, Streamable HTTP, no account or key) where an agent negotiates terms with another person or their agent: meeting times, visits, shift swaps, prices, ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "f8a3048|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "703a641",
+      "title": "chore: update krexa skill to upstream 1.3.3 (#1995)",
+      "date": "2026-10-19T10:03:58Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/703a641ec038433483375731d035d1cf65420628",
+      "snippet": "# Pull Request Description  Updates `skills/krexa` to upstream skill 1.3.3 ([Krexa-xyz/skills@4a75795](https://github.com/Krexa-xyz/skills/tree/4a757951918c1a393d7840f2401f2d2f0b5afb3c/skills/krexa)), the official source. The copy merged in #1967 was 1.3.1.  Upstream changes carried over: - New **As",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "703a641|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "4d85769",
+      "title": "feat: add goal instruction writer skill (#1979)",
+      "date": "2026-10-19T10:01:14Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/4d857694d996b99f0223f3c89255cccb9e733d73",
+      "snippet": "# Pull Request Description  Add **Goal Instruction Writer**, an MIT-licensed skill for previewing, drafting, refining, and auditing durable Goal instructions for multi-stage agent work.  It complements `goal-loop`: this entry focuses on designing the instruction contract before execution, with previ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "4d85769|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "8c26c11",
+      "title": "fix: guide complete maintenance cycles through verified merges (#2000)",
+      "date": "2026-10-19T09:57:10Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/8c26c11be7e2187577349b98d4153b2f52e16f2c",
+      "snippet": "# Pull Request Description  A full maintenance run repeatedly reconstructed blocked-PR policy, release preparation and MCP checks. Batch preparation stopped at the first blocker, and release preflight regenerated snapshots in source main before rejecting the expected drift.  Add a guided, resumable ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "8c26c11|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "b59e229",
+      "title": "fix: declare the Arcmira MCP connection requirement in skill setup metadata (#1999)",
+      "date": "2026-10-19T08:59:37Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/b59e22957dfe318b8937c1f34d16d08fe31cf20f",
+      "snippet": "# Pull Request Description  Closes #1977.  The live skill page for `arcmira-find-quotes` showed **Setup: No extra setup declared**, while its How It Works section requires an existing authorized Arcmira MCP connection.  The supported field already exists, but the issue reporter could not find it bec",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "b59e229|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "1d3f14d",
+      "title": "chore: release v19.11.0 (#1998)",
+      "date": "2026-10-19T08:30:53Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/1d3f14d8608ca5874637eb3c3843959306f32941",
+      "snippet": "Prepare protected release v19.11.0.",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "1d3f14d|gh-commits-antigravity-awesome-skills"
+    },
+    {
+      "id": "71a15fd",
+      "title": "docs: correct the 19.11.0 changelog entry (#1997)",
+      "date": "2026-10-19T08:25:28Z",
+      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/71a15fdab811d140d6b77b9bdd30073d2c5e8523",
+      "snippet": "# Pull Request Description  Corrects the 19.11.0 changelog entry merged in #1996.  - The `Changed` section described pre-existing maintainer behavior as if this release introduced it. It is replaced by a `Merge batch` section that records the actual triage result for this batch. - Records the three ",
+      "source": "gh-commits-antigravity-awesome-skills",
+      "sourceCategory": "community",
+      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
+      "uniqueKey": "71a15fd|gh-commits-antigravity-awesome-skills"
+    },
     {
       "id": "71b1c1a",
       "title": "chore: release v19.9.0 (#1976)",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
       "uniqueKey": "8248fdd|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "c7574bb",
-      "title": "docs: add 19.4.0 changelog entry (#1873)",
-      "date": "2026-10-11T17:48:28Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c7574bb6964bd401e08685051e2bdb378bb533ea",
-      "snippet": "# Pull Request Description  Adds the `19.4.0` changelog section so the scripted protected release flow can run from protected `main`. It covers the maintainer batch merged after `19.3.0`:  - **Added**: `kernel-prompt` (community source, MIT) and `skeleton-first` (self-authored). - **Changed**: `data",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "c7574bb|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "730837e",
-      "title": "docs: add opencanviz/opencanviz-skills-repo to Official Sources (#1865)",
-      "date": "2026-10-11T17:34:16Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/730837e48d52dd821667db505a1031ece2d414f0",
-      "snippet": "# Pull Request Description  Adds openCanviz's agent skill repo (https://github.com/opencanviz/opencanviz-skills-repo) to Official Sources, at the end of the list. It holds one skill, `opencanviz-json`, which teaches an agent to write an openCanviz video project as JSON. A standard-library Python 3.9",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "730837e|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "9440c1a",
-      "title": "feat: add skeleton-first skill (#1871)",
-      "date": "2026-10-11T17:28:21Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/9440c1a2c054c5deb328a1ef07e0788c75951729",
-      "snippet": "# Pull Request Description  Adds `skeleton-first`, an original skill (source: self). It makes agents prove a data/AI/agent workflow end to end on a tiny sample, look for cheap wins in the data (duplicates, boilerplate, invalid inputs the API still bills), then scale in cost-gated rungs within a budg",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "9440c1a|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "f6605b6",
-      "title": "chore: release v19.3.0 (#1858)",
-      "date": "2026-10-10T09:12:58Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/f6605b665550f103e6e9dae6b977cef56300e6e9",
-      "snippet": "Prepare protected release v19.3.0.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "f6605b6|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "81fa464",
-      "title": "feat: add qrx skill and 19.3.0 changelog entry (#1856)",
-      "date": "2026-10-10T08:25:32Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/81fa4648685eb5aa71b53a8fabe72c7820d7451c",
-      "snippet": null,
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "81fa464|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "5d30df0",
-      "title": "feat: add datacircle skill for LinkedIn profile lookups (#1852)",
-      "date": "2026-10-10T08:10:52Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/5d30df0eaa2c9c5021d72466227290ac5122dd26",
-      "snippet": "# Pull Request Description  Adds `skills/datacircle/SKILL.md`, an original skill (`source: self`) for [Datacircle](https://datacircle.dev). Datacircle is a data co-op. Query your favorite B2B data APIs through us. Same request, same price, no markup. Right now that's 2 live LinkedIn profile APIs, Up",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "5d30df0|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "70d694d",
-      "title": "fix: refresh 1human owner onboarding and recipe access (#1851)",
-      "date": "2026-10-10T08:05:54Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/70d694d6ceadbd79117c95c231d375fc7f27e9db",
-      "snippet": "# Pull Request Description  The accepted `agent-reels` skill predates 1human's current human-controlled onboarding. An agent discovering the catalogue could miss the owner invitation, paused activation and first-password setup; the recipe example also omitted its credential requirement.  This refres",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "70d694d|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "67f70a5",
-      "title": "feat: add REA reverse-engineer-anything skill (#1850)",
-      "date": "2026-10-10T07:51:01Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/67f70a561637952302c0999844b08bdd3a036498",
-      "snippet": "# Pull Request Description  Adds the authored `reverse-engineer-anything` skill and its five reference guides, with source and MIT license attribution. The entry helps agents route supported targets, use evidence-first investigation workflows, and report provider limits and unknowns.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "67f70a5|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "c0c5f6f",
-      "title": "feat: add uxkin-research skill (#1848)",
-      "date": "2026-10-10T07:46:06Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/c0c5f6f2974b8b53dff80245540ab1cf9344820a",
-      "snippet": "# Pull Request Description  Adds the `uxkin-research` skill (official source: https://github.com/uxkin/agent, MIT) and its credit under Official Sources in README.md. The skill helps an agent research how real products handle a screen, flow or visual style before designing it, using the UXKIN MCP to",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "c0c5f6f|gh-commits-antigravity-awesome-skills"
-    },
-    {
-      "id": "fc24287",
-      "title": "chore: release v19.2.0 (#1846)",
-      "date": "2026-10-09T08:17:27Z",
-      "url": "https://github.com/sickn33/agentic-awesome-skills/commit/fc24287642c856c7bffd44ec2786affbac11e458",
-      "snippet": "Prepare protected release v19.2.0.",
-      "source": "gh-commits-antigravity-awesome-skills",
-      "sourceCategory": "community",
-      "sourceName": "sickn33/antigravity-awesome-skills (community skills list)",
-      "uniqueKey": "fc24287|gh-commits-antigravity-awesome-skills"
     }
   ]
 }
