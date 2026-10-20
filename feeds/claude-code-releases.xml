@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 19 Oct 2026 12:30:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.304</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.304</link>
+      <guid isPermaLink="false">v2.1.304</guid>
+      <pubDate>Mon, 19 Oct 2026 21:34:39 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a transcript line when a plugin that runs first skips one of your mod&apos;s hooks, naming the event and the plugin
+- Added decider: &quot;person&quot; to a mod&apos;s tool.check answer: only the permission dialog or a host&apos;s callback can approve the ask, and it is refused with the mod&apos;s reason w</description>
+    </item>
     <item>
       <title>v2.1.303</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.303</link>
@@ -494,16 +504,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Bug fixes and reliability improvements</description>
-    </item>
-    <item>
-      <title>v2.1.239</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.239</link>
-      <guid isPermaLink="false">v2.1.239</guid>
-      <pubDate>Fri, 21 Aug 2026 19:54:23 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Cost estimates (/cost, status line, --max-budget-usd) now include the 1.1× US-only-inference premium for data-residency workspaces
-- Added the one-time fullscreen renderer offer on Bedrock, Vertex, Foundry and other previously excluded setups; new installs there now start in fullscr</description>
     </item>
   </channel>
 </rss>

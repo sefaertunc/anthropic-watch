@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 19 Oct 2026 12:30:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <item>
+      <title>refactor(lib): split nasiko install, uninstall and tar extraction</title>
+      <link>https://github.com/affaan-m/ECC/commit/6f1881aeafa3c48f7b603cc4be4b2e4e70daad59</link>
+      <guid isPermaLink="false">6f1881a</guid>
+      <pubDate>Sun, 18 Oct 2026 03:02:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>extractQualifiedTarGzip walked the archive, validated the terminator, read each header and classified the entry in one loop; installNasiko and uninstallNasiko each resolved the release and paths, then ran the whole download or staging sequence inside one try with rollback flags. The extractor now us</description>
+    </item>
+    <item>
+      <title>refactor(lib): split search evidence by tool and credit path</title>
+      <link>https://github.com/affaan-m/ECC/commit/5c507e0704d4444cd2503f3e583da47b0c1394c5</link>
+      <guid isPermaLink="false">5c507e0</guid>
+      <pubDate>Sun, 18 Oct 2026 02:16:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>searchEvidence built the Glob, Grep and LS evidence inline before falling through to the shell path, and findCreditingSearch and findClosestMiss each nested the per-search and per-item loops with the stem and directory checks in one body. The tool builders are now globEvidence, grepEvidence and lsEv</description>
+    </item>
+    <item>
+      <title>refactor(lib): split the gateguard code lexer by token class</title>
+      <link>https://github.com/affaan-m/ECC/commit/87aaef56cbfe70d310f76f12aa1c3ff38940a8aa</link>
+      <guid isPermaLink="false">87aaef5</guid>
+      <pubDate>Sun, 18 Oct 2026 01:29:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>lexCodeLines ran every state (code, line comment, block comment, string) through one loop body with three closures over its locals, and shCodeLines and psCodeLines each inlined their escape, quote and comment readers. The C-family lexer now keeps its partial line on a small lx record and dispatches </description>
+    </item>
+    <item>
+      <title>refactor(hooks): split shell-scan into per-token helpers</title>
+      <link>https://github.com/affaan-m/ECC/commit/26d2010a16878fe3bf91f90178a0402ac87c6576</link>
+      <guid isPermaLink="false">26d2010</guid>
+      <pubDate>Sun, 18 Oct 2026 00:41:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>heredocDelimiter, executionRegion and scanShell each carried one long character loop with every quote, escape, heredoc, case and scope rule inline, which is where the three complexity warnings came from. The delimiter reader now has skipDelimiterBlanks, delimiterEscape and readDelimiterWord; the $(.</description>
+    </item>
+    <item>
+      <title>refactor(eval): split the context-profile evaluator run loop</title>
+      <link>https://github.com/affaan-m/ECC/commit/35f57c80e6b7573755fd63136338ca0dc7a0bdb7</link>
+      <guid isPermaLink="false">35f57c8</guid>
+      <pubDate>Sat, 17 Oct 2026 03:14:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>runEvaluation is now plan, execute, report: option validation and family resolution, registration pinning, provider and state creation, install preparation, the selection and trial loops, and the report object each sit in their own function. outcomeTrial takes one trial object instead of ten positio</description>
+    </item>
+    <item>
+      <title>refactor(scripts): table-drive the operator readiness dashboard</title>
+      <link>https://github.com/affaan-m/ECC/commit/d53359a9741741c8fa809ff6f23ee251e0659b89</link>
+      <guid isPermaLink="false">d53359a</guid>
+      <pubDate>Fri, 16 Oct 2026 01:36:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>parseArgs now reads flags from two lookup tables, one for flags that take a value in either form and one for standalone switches, instead of thirty-odd if blocks. The ECC Tools evidence and gap text live in ordered tier tables keyed by roadmap markers, with the shared marker lists named once. buildR</description>
+    </item>
     <item>
       <title>Merge pull request #3596 from affaan-m/feat/pr-burst-protection</title>
       <link>https://github.com/affaan-m/ECC/commit/76aaa77df6adc5b889e689007bf99b9a4f74af34</link>
@@ -32,12 +80,28 @@
       <description/>
     </item>
     <item>
+      <title>refactor(lib): split gateguard file-context scanners by token</title>
+      <link>https://github.com/affaan-m/ECC/commit/905bb16ff23b3096f35dcc5b6e34713cd2add312</link>
+      <guid isPermaLink="false">905bb16</guid>
+      <pubDate>Wed, 14 Oct 2026 02:58:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>cFamilyStartsFresh ran one 130-line loop over template literals, comments, regex-vs-division, C# and Rust raw strings, quotes, words, and punctuation. It now keeps scanner state in one object and walks a fixed list of step functions, each returning consumed, abort, or not-mine. The Python f-string f</description>
+    </item>
+    <item>
       <title>Merge pull request #3520 from affaan-m/integration/ecc-043-followup-20261011</title>
       <link>https://github.com/affaan-m/ECC/commit/b92f181b3b748d1abbc2afd94af6aa7d8c8fca29</link>
       <guid isPermaLink="false">b92f181</guid>
       <pubDate>Mon, 12 Oct 2026 02:02:10 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>fix: deliver ten focused guard, migration and evaluation repairs</description>
+    </item>
+    <item>
+      <title>refactor(lib): split install-lifecycle repair and inspect paths</title>
+      <link>https://github.com/affaan-m/ECC/commit/1e787f62f5f751d22aca31e7e4d7960249601cfb</link>
+      <guid isPermaLink="false">1e787f6</guid>
+      <pubDate>Mon, 12 Oct 2026 00:47:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>executeRepairOperation, executeUninstallOperation, and inspectManagedOperation now dispatch on operation kind to one small function per kind, with the repeated uninstall result shapes and previous-content restore pulled into helpers. executeRepairOperation takes an options object instead of four tra</description>
     </item>
     <item>
       <title>test: recognize unavailable Windows symlink privilege</title>
@@ -200,6 +264,14 @@
       <description>fix: guard literal Git include redirects and env split arguments</description>
     </item>
     <item>
+      <title>refactor(ci): share the catalog count replacer</title>
+      <link>https://github.com/affaan-m/ECC/commit/3849426a959b6dd21821f78aa6366b8ee224dc1f</link>
+      <guid isPermaLink="false">3849426</guid>
+      <pubDate>Sat, 10 Oct 2026 01:12:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Six summary-line replacers in catalog.js each took seven to nine positional capture groups and rebuilt the line by hand. They now go through one catalogCountReplacer factory that takes the regex group count and the groups holding the agents, skills, and commands counts. Every other group is written </description>
+    </item>
+    <item>
       <title>fix: reject unsupported env split-string escapes</title>
       <link>https://github.com/affaan-m/ECC/commit/34a97fa898a1b8c23766a80c12657afd6b85222a</link>
       <guid isPermaLink="false">34a97fa</guid>
@@ -272,6 +344,14 @@
       <description>Keep tested tree 655e700d82930cf4adab4aadabb2da659a4d22d7 unchanged. Preserve original 3049, 3055, 3115 and 3119 heads alongside their accepted attributed carry-forwards. Preserve parent-approved live 3257 and 3265 heads without replaying generated bindings, old locks, superseded migrations or disca</description>
     </item>
     <item>
+      <title>refactor(lib): split powershell destructive-command scanners</title>
+      <link>https://github.com/affaan-m/ECC/commit/8c1925722ce7e065c6bdbb9d1ad122bfa57a13af</link>
+      <guid isPermaLink="false">8c19257</guid>
+      <pubDate>Thu, 08 Oct 2026 02:31:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The here-string normalizer, comment stripper, and balanced-group reader each carried their own copy of the same inert-region state machine. They now share createLexState, consumeInertChar, and openInertRegion. The container extractor, statement tokenizer, nested pwsh scanner, cmd scanner, Start-Proc</description>
+    </item>
+    <item>
       <title>docs(ja-JP): match current sponsors (CodeRabbit, Greptile, Moonshot AI, Itô, SerpApi) (#3363)</title>
       <link>https://github.com/affaan-m/ECC/commit/ef648e01899ba3e8dc6371642deaaf64b4477775</link>
       <guid isPermaLink="false">ef648e0</guid>
@@ -324,86 +404,6 @@
       <link>https://github.com/affaan-m/ECC/commit/51a59a11123f3d3ee928e29462a1067af3f9563a</link>
       <guid isPermaLink="false">51a59a1</guid>
       <pubDate>Tue, 29 Sep 2026 22:22:26 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge branch &apos;main&apos; into affaan/integrate-reviewed-followups-20260928</title>
-      <link>https://github.com/affaan-m/ECC/commit/dc3f44ad5a40bf4e6fbfbadf236a18bbb4cddd6c</link>
-      <guid isPermaLink="false">dc3f44a</guid>
-      <pubDate>Tue, 29 Sep 2026 22:13:54 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(hooks): scope MCP health checks to MCP tools (#2838)</title>
-      <link>https://github.com/affaan-m/ECC/commit/bd9402f774511f682f6a6d9a8c5dcc38a4c5536c</link>
-      <guid isPermaLink="false">bd9402f</guid>
-      <pubDate>Tue, 29 Sep 2026 19:08:37 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Anchor the PreToolUse and PostToolUseFailure MCP health-check matchers so non-MCP tool calls do not spawn the health hook.</description>
-    </item>
-    <item>
-      <title>test(control-pane): assert the rollback redraws without waiting for a resize</title>
-      <link>https://github.com/affaan-m/ECC/commit/a85f43b1fa727009b68646aa40b4d0568f799e6b</link>
-      <guid isPermaLink="false">a85f43b</guid>
-      <pubDate>Tue, 29 Sep 2026 14:02:41 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>The malformed-drawing rollback test took its marker baseline before the malformed poll but only checked it after resizeAgain(). Resize redraws the accepted view on its own, so the test still passed with the immediate rollback redraw removed and the canvas left blank until the operator resized.  Reco</description>
-    </item>
-    <item>
-      <title>Merge reviewed Biome-filename correction from PR2835</title>
-      <link>https://github.com/affaan-m/ECC/commit/93fca4a604ea8cdf735585337404920ba74d139f</link>
-      <guid isPermaLink="false">93fca4a</guid>
-      <pubDate>Mon, 28 Sep 2026 11:07:45 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Source-PR: https://github.com/affaan-m/ECC/pull/2835 Source-Head: 7ffea7091a8323e8eaa65a76183c0196479c20ec</description>
-    </item>
-    <item>
-      <title>Merge reviewed append-assignment correction from PR2965</title>
-      <link>https://github.com/affaan-m/ECC/commit/e10bbaa4925d8199c4a382a096b5ab9840f24b3e</link>
-      <guid isPermaLink="false">e10bbaa</guid>
-      <pubDate>Mon, 28 Sep 2026 11:07:45 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Source-PR: https://github.com/affaan-m/ECC/pull/2965 Source-Head: eca846248d6e6837d0881f7dcc251fc390aa37bd</description>
-    </item>
-    <item>
-      <title>fix(hooks): distinguish Biome configs from results files</title>
-      <link>https://github.com/affaan-m/ECC/commit/7ffea7091a8323e8eaa65a76183c0196479c20ec</link>
-      <guid isPermaLink="false">7ffea70</guid>
-      <pubDate>Mon, 28 Sep 2026 11:07:07 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Preserve the original contributor histories and apply the exact independently reviewed repair.  Source-Parent: 74023e568908f528c9d9ae1a9bae501f4c1f2e38 Review-Manifest-SHA256: 208a6350119857df7c1e5b83a46cdba0b7f7399f58ed60167397920c7a21b454</description>
-    </item>
-    <item>
-      <title>fix(install): support invocation through POSIX sh (#3014)</title>
-      <link>https://github.com/affaan-m/ECC/commit/042924e1f47df4a7a9bad34a3768f48144493834</link>
-      <guid isPermaLink="false">042924e</guid>
-      <pubDate>Mon, 28 Sep 2026 00:04:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>* fix(install): make install.sh robust to sh/dash invocation  Two related portability fixes so `sh install.sh` behaves correctly even though the script is written for bash:  - The cygpath detection used the bash-only `&amp;&gt;/dev/null` redirection.   dash misparses `&amp;&gt;`, so `command -v cygpath &amp;&gt;/dev/nul</description>
-    </item>
-    <item>
-      <title>Merge pull request #3234 from haelyra/feat/ecc-029-production-acceptance</title>
-      <link>https://github.com/affaan-m/ECC/commit/eaeef53a15854e68cb2be336c2ba47e111fa25c3</link>
-      <guid isPermaLink="false">eaeef53</guid>
-      <pubDate>Sun, 27 Sep 2026 22:34:29 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>feat(profiles): add opt-in Lean/Full with hybrid Auto skill selection</description>
-    </item>
-    <item>
-      <title>fix(profiles): bind routing receipts and harden review paths</title>
-      <link>https://github.com/affaan-m/ECC/commit/befde0d2cd4fc03e9c47931e9480aa906ce7572b</link>
-      <guid isPermaLink="false">befde0d</guid>
-      <pubDate>Sun, 27 Sep 2026 22:01:40 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix(ci): allow slow Windows test cleanup</title>
-      <link>https://github.com/affaan-m/ECC/commit/a9e3ecb77f877a0ce30dfe576c3a1e805edf7491</link>
-      <guid isPermaLink="false">a9e3ecb</guid>
-      <pubDate>Sun, 27 Sep 2026 21:37:47 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
     </item>

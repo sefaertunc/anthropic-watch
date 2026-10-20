@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 19 Oct 2026 12:30:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <item>
+      <title>0.3.304</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.304</guid>
+      <pubDate>Tue, 20 Oct 2026 11:05:43 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added suspendSseStream(query) and resumeSseStream(query) to the browser SDK: close a query&apos;s event stream and reopen it later without ending the query
+- Added stable row ids to getContextUsage(), and, when the CLI answers on its own stdio, plugin ids, agent and skill file paths, and per-server MCP</description>
+    </item>
     <item>
       <title>0.3.303</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -441,14 +450,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added terminalslashcommands to the system init message so Remote Control clients can hide terminal-oriented commands
 - Changed conversations whose messages alone exceed the API&apos;s 32 MB limit to end the turn with terminalreason &quot;apierror&quot; instead of &quot;imageerror&quot;; StopFailure errordetails is &quot;reques</description>
-    </item>
-    <item>
-      <title>0.3.228</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.228</guid>
-      <pubDate>Wed, 12 Aug 2026 07:27:08 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Agent tool results (AgentOutput): usage.outputtokensdetails is now carried through</description>
     </item>
   </channel>
 </rss>

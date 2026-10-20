@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 19 Oct 2026 12:30:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #6813 from anthropics/mhegazy/sg-nested-repos</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a0b04d9ddccaabe1976645f68b0eda50f74e7022</link>
+      <guid isPermaLink="false">a0b04d9</guid>
+      <pubDate>Mon, 19 Oct 2026 21:27:13 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: stay out of repositories nested in the work tree</description>
+    </item>
+    <item>
+      <title>Merge pull request #6607 from anthropics/mhegazy/sg-launcher-newer-python</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/921c90ff926e836cfa26b546aaa88a5adf6b3845</link>
+      <guid isPermaLink="false">921c90f</guid>
+      <pubDate>Mon, 19 Oct 2026 17:40:32 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: find Python releases newer than the launcher&apos;s list</description>
+    </item>
+    <item>
+      <title>security-guidance: stay out of repositories nested in the work tree</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/7a151516fa58fd0160bacaf8fb5966931170bb9c</link>
+      <guid isPermaLink="false">7a15151</guid>
+      <pubDate>Mon, 19 Oct 2026 17:36:13 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>A directory with its own .git inside the work tree (a submodule, a vendored checkout, an unpacked archive) was added to the throwaway index as a submodule entry, and git then started a second git inside it to see whether it had changed. Nothing in such a directory is reviewed.  git status and work-t</description>
+    </item>
+    <item>
+      <title>Merge pull request #6755 from anthropics/mhegazy/sg-notebook-edit-patterns</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d4c95aa95d02188aac37f6b435dadaccde46d1f9</link>
+      <guid isPermaLink="false">d4c95aa</guid>
+      <pubDate>Mon, 19 Oct 2026 17:24:40 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: run pattern checks on NotebookEdit cells</description>
+    </item>
+    <item>
+      <title>Merge pull request #6546 from anthropics/mhegazy/sg-no-credentials-notice</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8a8b3819ab881e578edaa2b7f43019ea540bce16</link>
+      <guid isPermaLink="false">8a8b381</guid>
+      <pubDate>Mon, 19 Oct 2026 17:21:22 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: say when the LLM reviews can&apos;t run</description>
+    </item>
+    <item>
+      <title>security-guidance: run pattern checks on NotebookEdit cells</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/227b8934c9f5eb49fb8641332c227810539dda4b</link>
+      <guid isPermaLink="false">227b893</guid>
+      <pubDate>Sat, 17 Oct 2026 16:40:57 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The edit hook is registered for NotebookEdit but read no content from it, so a cell edit never produced a pattern warning. Check the cell&apos;s new source, and check a saved notebook by its cell sources so JSON escapes no longer hide code from the rules.  Refs #6718</description>
+    </item>
     <item>
       <title>Merge pull request #6433 from anthropics/bump/carta-investors</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/8f814f49002ff824e8a9ba43cf96112dc7f5948d</link>
@@ -46,6 +94,14 @@
       <pubDate>Thu, 15 Oct 2026 07:33:42 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>bump(figma): f0493295 → f2789420</description>
+    </item>
+    <item>
+      <title>security-guidance: find Python releases newer than the launcher&apos;s list</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6d446623cb5fe608905d07ab4c3a2002a268ee65</link>
+      <guid isPermaLink="false">6d44662</guid>
+      <pubDate>Wed, 14 Oct 2026 16:56:05 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>sg-python.sh prefers the versioned names python3.13 to python3.10, then python3 / python / py -3 when they are 3.10 or newer. A machine whose `python3` is older (stock macOS: 3.9) and whose only newer interpreter is python3.14 ended up on 3.9, which cannot load the agent SDK, so the commit reviewer </description>
     </item>
     <item>
       <title>Merge pull request #6536 from anthropics/mhegazy/sg-review-telemetry</title>
@@ -102,6 +158,14 @@
       <pubDate>Tue, 13 Oct 2026 20:33:44 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: never report a failed review as clean</description>
+    </item>
+    <item>
+      <title>security-guidance: say when the LLM reviews can&apos;t run</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1aecb0c12c0d688d65ae4d5a0c2e17768f8bbfd8</link>
+      <guid isPermaLink="false">1aecb0c</guid>
+      <pubDate>Mon, 12 Oct 2026 19:54:29 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>With no credentials in the hook&apos;s environment every Stop, commit and push review is skipped, and nothing told the user. That is the state of a signed-in session started with CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC, DISABLE_TELEMETRY or DO_NOT_TRACK set, where Claude Code does not pass the sign-in t</description>
     </item>
     <item>
       <title>Merge pull request #6408 from anthropics/mhegazy/data-agent-kit-rename</title>
@@ -342,70 +406,6 @@
       <pubDate>Fri, 02 Oct 2026 20:17:39 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>The review model was hardcoded to claude-opus-4-7, so the plugin fell behind each time a new Opus shipped.  - The diff review asks the configured endpoint (GET /v1/models) for the   newest Opus it serves, cached for a day; claude-opus-5-5 if it can&apos;t say. - The agentic commit review, and every revie</description>
-    </item>
-    <item>
-      <title>Fix Context7 OAuth fallback (#6333)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ab024cdcfa7ca80be204acd4907656ba5a968589</link>
-      <guid isPermaLink="false">ab024cd</guid>
-      <pubDate>Wed, 30 Sep 2026 20:11:48 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Remote-Dev: homespace  Co-authored-by: Fahreddin Özcan &lt;ozcanfahrettinn@gmail.com&gt;</description>
-    </item>
-    <item>
-      <title>Merge pull request #6334 from anthropics/dltn/imessage-multi-image</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/72399850766aef9b8652fdd26fda2dc030b8541a</link>
-      <guid isPermaLink="false">7239985</guid>
-      <pubDate>Wed, 30 Sep 2026 19:56:17 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>imessage: surface every inbound image, not just the first</description>
-    </item>
-    <item>
-      <title>imessage: surface every inbound image, not just the first</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b6041c772138cdb3408fb4d93accd770f0ec56a1</link>
-      <guid isPermaLink="false">b6041c7</guid>
-      <pubDate>Wed, 30 Sep 2026 19:34:53 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>An iMessage with several photos arrived with only the first one in the channel tag: handleInbound took the first image attachment and stopped. Collect every image attachment instead (same filters as before) and pass each path in the notification meta as image_path, image_path_2, image_path_3, ... so</description>
-    </item>
-    <item>
-      <title>Add math-proof plugin: solo and siege (multi-agent) skills for hard mathematics problems (#6322)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/aa5654b7acb7d3096b5db44381bcfceaf4a71dfb</link>
-      <guid isPermaLink="false">aa5654b</guid>
-      <pubDate>Wed, 30 Sep 2026 18:31:58 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Squash merge of 2 commits</description>
-    </item>
-    <item>
-      <title>postman: repoint to postmanlabs/postman-plugin (#6326)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/2a8ad9f74633d10e3d9bb0660a03bfc6e50584b1</link>
-      <guid isPermaLink="false">2a8ad9f</guid>
-      <pubDate>Tue, 29 Sep 2026 21:28:19 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Squash merge of 1 commit</description>
-    </item>
-    <item>
-      <title>aws-startup-advisor: repoint to aws/agent-toolkit-for-aws (#6312)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/751e8d02bf56522f9e5a1250e35754cea5ab255a</link>
-      <guid isPermaLink="false">751e8d0</guid>
-      <pubDate>Tue, 29 Sep 2026 21:00:21 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Squash merge of 2 commits</description>
-    </item>
-    <item>
-      <title>Exempt command sources from scope guard source.url check (#6296)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/fbe07fb6ce7d51d8e86ca6efdf050059894cdb80</link>
-      <guid isPermaLink="false">fbe07fb</guid>
-      <pubDate>Mon, 28 Sep 2026 13:14:38 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>* Exempt command sources from scope guard source.url check  Command sources have no repo URL to validate, so the guard no longer fails a non-member PR that adds one.  Remote-Dev: homespace  * Flag unvalidated command sources in scope guard output  Report command-source entries the guard skipped and </description>
-    </item>
-    <item>
-      <title>Merge pull request #6309 from anthropics/morganl/code-modernization-consolidated</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/fa59bc9037741ecfa131aa27938272605710d7b2</link>
-      <guid isPermaLink="false">fa59bc9</guid>
-      <pubDate>Fri, 25 Sep 2026 23:12:23 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>code-modernization: guided workflow with independent proof</description>
     </item>
   </channel>
 </rss>

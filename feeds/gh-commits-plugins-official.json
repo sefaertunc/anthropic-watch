@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-19T12:30:58.041Z",
+  "generated": "2026-10-20T11:06:32.187Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "a0b04d9",
+      "title": "Merge pull request #6813 from anthropics/mhegazy/sg-nested-repos",
+      "date": "2026-10-19T21:27:13Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/a0b04d9ddccaabe1976645f68b0eda50f74e7022",
+      "snippet": "security-guidance: stay out of repositories nested in the work tree",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "a0b04d9|gh-commits-plugins-official"
+    },
+    {
+      "id": "921c90f",
+      "title": "Merge pull request #6607 from anthropics/mhegazy/sg-launcher-newer-python",
+      "date": "2026-10-19T17:40:32Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/921c90ff926e836cfa26b546aaa88a5adf6b3845",
+      "snippet": "security-guidance: find Python releases newer than the launcher's list",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "921c90f|gh-commits-plugins-official"
+    },
+    {
+      "id": "7a15151",
+      "title": "security-guidance: stay out of repositories nested in the work tree",
+      "date": "2026-10-19T17:36:13Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/7a151516fa58fd0160bacaf8fb5966931170bb9c",
+      "snippet": "A directory with its own .git inside the work tree (a submodule, a vendored checkout, an unpacked archive) was added to the throwaway index as a submodule entry, and git then started a second git inside it to see whether it had changed. Nothing in such a directory is reviewed.  git status and work-t",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "7a15151|gh-commits-plugins-official"
+    },
+    {
+      "id": "d4c95aa",
+      "title": "Merge pull request #6755 from anthropics/mhegazy/sg-notebook-edit-patterns",
+      "date": "2026-10-19T17:24:40Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/d4c95aa95d02188aac37f6b435dadaccde46d1f9",
+      "snippet": "security-guidance: run pattern checks on NotebookEdit cells",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "d4c95aa|gh-commits-plugins-official"
+    },
+    {
+      "id": "8a8b381",
+      "title": "Merge pull request #6546 from anthropics/mhegazy/sg-no-credentials-notice",
+      "date": "2026-10-19T17:21:22Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/8a8b3819ab881e578edaa2b7f43019ea540bce16",
+      "snippet": "security-guidance: say when the LLM reviews can't run",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "8a8b381|gh-commits-plugins-official"
+    },
+    {
+      "id": "227b893",
+      "title": "security-guidance: run pattern checks on NotebookEdit cells",
+      "date": "2026-10-17T16:40:57Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/227b8934c9f5eb49fb8641332c227810539dda4b",
+      "snippet": "The edit hook is registered for NotebookEdit but read no content from it, so a cell edit never produced a pattern warning. Check the cell's new source, and check a saved notebook by its cell sources so JSON escapes no longer hide code from the rules.  Refs #6718",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "227b893|gh-commits-plugins-official"
+    },
     {
       "id": "8f814f4",
       "title": "Merge pull request #6433 from anthropics/bump/carta-investors",
@@ -62,6 +128,17 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "e281e51|gh-commits-plugins-official"
+    },
+    {
+      "id": "6d44662",
+      "title": "security-guidance: find Python releases newer than the launcher's list",
+      "date": "2026-10-14T16:56:05Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/6d446623cb5fe608905d07ab4c3a2002a268ee65",
+      "snippet": "sg-python.sh prefers the versioned names python3.13 to python3.10, then python3 / python / py -3 when they are 3.10 or newer. A machine whose `python3` is older (stock macOS: 3.9) and whose only newer interpreter is python3.14 ended up on 3.9, which cannot load the agent SDK, so the commit reviewer ",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "6d44662|gh-commits-plugins-official"
     },
     {
       "id": "641d925",
@@ -139,6 +216,17 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "d44ca8e|gh-commits-plugins-official"
+    },
+    {
+      "id": "1aecb0c",
+      "title": "security-guidance: say when the LLM reviews can't run",
+      "date": "2026-10-12T19:54:29Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/1aecb0c12c0d688d65ae4d5a0c2e17768f8bbfd8",
+      "snippet": "With no credentials in the hook's environment every Stop, commit and push review is skipped, and nothing told the user. That is the state of a signed-in session started with CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC, DISABLE_TELEMETRY or DO_NOT_TRACK set, where Claude Code does not pass the sign-in t",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "1aecb0c|gh-commits-plugins-official"
     },
     {
       "id": "f359d43",
@@ -469,94 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "01f8be9|gh-commits-plugins-official"
-    },
-    {
-      "id": "ab024cd",
-      "title": "Fix Context7 OAuth fallback (#6333)",
-      "date": "2026-09-30T20:11:48Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/ab024cdcfa7ca80be204acd4907656ba5a968589",
-      "snippet": "Remote-Dev: homespace  Co-authored-by: Fahreddin Özcan <ozcanfahrettinn@gmail.com>",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "ab024cd|gh-commits-plugins-official"
-    },
-    {
-      "id": "7239985",
-      "title": "Merge pull request #6334 from anthropics/dltn/imessage-multi-image",
-      "date": "2026-09-30T19:56:17Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/72399850766aef9b8652fdd26fda2dc030b8541a",
-      "snippet": "imessage: surface every inbound image, not just the first",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "7239985|gh-commits-plugins-official"
-    },
-    {
-      "id": "b6041c7",
-      "title": "imessage: surface every inbound image, not just the first",
-      "date": "2026-09-30T19:34:53Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/b6041c772138cdb3408fb4d93accd770f0ec56a1",
-      "snippet": "An iMessage with several photos arrived with only the first one in the channel tag: handleInbound took the first image attachment and stopped. Collect every image attachment instead (same filters as before) and pass each path in the notification meta as image_path, image_path_2, image_path_3, ... so",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "b6041c7|gh-commits-plugins-official"
-    },
-    {
-      "id": "aa5654b",
-      "title": "Add math-proof plugin: solo and siege (multi-agent) skills for hard mathematics problems (#6322)",
-      "date": "2026-09-30T18:31:58Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/aa5654b7acb7d3096b5db44381bcfceaf4a71dfb",
-      "snippet": "Squash merge of 2 commits",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "aa5654b|gh-commits-plugins-official"
-    },
-    {
-      "id": "2a8ad9f",
-      "title": "postman: repoint to postmanlabs/postman-plugin (#6326)",
-      "date": "2026-09-29T21:28:19Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/2a8ad9f74633d10e3d9bb0660a03bfc6e50584b1",
-      "snippet": "Squash merge of 1 commit",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "2a8ad9f|gh-commits-plugins-official"
-    },
-    {
-      "id": "751e8d0",
-      "title": "aws-startup-advisor: repoint to aws/agent-toolkit-for-aws (#6312)",
-      "date": "2026-09-29T21:00:21Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/751e8d02bf56522f9e5a1250e35754cea5ab255a",
-      "snippet": "Squash merge of 2 commits",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "751e8d0|gh-commits-plugins-official"
-    },
-    {
-      "id": "fbe07fb",
-      "title": "Exempt command sources from scope guard source.url check (#6296)",
-      "date": "2026-09-28T13:14:38Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
-      "snippet": "* Exempt command sources from scope guard source.url check  Command sources have no repo URL to validate, so the guard no longer fails a non-member PR that adds one.  Remote-Dev: homespace  * Flag unvalidated command sources in scope guard output  Report command-source entries the guard skipped and ",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "fbe07fb|gh-commits-plugins-official"
-    },
-    {
-      "id": "fa59bc9",
-      "title": "Merge pull request #6309 from anthropics/morganl/code-modernization-consolidated",
-      "date": "2026-09-25T23:12:23Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/fa59bc9037741ecfa131aa27938272605710d7b2",
-      "snippet": "code-modernization: guided workflow with independent proof",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "fa59bc9|gh-commits-plugins-official"
     }
   ]
 }

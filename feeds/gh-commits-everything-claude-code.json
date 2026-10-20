@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-19T12:30:58.047Z",
+  "generated": "2026-10-20T11:06:32.190Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "6f1881a",
+      "title": "refactor(lib): split nasiko install, uninstall and tar extraction",
+      "date": "2026-10-18T03:02:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/6f1881aeafa3c48f7b603cc4be4b2e4e70daad59",
+      "snippet": "extractQualifiedTarGzip walked the archive, validated the terminator, read each header and classified the entry in one loop; installNasiko and uninstallNasiko each resolved the release and paths, then ran the whole download or staging sequence inside one try with rollback flags. The extractor now us",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "6f1881a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "5c507e0",
+      "title": "refactor(lib): split search evidence by tool and credit path",
+      "date": "2026-10-18T02:16:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/5c507e0704d4444cd2503f3e583da47b0c1394c5",
+      "snippet": "searchEvidence built the Glob, Grep and LS evidence inline before falling through to the shell path, and findCreditingSearch and findClosestMiss each nested the per-search and per-item loops with the stem and directory checks in one body. The tool builders are now globEvidence, grepEvidence and lsEv",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "5c507e0|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "87aaef5",
+      "title": "refactor(lib): split the gateguard code lexer by token class",
+      "date": "2026-10-18T01:29:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/87aaef56cbfe70d310f76f12aa1c3ff38940a8aa",
+      "snippet": "lexCodeLines ran every state (code, line comment, block comment, string) through one loop body with three closures over its locals, and shCodeLines and psCodeLines each inlined their escape, quote and comment readers. The C-family lexer now keeps its partial line on a small lx record and dispatches ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "87aaef5|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "26d2010",
+      "title": "refactor(hooks): split shell-scan into per-token helpers",
+      "date": "2026-10-18T00:41:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/26d2010a16878fe3bf91f90178a0402ac87c6576",
+      "snippet": "heredocDelimiter, executionRegion and scanShell each carried one long character loop with every quote, escape, heredoc, case and scope rule inline, which is where the three complexity warnings came from. The delimiter reader now has skipDelimiterBlanks, delimiterEscape and readDelimiterWord; the $(.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "26d2010|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "35f57c8",
+      "title": "refactor(eval): split the context-profile evaluator run loop",
+      "date": "2026-10-17T03:14:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/35f57c80e6b7573755fd63136338ca0dc7a0bdb7",
+      "snippet": "runEvaluation is now plan, execute, report: option validation and family resolution, registration pinning, provider and state creation, install preparation, the selection and trial loops, and the report object each sit in their own function. outcomeTrial takes one trial object instead of ten positio",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "35f57c8|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "d53359a",
+      "title": "refactor(scripts): table-drive the operator readiness dashboard",
+      "date": "2026-10-16T01:36:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/d53359a9741741c8fa809ff6f23ee251e0659b89",
+      "snippet": "parseArgs now reads flags from two lookup tables, one for flags that take a value in either form and one for standalone switches, instead of thirty-odd if blocks. The ECC Tools evidence and gap text live in ordered tier tables keyed by roadmap markers, with the shared marker lists named once. buildR",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "d53359a|gh-commits-everything-claude-code"
+    },
     {
       "id": "76aaa77",
       "title": "Merge pull request #3596 from affaan-m/feat/pr-burst-protection",
@@ -42,6 +108,17 @@
       "uniqueKey": "0ad248d|gh-commits-everything-claude-code"
     },
     {
+      "id": "905bb16",
+      "title": "refactor(lib): split gateguard file-context scanners by token",
+      "date": "2026-10-14T02:58:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/905bb16ff23b3096f35dcc5b6e34713cd2add312",
+      "snippet": "cFamilyStartsFresh ran one 130-line loop over template literals, comments, regex-vs-division, C# and Rust raw strings, quotes, words, and punctuation. It now keeps scanner state in one object and walks a fixed list of step functions, each returning consumed, abort, or not-mine. The Python f-string f",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "905bb16|gh-commits-everything-claude-code"
+    },
+    {
       "id": "b92f181",
       "title": "Merge pull request #3520 from affaan-m/integration/ecc-043-followup-20261011",
       "date": "2026-10-12T02:02:10Z",
@@ -51,6 +128,17 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "b92f181|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "1e787f6",
+      "title": "refactor(lib): split install-lifecycle repair and inspect paths",
+      "date": "2026-10-12T00:47:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/1e787f62f5f751d22aca31e7e4d7960249601cfb",
+      "snippet": "executeRepairOperation, executeUninstallOperation, and inspectManagedOperation now dispatch on operation kind to one small function per kind, with the repeated uninstall result shapes and previous-content restore pulled into helpers. executeRepairOperation takes an options object instead of four tra",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "1e787f6|gh-commits-everything-claude-code"
     },
     {
       "id": "9fdf1ca",
@@ -273,6 +361,17 @@
       "uniqueKey": "4eb71d9|gh-commits-everything-claude-code"
     },
     {
+      "id": "3849426",
+      "title": "refactor(ci): share the catalog count replacer",
+      "date": "2026-10-10T01:12:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/3849426a959b6dd21821f78aa6366b8ee224dc1f",
+      "snippet": "Six summary-line replacers in catalog.js each took seven to nine positional capture groups and rebuilt the line by hand. They now go through one catalogCountReplacer factory that takes the regex group count and the groups holding the agents, skills, and commands counts. Every other group is written ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "3849426|gh-commits-everything-claude-code"
+    },
+    {
       "id": "34a97fa",
       "title": "fix: reject unsupported env split-string escapes",
       "date": "2026-10-10T01:00:40Z",
@@ -372,6 +471,17 @@
       "uniqueKey": "53e606b|gh-commits-everything-claude-code"
     },
     {
+      "id": "8c19257",
+      "title": "refactor(lib): split powershell destructive-command scanners",
+      "date": "2026-10-08T02:31:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/8c1925722ce7e065c6bdbb9d1ad122bfa57a13af",
+      "snippet": "The here-string normalizer, comment stripper, and balanced-group reader each carried their own copy of the same inert-region state machine. They now share createLexState, consumeInertChar, and openInertRegion. The container extractor, statement tokenizer, nested pwsh scanner, cmd scanner, Start-Proc",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "8c19257|gh-commits-everything-claude-code"
+    },
+    {
       "id": "ef648e0",
       "title": "docs(ja-JP): match current sponsors (CodeRabbit, Greptile, Moonshot AI, Itô, SerpApi) (#3363)",
       "date": "2026-10-02T02:01:14Z",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "51a59a1|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "dc3f44a",
-      "title": "Merge branch 'main' into affaan/integrate-reviewed-followups-20260928",
-      "date": "2026-09-29T22:13:54Z",
-      "url": "https://github.com/affaan-m/ECC/commit/dc3f44ad5a40bf4e6fbfbadf236a18bbb4cddd6c",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "dc3f44a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "bd9402f",
-      "title": "fix(hooks): scope MCP health checks to MCP tools (#2838)",
-      "date": "2026-09-29T19:08:37Z",
-      "url": "https://github.com/affaan-m/ECC/commit/bd9402f774511f682f6a6d9a8c5dcc38a4c5536c",
-      "snippet": "Anchor the PreToolUse and PostToolUseFailure MCP health-check matchers so non-MCP tool calls do not spawn the health hook.",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "bd9402f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a85f43b",
-      "title": "test(control-pane): assert the rollback redraws without waiting for a resize",
-      "date": "2026-09-29T14:02:41Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a85f43b1fa727009b68646aa40b4d0568f799e6b",
-      "snippet": "The malformed-drawing rollback test took its marker baseline before the malformed poll but only checked it after resizeAgain(). Resize redraws the accepted view on its own, so the test still passed with the immediate rollback redraw removed and the canvas left blank until the operator resized.  Reco",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a85f43b|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "93fca4a",
-      "title": "Merge reviewed Biome-filename correction from PR2835",
-      "date": "2026-09-28T11:07:45Z",
-      "url": "https://github.com/affaan-m/ECC/commit/93fca4a604ea8cdf735585337404920ba74d139f",
-      "snippet": "Source-PR: https://github.com/affaan-m/ECC/pull/2835 Source-Head: 7ffea7091a8323e8eaa65a76183c0196479c20ec",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "93fca4a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e10bbaa",
-      "title": "Merge reviewed append-assignment correction from PR2965",
-      "date": "2026-09-28T11:07:45Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e10bbaa4925d8199c4a382a096b5ab9840f24b3e",
-      "snippet": "Source-PR: https://github.com/affaan-m/ECC/pull/2965 Source-Head: eca846248d6e6837d0881f7dcc251fc390aa37bd",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e10bbaa|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "7ffea70",
-      "title": "fix(hooks): distinguish Biome configs from results files",
-      "date": "2026-09-28T11:07:07Z",
-      "url": "https://github.com/affaan-m/ECC/commit/7ffea7091a8323e8eaa65a76183c0196479c20ec",
-      "snippet": "Preserve the original contributor histories and apply the exact independently reviewed repair.  Source-Parent: 74023e568908f528c9d9ae1a9bae501f4c1f2e38 Review-Manifest-SHA256: 208a6350119857df7c1e5b83a46cdba0b7f7399f58ed60167397920c7a21b454",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "7ffea70|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "042924e",
-      "title": "fix(install): support invocation through POSIX sh (#3014)",
-      "date": "2026-09-28T00:04:10Z",
-      "url": "https://github.com/affaan-m/ECC/commit/042924e1f47df4a7a9bad34a3768f48144493834",
-      "snippet": "* fix(install): make install.sh robust to sh/dash invocation  Two related portability fixes so `sh install.sh` behaves correctly even though the script is written for bash:  - The cygpath detection used the bash-only `&>/dev/null` redirection.   dash misparses `&>`, so `command -v cygpath &>/dev/nul",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "042924e|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "eaeef53",
-      "title": "Merge pull request #3234 from haelyra/feat/ecc-029-production-acceptance",
-      "date": "2026-09-27T22:34:29Z",
-      "url": "https://github.com/affaan-m/ECC/commit/eaeef53a15854e68cb2be336c2ba47e111fa25c3",
-      "snippet": "feat(profiles): add opt-in Lean/Full with hybrid Auto skill selection",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "eaeef53|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "befde0d",
-      "title": "fix(profiles): bind routing receipts and harden review paths",
-      "date": "2026-09-27T22:01:40Z",
-      "url": "https://github.com/affaan-m/ECC/commit/befde0d2cd4fc03e9c47931e9480aa906ce7572b",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "befde0d|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a9e3ecb",
-      "title": "fix(ci): allow slow Windows test cleanup",
-      "date": "2026-09-27T21:37:47Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a9e3ecb77f877a0ce30dfe576c3a1e805edf7491",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a9e3ecb|gh-commits-everything-claude-code"
     }
   ]
 }
