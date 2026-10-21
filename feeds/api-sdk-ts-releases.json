@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-20T11:06:32.171Z",
+  "generated": "2026-10-21T11:23:19.413Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "sdk-v0.137.0",
+      "title": "sdk-v0.137.0",
+      "date": "2026-10-20T22:16:13Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.137.0",
+      "snippet": "Features\n api: add org webhook endpoints and user profile enforcement events\n Chores\n ci: run the changelog check on a standard runner\n tests: make credential tests independent of the caller's environment",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "sdk-v0.137.0|api-sdk-ts-releases"
+    },
+    {
+      "id": "aws-sdk-v0.9.0",
+      "title": "aws-sdk-v0.9.0",
+      "date": "2026-10-20T18:46:04Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.9.0",
+      "snippet": "Features\n aws: require @anthropic-ai/sdk 0.136.0 or later\n aws: throw an AnthropicError when actionURLs is read on userProfiles or beta.userProfiles, which the AWS gateway doesn't serve",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "aws-sdk-v0.9.0|api-sdk-ts-releases"
+    },
+    {
+      "id": "bedrock-sdk-v0.36.0",
+      "title": "bedrock-sdk-v0.36.0",
+      "date": "2026-10-20T18:46:02Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.36.0",
+      "snippet": "Features\n bedrock: send userprofileid in the request body on AnthropicBedrockMantle Messages and token counting requests\n bedrock: throw an AnthropicError when userProfiles or beta.userProfiles is read on AnthropicBedrock, which doesn't serve user profiles",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "bedrock-sdk-v0.36.0|api-sdk-ts-releases"
+    },
+    {
+      "id": "vertex-sdk-v0.22.0",
+      "title": "vertex-sdk-v0.22.0",
+      "date": "2026-10-20T18:45:59Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.22.0",
+      "snippet": "Features\n vertex: throw an AnthropicError when userProfiles or beta.userProfiles is read on AnthropicVertex, which doesn't serve the user profile endpoints",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "vertex-sdk-v0.22.0|api-sdk-ts-releases"
+    },
+    {
+      "id": "google-cloud-sdk-v0.2.0",
+      "title": "google-cloud-sdk-v0.2.0",
+      "date": "2026-10-20T17:54:01Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.2.0",
+      "snippet": "Features\n google-cloud: use the v1 endpoints and add the organization endpoint",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "google-cloud-sdk-v0.2.0|api-sdk-ts-releases"
+    },
+    {
+      "id": "sdk-v0.136.0",
+      "title": "sdk-v0.136.0",
+      "date": "2026-10-20T17:53:59Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.136.0",
+      "snippet": "Features\n api: add datarefreshedat and hasmore to analytics report pages\n api: add workspace rate-limit updates to the Admin API\n api: make User Profiles generally available\n client: yield server-sent events with unrecognized event names\n tools: accept every tool definition field in the tool helpers",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "sdk-v0.136.0|api-sdk-ts-releases"
+    },
     {
       "id": "sdk-v0.135.0",
       "title": "sdk-v0.135.0",
@@ -491,72 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Anthropic SDK TypeScript Releases",
       "uniqueKey": "sdk-v0.128.0|api-sdk-ts-releases"
-    },
-    {
-      "id": "google-cloud-sdk-v0.0.13",
-      "title": "google-cloud-sdk: v0.0.13",
-      "date": "2026-09-18T16:25:20Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.13",
-      "snippet": "0.0.13 (2026-09-18)\nFull Changelog: google-cloud-sdk-v0.0.12...google-cloud-sdk-v0.0.13\n Chores\n internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)\n internal: switch unit tests from jest to vitest (788c9c6)",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "google-cloud-sdk-v0.0.13|api-sdk-ts-releases"
-    },
-    {
-      "id": "aws-sdk-v0.7.3",
-      "title": "aws-sdk: v0.7.3",
-      "date": "2026-09-18T16:25:14Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.7.3",
-      "snippet": "0.7.3 (2026-09-18)\nFull Changelog: aws-sdk-v0.7.2...aws-sdk-v0.7.3\n Chores\n internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)\n internal: switch unit tests from jest to vitest (788c9c6)",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "aws-sdk-v0.7.3|api-sdk-ts-releases"
-    },
-    {
-      "id": "foundry-sdk-v0.4.8",
-      "title": "foundry-sdk: v0.4.8",
-      "date": "2026-09-18T16:25:08Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.8",
-      "snippet": "0.4.8 (2026-09-18)\nFull Changelog: foundry-sdk-v0.4.7...foundry-sdk-v0.4.8\n Chores\n internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)\n internal: switch unit tests from jest to vitest (788c9c6)",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "foundry-sdk-v0.4.8|api-sdk-ts-releases"
-    },
-    {
-      "id": "bedrock-sdk-v0.33.7",
-      "title": "bedrock-sdk: v0.33.7",
-      "date": "2026-09-18T16:25:02Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.33.7",
-      "snippet": "0.33.7 (2026-09-18)\nFull Changelog: bedrock-sdk-v0.33.6...bedrock-sdk-v0.33.7\n Bug Fixes\n bedrock: raise APIError for mid-stream exception and error frames (622) (8a14b15)\n Chores\n internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)\n internal: switch unit tests from jest to vitest (788c",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "bedrock-sdk-v0.33.7|api-sdk-ts-releases"
-    },
-    {
-      "id": "vertex-sdk-v0.19.10",
-      "title": "vertex-sdk: v0.19.10",
-      "date": "2026-09-18T16:24:56Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.10",
-      "snippet": "0.19.10 (2026-09-18)\nFull Changelog: vertex-sdk-v0.19.9...vertex-sdk-v0.19.10\n Chores\n internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)\n internal: switch unit tests from jest to vitest (788c9c6)",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "vertex-sdk-v0.19.10|api-sdk-ts-releases"
-    },
-    {
-      "id": "sdk-v0.127.0",
-      "title": "sdk: v0.127.0",
-      "date": "2026-09-18T16:24:51Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.127.0",
-      "snippet": "0.127.0 (2026-09-18)\nFull Changelog: sdk-v0.126.0...sdk-v0.127.0\n Features\n api: add group with displayname to rate limits, deprecate grouptype (2575d97)\n tools: add compactBeforeNextTurn() to the tool runner (682) (9f75ca6)\n Bug Fixes\n BetaMessageStream: stop coercing a null compactiondelta content",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "sdk-v0.127.0|api-sdk-ts-releases"
     }
   ]
 }

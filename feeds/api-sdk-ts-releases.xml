@@ -6,7 +6,70 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <item>
+      <title>sdk-v0.137.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.137.0</link>
+      <guid isPermaLink="false">sdk-v0.137.0</guid>
+      <pubDate>Tue, 20 Oct 2026 22:16:13 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Features
+ api: add org webhook endpoints and user profile enforcement events
+ Chores
+ ci: run the changelog check on a standard runner
+ tests: make credential tests independent of the caller&apos;s environment</description>
+    </item>
+    <item>
+      <title>aws-sdk-v0.9.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.9.0</link>
+      <guid isPermaLink="false">aws-sdk-v0.9.0</guid>
+      <pubDate>Tue, 20 Oct 2026 18:46:04 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Features
+ aws: require @anthropic-ai/sdk 0.136.0 or later
+ aws: throw an AnthropicError when actionURLs is read on userProfiles or beta.userProfiles, which the AWS gateway doesn&apos;t serve</description>
+    </item>
+    <item>
+      <title>bedrock-sdk-v0.36.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.36.0</link>
+      <guid isPermaLink="false">bedrock-sdk-v0.36.0</guid>
+      <pubDate>Tue, 20 Oct 2026 18:46:02 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Features
+ bedrock: send userprofileid in the request body on AnthropicBedrockMantle Messages and token counting requests
+ bedrock: throw an AnthropicError when userProfiles or beta.userProfiles is read on AnthropicBedrock, which doesn&apos;t serve user profiles</description>
+    </item>
+    <item>
+      <title>vertex-sdk-v0.22.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.22.0</link>
+      <guid isPermaLink="false">vertex-sdk-v0.22.0</guid>
+      <pubDate>Tue, 20 Oct 2026 18:45:59 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Features
+ vertex: throw an AnthropicError when userProfiles or beta.userProfiles is read on AnthropicVertex, which doesn&apos;t serve the user profile endpoints</description>
+    </item>
+    <item>
+      <title>google-cloud-sdk-v0.2.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.2.0</link>
+      <guid isPermaLink="false">google-cloud-sdk-v0.2.0</guid>
+      <pubDate>Tue, 20 Oct 2026 17:54:01 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Features
+ google-cloud: use the v1 endpoints and add the organization endpoint</description>
+    </item>
+    <item>
+      <title>sdk-v0.136.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.136.0</link>
+      <guid isPermaLink="false">sdk-v0.136.0</guid>
+      <pubDate>Tue, 20 Oct 2026 17:53:59 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Features
+ api: add datarefreshedat and hasmore to analytics report pages
+ api: add workspace rate-limit updates to the Admin API
+ api: make User Profiles generally available
+ client: yield server-sent events with unrecognized event names
+ tools: accept every tool definition field in the tool helpers</description>
+    </item>
     <item>
       <title>sdk-v0.135.0</title>
       <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.135.0</link>
@@ -465,82 +528,6 @@ Full Changelog: sdk-v0.127.0...sdk-v0.128.0
  Bug Fixes
  api: share one evaluatedpermission enum across Managed Agents events (0c1cc0f)
  tools: addTools() takes eff</description>
-    </item>
-    <item>
-      <title>google-cloud-sdk: v0.0.13</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.13</link>
-      <guid isPermaLink="false">google-cloud-sdk-v0.0.13</guid>
-      <pubDate>Fri, 18 Sep 2026 16:25:20 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.0.13 (2026-09-18)
-Full Changelog: google-cloud-sdk-v0.0.12...google-cloud-sdk-v0.0.13
- Chores
- internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)
- internal: switch unit tests from jest to vitest (788c9c6)</description>
-    </item>
-    <item>
-      <title>aws-sdk: v0.7.3</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.7.3</link>
-      <guid isPermaLink="false">aws-sdk-v0.7.3</guid>
-      <pubDate>Fri, 18 Sep 2026 16:25:14 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.7.3 (2026-09-18)
-Full Changelog: aws-sdk-v0.7.2...aws-sdk-v0.7.3
- Chores
- internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)
- internal: switch unit tests from jest to vitest (788c9c6)</description>
-    </item>
-    <item>
-      <title>foundry-sdk: v0.4.8</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/foundry-sdk-v0.4.8</link>
-      <guid isPermaLink="false">foundry-sdk-v0.4.8</guid>
-      <pubDate>Fri, 18 Sep 2026 16:25:08 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.4.8 (2026-09-18)
-Full Changelog: foundry-sdk-v0.4.7...foundry-sdk-v0.4.8
- Chores
- internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)
- internal: switch unit tests from jest to vitest (788c9c6)</description>
-    </item>
-    <item>
-      <title>bedrock-sdk: v0.33.7</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.33.7</link>
-      <guid isPermaLink="false">bedrock-sdk-v0.33.7</guid>
-      <pubDate>Fri, 18 Sep 2026 16:25:02 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.33.7 (2026-09-18)
-Full Changelog: bedrock-sdk-v0.33.6...bedrock-sdk-v0.33.7
- Bug Fixes
- bedrock: raise APIError for mid-stream exception and error frames (622) (8a14b15)
- Chores
- internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)
- internal: switch unit tests from jest to vitest (788c</description>
-    </item>
-    <item>
-      <title>vertex-sdk: v0.19.10</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.10</link>
-      <guid isPermaLink="false">vertex-sdk-v0.19.10</guid>
-      <pubDate>Fri, 18 Sep 2026 16:24:56 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.19.10 (2026-09-18)
-Full Changelog: vertex-sdk-v0.19.9...vertex-sdk-v0.19.10
- Chores
- internal: build the sub-packages with TypeScript 6.0.3 (8a69ff5)
- internal: switch unit tests from jest to vitest (788c9c6)</description>
-    </item>
-    <item>
-      <title>sdk: v0.127.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.127.0</link>
-      <guid isPermaLink="false">sdk-v0.127.0</guid>
-      <pubDate>Fri, 18 Sep 2026 16:24:51 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.127.0 (2026-09-18)
-Full Changelog: sdk-v0.126.0...sdk-v0.127.0
- Features
- api: add group with displayname to rate limits, deprecate grouptype (2575d97)
- tools: add compactBeforeNextTurn() to the tool runner (682) (9f75ca6)
- Bug Fixes
- BetaMessageStream: stop coercing a null compactiondelta content</description>
     </item>
   </channel>
 </rss>

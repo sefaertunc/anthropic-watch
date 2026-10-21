@@ -6,7 +6,33 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <item>
+      <title>v1.17.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0</link>
+      <guid isPermaLink="false">v1.17.0</guid>
+      <pubDate>Tue, 20 Oct 2026 22:13:01 GMT</pubDate>
+      <category>api-sdk-py-releases</category>
+      <description>Features
+ api: add org webhook endpoints and user profile enforcement events
+ api: add RBAC Group owner-access error codes to the Admin API
+ api: document the unsupportedcharset error code for plugin uploads
+ Bug Fixes
+ bedrock: keep a workspace ID set in defaultheaders on the Bedrock and Mantle cli</description>
+    </item>
+    <item>
+      <title>v1.16.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.16.0</link>
+      <guid isPermaLink="false">v1.16.0</guid>
+      <pubDate>Tue, 20 Oct 2026 17:49:46 GMT</pubDate>
+      <category>api-sdk-py-releases</category>
+      <description>Features
+ api: add datarefreshedat and hasmore to analytics report pages
+ api: add workspace rate-limit updates to the Admin API
+ api: make User Profiles generally available
+ client: yield server-sent events with unrecognized event names
+ google-cloud: use the v1 endpoints and add the organization e</description>
+    </item>
     <item>
       <title>v1.15.0</title>
       <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0</link>
@@ -627,28 +653,6 @@ Full Changelog: v0.104.1...v0.105.0
 Full Changelog: v0.104.0...v0.104.1
  Bug Fixes
  streaming: carry encryptedcontent through beta compaction accumulator (1821) (f7a720c)</description>
-    </item>
-    <item>
-      <title>v0.104.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.104.0</link>
-      <guid isPermaLink="false">v0.104.0</guid>
-      <pubDate>Thu, 21 May 2026 20:01:49 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.104.0 (2026-05-21)
-Full Changelog: v0.103.1...v0.104.0
- Features
- api: Add support for thinking-token-count beta for estimated tokens in thinking block deltas when streaming (80d0fdf)</description>
-    </item>
-    <item>
-      <title>v0.103.1</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.1</link>
-      <guid isPermaLink="false">v0.103.1</guid>
-      <pubDate>Tue, 19 May 2026 15:43:14 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.103.1 (2026-05-19)
-Full Changelog: v0.103.0...v0.103.1
- Bug Fixes
- runner: skip tool calls SessionToolRunner does not own (1817) (9425c6a)</description>
     </item>
   </channel>
 </rss>

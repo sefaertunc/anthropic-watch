@@ -5,9 +5,53 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-20T11:06:32.190Z",
+  "generated": "2026-10-21T11:23:19.435Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "90606c8",
+      "title": "docs: correct MODULE_NOT_FOUND plugin cache path (#3586)",
+      "date": "2026-10-20T21:28:23Z",
+      "url": "https://github.com/affaan-m/ECC/commit/90606c8315ee09cafc303515c5f33024db6b9882",
+      "snippet": "* docs: correct MODULE_NOT_FOUND plugin cache path  Point the install command at cache/ecc/ecc/<version>. The cache/ecc directory itself has no package.json.  * docs: explain the MODULE_NOT_FOUND version placeholder  Tell readers to replace <version> with the version from claude plugin list before r",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "90606c8|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "30b6892",
+      "title": "fix(install): treat .pi as a foreign platform path (#3560)",
+      "date": "2026-10-20T19:37:53Z",
+      "url": "https://github.com/affaan-m/ECC/commit/30b68924ae9729159f44326aa3134b1d9d67c0e2",
+      "snippet": "The platform-configs module lists `.pi`, but PLATFORM_SOURCE_PATH_OWNERS had no entry for it, so isForeignPlatformPath() returned false and every install-apply target (e.g. `--target opencode`) copied the Pi harness adapter (.pi/README.md, .pi/extensions/*) into its config root and recorded it as EC",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "30b6892|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0797158",
+      "title": "ci: replace the 33-way test matrix with full and package-manager lanes",
+      "date": "2026-10-19T02:45:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/07971588f8ac7a60080ba8c1b7920c9e8e733e7d",
+      "snippet": "The test job ran the entire suite on 3 OSes x 3 Node lines x 4 package managers, 33 full runs per push. Windows lanes took 28 to 39 minutes and macOS 14 to 19, so one push queued about 1.5 hours of wall clock behind runner concurrency, and timing-sensitive tests got 33 chances to flake. The package-",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0797158|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9471ef4",
+      "title": "test(runner): add a worker pool and an ECC_TEST_ONLY filter to run-all",
+      "date": "2026-10-19T01:20:00Z",
+      "url": "https://github.com/affaan-m/ECC/commit/9471ef4724ddcdf8f3de302f08c1ee38c8ef7721",
+      "snippet": "The runner executed 422 files one process at a time, which is most of the 12 to 40 minutes a CI lane spends in \"Run tests\". ECC_TEST_JOBS above 1 now runs files through a pool of that many processes; output is still buffered and printed per file, so logs read the same. The default stays 1 and that p",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9471ef4|gh-commits-everything-claude-code"
+    },
     {
       "id": "6f1881a",
       "title": "refactor(lib): split nasiko install, uninstall and tar extraction",
@@ -513,50 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "0348d7b|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "c70874f",
-      "title": "feat(pi): curated pi/core skills+prompts profile, CI load test, and 2.2.2 release sync (#3264)",
-      "date": "2026-09-30T01:24:05Z",
-      "url": "https://github.com/affaan-m/ECC/commit/c70874fae9eb0e5ad0365beb7e2955899fd1d30f",
-      "snippet": "Adds a curated, Pi-native, skills+prompts-only profile at pi/core/ for downstream packagers that mirror GitHub Releases.  - manifests/pi-core.json: explicit include lists, per-item exclusion reasons, curation rules, safety allowlists; every root skill and command must be classified. - scripts/build-",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "c70874f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d30588f",
-      "title": "Merge pull request #3251 from affaan-m/affaan/integrate-reviewed-followups-20260928",
-      "date": "2026-09-29T23:04:47Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d30588f90a82e49e3d4c18c072c9f1e9f1c294f6",
-      "snippet": "fix: integrate reviewed contributor repairs and bounded installer tests",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d30588f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "759d841",
-      "title": "merge: preserve PR #3243 rollback redraw regression",
-      "date": "2026-09-29T22:25:59Z",
-      "url": "https://github.com/affaan-m/ECC/commit/759d841b24b7d30809e7ce872b553cacdf7ed934",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "759d841|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "51a59a1",
-      "title": "test(gateguard): align spawned hook timeouts",
-      "date": "2026-09-29T22:22:26Z",
-      "url": "https://github.com/affaan-m/ECC/commit/51a59a11123f3d3ee928e29462a1067af3f9563a",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "51a59a1|gh-commits-everything-claude-code"
     }
   ]
 }

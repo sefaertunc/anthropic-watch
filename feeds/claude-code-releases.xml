@@ -6,7 +6,27 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.306</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.306</link>
+      <guid isPermaLink="false">v2.1.306</guid>
+      <pubDate>Wed, 21 Oct 2026 03:16:31 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed claude -p inside cloud sessions reporting &quot;Not logged in&quot; when started without the session&apos;s environment variables
+- Fixed an API error being replaced by &quot;prompt is too long&quot;, and an unneeded compaction, in sessions with many MCP tools</description>
+    </item>
+    <item>
+      <title>v2.1.305</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.305</link>
+      <guid isPermaLink="false">v2.1.305</guid>
+      <pubDate>Tue, 20 Oct 2026 20:46:50 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added sandbox.allowNestedUserNamespaces so sandboxed commands on Linux can create user namespaces (Chromium, rootless podman); this lets them get around the sandbox&apos;s file protections
+- Added CLAUDECODERETRYWATCHDOGUSAGELIMITRECHECKMS so unattended retry mode (CLAUDECODERETRYWATCHDO</description>
+    </item>
     <item>
       <title>v2.1.304</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.304</link>
@@ -486,24 +506,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)</description>
-    </item>
-    <item>
-      <title>v2.1.241</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.241</link>
-      <guid isPermaLink="false">v2.1.241</guid>
-      <pubDate>Sun, 23 Aug 2026 00:52:16 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Bug fixes and reliability improvements</description>
-    </item>
-    <item>
-      <title>v2.1.240</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.240</link>
-      <guid isPermaLink="false">v2.1.240</guid>
-      <pubDate>Sat, 22 Aug 2026 14:45:30 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Bug fixes and reliability improvements</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #6604 from anthropics/mhegazy/sg-baseline-subdir</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d1adba47161a271799de7b548225d929310046bd</link>
+      <guid isPermaLink="false">d1adba4</guid>
+      <pubDate>Wed, 21 Oct 2026 00:23:34 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: find a rewritten file&apos;s earlier version from a repo subdirectory</description>
+    </item>
+    <item>
+      <title>Merge pull request #6591 from anthropics/mhegazy/sg-stop-pathspec</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/5d6e714341450ba38d85c8202e6a2a15d6af5a04</link>
+      <guid isPermaLink="false">5d6e714</guid>
+      <pubDate>Tue, 20 Oct 2026 23:56:28 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: keep the Stop review working when the changed paths do not fit one command</description>
+    </item>
+    <item>
+      <title>Merge pull request #6626 from anthropics/mhegazy/sg-pattern-fired-telemetry</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0887770a2d2470ba2e0f5e394ebd22b3e33e360f</link>
+      <guid isPermaLink="false">0887770</guid>
+      <pubDate>Tue, 20 Oct 2026 23:56:09 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: report which pattern rules fired on every Stop row</description>
+    </item>
+    <item>
+      <title>Merge pull request #6629 from anthropics/mhegazy/sg-launcher-probe-timing</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6cceb5096bf1e472bd3813ac64653df1c326f758</link>
+      <guid isPermaLink="false">6cceb50</guid>
+      <pubDate>Tue, 20 Oct 2026 23:44:42 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: report how long the launcher waits for interpreter probes</description>
+    </item>
+    <item>
+      <title>security-guidance: find the earlier version of a file reached through a symlinked folder</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/218862e1b0814b66361e9d215c409a10df2304ae</link>
+      <guid isPermaLink="false">218862e</guid>
+      <pubDate>Tue, 20 Oct 2026 23:24:19 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>When the tool&apos;s path and the session directory name the same repo through different symlinks (/tmp and /var on macOS), the relative path between the two spellings left the repo and the lookup found nothing, so a rewrite re-reported code that was already in the file. The lookup now tries again with b</description>
+    </item>
+    <item>
+      <title>Merge branch &apos;main&apos; into mhegazy/sg-baseline-subdir</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8d582c39ac3868b5d85cd5a06497b3a02e11c5dd</link>
+      <guid isPermaLink="false">8d582c3</guid>
+      <pubDate>Tue, 20 Oct 2026 23:09:46 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>security-guidance: write the baseline lookup test files as bytes</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f3d27ec9912bf26abfdb1b2bb0aba020d36a5491</link>
+      <guid isPermaLink="false">f3d27ec</guid>
+      <pubDate>Tue, 20 Oct 2026 23:09:45 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The fixture wrote its files with write_text, which stores &quot;\n&quot; as &quot;\r\n&quot; on Windows, so the committed text no longer equalled the string the tests compare against. The files are now written as bytes.</description>
+    </item>
+    <item>
+      <title>security-guidance: let the path budget test hold on Windows</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/fbfd03863903dc281cc5f56ddf8c1ed4e660f69f</link>
+      <guid isPermaLink="false">fbfd038</guid>
+      <pubDate>Tue, 20 Oct 2026 23:08:23 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The expected budget is the platform figure where that is lower than half of what the environment leaves.</description>
+    </item>
+    <item>
+      <title>Merge pull request #6722 from anthropics/mhegazy/sg-patterns-file-shape</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6e50442cd64387efad73bab72a47f277b88d8662</link>
+      <guid isPermaLink="false">6e50442</guid>
+      <pubDate>Tue, 20 Oct 2026 23:07:36 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: skip an unusable security-patterns file on its own</description>
+    </item>
+    <item>
+      <title>Merge branch &apos;main&apos; into mhegazy/sg-stop-pathspec</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/01c4bf56762d51c6560fd91af4345307cd619a01</link>
+      <guid isPermaLink="false">01c4bf5</guid>
+      <pubDate>Tue, 20 Oct 2026 22:49:16 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The batched path commands now read each diff through the bounded reader that main added, so both changes apply to get_git_diff.</description>
+    </item>
     <item>
       <title>Merge pull request #6813 from anthropics/mhegazy/sg-nested-repos</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/a0b04d9ddccaabe1976645f68b0eda50f74e7022</link>
@@ -326,86 +406,6 @@
       <pubDate>Thu, 08 Oct 2026 14:35:39 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description/>
-    </item>
-    <item>
-      <title>Merge pull request #6374 from anthropics/mhegazy/sg-reclaim-after-hook-kill</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b78ac49cdc6b3d7b61c4439470e311f4291265b1</link>
-      <guid isPermaLink="false">b78ac49</guid>
-      <pubDate>Wed, 07 Oct 2026 18:17:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: stop killed hooks from filling the disk (2.0.11)</description>
-    </item>
-    <item>
-      <title>Merge pull request #6373 from anthropics/bump/figma-f0493295</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/054417d0fc687dd7d639331f21522d0e06c09cf9</link>
-      <guid isPermaLink="false">054417d</guid>
-      <pubDate>Wed, 07 Oct 2026 16:47:20 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(figma): 17292073 → f0493295 (v2.2.127)</description>
-    </item>
-    <item>
-      <title>security-guidance: remove stash indexes older releases left in the git directory</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f711194a9ecdf004b655dbc5006610fbb9e7c7bb</link>
-      <guid isPermaLink="false">f711194</guid>
-      <pubDate>Wed, 07 Oct 2026 15:40:40 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Releases before 2.0.10 ran `git stash create` on the real index. When that git was killed, it left an `index.stash.&lt;pid&gt;` file the size of the index in the git directory, and nothing removes those: a clone can hold hundreds.  Before it copies the index, the hook now deletes such files once they are </description>
-    </item>
-    <item>
-      <title>security-guidance: stop a killed hook from leaving index copies behind (2.0.10 → 2.0.11)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/bfe21649b9ccdbc67599d6647ff139a4c34e4458</link>
-      <guid isPermaLink="false">bfe2164</guid>
-      <pubDate>Wed, 07 Oct 2026 15:35:56 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>In a clone with a very large git index, 2.0.10 could still fill the disk. It copies the index for each git call that might write it, and a hook that Claude Code cancels (SIGTERM, then SIGKILL) never reached its cleanup, so every cancelled hook left index-sized files in the temp directory for up to 3</description>
-    </item>
-    <item>
-      <title>bump(figma): 17292073 → f0493295 (v2.2.127)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/daea5e96301a5ddc73cee40d89f8d34f8b0dfb1a</link>
-      <guid isPermaLink="false">daea5e9</guid>
-      <pubDate>Wed, 07 Oct 2026 14:07:59 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #6366 from anthropics/manual-bumps/2026-10-07-salesforce-development</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/6eb6a30bf024b182d418d3bbd11f156e360365af</link>
-      <guid isPermaLink="false">6eb6a30</guid>
-      <pubDate>Wed, 07 Oct 2026 13:09:06 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(salesforce-development): c217b703 → 3c15867b (v2.3.0)</description>
-    </item>
-    <item>
-      <title>bump(salesforce-development): c217b703 → 3c15867b (v2.3.0)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f6867df15f368bb594a1c8bf70bfd0ccf98bcac8</link>
-      <guid isPermaLink="false">f6867df</guid>
-      <pubDate>Wed, 07 Oct 2026 00:55:56 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #6350 from anthropics/mhegazy/sg-track-latest-opus</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/d182ca456ca09d31d139f7d3818d1d333b103cce</link>
-      <guid isPermaLink="false">d182ca4</guid>
-      <pubDate>Fri, 02 Oct 2026 21:26:10 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: follow the newest Opus instead of a pinned release</description>
-    </item>
-    <item>
-      <title>bump(aws): aws-core, aws-agents, aws-data-analytics 7bde20fa → 0d6167ad (#6349)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/2f189354595613190f575ab1f7510f3a94150022</link>
-      <guid isPermaLink="false">2f18935</guid>
-      <pubDate>Fri, 02 Oct 2026 20:55:49 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>security-guidance: follow the newest Opus instead of a pinned release (2.0.8 → 2.0.9)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/01f8be9b220b6e993a3c2cb219f28d7cc6fd3d6f</link>
-      <guid isPermaLink="false">01f8be9</guid>
-      <pubDate>Fri, 02 Oct 2026 20:17:39 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>The review model was hardcoded to claude-opus-4-7, so the plugin fell behind each time a new Opus shipped.  - The diff review asks the configured endpoint (GET /v1/models) for the   newest Opus it serves, cached for a day; claude-opus-5-5 if it can&apos;t say. - The agentic commit review, and every revie</description>
     </item>
   </channel>
 </rss>

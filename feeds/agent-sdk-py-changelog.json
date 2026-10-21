@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-20T11:06:32.169Z",
+  "generated": "2026-10-21T11:23:19.411Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.2.170",
+      "title": "0.2.170",
+      "date": "2026-10-21T11:22:31.469Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
+      "snippet": "Bug Fixes\n- Fixed parallel tool calls missing from session messages: getsessionmessages and getsessionmessagesfromstore now return every tool call and result from turns that ran tools in parallel. Previously only one branch of the forked transcript was followed, dropping some calls and results (1422",
+      "source": "agent-sdk-py-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK Python Changelog",
+      "uniqueKey": "0.2.170|agent-sdk-py-changelog"
+    },
     {
       "id": "0.2.168",
       "title": "0.2.168",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK Python Changelog",
       "uniqueKey": "0.2.110|agent-sdk-py-changelog"
-    },
-    {
-      "id": "0.2.108",
-      "title": "0.2.108",
-      "date": "2026-06-24T09:34:51.365Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md",
-      "snippet": "Internal/Other Changes\n- Updated bundled Claude CLI to version 2.1.187",
-      "source": "agent-sdk-py-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK Python Changelog",
-      "uniqueKey": "0.2.108|agent-sdk-py-changelog"
     }
   ]
 }

@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <item>
+      <title>docs: correct MODULE_NOT_FOUND plugin cache path (#3586)</title>
+      <link>https://github.com/affaan-m/ECC/commit/90606c8315ee09cafc303515c5f33024db6b9882</link>
+      <guid isPermaLink="false">90606c8</guid>
+      <pubDate>Tue, 20 Oct 2026 21:28:23 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>* docs: correct MODULE_NOT_FOUND plugin cache path  Point the install command at cache/ecc/ecc/&lt;version&gt;. The cache/ecc directory itself has no package.json.  * docs: explain the MODULE_NOT_FOUND version placeholder  Tell readers to replace &lt;version&gt; with the version from claude plugin list before r</description>
+    </item>
+    <item>
+      <title>fix(install): treat .pi as a foreign platform path (#3560)</title>
+      <link>https://github.com/affaan-m/ECC/commit/30b68924ae9729159f44326aa3134b1d9d67c0e2</link>
+      <guid isPermaLink="false">30b6892</guid>
+      <pubDate>Tue, 20 Oct 2026 19:37:53 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The platform-configs module lists `.pi`, but PLATFORM_SOURCE_PATH_OWNERS had no entry for it, so isForeignPlatformPath() returned false and every install-apply target (e.g. `--target opencode`) copied the Pi harness adapter (.pi/README.md, .pi/extensions/*) into its config root and recorded it as EC</description>
+    </item>
+    <item>
+      <title>ci: replace the 33-way test matrix with full and package-manager lanes</title>
+      <link>https://github.com/affaan-m/ECC/commit/07971588f8ac7a60080ba8c1b7920c9e8e733e7d</link>
+      <guid isPermaLink="false">0797158</guid>
+      <pubDate>Mon, 19 Oct 2026 02:45:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The test job ran the entire suite on 3 OSes x 3 Node lines x 4 package managers, 33 full runs per push. Windows lanes took 28 to 39 minutes and macOS 14 to 19, so one push queued about 1.5 hours of wall clock behind runner concurrency, and timing-sensitive tests got 33 chances to flake. The package-</description>
+    </item>
+    <item>
+      <title>test(runner): add a worker pool and an ECC_TEST_ONLY filter to run-all</title>
+      <link>https://github.com/affaan-m/ECC/commit/9471ef4724ddcdf8f3de302f08c1ee38c8ef7721</link>
+      <guid isPermaLink="false">9471ef4</guid>
+      <pubDate>Mon, 19 Oct 2026 01:20:00 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>The runner executed 422 files one process at a time, which is most of the 12 to 40 minutes a CI lane spends in &quot;Run tests&quot;. ECC_TEST_JOBS above 1 now runs files through a pool of that many processes; output is still buffered and printed per file, so logs read the same. The default stays 1 and that p</description>
+    </item>
     <item>
       <title>refactor(lib): split nasiko install, uninstall and tar extraction</title>
       <link>https://github.com/affaan-m/ECC/commit/6f1881aeafa3c48f7b603cc4be4b2e4e70daad59</link>
@@ -374,38 +406,6 @@
       <pubDate>Thu, 01 Oct 2026 22:49:51 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>pi/core and the bundled blueprint skill now refer to the project as ECC only; the generated README no longer expands the name. Profile contents, package name and paths are unchanged (123 skills, 24 commands).  The release workflows poll npm for up to five minutes after publish before verifying the a</description>
-    </item>
-    <item>
-      <title>feat(pi): curated pi/core skills+prompts profile, CI load test, and 2.2.2 release sync (#3264)</title>
-      <link>https://github.com/affaan-m/ECC/commit/c70874fae9eb0e5ad0365beb7e2955899fd1d30f</link>
-      <guid isPermaLink="false">c70874f</guid>
-      <pubDate>Wed, 30 Sep 2026 01:24:05 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Adds a curated, Pi-native, skills+prompts-only profile at pi/core/ for downstream packagers that mirror GitHub Releases.  - manifests/pi-core.json: explicit include lists, per-item exclusion reasons, curation rules, safety allowlists; every root skill and command must be classified. - scripts/build-</description>
-    </item>
-    <item>
-      <title>Merge pull request #3251 from affaan-m/affaan/integrate-reviewed-followups-20260928</title>
-      <link>https://github.com/affaan-m/ECC/commit/d30588f90a82e49e3d4c18c072c9f1e9f1c294f6</link>
-      <guid isPermaLink="false">d30588f</guid>
-      <pubDate>Tue, 29 Sep 2026 23:04:47 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix: integrate reviewed contributor repairs and bounded installer tests</description>
-    </item>
-    <item>
-      <title>merge: preserve PR #3243 rollback redraw regression</title>
-      <link>https://github.com/affaan-m/ECC/commit/759d841b24b7d30809e7ce872b553cacdf7ed934</link>
-      <guid isPermaLink="false">759d841</guid>
-      <pubDate>Tue, 29 Sep 2026 22:25:59 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test(gateguard): align spawned hook timeouts</title>
-      <link>https://github.com/affaan-m/ECC/commit/51a59a11123f3d3ee928e29462a1067af3f9563a</link>
-      <guid isPermaLink="false">51a59a1</guid>
-      <pubDate>Tue, 29 Sep 2026 22:22:26 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>

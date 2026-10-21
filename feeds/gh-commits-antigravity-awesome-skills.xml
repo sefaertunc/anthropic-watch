@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 20 Oct 2026 11:06:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <item>
+      <title>docs(mmx-cli): prefer MiniMax M3.1 Flash for new text tasks (#2036)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2984de11956e413008c6f98121cd141c499e47a3</link>
+      <guid isPermaLink="false">2984de1</guid>
+      <pubDate>Wed, 21 Oct 2026 08:53:02 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Reason: The `mmx-cli` skill still recommends MiniMax-M3 as the implicit chat default. New text examples should explicitly select MiniMax-M3.1-Flash, with MiniMax-M3 as the alternative, while honoring a user&apos;s saved, custom, or legacy model selection.</description>
+    </item>
+    <item>
+      <title>chore: release v19.13.0 (#2038)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2fa03dc172ad6ea88caca9c51edd1a28d642b396</link>
+      <guid isPermaLink="false">2fa03dc</guid>
+      <pubDate>Wed, 21 Oct 2026 08:29:30 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v19.13.0.</description>
+    </item>
+    <item>
+      <title>fix: patch nested dependency advisories before npm publication (#2035)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/af202dae1ccd34d70b2412ed31f45db46ee736eb</link>
+      <guid isPermaLink="false">af202da</guid>
+      <pubDate>Wed, 21 Oct 2026 07:53:47 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Patch dependency advisories that appeared during the 19.13.0 release sweep, before npm or Pages publication. Update the standalone plugin&apos;s MCP SDK to exact 1.32.0, the bundled Loki frontend to patched Vite 8.1.6 and WhatsApp redirect handling. Replace ts-node-dev with ex</description>
+    </item>
+    <item>
+      <title>chore: release v19.13.0 (#2034)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/78c0f6bf1632903a9c96ccb5e769cb3bd58cbc24</link>
+      <guid isPermaLink="false">78c0f6b</guid>
+      <pubDate>Wed, 21 Oct 2026 07:36:53 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v19.13.0.</description>
+    </item>
+    <item>
+      <title>fix: resolve security intake and restore catalog metadata (#2033)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/713b9eee1d35cc2fd3590058a12833a9880ae7b4</link>
+      <guid isPermaLink="false">713b9ee</guid>
+      <pubDate>Wed, 21 Oct 2026 07:26:54 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Resolve the supplied 93-row security intake against current canonical sources, treating mirror duplicates and retired paths separately. Harden helper file boundaries, terminal output and credential-bearing runtime setup; evaluate reviewed documentation fixtures instead of</description>
+    </item>
+    <item>
+      <title>feat: add pixeltable skill (#2024)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3e0679446d638925c894aa2af220169326022b8f</link>
+      <guid isPermaLink="false">3e06794</guid>
+      <pubDate>Wed, 21 Oct 2026 07:18:40 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds `skills/pixeltable/`, adapted from the official Apache-2.0 skill in [pixeltable/pixeltable-skill](https://github.com/pixeltable/pixeltable-skill) (`skills/pixeltable-skill/` at `51546f0d22a03eeb6c32a60d6652e2d4f7a49201`). It covers `app.py` with `TableModel` and `Fas</description>
+    </item>
+    <item>
+      <title>Add Party Planning skill (#2025)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/271ebfd70cefe56218ea43bff57a4635dc381af0</link>
+      <guid isPermaLink="false">271ebfd</guid>
+      <pubDate>Wed, 21 Oct 2026 07:15:01 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  This skill adds complete party-planning capability: game recommendations with rules, tested food &amp; drink portion calculations, trivia, printables, and hosting timelines. It answers questions like &apos;how many pizzas for 30 people&apos; — formula: (adults × 3 + kids × 2) ÷ 8 slice</description>
+    </item>
+    <item>
+      <title>feat: add six official Beatra skills pinned to verified Git trees (#2027)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0487859087b9dd4baf5c9a016fcc6bda7c109760</link>
+      <guid isPermaLink="false">0487859</guid>
+      <pubDate>Wed, 21 Oct 2026 07:12:38 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>Add YouTube transcript research skill (#2028)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2e45801713cfa64e4ee0a144a246a6fdecf7c11d</link>
+      <guid isPermaLink="false">2e45801</guid>
+      <pubDate>Wed, 21 Oct 2026 07:07:20 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Adds a YouTube caption research skill for video summaries, timestamped quotations, SRT/VTT exports and translated transcripts. It explains video, channel and playlist inputs, price estimates and caption limits. I am the author of the paid Apify Actor.</description>
+    </item>
+    <item>
+      <title>Add calibrate-first skill (finance) (#2029)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a6abb935cf53a597ad19f76ff8eaa51e7a2a0a9e</link>
+      <guid isPermaLink="false">a6abb93</guid>
+      <pubDate>Wed, 21 Oct 2026 07:01:09 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Adds **`skills/calibrate-first/SKILL.md`** (category `finance`, risk `safe`). The skill makes the agent measure a dataset&apos;s detection floor before it reads any cross-sectional trading-signal result. It charges every test to an append-only registry before computing, and re</description>
+    </item>
     <item>
       <title>fix: handle maintenance network failures and CI races safely (#2003)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/c808e6e480696d243e0668ebbc3499bb8e7e10a4</link>
@@ -326,86 +406,6 @@
       <pubDate>Wed, 14 Oct 2026 05:55:24 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description>Several canonical skill entries expose truncated or duplicated discovery metadata, obligatory vendor promotions, or references to material absent from the distributed skill. This batch repairs verified defects in 267 entries while preserving skill IDs, declared risk and source identity. Language/sty</description>
-    </item>
-    <item>
-      <title>fix: complete agent setup and clarify skill pages (#1894)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/acafd3bfadd0ba2a76e3d0792d0a38f974b0a25c</link>
-      <guid isPermaLink="false">acafd3b</guid>
-      <pubDate>Mon, 12 Oct 2026 20:17:45 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Users following Codex/Claude setup can now complete configuration, verify a real tool call, obtain an agent-selected manifest, review a plan and prepare the separate installer preview from the same guide. Shared command generation keeps both guides pinned to the same rele</description>
-    </item>
-    <item>
-      <title>chore: release v19.5.0 (#1892)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4f5ef5b65969ae8930dffabacc5c283660a2ccc0</link>
-      <guid isPermaLink="false">4f5ef5b</guid>
-      <pubDate>Mon, 12 Oct 2026 19:23:38 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v19.5.0.</description>
-    </item>
-    <item>
-      <title>docs: add 19.5.0 changelog entry (#1891)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0e2fc6b4c3591af14f223498e629a3bef875c763</link>
-      <guid isPermaLink="false">0e2fc6b</guid>
-      <pubDate>Mon, 12 Oct 2026 19:13:04 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add Arcmira timestamped quote research skill (#1889)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/891a1d1995a0a2f4cd05b6d27c55996aa3c61bb7</link>
-      <guid isPermaLink="false">891a1d1</guid>
-      <pubDate>Mon, 12 Oct 2026 18:57:08 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds `arcmira-find-quotes` for searching indexed YouTube and podcast transcripts and returning timestamped sources. Adapted from the Apache-2.0 Arcmira plugin at v0.10.6, with no monitor or feedback writes.  Validation: `npm run chain`, `npm run check:warning-budget`, `np</description>
-    </item>
-    <item>
-      <title>[Snyk] Upgrade react-virtuoso from 4.18.13 to 4.18.14 (#1881)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/da5ffcd9a761a7303279505e94cf9cd9356792e8</link>
-      <guid isPermaLink="false">da5ffcd</guid>
-      <pubDate>Mon, 12 Oct 2026 18:50:27 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>![snyk-top-banner](https://res.cloudinary.com/snyk/image/upload/r-d/scm-platform/snyk-pull-requests/pr-banner-default.svg)  &lt;h3&gt;Snyk has created this PR to upgrade react-virtuoso from 4.18.13 to 4.18.14.&lt;/h3&gt;  :information_source: Keep your dependencies up-to-date. This makes it easier to fix existi</description>
-    </item>
-    <item>
-      <title>feat: add Invokely statistics skill (#1886)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/2e270d4c45d58ffa0175c0046a96793f6e640a76</link>
-      <guid isPermaLink="false">2e270d4</guid>
-      <pubDate>Mon, 12 Oct 2026 18:44:51 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds a source-only `invokely-statistics` skill for querying official statistics through the configured Invokely MCP server. It covers indicator and place discovery, values, time series, comparisons, rankings, period and unit reporting, citations, source caveats, projectio</description>
-    </item>
-    <item>
-      <title>fix: restore homepage introduction video and maintainer credits (#1879)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/09e94102a5008d4d8066e14bdb8d0b95d365748c</link>
-      <guid isPermaLink="false">09e9410</guid>
-      <pubDate>Sun, 11 Oct 2026 20:00:18 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Restore the original 40-second introduction video below Core setup and the bottom Maintained by @sickn33 strip, with the existing avatar, licensing notice and GitHub link. Keep the Core-first homepage intact. Native video controls use the existing local assets, without au</description>
-    </item>
-    <item>
-      <title>feat: make Core the product homepage and simplify discovery (#1877)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/5f4e9f9f002d5139d132326d09ca2734a4548ea1</link>
-      <guid isPermaLink="false">5f4e9f9</guid>
-      <pubDate>Sun, 11 Oct 2026 19:31:01 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  The homepage previously presented a skill directory while Core, CLI/MCP, Workbench, packs and guides competed as separate entry points. It now presents AAS Core as the product: one setup action, a navigable recorded example, and contextual client guides. The example uses </description>
-    </item>
-    <item>
-      <title>fix: allow informational routes in SEO verifier and sitemap (#1876)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6b8c84adbda971fc5886038c96bdd11954f6e4e3</link>
-      <guid isPermaLink="false">6b8c84a</guid>
-      <pubDate>Sun, 11 Oct 2026 18:40:31 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  The release-tag Pages deployment for `v19.4.0` failed on a real, pre-existing defect on `main`:  ``` Error: Sitemap contains unsupported non-skill routes. ```  PRs #1867 and #1869 added the informational routes `/teams/`, `/trust/` and `/aas-core/` to `apps/web-app/src/da</description>
-    </item>
-    <item>
-      <title>chore: release v19.4.0 (#1874)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/8248fdd1946b835ecec8c8c60927b398ac4c6e66</link>
-      <guid isPermaLink="false">8248fdd</guid>
-      <pubDate>Sun, 11 Oct 2026 18:04:41 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v19.4.0.</description>
     </item>
   </channel>
 </rss>
