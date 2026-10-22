@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 11:22:45 GMT</lastBuildDate>
+    <item>
+      <title>0.3.308</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.308</guid>
+      <pubDate>Thu, 22 Oct 2026 11:21:57 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Updated to parity with Claude Code v2.1.308</description>
+    </item>
     <item>
       <title>0.3.306</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -440,15 +448,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Notification hooks now fire for pending permission prompts on the SDK path, matching the interactive REPL behavior
 - Todo/task-tracking tools (TaskCreate/TaskGet/TaskUpdate/TaskList, TodoWrite) are no longer in the default tool surface on Opus 4.8, Sonnet 5, Fable 5, Mythos 5, and newer models; na</description>
-    </item>
-    <item>
-      <title>0.3.232</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.232</guid>
-      <pubDate>Fri, 14 Aug 2026 07:26:42 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Subagent MCP toolresult frames whose result carries meta now emit tooluseresult as { content, meta } (matching main-loop frames) instead of a bare value
-- /context result messages now carry a structured contextusage payload (new SDKContextUsage type), so consumers can render the context-usage card</description>
     </item>
   </channel>
 </rss>

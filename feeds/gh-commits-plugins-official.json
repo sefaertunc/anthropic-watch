@@ -5,9 +5,75 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-21T11:23:19.431Z",
+  "generated": "2026-10-22T11:22:45.268Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "af59ee3",
+      "title": "Merge pull request #6849 from anthropics/mhegazy/sg-unreadable-store-cert",
+      "date": "2026-10-21T23:58:45Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/af59ee3a1051a29dda4a2e7a2af221aa457ae08b",
+      "snippet": "security-guidance: reviews run when the Windows certificate store has an unreadable entry",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "af59ee3|gh-commits-plugins-official"
+    },
+    {
+      "id": "234c3a4",
+      "title": "Merge pull request #6837 from anthropics/mhegazy/sg-index-copy-gitlinks",
+      "date": "2026-10-21T23:58:27Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/234c3a4a443e3aa79dfe9ac86e931d50fc43e6da",
+      "snippet": "security-guidance: keep nested repositories out of the index copy",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "234c3a4|gh-commits-plugins-official"
+    },
+    {
+      "id": "eecb3b3",
+      "title": "security-guidance: name the test certificates in the config file so the fixture works with LibreSSL",
+      "date": "2026-10-21T23:26:47Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/eecb3b3f6f737af959734f71b230d3f671601717",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "eecb3b3|gh-commits-plugins-official"
+    },
+    {
+      "id": "1e25068",
+      "title": "security-guidance: bump version to 2.0.16",
+      "date": "2026-10-21T17:23:02Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/1e25068c2793a1c50c91c2941055ce5043c4a7fe",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "1e25068|gh-commits-plugins-official"
+    },
+    {
+      "id": "34d31be",
+      "title": "security-guidance: reviews run when the Windows certificate store has an unreadable entry",
+      "date": "2026-10-21T16:49:26Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/34d31be12a184ffe44e97e6c52ad4442bdaa7007",
+      "snippet": "Older Python releases load each Windows certificate store in one call, so one certificate OpenSSL cannot parse makes the default TLS context fail to build and every review call fails before a request is sent.  When that happens the plugin's API calls now use a default context built from the store en",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "34d31be|gh-commits-plugins-official"
+    },
+    {
+      "id": "2de59fe",
+      "title": "security-guidance: make one nested repository test work on Windows",
+      "date": "2026-10-21T05:32:10Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/2de59fe9d850775f9f516180d144becd4db2c3da",
+      "snippet": "The test deleted a repository with shutil.rmtree, which fails on git's read-only object files there. It moves the directory away instead.",
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "2de59fe|gh-commits-plugins-official"
+    },
     {
       "id": "d1adba4",
       "title": "Merge pull request #6604 from anthropics/mhegazy/sg-baseline-subdir",
@@ -18,6 +84,17 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "d1adba4|gh-commits-plugins-official"
+    },
+    {
+      "id": "06d5a3f",
+      "title": "Merge branch 'main' into mhegazy/sg-index-copy-gitlinks",
+      "date": "2026-10-21T00:03:52Z",
+      "url": "https://github.com/anthropics/claude-plugins-official/commit/06d5a3f8e838c81680838aec3266b0ec4c50f992",
+      "snippet": null,
+      "source": "gh-commits-plugins-official",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-plugins-official (main commits)",
+      "uniqueKey": "06d5a3f|gh-commits-plugins-official"
     },
     {
       "id": "5d6e714",
@@ -480,83 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-plugins-official (main commits)",
       "uniqueKey": "b860d6f|gh-commits-plugins-official"
-    },
-    {
-      "id": "6a76e75",
-      "title": "security-guidance: bump to 2.0.12",
-      "date": "2026-10-09T10:53:01Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/6a76e75ca4ab6fafaf6641f451aa4c35a652c7dc",
-      "snippet": "Co-Authored-By: Claude <noreply@anthropic.com>",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "6a76e75|gh-commits-plugins-official"
-    },
-    {
-      "id": "8206942",
-      "title": "Merge pull request #6393 from anthropics/mhegazy/sg-drop-subagent-review",
-      "date": "2026-10-09T10:33:29Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/8206942d3ec08519557bd750858d689d082bea7c",
-      "snippet": "security-guidance: stop reviewing on every subagent finish",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "8206942|gh-commits-plugins-official"
-    },
-    {
-      "id": "3752f0e",
-      "title": "security-guidance: stop reviewing on every subagent finish",
-      "date": "2026-10-08T22:46:16Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/3752f0e092cb0fec08e68f80aa4d54849423a8b0",
-      "snippet": "Each subagent finish re-reviewed the whole diff since the last prompt, so a turn with N subagents sent N growing reviews. The end-of-turn review already covers what subagents changed, so drop the SubagentStop registration.",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "3752f0e|gh-commits-plugins-official"
-    },
-    {
-      "id": "315c4e4",
-      "title": "Merge pull request #6390 from anthropics/claude/receipts-query-all-clones",
-      "date": "2026-10-08T17:06:41Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/315c4e48967d9541c29c3c656441dded353ca7aa",
-      "snippet": "receipts: query every local clone when counting commits",
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "315c4e4|gh-commits-plugins-official"
-    },
-    {
-      "id": "0baf7d1",
-      "title": "receipts: report git unavailable when a clone errored and none found commits",
-      "date": "2026-10-08T16:33:07Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/0baf7d19f0b2ad785746af2c868adbbf46d47f24",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "0baf7d1|gh-commits-plugins-official"
-    },
-    {
-      "id": "f713a7c",
-      "title": "bump(incident-io): 443f4716 → c8e50a4a (#6377)",
-      "date": "2026-10-08T14:35:50Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/f713a7c59b729741282f9c2d9a04e28e2abbd20c",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "f713a7c|gh-commits-plugins-official"
-    },
-    {
-      "id": "e5750b2",
-      "title": "bump(aws-core): 0d6167ad → 34b3eccf (#6376)",
-      "date": "2026-10-08T14:35:39Z",
-      "url": "https://github.com/anthropics/claude-plugins-official/commit/e5750b2fc7246ea5f11a6df41504d3fac97cc70a",
-      "snippet": null,
-      "source": "gh-commits-plugins-official",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-plugins-official (main commits)",
-      "uniqueKey": "e5750b2|gh-commits-plugins-official"
     }
   ]
 }

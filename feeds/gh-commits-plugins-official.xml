@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 11:22:45 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #6849 from anthropics/mhegazy/sg-unreadable-store-cert</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/af59ee3a1051a29dda4a2e7a2af221aa457ae08b</link>
+      <guid isPermaLink="false">af59ee3</guid>
+      <pubDate>Wed, 21 Oct 2026 23:58:45 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: reviews run when the Windows certificate store has an unreadable entry</description>
+    </item>
+    <item>
+      <title>Merge pull request #6837 from anthropics/mhegazy/sg-index-copy-gitlinks</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/234c3a4a443e3aa79dfe9ac86e931d50fc43e6da</link>
+      <guid isPermaLink="false">234c3a4</guid>
+      <pubDate>Wed, 21 Oct 2026 23:58:27 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: keep nested repositories out of the index copy</description>
+    </item>
+    <item>
+      <title>security-guidance: name the test certificates in the config file so the fixture works with LibreSSL</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/eecb3b3f6f737af959734f71b230d3f671601717</link>
+      <guid isPermaLink="false">eecb3b3</guid>
+      <pubDate>Wed, 21 Oct 2026 23:26:47 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>security-guidance: bump version to 2.0.16</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1e25068c2793a1c50c91c2941055ce5043c4a7fe</link>
+      <guid isPermaLink="false">1e25068</guid>
+      <pubDate>Wed, 21 Oct 2026 17:23:02 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>security-guidance: reviews run when the Windows certificate store has an unreadable entry</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/34d31be12a184ffe44e97e6c52ad4442bdaa7007</link>
+      <guid isPermaLink="false">34d31be</guid>
+      <pubDate>Wed, 21 Oct 2026 16:49:26 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Older Python releases load each Windows certificate store in one call, so one certificate OpenSSL cannot parse makes the default TLS context fail to build and every review call fails before a request is sent.  When that happens the plugin&apos;s API calls now use a default context built from the store en</description>
+    </item>
+    <item>
+      <title>security-guidance: make one nested repository test work on Windows</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/2de59fe9d850775f9f516180d144becd4db2c3da</link>
+      <guid isPermaLink="false">2de59fe</guid>
+      <pubDate>Wed, 21 Oct 2026 05:32:10 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The test deleted a repository with shutil.rmtree, which fails on git&apos;s read-only object files there. It moves the directory away instead.</description>
+    </item>
     <item>
       <title>Merge pull request #6604 from anthropics/mhegazy/sg-baseline-subdir</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/d1adba47161a271799de7b548225d929310046bd</link>
@@ -14,6 +62,14 @@
       <pubDate>Wed, 21 Oct 2026 00:23:34 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: find a rewritten file&apos;s earlier version from a repo subdirectory</description>
+    </item>
+    <item>
+      <title>Merge branch &apos;main&apos; into mhegazy/sg-index-copy-gitlinks</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/06d5a3f8e838c81680838aec3266b0ec4c50f992</link>
+      <guid isPermaLink="false">06d5a3f</guid>
+      <pubDate>Wed, 21 Oct 2026 00:03:52 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
     </item>
     <item>
       <title>Merge pull request #6591 from anthropics/mhegazy/sg-stop-pathspec</title>
@@ -350,62 +406,6 @@
       <pubDate>Fri, 09 Oct 2026 11:57:56 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: bump to 2.0.12</description>
-    </item>
-    <item>
-      <title>security-guidance: bump to 2.0.12</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/6a76e75ca4ab6fafaf6641f451aa4c35a652c7dc</link>
-      <guid isPermaLink="false">6a76e75</guid>
-      <pubDate>Fri, 09 Oct 2026 10:53:01 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;</description>
-    </item>
-    <item>
-      <title>Merge pull request #6393 from anthropics/mhegazy/sg-drop-subagent-review</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/8206942d3ec08519557bd750858d689d082bea7c</link>
-      <guid isPermaLink="false">8206942</guid>
-      <pubDate>Fri, 09 Oct 2026 10:33:29 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: stop reviewing on every subagent finish</description>
-    </item>
-    <item>
-      <title>security-guidance: stop reviewing on every subagent finish</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/3752f0e092cb0fec08e68f80aa4d54849423a8b0</link>
-      <guid isPermaLink="false">3752f0e</guid>
-      <pubDate>Thu, 08 Oct 2026 22:46:16 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Each subagent finish re-reviewed the whole diff since the last prompt, so a turn with N subagents sent N growing reviews. The end-of-turn review already covers what subagents changed, so drop the SubagentStop registration.</description>
-    </item>
-    <item>
-      <title>Merge pull request #6390 from anthropics/claude/receipts-query-all-clones</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/315c4e48967d9541c29c3c656441dded353ca7aa</link>
-      <guid isPermaLink="false">315c4e4</guid>
-      <pubDate>Thu, 08 Oct 2026 17:06:41 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>receipts: query every local clone when counting commits</description>
-    </item>
-    <item>
-      <title>receipts: report git unavailable when a clone errored and none found commits</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0baf7d19f0b2ad785746af2c868adbbf46d47f24</link>
-      <guid isPermaLink="false">0baf7d1</guid>
-      <pubDate>Thu, 08 Oct 2026 16:33:07 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(incident-io): 443f4716 → c8e50a4a (#6377)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f713a7c59b729741282f9c2d9a04e28e2abbd20c</link>
-      <guid isPermaLink="false">f713a7c</guid>
-      <pubDate>Thu, 08 Oct 2026 14:35:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(aws-core): 0d6167ad → 34b3eccf (#6376)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e5750b2fc7246ea5f11a6df41504d3fac97cc70a</link>
-      <guid isPermaLink="false">e5750b2</guid>
-      <pubDate>Thu, 08 Oct 2026 14:35:39 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
     </item>
   </channel>
 </rss>

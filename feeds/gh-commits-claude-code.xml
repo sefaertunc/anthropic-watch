@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 21 Oct 2026 11:23:19 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 11:22:45 GMT</lastBuildDate>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/5ed799e5cc56bea9efff57398ca43e31d82784ff</link>
+      <guid isPermaLink="false">5ed799e</guid>
+      <pubDate>Thu, 22 Oct 2026 04:34:32 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/1132b8a98e93300bb3822197fb7eee12ce4fb906</link>
+      <guid isPermaLink="false">1132b8a</guid>
+      <pubDate>Wed, 21 Oct 2026 22:16:38 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>chore: Update CHANGELOG.md and feed.xml</title>
       <link>https://github.com/anthropics/claude-code/commit/d014fc0fa64280540728772fc84063918ed185cc</link>
@@ -390,22 +406,6 @@
       <pubDate>Tue, 29 Sep 2026 08:09:10 GMT</pubDate>
       <category>gh-commits-claude-code</category>
       <description>claude-sonnet-4-5 predates auto mode, so Claude Code fell back to its default permission mode in the dedupe job. Move it and claude.yml to claude-sonnet-4-6. The action sets --permission-mode acceptEdits for @claude mentions and appends the workflow&apos;s claude_args after it, so the --permission-mode a</description>
-    </item>
-    <item>
-      <title>mods: revert two changes (agents-md truncated reads, diff forced colors) (#98018)</title>
-      <link>https://github.com/anthropics/claude-code/commit/dec92bc87ab6fe9c7be0fcba1f97966f902dd243</link>
-      <guid isPermaLink="false">dec92bc</guid>
-      <pubDate>Tue, 29 Sep 2026 00:05:53 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>* Revert &quot;agents-md: the truncated-read tests laid out as the formatter lays them&quot;  * Revert &quot;fix(agents-md): retain instructions after truncated reads&quot;  * Revert &quot;diff: the shared diff arguments&apos; doc says what --no-color pins&quot;  * Revert &quot;fix(diff): preserve hunks when Git forces colored output&quot;</description>
-    </item>
-    <item>
-      <title>Fail the check when settings name a file outside the repository</title>
-      <link>https://github.com/anthropics/claude-code/commit/574ef0b8b75695b38d15fd35173d6ac0e9e5066e</link>
-      <guid isPermaLink="false">574ef0b</guid>
-      <pubDate>Mon, 28 Sep 2026 18:56:30 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>The check can&apos;t read such a file, so it can&apos;t tell whether it sets a permission mode.</description>
     </item>
   </channel>
 </rss>
