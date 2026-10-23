@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-22T11:22:45.270Z",
+  "generated": "2026-10-23T11:12:47.189Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "65823ec",
+      "title": "chore: Update CHANGELOG.md and feed.xml",
+      "date": "2026-10-22T22:18:33Z",
+      "url": "https://github.com/anthropics/claude-code/commit/65823ec0034ed0aa0266bc43903fefd3ff94a327",
+      "snippet": "Fixes #97469 Fixes #102981",
+      "source": "gh-commits-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
+      "uniqueKey": "65823ec|gh-commits-claude-code"
+    },
     {
       "id": "5ed799e",
       "title": "chore: Update CHANGELOG.md and feed.xml",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
       "uniqueKey": "0d7f14d|gh-commits-claude-code"
-    },
-    {
-      "id": "7dbaea2",
-      "title": "Run @claude mentions and dedupe in auto mode on a model that supports it",
-      "date": "2026-09-29T08:09:10Z",
-      "url": "https://github.com/anthropics/claude-code/commit/7dbaea237fca9aed7baf250390ec4d49a57a2211",
-      "snippet": "claude-sonnet-4-5 predates auto mode, so Claude Code fell back to its default permission mode in the dedupe job. Move it and claude.yml to claude-sonnet-4-6. The action sets --permission-mode acceptEdits for @claude mentions and appends the workflow's claude_args after it, so the --permission-mode a",
-      "source": "gh-commits-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-code (main commits, pre-release signal)",
-      "uniqueKey": "7dbaea2|gh-commits-claude-code"
     }
   ]
 }

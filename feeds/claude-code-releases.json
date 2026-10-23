@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-22T11:22:45.238Z",
+  "generated": "2026-10-23T11:12:47.144Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.309",
+      "title": "v2.1.309",
+      "date": "2026-10-22T22:18:57Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+      "snippet": "What's changed\n- Fixed sandboxed Bash commands on macOS and Linux running the shell's startup files outside the sandbox before each command\n- Fixed macOS sandbox denyWrite glob patterns not applying at a path's real location when the pattern's folder is reached through a symlink\n- Fixed sandboxed co",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.309|claude-code-releases"
+    },
     {
       "id": "v2.1.308",
       "title": "v2.1.308",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.248|claude-code-releases"
-    },
-    {
-      "id": "v2.1.247",
-      "title": "v2.1.247",
-      "date": "2026-08-26T23:06:39Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
-      "snippet": "What's changed\n- Added the SendFeedback tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from /feedback (turn off with the feedbackDrafts setting)\n- Added {id, text, cooldownSessions, priority} entries, tipsFile, and label to spinnerTipsOver",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.247|claude-code-releases"
     }
   ]
 }

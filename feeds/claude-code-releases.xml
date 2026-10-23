@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 22 Oct 2026 11:22:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 11:12:47 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.309</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.309</link>
+      <guid isPermaLink="false">v2.1.309</guid>
+      <pubDate>Thu, 22 Oct 2026 22:18:57 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed sandboxed Bash commands on macOS and Linux running the shell&apos;s startup files outside the sandbox before each command
+- Fixed macOS sandbox denyWrite glob patterns not applying at a path&apos;s real location when the pattern&apos;s folder is reached through a symlink
+- Fixed sandboxed co</description>
+    </item>
     <item>
       <title>v2.1.308</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.308</link>
@@ -496,16 +507,6 @@
       <description>What&apos;s changed
 - Added --restricted (or CLAUDECODERESTRICTED=1): removes the built-in tools that run commands or code and WebFetch (unless named in --tools), keeps file tools inside the working directory, refuses bypassPermissions, and ignores user, project and local settings files
 - Added experimen</description>
-    </item>
-    <item>
-      <title>v2.1.247</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.247</link>
-      <guid isPermaLink="false">v2.1.247</guid>
-      <pubDate>Wed, 26 Aug 2026 23:06:39 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added the SendFeedback tool: when something goes wrong in a session, Claude can draft a feedback report for you to review and send from /feedback (turn off with the feedbackDrafts setting)
-- Added {id, text, cooldownSessions, priority} entries, tipsFile, and label to spinnerTipsOver</description>
     </item>
   </channel>
 </rss>

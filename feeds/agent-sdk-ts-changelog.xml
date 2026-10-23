@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 22 Oct 2026 11:22:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 11:12:47 GMT</lastBuildDate>
+    <item>
+      <title>0.3.309</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.309</guid>
+      <pubDate>Fri, 23 Oct 2026 11:11:59 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Fixed host-supplied managedSettings dropping disableAllHooks, disableSkillShellExecution and empty allowedHttpHookUrls / httpHookAllowedEnvVars lists
+- Changed extractFromBunfs() to extract the embedded CLI into its own per-user temp directory (claude-agent-sdk-&lt;uid&gt;, or claude-agent-sdk on Window</description>
+    </item>
     <item>
       <title>0.3.308</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -439,15 +448,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Removed unused bypasspermissionsdisabled from ExitReason type; the value was never emitted — TypeScript consumers with an explicit case branch get a compile error on upgrade (runtime unaffected)
 - Updated the ApiKeySource type to include the values system/init actually reports (ANTHROPICAPIKEY, ap</description>
-    </item>
-    <item>
-      <title>0.3.233</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.233</guid>
-      <pubDate>Sat, 15 Aug 2026 06:40:40 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Notification hooks now fire for pending permission prompts on the SDK path, matching the interactive REPL behavior
-- Todo/task-tracking tools (TaskCreate/TaskGet/TaskUpdate/TaskList, TodoWrite) are no longer in the default tool surface on Opus 4.8, Sonnet 5, Fable 5, Mythos 5, and newer models; na</description>
     </item>
   </channel>
 </rss>

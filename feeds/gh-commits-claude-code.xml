@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 22 Oct 2026 11:22:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 11:12:47 GMT</lastBuildDate>
+    <item>
+      <title>chore: Update CHANGELOG.md and feed.xml</title>
+      <link>https://github.com/anthropics/claude-code/commit/65823ec0034ed0aa0266bc43903fefd3ff94a327</link>
+      <guid isPermaLink="false">65823ec</guid>
+      <pubDate>Thu, 22 Oct 2026 22:18:33 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description>Fixes #97469 Fixes #102981</description>
+    </item>
     <item>
       <title>chore: Update CHANGELOG.md and feed.xml</title>
       <link>https://github.com/anthropics/claude-code/commit/5ed799e5cc56bea9efff57398ca43e31d82784ff</link>
@@ -398,14 +406,6 @@
       <pubDate>Tue, 29 Sep 2026 17:27:48 GMT</pubDate>
       <category>gh-commits-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>Run @claude mentions and dedupe in auto mode on a model that supports it</title>
-      <link>https://github.com/anthropics/claude-code/commit/7dbaea237fca9aed7baf250390ec4d49a57a2211</link>
-      <guid isPermaLink="false">7dbaea2</guid>
-      <pubDate>Tue, 29 Sep 2026 08:09:10 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description>claude-sonnet-4-5 predates auto mode, so Claude Code fell back to its default permission mode in the dedupe job. Move it and claude.yml to claude-sonnet-4-6. The action sets --permission-mode acceptEdits for @claude mentions and appends the workflow&apos;s claude_args after it, so the --permission-mode a</description>
     </item>
   </channel>
 </rss>
