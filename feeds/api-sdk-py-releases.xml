@@ -6,7 +6,34 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 23 Oct 2026 11:12:47 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 10:31:10 GMT</lastBuildDate>
+    <item>
+      <title>v2.3.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.3.0</link>
+      <guid isPermaLink="false">v2.3.0</guid>
+      <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+      <category>api-sdk-py-releases</category>
+      <description>Features
+ api: add Claude Tag endpoints for Claude Enterprise organizations
+ Bug Fixes
+ google-cloud: send user profiles requests to the organization endpoint
+ Chores
+ client: stop sending query params hardcoded in endpoint paths
+ docs: improve the descriptions of the code execution tool and its enc</description>
+    </item>
+    <item>
+      <title>v2.2.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.2.0</link>
+      <guid isPermaLink="false">v2.2.0</guid>
+      <pubDate>Fri, 23 Oct 2026 13:10:10 GMT</pubDate>
+      <category>api-sdk-py-releases</category>
+      <description>Features
+ api: add support for message threads
+ api: add usage and cost reports by dimension, mark older reports legacy
+ Bug Fixes
+ client: stop suggesting math.inf in the maxretries error message
+ tools: leave the tool runner&apos;s history to the caller after appendmessages(), and keep the current repl</description>
+    </item>
     <item>
       <title>v2.1.0</title>
       <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0</link>
@@ -631,26 +658,6 @@ Full Changelog: v0.105.2...v0.106.0
  transform schema: preserve $defs when schema root is a $ref (1642) (fc58e06)
  Chores
  internal: fix a</description>
-    </item>
-    <item>
-      <title>v0.105.2</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.2</link>
-      <guid isPermaLink="false">v0.105.2</guid>
-      <pubDate>Fri, 29 May 2026 00:20:59 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.105.2 (2026-05-29)
-Full Changelog: v0.105.1...v0.105.2</description>
-    </item>
-    <item>
-      <title>v0.105.1</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.1</link>
-      <guid isPermaLink="false">v0.105.1</guid>
-      <pubDate>Fri, 29 May 2026 00:07:37 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.105.1 (2026-05-29)
-Full Changelog: v0.105.0...v0.105.1
- Chores
- internal: use Trusted Publishing for PyPI releases (1d04fc5)</description>
     </item>
   </channel>
 </rss>

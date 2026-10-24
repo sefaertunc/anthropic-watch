@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 23 Oct 2026 11:12:47 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 10:31:10 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.310</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.310</link>
+      <guid isPermaLink="false">v2.1.310</guid>
+      <pubDate>Fri, 23 Oct 2026 23:39:00 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too
+- Fixed requests failing behind some gateways and compatible servers that reject the effort-2025-11-24</description>
+    </item>
     <item>
       <title>v2.1.309</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.309</link>
@@ -497,16 +507,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Bug fixes and reliability improvements</description>
-    </item>
-    <item>
-      <title>v2.1.248</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.248</link>
-      <guid isPermaLink="false">v2.1.248</guid>
-      <pubDate>Thu, 27 Aug 2026 22:12:20 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added --restricted (or CLAUDECODERESTRICTED=1): removes the built-in tools that run commands or code and WebFetch (unless named in --tools), keeps file tools inside the working directory, refuses bypassPermissions, and ignores user, project and local settings files
-- Added experimen</description>
     </item>
   </channel>
 </rss>

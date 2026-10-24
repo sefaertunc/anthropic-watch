@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 23 Oct 2026 11:12:47 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 10:31:10 GMT</lastBuildDate>
+    <item>
+      <title>chore: release v20.0.0 (#2106)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6d4ea18320984083107f07ff69587fa355ee94c0</link>
+      <guid isPermaLink="false">6d4ea18</guid>
+      <pubDate>Sat, 24 Oct 2026 09:03:31 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Prepare **AAS 20.0.0 — The Full-Catalog Review**: 2,750 skill entrypoints across 2,648 retained root bundles, with eleven additions and four restrictive-license removals since 19.15.0. Regenerates all protected distribution surfaces from the reviewed canonical catalog, in</description>
+    </item>
+    <item>
+      <title>fix: keep documentation smoke checks read-only (#2107)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ea0b9f02a52b79284ec9d2552fa29525bbd2ab23</link>
+      <guid isPermaLink="false">ea0b9f0</guid>
+      <pubDate>Sat, 24 Oct 2026 08:48:40 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Prevents the 2slides help/voice-list smoke checks from creating Python bytecode inside canonical skill resources. That cache made the existing distribution mirror comparison fail after security:docs, blocking the 20.0.0 release. Uses Python -B for three subprocesses and a</description>
+    </item>
+    <item>
+      <title>docs: set Atlas Cloud badge CTA referral (#2104)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d6b7ae27c06c015f1bc47ba2d694d1eb9e1cdeaf</link>
+      <guid isPermaLink="false">d6b7ae2</guid>
+      <pubDate>Sat, 24 Oct 2026 08:11:50 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Sets the existing Powered by Atlas Cloud badge destination to the user-requested https://www.atlascloud.ai?ref=M9PEA3. Keeps the badge artwork and existing support attribution intact.</description>
+    </item>
+    <item>
+      <title>docs: prepare 20.0.0 full-catalog review release notes (#2103)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/54e1e0722c6328d354167d2c76e873de91880448</link>
+      <guid isPermaLink="false">54e1e07</guid>
+      <pubDate>Sat, 24 Oct 2026 07:59:17 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Prepares the 20.0.0 Full-Catalog Review changelog and reconciles the campaign&apos;s final merged status. Counts distinguish 2,648 retained root bundles from 2,750 nested-inclusive skill entrypoints. Documents 2,042 campaign corrections, 322 retained dispositions, four license</description>
+    </item>
+    <item>
+      <title>Update Datacircle&apos;s skill (#2099)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/12bb66a605e83fa06745f6ebd7e3b6c6cd6b3d01</link>
+      <guid isPermaLink="false">12bb66a</guid>
+      <pubDate>Sat, 24 Oct 2026 07:51:30 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Updates Datacircle&apos;s priceScore and perThousand field explanations: documents the benchmark-price fallback and makes page rounding, flat-fee allocation, monthly fees, top-ups and unknown prices explicit. Keeps the reviewed HTTPS download bounds and comparison/privacy/auth</description>
+    </item>
+    <item>
+      <title>fix: restore original UX3 diagram assets (#2102)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c8fa2aaa029ebb5f5faca9298b1fe243cc2672e5</link>
+      <guid isPermaLink="false">c8fa2aa</guid>
+      <pubDate>Sat, 24 Oct 2026 07:00:01 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Restores the original decision-gate.svg and harness-sequence.svg in product-design-harness, with their original paths and exact upstream Git blobs. Reconnects the diagrams from the handbook and operating-sequence documentation. The canonical source now retains all 91 upst</description>
+    </item>
+    <item>
+      <title>fix: remediate open Dependabot vulnerabilities without release (#2100)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/d86e77d6c5cb8b57fe7058f46a79d358a0611f33</link>
+      <guid isPermaLink="false">d86e77d</guid>
+      <pubDate>Sat, 24 Oct 2026 05:54:49 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Repairs all 23 recorded Dependabot alert paths without a release: 17 alerts in canonical dependency graphs and 6 alerts on five existing full-plugin lockfile replicas. Updates body-parser to 1.20.9/2.4.0, fast-uri to 3.1.9, undici to 8.12.3 and stale ip-address to 10.7.4.</description>
+    </item>
+    <item>
+      <title>fix: verify owner-only security lockfile replica repairs (#2101)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/11681e64343ef4771e9678ea204dd70a8c049ea2</link>
+      <guid isPermaLink="false">11681e6</guid>
+      <pubDate>Sat, 24 Oct 2026 05:46:09 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Allows an explicitly requested no-release dependency-security repair to synchronize existing inert lockfile replicas in the two full official plugin mirrors. Required to repair the mirrored Dependabot findings in #2100 without publishing a release.  Trusted-base intake ve</description>
+    </item>
+    <item>
+      <title>fix: complete individual skill review batch 17 (118 trees) (#2097)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/dda521de21f2cbcba0d8b8476e13f106fd7c3bdd</link>
+      <guid isPermaLink="false">dda521d</guid>
+      <pubDate>Sat, 24 Oct 2026 00:45:28 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Completes the final individual catalog-review batch: 107 remaining frozen-inventory roots plus 11 additions on current main, for 118 root dispositions. Corrects 116 trees and removes docx-official/pptx-official after restrictive-license review. The 113 other removed files</description>
+    </item>
+    <item>
+      <title>fix: bind deleted canonical aliases in review evidence (#2098)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f35ba64bb2e12491de4d7b64dd7e7cee502b0a75</link>
+      <guid isPermaLink="false">f35ba64</guid>
+      <pubDate>Sat, 24 Oct 2026 00:39:26 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description># Pull Request Description  Fixes the exact raw-diff evidence mismatch blocking #2097 when obsolete top-level symlink aliases are deleted alongside their canonical skill trees. The evaluator now emits deleted-alias records only for direct, lowercase canonical targets deleted in the same diff. The me</description>
+    </item>
     <item>
       <title>fix: repair 44 skill entrypoints after a 150-tree review (#2069)</title>
       <link>https://github.com/sickn33/agentic-awesome-skills/commit/dee7acce0658c35cb276154892700811affcfdb2</link>
@@ -326,86 +406,6 @@
       <pubDate>Sun, 18 Oct 2026 08:18:38 GMT</pubDate>
       <category>gh-commits-antigravity-awesome-skills</category>
       <description># Pull Request Description  Adds `skills/aident-loadout`, the official skill for [Aident Loadout](https://aident.ai), a hosted capability layer for AI agents. It drives the hosted Aident MCP server (`https://loadout.aident.ai/mcp`, Streamable HTTP + OAuth): search actions across apps the user has co</description>
-    </item>
-    <item>
-      <title>chore: release v19.8.0 (#1962)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/c564f9f4aee8a143c48218805b65f0f6956c6264</link>
-      <guid isPermaLink="false">c564f9f</guid>
-      <pubDate>Fri, 16 Oct 2026 11:51:21 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Prepare protected release v19.8.0.</description>
-    </item>
-    <item>
-      <title>docs: correct the 19.8.0 counts and add altorank (#1961)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/7226f92e6a9856ec8fbf1a36c5ced82d83d079aa</link>
-      <guid isPermaLink="false">7226f92</guid>
-      <pubDate>Fri, 16 Oct 2026 11:36:56 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add altorank skill (SEO readiness, Search Console, drafts via MCP) (#1959)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/645f2f145d6f277f05b0d25c003eff4f946288e4</link>
-      <guid isPermaLink="false">645f2f1</guid>
-      <pubDate>Fri, 16 Oct 2026 11:20:01 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds `skills/altorank`, the official skill for [AltoRank](https://github.com/AltoRank/altorank) (open-source SEO content software, AGPL-3.0). It drives AltoRank&apos;s hosted MCP server (`https://app.altorank.co/api/mcp`, Streamable HTTP + OAuth, listed in the MCP registry as </description>
-    </item>
-    <item>
-      <title>docs: add the 19.8.0 changelog entry (#1957)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/36c52e7df60bc3a2c773614cd4a3bd4bae6c5a91</link>
-      <guid isPermaLink="false">36c52e7</guid>
-      <pubDate>Fri, 16 Oct 2026 10:34:43 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add agentic-verify and agentic-test-audit skills (#1956)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/a2b951a6cdb67c612f70867f07ddfdb2808ea7e1</link>
-      <guid isPermaLink="false">a2b951a</guid>
-      <pubDate>Fri, 16 Oct 2026 09:58:12 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Adds two community skills from [timini/agentic-verification](https://github.com/timini/agentic-verification) v0.3.0 (MIT), plus a README credit:  - `skills/agentic-verify/SKILL.md`: check a Python change by running every mutant of the changed lines and writing tests until they catch them. It reports</description>
-    </item>
-    <item>
-      <title>feat: add obsess for checked, budgeted polish of one target (#1938)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/00d4293fa0354900e1cec03173c3cbd598acd97f</link>
-      <guid isPermaLink="false">00d4293</guid>
-      <pubDate>Fri, 16 Oct 2026 09:35:18 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Adds `skills/obsess/`, a community skill from [UmarSiddiqui/obsess](https://github.com/UmarSiddiqui/obsess) (MIT, author submitting).  It points a coding agent at one target that isn&apos;t right, such as a toggle that snaps or a button that clips at 320px. The agent makes one change at a time, checks ea</description>
-    </item>
-    <item>
-      <title>feat: add Openhook callback-testing skill (#1943)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ee94fd301947d2a06e43eb6b97098b98361fafd9</link>
-      <guid isPermaLink="false">ee94fd3</guid>
-      <pubDate>Fri, 16 Oct 2026 09:29:00 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description># Pull Request Description  Adds `openhook`, a callback-testing skill adapted from Openhook&apos;s MIT source. It covers creating a disposable inbox, waiting with a cursor, inspecting the received payload, and cleaning up only the authorized test resource. The practical use case is checking what an exter</description>
-    </item>
-    <item>
-      <title>feat: add logo-to-stickers for playful brand sticker sets (#1939)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/35e4478006d67d752d4350b7db80945ef73ac9ce</link>
-      <guid isPermaLink="false">35e4478</guid>
-      <pubDate>Fri, 16 Oct 2026 09:22:50 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>This adds `logo-to-stickers`, a design workflow for translating a real brand mark into consistent paper-sticker characters with small visual stories.  The source includes fifteen actual outputs and their generation prompts across three different transformations: Qunxue logo fragments become a resear</description>
-    </item>
-    <item>
-      <title>chore: admit reviewed fork bundles from PRs #1938, #1939 and #1943 (#1954)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/ccb01745238d12cccaa82250dfd4448ecf0dd146</link>
-      <guid isPermaLink="false">ccb0174</guid>
-      <pubDate>Fri, 16 Oct 2026 09:15:38 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat: add moooai coupon skills (takeout/trip/movie/parcel/all-in-one) (#1944)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/cb1458245392b8e6d68e0edd0176aa30a8b2ea70</link>
-      <guid isPermaLink="false">cb14582</guid>
-      <pubDate>Fri, 16 Oct 2026 08:57:26 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description>Adds 5 community coupon skills adapted from the open-source [moooai](https://github.com/moooai) repositories (source-only PR, no generated registry artifacts):  - `takeout-coupon` - Meituan / Ele.me-Taobao Shangou / JD Waimai hidden coupons and claim pages - `trip-coupon` - Didi ride-hailing and hot</description>
     </item>
   </channel>
 </rss>
