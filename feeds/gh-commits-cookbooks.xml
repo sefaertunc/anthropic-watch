@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Sat, 24 Oct 2026 10:31:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 10:57:40 GMT</lastBuildDate>
+    <item>
+      <title>Bump cookbook defaults to Opus 5.5, Sonnet 5.5 and Fable 5.1 (#924)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/bfe50e59dbb4f5546a0af9ca36ebb77e637c9ce1</link>
+      <guid isPermaLink="false">bfe50e5</guid>
+      <pubDate>Sat, 24 Oct 2026 18:54:16 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description/>
+    </item>
     <item>
       <title>feat(managed_agents): add agent security review cookbook (#926)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/a162e0184e71b60290808a43961a6cbc8060123c</link>
@@ -398,14 +406,6 @@
       <pubDate>Mon, 06 Jul 2026 19:24:48 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>Code blocks are already skipped by default (include_verbatim defaults to false), so the field just goes.</description>
-    </item>
-    <item>
-      <title>Fix lychee.toml for lychee 0.23: headers field was renamed</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/f9c8ca52613cee0cdceb76a760d8102234e05c40</link>
-      <guid isPermaLink="false">f9c8ca5</guid>
-      <pubDate>Mon, 06 Jul 2026 19:20:20 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>The check-links workflow has been failing to parse the config (unknown field &apos;headers&apos;), so links were never actually checked. The only header set was the user agent, which has a dedicated option.</description>
     </item>
   </channel>
 </rss>
