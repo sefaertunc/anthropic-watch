@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 26 Oct 2026 12:28:51 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 11:47:23 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #6908 from anthropics/mhegazy/sg-bump-2.0.17</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/41f619d61b999adec1a1c8deb97d1a5b6ac35bb6</link>
+      <guid isPermaLink="false">41f619d</guid>
+      <pubDate>Tue, 27 Oct 2026 00:23:46 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: bump version to 2.0.17</description>
+    </item>
+    <item>
+      <title>Merge pull request #6875 from anthropics/mhegazy/sg-inflight-windows-lock</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/bb06f2e9bcd41a4ba0c1f96daa63f1b5a335bc46</link>
+      <guid isPermaLink="false">bb06f2e</guid>
+      <pubDate>Tue, 27 Oct 2026 00:22:48 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: hold in-flight review markers on native Windows too</description>
+    </item>
+    <item>
+      <title>security-guidance: bump version to 2.0.17</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a29a80b5877bae49e3b058cc6dd86bda07bcf1cc</link>
+      <guid isPermaLink="false">a29a80b</guid>
+      <pubDate>Tue, 27 Oct 2026 00:16:33 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #6903 from anthropics/mhegazy/sg-reviewer-stage-metrics</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/da54ddb82e1e5c89ca2669bb866f5ab4fdb21cac</link>
+      <guid isPermaLink="false">da54ddb</guid>
+      <pubDate>Mon, 26 Oct 2026 23:57:07 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: report turns and model time of a commit review (measure only)</description>
+    </item>
+    <item>
+      <title>Merge remote-tracking branch &apos;origin/main&apos; into HEAD</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a3c2f20c0f46e3b0a76ef6e69fcc13c6faca763a</link>
+      <guid isPermaLink="false">a3c2f20</guid>
+      <pubDate>Mon, 26 Oct 2026 23:13:53 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge remote-tracking branch &apos;origin/main&apos; into HEAD</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f4174b901f6c4579186587b63e7658946f18b644</link>
+      <guid isPermaLink="false">f4174b9</guid>
+      <pubDate>Mon, 26 Oct 2026 23:07:49 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #6861 from anthropics/mhegazy/sg-add-fail-metric</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1da406f428c285c701a1033a3aef368a9ab865dc</link>
+      <guid isPermaLink="false">1da406f</guid>
+      <pubDate>Mon, 26 Oct 2026 23:07:36 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: count failed git add -N calls in the Stop review</description>
+    </item>
+    <item>
+      <title>Merge pull request #6839 from anthropics/mhegazy/sg-network-failure-class</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e180b805636c45c0ed70d31716c56706e669b295</link>
+      <guid isPermaLink="false">e180b80</guid>
+      <pubDate>Mon, 26 Oct 2026 23:03:33 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: report why a review call got no HTTP response</description>
+    </item>
+    <item>
+      <title>Merge pull request #6836 from anthropics/mhegazy/sg-diff-seen-count</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ced0aa953bf0689e48308de3405bf276421dce63</link>
+      <guid isPermaLink="false">ced0aa9</guid>
+      <pubDate>Mon, 26 Oct 2026 23:02:51 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: count reviews of a diff that was already reviewed</description>
+    </item>
+    <item>
+      <title>Merge pull request #6858 from anthropics/mhegazy/sg-prompt-capture-time</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/3cb00e4a01a0256535ccd8555a286da190625e0f</link>
+      <guid isPermaLink="false">3cb00e4</guid>
+      <pubDate>Mon, 26 Oct 2026 23:02:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: report where a slow prompt&apos;s time goes</description>
+    </item>
     <item>
       <title>Merge pull request #6849 from anthropics/mhegazy/sg-unreadable-store-cert</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/af59ee3a1051a29dda4a2e7a2af221aa457ae08b</link>
@@ -326,86 +406,6 @@
       <pubDate>Sat, 10 Oct 2026 22:22:40 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Google renamed the plugin&apos;s repository and moved it from gemini-cli-extensions/data-agent-kit-starter-pack to GoogleCloudPlatform/data-agent-kit-plugin, and released 1.0.0.  Rename the entry to data-agent-kit and add a renames entry so installs under the old name follow it. Point the source at the n</description>
-    </item>
-    <item>
-      <title>bump(snowflake-cortex-code): 0c54225e → e2a3cbb4 (#6389)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b8e53f1c05dff3b6d751297f6527990ffc81c2f4</link>
-      <guid isPermaLink="false">b8e53f1</guid>
-      <pubDate>Fri, 09 Oct 2026 20:54:09 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(crowdstrike-falcon-foundry, crowdstrike-falcon-fusion): v1.6.0, v1.3.0 (#6388)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/5238fd480c7b97696942bf12f24b734a0a9bed67</link>
-      <guid isPermaLink="false">5238fd4</guid>
-      <pubDate>Fri, 09 Oct 2026 20:53:58 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(posthog): 469d1773 → e0fbf5e7 (#6387)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a826eaa2a84c83941f4b45bb297251231d3c6ab2</link>
-      <guid isPermaLink="false">a826eaa</guid>
-      <pubDate>Fri, 09 Oct 2026 20:53:46 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(qodo, qodo-standards): 7dd3e7ec → 866d301d (#6386)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/263397e2a5b3783f7de8f1e685215acf9e9ad512</link>
-      <guid isPermaLink="false">263397e</guid>
-      <pubDate>Fri, 09 Oct 2026 20:53:33 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(fullstory): b20614e2 → ca872d97 (#6384)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/4992ab30b0cd8d3083b727522311f29f58486634</link>
-      <guid isPermaLink="false">4992ab3</guid>
-      <pubDate>Fri, 09 Oct 2026 20:53:21 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(slack): 80443417 → b073ebc2 (#6383)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/978d1238360507054219c2ca299b28324a14b867</link>
-      <guid isPermaLink="false">978d123</guid>
-      <pubDate>Fri, 09 Oct 2026 20:53:09 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>hostinger: update description (#6401)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ef88f0733357141f66575f1f40b0b8b4d31fc55e</link>
-      <guid isPermaLink="false">ef88f07</guid>
-      <pubDate>Fri, 09 Oct 2026 20:52:57 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>bump(carta-cap-table, carta-crm): 6ab81016 → 43e49ed3 (#6385)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/763beda0edf036f9149948499928dba6baf1af26</link>
-      <guid isPermaLink="false">763beda</guid>
-      <pubDate>Fri, 09 Oct 2026 20:23:55 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Squash merge of 1 commit</description>
-    </item>
-    <item>
-      <title>Merge pull request #6396 from anthropics/oct/sg-prompt-cache</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ac996c0dde7fb2a9f805cd5277ffc95ecd44a321</link>
-      <guid isPermaLink="false">ac996c0</guid>
-      <pubDate>Fri, 09 Oct 2026 16:01:58 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: enable prompt caching for review requests</description>
-    </item>
-    <item>
-      <title>Merge pull request #6398 from anthropics/oct/sg-2.0.12</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b860d6f2554f145fe1e7ac4cdcabca0120d14030</link>
-      <guid isPermaLink="false">b860d6f</guid>
-      <pubDate>Fri, 09 Oct 2026 11:57:56 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: bump to 2.0.12</description>
     </item>
   </channel>
 </rss>
