@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 27 Oct 2026 11:47:23 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 12:20:41 GMT</lastBuildDate>
+    <item>
+      <title>0.3.312</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.312</guid>
+      <pubDate>Wed, 28 Oct 2026 12:19:53 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added autoMode, skipAutoPermissionPrompt, useAutoModeDuringPlan and permissions.disableAutoMode to the Settings type
+- Added unanswered (skipped, repliedinchat or dismissed) to AskUserQuestion answers&apos; per-question annotations; send it only when system/init lists the askuserquestionunansweredv1 ca</description>
+    </item>
     <item>
       <title>0.3.311</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -440,14 +449,6 @@
       <description>- Added isbackgrounded and spawndepth to taskstarted events for subagent tasks (isbackgrounded also on background Bash tasks)
 - Added suppressOriginalPrompt to UserPromptExpansion hook output, matching UserPromptSubmit
 - Added commandlifecycle state refused: a cross-session peer message the session&apos;</description>
-    </item>
-    <item>
-      <title>0.3.237</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.237</guid>
-      <pubDate>Thu, 20 Aug 2026 06:49:11 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.237</description>
     </item>
   </channel>
 </rss>

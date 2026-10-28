@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 27 Oct 2026 11:47:23 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 12:20:41 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.312</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.312</link>
+      <guid isPermaLink="false">v2.1.312</guid>
+      <pubDate>Tue, 27 Oct 2026 20:24:20 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added oidc.useridclaim to the Claude apps gateway, to identify people by an idtoken claim other than sub, such as Microsoft Entra ID&apos;s oid
+- Added click to send: in fullscreen, clicking the &quot;to send now&quot; hint under a queued message sends it right away, as its key does
+- Fixed manage</description>
+    </item>
     <item>
       <title>v2.1.311</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.311</link>
@@ -499,16 +510,6 @@
 - Fixed Bash commands failing with &quot;task output swap refused (tasks dir moved or linked)&quot; on some Macs
 - Fixed &quot;always allow&quot; not saving in a project that has no .claude/settings.local.json yet
 - Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes af</description>
-    </item>
-    <item>
-      <title>v2.1.251</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.251</link>
-      <guid isPermaLink="false">v2.1.251</guid>
-      <pubDate>Fri, 28 Aug 2026 18:19:32 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added PreModelSwitch and PostModelSwitch hook events (block, confirm, or annotate a model switch); SessionStart resume hooks now receive session staleness and the estimated re-cache cost
-- Added live streaming of a foreground subagent&apos;s tool calls and results to Remote Control clien</description>
     </item>
   </channel>
 </rss>
