@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 28 Oct 2026 12:20:41 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 12:30:14 GMT</lastBuildDate>
+    <item>
+      <title>Make Claude Haiku 5.5 the default Haiku (#940)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/c43f56d0360b9b1f631bd090fd199231d4c880cc</link>
+      <guid isPermaLink="false">c43f56d</guid>
+      <pubDate>Thu, 29 Oct 2026 12:05:29 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description/>
+    </item>
     <item>
       <title>Bump cookbook defaults to Opus 5.5, Sonnet 5.5 and Fable 5.1 (#924)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/bfe50e59dbb4f5546a0af9ca36ebb77e637c9ce1</link>
@@ -398,14 +406,6 @@
       <pubDate>Mon, 06 Jul 2026 19:36:36 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>The check-links workflow converts changed notebooks into a flat temp_md/ dir, which breaks resolution of every relative file link - this is why existing notebooks use absolute GitHub URLs. Follow the convention for the sibling-notebook links (they exist on main, so they now get genuinely checked ove</description>
-    </item>
-    <item>
-      <title>lychee.toml: drop skip_code_blocks, also removed in lychee 0.23</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/dfc4861e531e29f362d0d5c9b32ca6c3fc972d64</link>
-      <guid isPermaLink="false">dfc4861</guid>
-      <pubDate>Mon, 06 Jul 2026 19:24:48 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Code blocks are already skipped by default (include_verbatim defaults to false), so the field just goes.</description>
     </item>
   </channel>
 </rss>
