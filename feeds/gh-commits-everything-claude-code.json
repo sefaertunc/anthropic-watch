@@ -5,9 +5,119 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-10-29T12:30:14.134Z",
+  "generated": "2026-10-30T12:22:04.851Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "b38be6a",
+      "title": "Merge pull request #3809 from affaan-m/maint/pr-continuation-20261029",
+      "date": "2026-10-30T03:06:32Z",
+      "url": "https://github.com/affaan-m/ECC/commit/b38be6a7f6350964d59328b52f0624e1d1d552d1",
+      "snippet": "Integrate seven reviewed ECC reliability and guidance fixes",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "b38be6a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "66d7b05",
+      "title": "chore(context): bind curated triggers to reviewed guidance repairs",
+      "date": "2026-10-30T02:43:24Z",
+      "url": "https://github.com/affaan-m/ECC/commit/66d7b0587bf5784fa9173020719f173b2d65d198",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "66d7b05|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "fafdfb5",
+      "title": "Merge independently reviewed context budget and reminder repairs",
+      "date": "2026-10-30T02:42:36Z",
+      "url": "https://github.com/affaan-m/ECC/commit/fafdfb5de6e1ae75c6c0a413132c6a34b2141a5d",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "fafdfb5|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "35769d0",
+      "title": "fix(context): validate budgets and remind before native compaction",
+      "date": "2026-10-30T02:42:27Z",
+      "url": "https://github.com/affaan-m/ECC/commit/35769d00d9cccf4f89b24fd1b096bdd5ce8bb5c5",
+      "snippet": "Reject numeric prefixes, fractions and unsafe window integers consistently with summary scheduling while preserving resolver precedence. Cap only the default context reminder at eighty percent of a valid earlier native compaction budget; explicit thresholds, including zero, retain their intentional ",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "35769d0|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e4f2f88",
+      "title": "docs(tinystruct): validate example login inputs before authentication",
+      "date": "2026-10-30T02:40:29Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e4f2f88a3213d27b910691dfd61777dd6acb4826",
+      "snippet": "Add null, blank and example-specific UTF-16 length checks to the English and Japanese login snippets before AuthService. Preserve credential bytes, authentication-failure behavior and the existing successful-session flow. Label the 256/1024 limits as application examples rather than tinystruct defau",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e4f2f88|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "1739020",
+      "title": "test: preserve exact monitor assertions with actionable diagnostics",
+      "date": "2026-10-30T02:15:56Z",
+      "url": "https://github.com/affaan-m/ECC/commit/1739020dba79c47ef387c14d94e81206792ae362",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "1739020|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "e645a75",
+      "title": "test: make invalid payment signatures deterministic",
+      "date": "2026-10-30T02:15:56Z",
+      "url": "https://github.com/affaan-m/ECC/commit/e645a75c2ac0c0d796d63af1557fb18a6bead4c5",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "e645a75|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "05bc52a",
+      "title": "test(insaits): report captured monitor failure diagnostics",
+      "date": "2026-10-30T02:15:02Z",
+      "url": "https://github.com/affaan-m/ECC/commit/05bc52ae8360106382bdce4b6f5c379991093421",
+      "snippet": "Include captured stderr, status, signal and spawn error message when the existing unexpected-monitor-failure warning assertions fail. Preserve all status/raw-input/warning assertions, deadlines and product bytes.  The macOS hosted failure did not print its actual stderr, so its transient cause remai",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "05bc52a|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "eb26776",
+      "title": "test(x402): reject a provably invalid ECDSA scalar",
+      "date": "2026-10-30T02:14:07Z",
+      "url": "https://github.com/affaan-m/ECC/commit/eb267762a12909fd5b0679498ac7543761f2ec73",
+      "snippet": "Zero the 32-byte r scalar while preserving the signature encoding, length, s and recovery byte. The previous tail overwrite could leave r/s unchanged and normalize recovery 27 to 0, preserving a valid payment. Keep and strengthen no-claim/no-handler/no-settlement checks before serving the original v",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "eb26776|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "3dca6e2",
+      "title": "fix(hooks): preserve provider conversation identity under inherited environments",
+      "date": "2026-10-30T01:57:29Z",
+      "url": "https://github.com/affaan-m/ECC/commit/3dca6e2e8871f7f052c6b335e210108d8964846b",
+      "snippet": "Restore the shipped payload-first contract from #3464/#3495 and the explicit source #3755 scope clarification. Two provider conversations must retain distinct IDs despite an inherited registered ECC parent ID. Normal and ambient producer24 tests, canonical resolver10 and independent differential rev",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "3dca6e2|gh-commits-everything-claude-code"
+    },
     {
       "id": "25278e7",
       "title": "Merge pull request #3736 from haelyra/integration/l4xb-four-hooks-20261025",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "723e097|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "5d26f45",
-      "title": "fix(context): bind manual triggers to the verified storage guidance",
-      "date": "2026-10-11T09:39:44Z",
-      "url": "https://github.com/affaan-m/ECC/commit/5d26f455ee61821ea14c320b890e2fb205eea71b",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "5d26f45|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d0cf7aa",
-      "title": "Merge real model-selector CLI workflows and coverage verification",
-      "date": "2026-10-11T09:38:34Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d0cf7aa6b79f34e32d15f8520f1c39cd3d2fd19e",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d0cf7aa|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "3a80db8",
-      "title": "Merge faithful ripgrep type-case and file-only exclusions",
-      "date": "2026-10-11T09:38:34Z",
-      "url": "https://github.com/affaan-m/ECC/commit/3a80db87d256b3e8716f5390551c843ef612b6a5",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "3a80db8|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "e6ed26d",
-      "title": "Merge storage preflight and operator model normalization repairs",
-      "date": "2026-10-11T09:36:45Z",
-      "url": "https://github.com/affaan-m/ECC/commit/e6ed26d0ad1f67534e545ae11c1b202214b5a2d0",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "e6ed26d|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "0c35647",
-      "title": "test: cover offline model selector operator workflows",
-      "date": "2026-10-11T09:36:06Z",
-      "url": "https://github.com/affaan-m/ECC/commit/0c35647012e71d159254498e1a7fda7cf4f04e94",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "0c35647|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "4eb71d9",
-      "title": "Merge pull request #3484 from affaan-m/integration/ecc-043-20261009-verified",
-      "date": "2026-10-10T01:41:12Z",
-      "url": "https://github.com/affaan-m/ECC/commit/4eb71d92a39cab44ad40ac9d8a6a5ccb4029d6c2",
-      "snippet": "fix: guard literal Git include redirects and env split arguments",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "4eb71d9|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "3849426",
-      "title": "refactor(ci): share the catalog count replacer",
-      "date": "2026-10-10T01:12:00Z",
-      "url": "https://github.com/affaan-m/ECC/commit/3849426a959b6dd21821f78aa6366b8ee224dc1f",
-      "snippet": "Six summary-line replacers in catalog.js each took seven to nine positional capture groups and rebuilt the line by hand. They now go through one catalogCountReplacer factory that takes the regex group count and the groups holding the agents, skills, and commands counts. Every other group is written ",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "3849426|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "34a97fa",
-      "title": "fix: reject unsupported env split-string escapes",
-      "date": "2026-10-10T01:00:40Z",
-      "url": "https://github.com/affaan-m/ECC/commit/34a97fa898a1b8c23766a80c12657afd6b85222a",
-      "snippet": "Validate env -S and --split-string escape syntax before shell scanning or opaque fallback. Preserve literal single-quoted data and charge each validation character against the shared input-proportional work budget.  Verified 787 focused cases and 290 real Git/config, harmless native env and register",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "34a97fa|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "993b5f2",
-      "title": "fix: guard literal Git hook redirects and env split arguments",
-      "date": "2026-10-10T00:32:11Z",
-      "url": "https://github.com/affaan-m/ECC/commit/993b5f230ff4b5120d35463b30e4b2aa7c6ded40",
-      "snippet": "Carry forward bounded literal include/includeIf configuration capabilities and env -S/--split-string words from PRs #2858 and #2897. Charge array copy and expansion work before allocation to preserve the shared quota.  Verified 731 hook cases and 60 real Git/config and registered-route controls. Dyn",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "993b5f2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8384d60",
-      "title": "Merge pull request #3479 from affaan-m/integration/ecc-043-20261009-verified",
-      "date": "2026-10-10T00:07:13Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8384d609a0e6dc071503f669cb6a581420e23469",
-      "snippet": "Integrate reviewed installer, hook, state, and workflow fixes",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8384d60|gh-commits-everything-claude-code"
     }
   ]
 }

@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 29 Oct 2026 12:30:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 12:22:04 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.314</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.314</link>
+      <guid isPermaLink="false">v2.1.314</guid>
+      <pubDate>Fri, 30 Oct 2026 01:06:26 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added permissions.blockWritesOutsideWorkingDirectories: Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode
+- Added an optional groups list to Claude apps gateway upstreams: only developers in the listed IdP groups are sent to that upst</description>
+    </item>
     <item>
       <title>v2.1.312</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.312</link>
@@ -499,17 +509,6 @@
       <description>What&apos;s changed
 - Added Claude Fable 5.1 (claude-fable-5-1), now the default Fable model — 1M context, $10/$50 per Mtok with $0.25/Mtok cache reads
 - Added &quot;Time format&quot; (timeFormat) and timeZone settings: 12-hour, 24-hour, 24-hour UTC, or a strftime pattern for the turn-end clock and transcript-view</description>
-    </item>
-    <item>
-      <title>v2.1.252</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.252</link>
-      <guid isPermaLink="false">v2.1.252</guid>
-      <pubDate>Mon, 31 Aug 2026 19:46:55 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed Bash commands failing with &quot;task output swap refused (tasks dir moved or linked)&quot; on some Macs
-- Fixed &quot;always allow&quot; not saving in a project that has no .claude/settings.local.json yet
-- Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes af</description>
     </item>
   </channel>
 </rss>

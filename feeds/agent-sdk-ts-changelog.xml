@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 29 Oct 2026 12:30:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 12:22:04 GMT</lastBuildDate>
+    <item>
+      <title>0.3.314</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.314</guid>
+      <pubDate>Fri, 30 Oct 2026 12:21:16 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added sandboxrequiredunavailable to startupfailurereason, for the result Claude Code writes when a required sandbox cannot run
+- Added permissions.blockWritesOutsideWorkingDirectories to the Settings type
+- Added prewarm() (alpha) to the @anthropic-ai/claude-agent-sdk/core entry point
+- Fixed a se</description>
+    </item>
     <item>
       <title>0.3.312</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -439,16 +450,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- totalcostusd / modelUsage.costUSD now include the 1.1× US-only-inference (data residency) multiplier when the response reports inferencegeo: &quot;us&quot;
 - A result held back for background subagents in one-shot mode now reports totalcostusd, durationapims and modelUsage as of its release, not the turn-en</description>
-    </item>
-    <item>
-      <title>0.3.238</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.238</guid>
-      <pubDate>Fri, 21 Aug 2026 06:50:26 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added isbackgrounded and spawndepth to taskstarted events for subagent tasks (isbackgrounded also on background Bash tasks)
-- Added suppressOriginalPrompt to UserPromptExpansion hook output, matching UserPromptSubmit
-- Added commandlifecycle state refused: a cross-session peer message the session&apos;</description>
     </item>
   </channel>
 </rss>

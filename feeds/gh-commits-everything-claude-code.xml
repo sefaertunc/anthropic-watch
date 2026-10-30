@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 29 Oct 2026 12:30:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 12:22:04 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #3809 from affaan-m/maint/pr-continuation-20261029</title>
+      <link>https://github.com/affaan-m/ECC/commit/b38be6a7f6350964d59328b52f0624e1d1d552d1</link>
+      <guid isPermaLink="false">b38be6a</guid>
+      <pubDate>Fri, 30 Oct 2026 03:06:32 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Integrate seven reviewed ECC reliability and guidance fixes</description>
+    </item>
+    <item>
+      <title>chore(context): bind curated triggers to reviewed guidance repairs</title>
+      <link>https://github.com/affaan-m/ECC/commit/66d7b0587bf5784fa9173020719f173b2d65d198</link>
+      <guid isPermaLink="false">66d7b05</guid>
+      <pubDate>Fri, 30 Oct 2026 02:43:24 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge independently reviewed context budget and reminder repairs</title>
+      <link>https://github.com/affaan-m/ECC/commit/fafdfb5de6e1ae75c6c0a413132c6a34b2141a5d</link>
+      <guid isPermaLink="false">fafdfb5</guid>
+      <pubDate>Fri, 30 Oct 2026 02:42:36 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(context): validate budgets and remind before native compaction</title>
+      <link>https://github.com/affaan-m/ECC/commit/35769d00d9cccf4f89b24fd1b096bdd5ce8bb5c5</link>
+      <guid isPermaLink="false">35769d0</guid>
+      <pubDate>Fri, 30 Oct 2026 02:42:27 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Reject numeric prefixes, fractions and unsafe window integers consistently with summary scheduling while preserving resolver precedence. Cap only the default context reminder at eighty percent of a valid earlier native compaction budget; explicit thresholds, including zero, retain their intentional </description>
+    </item>
+    <item>
+      <title>docs(tinystruct): validate example login inputs before authentication</title>
+      <link>https://github.com/affaan-m/ECC/commit/e4f2f88a3213d27b910691dfd61777dd6acb4826</link>
+      <guid isPermaLink="false">e4f2f88</guid>
+      <pubDate>Fri, 30 Oct 2026 02:40:29 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Add null, blank and example-specific UTF-16 length checks to the English and Japanese login snippets before AuthService. Preserve credential bytes, authentication-failure behavior and the existing successful-session flow. Label the 256/1024 limits as application examples rather than tinystruct defau</description>
+    </item>
+    <item>
+      <title>test: preserve exact monitor assertions with actionable diagnostics</title>
+      <link>https://github.com/affaan-m/ECC/commit/1739020dba79c47ef387c14d94e81206792ae362</link>
+      <guid isPermaLink="false">1739020</guid>
+      <pubDate>Fri, 30 Oct 2026 02:15:56 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test: make invalid payment signatures deterministic</title>
+      <link>https://github.com/affaan-m/ECC/commit/e645a75c2ac0c0d796d63af1557fb18a6bead4c5</link>
+      <guid isPermaLink="false">e645a75</guid>
+      <pubDate>Fri, 30 Oct 2026 02:15:56 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test(insaits): report captured monitor failure diagnostics</title>
+      <link>https://github.com/affaan-m/ECC/commit/05bc52ae8360106382bdce4b6f5c379991093421</link>
+      <guid isPermaLink="false">05bc52a</guid>
+      <pubDate>Fri, 30 Oct 2026 02:15:02 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Include captured stderr, status, signal and spawn error message when the existing unexpected-monitor-failure warning assertions fail. Preserve all status/raw-input/warning assertions, deadlines and product bytes.  The macOS hosted failure did not print its actual stderr, so its transient cause remai</description>
+    </item>
+    <item>
+      <title>test(x402): reject a provably invalid ECDSA scalar</title>
+      <link>https://github.com/affaan-m/ECC/commit/eb267762a12909fd5b0679498ac7543761f2ec73</link>
+      <guid isPermaLink="false">eb26776</guid>
+      <pubDate>Fri, 30 Oct 2026 02:14:07 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Zero the 32-byte r scalar while preserving the signature encoding, length, s and recovery byte. The previous tail overwrite could leave r/s unchanged and normalize recovery 27 to 0, preserving a valid payment. Keep and strengthen no-claim/no-handler/no-settlement checks before serving the original v</description>
+    </item>
+    <item>
+      <title>fix(hooks): preserve provider conversation identity under inherited environments</title>
+      <link>https://github.com/affaan-m/ECC/commit/3dca6e2e8871f7f052c6b335e210108d8964846b</link>
+      <guid isPermaLink="false">3dca6e2</guid>
+      <pubDate>Fri, 30 Oct 2026 01:57:29 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>Restore the shipped payload-first contract from #3464/#3495 and the explicit source #3755 scope clarification. Two provider conversations must retain distinct IDs despite an inherited registered ECC parent ID. Normal and ambient producer24 tests, canonical resolver10 and independent differential rev</description>
+    </item>
     <item>
       <title>Merge pull request #3736 from haelyra/integration/l4xb-four-hooks-20261025</title>
       <link>https://github.com/affaan-m/ECC/commit/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b</link>
@@ -326,86 +406,6 @@
       <pubDate>Sun, 11 Oct 2026 09:44:22 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description/>
-    </item>
-    <item>
-      <title>fix(context): bind manual triggers to the verified storage guidance</title>
-      <link>https://github.com/affaan-m/ECC/commit/5d26f455ee61821ea14c320b890e2fb205eea71b</link>
-      <guid isPermaLink="false">5d26f45</guid>
-      <pubDate>Sun, 11 Oct 2026 09:39:44 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge real model-selector CLI workflows and coverage verification</title>
-      <link>https://github.com/affaan-m/ECC/commit/d0cf7aa6b79f34e32d15f8520f1c39cd3d2fd19e</link>
-      <guid isPermaLink="false">d0cf7aa</guid>
-      <pubDate>Sun, 11 Oct 2026 09:38:34 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge faithful ripgrep type-case and file-only exclusions</title>
-      <link>https://github.com/affaan-m/ECC/commit/3a80db87d256b3e8716f5390551c843ef612b6a5</link>
-      <guid isPermaLink="false">3a80db8</guid>
-      <pubDate>Sun, 11 Oct 2026 09:38:34 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge storage preflight and operator model normalization repairs</title>
-      <link>https://github.com/affaan-m/ECC/commit/e6ed26d0ad1f67534e545ae11c1b202214b5a2d0</link>
-      <guid isPermaLink="false">e6ed26d</guid>
-      <pubDate>Sun, 11 Oct 2026 09:36:45 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test: cover offline model selector operator workflows</title>
-      <link>https://github.com/affaan-m/ECC/commit/0c35647012e71d159254498e1a7fda7cf4f04e94</link>
-      <guid isPermaLink="false">0c35647</guid>
-      <pubDate>Sun, 11 Oct 2026 09:36:06 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #3484 from affaan-m/integration/ecc-043-20261009-verified</title>
-      <link>https://github.com/affaan-m/ECC/commit/4eb71d92a39cab44ad40ac9d8a6a5ccb4029d6c2</link>
-      <guid isPermaLink="false">4eb71d9</guid>
-      <pubDate>Sat, 10 Oct 2026 01:41:12 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix: guard literal Git include redirects and env split arguments</description>
-    </item>
-    <item>
-      <title>refactor(ci): share the catalog count replacer</title>
-      <link>https://github.com/affaan-m/ECC/commit/3849426a959b6dd21821f78aa6366b8ee224dc1f</link>
-      <guid isPermaLink="false">3849426</guid>
-      <pubDate>Sat, 10 Oct 2026 01:12:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Six summary-line replacers in catalog.js each took seven to nine positional capture groups and rebuilt the line by hand. They now go through one catalogCountReplacer factory that takes the regex group count and the groups holding the agents, skills, and commands counts. Every other group is written </description>
-    </item>
-    <item>
-      <title>fix: reject unsupported env split-string escapes</title>
-      <link>https://github.com/affaan-m/ECC/commit/34a97fa898a1b8c23766a80c12657afd6b85222a</link>
-      <guid isPermaLink="false">34a97fa</guid>
-      <pubDate>Sat, 10 Oct 2026 01:00:40 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Validate env -S and --split-string escape syntax before shell scanning or opaque fallback. Preserve literal single-quoted data and charge each validation character against the shared input-proportional work budget.  Verified 787 focused cases and 290 real Git/config, harmless native env and register</description>
-    </item>
-    <item>
-      <title>fix: guard literal Git hook redirects and env split arguments</title>
-      <link>https://github.com/affaan-m/ECC/commit/993b5f230ff4b5120d35463b30e4b2aa7c6ded40</link>
-      <guid isPermaLink="false">993b5f2</guid>
-      <pubDate>Sat, 10 Oct 2026 00:32:11 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Carry forward bounded literal include/includeIf configuration capabilities and env -S/--split-string words from PRs #2858 and #2897. Charge array copy and expansion work before allocation to preserve the shared quota.  Verified 731 hook cases and 60 real Git/config and registered-route controls. Dyn</description>
-    </item>
-    <item>
-      <title>Merge pull request #3479 from affaan-m/integration/ecc-043-20261009-verified</title>
-      <link>https://github.com/affaan-m/ECC/commit/8384d609a0e6dc071503f669cb6a581420e23469</link>
-      <guid isPermaLink="false">8384d60</guid>
-      <pubDate>Sat, 10 Oct 2026 00:07:13 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>Integrate reviewed installer, hook, state, and workflow fixes</description>
     </item>
   </channel>
 </rss>
