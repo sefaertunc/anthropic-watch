@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 30 Oct 2026 12:22:04 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 11:52:40 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.316</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.316</link>
+      <guid isPermaLink="false">v2.1.316</guid>
+      <pubDate>Sat, 31 Oct 2026 01:01:35 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added CLAUDECODEDISABLEULTRATHINK, which turns the ultrathink keyword off
+- Added pooled group budgets to the Claude apps gateway: one monthly budget that a group&apos;s members share, on top of each member&apos;s own limit, set with pooledbudget on the spend limits admin API
+- Added CLAUDECO</description>
+    </item>
     <item>
       <title>v2.1.314</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.314</link>
@@ -499,16 +510,6 @@
       <description>What&apos;s changed
 - Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255
 - Fixed remote and scheduled sessions failing with &quot;user messages must have non-empty content&quot; after a re-sent permission approval could not be applied</description>
-    </item>
-    <item>
-      <title>v2.1.257</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.257</link>
-      <guid isPermaLink="false">v2.1.257</guid>
-      <pubDate>Tue, 01 Sep 2026 17:53:52 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added Claude Fable 5.1 (claude-fable-5-1), now the default Fable model — 1M context, $10/$50 per Mtok with $0.25/Mtok cache reads
-- Added &quot;Time format&quot; (timeFormat) and timeZone settings: 12-hour, 24-hour, 24-hour UTC, or a strftime pattern for the turn-end clock and transcript-view</description>
     </item>
   </channel>
 </rss>

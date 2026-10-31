@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 30 Oct 2026 12:22:04 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 11:52:40 GMT</lastBuildDate>
+    <item>
+      <title>runway-api: point at claude/ and update to Runway Dev 4.0.0 (#6951)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/8653e9ff6817e26b6df67ea4542e23ab52d59d25</link>
+      <guid isPermaLink="false">8653e9f</guid>
+      <pubDate>Fri, 30 Oct 2026 18:48:15 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Runway moved the plugin into the claude/ folder of runwayml/skills, so the entry now uses a git-subdir source pinned to fe79eab0. The display name and description now match the 4.0.0 manifest.</description>
+    </item>
     <item>
       <title>Merge pull request #6906 from anthropics/add-plugin-versions</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/f8c5e7a1dcb71b10cb74586224b5401f3de5db28</link>
@@ -398,14 +406,6 @@
       <pubDate>Mon, 12 Oct 2026 19:54:29 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>With no credentials in the hook&apos;s environment every Stop, commit and push review is skipped, and nothing told the user. That is the state of a signed-in session started with CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC, DISABLE_TELEMETRY or DO_NOT_TRACK set, where Claude Code does not pass the sign-in t</description>
-    </item>
-    <item>
-      <title>Merge pull request #6408 from anthropics/mhegazy/data-agent-kit-rename</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f359d43b406057f1a8cdbc4ea93b827642c162e6</link>
-      <guid isPermaLink="false">f359d43</guid>
-      <pubDate>Sun, 11 Oct 2026 02:41:21 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>data-agent-kit: rename, repoint to GoogleCloudPlatform, bump to 1.0.0</description>
     </item>
   </channel>
 </rss>
