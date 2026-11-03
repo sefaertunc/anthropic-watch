@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 02 Nov 2026 15:02:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 13:49:00 GMT</lastBuildDate>
+    <item>
+      <title>0.3.317</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.317</guid>
+      <pubDate>Tue, 03 Nov 2026 13:48:11 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added onFailure to hook matchers: with &quot;block&quot;, a hook that throws or returns invalid output blocks the action
+- Added a warning message in the stream when a hook callback fails
+- Added a sessionwriteslost system message, sent after the last result when a full disk or disk quota kept the CLI from </description>
+    </item>
     <item>
       <title>0.3.316</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -442,14 +452,6 @@
       <pubDate>Tue, 25 Aug 2026 06:51:36 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Updated to parity with Claude Code v2.1.245</description>
-    </item>
-    <item>
-      <title>0.3.241</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.241</guid>
-      <pubDate>Sun, 23 Aug 2026 06:42:55 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.241</description>
     </item>
   </channel>
 </rss>

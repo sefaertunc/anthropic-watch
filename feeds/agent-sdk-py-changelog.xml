@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 02 Nov 2026 15:02:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 13:49:00 GMT</lastBuildDate>
+    <item>
+      <title>0.2.177</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.2.177</guid>
+      <pubDate>Tue, 03 Nov 2026 13:48:12 GMT</pubDate>
+      <category>agent-sdk-py-changelog</category>
+      <description>New Features
+- onfailure option for HookMatcher: Control what happens when a hook callback fails. Set onfailure=&quot;block&quot; to block the action when a callback raises, returns None, or returns a value the CLI rejects. Defaults to &quot;continue&quot; (treat failure as no decision). Requires a CLI version that sup</description>
+    </item>
     <item>
       <title>0.2.176</title>
       <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
@@ -456,15 +465,6 @@
       <category>agent-sdk-py-changelog</category>
       <description>Internal/Other Changes
 - Updated bundled Claude CLI to version 2.1.210</description>
-    </item>
-    <item>
-      <title>0.2.118</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-python/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.2.118</guid>
-      <pubDate>Tue, 14 Jul 2026 08:09:50 GMT</pubDate>
-      <category>agent-sdk-py-changelog</category>
-      <description>Internal/Other Changes
-- Updated bundled Claude CLI to version 2.1.209</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 02 Nov 2026 15:02:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 13:49:00 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.317</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.317</link>
+      <guid isPermaLink="false">v2.1.317</guid>
+      <pubDate>Tue, 03 Nov 2026 01:25:46 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a warning to /schedule when a new cloud scheduled task gets connectors you did not ask for, with how to remove them
+- Added a check that asks before a web or shell tool call sends your account email address to the network
+- Added onFailure: &quot;block&quot; for Agent SDK hook callbacks</description>
+    </item>
     <item>
       <title>v2.1.316</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.316</link>
@@ -500,16 +511,6 @@
       <description>What&apos;s changed
 - Added managedMcpServers managed setting: organizations can provide HTTP/SSE MCP servers to every user (same entry shape as .mcp.json); entries that name a command to run are skipped
 - Added --permission-prompts none for unattended headless hosts: anything that would prompt is denied</description>
-    </item>
-    <item>
-      <title>v2.1.258</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.258</link>
-      <guid isPermaLink="false">v2.1.258</guid>
-      <pubDate>Tue, 01 Sep 2026 22:33:20 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255
-- Fixed remote and scheduled sessions failing with &quot;user messages must have non-empty content&quot; after a re-sent permission approval could not be applied</description>
     </item>
   </channel>
 </rss>

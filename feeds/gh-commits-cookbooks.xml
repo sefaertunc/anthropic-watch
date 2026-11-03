@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 02 Nov 2026 15:02:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 13:49:00 GMT</lastBuildDate>
+    <item>
+      <title>Bring cookbooks up to Haiku 5.5 and the 2.0 SDK (#944)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/785d7a06457b3413727f386b9c470083feb23c49</link>
+      <guid isPermaLink="false">785d7a0</guid>
+      <pubDate>Mon, 02 Nov 2026 21:46:45 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Squash merge of 2 commits</description>
+    </item>
+    <item>
+      <title>feat(latency_optimization): add latency optimization cookbook (#957)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/41ce172f08f0f17783fb41d75267ff72fa8b33fc</link>
+      <guid isPermaLink="false">41ce172</guid>
+      <pubDate>Mon, 02 Nov 2026 21:24:29 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Adds a latency optimization cookbook, an eval-driven guide to maximizing your agent&apos;s speed without sacrificing quality. It applies each latency lever on the Claude API to a mock claims agent, measuring time to first token, time to last token, and accuracy. It ends by picking the fastest setup that </description>
+    </item>
     <item>
       <title>Make Claude Haiku 5.5 the default Haiku (#940)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/c43f56d0360b9b1f631bd090fd199231d4c880cc</link>
@@ -390,22 +406,6 @@
       <pubDate>Mon, 06 Jul 2026 19:51:59 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>Add coordinator-pattern cost cookbook: big models plan, small models execute</description>
-    </item>
-    <item>
-      <title>lychee.toml: list 2xx/3xx codes in accept explicitly</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/7dbfa37e547267ddafdf8c51b8649b762c445c85</link>
-      <guid isPermaLink="false">7dbfa37</guid>
-      <pubDate>Mon, 06 Jul 2026 19:43:00 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>The accept option replaces lychee&apos;s default accepted set rather than extending it, so [403, 429] alone rejects every 200. This was masked until now because the config failed to parse and lychee silently ran with defaults.</description>
-    </item>
-    <item>
-      <title>Make notebook cross-links checkable; document the temp_md artifact</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/5d5b01402b1782712b6cf34220e2ceb22e6f2af5</link>
-      <guid isPermaLink="false">5d5b014</guid>
-      <pubDate>Mon, 06 Jul 2026 19:36:36 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>The check-links workflow converts changed notebooks into a flat temp_md/ dir, which breaks resolution of every relative file link - this is why existing notebooks use absolute GitHub URLs. Follow the convention for the sibling-notebook links (they exist on main, so they now get genuinely checked ove</description>
     </item>
   </channel>
 </rss>
