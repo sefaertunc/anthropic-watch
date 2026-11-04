@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 03 Nov 2026 13:49:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 13:57:15 GMT</lastBuildDate>
+    <item>
+      <title>0.3.318</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.318</guid>
+      <pubDate>Wed, 04 Nov 2026 13:56:27 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added an optional credentialexpiresat field to result messages: when the stored claude.ai sign-in in use ends
+- Added the configfileinvalid startup failure reason, reported when a configuration file read at startup isn&apos;t valid JSON
+- Fixed the interrupt response missing a message held behind a mod</description>
+    </item>
     <item>
       <title>0.3.317</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -444,14 +454,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added optional usermessageuuid to error result messages and to the first assistant message or streamevent of each turn, linking a reply or failure to the user message that triggered it
 - Added modelUsage[].costBasis (&apos;list&apos; | &apos;managed&apos; | &apos;unknown&apos;) reporting which price table each model&apos;s costUSD </description>
-    </item>
-    <item>
-      <title>0.3.245</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.245</guid>
-      <pubDate>Tue, 25 Aug 2026 06:51:36 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.245</description>
     </item>
   </channel>
 </rss>

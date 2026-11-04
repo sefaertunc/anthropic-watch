@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 03 Nov 2026 13:49:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 13:57:15 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.318</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.318</link>
+      <guid isPermaLink="false">v2.1.318</guid>
+      <pubDate>Wed, 04 Nov 2026 00:01:03 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a record of your answer when Claude Code asks to turn on the mods it writes in a session
+- Added assumerole on mantle upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution
+- Added an effort option to a mod&apos;s $.model.</description>
+    </item>
     <item>
       <title>v2.1.317</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.317</link>
@@ -501,16 +512,6 @@
       <description>What&apos;s changed
 - Added a diff panel that opens beside the conversation in fullscreen mode and shows your uncommitted changes as Claude edits; toggle it with /diff
 - Added a likely cause for prompt-cache misses (e.g. tool definitions or system prompt changed, idle past the TTL) to /cost and the statu</description>
-    </item>
-    <item>
-      <title>v2.1.259</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.259</link>
-      <guid isPermaLink="false">v2.1.259</guid>
-      <pubDate>Wed, 02 Sep 2026 22:33:51 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added managedMcpServers managed setting: organizations can provide HTTP/SSE MCP servers to every user (same entry shape as .mcp.json); entries that name a command to run are skipped
-- Added --permission-prompts none for unattended headless hosts: anything that would prompt is denied</description>
     </item>
   </channel>
 </rss>
