@@ -6,7 +6,39 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 04 Nov 2026 13:57:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 14:15:16 GMT</lastBuildDate>
+    <item>
+      <title>google-cloud-sdk-v1.1.3</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.3</link>
+      <guid isPermaLink="false">google-cloud-sdk-v1.1.3</guid>
+      <pubDate>Wed, 04 Nov 2026 20:25:17 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Bug Fixes
+ google-cloud: percent-encode the project, location and workspace ID in the derived base URL, and throw an AnthropicError for a value of . or ..</description>
+    </item>
+    <item>
+      <title>vertex-sdk-v1.1.2</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.2</link>
+      <guid isPermaLink="false">vertex-sdk-v1.1.2</guid>
+      <pubDate>Wed, 04 Nov 2026 20:25:14 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Bug Fixes
+ vertex: percent-encode the project ID, region and model in the request path, so a / in the model can&apos;t move the request outside /publishers/anthropic/models/, and throw an AnthropicError for an empty model or a project ID or region of . or ..</description>
+    </item>
+    <item>
+      <title>sdk-v1.5.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.5.0</link>
+      <guid isPermaLink="false">sdk-v1.5.0</guid>
+      <pubDate>Wed, 04 Nov 2026 20:25:11 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Features
+ api: add error details types and new error type values
+ api: add ids filter to list workspaces
+ client: add error classes for HTTP statuses and API error codes, and apiMessage, errorCode and details on APIError
+ Bug Fixes
+ api: capitalize CMEK in error details type names
+ api: move some er</description>
+    </item>
     <item>
       <title>google-cloud-sdk-v1.1.2</title>
       <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.2</link>
@@ -506,38 +538,6 @@ Full Changelog: bedrock-sdk-v0.34.2...bedrock-sdk-v0.34.3</description>
       <category>api-sdk-ts-releases</category>
       <description>0.20.3 (2026-10-07)
 Full Changelog: vertex-sdk-v0.20.2...vertex-sdk-v0.20.3</description>
-    </item>
-    <item>
-      <title>sdk: v0.132.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.132.0</link>
-      <guid isPermaLink="false">sdk-v0.132.0</guid>
-      <pubDate>Wed, 07 Oct 2026 17:57:01 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.132.0 (2026-10-07)
-Full Changelog: sdk-v0.131.0...sdk-v0.132.0
- Features
- api: add claude-haiku-5-5 and typed computer and browser toolset tool calls (1fd8261)
- api: add disabled to thinking types in model capabilities (2b75b49)
- api: add displayname to RBAC roles and deprecate name (7735ac3)
- api</description>
-    </item>
-    <item>
-      <title>google-cloud-sdk: v0.0.17</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.17</link>
-      <guid isPermaLink="false">google-cloud-sdk-v0.0.17</guid>
-      <pubDate>Wed, 30 Sep 2026 22:58:53 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.0.17 (2026-09-30)
-Full Changelog: google-cloud-sdk-v0.0.16...google-cloud-sdk-v0.0.17</description>
-    </item>
-    <item>
-      <title>aws-sdk: v0.7.7</title>
-      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.7.7</link>
-      <guid isPermaLink="false">aws-sdk-v0.7.7</guid>
-      <pubDate>Wed, 30 Sep 2026 22:58:47 GMT</pubDate>
-      <category>api-sdk-ts-releases</category>
-      <description>0.7.7 (2026-09-30)
-Full Changelog: aws-sdk-v0.7.6...aws-sdk-v0.7.7</description>
     </item>
   </channel>
 </rss>

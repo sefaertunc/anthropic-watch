@@ -6,7 +6,23 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 04 Nov 2026 13:57:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 14:15:16 GMT</lastBuildDate>
+    <item>
+      <title>fix(registry): remove duplicate agent security review entry (#958)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/ce8b2629efe8b24048b127b4c79af1e9cbab93d4</link>
+      <guid isPermaLink="false">ce8b262</guid>
+      <pubDate>Wed, 04 Nov 2026 19:23:28 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>feat(managed_agents): add a dreaming cookbook (#959)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/d4bd2fb364a7daa77fa90390800ba3aafffd2d1f</link>
+      <guid isPermaLink="false">d4bd2fb</guid>
+      <pubDate>Wed, 04 Nov 2026 19:06:43 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
     <item>
       <title>Bring cookbooks up to Haiku 5.5 and the 2.0 SDK (#944)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/785d7a06457b3413727f386b9c470083feb23c49</link>
@@ -390,22 +406,6 @@
       <pubDate>Fri, 10 Jul 2026 04:44:54 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>The metaprompt (prompt generator) notebook has been broken for every user since #375 bumped its model from claude-sonnet-4-5 to claude-sonnet-4-6. The prompt-writing call ended its messages array with an assistant prefill turn, and claude-sonnet-4-6 (like every model since the 4.6 generation) reject</description>
-    </item>
-    <item>
-      <title>feat(managed_agents): add Fraud Review Agent with MongoDB Atlas cookbook</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/849918c65cdea068c144b481027dd18bcedb2c2c</link>
-      <guid isPermaLink="false">849918c</guid>
-      <pubDate>Tue, 07 Jul 2026 09:06:32 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #754 from bradabrams/add-plan-big-execute-small-cookbook</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/7aaa17fa217f27ff4b7d97fcfaba1ba75f328523</link>
-      <guid isPermaLink="false">7aaa17f</guid>
-      <pubDate>Mon, 06 Jul 2026 19:51:59 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>Add coordinator-pattern cost cookbook: big models plan, small models execute</description>
     </item>
   </channel>
 </rss>
