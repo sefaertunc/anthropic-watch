@@ -6,7 +6,21 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 05 Nov 2026 14:15:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 13:54:48 GMT</lastBuildDate>
+    <item>
+      <title>v2.6.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.6.0</link>
+      <guid isPermaLink="false">v2.6.0</guid>
+      <pubDate>Thu, 05 Nov 2026 18:58:47 GMT</pubDate>
+      <category>api-sdk-py-releases</category>
+      <description>Features
+ api: add error code for ramp limit errors
+ api: add error codes for External Key validation failures
+ api: add support for signing organization members out everywhere
+ Bug Fixes
+ bedrock,vertex: raise error-code and status exception classes on platform clients
+ bedrock: keep a custom httpc</description>
+    </item>
     <item>
       <title>v2.5.0</title>
       <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.5.0</link>
@@ -647,17 +661,6 @@ Full Changelog: v0.107.1...v0.108.0
  Features
  api: add support for claude-mythos-5 and claude-fable-5, with support for server-side fallbacks on refusal (6b76649)
  client: adds client-side fallbacks middleware for API providers that do not support server-side fallbacks (6b76649</description>
-    </item>
-    <item>
-      <title>v0.107.1</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.107.1</link>
-      <guid isPermaLink="false">v0.107.1</guid>
-      <pubDate>Sun, 07 Jun 2026 17:18:45 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.107.1 (2026-06-07)
-Full Changelog: v0.107.0...v0.107.1
- Bug Fixes
- foundry: send x-api-key header for API-key auth (62) (1338141), closes 1661</description>
     </item>
   </channel>
 </rss>

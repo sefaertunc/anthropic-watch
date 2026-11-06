@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 05 Nov 2026 14:15:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 13:54:48 GMT</lastBuildDate>
+    <item>
+      <title>bump(unity): ba48956a → 81b6079e (#7018)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a1ecfbc7f138a0ef455088f7f28cda2d22a0f853</link>
+      <guid isPermaLink="false">a1ecfbc</guid>
+      <pubDate>Fri, 06 Nov 2026 07:07:19 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>Add plugin.json to the 14 plugins that have none (#7013)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/cb421c81df4274fd28fd1ead817bc6ffea723fed</link>
+      <guid isPermaLink="false">cb421c8</guid>
+      <pubDate>Fri, 06 Nov 2026 06:29:08 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The twelve language-server plugins, receipts and session-report had no .claude-plugin/plugin.json, so their folders didn&apos;t load or validate on their own. Each manifest only carries fields copied unchanged from the plugin&apos;s marketplace entry; marketplace.json is not touched.  kotlin-lsp and php-lsp R</description>
+    </item>
+    <item>
+      <title>Add champion-kit plugin (#7017)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1aa4a4b10e6c5e8694d0f72a03dbac4e93bcafd8</link>
+      <guid isPermaLink="false">1aa4a4b</guid>
+      <pubDate>Fri, 06 Nov 2026 02:04:05 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>Add Xcode plugin (xcode) (#6338)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ff920a4094a341f282d5dee00daef2c3b8339c72</link>
+      <guid isPermaLink="false">ff920a4</guid>
+      <pubDate>Fri, 06 Nov 2026 00:55:54 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Adds Apple `xcode` plugin to the official marketplace. This plugin exposes Xcode capabilities via MCP to enable native development for Apple platforms.  `claude plugin validate .` passes. Tested with a local marketplace.  Co-authored-by: Jonathan Penn &lt;jonathanpenn@apple.com&gt; Co-authored-by: Claude </description>
+    </item>
+    <item>
+      <title>ci(validate-plugins): re-pin validator and allow the xcode command source (#7015)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/b8331dd69ab3e132bbf8cd6e89b5d8c1747e21b1</link>
+      <guid isPermaLink="false">b8331dd</guid>
+      <pubDate>Fri, 06 Nov 2026 00:53:19 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 2 commits</description>
+    </item>
+    <item>
+      <title>Merge pull request #6835 from anthropics/mhegazy/sg-secret-rename-pairing</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d189be9fc7a63d53d4e2af59accdd70e933e41e9</link>
+      <guid isPermaLink="false">d189be9</guid>
+      <pubDate>Thu, 05 Nov 2026 22:28:26 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: keep a renamed file paired with its old name in the Stop review</description>
+    </item>
+    <item>
+      <title>Merge pull request #6965 from anthropics/mhegazy/sg-agentic-stop-on-auth</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/eba976de6eed86f916e2c3ccd6f176faf19c3bc7</link>
+      <guid isPermaLink="false">eba976d</guid>
+      <pubDate>Thu, 05 Nov 2026 22:28:20 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: stop the commit reviewer on refused credentials, end hung reviews in time</description>
+    </item>
+    <item>
+      <title>Merge pull request #6627 from anthropics/mhegazy/sg-review-sessions-not-saved</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0672a295389aa640fb0544ef03a768ac37b30daa</link>
+      <guid isPermaLink="false">0672a29</guid>
+      <pubDate>Thu, 05 Nov 2026 22:27:52 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: do not save review runs as session transcripts</description>
+    </item>
+    <item>
+      <title>Merge pull request #6998 from anthropics/mhegazy/sg-count-unmatched-bash-starts</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0f3ed0a0990309cda0194dff0840c1b69146a8d2</link>
+      <guid isPermaLink="false">0f3ed0a</guid>
+      <pubDate>Thu, 05 Nov 2026 22:27:39 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: count Bash hook starts that match no commit or push</description>
+    </item>
+    <item>
+      <title>Merge pull request #6922 from anthropics/mhegazy/sg-prompt-snapshot</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/b3af021db53c814a266d87128d6f2711ed2c98f6</link>
+      <guid isPermaLink="false">b3af021</guid>
+      <pubDate>Thu, 05 Nov 2026 22:26:44 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: take the turn baseline without git stash create</description>
+    </item>
     <item>
       <title>runway-api: point at claude/ and update to Runway Dev 4.0.0 (#6951)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/8653e9ff6817e26b6df67ea4542e23ab52d59d25</link>
@@ -326,86 +406,6 @@
       <pubDate>Thu, 15 Oct 2026 07:39:15 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>bump(postman): 0128d247 → c6352ef5</description>
-    </item>
-    <item>
-      <title>Merge pull request #6613 from anthropics/bump/figma</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e281e51e6e6bcf185090db0d87dd47660b11ebb0</link>
-      <guid isPermaLink="false">e281e51</guid>
-      <pubDate>Thu, 15 Oct 2026 07:33:42 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(figma): f0493295 → f2789420</description>
-    </item>
-    <item>
-      <title>security-guidance: find Python releases newer than the launcher&apos;s list</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/6d446623cb5fe608905d07ab4c3a2002a268ee65</link>
-      <guid isPermaLink="false">6d44662</guid>
-      <pubDate>Wed, 14 Oct 2026 16:56:05 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>sg-python.sh prefers the versioned names python3.13 to python3.10, then python3 / python / py -3 when they are 3.10 or newer. A machine whose `python3` is older (stock macOS: 3.9) and whose only newer interpreter is python3.14 ended up on 3.9, which cannot load the agent SDK, so the commit reviewer </description>
-    </item>
-    <item>
-      <title>Merge pull request #6536 from anthropics/mhegazy/sg-review-telemetry</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/641d925db5a662e72f8650cb1b7670a59dab1abc</link>
-      <guid isPermaLink="false">641d925</guid>
-      <pubDate>Wed, 14 Oct 2026 12:16:03 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: report gateway routing and inner CLI stderr in review telemetry</description>
-    </item>
-    <item>
-      <title>security-guidance: report gateway routing and inner CLI stderr in review telemetry</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/c45209fd0c089108e0468ed282bd4dc0dae361a4</link>
-      <guid isPermaLink="false">c45209f</guid>
-      <pubDate>Wed, 14 Oct 2026 12:12:30 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Review rows gain two diagnostic keys, appended last so they never displace an existing key:  - gateway_cfg: 1 when ANTHROPIC_BASE_URL names a host other than   api.anthropic.com, 2 when ANTHROPIC_CUSTOM_HEADERS lines are sent, 3 for   both. A number only: no host, header name or value. - child_stder</description>
-    </item>
-    <item>
-      <title>Merge pull request #6542 from anthropics/mhegazy/sg-diff-parsing</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/41f32e407b450055044f167db7ded5e8ff67d203</link>
-      <guid isPermaLink="false">41f32e4</guid>
-      <pubDate>Wed, 14 Oct 2026 11:27:59 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: parse diff sections by header line</description>
-    </item>
-    <item>
-      <title>Merge pull request #6515 from anthropics/bump/postman</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/8bd00f08f0b04705e610cf132fbe2cf5ec44cfe3</link>
-      <guid isPermaLink="false">8bd00f0</guid>
-      <pubDate>Wed, 14 Oct 2026 04:54:10 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(postman): 67cff8f3 → 0128d247</description>
-    </item>
-    <item>
-      <title>security-guidance: deliver commit and push findings on stderr (#6379)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/8d392c8169665866be1d95f2bfeda5aaae7149dd</link>
-      <guid isPermaLink="false">8d392c8</guid>
-      <pubDate>Tue, 13 Oct 2026 20:46:31 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Commit and push findings went only into hookSpecificOutput.additionalContext, which Claude Code&apos;s asyncRewake path never reads: it shows Claude stderr, or stdout when stderr is empty. When the agentic reviewer&apos;s inner CLI printed a warning to stderr, Claude got that warning instead of the findings (</description>
-    </item>
-    <item>
-      <title>Merge pull request #6378 from anthropics/mhegazy/sg-gateway-headers</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/99951e9e4678548f90531dfc80be2e95e4618ff0</link>
-      <guid isPermaLink="false">99951e9</guid>
-      <pubDate>Tue, 13 Oct 2026 20:44:50 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: send ANTHROPIC_CUSTOM_HEADERS on the plugin&apos;s own API calls</description>
-    </item>
-    <item>
-      <title>Merge pull request #6375 from anthropics/mhegazy/sg-review-failures</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/d44ca8eb76581bfc5be38cc4c9b7e75be3c22046</link>
-      <guid isPermaLink="false">d44ca8e</guid>
-      <pubDate>Tue, 13 Oct 2026 20:33:44 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: never report a failed review as clean</description>
-    </item>
-    <item>
-      <title>security-guidance: say when the LLM reviews can&apos;t run</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/1aecb0c12c0d688d65ae4d5a0c2e17768f8bbfd8</link>
-      <guid isPermaLink="false">1aecb0c</guid>
-      <pubDate>Mon, 12 Oct 2026 19:54:29 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>With no credentials in the hook&apos;s environment every Stop, commit and push review is skipped, and nothing told the user. That is the state of a signed-in session started with CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC, DISABLE_TELEMETRY or DO_NOT_TRACK set, where Claude Code does not pass the sign-in t</description>
     </item>
   </channel>
 </rss>
