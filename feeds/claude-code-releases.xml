@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 06 Nov 2026 13:54:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 12:39:37 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.319</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.319</link>
+      <guid isPermaLink="false">v2.1.319</guid>
+      <pubDate>Fri, 06 Nov 2026 17:04:01 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can&apos;t check are asked about or denied, with no fallback to the built-in classifier; set CLAUDECODEAUTOMODESERVER=0 to keep using it (Bedrock, Vertex and Foundry are unchanged)
+- Ch</description>
+    </item>
     <item>
       <title>v2.1.318</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.318</link>
@@ -502,16 +512,6 @@
       <description>What&apos;s changed
 - Added an &quot;Organization policy&quot; line to /status and claude doctor that says why your organization&apos;s policy could not be loaded, such as a proxy not passing the endpoint through
 - Added bashOutputMaxChars and taskOutputMaxChars settings to raise how much command and background-task ou</description>
-    </item>
-    <item>
-      <title>v2.1.260</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.260</link>
-      <guid isPermaLink="false">v2.1.260</guid>
-      <pubDate>Thu, 03 Sep 2026 23:48:12 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added a diff panel that opens beside the conversation in fullscreen mode and shows your uncommitted changes as Claude edits; toggle it with /diff
-- Added a likely cause for prompt-cache misses (e.g. tool definitions or system prompt changed, idle past the TTL) to /cost and the statu</description>
     </item>
   </channel>
 </rss>

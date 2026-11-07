@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-06T13:54:48.787Z",
+  "generated": "2026-11-07T12:39:37.676Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.319",
+      "title": "v2.1.319",
+      "date": "2026-11-06T17:04:01Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "snippet": "What's changed\n- Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can't check are asked about or denied, with no fallback to the built-in classifier; set CLAUDECODEAUTOMODESERVER=0 to keep using it (Bedrock, Vertex and Foundry are unchanged)\n- Ch",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.319|claude-code-releases"
+    },
     {
       "id": "v2.1.318",
       "title": "v2.1.318",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.261|claude-code-releases"
-    },
-    {
-      "id": "v2.1.260",
-      "title": "v2.1.260",
-      "date": "2026-09-03T23:48:12Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
-      "snippet": "What's changed\n- Added a diff panel that opens beside the conversation in fullscreen mode and shows your uncommitted changes as Claude edits; toggle it with /diff\n- Added a likely cause for prompt-cache misses (e.g. tool definitions or system prompt changed, idle past the TTL) to /cost and the statu",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.260|claude-code-releases"
     }
   ]
 }

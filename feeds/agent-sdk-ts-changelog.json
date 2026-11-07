@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-06T13:54:48.794Z",
+  "generated": "2026-11-07T12:39:37.681Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.319",
+      "title": "0.3.319",
+      "date": "2026-11-07T12:38:48.165Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added MCP task support in SDK sessions (not on Bedrock, Vertex or Foundry): with CLAUDEAUTOBACKGROUNDTASKS=1 and streaming input, an MCP task runs in the background with tasktype \"mcptask\"\n- Fixed the OpenTelemetry claudecode.session.count metric counting prewarm() processes that were never claime",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.319|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.318",
       "title": "0.3.318",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.247|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.246",
-      "title": "0.3.246",
-      "date": "2026-08-26T06:52:43.836Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added optional usermessageuuid to error result messages and to the first assistant message or streamevent of each turn, linking a reply or failure to the user message that triggered it\n- Added modelUsage[].costBasis ('list' | 'managed' | 'unknown') reporting which price table each model's costUSD ",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.246|agent-sdk-ts-changelog"
     }
   ]
 }

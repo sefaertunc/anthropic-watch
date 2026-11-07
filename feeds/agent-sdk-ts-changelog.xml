@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 06 Nov 2026 13:54:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 12:39:37 GMT</lastBuildDate>
+    <item>
+      <title>0.3.319</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.319</guid>
+      <pubDate>Sat, 07 Nov 2026 12:38:48 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added MCP task support in SDK sessions (not on Bedrock, Vertex or Foundry): with CLAUDEAUTOBACKGROUNDTASKS=1 and streaming input, an MCP task runs in the background with tasktype &quot;mcptask&quot;
+- Fixed the OpenTelemetry claudecode.session.count metric counting prewarm() processes that were never claime</description>
+    </item>
     <item>
       <title>0.3.318</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -445,15 +454,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added an optional ambient flag to taskstarted, tasknotification and backgroundtaskschanged task entries so hosts can exclude housekeeping tasks from activity indicators
 - Fixed the permissionMode on per-turn system/init frames reporting the mode at turn start instead of the live mode, so a mode sw</description>
-    </item>
-    <item>
-      <title>0.3.246</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.246</guid>
-      <pubDate>Wed, 26 Aug 2026 06:52:43 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added optional usermessageuuid to error result messages and to the first assistant message or streamevent of each turn, linking a reply or failure to the user message that triggered it
-- Added modelUsage[].costBasis (&apos;list&apos; | &apos;managed&apos; | &apos;unknown&apos;) reporting which price table each model&apos;s costUSD </description>
     </item>
   </channel>
 </rss>

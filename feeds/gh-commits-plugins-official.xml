@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 06 Nov 2026 13:54:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 12:39:37 GMT</lastBuildDate>
+    <item>
+      <title>bump(mintlify): acd6d2e0 → c1c1700d (#7023)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0412be76f50ab4f4f8abff3753efa9269fbbca5b</link>
+      <guid isPermaLink="false">0412be7</guid>
+      <pubDate>Fri, 06 Nov 2026 23:51:04 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>Merge pull request #7014 from anthropics/mhegazy/sg-bump-2018</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c07c748f1c680734a813eefd909bc073f8a9103f</link>
+      <guid isPermaLink="false">c07c748</guid>
+      <pubDate>Fri, 06 Nov 2026 19:43:07 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: bump version to 2.0.18</description>
+    </item>
+    <item>
+      <title>Merge pull request #6997 from anthropics/mhegazy/sg-net-err-on-verdict</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/b4720bd2ea255d57666fbf3aa6fbe5a40435089e</link>
+      <guid isPermaLink="false">b4720bd</guid>
+      <pubDate>Fri, 06 Nov 2026 19:42:19 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: clear net_err when a review gets through</description>
+    </item>
+    <item>
+      <title>Merge pull request #7000 from anthropics/mhegazy/sg-index-copy-all-gitlinks</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/385e32d91174c6955f5cc52f9a84da314fddb3a0</link>
+      <guid isPermaLink="false">385e32d</guid>
+      <pubDate>Fri, 06 Nov 2026 19:41:47 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: drop every gitlink from the index copy</description>
+    </item>
+    <item>
+      <title>Merge pull request #6985 from anthropics/mhegazy/sg-sdk-install-timeout</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/83b5049e23ad084de27a63ddec2b9af3a52cdc60</link>
+      <guid isPermaLink="false">83b5049</guid>
+      <pubDate>Fri, 06 Nov 2026 19:41:07 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: a timed-out SDK install leaves no download behind and pauses before retrying</description>
+    </item>
+    <item>
+      <title>Merge pull request #6920 from anthropics/mhegazy/sg-interp-reparse-telemetry</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a3301039b319e562bb0db6b7245d85f9fd35d44b</link>
+      <guid isPermaLink="false">a330103</guid>
+      <pubDate>Fri, 06 Nov 2026 19:40:32 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: count Windows sessions whose Python is behind a link (measurement only)</description>
+    </item>
     <item>
       <title>bump(unity): ba48956a → 81b6079e (#7018)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/a1ecfbc7f138a0ef455088f7f28cda2d22a0f853</link>
@@ -358,54 +406,6 @@
       <pubDate>Mon, 19 Oct 2026 17:24:40 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: run pattern checks on NotebookEdit cells</description>
-    </item>
-    <item>
-      <title>Merge pull request #6546 from anthropics/mhegazy/sg-no-credentials-notice</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/8a8b3819ab881e578edaa2b7f43019ea540bce16</link>
-      <guid isPermaLink="false">8a8b381</guid>
-      <pubDate>Mon, 19 Oct 2026 17:21:22 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: say when the LLM reviews can&apos;t run</description>
-    </item>
-    <item>
-      <title>security-guidance: run pattern checks on NotebookEdit cells</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/227b8934c9f5eb49fb8641332c227810539dda4b</link>
-      <guid isPermaLink="false">227b893</guid>
-      <pubDate>Sat, 17 Oct 2026 16:40:57 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>The edit hook is registered for NotebookEdit but read no content from it, so a cell edit never produced a pattern warning. Check the cell&apos;s new source, and check a saved notebook by its cell sources so JSON escapes no longer hide code from the rules.  Refs #6718</description>
-    </item>
-    <item>
-      <title>Merge pull request #6433 from anthropics/bump/carta-investors</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/8f814f49002ff824e8a9ba43cf96112dc7f5948d</link>
-      <guid isPermaLink="false">8f814f4</guid>
-      <pubDate>Thu, 15 Oct 2026 07:40:13 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(carta-investors): 6ab81016 → ea7fe1d4</description>
-    </item>
-    <item>
-      <title>Merge pull request #6432 from anthropics/bump/carta-crm</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/1a9ed837cb598c6636a71fa557dcb8a9a51d8a31</link>
-      <guid isPermaLink="false">1a9ed83</guid>
-      <pubDate>Thu, 15 Oct 2026 07:39:52 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(carta-crm): 43e49ed3 → ea7fe1d4</description>
-    </item>
-    <item>
-      <title>Merge pull request #6431 from anthropics/bump/carta-cap-table</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e2a955a36aab6563c69a020778d5f0ad39cb9e7c</link>
-      <guid isPermaLink="false">e2a955a</guid>
-      <pubDate>Thu, 15 Oct 2026 07:39:33 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(carta-cap-table): 43e49ed3 → ea7fe1d4</description>
-    </item>
-    <item>
-      <title>Merge pull request #6598 from anthropics/bump/postman</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/481b60a4014e01136ea7f918848f023bac1611c4</link>
-      <guid isPermaLink="false">481b60a</guid>
-      <pubDate>Thu, 15 Oct 2026 07:39:15 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>bump(postman): 0128d247 → c6352ef5</description>
     </item>
   </channel>
 </rss>
