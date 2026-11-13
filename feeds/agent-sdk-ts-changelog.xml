@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 12 Nov 2026 14:49:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 14:09:22 GMT</lastBuildDate>
+    <item>
+      <title>0.3.323</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.323</guid>
+      <pubDate>Fri, 13 Nov 2026 14:08:34 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added machinePolicy.didNotLoad (alpha) to resolveSettings()&apos;s result, which tells a host when a machine policy source may be there and did not load
+- Added matchDeniedModels() (alpha), which tells a host which models a deniedModels list blocks, by Claude Code&apos;s own entry rules
+- Added the periodic</description>
+    </item>
     <item>
       <title>0.3.322</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -445,14 +455,6 @@
       <pubDate>Sat, 29 Aug 2026 12:27:52 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Updated to parity with Claude Code v2.1.251</description>
-    </item>
-    <item>
-      <title>0.3.250</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.250</guid>
-      <pubDate>Fri, 28 Aug 2026 18:19:31 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.250</description>
     </item>
   </channel>
 </rss>

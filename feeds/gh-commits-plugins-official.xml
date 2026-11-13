@@ -6,7 +6,71 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 12 Nov 2026 14:49:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 14:09:23 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #7094 from anthropics/mhegazy/sg-bump-2020</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f75f5b25ae94f4332be4ff5f18435741d2589bdb</link>
+      <guid isPermaLink="false">f75f5b2</guid>
+      <pubDate>Fri, 13 Nov 2026 00:10:35 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: bump version to 2.0.20</description>
+    </item>
+    <item>
+      <title>Merge pull request #7093 from anthropics/mhegazy/sg-ordinary-checkouts</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ca69627d20f9c42ae6d10ae2aee8f3226d9e2e02</link>
+      <guid isPermaLink="false">ca69627</guid>
+      <pubDate>Fri, 13 Nov 2026 00:10:24 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: only run git in ordinary checkouts</description>
+    </item>
+    <item>
+      <title>Keep git out of folders without a .git entry on older git versions</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/141a7256071c54e00afaee4c9f6455ed745be841</link>
+      <guid isPermaLink="false">141a725</guid>
+      <pubDate>Thu, 12 Nov 2026 22:18:36 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Git before 2.38 has no safe.bareRepository. Check before the prompt and Stop hooks run git, following the same search git uses to find a repository, and let a work tree kept elsewhere through core.worktree through.  Co-authored-by: mhegazy &lt;mhegazy@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>Merge pull request #7092 from anthropics/mhegazy/sg-record-files</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/23c304a6387ed2fa207ceff27646d8514ee75235</link>
+      <guid isPermaLink="false">23c304a</guid>
+      <pubDate>Thu, 12 Nov 2026 20:32:24 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: open the review records and markers through one helper</description>
+    </item>
+    <item>
+      <title>Remove airwallex-dev plugin (#7095)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/10759d7fff7d18eecf689010d3fc2543b55bb7a9</link>
+      <guid isPermaLink="false">10759d7</guid>
+      <pubDate>Thu, 12 Nov 2026 20:18:22 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge pull request #7099 from anthropics/bump/aikido</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/07e0fb57fc6d2eb977d0257f92540cc4fe097b97</link>
+      <guid isPermaLink="false">07e0fb5</guid>
+      <pubDate>Thu, 12 Nov 2026 19:49:58 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>bump(aikido): 8fdc995a → 75e45f33</description>
+    </item>
+    <item>
+      <title>Merge pull request #7097 from anthropics/bump/superpowers</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/9bd776d78d956bd68520efe67ac6422a76f811f8</link>
+      <guid isPermaLink="false">9bd776d</guid>
+      <pubDate>Thu, 12 Nov 2026 18:55:03 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>bump(superpowers): bb92a777 → 22f0b463</description>
+    </item>
+    <item>
+      <title>security-guidance: bump version to 2.0.20</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/90ae09a2d3a4ccc67c72e7f9c043783a0b94dc43</link>
+      <guid isPermaLink="false">90ae09a</guid>
+      <pubDate>Thu, 12 Nov 2026 15:01:04 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Co-authored-by: mhegazy &lt;mhegazy@anthropic.com&gt;</description>
+    </item>
     <item>
       <title>Add claude-for-manufacturing plugin (#7084)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/e0ab6e51219eef74e417a0e1d89e5d53e5e763d4</link>
@@ -342,70 +406,6 @@
       <pubDate>Tue, 27 Oct 2026 00:22:48 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: hold in-flight review markers on native Windows too</description>
-    </item>
-    <item>
-      <title>security-guidance: bump version to 2.0.17</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a29a80b5877bae49e3b058cc6dd86bda07bcf1cc</link>
-      <guid isPermaLink="false">a29a80b</guid>
-      <pubDate>Tue, 27 Oct 2026 00:16:33 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #6903 from anthropics/mhegazy/sg-reviewer-stage-metrics</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/da54ddb82e1e5c89ca2669bb866f5ab4fdb21cac</link>
-      <guid isPermaLink="false">da54ddb</guid>
-      <pubDate>Mon, 26 Oct 2026 23:57:07 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: report turns and model time of a commit review (measure only)</description>
-    </item>
-    <item>
-      <title>Merge remote-tracking branch &apos;origin/main&apos; into HEAD</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a3c2f20c0f46e3b0a76ef6e69fcc13c6faca763a</link>
-      <guid isPermaLink="false">a3c2f20</guid>
-      <pubDate>Mon, 26 Oct 2026 23:13:53 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge remote-tracking branch &apos;origin/main&apos; into HEAD</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/f4174b901f6c4579186587b63e7658946f18b644</link>
-      <guid isPermaLink="false">f4174b9</guid>
-      <pubDate>Mon, 26 Oct 2026 23:07:49 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #6861 from anthropics/mhegazy/sg-add-fail-metric</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/1da406f428c285c701a1033a3aef368a9ab865dc</link>
-      <guid isPermaLink="false">1da406f</guid>
-      <pubDate>Mon, 26 Oct 2026 23:07:36 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: count failed git add -N calls in the Stop review</description>
-    </item>
-    <item>
-      <title>Merge pull request #6839 from anthropics/mhegazy/sg-network-failure-class</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e180b805636c45c0ed70d31716c56706e669b295</link>
-      <guid isPermaLink="false">e180b80</guid>
-      <pubDate>Mon, 26 Oct 2026 23:03:33 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: report why a review call got no HTTP response</description>
-    </item>
-    <item>
-      <title>Merge pull request #6836 from anthropics/mhegazy/sg-diff-seen-count</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ced0aa953bf0689e48308de3405bf276421dce63</link>
-      <guid isPermaLink="false">ced0aa9</guid>
-      <pubDate>Mon, 26 Oct 2026 23:02:51 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: count reviews of a diff that was already reviewed</description>
-    </item>
-    <item>
-      <title>Merge pull request #6858 from anthropics/mhegazy/sg-prompt-capture-time</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/3cb00e4a01a0256535ccd8555a286da190625e0f</link>
-      <guid isPermaLink="false">3cb00e4</guid>
-      <pubDate>Mon, 26 Oct 2026 23:02:44 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: report where a slow prompt&apos;s time goes</description>
     </item>
   </channel>
 </rss>

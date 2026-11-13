@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 12 Nov 2026 14:49:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 14:09:22 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.323</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.323</link>
+      <guid isPermaLink="false">v2.1.323</guid>
+      <pubDate>Thu, 12 Nov 2026 22:12:13 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added Code Mode, an experimental opt-in in which Claude writes JavaScript to call its tools; see https://code.claude.com/docs/en/code-mode to turn it on, or to turn it off for an organization
+- Added engines[&quot;claude-code&quot;] to plugin.json: plugins outside their stated Claude Code ver</description>
+    </item>
     <item>
       <title>v2.1.322</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.322</link>
@@ -502,16 +512,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented CLAUDECODEUSEGATEWAY environment variable, previously ignored unless ANTHROPICBASEURL and ANTHROPICAUTHTOKEN were both set, began forcing Cloud-gateway sign-in on its own in 2.1.265, so configuration</description>
-    </item>
-    <item>
-      <title>v2.1.265</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.265</link>
-      <guid isPermaLink="false">v2.1.265</guid>
-      <pubDate>Tue, 08 Sep 2026 20:37:31 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added user.email and user.groups to the telemetry Claude Desktop and Cowork send through a Claude apps gateway, matching terminal sessions
-- Added support for pointing --plugin-dir at a folder of plugins: each child folder with a manifest loads, and children added or removed while r</description>
     </item>
   </channel>
 </rss>
