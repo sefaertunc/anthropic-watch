@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 13 Nov 2026 14:09:22 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 13:10:02 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.325</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.325</link>
+      <guid isPermaLink="false">v2.1.325</guid>
+      <pubDate>Fri, 13 Nov 2026 20:40:01 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Fixed a security issue in how zstd-compressed responses are decoded
+- Added a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook
+- Added a line under the error shown when your organization</description>
+    </item>
     <item>
       <title>v2.1.323</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.323</link>
@@ -503,15 +514,6 @@
       <description>What&apos;s changed
 - Added maxEffortLevel setting (top-level or per model under modelSettings): caps the effort level on every provider, including Bedrock, Vertex and Foundry; users can still pick a lower level
 - Added --system-prompt-snapshot off to render the system prompt fresh on every request inste</description>
-    </item>
-    <item>
-      <title>v2.1.266</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.266</link>
-      <guid isPermaLink="false">v2.1.266</guid>
-      <pubDate>Tue, 08 Sep 2026 23:55:14 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented CLAUDECODEUSEGATEWAY environment variable, previously ignored unless ANTHROPICBASEURL and ANTHROPICAUTHTOKEN were both set, began forcing Cloud-gateway sign-in on its own in 2.1.265, so configuration</description>
     </item>
   </channel>
 </rss>

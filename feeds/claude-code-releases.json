@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-13T14:09:22.975Z",
+  "generated": "2026-11-14T13:10:02.953Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.1.325",
+      "title": "v2.1.325",
+      "date": "2026-11-13T20:40:01Z",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "snippet": "What's changed\n- Fixed a security issue in how zstd-compressed responses are decoded\n- Added a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook\n- Added a line under the error shown when your organization",
+      "source": "claude-code-releases",
+      "sourceCategory": "core",
+      "sourceName": "Claude Code Releases",
+      "uniqueKey": "v2.1.325|claude-code-releases"
+    },
     {
       "id": "v2.1.323",
       "title": "v2.1.323",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Claude Code Releases",
       "uniqueKey": "v2.1.267|claude-code-releases"
-    },
-    {
-      "id": "v2.1.266",
-      "title": "v2.1.266",
-      "date": "2026-09-08T23:55:14Z",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.266",
-      "snippet": "What's changed\n- Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented CLAUDECODEUSEGATEWAY environment variable, previously ignored unless ANTHROPICBASEURL and ANTHROPICAUTHTOKEN were both set, began forcing Cloud-gateway sign-in on its own in 2.1.265, so configuration",
-      "source": "claude-code-releases",
-      "sourceCategory": "core",
-      "sourceName": "Claude Code Releases",
-      "uniqueKey": "v2.1.266|claude-code-releases"
     }
   ]
 }
