@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 16 Nov 2026 15:10:04 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 15:40:26 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.326</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.326</link>
+      <guid isPermaLink="false">v2.1.326</guid>
+      <pubDate>Mon, 16 Nov 2026 22:11:05 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added support for turning on Code Mode while agent teams are enabled; if you already turned it on, sessions with teams on now start in Code Mode
+- Added a startup warning when an --allowedTools, --disallowedTools or --tools value has an entry that doesn&apos;t look like a complete rule
+-</description>
+    </item>
     <item>
       <title>v2.1.325</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.325</link>
@@ -504,16 +515,6 @@
       <description>What&apos;s changed
 - Added to the Claude apps gateway: with pricing: set in gateway.yaml, signed-in Claude Code clients receive the same rates through managed settings, so /cost and telemetry match the spend meter
 - Added a startup warning for gateways when accesscontrol.allowcidrs is empty, and a one-t</description>
-    </item>
-    <item>
-      <title>v2.1.267</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.267</link>
-      <guid isPermaLink="false">v2.1.267</guid>
-      <pubDate>Wed, 09 Sep 2026 19:58:14 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added maxEffortLevel setting (top-level or per model under modelSettings): caps the effort level on every provider, including Bedrock, Vertex and Foundry; users can still pick a lower level
-- Added --system-prompt-snapshot off to render the system prompt fresh on every request inste</description>
     </item>
   </channel>
 </rss>

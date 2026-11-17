@@ -5,9 +5,119 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-16T15:10:05.023Z",
+  "generated": "2026-11-17T15:40:26.807Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "3f14a10",
+      "title": "Merge pull request #3969 from shoyann/fix/validate-duplicate-hook-events",
+      "date": "2026-11-17T06:41:46Z",
+      "url": "https://github.com/affaan-m/ECC/commit/3f14a103a8694e51c1df9a806217a6d0b5f7a6f7",
+      "snippet": "fix(ci): catch duplicate hook events before JSON parsing",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "3f14a10|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "58f5f5c",
+      "title": "Merge pull request #3978 from affaan-m/stewardship/pr-3106-20261117",
+      "date": "2026-11-17T06:18:22Z",
+      "url": "https://github.com/affaan-m/ECC/commit/58f5f5c603942d2b93a2b99ce5e9a675b6d70e65",
+      "snippet": "Land #3106: opt-in context-gate hook",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "58f5f5c|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "8fba488",
+      "title": "Merge main and sync hook validator dependency locks",
+      "date": "2026-11-17T05:47:44Z",
+      "url": "https://github.com/affaan-m/ECC/commit/8fba4889ae1306ce6b7b366b34692659729d677a",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "8fba488|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "ce5b17f",
+      "title": "test(hooks): keep context-gate cwd fixtures inside private sandboxes",
+      "date": "2026-11-17T05:46:54Z",
+      "url": "https://github.com/affaan-m/ECC/commit/ce5b17fb45505dbc9a832497982ff6f989dfeb79",
+      "snippet": "Replace the literal /tmp/... cwd values in the context-gate suites with paths under each test's realpath'd mkdtemp sandbox. CodeQL treats /tmp string literals as shared temp sources and traced them through the hook input into readFileTail. The hook only hashes cwd, so assertions are unchanged.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "ce5b17f|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "aa4b0c1",
+      "title": "fix(ci): check matcher IDs in unwrapped hook maps",
+      "date": "2026-11-17T05:45:52Z",
+      "url": "https://github.com/affaan-m/ECC/commit/aa4b0c1700dc819c23a07fa447a43c881e8b6574",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "aa4b0c1|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "562b541",
+      "title": "Merge reviewed PR #3106: opt-in context-gate hook",
+      "date": "2026-11-17T05:45:08Z",
+      "url": "https://github.com/affaan-m/ECC/commit/562b541581cf86857bbaab4d40e8c5a37ce48bda",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "562b541|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "3def2b6",
+      "title": "Merge pull request #3959 from affaan-m/stewardship/integration-20261116-b",
+      "date": "2026-11-17T05:43:07Z",
+      "url": "https://github.com/affaan-m/ECC/commit/3def2b612f82dc2ce6eabdda8a755a7a861e8853",
+      "snippet": "chore: integrate reviewed contributor PRs (2026-11-16 batch B)",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "3def2b6|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "0268e2e",
+      "title": "fix(ci): reject duplicate root keys in hook documents",
+      "date": "2026-11-17T05:29:40Z",
+      "url": "https://github.com/affaan-m/ECC/commit/0268e2ef40744148d9e8a2f3a99476033d6ec625",
+      "snippet": null,
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "0268e2e|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "8a5cbb7",
+      "title": "test(hooks): resolve context-gate fixture roots with realpath",
+      "date": "2026-11-17T04:25:05Z",
+      "url": "https://github.com/affaan-m/ECC/commit/8a5cbb7e146bc07b03eb06166792922378ad775a",
+      "snippet": "Wrap #3106's mkdtemp fixture roots in realpathSync, matching the existing atomic-write tests, so CodeQL no longer traces shared-temp paths from these fixtures into read handles. Assertions are unchanged.",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "8a5cbb7|gh-commits-everything-claude-code"
+    },
+    {
+      "id": "9463858",
+      "title": "test(session): locate the mode fixture inside its private directory",
+      "date": "2026-11-17T04:20:43Z",
+      "url": "https://github.com/affaan-m/ECC/commit/94638582873593bcc359ac8dc4004b22c7077343",
+      "snippet": "Find the published recording by walking the test's mkdtemp directory instead of reusing the library path helper, whose shared-temp default CodeQL traces into the read handle. The basename is still asserted against getFallbackSessionRecordingPath.  (cherry picked from commit 856f9e81ffb89aea02bd276d8",
+      "source": "gh-commits-everything-claude-code",
+      "sourceCategory": "community",
+      "sourceName": "affaan-m/everything-claude-code (community resource list)",
+      "uniqueKey": "9463858|gh-commits-everything-claude-code"
+    },
     {
       "id": "d2ef268",
       "title": "Merge pull request #3650 from haelyra/fix/pr-open-cap-grandfather",
@@ -447,116 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "affaan-m/everything-claude-code (community resource list)",
       "uniqueKey": "70f571e|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "d0f5632",
-      "title": "fix: reject linked sandbox bases before scenario cleanup",
-      "date": "2026-10-11T23:59:01Z",
-      "url": "https://github.com/affaan-m/ECC/commit/d0f5632287192a12d8f78814cb56c842b4c784c2",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "d0f5632|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "345cd36",
-      "title": "test: accept Windows directory refusal before piped evaluator input",
-      "date": "2026-10-11T23:41:13Z",
-      "url": "https://github.com/affaan-m/ECC/commit/345cd364a375d80b8478c66cbb170ebe8850ebac",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "345cd36|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "6cb9f0a",
-      "title": "fix: distinguish auth failures from ordinary provider discussion",
-      "date": "2026-10-11T23:16:09Z",
-      "url": "https://github.com/affaan-m/ECC/commit/6cb9f0a1625c381cd9bd62cd28ba8a42cec48cb5",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "6cb9f0a|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8d969b0",
-      "title": "fix: retain authentication diagnostics across empty stream blocks",
-      "date": "2026-10-11T23:01:56Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8d969b0ec4a2355b93994098dfe5535ebddbd316",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8d969b0|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "2ec8018",
-      "title": "fix: preserve missing-result auth diagnostics and bound fixture contention",
-      "date": "2026-10-11T22:46:07Z",
-      "url": "https://github.com/affaan-m/ECC/commit/2ec80189a4747f93d47b563e210d02acf0229986",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "2ec8018|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "6ef38a2",
-      "title": "fix: validate evaluator files before pipe reads and strengthen grader controls",
-      "date": "2026-10-11T21:54:29Z",
-      "url": "https://github.com/affaan-m/ECC/commit/6ef38a2993011bc390aa89613067c72ffa63d3d7",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "6ef38a2|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "cfeb773",
-      "title": "fix: reject constant grader output and classify overflow errors",
-      "date": "2026-10-11T21:32:22Z",
-      "url": "https://github.com/affaan-m/ECC/commit/cfeb773d96322d5de80d86eb340a328fe7b2fdeb",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "cfeb773|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "8ce348f",
-      "title": "Merge pull request #3500 from affaan-m/integration/ecc-043-20261011",
-      "date": "2026-10-11T11:39:35Z",
-      "url": "https://github.com/affaan-m/ECC/commit/8ce348fbea0d66f5c49c7b35e8ba8bb143b15132",
-      "snippet": "fix: integrate fourteen reviewed PRs and preserve installer, provider and claim contracts",
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "8ce348f|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "137ec69",
-      "title": "test: verify Windows lock refusal after committed publication",
-      "date": "2026-10-11T10:51:30Z",
-      "url": "https://github.com/affaan-m/ECC/commit/137ec69adc897cf2de704ceddc75922b2ada29f8",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "137ec69|gh-commits-everything-claude-code"
-    },
-    {
-      "id": "a0b2860",
-      "title": "test: preserve Windows GateGuard corpus denial policy",
-      "date": "2026-10-11T10:15:49Z",
-      "url": "https://github.com/affaan-m/ECC/commit/a0b286011a28bf8f626e4f14793f5d0a3cd9c06e",
-      "snippet": null,
-      "source": "gh-commits-everything-claude-code",
-      "sourceCategory": "community",
-      "sourceName": "affaan-m/everything-claude-code (community resource list)",
-      "uniqueKey": "a0b2860|gh-commits-everything-claude-code"
     }
   ]
 }

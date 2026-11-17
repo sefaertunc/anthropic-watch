@@ -6,7 +6,63 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 16 Nov 2026 15:10:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 15:40:26 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #7141 from anthropics/mhegazy/sg-macos-ca-file</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/fd30cee3ecd5a8ee772733c5d20c0f2bae2da2f0</link>
+      <guid isPermaLink="false">fd30cee</guid>
+      <pubDate>Mon, 16 Nov 2026 22:38:13 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: use the CA file macOS ships when Python has none</description>
+    </item>
+    <item>
+      <title>bump(amd-skills): 6916fb37 → d4417422, drop strict:false (#7115)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/dcfcf760da03001c60e1133f51c00545863dd5a8</link>
+      <guid isPermaLink="false">dcfcf76</guid>
+      <pubDate>Mon, 16 Nov 2026 20:22:04 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>security-guidance: use the CA file macOS ships when Python has none</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/7d95efc2dce00c0eae8307aaa261f6c65e8e6236</link>
+      <guid isPermaLink="false">7d95efc</guid>
+      <pubDate>Mon, 16 Nov 2026 18:54:17 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>A python.org Python on macOS has no CA certificates until its &quot;Install Certificates&quot; command is run, so every review from it failed to verify the API&apos;s certificate. Where Python&apos;s default TLS context holds no certificate at all, the plugin now adds /etc/ssl/cert.pem, the file Apple&apos;s own Python uses</description>
+    </item>
+    <item>
+      <title>Merge pull request #7107 from anthropics/mhegazy/sg-fewer-false-pattern-warnings</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/f59aa2e6dd7d93e45910afcb7569d73b375f31f7</link>
+      <guid isPermaLink="false">f59aa2e</guid>
+      <pubDate>Mon, 16 Nov 2026 17:53:02 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: fewer false edit warnings on ordinary JavaScript</description>
+    </item>
+    <item>
+      <title>Merge pull request #7106 from anthropics/mhegazy/sg-edit-hook-hang</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/bccf1813a7c6f19ad5ddfa94ca1a7a83f1fa0a03</link>
+      <guid isPermaLink="false">bccf181</guid>
+      <pubDate>Mon, 16 Nov 2026 17:52:55 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: edit hook no longer waits on App Installer&apos;s python alias</description>
+    </item>
+    <item>
+      <title>Merge pull request #7104 from anthropics/mhegazy/sg-line-continuation</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/dd368db9fe93803206faeecb59a0705c1167b130</link>
+      <guid isPermaLink="false">dd368db</guid>
+      <pubDate>Mon, 16 Nov 2026 17:52:47 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: match git commit and push continued on the next line</description>
+    </item>
+    <item>
+      <title>Merge pull request #7101 from anthropics/mhegazy/sg-brace-globs</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/719e135c1c9edeb06b4e0d2d969d566d1343e558</link>
+      <guid isPermaLink="false">719e135</guid>
+      <pubDate>Mon, 16 Nov 2026 17:52:40 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: custom rule globs can use braces</description>
+    </item>
     <item>
       <title>rename(sap-fiori-mcp-server): sap-ux-fiori-tools, repoint to plugins-coding-agents/fiori @ 08afc41d (#7120)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/b5b01ac4f889fec0c4c6bb89f27ca7c8574473f6</link>
@@ -350,62 +406,6 @@
       <pubDate>Fri, 06 Nov 2026 07:07:19 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
-    </item>
-    <item>
-      <title>Add plugin.json to the 14 plugins that have none (#7013)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/cb421c81df4274fd28fd1ead817bc6ffea723fed</link>
-      <guid isPermaLink="false">cb421c8</guid>
-      <pubDate>Fri, 06 Nov 2026 06:29:08 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>The twelve language-server plugins, receipts and session-report had no .claude-plugin/plugin.json, so their folders didn&apos;t load or validate on their own. Each manifest only carries fields copied unchanged from the plugin&apos;s marketplace entry; marketplace.json is not touched.  kotlin-lsp and php-lsp R</description>
-    </item>
-    <item>
-      <title>Add champion-kit plugin (#7017)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/1aa4a4b10e6c5e8694d0f72a03dbac4e93bcafd8</link>
-      <guid isPermaLink="false">1aa4a4b</guid>
-      <pubDate>Fri, 06 Nov 2026 02:04:05 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Squash merge of 1 commit</description>
-    </item>
-    <item>
-      <title>Add Xcode plugin (xcode) (#6338)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/ff920a4094a341f282d5dee00daef2c3b8339c72</link>
-      <guid isPermaLink="false">ff920a4</guid>
-      <pubDate>Fri, 06 Nov 2026 00:55:54 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Adds Apple `xcode` plugin to the official marketplace. This plugin exposes Xcode capabilities via MCP to enable native development for Apple platforms.  `claude plugin validate .` passes. Tested with a local marketplace.  Co-authored-by: Jonathan Penn &lt;jonathanpenn@apple.com&gt; Co-authored-by: Claude </description>
-    </item>
-    <item>
-      <title>ci(validate-plugins): re-pin validator and allow the xcode command source (#7015)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b8331dd69ab3e132bbf8cd6e89b5d8c1747e21b1</link>
-      <guid isPermaLink="false">b8331dd</guid>
-      <pubDate>Fri, 06 Nov 2026 00:53:19 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Squash merge of 2 commits</description>
-    </item>
-    <item>
-      <title>Merge pull request #6835 from anthropics/mhegazy/sg-secret-rename-pairing</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/d189be9fc7a63d53d4e2af59accdd70e933e41e9</link>
-      <guid isPermaLink="false">d189be9</guid>
-      <pubDate>Thu, 05 Nov 2026 22:28:26 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: keep a renamed file paired with its old name in the Stop review</description>
-    </item>
-    <item>
-      <title>Merge pull request #6965 from anthropics/mhegazy/sg-agentic-stop-on-auth</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/eba976de6eed86f916e2c3ccd6f176faf19c3bc7</link>
-      <guid isPermaLink="false">eba976d</guid>
-      <pubDate>Thu, 05 Nov 2026 22:28:20 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: stop the commit reviewer on refused credentials, end hung reviews in time</description>
-    </item>
-    <item>
-      <title>Merge pull request #6627 from anthropics/mhegazy/sg-review-sessions-not-saved</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0672a295389aa640fb0544ef03a768ac37b30daa</link>
-      <guid isPermaLink="false">0672a29</guid>
-      <pubDate>Thu, 05 Nov 2026 22:27:52 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: do not save review runs as session transcripts</description>
     </item>
   </channel>
 </rss>
