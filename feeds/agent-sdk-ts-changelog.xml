@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 17 Nov 2026 15:40:26 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 15:18:37 GMT</lastBuildDate>
+    <item>
+      <title>0.3.327</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.327</guid>
+      <pubDate>Wed, 18 Nov 2026 15:17:48 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Breaking: Changed query(), startup() and prewarm() to refuse options that can&apos;t be sent to Claude Code, such as an agent with a circular or BigInt field. Fix the named option.
+- Breaking: Changed hook options to require arrays: a hook event&apos;s value and a matcher&apos;s hooks. A Set, generator, plain ob</description>
+    </item>
     <item>
       <title>0.3.326</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -452,14 +461,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added usermessageuuids beside usermessageuuid on a turn&apos;s first reply frame and result: every user message the turn answered, so a reply to several merged messages can be matched to each
 - Added permissionPrompts: &apos;none&apos; option to auto-deny permission prompts in sessions with nobody to answer them</description>
-    </item>
-    <item>
-      <title>0.3.258</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.258</guid>
-      <pubDate>Wed, 02 Sep 2026 10:52:00 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Updated to parity with Claude Code v2.1.258</description>
     </item>
   </channel>
 </rss>

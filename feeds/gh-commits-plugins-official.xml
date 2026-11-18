@@ -6,7 +6,79 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 17 Nov 2026 15:40:26 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 15:18:37 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #7140 from anthropics/mhegazy/sg-commit-diff-memory</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/e6143c9807a001832badb63e89d58ffe25d542ec</link>
+      <guid isPermaLink="false">e6143c9</guid>
+      <pubDate>Wed, 18 Nov 2026 01:59:13 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: commit and push reviews no longer hold a large diff in memory</description>
+    </item>
+    <item>
+      <title>Merge pull request #7153 from anthropics/eoger/discord-create-thread</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c64782a7157f8cbde0236b4f80ef4d77e619efd8</link>
+      <guid isPermaLink="false">c64782a</guid>
+      <pubDate>Wed, 18 Nov 2026 01:25:33 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>feat(discord): add create_thread tool</description>
+    </item>
+    <item>
+      <title>security-guidance: let a killed holder&apos;s lock be released late in a test</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0a5c67674bfba7cf9e67f4b1bbb4464d881ccb91</link>
+      <guid isPermaLink="false">0a5c676</guid>
+      <pubDate>Wed, 18 Nov 2026 00:11:54 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Windows can release a killed process&apos;s file lock a moment after the process ended, so the wait that follows may see it held once more.  Co-authored-by: mhegazy &lt;mhegazy@anthropic.com&gt;</description>
+    </item>
+    <item>
+      <title>Merge remote-tracking branch &apos;origin/main&apos; into mhegazy/sg-commit-diff-memory</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/bdbd27da1d3b535eabfdf7dc5bf2e308858d7d3a</link>
+      <guid isPermaLink="false">bdbd27d</guid>
+      <pubDate>Wed, 18 Nov 2026 00:11:54 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Co-authored-by: mhegazy &lt;mhegazy@anthropic.com&gt;  # Conflicts: #	plugins/security-guidance/hooks/security_reminder_hook.py</description>
+    </item>
+    <item>
+      <title>Merge pull request #7108 from anthropics/mhegazy/sg-lead-review-keys</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/1331242ea877583fc40794a535514bd9591cf20c</link>
+      <guid isPermaLink="false">1331242</guid>
+      <pubDate>Wed, 18 Nov 2026 00:11:12 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: keep a review&apos;s result and time on full metric rows</description>
+    </item>
+    <item>
+      <title>Merge pull request #7105 from anthropics/mhegazy/sg-renamed-into-code</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/a3a5523d7d9eb445eb308cf1a263ac75bff66d13</link>
+      <guid isPermaLink="false">a3a5523</guid>
+      <pubDate>Wed, 18 Nov 2026 00:11:03 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: review text files renamed to code names</description>
+    </item>
+    <item>
+      <title>Merge pull request #7102 from anthropics/mhegazy/sg-reviewer-no-prose</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/0d578e77027faa943f443e39327db993a0ff8813</link>
+      <guid isPermaLink="false">0d578e7</guid>
+      <pubDate>Wed, 18 Nov 2026 00:10:40 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: tell the commit reviewer its text is not read</description>
+    </item>
+    <item>
+      <title>Merge pull request #7103 from anthropics/mhegazy/sg-chained-push-no-verdict</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/87be9f0b583385c00a17b624bb03efa06bca71f6</link>
+      <guid isPermaLink="false">87be9f0</guid>
+      <pubDate>Wed, 18 Nov 2026 00:10:02 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: review a commit-and-push again when the commit review gave no verdict</description>
+    </item>
+    <item>
+      <title>feat(discord): add create_thread tool</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/41448d4184f113d70ee758a024b5bab1ef2ab0b5</link>
+      <guid isPermaLink="false">41448d4</guid>
+      <pubDate>Tue, 17 Nov 2026 21:13:36 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #7141 from anthropics/mhegazy/sg-macos-ca-file</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/fd30cee3ecd5a8ee772733c5d20c0f2bae2da2f0</link>
@@ -334,78 +406,6 @@
       <pubDate>Mon, 09 Nov 2026 22:59:32 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: count commits that no commit hook saw</description>
-    </item>
-    <item>
-      <title>Merge pull request #6921 from anthropics/mhegazy/sg-reviewer-oauth-token</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/fa5015cff6782d33feeeb31dd2753eea3be83568</link>
-      <guid isPermaLink="false">fa5015c</guid>
-      <pubDate>Mon, 09 Nov 2026 22:59:27 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: stop the commit reviewer renewing a stored login</description>
-    </item>
-    <item>
-      <title>security-guidance: keep the user&apos;s own rules out of the commit count tests</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/9ea2fbca5b6c62113e011a8f183bb336a26f9883</link>
-      <guid isPermaLink="false">9ea2fbc</guid>
-      <pubDate>Mon, 09 Nov 2026 19:39:42 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Co-authored-by: mhegazy &lt;mhegazy@anthropic.com&gt;</description>
-    </item>
-    <item>
-      <title>bump(mintlify): acd6d2e0 → c1c1700d (#7023)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0412be76f50ab4f4f8abff3753efa9269fbbca5b</link>
-      <guid isPermaLink="false">0412be7</guid>
-      <pubDate>Fri, 06 Nov 2026 23:51:04 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
-    </item>
-    <item>
-      <title>Merge pull request #7014 from anthropics/mhegazy/sg-bump-2018</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/c07c748f1c680734a813eefd909bc073f8a9103f</link>
-      <guid isPermaLink="false">c07c748</guid>
-      <pubDate>Fri, 06 Nov 2026 19:43:07 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: bump version to 2.0.18</description>
-    </item>
-    <item>
-      <title>Merge pull request #6997 from anthropics/mhegazy/sg-net-err-on-verdict</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/b4720bd2ea255d57666fbf3aa6fbe5a40435089e</link>
-      <guid isPermaLink="false">b4720bd</guid>
-      <pubDate>Fri, 06 Nov 2026 19:42:19 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: clear net_err when a review gets through</description>
-    </item>
-    <item>
-      <title>Merge pull request #7000 from anthropics/mhegazy/sg-index-copy-all-gitlinks</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/385e32d91174c6955f5cc52f9a84da314fddb3a0</link>
-      <guid isPermaLink="false">385e32d</guid>
-      <pubDate>Fri, 06 Nov 2026 19:41:47 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: drop every gitlink from the index copy</description>
-    </item>
-    <item>
-      <title>Merge pull request #6985 from anthropics/mhegazy/sg-sdk-install-timeout</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/83b5049e23ad084de27a63ddec2b9af3a52cdc60</link>
-      <guid isPermaLink="false">83b5049</guid>
-      <pubDate>Fri, 06 Nov 2026 19:41:07 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: a timed-out SDK install leaves no download behind and pauses before retrying</description>
-    </item>
-    <item>
-      <title>Merge pull request #6920 from anthropics/mhegazy/sg-interp-reparse-telemetry</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a3301039b319e562bb0db6b7245d85f9fd35d44b</link>
-      <guid isPermaLink="false">a330103</guid>
-      <pubDate>Fri, 06 Nov 2026 19:40:32 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: count Windows sessions whose Python is behind a link (measurement only)</description>
-    </item>
-    <item>
-      <title>bump(unity): ba48956a → 81b6079e (#7018)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/a1ecfbc7f138a0ef455088f7f28cda2d22a0f853</link>
-      <guid isPermaLink="false">a1ecfbc</guid>
-      <pubDate>Fri, 06 Nov 2026 07:07:19 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Co-authored-by: Claude &lt;noreply@anthropic.com&gt;</description>
     </item>
   </channel>
 </rss>
