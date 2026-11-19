@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 18 Nov 2026 15:18:37 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 15:25:30 GMT</lastBuildDate>
+    <item>
+      <title>0.3.328</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.328</guid>
+      <pubDate>Thu, 19 Nov 2026 15:24:42 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added onFailure to mcptool hooks in the Settings type: with &quot;block&quot;, a hook whose call fails blocks the action it guards
+- Added CLAUDECODEDISABLEDEFERREDTOOLRESUME: set it in the env option to stop resume and continue from running a tool call that a hook deferred; settings can&apos;t set it
+- Added su</description>
+    </item>
     <item>
       <title>0.3.327</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -452,15 +462,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added optional usermessageuuid to thinkingtokens system messages, linking thinking progress to the user message that triggered the turn
 - Added optional firstcontentframems, firststreampostms, firststreampostackms and firststreampostwallms fields to the success result message for remote-session la</description>
-    </item>
-    <item>
-      <title>0.3.259</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.259</guid>
-      <pubDate>Thu, 03 Sep 2026 10:51:44 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added usermessageuuids beside usermessageuuid on a turn&apos;s first reply frame and result: every user message the turn answered, so a reply to several merged messages can be matched to each
-- Added permissionPrompts: &apos;none&apos; option to auto-deny permission prompts in sessions with nobody to answer them</description>
     </item>
   </channel>
 </rss>

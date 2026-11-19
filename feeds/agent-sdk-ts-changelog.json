@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-18T15:18:37.094Z",
+  "generated": "2026-11-19T15:25:30.832Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.328",
+      "title": "0.3.328",
+      "date": "2026-11-19T15:24:42.755Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added onFailure to mcptool hooks in the Settings type: with \"block\", a hook whose call fails blocks the action it guards\n- Added CLAUDECODEDISABLEDEFERREDTOOLRESUME: set it in the env option to stop resume and continue from running a tool call that a hook deferred; settings can't set it\n- Added su",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.328|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.327",
       "title": "0.3.327",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.260|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.259",
-      "title": "0.3.259",
-      "date": "2026-09-03T10:51:44.553Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added usermessageuuids beside usermessageuuid on a turn's first reply frame and result: every user message the turn answered, so a reply to several merged messages can be matched to each\n- Added permissionPrompts: 'none' option to auto-deny permission prompts in sessions with nobody to answer them",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.259|agent-sdk-ts-changelog"
     }
   ]
 }

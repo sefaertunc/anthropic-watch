@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Wed, 18 Nov 2026 15:18:37 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 15:25:30 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.328</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.328</link>
+      <guid isPermaLink="false">v2.1.328</guid>
+      <pubDate>Thu, 19 Nov 2026 01:14:04 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added auto mode for Claude Opus 4.6 and Sonnet 4.6 on Amazon Bedrock, Google Cloud&apos;s Agent Platform, Microsoft Foundry and Claude apps gateway; interactive sessions with no permission mode start in it
+- Added &quot;onFailure&quot;: &quot;block&quot; for mcptool hooks, as for command and HTTP hooks: a h</description>
+    </item>
     <item>
       <title>v2.1.327</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.327</link>
@@ -506,16 +516,6 @@
       <category>claude-code-releases</category>
       <description>What&apos;s changed
 - Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been running for a while (regression in 2.1.269)</description>
-    </item>
-    <item>
-      <title>v2.1.269</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.269</link>
-      <guid isPermaLink="false">v2.1.269</guid>
-      <pubDate>Fri, 11 Sep 2026 19:17:55 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added claude plugin eval: run a plugin&apos;s eval suite against Claude Code and get scored, reproducible results (JSON + HTML report); see claude plugin eval --help
-- Added /output-style [name] to list and switch output styles, including over Remote Control and in cloud and other headle</description>
     </item>
   </channel>
 </rss>
