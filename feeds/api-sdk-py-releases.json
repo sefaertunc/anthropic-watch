@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-19T15:25:30.840Z",
+  "generated": "2026-11-20T15:02:00.931Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "v2.11.0",
+      "title": "v2.11.0",
+      "date": "2026-11-19T19:14:21Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.11.0",
+      "snippet": "Features\n api: add Claude Code managed settings to the Admin API\n api: add the sandboxegressrestricted error to Admin API plugin methods\n Bug Fixes\n client: encode spaces in query strings as %20\n  The AWS SigV4 signature of a request now matches its query string when a parameter contains a space.\n P",
+      "source": "api-sdk-py-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK Python Releases",
+      "uniqueKey": "v2.11.0|api-sdk-py-releases"
+    },
     {
       "id": "v2.10.0",
       "title": "v2.10.0",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Anthropic SDK Python Releases",
       "uniqueKey": "v0.111.0|api-sdk-py-releases"
-    },
-    {
-      "id": "v0.110.0",
-      "title": "v0.110.0",
-      "date": "2026-06-18T17:18:34Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0",
-      "snippet": "0.110.0 (2026-06-18)\nFull Changelog: v0.109.2...v0.110.0\n Features\n api: add support for new codeexecution20260120 tool (5e23212)\n Bug Fixes\n append x-stainless-helper across header merges instead of clobbering (105) (922558e)\n bedrock: preserve stream event type (1682) (b27e343)\n helpers: single so",
-      "source": "api-sdk-py-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK Python Releases",
-      "uniqueKey": "v0.110.0|api-sdk-py-releases"
     }
   ]
 }

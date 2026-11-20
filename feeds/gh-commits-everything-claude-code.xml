@@ -6,7 +6,87 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 19 Nov 2026 15:25:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 15:02:00 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #4052 from affaan-m/repair/combined-postmerge-20261119</title>
+      <link>https://github.com/affaan-m/ECC/commit/4adeee6732a12d1540f49a4d50a38ce8c97f9a53</link>
+      <guid isPermaLink="false">4adeee6</guid>
+      <pubDate>Fri, 20 Nov 2026 01:13:45 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description>fix: close hook, replay, and canvas regression gaps</description>
+    </item>
+    <item>
+      <title>Merge reviewed immutable legacy session transitions</title>
+      <link>https://github.com/affaan-m/ECC/commit/5f6015139adeb0041d15ff003e235bbf7940849d</link>
+      <guid isPermaLink="false">5f60151</guid>
+      <pubDate>Fri, 20 Nov 2026 00:40:50 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>test: synchronize canvas waits and isolate watcher state freshness</title>
+      <link>https://github.com/affaan-m/ECC/commit/8339b16899a93321ed21654d8b16f1ad97c79309</link>
+      <guid isPermaLink="false">8339b16</guid>
+      <pubDate>Fri, 20 Nov 2026 00:40:06 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: preserve canvas reply and end snapshots</title>
+      <link>https://github.com/affaan-m/ECC/commit/e5d4f4647803e6977e9d138b6e09e0c34be1d80f</link>
+      <guid isPermaLink="false">e5d4f46</guid>
+      <pubDate>Fri, 20 Nov 2026 00:35:34 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: reconcile captured snapshot coverage with durable receipts</title>
+      <link>https://github.com/affaan-m/ECC/commit/4368a6aa786a6c4695ff4b3355f5bd0ce1743817</link>
+      <guid isPermaLink="false">4368a6a</guid>
+      <pubDate>Fri, 20 Nov 2026 00:05:24 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge reviewed fractional nudge preservation</title>
+      <link>https://github.com/affaan-m/ECC/commit/863e3eee050fcf402b0f0dc89979cc8655e99f75</link>
+      <guid isPermaLink="false">863e3ee</guid>
+      <pubDate>Thu, 19 Nov 2026 23:58:27 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: preserve bounded subpixel canvas nudges</title>
+      <link>https://github.com/affaan-m/ECC/commit/abe44247e35deea3dad45738cbf0a89d34372e0a</link>
+      <guid isPermaLink="false">abe4424</guid>
+      <pubDate>Thu, 19 Nov 2026 23:57:51 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: publish canvas feedback state only after persistence</title>
+      <link>https://github.com/affaan-m/ECC/commit/6dbaa347886b4e022f4cd4b0a192d86e04183f84</link>
+      <guid isPermaLink="false">6dbaa34</guid>
+      <pubDate>Thu, 19 Nov 2026 23:56:55 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix: confirm delayed Finish acceptance in canvas status</title>
+      <link>https://github.com/affaan-m/ECC/commit/5c61c1c4602384830efbf4152aea76b5427c9dd2</link>
+      <guid isPermaLink="false">5c61c1c</guid>
+      <pubDate>Thu, 19 Nov 2026 23:45:07 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>Merge independently reviewed lossless UI replay validation</title>
+      <link>https://github.com/affaan-m/ECC/commit/3b7d85f5c712b9e3666528871c6366f505a99067</link>
+      <guid isPermaLink="false">3b7d85f</guid>
+      <pubDate>Thu, 19 Nov 2026 23:37:28 GMT</pubDate>
+      <category>gh-commits-everything-claude-code</category>
+      <description/>
+    </item>
     <item>
       <title>Merge pull request #3969 from shoyann/fix/validate-duplicate-hook-events</title>
       <link>https://github.com/affaan-m/ECC/commit/3f14a103a8694e51c1df9a806217a6d0b5f7a6f7</link>
@@ -326,86 +406,6 @@
       <pubDate>Sun, 18 Oct 2026 00:41:00 GMT</pubDate>
       <category>gh-commits-everything-claude-code</category>
       <description>heredocDelimiter, executionRegion and scanShell each carried one long character loop with every quote, escape, heredoc, case and scope rule inline, which is where the three complexity warnings came from. The delimiter reader now has skipDelimiterBlanks, delimiterEscape and readDelimiterWord; the $(.</description>
-    </item>
-    <item>
-      <title>refactor(eval): split the context-profile evaluator run loop</title>
-      <link>https://github.com/affaan-m/ECC/commit/35f57c80e6b7573755fd63136338ca0dc7a0bdb7</link>
-      <guid isPermaLink="false">35f57c8</guid>
-      <pubDate>Sat, 17 Oct 2026 03:14:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>runEvaluation is now plan, execute, report: option validation and family resolution, registration pinning, provider and state creation, install preparation, the selection and trial loops, and the report object each sit in their own function. outcomeTrial takes one trial object instead of ten positio</description>
-    </item>
-    <item>
-      <title>refactor(scripts): table-drive the operator readiness dashboard</title>
-      <link>https://github.com/affaan-m/ECC/commit/d53359a9741741c8fa809ff6f23ee251e0659b89</link>
-      <guid isPermaLink="false">d53359a</guid>
-      <pubDate>Fri, 16 Oct 2026 01:36:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>parseArgs now reads flags from two lookup tables, one for flags that take a value in either form and one for standalone switches, instead of thirty-odd if blocks. The ECC Tools evidence and gap text live in ordered tier tables keyed by roadmap markers, with the shared marker lists named once. buildR</description>
-    </item>
-    <item>
-      <title>Merge pull request #3596 from affaan-m/feat/pr-burst-protection</title>
-      <link>https://github.com/affaan-m/ECC/commit/76aaa77df6adc5b889e689007bf99b9a4f74af34</link>
-      <guid isPermaLink="false">76aaa77</guid>
-      <pubDate>Thu, 15 Oct 2026 19:17:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>feat(ci): limit PR bursts and alert maintainers</description>
-    </item>
-    <item>
-      <title>docs(ci): keep PR moderation limited to submission rate</title>
-      <link>https://github.com/affaan-m/ECC/commit/0cf3a25d57a64aca27d00495b0ff7891c545613f</link>
-      <guid isPermaLink="false">0cf3a25</guid>
-      <pubDate>Thu, 15 Oct 2026 19:16:13 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>feat(ci): guard PR submission bursts and alert maintainers</title>
-      <link>https://github.com/affaan-m/ECC/commit/0ad248d199fbe9e5bb9f19857b02d3fd9f1ed887</link>
-      <guid isPermaLink="false">0ad248d</guid>
-      <pubDate>Thu, 15 Oct 2026 18:33:45 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>refactor(lib): split gateguard file-context scanners by token</title>
-      <link>https://github.com/affaan-m/ECC/commit/905bb16ff23b3096f35dcc5b6e34713cd2add312</link>
-      <guid isPermaLink="false">905bb16</guid>
-      <pubDate>Wed, 14 Oct 2026 02:58:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>cFamilyStartsFresh ran one 130-line loop over template literals, comments, regex-vs-division, C# and Rust raw strings, quotes, words, and punctuation. It now keeps scanner state in one object and walks a fixed list of step functions, each returning consumed, abort, or not-mine. The Python f-string f</description>
-    </item>
-    <item>
-      <title>Merge pull request #3520 from affaan-m/integration/ecc-043-followup-20261011</title>
-      <link>https://github.com/affaan-m/ECC/commit/b92f181b3b748d1abbc2afd94af6aa7d8c8fca29</link>
-      <guid isPermaLink="false">b92f181</guid>
-      <pubDate>Mon, 12 Oct 2026 02:02:10 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>fix: deliver ten focused guard, migration and evaluation repairs</description>
-    </item>
-    <item>
-      <title>refactor(lib): split install-lifecycle repair and inspect paths</title>
-      <link>https://github.com/affaan-m/ECC/commit/1e787f62f5f751d22aca31e7e4d7960249601cfb</link>
-      <guid isPermaLink="false">1e787f6</guid>
-      <pubDate>Mon, 12 Oct 2026 00:47:00 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description>executeRepairOperation, executeUninstallOperation, and inspectManagedOperation now dispatch on operation kind to one small function per kind, with the repeated uninstall result shapes and previous-content restore pulled into helpers. executeRepairOperation takes an options object instead of four tra</description>
-    </item>
-    <item>
-      <title>test: recognize unavailable Windows symlink privilege</title>
-      <link>https://github.com/affaan-m/ECC/commit/9fdf1ca277acbdaf36cbd6fe21a2c16c50d65244</link>
-      <guid isPermaLink="false">9fdf1ca</guid>
-      <pubDate>Mon, 12 Oct 2026 00:45:01 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>test: drain synthetic scanner input before reporting status</title>
-      <link>https://github.com/affaan-m/ECC/commit/70f571e2052c7798b87b9dc1ff831aa299a493fb</link>
-      <guid isPermaLink="false">70f571e</guid>
-      <pubDate>Mon, 12 Oct 2026 00:23:42 GMT</pubDate>
-      <category>gh-commits-everything-claude-code</category>
-      <description/>
     </item>
   </channel>
 </rss>

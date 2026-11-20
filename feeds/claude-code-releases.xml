@@ -6,7 +6,18 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 19 Nov 2026 15:25:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 15:02:00 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.329</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.329</link>
+      <guid isPermaLink="false">v2.1.329</guid>
+      <pubDate>Thu, 19 Nov 2026 22:14:41 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added a trust dialog warning that says where a folder&apos;s hooks are declared
+- Added a warning in the conversation, in Claude Desktop and other non-interactive hosts, when hooks in managed settings fail to load
+- Added this session&apos;s scheduled tasks, /loop wakeups, the goal and this c</description>
+    </item>
     <item>
       <title>v2.1.328</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.328</link>
@@ -507,15 +518,6 @@
       <description>What&apos;s changed
 - Added fast mode in Claude Code Remote sessions (cloud and self-hosted runners): the host&apos;s fast-mode setting or /fast typed in the session applies where your organization allows it
 - Added mouse support to the /config panel in fullscreen mode: the wheel scrolls the settings list, a </description>
-    </item>
-    <item>
-      <title>v2.1.270</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.270</link>
-      <guid isPermaLink="false">v2.1.270</guid>
-      <pubDate>Sat, 12 Sep 2026 19:45:44 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been running for a while (regression in 2.1.269)</description>
     </item>
   </channel>
 </rss>

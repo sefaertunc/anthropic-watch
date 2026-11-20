@@ -6,7 +6,16 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 19 Nov 2026 15:25:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 15:02:00 GMT</lastBuildDate>
+    <item>
+      <title>0.3.329</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.329</guid>
+      <pubDate>Fri, 20 Nov 2026 15:01:12 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added a system/informational warning, tagged managedhooksnotloaded, when hooks in managed settings fail to load
+- Added permissions.workingDirectoriesExclude to the Settings type: paths, read only from --settings and settings the host sends, that the working-directory read and write blocks treat a</description>
+    </item>
     <item>
       <title>0.3.328</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -453,15 +462,6 @@
       <category>agent-sdk-ts-changelog</category>
       <description>- Added pluginDelivery: &apos;initialize&apos; to send plugins over stdin so the launch command line no longer grows with the plugin count (fixes Windows start failures with many plugins)
 - Fixed query() throwing &quot;Object not disposable&quot; in runtimes without a native Symbol.dispose, such as Node ≤22 vm contexts</description>
-    </item>
-    <item>
-      <title>0.3.260</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.260</guid>
-      <pubDate>Fri, 04 Sep 2026 10:53:37 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added optional usermessageuuid to thinkingtokens system messages, linking thinking progress to the user message that triggered the turn
-- Added optional firstcontentframems, firststreampostms, firststreampostackms and firststreampostwallms fields to the success result message for remote-session la</description>
     </item>
   </channel>
 </rss>

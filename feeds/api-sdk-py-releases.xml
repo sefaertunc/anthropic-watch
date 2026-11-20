@@ -6,7 +6,21 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Thu, 19 Nov 2026 15:25:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 15:02:00 GMT</lastBuildDate>
+    <item>
+      <title>v2.11.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.11.0</link>
+      <guid isPermaLink="false">v2.11.0</guid>
+      <pubDate>Thu, 19 Nov 2026 19:14:21 GMT</pubDate>
+      <category>api-sdk-py-releases</category>
+      <description>Features
+ api: add Claude Code managed settings to the Admin API
+ api: add the sandboxegressrestricted error to Admin API plugin methods
+ Bug Fixes
+ client: encode spaces in query strings as %20
+  The AWS SigV4 signature of a request now matches its query string when a parameter contains a space.
+ P</description>
+    </item>
     <item>
       <title>v2.10.0</title>
       <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.10.0</link>
@@ -653,21 +667,6 @@ Full Changelog: v0.111.0...v0.112.0
 Full Changelog: v0.110.0...v0.111.0
  Features
  helpers: tag refusal-fallback middleware requests with fallback-refusal-middleware (96) (2f8ac78)</description>
-    </item>
-    <item>
-      <title>v0.110.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0</link>
-      <guid isPermaLink="false">v0.110.0</guid>
-      <pubDate>Thu, 18 Jun 2026 17:18:34 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.110.0 (2026-06-18)
-Full Changelog: v0.109.2...v0.110.0
- Features
- api: add support for new codeexecution20260120 tool (5e23212)
- Bug Fixes
- append x-stainless-helper across header merges instead of clobbering (105) (922558e)
- bedrock: preserve stream event type (1682) (b27e343)
- helpers: single so</description>
     </item>
   </channel>
 </rss>
