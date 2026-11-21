@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-20T15:02:00.921Z",
+  "generated": "2026-11-21T14:24:04.129Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "0.3.330",
+      "title": "0.3.330",
+      "date": "2026-11-21T14:22:59.621Z",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
+      "snippet": "- Added a system/informational warning, tagged settingsnotineffect, when settings or a user, project or local settings file fails validation and is not in effect\n- Fixed Claude still waiting for a background agent that stopTask() stopped just as it finished\n- Fixed variables that a SessionStart hook",
+      "source": "agent-sdk-ts-changelog",
+      "sourceCategory": "core",
+      "sourceName": "Agent SDK TypeScript Changelog",
+      "uniqueKey": "0.3.330|agent-sdk-ts-changelog"
+    },
     {
       "id": "0.3.329",
       "title": "0.3.329",
@@ -546,17 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Agent SDK TypeScript Changelog",
       "uniqueKey": "0.3.263|agent-sdk-ts-changelog"
-    },
-    {
-      "id": "0.3.261",
-      "title": "0.3.261",
-      "date": "2026-09-05T10:09:37.053Z",
-      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md",
-      "snippet": "- Added pluginDelivery: 'initialize' to send plugins over stdin so the launch command line no longer grows with the plugin count (fixes Windows start failures with many plugins)\n- Fixed query() throwing \"Object not disposable\" in runtimes without a native Symbol.dispose, such as Node ≤22 vm contexts",
-      "source": "agent-sdk-ts-changelog",
-      "sourceCategory": "core",
-      "sourceName": "Agent SDK TypeScript Changelog",
-      "uniqueKey": "0.3.261|agent-sdk-ts-changelog"
     }
   ]
 }

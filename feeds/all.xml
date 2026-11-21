@@ -6,7 +6,219 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 20 Nov 2026 15:02:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 14:24:04 GMT</lastBuildDate>
+    <item>
+      <title>0.3.330</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.330</guid>
+      <pubDate>Sat, 21 Nov 2026 14:22:59 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added a system/informational warning, tagged settingsnotineffect, when settings or a user, project or local settings file fails validation and is not in effect
+- Fixed Claude still waiting for a background agent that stopTask() stopped just as it finished
+- Fixed variables that a SessionStart hook</description>
+    </item>
+    <item>
+      <title>chore: Update mods/</title>
+      <link>https://github.com/anthropics/claude-code/commit/26a5b52bb5d9f53bff6b4804214ec88deab78ce3</link>
+      <guid isPermaLink="false">26a5b52</guid>
+      <pubDate>Sat, 21 Nov 2026 06:03:56 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: Update mods/</title>
+      <link>https://github.com/anthropics/claude-code/commit/f6d9c06876f60e5474ba0743175dc37bb7a15b10</link>
+      <guid isPermaLink="false">f6d9c06</guid>
+      <pubDate>Sat, 21 Nov 2026 04:39:14 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: Update mods/</title>
+      <link>https://github.com/anthropics/claude-code/commit/91471e5a34d03835cd4785f36cc1c8c7265fa492</link>
+      <guid isPermaLink="false">91471e5</guid>
+      <pubDate>Sat, 21 Nov 2026 04:32:53 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: Update mods/</title>
+      <link>https://github.com/anthropics/claude-code/commit/08859bd09c737c8531b1a3a6c7189274b38bf970</link>
+      <guid isPermaLink="false">08859bd</guid>
+      <pubDate>Sat, 21 Nov 2026 03:40:47 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: Update mods/</title>
+      <link>https://github.com/anthropics/claude-code/commit/937b7978cbede8660eb33541e7763015746f7cd4</link>
+      <guid isPermaLink="false">937b797</guid>
+      <pubDate>Sat, 21 Nov 2026 03:13:16 GMT</pubDate>
+      <category>gh-commits-claude-code</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat(theme-examples): add sound to Koi Pond and Falling Sand (#7191)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/73c8cf3ea7e296057b467990f2f5d61b4c922260</link>
+      <guid isPermaLink="false">73c8cf3</guid>
+      <pubDate>Sat, 21 Nov 2026 01:17:51 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 1 commit</description>
+    </item>
+    <item>
+      <title>v1.0.286</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.286</link>
+      <guid isPermaLink="false">v1.0.286</guid>
+      <pubDate>Fri, 20 Nov 2026 22:41:08 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>&lt;!-- Release notes generated using configuration in .github/release.yml at v1.0.286 --&gt;
+Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.285...v1.0.286</description>
+    </item>
+    <item>
+      <title>v1.0.285</title>
+      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.285</link>
+      <guid isPermaLink="false">v1.0.285</guid>
+      <pubDate>Fri, 20 Nov 2026 22:39:22 GMT</pubDate>
+      <category>claude-code-action</category>
+      <description>&lt;!-- Release notes generated using configuration in .github/release.yml at v1.0.285 --&gt;
+ What&apos;s Changed
+ Other changes
+ Use the base branch&apos;s version of files that the workflow&apos;s inputs name by @mhegazy in https://github.com/anthropics/claude-code-action/pull/2099
+Full Changelog: https://github.com/</description>
+    </item>
+    <item>
+      <title>v2.1.330</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.330</link>
+      <guid isPermaLink="false">v2.1.330</guid>
+      <pubDate>Fri, 20 Nov 2026 22:32:56 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added sign-in to organizations managed in Anthropic&apos;s Enterprise Admin Console: after claude auth login, Claude Code applies the organization&apos;s settings and uses its cloud provider or gateway
+- Added easel, a built-in mod that draws charts when asked and under MCP metrics results, o</description>
+    </item>
+    <item>
+      <title>ci: use claude-code-action v1 (#979)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/8ad5de647d4f0f50c95d74aabc8aa20a3f70cdd3</link>
+      <guid isPermaLink="false">8ad5de6</guid>
+      <pubDate>Fri, 20 Nov 2026 22:16:45 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Move the six workflow steps from a commit of v1.0.132 to the v1 tag, so that they get new releases. Set the model and permission mode, whose defaults changed since, and skip the two notebook comment steps on pull requests from forks, as lint-format.yml already does.  Co-authored-by: Claude &lt;noreply@</description>
+    </item>
+    <item>
+      <title>Merge pull request #7143 from anthropics/mhegazy/sg-bump-2021</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/d586c3f10a8c2366179bf46b097b4f652622ffc6</link>
+      <guid isPermaLink="false">d586c3f</guid>
+      <pubDate>Fri, 20 Nov 2026 20:33:48 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: bump version to 2.0.21</description>
+    </item>
+    <item>
+      <title>Merge pull request #7176 from anthropics/mhegazy/sg-pyenv-win-probe</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/6dc81aaaa133b1d776fb2fed02de18ac157558f8</link>
+      <guid isPermaLink="false">6dc81aa</guid>
+      <pubDate>Fri, 20 Nov 2026 20:33:30 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: keep the interpreter check working through a .bat shim</description>
+    </item>
+    <item>
+      <title>Merge pull request #7177 from anthropics/mhegazy/sg-other-repo-settings</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/ed60e06e2489b50db8d4d4c9144f7fbd577f153d</link>
+      <guid isPermaLink="false">ed60e06</guid>
+      <pubDate>Fri, 20 Nov 2026 20:33:14 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: skip other repositories whose settings change what git runs</description>
+    </item>
+    <item>
+      <title>@anthropic-ai/claude-code@2.1.330</title>
+      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
+      <guid isPermaLink="false">2.1.330</guid>
+      <pubDate>Fri, 20 Nov 2026 19:16:01 GMT</pubDate>
+      <category>npm-claude-code</category>
+      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
+    </item>
+    <item>
+      <title>feat(theme-examples): add nine interactive shader scenes (#7189)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/4f2303046518925cde9907d25e23bf85645849eb</link>
+      <guid isPermaLink="false">4f23030</guid>
+      <pubDate>Fri, 20 Nov 2026 18:56:06 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>Squash merge of 3 commits</description>
+    </item>
+    <item>
+      <title>fix: use a published npm setup and link team and remote MCP guides (#2441)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/e6fb3ca87fc820e176028dfd2333aecc1856beff</link>
+      <guid isPermaLink="false">e6fb3ca</guid>
+      <pubDate>Fri, 20 Nov 2026 18:51:58 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>chore: release v21.1.0 (#2440)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4b1fe9d526f673a0e03ef9e42148e22d93ab52ac</link>
+      <guid isPermaLink="false">4b1fe9d</guid>
+      <pubDate>Fri, 20 Nov 2026 17:50:18 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description>Prepare protected release v21.1.0.</description>
+    </item>
+    <item>
+      <title>docs: add a Next.js App Router code review playbook (#2413)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/0ad8b698f4a81fca148cf5b2951472c7c5345a4a</link>
+      <guid isPermaLink="false">0ad8b69</guid>
+      <pubDate>Fri, 20 Nov 2026 17:39:03 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>fix(deps): reconcile catalog and sample app patch updates (#2409)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/9657318e438b2dee933b3b72b72dc9cab5e55ed0</link>
+      <guid isPermaLink="false">9657318</guid>
+      <pubDate>Fri, 20 Nov 2026 17:30:52 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>feat(skill): add codebase-aware-ui-prompts architecture-preserving UI prompting skill (#2421)</title>
+      <link>https://github.com/sickn33/agentic-awesome-skills/commit/5f831b11c4ad2e5652568e4809b780f4cffcfc40</link>
+      <guid isPermaLink="false">5f831b1</guid>
+      <pubDate>Fri, 20 Nov 2026 17:25:55 GMT</pubDate>
+      <category>gh-commits-antigravity-awesome-skills</category>
+      <description/>
+    </item>
+    <item>
+      <title>bedrock-sdk-v1.1.3</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v1.1.3</link>
+      <guid isPermaLink="false">bedrock-sdk-v1.1.3</guid>
+      <pubDate>Fri, 20 Nov 2026 16:03:53 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Bug Fixes
+ bedrock: send the user profile ID in the request body
+  Amazon Bedrock reads userprofileid from the request body and ignores the anthropic-user-profile-id header, so a profile ID given to AnthropicBedrock was not applied. AnthropicBedrock now moves it into the body of Messages requests an</description>
+    </item>
+    <item>
+      <title>sdk-v1.12.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.12.0</link>
+      <guid isPermaLink="false">sdk-v1.12.0</guid>
+      <pubDate>Fri, 20 Nov 2026 16:03:51 GMT</pubDate>
+      <category>api-sdk-ts-releases</category>
+      <description>Features
+ api: add the imagedimensionstoolarge error code
+ Bug Fixes
+ client: merge ANTHROPICCUSTOMHEADERS with Headers or pairs in defaultHeaders
+ Chores
+ docs: clarify billingpolicy in batches and two billing errors</description>
+    </item>
+    <item>
+      <title>v2.12.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.12.0</link>
+      <guid isPermaLink="false">v2.12.0</guid>
+      <pubDate>Fri, 20 Nov 2026 15:56:21 GMT</pubDate>
+      <category>api-sdk-py-releases</category>
+      <description>Features
+ api: add the imagedimensionstoolarge error code
+ Bug Fixes
+ bedrock: send the user profile ID in the request body
+  Amazon Bedrock reads userprofileid from the request body and ignores the anthropic-user-profile-id header, so a profile ID given to AnthropicBedrock or AsyncAnthropicBedrock </description>
+    </item>
     <item>
       <title>0.3.329</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -30,30 +242,6 @@
       <guid isPermaLink="false">50573548</guid>
       <pubDate>Fri, 20 Nov 2026 12:03:15 GMT</pubDate>
       <category>hn-anthropic-com</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: refresh three Vite lockfiles for GHSA-p4f5-76q4-ffq7 (#2434)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/4a52ab5ef117bdce2c6ba8d87dd64df0c840dfea</link>
-      <guid isPermaLink="false">4a52ab5</guid>
-      <pubDate>Fri, 20 Nov 2026 09:31:05 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: honor exact-head manual review for skill lockfiles (#2435)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/f352705e3fe0b3b8ac8e4a13927769ca6a0f1da9</link>
-      <guid isPermaLink="false">f352705</guid>
-      <pubDate>Fri, 20 Nov 2026 09:25:21 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update mods/</title>
-      <link>https://github.com/anthropics/claude-code/commit/16043fc1342dbd65c13a94621af692c02086f978</link>
-      <guid isPermaLink="false">16043fc</guid>
-      <pubDate>Fri, 20 Nov 2026 07:56:57 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
       <description/>
     </item>
     <item>
@@ -101,30 +289,6 @@ Humans should fundamentally stay in charge of their destiny, even if we increasi
       <description/>
     </item>
     <item>
-      <title>chore: Update mods/</title>
-      <link>https://github.com/anthropics/claude-code/commit/688120e365aff198e348965cc115f7dd79275dff</link>
-      <guid isPermaLink="false">688120e</guid>
-      <pubDate>Fri, 20 Nov 2026 00:35:24 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update mods/</title>
-      <link>https://github.com/anthropics/claude-code/commit/86a87d3610f50ed8a89f6b2871d40d870a0e46a5</link>
-      <guid isPermaLink="false">86a87d3</guid>
-      <pubDate>Fri, 20 Nov 2026 00:21:53 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
-      <title>chore: Update mods/</title>
-      <link>https://github.com/anthropics/claude-code/commit/54327193e9d62dc0a1492b1150e36a08a7d03db9</link>
-      <guid isPermaLink="false">5432719</guid>
-      <pubDate>Fri, 20 Nov 2026 00:06:27 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
-      <description/>
-    </item>
-    <item>
       <title>fix: reconcile captured snapshot coverage with durable receipts</title>
       <link>https://github.com/affaan-m/ECC/commit/4368a6aa786a6c4695ff4b3355f5bd0ce1743817</link>
       <guid isPermaLink="false">4368a6a</guid>
@@ -133,20 +297,20 @@ Humans should fundamentally stay in charge of their destiny, even if we increasi
       <description/>
     </item>
     <item>
-      <title>chore: Update mods/</title>
-      <link>https://github.com/anthropics/claude-code/commit/b215e8e6b1de769d89cf88163b47dd01681a9d2c</link>
-      <guid isPermaLink="false">b215e8e</guid>
-      <pubDate>Thu, 19 Nov 2026 23:32:44 GMT</pubDate>
-      <category>gh-commits-claude-code</category>
+      <title>Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement </title>
+      <link>https://www.anthropic.com/news/ipo-close</link>
+      <guid isPermaLink="false">https://www.anthropic.com/news/ipo-close</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+      <category>blog-news</category>
       <description/>
     </item>
     <item>
-      <title>fix(theme-examples): shorten the /custom-theme description (#7152)</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/098f248576bd9ef0b8da1a5c70c390ea9efa9023</link>
-      <guid isPermaLink="false">098f248</guid>
-      <pubDate>Thu, 19 Nov 2026 22:54:56 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>Squash merge of 1 commit</description>
+      <title>November 20, 2026</title>
+      <link>https://support.claude.com/en/articles/12138966-release-notes#h_c2590a46af</link>
+      <guid isPermaLink="false">https://support.claude.com/en/articles/12138966-release-notes#h_c2590a46af</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+      <category>support-release-notes</category>
+      <description/>
     </item>
     <item>
       <title>v1.0.284</title>
@@ -262,30 +426,6 @@ Daniela and I lost our father to a disease that, just a few years later, bec</de
       <description>[major] resolved — The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 00:56 PT / 08:56 UTC to 01:11 PT / 09:11 UTC.</description>
     </item>
     <item>
-      <title>fix(web): cover every active skill in the public sitemap (#2417)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/444f05edf05566b0880ad34e8eba6e9034905483</link>
-      <guid isPermaLink="false">444f05e</guid>
-      <pubDate>Thu, 19 Nov 2026 08:59:50 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: build the Vercel catalog from the deployed source (#2416)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/6423c4c6c1bb760aeea4be9f658be1d0e9a8cfa0</link>
-      <guid isPermaLink="false">6423c4c</guid>
-      <pubDate>Thu, 19 Nov 2026 07:44:42 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
-      <title>fix: harden imported design and font checkers (#2415)</title>
-      <link>https://github.com/sickn33/agentic-awesome-skills/commit/3fcc3149afd3e263c88d239268a965cd2ab1d8d6</link>
-      <guid isPermaLink="false">3fcc314</guid>
-      <pubDate>Thu, 19 Nov 2026 07:37:03 GMT</pubDate>
-      <category>gh-commits-antigravity-awesome-skills</category>
-      <description/>
-    </item>
-    <item>
       <title>v1.0.283</title>
       <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.283</link>
       <guid isPermaLink="false">v1.0.283</guid>
@@ -353,14 +493,6 @@ Legal disclaimer: A registration statement relating to the Class A common stock 
       <description/>
     </item>
     <item>
-      <title>Merge pull request #7154 from anthropics/eoger/discord-list-emojis</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/8b9c980971baca86739d778cc5f8437fd78ec727</link>
-      <guid isPermaLink="false">8b9c980</guid>
-      <pubDate>Wed, 18 Nov 2026 19:10:27 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>feat(discord): add list_emojis tool</description>
-    </item>
-    <item>
       <title>v1.0.282</title>
       <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.282</link>
       <guid isPermaLink="false">v1.0.282</guid>
@@ -390,42 +522,6 @@ Legal disclaimer: A registration statement relating to the Class A common stock 
       <description/>
     </item>
     <item>
-      <title>v1.0.281</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.281</link>
-      <guid isPermaLink="false">v1.0.281</guid>
-      <pubDate>Wed, 18 Nov 2026 05:13:31 GMT</pubDate>
-      <category>claude-code-action</category>
-      <description>&lt;!-- Release notes generated using configuration in .github/release.yml at v1.0.281 --&gt;
- What&apos;s Changed
- Other changes
- Apply the session&apos;s git settings to the action&apos;s own commands by @mhegazy in https://github.com/anthropics/claude-code-action/pull/2093
- Skip fork pull requests in claude.yml by @m</description>
-    </item>
-    <item>
-      <title>Merge pull request #7140 from anthropics/mhegazy/sg-commit-diff-memory</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/e6143c9807a001832badb63e89d58ffe25d542ec</link>
-      <guid isPermaLink="false">e6143c9</guid>
-      <pubDate>Wed, 18 Nov 2026 01:59:13 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: commit and push reviews no longer hold a large diff in memory</description>
-    </item>
-    <item>
-      <title>Merge branch &apos;main&apos; into eoger/discord-list-emojis</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/668a0c6542d1da594f2d49ddab382198abbddbb2</link>
-      <guid isPermaLink="false">668a0c6</guid>
-      <pubDate>Wed, 18 Nov 2026 01:28:25 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description/>
-    </item>
-    <item>
-      <title>Merge pull request #7153 from anthropics/eoger/discord-create-thread</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/c64782a7157f8cbde0236b4f80ef4d77e619efd8</link>
-      <guid isPermaLink="false">c64782a</guid>
-      <pubDate>Wed, 18 Nov 2026 01:25:33 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>feat(discord): add create_thread tool</description>
-    </item>
-    <item>
       <title>Elevated errors affecting the Google Docs connector</title>
       <link>https://stspg.io/qz7tfhb7sl68</link>
       <guid isPermaLink="false">6prv10gjdpz1</guid>
@@ -448,15 +544,6 @@ Legal disclaimer: A registration statement relating to the Class A common stock 
       <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
       <category>blog-news</category>
       <description/>
-    </item>
-    <item>
-      <title>v1.0.280</title>
-      <link>https://github.com/anthropics/claude-code-action/releases/tag/v1.0.280</link>
-      <guid isPermaLink="false">v1.0.280</guid>
-      <pubDate>Tue, 17 Nov 2026 23:20:15 GMT</pubDate>
-      <category>claude-code-action</category>
-      <description>&lt;!-- Release notes generated using configuration in .github/release.yml at v1.0.280 --&gt;
-Full Changelog: https://github.com/anthropics/claude-code-action/compare/v1.0.279...v1.0.280</description>
     </item>
     <item>
       <title>v2.1.327</title>
@@ -645,6 +732,14 @@ Now users of tools like Factory, Linear, and Ramp can pay for Claude API usage t
       <description/>
     </item>
     <item>
+      <title>Claude solves two open problems in the physics of black holes</title>
+      <link>https://www.anthropic.com/research/claude-black-hole-physics</link>
+      <guid isPermaLink="false">https://www.anthropic.com/research/claude-black-hole-physics</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+      <category>blog-research</category>
+      <description>Claude has solved two open problems in theoretical physics. Both concern black holes and the search for a theory of quantum gravity.</description>
+    </item>
+    <item>
       <title>Claude writes better code when it can verify its work. Checks that used to be expensive, like tests, benchmarks, and end-to-end runs, are now cheap.
 
 Here’s how the Claude Code team thinks about verif</title>
@@ -749,6 +844,14 @@ Claude Meetings is now re-enabled for all Enterprise customers, though Claude ma
       <description>[major] resolved — The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 23:32 PT on November 15 / 07:32 UTC on November 16 to 00:45 PT / 08:45 UTC on November 16.</description>
     </item>
     <item>
+      <title>Updating our coordinated vulnerability disclosure policy timelines</title>
+      <link>https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines</link>
+      <guid isPermaLink="false">https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines</guid>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+      <category>blog-research</category>
+      <description>We’re shortening the disclosure window in our coordinated vulnerability disclosure (CVD) policy from 90 days to 30 days for high- and critical-severity issues, and to 45 days for all other issues.</description>
+    </item>
+    <item>
       <title>All hail the weird web
 
 I just enabled HTML-in-Canvas in Claude’s desktop apps. It’s a footnote change next to everything else, but with it, Claude can make bizarre &amp;amp; beautiful sites. Reminds me o</title>
@@ -819,35 +922,6 @@ Please look at the stupid demos I made: https://t.co/kNLJoRwmje https://t.co/AnS
       <description/>
     </item>
     <item>
-      <title>0.3.325</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.325</guid>
-      <pubDate>Sat, 14 Nov 2026 13:09:15 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added archiveSession() and unarchiveSession(), and an archived field on the sessions that listSessions() and getSessionInfo() return
-- Added refuseIfBusy to Query.reloadPlugins() so a host can have a reload refused while the session is busy
-- Added managedlock to pluginerrors entries on system/ini</description>
-    </item>
-    <item>
-      <title>v2.1.325</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.325</link>
-      <guid isPermaLink="false">v2.1.325</guid>
-      <pubDate>Fri, 13 Nov 2026 20:40:01 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Fixed a security issue in how zstd-compressed responses are decoded
-- Added a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook
-- Added a line under the error shown when your organization</description>
-    </item>
-    <item>
-      <title>@anthropic-ai/claude-code@2.1.325</title>
-      <link>https://www.npmjs.com/package/@anthropic-ai/claude-code</link>
-      <guid isPermaLink="false">2.1.325</guid>
-      <pubDate>Fri, 13 Nov 2026 20:07:25 GMT</pubDate>
-      <category>npm-claude-code</category>
-      <description>Use Claude, Anthropic&apos;s AI assistant, right from your terminal. Claude can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.</description>
-    </item>
-    <item>
       <title>Safety evaluations are critical for understanding whether a model is ready to deploy, which safeguards to build for it, and where to focus training and research.
 
 On our Engineering Blog, we offer 10 </title>
@@ -860,82 +934,6 @@ On our Engineering Blog, we offer 10 </title>
 On our Engineering Blog, we offer 10 recommendations for how to design, run and report them.
 
 https://t.co/MtSQmqqi2D</description>
-    </item>
-    <item>
-      <title>Streaming live at 12 PM ET: A fireside chat with JPMorgan CEO Jamie Dimon and @DarioAmodei. https://t.co/9VFV9qgGjt
- 
-Legal disclaimer: Anthropic has filed a registration statement (including a prospe</title>
-      <link>https://x.com/AnthropicAI/status/2121272083863011714</link>
-      <guid isPermaLink="false">2121272083863011714</guid>
-      <pubDate>Fri, 13 Nov 2026 16:00:50 GMT</pubDate>
-      <category>twitter-anthropicai</category>
-      <description>Streaming live at 12 PM ET: A fireside chat with JPMorgan CEO Jamie Dimon and @DarioAmodei. https://t.co/9VFV9qgGjt
- 
-Legal disclaimer: Anthropic has filed a registration statement (including a prospectus) with the SEC for the offering to which this communication relates. Before you invest, you shou</description>
-    </item>
-    <item>
-      <title>RT @claudeai: Introducing Claude Meetings: add Claude to your team’s video call and it builds docs, whiteboards, and other artifacts with y…</title>
-      <link>https://x.com/bcherny/status/2121119583994269835</link>
-      <guid isPermaLink="false">2121119583994269835</guid>
-      <pubDate>Fri, 13 Nov 2026 05:54:51 GMT</pubDate>
-      <category>twitter-bcherny</category>
-      <description>RT @claudeai: Introducing Claude Meetings: add Claude to your team’s video call and it builds docs, whiteboards, and other artifacts with y…</description>
-    </item>
-    <item>
-      <title>Building strong safety evaluations</title>
-      <link>https://www.anthropic.com/engineering/building-strong-safety-evaluations</link>
-      <guid isPermaLink="false">https://www.anthropic.com/engineering/building-strong-safety-evaluations</guid>
-      <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
-      <category>blog-engineering</category>
-      <description>Recommendations for designing, running, and reporting safety evaluations, based on our own experiences.</description>
-    </item>
-    <item>
-      <title>Nice to meet ya!</title>
-      <link>https://x.com/noahzweben/status/2120988963137810578</link>
-      <guid isPermaLink="false">2120988963137810578</guid>
-      <pubDate>Thu, 12 Nov 2026 21:15:49 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>Nice to meet ya!</description>
-    </item>
-    <item>
-      <title>RT @claudeai: Introducing Claude Meetings: add Claude to your team’s video call and it builds docs, whiteboards, and other artifacts with y…</title>
-      <link>https://x.com/noahzweben/status/2120988930619433448</link>
-      <guid isPermaLink="false">2120988930619433448</guid>
-      <pubDate>Thu, 12 Nov 2026 21:15:41 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>RT @claudeai: Introducing Claude Meetings: add Claude to your team’s video call and it builds docs, whiteboards, and other artifacts with y…</description>
-    </item>
-    <item>
-      <title>Introducing Claude Meetings: add Claude to your team’s video call and it builds docs, whiteboards, and other artifacts with you while you’re still talking.
-
-Starting to roll out in beta on Team and En</title>
-      <link>https://x.com/claudeai/status/2120973994191094179</link>
-      <guid isPermaLink="false">2120973994191094179</guid>
-      <pubDate>Thu, 12 Nov 2026 20:16:20 GMT</pubDate>
-      <category>twitter-claudeai</category>
-      <description>Introducing Claude Meetings: add Claude to your team’s video call and it builds docs, whiteboards, and other artifacts with you while you’re still talking.
-
-Starting to roll out in beta on Team and Enterprise plans. https://t.co/qlZYTcXBsC</description>
-    </item>
-    <item>
-      <title>Just hit year one at Anthropic. Time flies and so fun to look back on everything I&apos;ve gotten to work on. Had Claude make a fun little reflection video.
-
-Joining Claude Code has been a career highlight</title>
-      <link>https://x.com/noahzweben/status/2120964505496895701</link>
-      <guid isPermaLink="false">2120964505496895701</guid>
-      <pubDate>Thu, 12 Nov 2026 19:38:38 GMT</pubDate>
-      <category>twitter-noahzweben</category>
-      <description>Just hit year one at Anthropic. Time flies and so fun to look back on everything I&apos;ve gotten to work on. Had Claude make a fun little reflection video.
-
-Joining Claude Code has been a career highlight. Can&apos;t wait to see what year 2 brings! https://t.co/1Rt0wHYzSF</description>
-    </item>
-    <item>
-      <title>Mariko Mori has pushed the boundaries of art for three decades. For her retrospective &quot;All That Shines,&quot; she used Claude to write code for a computer-generated animation, presented as a new video inst</title>
-      <link>https://x.com/claudeai/status/2120669165316915259</link>
-      <guid isPermaLink="false">2120669165316915259</guid>
-      <pubDate>Thu, 12 Nov 2026 00:05:03 GMT</pubDate>
-      <category>twitter-claudeai</category>
-      <description>Mariko Mori has pushed the boundaries of art for three decades. For her retrospective &quot;All That Shines,&quot; she used Claude to write code for a computer-generated animation, presented as a new video installation. https://t.co/MtJ1rlClxt</description>
     </item>
   </channel>
 </rss>

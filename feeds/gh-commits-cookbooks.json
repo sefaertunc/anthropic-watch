@@ -5,9 +5,20 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-20T15:02:00.948Z",
+  "generated": "2026-11-21T14:24:04.157Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "8ad5de6",
+      "title": "ci: use claude-code-action v1 (#979)",
+      "date": "2026-11-20T22:16:45Z",
+      "url": "https://github.com/anthropics/claude-cookbooks/commit/8ad5de647d4f0f50c95d74aabc8aa20a3f70cdd3",
+      "snippet": "Move the six workflow steps from a commit of v1.0.132 to the v1 tag, so that they get new releases. Set the model and permission mode, whose defaults changed since, and skip the two notebook comment steps on pull requests from forks, as lint-format.yml already does.  Co-authored-by: Claude <noreply@",
+      "source": "gh-commits-cookbooks",
+      "sourceCategory": "community",
+      "sourceName": "anthropics/claude-cookbooks (main commits)",
+      "uniqueKey": "8ad5de6|gh-commits-cookbooks"
+    },
     {
       "id": "ce8b262",
       "title": "fix(registry): remove duplicate agent security review entry (#958)",
@@ -546,17 +557,6 @@
       "sourceCategory": "community",
       "sourceName": "anthropics/claude-cookbooks (main commits)",
       "uniqueKey": "5772b37|gh-commits-cookbooks"
-    },
-    {
-      "id": "5d5e2f4",
-      "title": "Fix metaprompt notebook: remove assistant prefill (400 on current models)",
-      "date": "2026-07-10T04:44:54Z",
-      "url": "https://github.com/anthropics/claude-cookbooks/commit/5d5e2f481fe2a72f9a8f285a442a8135bc6f3d28",
-      "snippet": "The metaprompt (prompt generator) notebook has been broken for every user since #375 bumped its model from claude-sonnet-4-5 to claude-sonnet-4-6. The prompt-writing call ended its messages array with an assistant prefill turn, and claude-sonnet-4-6 (like every model since the 4.6 generation) reject",
-      "source": "gh-commits-cookbooks",
-      "sourceCategory": "community",
-      "sourceName": "anthropics/claude-cookbooks (main commits)",
-      "uniqueKey": "5d5e2f4|gh-commits-cookbooks"
     }
   ]
 }

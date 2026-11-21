@@ -6,7 +6,19 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 20 Nov 2026 15:02:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 14:24:04 GMT</lastBuildDate>
+    <item>
+      <title>v2.12.0</title>
+      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.12.0</link>
+      <guid isPermaLink="false">v2.12.0</guid>
+      <pubDate>Fri, 20 Nov 2026 15:56:21 GMT</pubDate>
+      <category>api-sdk-py-releases</category>
+      <description>Features
+ api: add the imagedimensionstoolarge error code
+ Bug Fixes
+ bedrock: send the user profile ID in the request body
+  Amazon Bedrock reads userprofileid from the request body and ignores the anthropic-user-profile-id header, so a profile ID given to AnthropicBedrock or AsyncAnthropicBedrock </description>
+    </item>
     <item>
       <title>v2.11.0</title>
       <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.11.0</link>
@@ -656,17 +668,6 @@ Full Changelog: v0.111.0...v0.112.0
  Chores
  api: add support for new refusal category (5ab533e)
  api: add</description>
-    </item>
-    <item>
-      <title>v0.111.0</title>
-      <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.111.0</link>
-      <guid isPermaLink="false">v0.111.0</guid>
-      <pubDate>Thu, 18 Jun 2026 17:31:32 GMT</pubDate>
-      <category>api-sdk-py-releases</category>
-      <description>0.111.0 (2026-06-18)
-Full Changelog: v0.110.0...v0.111.0
- Features
- helpers: tag refusal-fallback middleware requests with fallback-refusal-middleware (96) (2f8ac78)</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,15 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 20 Nov 2026 15:02:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 14:24:04 GMT</lastBuildDate>
+    <item>
+      <title>ci: use claude-code-action v1 (#979)</title>
+      <link>https://github.com/anthropics/claude-cookbooks/commit/8ad5de647d4f0f50c95d74aabc8aa20a3f70cdd3</link>
+      <guid isPermaLink="false">8ad5de6</guid>
+      <pubDate>Fri, 20 Nov 2026 22:16:45 GMT</pubDate>
+      <category>gh-commits-cookbooks</category>
+      <description>Move the six workflow steps from a commit of v1.0.132 to the v1 tag, so that they get new releases. Set the model and permission mode, whose defaults changed since, and skip the two notebook comment steps on pull requests from forks, as lint-format.yml already does.  Co-authored-by: Claude &lt;noreply@</description>
+    </item>
     <item>
       <title>fix(registry): remove duplicate agent security review entry (#958)</title>
       <link>https://github.com/anthropics/claude-cookbooks/commit/ce8b2629efe8b24048b127b4c79af1e9cbab93d4</link>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 10 Jul 2026 15:32:47 GMT</pubDate>
       <category>gh-commits-cookbooks</category>
       <description>The maintainer-gated execution step in notebook-tests.yml runs each CHANGED notebook against the live API and counts failures, but nothing ever read that count: the step never exits non-zero (each per-notebook failure is absorbed by its if/else), it carries continue-on-error, and the &quot;Final status c</description>
-    </item>
-    <item>
-      <title>Fix metaprompt notebook: remove assistant prefill (400 on current models)</title>
-      <link>https://github.com/anthropics/claude-cookbooks/commit/5d5e2f481fe2a72f9a8f285a442a8135bc6f3d28</link>
-      <guid isPermaLink="false">5d5e2f4</guid>
-      <pubDate>Fri, 10 Jul 2026 04:44:54 GMT</pubDate>
-      <category>gh-commits-cookbooks</category>
-      <description>The metaprompt (prompt generator) notebook has been broken for every user since #375 bumped its model from claude-sonnet-4-5 to claude-sonnet-4-6. The prompt-writing call ended its messages array with an assistant prefill turn, and claude-sonnet-4-6 (like every model since the 4.6 generation) reject</description>
     </item>
   </channel>
 </rss>

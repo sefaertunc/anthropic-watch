@@ -5,9 +5,31 @@
   "home_page_url": "https://sefaertunc.github.io/anthropic-watch/",
   "generator": "anthropic-watch",
   "ttl": 1440,
-  "generated": "2026-11-20T15:02:00.928Z",
+  "generated": "2026-11-21T14:24:04.137Z",
   "itemCount": 50,
   "items": [
+    {
+      "id": "bedrock-sdk-v1.1.3",
+      "title": "bedrock-sdk-v1.1.3",
+      "date": "2026-11-20T16:03:53Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v1.1.3",
+      "snippet": "Bug Fixes\n bedrock: send the user profile ID in the request body\n  Amazon Bedrock reads userprofileid from the request body and ignores the anthropic-user-profile-id header, so a profile ID given to AnthropicBedrock was not applied. AnthropicBedrock now moves it into the body of Messages requests an",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "bedrock-sdk-v1.1.3|api-sdk-ts-releases"
+    },
+    {
+      "id": "sdk-v1.12.0",
+      "title": "sdk-v1.12.0",
+      "date": "2026-11-20T16:03:51Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.12.0",
+      "snippet": "Features\n api: add the imagedimensionstoolarge error code\n Bug Fixes\n client: merge ANTHROPICCUSTOMHEADERS with Headers or pairs in defaultHeaders\n Chores\n docs: clarify billingpolicy in batches and two billing errors",
+      "source": "api-sdk-ts-releases",
+      "sourceCategory": "core",
+      "sourceName": "Anthropic SDK TypeScript Releases",
+      "uniqueKey": "sdk-v1.12.0|api-sdk-ts-releases"
+    },
     {
       "id": "sdk-v1.11.0",
       "title": "sdk-v1.11.0",
@@ -535,28 +557,6 @@
       "sourceCategory": "core",
       "sourceName": "Anthropic SDK TypeScript Releases",
       "uniqueKey": "sdk-v0.133.0|api-sdk-ts-releases"
-    },
-    {
-      "id": "google-cloud-sdk-v0.0.19",
-      "title": "google-cloud-sdk-v0.0.19",
-      "date": "2026-10-08T03:07:11Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.19",
-      "snippet": "Chores\n ci: check that pull requests update the changelog",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "google-cloud-sdk-v0.0.19|api-sdk-ts-releases"
-    },
-    {
-      "id": "aws-sdk-v0.7.9",
-      "title": "aws-sdk-v0.7.9",
-      "date": "2026-10-08T03:07:09Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/aws-sdk-v0.7.9",
-      "snippet": "Chores\n ci: check that pull requests update the changelog",
-      "source": "api-sdk-ts-releases",
-      "sourceCategory": "core",
-      "sourceName": "Anthropic SDK TypeScript Releases",
-      "uniqueKey": "aws-sdk-v0.7.9|api-sdk-ts-releases"
     }
   ]
 }

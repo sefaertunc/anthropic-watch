@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Fri, 20 Nov 2026 15:02:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 14:24:04 GMT</lastBuildDate>
+    <item>
+      <title>0.3.330</title>
+      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
+      <guid isPermaLink="false">0.3.330</guid>
+      <pubDate>Sat, 21 Nov 2026 14:22:59 GMT</pubDate>
+      <category>agent-sdk-ts-changelog</category>
+      <description>- Added a system/informational warning, tagged settingsnotineffect, when settings or a user, project or local settings file fails validation and is not in effect
+- Fixed Claude still waiting for a background agent that stopTask() stopped just as it finished
+- Fixed variables that a SessionStart hook</description>
+    </item>
     <item>
       <title>0.3.329</title>
       <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
@@ -453,15 +463,6 @@
       <pubDate>Sun, 06 Sep 2026 10:30:34 GMT</pubDate>
       <category>agent-sdk-ts-changelog</category>
       <description>- Updated to parity with Claude Code v2.1.263</description>
-    </item>
-    <item>
-      <title>0.3.261</title>
-      <link>https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md</link>
-      <guid isPermaLink="false">0.3.261</guid>
-      <pubDate>Sat, 05 Sep 2026 10:09:37 GMT</pubDate>
-      <category>agent-sdk-ts-changelog</category>
-      <description>- Added pluginDelivery: &apos;initialize&apos; to send plugins over stdin so the launch command line no longer grows with the plugin count (fixes Windows start failures with many plugins)
-- Fixed query() throwing &quot;Object not disposable&quot; in runtimes without a native Symbol.dispose, such as Node ≤22 vm contexts</description>
     </item>
   </channel>
 </rss>
