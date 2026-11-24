@@ -6,7 +6,55 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Mon, 23 Nov 2026 17:38:49 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 17:09:49 GMT</lastBuildDate>
+    <item>
+      <title>Merge pull request #7207 from anthropics/mhegazy/sg-usage-data-readme</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/5cec6716767283f4675a05f5f8855b5b49c81783</link>
+      <guid isPermaLink="false">5cec671</guid>
+      <pubDate>Mon, 23 Nov 2026 23:53:40 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: state what the hooks report as usage data</description>
+    </item>
+    <item>
+      <title>Merge pull request #7211 from anthropics/mhegazy/sg-unusable-python-message</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/c19319bb92fa3c7840b4e1fc837d9fb52baa26db</link>
+      <guid isPermaLink="false">c19319b</guid>
+      <pubDate>Mon, 23 Nov 2026 23:53:15 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>security-guidance: say which Python failed when none works</description>
+    </item>
+    <item>
+      <title>Plugin workflows: hardening (#7206)</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/7069355e22838d3166195bba63049037ec04cbda</link>
+      <guid isPermaLink="false">7069355</guid>
+      <pubDate>Mon, 23 Nov 2026 23:32:18 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description/>
+    </item>
+    <item>
+      <title>security-guidance: say which Python failed when none works</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/10b5aa1b457a22481f377db18b131b16e228abb4</link>
+      <guid isPermaLink="false">10b5aa1</guid>
+      <pubDate>Mon, 23 Nov 2026 21:11:46 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>When every interpreter the launcher tried failed, its message was the same as with no Python at all, so a version manager&apos;s shim with no version set read as Python not being installed.  The first line now names python3, python and py -3 with what they did, because Claude Code&apos;s terminal shows only t</description>
+    </item>
+    <item>
+      <title>Merge pull request #7209 from anthropics/bump/vercel</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/7b7a29e0458e3fd9417b0f46e403843b52958a83</link>
+      <guid isPermaLink="false">7b7a29e</guid>
+      <pubDate>Mon, 23 Nov 2026 19:16:26 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>bump(vercel): 882e66c2 → 50af4780</description>
+    </item>
+    <item>
+      <title>security-guidance: state what the hooks report as usage data</title>
+      <link>https://github.com/anthropics/claude-plugins-official/commit/fce198c3a13fb19b3326b783cb8ab14ccf55533c</link>
+      <guid isPermaLink="false">fce198c</guid>
+      <pubDate>Mon, 23 Nov 2026 18:15:33 GMT</pubDate>
+      <category>gh-commits-plugins-official</category>
+      <description>The README says what the values in the hooks&apos; metrics field are, that Claude Code can add them to its usage metrics, and how to turn that off.  The deserialization warning describes the .pyc serializer instead of naming its module. A header test builds its made-up keys at run time.  Co-authored-by: </description>
+    </item>
     <item>
       <title>bump(wix): 8fc544d3 → e2bc48eb (#7190)</title>
       <link>https://github.com/anthropics/claude-plugins-official/commit/65adb96f26deb662f6a993f74347d0ccd1a61a52</link>
@@ -358,54 +406,6 @@
       <pubDate>Wed, 11 Nov 2026 19:40:34 GMT</pubDate>
       <category>gh-commits-plugins-official</category>
       <description>security-guidance: take the review model from one place, default to the newest listed</description>
-    </item>
-    <item>
-      <title>Merge pull request #7076 from anthropics/mhegazy/sg-powershell-commit-hooks</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/acf6cc517bb9c83e992da0a057d07f31024920d2</link>
-      <guid isPermaLink="false">acf6cc5</guid>
-      <pubDate>Wed, 11 Nov 2026 19:40:25 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: review commits and pushes made through the PowerShell tool</description>
-    </item>
-    <item>
-      <title>Merge pull request #7073 from anthropics/mhegazy/sg-pip-temp-real-dir</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/cc613ea3def275a3a67718df43716f3064aee30c</link>
-      <guid isPermaLink="false">cc613ea</guid>
-      <pubDate>Wed, 11 Nov 2026 19:40:17 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: keep the pip temp folder to a real folder of this user</description>
-    </item>
-    <item>
-      <title>Merge pull request #7072 from anthropics/mhegazy/sg-chained-push-review</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/2168ef2f28ed9d02a46c502b2c3026cdd119c9b0</link>
-      <guid isPermaLink="false">2168ef2</guid>
-      <pubDate>Wed, 11 Nov 2026 19:40:09 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: review what a commit-and-push command sends out beyond its own commit</description>
-    </item>
-    <item>
-      <title>Merge pull request #7070 from anthropics/mhegazy/sg-custom-regex-time-limit</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/0953c400d05eef5dd6acca6c74f6e5690a0f1c37</link>
-      <guid isPermaLink="false">0953c40</guid>
-      <pubDate>Wed, 11 Nov 2026 19:39:54 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: stop custom rule regexes that run too long</description>
-    </item>
-    <item>
-      <title>Merge pull request #7055 from anthropics/mhegazy/sg-custom-rule-globs</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/4d1614848a45da33a988cc2c8f21d8b52f9c7906</link>
-      <guid isPermaLink="false">4d16148</guid>
-      <pubDate>Wed, 11 Nov 2026 19:39:45 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: custom rule globs can be relative to the project</description>
-    </item>
-    <item>
-      <title>Merge pull request #7054 from anthropics/mhegazy/sg-call-argument-scan</title>
-      <link>https://github.com/anthropics/claude-plugins-official/commit/3e9b619a4806234507ea64ef28e2d90868b89c06</link>
-      <guid isPermaLink="false">3e9b619</guid>
-      <pubDate>Wed, 11 Nov 2026 19:39:31 GMT</pubDate>
-      <category>gh-commits-plugins-official</category>
-      <description>security-guidance: read yaml, torch and numpy load calls across their arguments</description>
     </item>
   </channel>
 </rss>
