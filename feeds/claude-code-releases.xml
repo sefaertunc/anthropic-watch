@@ -6,7 +6,17 @@
     <description>Monitoring Anthropic sources for changes</description>
     <generator>anthropic-watch</generator>
     <ttl>1440</ttl>
-    <lastBuildDate>Tue, 24 Nov 2026 17:09:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 16:56:25 GMT</lastBuildDate>
+    <item>
+      <title>v2.1.332</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.332</link>
+      <guid isPermaLink="false">v2.1.332</guid>
+      <pubDate>Wed, 25 Nov 2026 01:32:14 GMT</pubDate>
+      <category>claude-code-releases</category>
+      <description>What&apos;s changed
+- Added skills from MCP servers (beta). They show as server:skill in the / menu; other skills keep their names
+- Added a PreSkillShellCommand hook event that can refuse a skill or command&apos;s inline shell commands as it loads; on 2.1.331 and older, a settings file naming it opens a dial</description>
+    </item>
     <item>
       <title>v2.1.331</title>
       <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.331</link>
@@ -509,16 +519,6 @@
 - Added a visible warning when memory usage is critical, with steps to free memory or restart safely
 - Added CLAUDECODEMCPSTARTUPWAITMS to bound how long the first non-interactive turn waits for connecting MCP servers (0 = don&apos;t wait)
 - Added effort attribute to the claudecode.llmrequ</description>
-    </item>
-    <item>
-      <title>v2.1.273</title>
-      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.273</link>
-      <guid isPermaLink="false">v2.1.273</guid>
-      <pubDate>Tue, 15 Sep 2026 20:23:03 GMT</pubDate>
-      <category>claude-code-releases</category>
-      <description>What&apos;s changed
-- Added x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations, x-claude-code-compaction and x-claude-code-context-compacted request headers for LLM gateways; opt in with CLAUDECODEGATEWAYHINTHEADERS=1
-- Added a notification when an MCP server disconn</description>
     </item>
   </channel>
 </rss>
