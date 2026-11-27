@@ -1,6 +1,36 @@
 [
   {
     "version": "1.0",
+    "timestamp": "2026-11-27T16:20:16.992Z",
+    "durationMs": 51783,
+    "totalNewItems": 20,
+    "sourcesChecked": 39,
+    "sourcesWithErrors": 5,
+    "errors": [
+      {
+        "key": "reddit-claudecode",
+        "error": "HTTP 404 for https://www.reddit.com/r/ClaudeCode/top.rss?t=day&limit=15"
+      },
+      {
+        "key": "reddit-claudeai",
+        "error": "HTTP 429 for https://www.reddit.com/r/ClaudeAI/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claude",
+        "error": "HTTP 429 for https://www.reddit.com/r/claude/top.rss?t=day&limit=5"
+      },
+      {
+        "key": "reddit-claudeskills",
+        "error": "HTTP 429 for https://www.reddit.com/r/claudeskills/top.rss?t=day&limit=10"
+      },
+      {
+        "key": "reddit-claudeopus",
+        "error": "HTTP 429 for https://www.reddit.com/r/Claudeopus/top.rss?t=week&limit=10"
+      }
+    ]
+  },
+  {
+    "version": "1.0",
     "timestamp": "2026-11-26T16:34:58.282Z",
     "durationMs": 66142,
     "totalNewItems": 30,
@@ -2558,44 +2588,6 @@
       {
         "key": "reddit-claudeopus",
         "error": "HTTP 429 for https://www.reddit.com/r/Claudeopus/top.rss?t=week&limit=10"
-      }
-    ]
-  },
-  {
-    "version": "1.0",
-    "timestamp": "2026-08-28T18:20:23.821Z",
-    "durationMs": 53000,
-    "totalNewItems": 56,
-    "sourcesChecked": 39,
-    "sourcesWithErrors": 7,
-    "errors": [
-      {
-        "key": "docs-release-notes",
-        "error": "model-table: \"Claude API ID\" row missing or incomplete"
-      },
-      {
-        "key": "reddit-claudecode",
-        "error": "HTTP 429 for https://www.reddit.com/r/ClaudeCode/top.rss?t=day&limit=15"
-      },
-      {
-        "key": "reddit-claude",
-        "error": "HTTP 429 for https://www.reddit.com/r/claude/top.rss?t=day&limit=5"
-      },
-      {
-        "key": "reddit-claudeskills",
-        "error": "HTTP 429 for https://www.reddit.com/r/claudeskills/top.rss?t=day&limit=10"
-      },
-      {
-        "key": "reddit-claudeopus",
-        "error": "HTTP 429 for https://www.reddit.com/r/Claudeopus/top.rss?t=week&limit=10"
-      },
-      {
-        "key": "twitter-theamolavasare",
-        "error": "The operation was aborted due to timeout"
-      },
-      {
-        "key": "twitter-felixrieseberg",
-        "error": "The operation was aborted due to timeout"
       }
     ]
   }
